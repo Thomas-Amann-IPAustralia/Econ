@@ -335,7 +335,7 @@
     "authors": [
       "Emma Francis"
     ],
-    "chunks": 63,
+    "chunks": 61,
     "doc_id": "erp04-mining-innovation",
     "licence": "CC BY 4.0",
     "note": "An independent report commissioned by IP Australia: the findings are the researchers', not necessarily IP Australia's.",
@@ -492,7 +492,7 @@
   },
   "erp08-designs-law-practice": {
     "authors": [],
-    "chunks": 56,
+    "chunks": 57,
     "doc_id": "erp08-designs-law-practice",
     "licence": null,
     "note": null,
@@ -623,7 +623,7 @@
     "authors": [
       "Haiyang Zhang"
     ],
-    "chunks": 124,
+    "chunks": 123,
     "doc_id": "erp10-ip-profitability-competition",
     "licence": "CC BY 4.0",
     "note": null,
@@ -1010,7 +1010,7 @@
       "Corrine Anglim",
       "Michael Falk"
     ],
-    "chunks": 77,
+    "chunks": 78,
     "doc_id": "erp14-raising-the-bar",
     "licence": "CC BY 4.0",
     "note": null,
@@ -1414,7 +1414,7 @@
       "Alfons Palangkaraya",
       "Elizabeth Webster"
     ],
-    "chunks": 132,
+    "chunks": 134,
     "doc_id": "erp16-cii-patent-trends",
     "licence": "CC BY 4.0",
     "note": null,
@@ -1655,7 +1655,7 @@
   },
   "ipr-2015": {
     "authors": [],
-    "chunks": 36,
+    "chunks": 33,
     "doc_id": "ipr-2015",
     "licence": "CC BY 4.0",
     "note": null,
@@ -1840,7 +1840,7 @@
   },
   "ipr-2016": {
     "authors": [],
-    "chunks": 42,
+    "chunks": 39,
     "doc_id": "ipr-2016",
     "licence": "CC BY 4.0",
     "note": null,
@@ -2033,7 +2033,7 @@
   },
   "ipr-2017": {
     "authors": [],
-    "chunks": 48,
+    "chunks": 45,
     "doc_id": "ipr-2017",
     "licence": "CC BY 4.0",
     "note": null,
@@ -2419,7 +2419,7 @@
   },
   "ipr-2019": {
     "authors": [],
-    "chunks": 57,
+    "chunks": 58,
     "doc_id": "ipr-2019",
     "licence": "CC BY 4.0",
     "note": null,
@@ -2536,7 +2536,7 @@
   },
   "ipr-2020": {
     "authors": [],
-    "chunks": 74,
+    "chunks": 76,
     "doc_id": "ipr-2020",
     "licence": "CC BY 4.0",
     "note": null,
@@ -2761,7 +2761,7 @@
   },
   "ipr-2021": {
     "authors": [],
-    "chunks": 75,
+    "chunks": 74,
     "doc_id": "ipr-2021",
     "licence": null,
     "note": null,
@@ -2894,7 +2894,7 @@
   },
   "ipr-2022": {
     "authors": [],
-    "chunks": 90,
+    "chunks": 87,
     "doc_id": "ipr-2022",
     "licence": null,
     "note": null,
@@ -3111,7 +3111,7 @@
   },
   "ipr-2023": {
     "authors": [],
-    "chunks": 126,
+    "chunks": 132,
     "doc_id": "ipr-2023",
     "licence": "CC BY 4.0",
     "note": null,
@@ -3492,7 +3492,7 @@
   },
   "ipr-2024": {
     "authors": [],
-    "chunks": 126,
+    "chunks": 128,
     "doc_id": "ipr-2024",
     "licence": "CC BY 4.0",
     "note": null,
@@ -3893,7 +3893,7 @@
   },
   "ipr-2025": {
     "authors": [],
-    "chunks": 105,
+    "chunks": 106,
     "doc_id": "ipr-2025",
     "licence": null,
     "note": null,
@@ -4596,7 +4596,7 @@
       "Ye Rin Yoo",
       "Michael Falk"
     ],
-    "chunks": 25,
+    "chunks": 23,
     "doc_id": "note-tm-leading-indicator",
     "licence": null,
     "note": null,
@@ -4654,7 +4654,7 @@
       "Uwe Dulleck",
       "Benno Torgler"
     ],
-    "chunks": 86,
+    "chunks": 89,
     "doc_id": "oce-ai-investment",
     "licence": "CC BY 4.0",
     "note": null,

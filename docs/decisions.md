@@ -320,3 +320,33 @@ in applications in 2016, …") and was tightened before the run; regression test
 | **S384-noprefix-nocite** | 0.842 / 0.771 | 0.549 (−0.005 [−0.016, +0.001]) | 0.0% |
 
 **Spend:** $0. **Consequences.** The index is rebuilt and re-verified on the new chunks (1,913 passages).
+
+---
+
+## D-008 — Citation filter v2: section-aware, with a guard for endnotes that say something (Claude; supersedes the filter rule in D-007; 2026-10-18)
+
+**Context.** On the index built after D-007, the owner's prompts still drew reference entries whose
+format filter v1 missed: initials without full stops ("Johnson, M, Bialowas, A, …"), an organisation
+then a full stop ("Australian Bureau of Statistics. Australian National Accounts…"), a year followed by
+"(page 3)", and endnotes listed under per-chapter subheadings. One stayed at rank 1 for PROMPT_1.
+
+**Decision.** `is_citation` now also drops, under a heading containing References, Bibliography,
+Endnotes or Sources, any element with a year and a publication marker; and anywhere, an element that
+starts with two or more "Surname, I," names. A guard keeps any element with a sentence of 10 or more
+words and no year, link or publication marker, so a note such as "…Final Report March 2015. The Harper
+Review highlighted that Australia has no overarching IP policy…" stays. 420 elements qualify (397 under
+v1); no gold passage lies in one. Regression test:
+`test_under_a_references_heading_looser_citations_go_but_substantive_notes_stay`.
+
+**Results** (grid `retrieval-v1c`, committed at `d6baa17` before its numbers; same non-inferiority rule
+as v1b):
+
+| | recall@4k_tok dev / test | All 114: ndcg@10 | All 114: recall@4k_tok | Citation-heavy share of top 10 |
+|---|---|---|---|---|
+| S384-noprefix | 0.842 / 0.771 | 0.555 | 0.806 | 1.8% |
+| **S384-noprefix-nocite (v2)** | 0.842 / 0.763 | 0.554 (−0.001 [−0.003, +0.002]) | 0.801 (−0.004 [−0.026, +0.013]) | 0.0% |
+
+**Checked.** Index rebuilt (1,914 passages) and re-verified at `3ff9855`: top 10 identical to the
+sentence-transformers path on all 114 questions.
+
+**Spend:** $0.

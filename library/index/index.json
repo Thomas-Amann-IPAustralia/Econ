@@ -1,14 +1,14 @@
 {
-  "built_from": "20261018T032300Z",
-  "chunks": 1913,
+  "built_from": "20261018T033820Z",
+  "chunks": 1914,
   "dim": 768,
   "embedder": "arctic-m-v1.5",
   "files": {
-    "bm25.npz": "c151ef393f6c06c3",
-    "bm25.vocab.json": "6fe8a1322d9f7aa0",
-    "chunks.jsonl": "29a11d2ddb2daff2",
-    "docs.json": "abf5afb0e36ef323",
-    "vectors.f16.npy": "2eef1d5b58cbc0e1"
+    "bm25.npz": "d6a5aaa8301dbca0",
+    "bm25.vocab.json": "952668432d43630d",
+    "chunks.jsonl": "43e90c745279645e",
+    "docs.json": "8af379450b3fbd15",
+    "vectors.f16.npy": "b8b75d7e12ff3914"
   },
   "hf_id": "Snowflake/snowflake-arctic-embed-m-v1.5",
   "onnx_sha256": "bc6f7662487a0796e6f86229c8e5c3ab2f7059e08e0bb2f524125273f72171c4",
