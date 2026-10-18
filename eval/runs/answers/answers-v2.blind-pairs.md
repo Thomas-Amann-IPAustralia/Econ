@@ -328,7 +328,69 @@ Question: What data sources does IP Australia's economic research rely on?
 
 Narrative: Relevant passages name and describe data sources used in the research: IP Australia's own registers and datasets (for example IPGOD, TM-Link, the IP Data Platform), ABS and business microdata, overseas patent offices' data, commercial or web data (for example LinkedIn or Lens), surveys and interviews.
 
-<answer label="X">(no answer)</answer>
+<answer label="X" coverage="complete">
+<prose>
+IP Australia’s economic research relies principally on **IP administrative records linked to business-level economic data**, supplemented by surveys, international IP databases and study-specific sources.[1][2]
+
+### Core data sources
+- **IPGOD and IPLORD:** Intellectual Property Government Open Data (IPGOD) captures the life cycle of patents, trade marks, designs and plant breeder’s rights administered by IP Australia. Intellectual Property Longitudinal Research Data (IPLORD) transforms these records into annual measures of applicants’ IP activity over time.[1]
+- **ABS business microdata:** The Business Longitudinal Analysis Data Environment (BLADE) brings together business records from the Australian Taxation Office and other agencies. Its core includes Business Activity Statement, Pay As You Go and Business Income Tax data, providing measures such as sales, wages, income, expenses, profits, assets and liabilities.[2]
+- **Latest linked-data example:** The 2026 Australian IP Report uses IPLORD–BLADE data covering 2014–2023. Linking IP records to business income tax data provides close to full coverage of active Australian firms and supports analysis of income, labour productivity and total factor productivity.[3]
+
+### Supplementary sources
+- **Business characteristics and surveys:** Research uses Australian Business Registry information on location and industry, alongside turnover, employment and business-age records. ABS surveys—including Business Expenditure on Research and Development, the Business Characteristics Survey and its Innovation Module—add information on R&D, innovation and collaboration.[4][5]
+- **International trade marks and trade data:** TM-LINK supplies foreign trade mark applications linked to Australian firms. Export research has combined these with Australian customs data, World Trade Organization tariffs, and exchange rates from the OECD and International Monetary Fund.[6][7]
+- **Employer–employee and commercialisation data:** The 2024 report describes research using BLADE and the Person Level Integrated Data Asset (PLIDA), linked employer–employee information, and IPRoduct, which links patents to products through webpage-listed patent markings.[8]
+- **Specialist IP databases:** Particular studies also draw on WIPO and national design registries, or patent sources including IPRAPID, an API for claims text, Google Patents and Google BigQuery, with missing abstracts supplemented from equivalent USPTO or EPO applications.[9][10]
+
+**Coverage depends on the study and linkage.** For example, the 2024 patenting-firms study matched up to 50 per cent of firms in IPLORD to business characteristics across all its other administrative sources; this is distinct from the economy-wide coverage described in the 2026 report.[11][3]
+</prose>
+<claims>
+  claim 1: IPGOD captures the life cycle of Australia's administered IP rights, while IPLORD derives annual applicant-level IP activity measures from it.
+    quotes: [3] "IPLORD is the annual snapshot of the stocks and flows of registrable intellectual property (IP) rights for Australian and international applicants since 1997-98 onwards." | [3] "IPLORD was built from the Intellectual Property Government Open Data (IPGOD), which captures the life cycle of all patents, trade marks, designs and plant breeder's rights administered by IP Australia." | [3] "IPLORD systematically transforms all the application information in IPGOD into derived variables to track each applicant's IP activity over time."
+  claim 2: BLADE combines ATO and other agency business data; its BAS, PAYG and BIT core supplies financial and employment-related measures.
+    quotes: [13] "This report draws from the Business Longitudinal Analysis Data Environment (BLADE), which is a collection of business level data sourced from the Australian Taxation Office (ATO) and other government agencies, that is managed by the ABS." | [13] "At the core of BLADE are the ATO's Business Activity Statement (BAS), Pay As You Go (PAYG), and Business Income Tax (BIT) data." | [13] "The data items available include total sales, other GST free sales, non capital purchases, capital purchases, export sales, wages and salaries." | [13] "Across the four different types of BIT forms the majority of items reported are similar, such as income, expenses, profit or loss, sales, total and current assets, and total and current liabilities."
+  claim 3: The 2026 report links IPLORD and BLADE for 2014–2023, covering close to the full active-firm population and measuring income and productivity.
+    quotes: [17] "The analysis draws on linked administrative data covering 2014 to 2023 from the Intellectual Property Longitudinal Research Database (IPLORD) and the Australian Bureau of Statistics (ABS) Business Longitudinal Analysis Data Environment (BLADE)." | [17] "By linking IP records to business income tax data, the dataset captures close to the full population of active firms in Australia." | [17] "` total income (sales in dollar terms)
+
+` labour productivity (output per full-time equivalent worker)
+
+` total factor productivity (TFP), which captures efficiency after accounting for labour, capital and intermediate inputs."
+  claim 4: Administrative sources provide business location, industry, turnover, employment and age information.
+    quotes: [1] "Indicative data items associated with a business ABN and compiled from the Australian Business Registry:" | [1] "» Geographical location: state and territory of main business operation.
+
+» Industry: ANZSIC 2006 industry divisions of main business activity." | [1] "Business Activity Statement (BAS):
+
+» Firm's Turnover.
+
+Pay As You Go (PAYG):
+
+» Firm's size: headcount figures.
+
+Birthdate
+
+» Firm's financial year of birth."
+  claim 5: ABS BERD, BCS and BCS Innovation Module surveys supplement administrative data with R&D, innovation and collaboration information.
+    quotes: [11] "The business surveys available as part of BLADE provide relevant information on the type of innovation collaborations and R&D expenditure businesses rely on." | [11] "Business Expenditure on Research and Development (BERD) Survey
+
+Business Characteristics Survey (BCS) 5 : an annual survey that captures business use of information technology; innovation 6 ; and a broad range of other non-financial business characteristics
+
+BCS - Innovation Module (IM): a bi-annual survey on business use of innovation and a broad range of other non-financial business characteristics."
+  claim 6: TM-LINK provides foreign trade mark filings linked to Australian firms.
+    quotes: [2] "We collaborated with the ABS to integrate into BLADE a large microdataset with information on firms' foreign trade mark filings and link this at the firm level to the exports data." | [2] "Our source for trade mark data was TM-LINK, a global trade mark database developed by IP Australia and its research partners."
+  claim 7: Export research combines customs and trade mark data with WTO tariffs and OECD and IMF exchange rates.
+    quotes: [10] "We linked Australian customs data with information on firms' annual trade mark filings in select destination markets" | [10] "We sourced information on tariffs from the World Trade Organization, and exchange rate data from the OECD and International Monetary Fund."
+  claim 8: The 2024 report uses BLADE, PLIDA, linked employer–employee information and IPRoduct patent-to-product links.
+    quotes: [5] "These include the Business Longitudinal Analysis Data Environment (BLADE) and the Person Level Integrated Data Asset (PLIDA)." | [5] "Separately, IP Australia has used the ABS data linking information on employers and their employees." | [5] "It examines commercialisation outcomes using IPRoduct, a dataset linking patents to products based on the webpage-listed patent markings."
+  claim 9: Design research also draws on WIPO and national IP office registries.
+    quotes: [12] "For design IP data at the country level we rely on data from the World Intellectual Property Organization (WIPO) and the design registries of national IP offices."
+  claim 10: Specialist patent research uses IPRAPID, a claims-text API, Google Patents and BigQuery, supplemented with equivalent USPTO or EPO abstracts.
+    quotes: [20] "Data from IP Australia (IPA) are obtained from IPA's IPRAPID, Application Programming Interface (API) for accessing the claims text, Google Patents, and Google BigQuery's." | [20] "For those patents, we merged abstract data from the equivalent family application within the USPTO or EPO, with preference being given to the USPTO patent application."
+  claim 11: Linkage coverage varies: the 2024 patenting-firms study matched up to 50 per cent of IPLORD firms to business characteristics across all remaining sources.
+    quotes: [1] "We were able to match up to 50% of firms observed in IPLORD with the business characteristics available across all the remaining data sources."
+</claims>
+<gaps>(none)</gaps>
+</answer>
 
 <answer label="Y" coverage="complete">
 <prose>
@@ -376,59 +438,6 @@ Pay As You Go (PAYG):
     quotes: [17] "It examines commercialisation outcomes using IPRoduct, a dataset linking patents to products based on the webpage-listed patent markings."
   claim 9: Data limitations include incomplete firm matching and difficulties extracting usable patent claims text.
     quotes: [2] "We were able to match up to 50% of firms observed in IPLORD with the business characteristics available across all the remaining data sources." | [19] "This means PDFs are not always convertible to TSV or Comma-Separated Values (CSV) format (formats required for machine learning)." | [19] "The process was far from ideal and results in claims text breaking down, instances where the text gets converted to non-English or non-sensical words, formulae and chemical structures break down into meaningless symbols and on occasion the text pulled belongs to a different patent application."
-</claims>
-<gaps>(none)</gaps>
-</answer>
-
-## explore-evidence-1
-
-Question: What limitations do the researchers acknowledge in their own studies?
-
-Narrative: Relevant passages state a limitation of a study: data coverage or quality, samples, measurement problems, the inability to establish causation, or results that should be read with caution.
-
-<answer label="X">(no answer)</answer>
-
-<answer label="Y" coverage="complete">
-<prose>
-The researchers acknowledge limitations in **data coverage, measurement, causal attribution and comparability**, with specific caveats varying by study.[1][2][3][4][5][6][7][8][9][10]
-
-- **AI data are a limited snapshot.** *Drivers of AI investment* (2023) uses a once-off, relatively small sample of LinkedIn activity rather than longitudinal data covering the full population.[1] Its Australian job-ad and employee data may miss overseas AI development, outsourced AI work and industries less reliant on LinkedIn’s predominantly white-collar users.[2]
-- **Patent data have truncation and identification problems.** The computer-implemented inventions study (2024) identifies EPO patent-family problems, long examination delays and small early-period samples. Some analyses therefore use the narrower 2010–17 period.[3]
-- **Some policy effects cannot be separated.** The computer-implemented inventions study cannot disentangle the effects of “Alice” and “Research Affiliates”.[4] The *Raising the Bar* study (2024) acknowledges that anticipation or other factors operating from around 2010 could mean its estimates either understate the reforms’ full effects or attribute unrelated changes to them.[5]
-- **Patent-scope measurement and validation are imperfect.** The *Raising the Bar* study warns that claim word count can measure scope poorly. Its manually validated sample is too small for highly disaggregated estimates and does not cover all examination sections, limiting conclusions outside the sample.[6]
-- **Econometric models retain weaknesses.** The profitability and competition study (2020) notes that fixed- and random-effects models may retain omitted-variable bias; adding lagged outcomes can alleviate that problem but creates a new endogeneity problem.[7]
-- **“IP-intensive” industry classifications depend on the method.** The same study notes that an above-average threshold may classify about half of industries as IP-intensive and can be distorted by industries with little or no registered IP. Its classification also excludes rights issued to individuals and foreign companies.[8]
-- **Co-filing is an incomplete collaboration indicator.** The 2022 IP Report cautions that technology transfer and IP trading may occur without co-filing, while foreign co-applicants may be related companies rather than independent collaborators.[9]
-- **Comparisons are not always like-for-like.** Reports flag differences in countries’ collection periods, populations and coverage, and warn that survey methodology changes require caution when comparing 2022 results with earlier years.[10]
-- **Interview findings are exploratory.** The design-market study (2014) reports seven formal in-depth interviews, supplemented by informal interviews. Its purpose was to understand how the market operates, not test a model; it acknowledges that a survey could have captured a larger sample.[11]
-
-Separately, administrative-data disclaimers clarify that discussions of weaknesses concern **statistical use**, not the data’s fitness for agencies’ operational purposes. The 2026 IP Report also states that access was restricted and results confidentialised to protect identities.[12]
-</prose>
-<claims>
-  claim 1: The 2023 AI investment study provides a once-off, relatively small LinkedIn sample rather than longitudinal population coverage.
-    quotes: [1] "At the current stage, this analyses only provides a once-off snapshot in terms of both time period and only a relatively small snippet or sample population of the entire possible LinkedIn job posting activities, companies, and people"
-  claim 2: The AI study’s measures may miss overseas AI development, outsourced work and industries less reliant on white-collar LinkedIn users.
-    quotes: [3] "The data may not reflect the full picture of AI capacity building of the companies in our sample." | [3] "our methodology is more likely to capture companies that aim to increase their 'in-house' AI capacity while potentially underrepresenting those that outsource AI effort and functions" | [3] "our dataset may not fully represent AI skills and adoption in industries that have a lower reliance on white-collar workers or professionals"
-  claim 3: The 2024 computer-implemented inventions study identifies EPO patent-family and truncation problems, long pendency and small early samples, restricting some analyses to 2010–17.
-    quotes: [2] "EPO data appeared to have some truncation and other issues related to the identification of patent families" | [2] "some of the analyses focused only on a subset of 2010-17 period in order to minimise the effect of data truncation (caused by long pendency period particularly at the EPO) and small sample size in the early period"
-  claim 4: The computer-implemented inventions study cannot separate the effects of Alice and Research Affiliates.
-    quotes: [2] "It is not possible in our analysis to disentangle the possible differential effect of "Alice" and "Research Affiliates"."
-  claim 5: The 2024 Raising the Bar study acknowledges that anticipation or other factors from around 2010 complicate attribution and could mean estimated effects are understated or partly unrelated to the reforms.
-    quotes: [8] "some of the effects of the RTB reforms could have been anticipated or that there are other factors (which may or may not be related to the RTB reform) which, starting around 2010, led to a decline in the proportion of broader AU patents." | [8] "However, if these factors were unrelated to the RTB reforms, then some components of the estimated impacts of RTB may not be attributable to the reforms."
-  claim 6: The Raising the Bar study warns about inaccurate claim-word-count measures and a validation sample too small for detailed estimates and not covering all examination sections.
-    quotes: [8] "relying on previous methods of assessing patent scope such as claim word count may ultimately result in poor accuracy." | [8] "To enable a highly disaggregated estimation of the RTB reforms' impacts requires a much larger sample size than the original manual validation sample data." | [8] "our sample of manually assessed patents did not cover the full spectrum of examination sections within IP Australia"
-  claim 7: The 2020 profitability study notes that fixed- and random-effects models may retain omitted-variable bias, while adding lagged outcomes creates endogeneity.
-    quotes: [16] "Typically, the assumption that some important omitted variables are time invariant is implausible, and the models may still suffer from an OVB." | [16] "However, introducing one or more lagged dependent variables as explanatory variables will cause a new endogeneity problem."
-  claim 8: The 2020 industry classification can identify about half of industries as IP-intensive, is affected by low-registration industries, and excludes individuals and foreign companies.
-    quotes: [7] "First, by definition, about half of the industries may be identified as IP-intensive given their relative IP intensities will be above the average value" | [7] "Second, only IPRs issued to domestic companies are included, while those issued to individuals and foreign companies are excluded." | [7] "a large number of industries may have zero or very few IP registrations, which drags down the average value and makes it less meaningful as a yardstick."
-  claim 9: The 2022 report cautions that co-filing misses some technology transfer and IP trading and may reflect corporate relationships rather than independent collaboration.
-    quotes: [14] "R&D and commercialisation partnerships can involve technology transfer and IP trading that is not reflected in co-filing data. Further, foreign entities listed on resident applications may be parents or subsidiaries of Australian companies, so interpreting co-filing as evidence of international collaboration requires some care."
-  claim 10: International collection differences and survey methodology changes limit comparability across countries and years.
-    quotes: [17] "other countries count a three-year basis, may focus on innovation active companies, or have broader data collection than Australia" | [6] "due to changes to the survey's methodology, comparisons between 2022 and earlier survey results should be made with caution."
-  claim 11: The 2014 design-market study uses seven formal interviews and informal triangulation for exploratory understanding rather than model testing, acknowledging surveys could provide a larger sample.
-    quotes: [11] "We report on seven in-depth formal interviews. Our research also involved triangulation through informal interviews with a broader, targeted field of market participants." | [11] "A survey methodology (i.e., mail or phone questionnaire) would have enabled us to capture data on a larger sample" | [11] "our goal was to understand how the market operates, rather than test a model of market behaviour."
-  claim 12: The 2026 administrative-data disclaimer distinguishes statistical limitations from operational fitness and notes restricted access and confidentialised results.
-    quotes: [15] "Any discussion of data limitations or weaknesses is in the context of using the data for statistical purposes and is not related to the ability of the data to support the ABR or ATO's core operational requirements." | [15] "Only people authorised under the ABS Act 1975 have viewed data about any firm when conducting these analyses." | [15] "results have been confidentialised to ensure that they are not likely to enable the identification of a particular person or organisation."
 </claims>
 <gaps>(none)</gaps>
 </answer>
@@ -1059,42 +1068,6 @@ The supplied evidence does not provide a detailed breakdown of the organisations
     quotes: [5] "Our findings indicate no statistical relationship between the number of collaborators and their types and firms' engagement with the patent system. However, the absence of a statistical relationship doesn't imply that the number or types of collaborators have no impact on R&D outcomes, including those leading to patent filings."
   claim 6: Patent co-filing captures only a specific type of collaboration and underestimates wider knowledge-transfer interactions.
     quotes: [12] "But patent data only measures a specific type of collaboration, and other forms of knowledge transfer (or links between entities) are not represented and hence this measure underestimates the total interactions."
-</claims>
-<gaps>(none)</gaps>
-</answer>
-
-## explore-compare-7
-
-Question: How do the states and territories differ in patent and trade mark activity?
-
-Narrative: Relevant passages give patent or trade mark applications by Australian state or territory, per capita or in total, and how they compare or changed.
-
-<answer label="X">(no answer)</answer>
-
-<answer label="Y" coverage="complete">
-<prose>
-**NSW leads in application volumes, while the ACT leads relative to the number of businesses.** The 2025 report’s figures for 2024 show this pattern for both standard patents and trade marks.[1][2][3]
-
-- **Standard patent volumes:** NSW accounted for 38.9 per cent of resident applications, followed by Victoria (23.3 per cent) and Queensland (17.3 per cent).[1]
-- **Trade mark volumes:** NSW was also the largest source of resident applications, followed by Victoria and Queensland.[2]
-- **Activity relative to business numbers:** The ACT recorded just over 2 standard patent applications and 21 trade mark applications per thousand businesses—the highest intensity for both rights. For trade marks, Victoria, NSW and Queensland each recorded 19 applications per thousand businesses.[3]
-
-**Recent growth differed across jurisdictions and rights:**
-
-- **Standard patents, 2024:** Applications increased in South Australia (31.5 per cent), Tasmania (30.8 per cent), Western Australia (7.9 per cent) and Victoria (5.4 per cent). They fell in NSW (3.9 per cent) and Queensland (6.1 per cent), while the Northern Territory was stable.[4]
-- **Trade marks, 2024:** Application volumes fell everywhere except Victoria and the Northern Territory. The report suggests Victoria’s highest-ranked new business entry rate was likely driving new trade mark activity; this is a qualified explanation, not an established causal finding.[5]
-</prose>
-<claims>
-  claim 1: In 2024, NSW led resident standard patent applications with 38.9 per cent, followed by Victoria with 23.3 per cent and Queensland with 17.3 per cent.
-    quotes: [3] "Among Australian states and territories, New South Wales (NSW) is the leading source for standard patent applications in Australia (38.9% of resident applications), followed by Victoria (23.3%) and Queensland (17.3%)."
-  claim 2: In 2024, NSW was the leading source of resident trade mark applications, followed by Victoria and Queensland.
-    quotes: [4] "Among Australian states and territories, New South Wales (NSW) is the leading source for resident trade mark applications in Australia, followed by Victoria and Queensland."
-  claim 3: In 2024, the ACT had the highest application intensity per thousand businesses for standard patents and trade marks, with just over 2 and 21 respectively; Victoria, NSW and Queensland each had 19 trade mark applications per thousand businesses.
-    quotes: [3] "However, the Australian Capital Territory (ACT) is the most patent-intensive, with just over 2 applications per thousand businesses in the territory" | [4] "However, the Australian Capital Territory (ACT) was the most trade mark-intensive in 2024 with 21 applications per thousand businesses in the territory (compared to 19 in Victoria, New South Wales and Queensland)."
-  claim 4: In 2024, standard patent filings rose in South Australia, Tasmania, Western Australia and Victoria, fell in NSW and Queensland, and were stable in the Northern Territory, at the rates stated in the answer.
-    quotes: [3] "In 2024, filings increased in South Australia (+31.5% on their level in 2023), Tasmania (+30.8%), Western Australia (+7.9%) and Victoria (+5.4%). Applications fell in NSW (-3.9%) and Queensland (-6.1%), while filings from the Northern Territory were stable."
-  claim 5: In 2024, trade mark volumes fell in all jurisdictions except Victoria and the Northern Territory; the report offers a qualified explanation linking Victoria’s new business entry rate to new trade mark activity, rather than establishing causation.
-    quotes: [4] "In 2024, application volumes fell in all states and territories except for the Northern Territory and Victoria (Figure 3.7). In 2024, Victoria overtook New South Wales and Queensland to have the highest new business entry rate, likely driving new trade mark activity in the state."
 </claims>
 <gaps>(none)</gaps>
 </answer>
@@ -1739,7 +1712,38 @@ The evidence shows growth in clean-energy-related patenting in Australia, rising
 <gaps>(none)</gaps>
 </answer>
 
-<answer label="Y">(no answer)</answer>
+<answer label="Y" coverage="complete">
+<prose>
+The evidence points to growing patent activity in clean energy and EV-related fields, alongside a smaller, specialised Australian contribution to battery technologies.[1][2][3][5]
+
+- **Clean energy:** The **2024 Australian IP Report** ranked Australia as the second-fastest-growing destination for patent filings related to clean energy generation and storage among 19 major economies. This measures Australia as a filing destination, rather than Australian-origin invention.[1]
+- **Latest energy and transport trends:** The **2026 report** records growth in electrical machinery, apparatus and energy filings of **12.8% in 2025**, and transport filings of **9.1%**, extending an upward trend visible since 2021. It describes these increases as aligned with electrification, EV supply chains, batteries and industrial decarbonisation—not as exclusively clean-energy or EV patents.[2]
+- **EV-specific patenting:** A machine-learning analysis in the **2025 report** found that the US accounted for **33.2%** of EV patent filings in Australia in 2024, followed by China (**16.7%**), Australia (**8.7%**) and Korea (**5.3%**).[3] For the broader transport technology category, the **2026 report** shows China’s share rising from **9.7% in 2024 to 16.5% in 2025**, while the US share fell from **35.8% to 27.9%**.[4]
+- **Australian battery capabilities:** The **2026 report** characterises Australian applicants’ global contribution in battery circularity and critical-metal refinement as small—averaging **10 international patent families annually**—but reports an **8.9% share** of families published since 2000 in critical-metal refinement for batteries.[5] It also identifies a shift towards recycling: materials recovery accounted for less than a quarter of Australian battery-circularity families in 2014–2021, but more than half in recent years after 2021.[6]
+- **Broader green-technology evidence:** The **2023 report** describes patent analytics covering carbon capture and storage, grid energy storage, solar photovoltaics, low-emissions steel, aluminium and iron ore, and soil carbon measurement. The supplied passage identifies this analytical coverage, but does not give filing totals or growth rates for those technologies.[7]
+
+**Timing caveat:** The 2024 report notes an average 18-month interval between the earliest international filing and Australian national-phase entry for PCT applications. Consequently, Australian filing trends can reflect innovation activity from earlier years.[8]
+</prose>
+<claims>
+  claim 1: The 2024 report ranked Australia second-fastest-growing among 19 major economies as a destination for clean-energy generation and storage patent filings, rather than measuring Australian-origin invention.
+    quotes: [1] "Among 19 major economies, Australia is the second fastest growing destination for patent filings related to clean energy generation and storage."
+  claim 2: The 2026 report records 2025 growth of 12.8% in electrical machinery, apparatus and energy and 9.1% in transport, continuing a trend since 2021 and aligned with electrification and decarbonisation rather than identified exclusively as clean-energy patents.
+    quotes: [2] "Electrical machinery, apparatus and energy (+12.8%) and transport (+9.1%) continued their upward trajectory in 2025, extending a trend visible since 2021. These increases align with global electrification, EV supply chains, battery technologies and industrial decarbonisation."
+  claim 3: The 2025 report's machine-learning analysis assigns 2024 Australian EV patent filing shares of 33.2% to the US, 16.7% to China, 8.7% to Australia and 5.3% to Korea.
+    quotes: [9] "A novel machine-learning analysis finds that in Australia the United States and China account for most EV patent filings (33.2% and 16.7% in 2024), followed by Australia (8.7%) and Korea (5.3%)."
+  claim 4: The 2026 report shows China's share of transport filings increasing from 9.7% in 2024 to 16.5% in 2025, while the US share declined from 35.8% to 27.9%.
+    quotes: [2] "Within transport technologies, the country composition shifted materially in 2025. China's share rose sharply from 9.7% in 2024 to 16.5% in 2025, while the United States share declined from 35.8% to 27.9%."
+  claim 5: The 2026 report describes a small Australian global contribution to battery circularity and critical-metal refinement, averaging 10 international patent families annually, with an 8.9% share in critical-metal refinement for batteries since 2000.
+    quotes: [6] "EPO analysis shows that Australian applicants account for a small share of global patent filings in battery circularity and critical metal refinement technologies." | [6] "Australian applicants account for an average 10 international patent families per year in these areas of technology. In the refinement of critical metals for batteries, Australian applicants account for 8.9% of patent families published since 2000."
+  claim 6: The 2026 report identifies a shift in Australian battery-circularity patent families towards materials recovery, from less than a quarter in 2014–2021 to more than half in recent years after 2021.
+    quotes: [6] "More recently, Australian applicants have become more engaged in battery circularity, with a marked increase in applications for materials recovery technologies. These technologies were the focus of less than a quarter of international patent families produced by Australian applicants between 2014 and 2021 in relation to battery circularity." | [8] "After 2021, the picture has reversed: material recovery is the focus of more than half of patent families originating from Australia related to battery circularity in recent years."
+  claim 7: The 2023 report describes patent analytics for several low-emissions technologies, without providing filing totals or growth rates in the supplied passage.
+    quotes: [14] "Analysing the global patent filing trends, innovators, countries of origin and filing jurisdictions in each of the technology areas of carbon capture and storage, grid energy storage, solar photovoltaic, low emissions steel, aluminium and iron ore, and soil carbon measurement will provide critical information for decision-makers as Australia strengthens and consolidates its national capability."
+  claim 8: The 2024 report identifies an average 18-month delay between earliest international filing and Australian national-phase entry for PCT applications, meaning filing trends can reflect earlier innovation.
+    quotes: [3] "For applicants who file in Australia through the PCT system, on average there is an 18-month interval between their application's earliest international filing date and when they file the application in Australia (it enters Australian 'national phase'). As such, trends in PCT applications in 2023 largely reflect changes to innovation activity from 2022 and earlier."
+</claims>
+<gaps>(none)</gaps>
+</answer>
 
 ## explore-synthesis-9
 
@@ -1959,62 +1963,6 @@ The clearest reported area where Australia is falling behind is **designs**, par
     quotes: [20] "Table 3: Top 10 economies filing ICT-related designs at IP Australia: number and percentage of countries' total applications to IP Australia, 2005-08 and 2015-18" | [20] "| Australia | 195 | 299 | 53% | 2 | 3 | 22 |" | [20] "| USA | 407 | 1 239 | 204% | 9 | 16 | 7 |" | [20] "| Republic of Korea | 46 | 77 | 67% | 27 | 20 | 3 |"
   claim 4: University–industry collaboration rankings depend on the measure: Australia ranked last on the OECD survey measure but 13th of 35 on the 2017 report's university–industry share of PCT applications for 2000–2015, ahead of the US, UK and Germany.
     quotes: [5] "On the OECD measure, Australia ranks last among OECD countries." | [1] "Figure 17 shows the number of university-industry PCT applications filed between 2000 and 2015 as a percentage of all PCT applications filed from a country. Australia ranks 13 among the 35 countries as make up 2.2 per cent of PCT applications, well ahead of other OECD countries such as the US, UK and Germany."
-</claims>
-<gaps>(none)</gaps>
-</answer>
-
-## explore-strategy-2
-
-Question: What areas do the researchers say need more research?
-
-Narrative: Relevant passages state future research directions, open questions or next steps named in the studies.
-
-<answer label="X">(no answer)</answer>
-
-<answer label="Y" coverage="complete">
-<prose>
-The researchers identify several priorities, ranging from specific evidence gaps to broader research agendas:
-
-- **IP policy and access:** The 2025 research agenda covers application timeframes across registered rights; patent scope and subject matter eligibility; global policy and trade developments, including protectionism and rising Chinese filings; and barriers to entering the IP system, including trade mark clutter.[1]
-- **Evaluating the Raising the Bar reforms:** The 2024 study calls for larger manually validated patent samples, coverage of examination sections outside the original sample, and investigation of factors behind the decline in broader Australian patents from around 2010. Those factors could change how much of the estimated impact is attributable to the reforms.[2]
-- **Patenting and finance:** Researchers recommend investigating how the relationship between patenting and reliance on external R&D funding varies with funding sources, such as debt, equity and government funding.[3]
-- **Geography of AI investment and skills:** The 2023 AI study recommends examining state- and city-level differences, geographical spillovers, and AI-skill mobility—including its interaction with regulation, standards and socio-economic conditions.[4]
-- **Mining-related innovation:** The 2015 mining study suggests investigating which firms innovate in renewable energy and desalination. Its coverage may have been limited by the definition of mining equipment, technology and services (METS) firms used in the research.[5]
-- **Stronger evidence on IP’s economic impacts:** The 2020 literature review identifies scope for further evidence-based research, noting weaknesses in data, methods, theoretical assumptions and the quality of innovation indicators.[6]
-
-**Earlier research agendas** also identified links between IP activity and the economy, changes in the innovation landscape, emerging ways of trading IP rights and productivity analysis (2015); and collaborative grants’ effects on university patent productivity, trade mark forecasting, and links between R&D and patenting (2017). These were priorities at those dates, not necessarily unresolved gaps today.[7][8]
-</prose>
-<claims>
-  claim 1: The 2025 research agenda includes application timeframes, patent policy settings, global policy and trade developments, and barriers to IP system entry such as trade mark clutter.
-    quotes: [18] "Application timeframe issues across the registered rights.
-
-The economic implications of patent policy settings - such as patent scope and subject matter eligibility.
-
-Impacts for the IP system of global policy and trade developments, such as rising protectionism, and the rapid rise in IP filings from China.
-
-Barriers to entry into the IP system including the extent and sources of trade mark clutter."
-  claim 2: The 2024 Raising the Bar study identifies needs for larger validated samples, broader examination-section coverage and investigation of factors affecting attribution of the reforms’ impacts.
-    quotes: [1] "For the future, increasing the size of the manually validated sample could turn out to be highly valuable for improving econometric analysis of the reforms. Given that our sample of manually assessed patents did not cover the full spectrum of examination sections within IP Australia, further work may be needed to confirm how the reforms influenced the scope of patents outside of our sample." | [1] "there are other factors (which may or may not be related to the RTB reform) which, starting around 2010, led to a decline in the proportion of broader AU patents." | [1] "However, if these factors were unrelated to the RTB reforms, then some components of the estimated impacts of RTB may not be attributable to the reforms."
-  claim 3: Researchers recommend investigating whether funding sources condition the link between patenting and external R&D funding.
-    quotes: [19] "it is of interest to investigate how the link between patenting and reliance on external R&D funding is conditioned by the sources of finance on which a firm relies, such as debt vs equity and government sources."
-  claim 4: The 2023 AI study recommends examining geographical differences and spillovers, and AI-skill mobility in relation to regional regulation and socio-economic conditions.
-    quotes: [10] "it would be useful from a policy perspective to explore any geographical/spatial effects in the industries' response to AI, including at a state- or city-level, and assess any differences or spillovers not accounted for in our current analysis." | [10] "Policymakers and researchers could explore job mobility across different locations in Australia, for example, to explore interactions between AI-skill mobility and city- or state-level regulation, standards, and other (human) aspects such as socio-economic situation, culture, liveability, etc."
-  claim 5: The 2015 mining study proposes investigating firms innovating in renewable energy and desalination, recognising that its METS definition may have limited coverage.
-    quotes: [4] "we would predict that METS firms would be working on developing better technologies in areas such as renewable energy production and desalination in particular, considering Australia's arid environment. However, our research in these areas may have been limited by the definition of a METS firm provided by the Department of Industry and Science. An investigation into what firms are innovating in these areas would nicely complement this report."
-  claim 6: The 2020 literature review calls for stronger evidence on IP’s economic impacts, identifying limitations in innovation indicators, data, methods and theoretical assumptions.
-    quotes: [2] "they often neglect the hidden variation in the quality of their proposed innovation indicators and lack comprehensive analysis of the statistical deficiencies in their rankings." | [2] "they frequently encounter limitations in their theoretical assumptions and the availability and quality of data, as well as research methods. Considerable scope remains for evidence based research on the economic impacts of IP to explore."
-  claim 7: The 2015 research agenda identified IP–economy relationships, the changing innovation landscape, IP trading and productivity analysis as priorities at that time.
-    quotes: [5] "The following areas will be the focus of research projects throughout 2015 and 2016:
-
-investigating the relationship between IP activity and the economy
-
-the evolution of the IP system and the changing nature of the innovation landscape domestically and internationally
-
-emerging ways of trading IP rights
-
-productivity analysis."
-  claim 8: The 2017 agenda identified collaborative grants and university patent productivity, trade mark forecasting, and R&D–patenting links as ongoing or prospective work at that time.
-    quotes: [8] "Looking forward, there is ongoing work to investigate the impact that collaborative grants have on the patent productivity of universities, as well as operational research to complete work on trade mark forecasting, and we hope to further explore the links between R&D and patenting in Australia."
 </claims>
 <gaps>(none)</gaps>
 </answer>

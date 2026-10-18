@@ -178,3 +178,16 @@ def test_blind_verdicts_map_back_to_settings():
     key = {"n1": "B", "n2": "C", "n3": "B"}
     assert answers2.unblind({"n1": "X", "n2": "X", "n3": "Y"}, key) == {"n1": "B", "n2": "C", "n3": "C"}
     assert answers2.unblind({"n1": "tie"}, key) == {"n1": "tie"}
+
+
+def test_needs_without_an_answer_are_left_out_of_both_settings(monkeypatch):
+    from econ.evalr import answers2
+
+    runs = {
+        "answers-v1.B": [{"need": "a", "outcome": "passed"}, {"need": "b", "outcome": "passed"}],
+        "answers-v2.C": [{"need": "a", "outcome": "flagged"}, {"need": "b", "outcome": "no_answer"}],
+    }
+    monkeypatch.setattr(answers2, "_load", lambda name: runs[name])
+    ns = [Need(i, "explore", "trend", "q", "narr", "test") for i in ("a", "b")]
+    kept, out = answers2.answered(ns)
+    assert [n.id for n in kept] == ["a"] and out == ["b"]  # a flagged answer stays; no answer at all goes

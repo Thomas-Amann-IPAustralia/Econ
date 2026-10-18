@@ -38,6 +38,14 @@ def needs() -> list[Need]:
     return [by[i] for i in ids]
 
 
+def answered(ns: list[Need]) -> tuple[list[Need], list[str]]:
+    """The needs both settings answered, and the ids left out because a provider error left either without
+    an answer (no_answer; in this run the OpenAI account ran out of credit). A flagged answer is kept."""
+    b, c = {r["need"]: r for r in _load("answers-v1.B")}, {r["need"]: r for r in _load("answers-v2.C")}
+    out = [n.id for n in ns if "no_answer" in (b[n.id]["outcome"], c[n.id]["outcome"])]
+    return [n for n in ns if n.id not in out], out
+
+
 def _load(name: str) -> list[dict]:
     p = config.path(RUNS) / f"{name}.jsonl"
     return [json.loads(x) for x in p.read_text().splitlines() if x.strip()]
@@ -98,11 +106,14 @@ def step_answers() -> dict:
 def step_blind() -> dict:
     """Exploratory pairs in a seeded X/Y order, for a blind reading; the key goes to its own file."""
     ns = [n for n in needs() if n.family == "explore"]
+    keep = {n.id for n in answered(ns)[0]}
     b, c = {r["need"]: r for r in _load("answers-v1.B")}, {r["need"]: r for r in _load("answers-v2.C")}
     rng = random.Random(SEED)
     key, parts = {}, ["# Blind pairs (answers-v2): which answer better serves the person who asked?", ""]
     for n in ns:
-        x_is_b = rng.random() < 0.5
+        x_is_b = rng.random() < 0.5  # drawn for every need, so a left-out need doesn't move the others
+        if n.id not in keep:
+            continue
         x, y = (b[n.id], c[n.id]) if x_is_b else (c[n.id], b[n.id])
         key[n.id] = "B" if x_is_b else "C"
         parts += [
@@ -119,11 +130,11 @@ def step_blind() -> dict:
         ]
     write_text_atomic(config.path(RUNS) / "answers-v2.blind-pairs.md", "\n".join(parts) + "\n")
     write_json_atomic(config.path(RUNS) / "answers-v2.blind-key.json", key)
-    return {"pairs": len(ns)}
+    return {"pairs": len(key)}
 
 
 def step_pairwise() -> dict:
-    ns = needs()
+    ns, _ = answered(needs())
     b, c = {r["need"]: r for r in _load("answers-v1.B")}, {r["need"]: r for r in _load("answers-v2.C")}
     model, effort = "gemini-3.8-flash", "low"
     per = {n.id: pairwise.calls(n, b[n.id], c[n.id], model=model, effort=effort) for n in ns}
@@ -193,7 +204,7 @@ def grounding(row: dict, need: Need, grades: dict[str, int]) -> dict:
 
 def step_report() -> dict:
     sp = spec()
-    ns = needs()
+    ns, left_out = answered(needs())
     grades = grid2.grades_by_need(grid2.spec_depth()["judgments"])
     b, c = {r["need"]: r for r in _load("answers-v1.B")}, {r["need"]: r for r in _load("answers-v2.C")}
     gb = {n.id: grounding(b[n.id], n, grades.get(n.id, {})) for n in ns}
@@ -216,6 +227,11 @@ def step_report() -> dict:
         "answers-v1's B answers, reused). C is the same 60-passage context rated by filter-v1 (D-018), the 20 rated "
         "highest. Both answered by gpt-6.1-sol at medium effort with answer-v1 on the Flex tier, through the check "
         "and its retry.",
+        "",
+        f"**Deviation from the grid, disclosed:** {len(left_out)} of the 60 needs are left out of both settings "
+        f"({', '.join(left_out) or 'none'}): every attempt at C's answer ended in a provider error (HTTP 502, Flex "
+        "unavailable, then HTTP 429 `credit_balance_exhausted`: the OpenAI account ran out of credit), so no answer "
+        "exists to compare. The owner chose to finish on the rest. No answer that exists was dropped.",
         "",
         "## The check",
         "",

@@ -24,3 +24,9 @@ rule: >-
   p < 0.05; and (c) C's pass rate after the retry is not lower than B's by more than 5 points. Otherwise the
   better evidence is not shown to give better answers, and the filter is not recommended on this run.
 report: reports/answers-v2.md
+amendment_1: >-
+  Made after C's answers and before any judging (no pair read, no preference requested). Three needs
+  (explore-evidence-1, explore-compare-7, explore-strategy-2) have no C answer: every attempt ended in a provider
+  error (HTTP 502, Flex unavailable, then HTTP 429 credit_balance_exhausted: the OpenAI account ran out of
+  credit). The owner chose to finish on the other 57: a need either setting failed to answer is left out of both,
+  and the rule is applied to 57 needs (30 exploratory, 27 silver).
