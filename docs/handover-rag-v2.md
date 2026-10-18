@@ -1,11 +1,11 @@
 # Handover: RAG v2
 
-For the next session. Read `CLAUDE.md`, then D-011 to D-015 in `docs/decisions.md`, then this. The running
+For the next session. Read `CLAUDE.md`, then D-011 to D-016 in `docs/decisions.md`, then this. The running
 log of the session is `docs/progress-rag-v2.md`; the owner's summary is `docs/rag-v2-results-explained.md`.
 
 **Status (2026-10-18):** RAG v2 adopted in config and verified. Branch `claude/charming-edison-sg0ehp`
 (not merged). The owner's brief for this session: the best RAG system that stays free to run, up to $2.50
-of OpenAI and $2.50 of Gemini. Spent: OpenAI $2.13, Gemini $1.86 (`eval/spend/ledger.jsonl`).
+of OpenAI and $2.50 of Gemini. Spent: OpenAI $2.15, Gemini $1.92 (`eval/spend/ledger.jsonl`).
 
 ## What changed in the service
 - `retrieval.enrichment: S384-noprefix-nocite.luna-enrich-v1` (context notes in front of each chunk for
@@ -33,8 +33,9 @@ of OpenAI and $2.50 of Gemini. Spent: OpenAI $2.13, Gemini $1.86 (`eval/spend/le
    (about $0.70) to check in-scope answers don't suffer.
 2. **Model choice** (SOP §20.5): gpt-6.1-sol vs gemini-3.8-flash vs others, judged across families.
 3. **Coverage calibration**: answers label `complete` too readily (the vague and trade-secrets items).
-4. **A reranker that reads the notes** (note + passage as its input) is the untested idea most likely to add
-   to retrieval; the 150M ettin model led on dev without the notes (0.753) but not on test.
+4. **Tried and not adopted in grid v3 (D-016):** the fusion weight (flat), rerankers that read the notes
+   (17M and 32M still harmful), plan-v3's answer-shaped query (level on dev, +0.022 on test with an interval
+   that includes zero: the one idea worth re-testing on a larger set).
 5. **The plan prompt's document map** must be updated when documents are added; so must the notes
    (`econ.kb.enrich`, about $0.14 a corpus).
 6. Carried from v1: Langfuse tracing, re-OCR of the 2018 and 2021 garbled pages, a persistent answer store.
@@ -43,4 +44,4 @@ of OpenAI and $2.50 of Gemini. Spent: OpenAI $2.13, Gemini $1.86 (`eval/spend/le
 - Grids and test sets committed before any number; deviations recorded as amendments before the data they
   affect (see grid retrieval-v2, amendment 1).
 - Every paid call goes through `econ.evalr.llmcall` or `econ.evalr.judge` (cached, metered, capped).
-- Next free decision number: **D-016**.
+- Next free decision number: **D-017**.

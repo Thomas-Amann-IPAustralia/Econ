@@ -1,0 +1,18 @@
+{
+  "adopted": "plan+q:luna-plan-v2/enriched/none",
+  "chosen": "plan+q:luna-plan-v2/enriched/none",
+  "dev": {
+    "plan+q:luna-plan-v2/enriched/ettin-17m/noted": 0.6595076413244748,
+    "plan+q:luna-plan-v2/enriched/ettin-32m/noted": 0.6957364305018904,
+    "plan+q:luna-plan-v2/enriched/ettin-68m/noted": 0.7246762240921096,
+    "plan+q:luna-plan-v2/enriched/none": 0.7260725132883857,
+    "plan+q:luna-plan-v2/enriched/none/a0.5": 0.7077395053303688,
+    "plan+q:luna-plan-v2/enriched/none/a0.6": 0.7276313590598967,
+    "plan+q:luna-plan-v2/enriched/none/a0.8": 0.7273203921823126,
+    "plan+q:luna-plan-v2/enriched/none/a0.9": 0.7096529663698942,
+    "plan+q:luna-plan-v3/enriched/none": 0.7268277984637337
+  },
+  "primary": "ndcg@10",
+  "qualified": [],
+  "stage": "v3"
+}

@@ -7,7 +7,7 @@ in the Cloudflare R2 bucket `econ-knowledge` (EU jurisdiction). Callers are peop
 doing exploratory research for strategic direction. **Transparency and traceability come first**: every
 claim an answer makes quotes a passage, and every passage leads to its page.
 
-**Current scope: the retrieval-augmented chatbot, second version (RAG v2, D-011 to D-015).** Built: the
+**Current scope: the retrieval-augmented chatbot, second version (RAG v2, D-011 to D-016).** Built: the
 knowledge base, the serving index (with search-only context notes), the API (Render), the embedder (Cloud
 Run), the front end (GitHub Pages); the embedder is live on Cloud Run, the API and front end not yet
 deployed. Measured: retrieval on a judged test set of 178 needs (silver known-item plus exploratory
@@ -116,8 +116,8 @@ medium or high effort. A judge never shares the answering model's family.
 
 ## Future state (context only — do not build yet)
 Langfuse tracing (SOP §20.0 and §20.3); the model evaluation and adoption (SOP §20.5); answer-v2 (owner's
-decision, D-015); a check of meaning for claims; a reranker that reads the context notes; a persistent
-answer store and spend meter. The judged test set (`econ.evalr.judged`, `eval/judgments/judged-v1.jsonl`)
+decision, D-015); a check of meaning for claims; plan-v3's answer-shaped query, re-tested on a larger set
+(D-016); a persistent answer store and spend meter. The judged test set (`econ.evalr.judged`, `eval/judgments/judged-v1.jsonl`)
 is the yardstick for all of them; a method that surfaces unjudged passages needs a top-up first.
 
 ## Conventions

@@ -139,3 +139,9 @@ pavlova. gpt-6.1-sol was more concise and added a caveat; Gemini quoted more.
 - **Spend at the end:** OpenAI $2.13 of $2.50, Gemini $1.86 of $2.50.
 - Records: D-011 to D-015, `CLAUDE.md`, `README.md`, `docs/handover-rag-v2.md`,
   `docs/rag-v2-results-explained.md`.
+
+## 2026-10-18 — Grid v3 (D-016): no further change
+Fusion weight, note-reading rerankers and an answer-shaped query (plan-v3), pre-registered, topped up to
+fully judged top 10s: none beats the adopted setting on dev by the margin. Rerankers with notes are still
+harmful at 17M and 32M; the fusion weight is flat between 0.6 and 0.8; plan-v3 is level on dev and +0.022 on
+test (interval includes zero). Final spend: OpenAI $2.15 of $2.50, Gemini $1.92 of $2.50.

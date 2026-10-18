@@ -614,3 +614,27 @@ labelled `complete`). Not measured: its effect on in-scope answers beyond these 
 $0.70 of answers (the answers-v1 set) before adoption.
 
 **Spend:** OpenAI $0.51 (the set, PROMPT_1 again, the answer-v2 option). Totals: OpenAI $2.13, Gemini $1.86.
+
+---
+
+## D-016 — Grid v3: three more ideas, none beats the adopted setting (Claude; 2026-10-18)
+
+**Context.** Three ideas left open by D-012 and D-013, tried on the adopted setting
+(`plan+q:luna-plan-v2/enriched/none`) under grid `eval/grids/retrieval-v3.yaml`, committed at `5996c3b`
+before any number: the fusion weight re-tuned for the enriched index; rerankers that read each chunk's
+context note before its text (in v2 they read the text alone); and plan-v3, plan-v2 plus one query shaped
+like an answer sentence (HyDE-style). Rule: replace the adopted setting only on a dev gain over 0.02 within
+the 2.5 s reranking budget. A top-up judged the 213 unjudged passages in the variants' top 10s
+(judged@10 1.000 for every variant). Report `reports/retrieval-v3.md`.
+
+**Results** (ndcg@10; the adopted setting: dev 0.726, test 0.679 on the topped-up judgments).
+- Fusion weight: flat. Alpha 0.6 and 0.8 score 0.728 and 0.727 on dev; 0.5 and 0.9 are worse (0.708, 0.710).
+- Rerankers reading the notes: still no help. ettin-17m (2.3 s with notes, within budget) 0.660 dev and
+  -0.079 [-0.120, -0.037] on test; ettin-32m (5.2 s) -0.043; ettin-68m (over 11 s) level. Small rerankers
+  trained on web search reorder these reports worse than the hybrid score with notes.
+- plan-v3: level on dev (0.727) and +0.022 [-0.005, +0.049] on test, an interval that includes zero.
+
+**Decision.** No change. The adopted setting is at a flat optimum for these choices. plan-v3 is the only
+candidate worth a second look on a larger test set; a test-only gain is not a reason to adopt.
+
+**Spend:** OpenAI $0.014 (plan-v3 plans), Gemini $0.067 (top-up). Totals: OpenAI $2.15, Gemini $1.92.
