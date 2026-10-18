@@ -40,7 +40,7 @@ chunking:
       kind: structure
       max_tokens: 384
       prefix: none
-  adopted: null
+  adopted: S384-noprefix   # D-005
 
 embedding:
   batch_size: 16
@@ -109,6 +109,7 @@ embedding:
       query_prefix: "Represent this sentence for searching relevant passages: "
       licence: apache-2.0
       onnx_file: onnx/model.onnx
+      onnx_sha256: bc6f7662487a0796e6f86229c8e5c3ab2f7059e08e0bb2f524125273f72171c4
     granite-r2:
       hf_id: ibm-granite/granite-embedding-english-r2
       revision: 47ea694b257b703fee9253d75c2b1f2985180498
@@ -173,11 +174,11 @@ embedding:
       max_tokens: 8192
       query_prefix: "Instruct: Given a question about intellectual property economics, retrieve passages from IP Australia reports that answer it\nQuery:"
       licence: apache-2.0
-  adopted: null
+  adopted: arctic-m-v1.5   # D-006
 
 retrieval:
   lane_depth: 100      # candidates taken from each lane before fusion
-  fusion: score        # min-max normalised score fusion (the reference build's prior); rrf is the alternative
+  fusion: score        # min-max normalised score fusion; kept over rrf and other weights (D-006)
   alpha: 0.7           # weight on the dense lane
   rrf_k: 60
   context_chunks: 20   # passages given to the answer model

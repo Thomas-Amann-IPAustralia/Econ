@@ -351,7 +351,7 @@ function renderTrail(t) {
   const map = h("div", { class: "map" });
   for (const y of Object.keys(byYear).sort().reverse()) {
     map.append(h("div", { class: "map-row" }, h("span", { class: "map-year" }, y), h("div", { class: "map-docs" },
-      Object.entries(byYear[y]).map(([doc, xs]) => h("button", { class: "map-doc", title: state.docs[doc]?.title || doc, onclick: () => filterDoc(doc) },
+      Object.entries(byYear[y]).map(([doc, xs]) => h("button", { class: "map-doc", title: state.docs[doc]?.title || doc, onclick: (ev) => filterDoc(doc, ev.currentTarget) },
         (state.docs[doc]?.series || "").replace("IP Australia Economic Research Paper", "ERP").replace("Australian IP Report", "IP Report").replace("Office of the Chief Economist", "OCE"),
         xs.map((x) => h("span", { class: `pip${citedBy[x.n] ? " cited" : ""}`, title: `Passage ${x.n}${citedBy[x.n] ? ", cited" : ""}` })))))));
   }
@@ -398,11 +398,12 @@ function renderTrail(t) {
   pane.append(trace);
 }
 
-function filterDoc(doc) {
+function filterDoc(doc, btn) {
   const items = document.querySelectorAll("#evlist .ev");
   const on = [...items].some((a) => a.style.display === "none") && [...items].find((a) => a.style.display !== "none")?.dataset.doc === doc;
   items.forEach((a) => { a.style.display = on || a.dataset.doc === doc ? "" : "none"; });
   document.querySelectorAll(".map-doc").forEach((b) => b.classList.remove("active"));
+  if (!on) btn?.classList.add("active");
   $("#filter-note").textContent = on ? "Filled pips and a blue edge mark cited passages." : `Showing ${state.docs[doc]?.title || doc}. Select it again to show all.`;
 }
 

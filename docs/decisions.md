@@ -158,3 +158,132 @@ known-item set from the parsed text:
 
 **Consequences.** For the owner: whether the extracted text may sit in this public repository (see the
 reply of 2026-10-18 and the handover); the 7 documents without a licence statement.
+
+---
+
+## D-005 — Chunking: structure-aware chunks of up to 384 tokens, without a heading prefix (Claude, as delegated by the owner; 2026-10-18)
+
+**Context.** The owner asked Claude to "select a chunking strategy and embedding model you think will
+best suit my needs", so the choice is Claude's, made on data under the rule committed in
+`eval/grids/retrieval-v1.yaml` at `411f27b`, before any number existed (SOP §3, §12). Run
+`eval-retrieval/20261018T011000Z`; report `reports/retrieval-chunking.md`.
+
+**Decision.** `chunking.adopted: S384-noprefix`: chunks never cross a section; elements are packed up to
+384 tokens; long paragraphs split at sentences and long tables at rows (repeating the header); no
+title or section prefix in the embedded text. The answer model still sees each passage's document,
+year, section and pages, as attributes of its evidence block.
+
+**Method.** Five strategies, each scored with two embedders from different families (bge-small, a BERT,
+and gte-modernbert, a ModernBERT) on the hybrid lane (0.7 dense + 0.3 BM25). Primary metric:
+`recall@4k_tok`, the share of a need's gold passages that reach the answer model when the top chunks
+fill 4,000 tokens, which is fair across chunk sizes. Rule: the first strategy, simplest first, within
+0.02 of the best on dev.
+
+**Results** (recall@4k_tok, averaged over the two embedders):
+
+| Strategy | Dev (55) | Test (59) | Test vs F384 [95% CI] |
+|---|---|---|---|
+| F384 (fixed windows, the baseline) | 0.683 | 0.715 | |
+| **S384-noprefix (chosen)** | 0.794 | 0.742 | +0.027 [−0.054, +0.112] |
+| S384 (with the heading prefix) | 0.792 | 0.720 | +0.006 [−0.065, +0.076] |
+| S256 | 0.803 | 0.771 | +0.056 [−0.017, +0.138] |
+| S512 | 0.753 | 0.742 | +0.027 [−0.041, +0.097] |
+
+**Reading them.**
+- On dev, structure-aware chunking beats fixed windows by 0.07 to 0.12. On test the gain is smaller, and
+  no interval excludes zero: with 59 needs, a difference has to exceed about 0.08 to show. The direction
+  holds in every structure variant on both splits.
+- **S256 was best on both splits**, and on cross-document needs (0.486 against 0.361), but within the
+  margin of the simpler S384-noprefix on dev. It is the runner-up to re-test when a larger test set
+  exists; smaller passages would also make quotes and highlights tighter.
+- **The heading prefix adds nothing here** (0.792 with, 0.794 without on dev; 0.720 and 0.742 on test).
+  A plausible reason: 12 of 24 documents share nearly the same title ("Australian IP Report 20XX"), so the
+  prefix adds the same words to many chunks without telling them apart.
+- **What the misses are.** 19 needs are missed by both embedders within 4k tokens. In 13 of them the gold
+  document is in the top 3: search found a neighbouring passage, or the same kind of finding in another
+  year's report (plant varieties, for instance, appear in several editions). Some of those are correct
+  answers the silver set counts as misses; others suggest adding a hit's neighbouring passages to the
+  context, a candidate to measure later.
+
+**Disclosed.** The run's manifest records the git state at its end (`11dc5b5`, plus the untracked draft in
+`eval/oos/`), because the manifest code then recorded only the end state. The measurement ran at
+`374a744`; the files changed in between (the embedder, the API, the CLI's index command, the front end)
+are not used by the measurement. Manifests now record the state at the start too (`2f62fd9`).
+
+**Spend:** $0 (CPU only: about 32 minutes).
+
+**Consequences.** The embedder stage runs on S384-noprefix. For the owner: nothing to decide; S256 is
+noted as the runner-up.
+
+---
+
+## D-006 — Embedder: Snowflake arctic-embed-m-v1.5 (109M), served on Cloud Run; fusion stays at 0.7 dense + 0.3 BM25 (Claude, as delegated by the owner; 2026-10-18)
+
+**Context.** The second and third stages of the grid committed at `411f27b`, on the chunking chosen in
+D-005. Runs `eval-retrieval/20261018T014224Z` (embedders) and `20261018T030802Z` (fusion); reports
+`reports/retrieval-embedders.md` and `reports/retrieval-fusion.md`.
+
+**Decision.** `embedding.adopted: arctic-m-v1.5`
+(`Snowflake/snowflake-arctic-embed-m-v1.5` at `e58a8f75`, Apache-2.0, 768 dimensions, CLS pooling, the
+query prefix "Represent this sentence for searching relevant passages: "). It is served from the
+repository's own ONNX export, whose sha256 (`bc6f7662…`) is now pinned in config. Fusion stays as
+configured: min-max score fusion, 0.7 dense and 0.3 BM25.
+
+**Embedder results** (ndcg@10 on the hybrid lane, S384-noprefix; rule: the smallest candidate within
+0.02 of the best on dev):
+
+| Model | Params | Dev | Test | Test vs bge-small [95% CI] |
+|---|---|---|---|---|
+| bge-small (baseline) | 33M | 0.543 | 0.450 | |
+| leaf-ir | 23M | 0.570 | 0.516 | +0.066 [−0.001, +0.133] |
+| **arctic-m-v1.5 (chosen)** | 109M | **0.590** | 0.522 | +0.071 [+0.002, +0.142] |
+| modernbert-embed | 149M | 0.558 | 0.528 | +0.078 [+0.023, +0.136] |
+| arctic-l-v2 | 568M | 0.589 | 0.552 | +0.101 [+0.054, +0.149], Holm p 0.003 |
+| qwen3-0.6b | 596M | 0.577 | 0.479 | +0.029 [−0.052, +0.111] |
+| bge-large / mxbai-large | 335M | 0.569 / 0.557 | 0.457 / 0.474 | +0.006 / +0.024 |
+
+The other six (minilm-l6, arctic-s, granite-small-r2, bge-base, granite-r2, gte-modernbert) scored
+0.517 to 0.568 on dev; all are in the report.
+
+**Reading them.**
+- arctic-m-v1.5 was best on dev, so the rule chose it outright. **leaf-ir missed the margin by 0.0001**
+  (0.569640 against a threshold of 0.569741). Its repository's ONNX export also appears to lack the
+  model's final projection layer, which would have needed a custom export.
+- **arctic-l-v2 is the runner-up.** It tied on dev (0.589), did better on test, and is the only model
+  ahead of the baseline after the Holm adjustment. Head to head over all 114 needs, it leads arctic-m-v1.5
+  by +0.015 ndcg@10 [−0.017, +0.047] and +0.013 recall@4k_tok [−0.026, +0.057]: a tie, for a model five
+  times larger and about three times slower to embed. Re-test it on the larger test set.
+- **Size bought nothing reliable here.** The four models of 335M to 600M parameters averaged no better
+  than the best 110M models.
+- **Parity, probed.** ONNX and sentence-transformers vectors for arctic-m-v1.5 agree to cosine 1.000000
+  on documents, a query and an input long enough to truncate. `econ verify-embedder` checks the whole
+  test set and the index after the build.
+
+**Fusion results** (ndcg@10, arctic-m-v1.5; rule: keep the configured hybrid unless another lane beats it
+by more than 0.02 on dev):
+
+| Lane | Dev | Test | Test vs hybrid [95% CI] |
+|---|---|---|---|
+| **hybrid, 0.7 dense + 0.3 BM25 (kept)** | 0.590 | 0.522 | |
+| dense only | 0.574 | 0.483 | −0.039 [−0.080, −0.001] |
+| BM25 only | 0.448 | 0.371 | −0.151 [−0.235, −0.071] |
+| 0.5 / 0.5 | 0.587 | 0.481 | −0.041 [−0.078, −0.008] |
+| 0.85 / 0.15 | 0.584 | 0.510 | −0.012 [−0.040, +0.015] |
+| reciprocal rank fusion | 0.533 | 0.462 | −0.060 [−0.114, −0.015] |
+
+The keyword lane earns its place: hybrid beats dense-only on both splits. Reciprocal rank fusion trails
+score fusion, as it did in the reference build.
+
+**Disclosed.** The embedder run's manifest records the end state (`2f62fd9`, with uncommitted edits to
+docs and the front end): it started at `11dc5b5` under the old manifest code. The only code committed
+during the run was `src/econ/manifest.py`, which the running process had already loaded. The fusion run
+recorded its start state (`2f62fd9`); its uncommitted edits were to docs and `web/app.js`.
+
+**Spend:** $0 (CPU only: about 75 minutes for the 14 embedders).
+
+**Consequences.**
+- Serving: Cloud Run holds a 436 MB ONNX model; about 1 GB of RAM at run time, so 2 GiB and 1 vCPU. The
+  Render API loads 1,969 vectors of 768 dimensions (3 MB as float16).
+- Open, in order of expected value: re-test S256 and arctic-l-v2 on a larger test set; measure neighbour
+  expansion and a lower per-document cap (D-005); try the int8 ONNX export (110 MB, faster cold starts)
+  against the float32 index.
