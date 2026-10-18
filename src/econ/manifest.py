@@ -146,6 +146,9 @@ def run(command: str, config_hash: str, **params):
     """Wrap a stage: always writes a manifest, passed or failed."""
     run_id = datetime.now(UTC).strftime("%Y%m%dT%H%M%SZ")
     r = Run(command=command, run_id=run_id, config_hash=config_hash, params=params)
+    # The code that ran is the code at the start; a commit made during a long run must not be mistaken
+    # for it (the first chunking measurement recorded only the end state).
+    git_start = git_state()
     started = time.time()
     try:
         yield r
@@ -171,7 +174,8 @@ def run(command: str, config_hash: str, **params):
             "upstream": r.upstream,
             "counts": r.counts,
             "warnings": r.warnings,
-            "git": git_state(),
+            "git": git_start,
+            "git_at_end": git_state(),
             "versions": versions(),
             "argv": sys.argv[1:],
             "seconds": round(time.time() - started, 1),
