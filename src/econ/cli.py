@@ -389,6 +389,15 @@ class _LocalEmbedder:
     def embed(self, texts, expect_model, expect_dim):
         return self.model.encode(texts, kind="query")
 
+    def rerank(self, query, passages, expect_model):
+        from econ.reranker import OnnxReranker
+
+        if getattr(self, "rr", None) is None:
+            self.rr = OnnxReranker(
+                expect_model, config.path(config.pipeline().paths.models) / "rerank-onnx" / expect_model
+            )
+        return self.rr.score(query, passages)
+
     def ping(self):
         return self.health
 

@@ -15,6 +15,10 @@ RUN pip install -e ".[embedder]"
 # MODEL defaults to embedding.adopted in config/pipeline.yaml.
 ARG MODEL=""
 RUN python -m econ.embedder fetch-model --model "${MODEL}" --dest /models
+# RERANKER defaults to reranking.adopted; with none adopted the image serves /embed only (D-012).
+ARG RERANKER=""
+ENV ECON_RERANKER_DIR=/reranker
+RUN python -m econ.embedder fetch-reranker --model "${RERANKER}" --dest /reranker
 
 RUN useradd --uid 10001 --no-create-home app
 USER app

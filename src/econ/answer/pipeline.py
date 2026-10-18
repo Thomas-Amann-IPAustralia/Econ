@@ -75,6 +75,34 @@ def context_queries(context: str, k: int) -> list[str]:
     return heads[:k]
 
 
+def rerank_query(question: str, context: str) -> str:
+    """What the reranker compares passages with: the (standalone) question, plus pasted material's headings,
+    since a question like "does the knowledge base agree with this?" says nothing about its topic."""
+    heads = context_queries(context, 3)
+    return " ".join([question, *heads]) if heads else question
+
+
+def rerank_step(svc: Services, ranked: list, query: str) -> dict:
+    """Reorder the first stage's top candidates with the adopted cross-encoder (D-012). If the reranker
+    fails, the first-stage order stands and the event says so, as the keyword fallback does for search."""
+    rc = config.pipeline().reranking
+    if not rc.adopted or not ranked:
+        return {"model": None, "status": "off"}
+    if not getattr(svc.embedder, "configured", False):
+        return {"model": rc.adopted, "status": "not configured; first-stage order"}
+    head = ranked[: rc.depth]
+    try:
+        scores = svc.embedder.rerank(query, [svc.index.chunks[s.row]["text"] for s in head], rc.adopted)
+    except Exception as e:  # noqa: BLE001 - any failure keeps the first-stage order, visibly
+        return {"model": rc.adopted, "status": f"unavailable ({type(e).__name__}); first-stage order"}
+    return {
+        "model": rc.adopted,
+        "status": "ok",
+        "depth": len(head),
+        "ranked": svc.index.reorder(ranked, scores, rc.depth),
+    }
+
+
 def evidence_block(n: int, chunk: dict, doc: dict) -> str:
     pages = chunk["pages"]
     pg = f"{pages[0]}" if len(pages) == 1 else f"{pages[0]}-{pages[-1]}"
@@ -107,6 +135,7 @@ def evidence_view(svc: Services, sel, n: int, queries: list[str]) -> dict:
         "tokens": c["tokens"],
         "merged_rank": sel.merged_rank,
         "merged_score": sel.merged_score,
+        "rerank_score": sel.rerank_score,
         "per_query": {str(k): v for k, v in sel.per_query.items()},
         "matched_terms": terms,
     }
@@ -136,6 +165,8 @@ def run(req: Request, svc: Services) -> Iterator[dict]:
     question = req.question.strip()
     queries = [question]
     standalone = question
+    planned = False
+    prev = ""
     if req.history:
         prev = next((h["text"] for h in reversed(req.history) if h["role"] == "user"), "")
         queries = [f"{prev} {question}".strip()]
@@ -162,6 +193,7 @@ def run(req: Request, svc: Services) -> Iterator[dict]:
             qs = [q.strip() for q in plan.queries if q.strip()][: scfg.answer.max_queries]
             if qs and not any(textcheck.high(textcheck.scan(q)) for q in qs):
                 queries, standalone = qs, plan.standalone_question.strip() or question
+                planned = True
             yield {
                 "event": "plan",
                 "standalone_question": standalone,
@@ -193,6 +225,12 @@ def run(req: Request, svc: Services) -> Iterator[dict]:
     t = time.time()
     allowed = svc.index.allowed(req.doc_ids, req.years)
     ranked, traces = svc.index.search(queries, qvecs, allowed=allowed)
+    # The reranker compares passages with the question as asked (as measured, D-012); in a conversation, with
+    # the planner's standalone rewrite, or without a planner, the previous question and this one.
+    asked = (standalone if planned else f"{prev} {question}".strip()) if req.history else question
+    rerank = rerank_step(svc, ranked, rerank_query(asked, req.context))
+    if rerank.get("ranked") is not None:
+        ranked = rerank.pop("ranked")
     chosen = svc.index.context(ranked)
     evidence = [evidence_view(svc, s, i + 1, queries) for i, s in enumerate(chosen)]
     for tr in traces:
@@ -203,6 +241,7 @@ def run(req: Request, svc: Services) -> Iterator[dict]:
         "event": "retrieval",
         "queries": queries,
         "dense": dense_status,
+        "rerank": rerank,
         "traces": traces,
         "evidence": evidence,
         "candidates": len(ranked),

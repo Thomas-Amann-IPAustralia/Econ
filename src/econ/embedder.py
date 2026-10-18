@@ -41,6 +41,11 @@ class EmbedIn(BaseModel):
     kind: str = Field(pattern="^(query|doc)$")
 
 
+class RerankIn(BaseModel):
+    query: str = Field(min_length=1, max_length=MAX_CHARS)
+    passages: list[str] = Field(min_length=1, max_length=MAX_TEXTS)
+
+
 class OnnxEmbedder:
     def __init__(self, key: str, model_dir: Path, *, threads: int | None = None):
         import onnxruntime as ort
@@ -156,6 +161,11 @@ def create_app():
         if (model_dir / "model.json").exists()
         else None
     )
+    # The reranker (D-012) is optional: an image built without one serves /embed only.
+    rr_dir = Path(os.environ.get("ECON_RERANKER_DIR", "/reranker"))
+    rr_key = (
+        json.loads((rr_dir / "model.json").read_text())["key"] if (rr_dir / "model.json").exists() else None
+    )
     state: dict = {}
     token = os.environ.get("EMBEDDER_TOKEN", "")
     lock = threading.Lock()
@@ -170,6 +180,16 @@ def create_app():
                 state["load_seconds"] = round(time.time() - t, 2)
         return state["m"]
 
+    def reranker():
+        from econ.reranker import OnnxReranker
+
+        with lock:
+            if "r" not in state:
+                t = time.time()
+                state["r"] = OnnxReranker(rr_key, rr_dir)
+                state["rr_load_seconds"] = round(time.time() - t, 2)
+        return state["r"]
+
     api = FastAPI(title="econ embedder", docs_url=None, redoc_url=None)
 
     def check(auth: str | None) -> None:
@@ -179,15 +199,25 @@ def create_app():
     @api.get("/health")
     def health(authorization: str | None = Header(default=None)) -> dict:
         check(authorization)
-        m = model()  # a health check warms the model, so the first real query is fast
-        return {
+        m = model()  # a health check warms the models, so the first real query is fast
+        out = {
             "status": "ok",
             "model": m.key,
             "revision": m.meta["revision"],
             "dim": m.spec.dim,
             "onnx_sha256": m.meta["onnx_sha256"],
             "load_seconds": state.get("load_seconds"),
+            "reranker": None,
         }
+        if rr_key:
+            r = reranker()
+            out["reranker"] = {
+                "model": r.key,
+                "revision": r.meta["revision"],
+                "onnx_sha256": r.meta["onnx_sha256"],
+                "load_seconds": state.get("rr_load_seconds"),
+            }
+        return out
 
     @api.post("/embed")
     def embed(body: EmbedIn, authorization: str | None = Header(default=None)) -> dict:
@@ -203,6 +233,23 @@ def create_app():
             "dim": int(vecs.shape[1]),
             "dtype": "float32",
             "vectors_b64": [base64.b64encode(v.tobytes()).decode() for v in vecs],
+            "seconds": round(time.time() - t, 4),
+        }
+
+    @api.post("/rerank")
+    def rerank(body: RerankIn, authorization: str | None = Header(default=None)) -> dict:
+        check(authorization)
+        if not rr_key:
+            raise HTTPException(status_code=404, detail="this service has no reranker")
+        if any(len(p) > MAX_CHARS for p in body.passages):
+            raise HTTPException(status_code=413, detail=f"each passage must be under {MAX_CHARS} characters")
+        r = reranker()
+        t = time.time()
+        scores = r.score(body.query, body.passages)
+        return {
+            "model": r.key,
+            "revision": r.meta["revision"],
+            "scores": [round(float(x), 6) for x in scores],
             "seconds": round(time.time() - t, 4),
         }
 
@@ -227,5 +274,17 @@ if __name__ == "__main__":
         if not k:
             raise SystemExit("no --model given and embedding.adopted is not set")
         print(json.dumps(fetch_model(k, Path(args.get("--dest", "/models"))), indent=2))
+    elif len(sys.argv) >= 2 and sys.argv[1] == "fetch-reranker":
+        from econ.reranker import fetch_reranker
+
+        args = dict(zip(sys.argv[2::2], sys.argv[3::2], strict=False))
+        k = args.get("--model") or config.pipeline().reranking.adopted
+        if not k:
+            print("no reranker adopted (reranking.adopted is null); the image serves /embed only")
+        else:
+            print(json.dumps(fetch_reranker(k, Path(args.get("--dest", "/reranker"))), indent=2))
     else:
-        raise SystemExit("usage: python -m econ.embedder fetch-model [--model KEY] [--dest DIR]")
+        raise SystemExit(
+            "usage: python -m econ.embedder fetch-model [--model KEY] [--dest DIR]\n"
+            "       python -m econ.embedder fetch-reranker [--model KEY] [--dest DIR]"
+        )

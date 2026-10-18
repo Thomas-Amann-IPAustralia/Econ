@@ -122,6 +122,28 @@ class EmbeddingCfg(Strict):
         return self
 
 
+class Reranker(Strict):
+    hf_id: str
+    revision: str
+    params_m: float
+    licence: str
+    max_tokens: int = 512
+    onnx_file: str = "onnx/model.onnx"
+    onnx_sha256: str | None = None
+
+
+class RerankingCfg(Strict):
+    candidates: dict[str, Reranker] = {}
+    adopted: str | None = None  # None: no reranker; the first stage's order is the ranking
+    depth: int = 50  # first-stage candidates the reranker reorders
+
+    @model_validator(mode="after")
+    def _adopted_known(self) -> RerankingCfg:
+        if self.adopted is not None and self.adopted not in self.candidates:
+            raise ValueError(f"reranking.adopted {self.adopted!r} is not a candidate")
+        return self
+
+
 class RetrievalCfg(Strict):
     lane_depth: int = 100
     fusion: Literal["score", "rrf"] = "score"
@@ -137,6 +159,7 @@ class Pipeline(Strict):
     chunking: ChunkingCfg
     embedding: EmbeddingCfg
     retrieval: RetrievalCfg = RetrievalCfg()
+    reranking: RerankingCfg = RerankingCfg()
 
 
 # --- service -------------------------------------------------------------------------------------

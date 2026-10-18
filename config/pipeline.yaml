@@ -188,3 +188,22 @@ retrieval:
   rrf_k: 60
   context_chunks: 20   # passages given to the answer model
   per_doc_cap: 8       # at most this many of those from one document
+
+reranking:
+  # Cross-encoders screened for the judged grid (retrieval-v2): permissive licence, no trust_remote_code,
+  # pinned revision, and a repository ONNX export. Served from the Cloud Run embedder service when adopted.
+  depth: 50
+  candidates:
+    ettin-17m:
+      hf_id: cross-encoder/ettin-reranker-17m-v1
+      revision: 9e4aa35321a6dd1a43ca313f500c4b4f7cfb5cc6
+      params_m: 17.6
+      licence: apache-2.0
+      onnx_sha256: 2a375ccea150a4df925a47884b510eeb4bd6227ca6fffdbbc62ca2284bfe6211
+    ettin-32m:
+      hf_id: cross-encoder/ettin-reranker-32m-v1
+      revision: b33e5ceb5110773ea9cf5e00c9bedc83a8c2afdd
+      params_m: 32.8
+      licence: apache-2.0
+      onnx_sha256: 31061d9f54e8303f5d95cf3433dcf99f50d5f6de283c3b8357452be8c824142f
+  adopted: null

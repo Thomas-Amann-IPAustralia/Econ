@@ -33,6 +33,7 @@ class Selected:
     merged_score: float
     merged_rank: int
     per_query: dict = field(default_factory=dict)  # query index -> {rank, score, dense, bm25, ...}
+    rerank_score: float | None = None  # the cross-encoder's logit, when a reranker ordered the list
 
 
 class Index:
@@ -115,6 +116,14 @@ class Index:
             s.merged_rank = i + 1
             s.merged_score = round(s.merged_score, 6)
         return ranked, traces
+
+    def reorder(self, ranked: list[Selected], scores, depth: int) -> list[Selected]:
+        """The first `depth` hits in the reranker's order (ties keep the first-stage order), then the rest."""
+        head = ranked[:depth]
+        order = sorted(range(len(head)), key=lambda i: (-float(scores[i]), i))
+        for i in order:
+            head[i].rerank_score = round(float(scores[i]), 6)
+        return [head[i] for i in order] + ranked[depth:]
 
     def context(self, ranked: list[Selected]) -> list[Selected]:
         r = config.pipeline().retrieval
@@ -204,3 +213,23 @@ class EmbedderClient:
 
         self.last_ok = time.time()
         return decode(d["vectors_b64"])
+
+    def rerank(self, query: str, passages: list[str], expect_model: str) -> np.ndarray:
+        """Cross-encoder scores from the same Cloud Run service (D-012), one per passage."""
+        import time
+
+        import httpx
+
+        timeout = self.cfg.timeout_seconds if self.warm else self.cfg.cold_timeout_seconds
+        r = httpx.post(
+            f"{self.url}/rerank",
+            json={"query": query[:3990], "passages": [p[:3990] for p in passages]},
+            headers=self._headers(),
+            timeout=timeout,
+        )
+        r.raise_for_status()
+        d = r.json()
+        if d["model"] != expect_model or len(d["scores"]) != len(passages):
+            raise RuntimeError(f"reranker serves {d['model']}, expected {expect_model}")
+        self.last_ok = time.time()
+        return np.array(d["scores"], dtype=np.float32)
