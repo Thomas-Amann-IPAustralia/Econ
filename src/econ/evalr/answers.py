@@ -20,10 +20,11 @@ from econ.evalr.judged import Need
 from econ.manifest import write_text_atomic
 
 
-def evidence(s: systems.System, need: Need) -> list[dict]:
+def evidence(s: systems.System, need: Need, rows: list[int] | None = None) -> list[dict]:
+    """The numbered evidence: the setting's context, or `rows` when a later stage chose them (a filter)."""
     docs = {d.doc_id: d for d in config.sources().documents}
     out = []
-    for i, r in enumerate(grid2.context_rows(s, need)):
+    for i, r in enumerate(grid2.context_rows(s, need) if rows is None else rows):
         c = systems.chunks()[r]
         d = docs[c["doc_id"]]
         out.append({"n": i + 1, "chunk": c, "doc": {"title": d.title, "year": d.year}})
@@ -45,11 +46,19 @@ def answer_user(s: systems.System, need: Need, ev: list[dict]) -> str:
 
 
 def run_need(
-    s: systems.System, need: Need, *, model: str, effort: str | None, prompt: str, flex: bool, purpose: str
+    s: systems.System,
+    need: Need,
+    *,
+    model: str,
+    effort: str | None,
+    prompt: str,
+    flex: bool,
+    purpose: str,
+    rows: list[int] | None = None,
 ) -> dict:
     scfg = config.service()
     a = scfg.answer
-    ev = evidence(s, need)
+    ev = evidence(s, need, rows)
     passages = {e["n"]: {"chunk_id": e["chunk"]["chunk_id"], "text": e["chunk"]["text"]} for e in ev}
     base_user = answer_user(s, need, ev)
     errors_prev: list[str] = []
@@ -129,6 +138,7 @@ def run(
     prompt: str = "answer-v1",
     flex: bool = True,
     workers: int = 6,
+    contexts: dict[str, list[int]] | None = None,
 ) -> list[dict]:
     from concurrent.futures import ThreadPoolExecutor
 
@@ -137,7 +147,14 @@ def run(
         rows = list(
             ex.map(
                 lambda n: run_need(
-                    s, n, model=model, effort=effort, prompt=prompt, flex=flex, purpose=f"answer:{name}"
+                    s,
+                    n,
+                    model=model,
+                    effort=effort,
+                    prompt=prompt,
+                    flex=flex,
+                    purpose=f"answer:{name}",
+                    rows=None if contexts is None else contexts[n.id],
                 ),
                 needs,
             )

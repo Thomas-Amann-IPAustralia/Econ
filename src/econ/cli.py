@@ -192,6 +192,28 @@ def eval_filter(
     )
 
 
+@app.command("eval-answers-v2")
+@loud
+def eval_answers_v2(
+    step: str = typer.Option(..., help="answers | blind | pairwise | report (in that order)"),
+) -> None:
+    """Grid answers-v2: the relevance filter's 20 passages against the adopted 20, end to end."""
+    from econ.evalr import answers2
+
+    steps = {
+        "answers": answers2.step_answers,
+        "blind": answers2.step_blind,
+        "pairwise": answers2.step_pairwise,
+        "report": answers2.step_report,
+    }
+    if step not in steps:
+        raise StageError(f"unknown step {step}")
+    with run("eval-answers-v2", _hash(), step=step) as r:
+        res = steps[step]()
+        r.counts.update({k: v for k, v in res.items() if isinstance(v, int | float | bool | str)})
+    typer.echo(f"answers-v2 {step}: {res}")
+
+
 @app.command()
 @loud
 def index(

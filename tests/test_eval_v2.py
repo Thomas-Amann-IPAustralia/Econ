@@ -170,3 +170,11 @@ def test_filter_prompts_defang_the_question_and_passages(monkeypatch):
     assert list(calls[1][1]) == [f"p{i}" for i in range(21, 26)]  # ids run on across calls
     for c, _ in calls:
         assert c.user.count("</evidence>") == len(_) and c.user.count("</question>") == 1
+
+
+def test_blind_verdicts_map_back_to_settings():
+    from econ.evalr import answers2
+
+    key = {"n1": "B", "n2": "C", "n3": "B"}
+    assert answers2.unblind({"n1": "X", "n2": "X", "n3": "Y"}, key) == {"n1": "B", "n2": "C", "n3": "C"}
+    assert answers2.unblind({"n1": "tie"}, key) == {"n1": "tie"}
