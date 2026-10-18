@@ -97,3 +97,21 @@ def test_a_long_table_splits_by_rows_and_repeats_its_header():
     for r in out:
         s, e = r["spans"][0]
         assert full[s:e] in r["text"]
+
+
+def test_a_gold_with_alternatives_is_covered_by_any_of_them():
+    item = (Gold("doc-a", 0, 100, "x"), Gold("doc-b", 0, 100, "y"))
+    m = metrics.per_need([{"doc_id": "doc-b", "spans": [[0, 100]], "tokens": 10}], (item,))
+    assert m["recall@10"] == 1.0 and m["doc_hit@5"] == 1.0
+
+
+def test_definitions_restated_in_body_text_are_not_boilerplate():
+    # Front matter recurs on page 1; a definition recurs on page 6 of each document: only the first goes.
+    definition = "Copyright is a placeholder unregistered right that protects the expression of an idea here."
+    docs = {}
+    for i in range(3):
+        rows = [("text", LICENCE, None)] + [("text", body(5, f"f{i}{j}"), None) for j in range(15)]
+        rows += [("text", definition, None)] + [("text", body(5, f"g{i}{j}"), None) for j in range(9)]
+        docs[f"d{i}"] = els(*rows)
+    skip = boilerplate(docs)
+    assert len(skip) == 1 and "placeholderlicence" in next(iter(skip))

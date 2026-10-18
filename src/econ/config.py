@@ -30,6 +30,7 @@ class Document(Strict):
     series: str
     authors: list[str] = []
     url: str | None = None
+    note: str | None = None  # shown with every passage from the document
 
 
 class Sources(Strict):

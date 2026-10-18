@@ -1,8 +1,10 @@
 """The retrieval test set: needs with verbatim gold spans, located in each document's canonical text.
 
-A need is a question plus one or more gold quotes, each a verbatim passage that answers it (or part of
-it). Gold is located by text, not by chunk, so one set scores every chunking strategy: a chunk is
-relevant to a gold when its spans cover at least `cover` of the gold's characters.
+A need is a question plus one or more gold items, each a verbatim passage that answers it (or part of it).
+A gold item may list alternatives (`alt`): the same finding stated elsewhere, such as an executive summary
+and a conclusion, or two years' reports. Covering any alternative covers the item. Gold is located by
+text, not by chunk, so one set scores every chunking strategy: a chunk is relevant to a gold when its
+spans cover at least `cover` of the gold's characters.
 
 The split is fixed by a hash of the need id: dev to choose, test to report.
 """
@@ -37,7 +39,7 @@ class Need:
     id: str
     kind: str
     question: str
-    golds: tuple[Gold, ...]
+    golds: tuple[tuple[Gold, ...], ...]  # each item: its alternatives
     split: str
 
 
@@ -68,18 +70,28 @@ def _norm_map(text: str) -> tuple[str, list[int]]:
 _cache: dict[str, tuple[str, list[int]]] = {}
 
 
-def locate(doc_id: str, quote: str) -> Gold:
+def _norm_doc(doc_id: str) -> tuple[str, list[int]]:
     if doc_id not in _cache:
         _cache[doc_id] = _norm_map(canonical_text(load_elements(doc_id)))
-    norm, idx = _cache[doc_id]
-    q = normalise(quote)
-    q = re.sub(r"\s+", " ", q).strip()
-    i = norm.find(q)
-    if i < 0:
-        raise StageError("gold quote not found in its document's text", item=f"{doc_id}: {quote[:60]!r}")
-    if norm.find(q, i + 1) >= 0:
-        raise StageError("gold quote occurs more than once; lengthen it", item=f"{doc_id}: {quote[:60]!r}")
-    return Gold(doc_id, idx[i], idx[i + len(q) - 1] + 1, quote)
+    return _cache[doc_id]
+
+
+def locate(doc_id: str, quote: str, *, everywhere: bool = True) -> list[Gold]:
+    """Every verbatim occurrence of the quote: in its own document (at least one, or the set is invalid)
+    and, with `everywhere`, in any other document. Repeated text (a finding restated in a box, a figure
+    note printed under several figures, a sentence reused in a later report) is equally a correct find."""
+    q = re.sub(r"\s+", " ", normalise(quote)).strip()
+    docs = sorted(config.sources().by_id()) if everywhere else [doc_id]
+    out = []
+    for d in [doc_id, *[x for x in docs if x != doc_id]]:
+        norm, idx = _norm_doc(d)
+        i = norm.find(q)
+        while i >= 0:
+            out.append(Gold(d, idx[i], idx[i + len(q) - 1] + 1, quote))
+            i = norm.find(q, i + 1)
+        if d == doc_id and not out:
+            raise StageError("gold quote not found in its document's text", item=f"{doc_id}: {quote[:60]!r}")
+    return out
 
 
 def load(path: Path | None = None) -> list[Need]:
@@ -95,10 +107,13 @@ def load(path: Path | None = None) -> list[Need]:
             raise StageError(f"unknown kind {n['kind']!r}", item=n["id"])
         golds = []
         for g in n["gold"]:
-            if g["doc_id"] not in known:
-                raise StageError(f"unknown doc_id {g['doc_id']!r}", item=n["id"])
-            if len(g["quote"].split()) < 8:
-                raise StageError("gold quote shorter than 8 words", item=n["id"])
-            golds.append(locate(g["doc_id"], g["quote"]))
+            alts = []
+            for a in [g, *g.get("alt", [])]:
+                if a["doc_id"] not in known:
+                    raise StageError(f"unknown doc_id {a['doc_id']!r}", item=n["id"])
+                if len(a["quote"].split()) < 8:
+                    raise StageError("gold quote shorter than 8 words", item=n["id"])
+                alts.extend(g2 for g2 in locate(a["doc_id"], a["quote"]) if g2 not in alts)
+            golds.append(tuple(alts))
         needs.append(Need(n["id"], n["kind"], n["question"].strip(), tuple(golds), split_of(n["id"])))
     return needs

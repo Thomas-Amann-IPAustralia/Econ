@@ -1,0 +1,773 @@
+# Silver retrieval test set v1.
+# Written by Claude (in the build session, 2026-10-18) from a seeded random sample of passages per document
+# (8 candidate passages each, drawn from body text away from the front and back matter). Questions are
+# phrased as a researcher at IP Australia might ask them, mostly avoiding the passage's own wording.
+# Each gold quote is verbatim from the parsed text. The loader counts every verbatim copy of a quote,
+# anywhere in the corpus, as an equally correct find; `alt` adds restatements in other words.
+# Kinds: lookup (a fact or figure), explain (a reason, mechanism or method), paraphrase (everyday words
+# for a technical passage), trend (a change over time), multi (needs two or more passages).
+# It measures finding the passage a question was written from. It is not a substitute for the TREC-style
+# set with pooled, model-judged results (SOP §17), which needs a model budget.
+version: silver-v1
+needs:
+  # --- erp01-patent-backlogs ---------------------------------------------------------------------------
+  - id: erp01-1
+    kind: lookup
+    question: How did IP Australia's patent workload per examiner compare with the UK and US offices?
+    gold:
+      - doc_id: erp01-patent-backlogs
+        quote: Even then it is higher, by far, than comparable figures for other offices, where the UK-IPO had 198 applications in the inventory for every examiner, and the USPTO had 169.
+  - id: erp01-2
+    kind: explain
+    question: What happens when IP Australia directs a patent applicant to request examination, and how often does it do so?
+    gold:
+      - doc_id: erp01-patent-backlogs
+        quote: During these five years IP Australia may choose to issue a direction to any applicant, and this direction requires the applicant to file a request for examination within six months.
+  - id: erp01-3
+    kind: paraphrase
+    question: If nobody forces them to, how soon after filing do patent applicants ask for examination?
+    gold:
+      - doc_id: erp01-patent-backlogs
+        quote: Applicants who request examination without a direction have done so overwhelmingly in the first month after filing.
+  - id: erp01-4
+    kind: trend
+    question: How large did the backlog of pending patent applications get, and when did it peak?
+    gold:
+      - doc_id: erp01-patent-backlogs
+        quote: This growth in inventory peaked around 100,000 applications in 2010 and has fallen steadily since then.
+        alt:
+          - doc_id: erp01-patent-backlogs
+            quote: This growth in inventory peaked at 100,000 pending applications in 2010 and has fallen steadily since then.
+
+  # --- erp03-market-for-design ---------------------------------------------------------------------------
+  - id: erp03-1
+    kind: lookup
+    question: Why did the furniture designer Henry Wilson rely on trade marks rather than design registration?
+    gold:
+      - doc_id: erp03-market-for-design
+        quote: Wilson's IP strategy has been to take out trademark protection on his name and brand, eschewing options of patents and design registration for his products.
+  - id: erp03-2
+    kind: explain
+    question: Why is it hard for design firms to capture the value of their ideas from clients?
+    gold:
+      - doc_id: erp03-market-for-design
+        quote: Interviewees observed that the challenge of value-capture arises through the threat of buyers expropriating sellers' ideas and executing the design themselves
+  - id: erp03-3
+    kind: paraphrase
+    question: Does word of mouth from past clients help designers get hired?
+    gold:
+      - doc_id: erp03-market-for-design
+        quote: The endorsement of a designer's work by prior clients or associates helps designers overcome some of the challenges inherent in the market for design.
+  - id: erp03-4
+    kind: lookup
+    question: How important is intellectual property to the Canberra developer Molonglo Group?
+    gold:
+      - doc_id: erp03-market-for-design
+        quote: In Efkarpidis' view, intellectual property is not central to Molonglo Group's business approach.
+
+  # --- erp04-mining-innovation ---------------------------------------------------------------------------
+  - id: erp04-1
+    kind: lookup
+    question: How many patent applications did the study of mining innovation identify?
+    gold:
+      - doc_id: erp04-mining-innovation
+        quote: Data from each of the operating miners, METS firms and publicly funded entities was brought together to provide a dataset of mining patents, with a total of 19,009 unique patent applications identified.
+  - id: erp04-2
+    kind: lookup
+    question: Which kinds of organisations co-file mining patents with others most and least often?
+    gold:
+      - doc_id: erp04-mining-innovation
+        quote: METS firms collaborate the least (3.6 per cent) and publicly funded collaborate the most (21 per cent).
+  - id: erp04-3
+    kind: paraphrase
+    question: Why are driverless trucks at mine sites controversial?
+    gold:
+      - doc_id: erp04-mining-innovation
+        quote: is a contentious issue not only due to safety concerns of unmanned vehicles, but also because it may lead to the redundancy of haulage truck and train drivers.
+  - id: erp04-4
+    kind: explain
+    question: Does the official industry classification for mining capture all of mining's innovation?
+    gold:
+      - doc_id: erp04-mining-innovation
+        quote: the inclusion of METS firms and mining related CRCs would greatly expand the ANZSIC divisions/classes that related to the mining industry
+
+  # --- erp08-designs-law-practice ------------------------------------------------------------------------
+  - id: erp08-1
+    kind: explain
+    question: How can you measure how design-intensive a country or industry is?
+    gold:
+      - doc_id: erp08-designs-law-practice
+        quote: Design IP intensity is measured as the number of designs registered within a country or industry.
+      - doc_id: erp08-designs-law-practice
+        quote: Design labour intensity is measured as the number of persons in a country or industry employed in design-related occupations.
+  - id: erp08-2
+    kind: lookup
+    question: Which of Australia's peer countries lead on design intensity?
+    gold:
+      - doc_id: erp08-designs-law-practice
+        quote: Among Australia's international peers, Switzerland (CH) is a leader, scoring higher than one standard deviation above the mean on both intensity measures.
+  - id: erp08-3
+    kind: lookup
+    question: What is the Locarno classification used for?
+    gold:
+      - doc_id: erp08-designs-law-practice
+        quote: The Locarno scheme is a framework of product classes and subclasses used by many IP offices to classify registered designs.
+  - id: erp08-4
+    kind: paraphrase
+    question: What policy work was the designs law and practice study meant to feed into?
+    gold:
+      - doc_id: erp08-designs-law-practice
+        quote: This research was conceived to generate inputs into IP Australia's Designs Review Program.
+
+  # --- erp10-ip-profitability-competition ----------------------------------------------------------------
+  - id: erp10-1
+    kind: trend
+    question: What share of Australian businesses own a registered IP right, and how has that changed?
+    gold:
+      - doc_id: erp10-ip-profitability-competition
+        quote: The number of businesses that owned at least one registrable IPR increased from 15 195 in 2001-02 to 28 384 in 2015-16, accounting for 2.3 and 4.2 per cent of active businesses respectively.
+  - id: erp10-2
+    kind: explain
+    question: Why did the study of IP and business profitability use GMM estimation?
+    gold:
+      - doc_id: erp10-ip-profitability-competition
+        quote: While including the lagged dependent variable is methodologically necessary, it also introduces a risk of new endogeneity in the model.
+  - id: erp10-3
+    kind: lookup
+    question: Which combinations of IP rights go with the most profitable businesses?
+    gold:
+      - doc_id: erp10-ip-profitability-competition
+        quote: Businesses with both patents and trade marks, all three IPRs, and both trade marks and designs are the top three ownership types for highest average profitability.
+  - id: erp10-4
+    kind: paraphrase
+    question: Does holding a bigger pile of IP rights make a firm more profitable?
+    gold:
+      - doc_id: erp10-ip-profitability-competition
+        quote: However, the number of IPRs that a business owns does not appear to be significantly associated with business profitability.
+  - id: erp10-5
+    kind: paraphrase
+    question: Is there evidence that IP rights are hurting competition across Australian industries?
+    gold:
+      - doc_id: erp10-ip-profitability-competition
+        quote: We did not find any significant impact of IPRs on market concentration at an industry level.
+
+  # --- erp11-exporters-trade-marks ------------------------------------------------------------------------
+  - id: erp11-1
+    kind: lookup
+    question: How much more do exporters with a recent trade mark gain from a tariff cut?
+    gold:
+      - doc_id: erp11-exporters-trade-marks
+        quote: a 10% tariff reduction will induce a 71% increase in export revenue, more than double the 32% increase in revenue for the firm with no recent trade mark activity.
+  - id: erp11-2
+    kind: lookup
+    question: How much larger are exporting firms than firms that don't export?
+    gold:
+      - doc_id: erp11-exporters-trade-marks
+        quote: Active exporters are around 1.9 times larger in employment terms (full-time equivalent) than non-participants
+  - id: erp11-3
+    kind: explain
+    question: Do trade marks make exporters more or less sensitive to exchange rate movements?
+    gold:
+      - doc_id: erp11-exporters-trade-marks
+        quote: We present evidence that an exporter's trade mark activity abroad is associated with both muted responses to the real exchange rate and amplified responses to tariffs.
+  - id: erp11-4
+    kind: paraphrase
+    question: In which overseas market do Australian exporters come and go the most?
+    gold:
+      - doc_id: erp11-exporters-trade-marks
+        quote: Exporting to the US is characterised by high steady state churn, with a high rate of export entry and high exit rate also compared to other countries.
+
+  # --- erp14-raising-the-bar ------------------------------------------------------------------------------
+  - id: erp14-1
+    kind: explain
+    question: How did the Raising the Bar study get a benchmark of relative patent scope to train its model on?
+    gold:
+      - doc_id: erp14-raising-the-bar
+        quote: Patent examiners employed at IP Australia then applied their expertise in the aforementioned examination sections to manually assess the patent triplets for their relative scope.
+  - id: erp14-2
+    kind: lookup
+    question: How accurate was the best machine learning classifier of patent scope?
+    gold:
+      - doc_id: erp14-raising-the-bar
+        quote: For comparison, as summarised in Table 7, the best model's F1 scores based on in-scope prediction is 0.780.
+  - id: erp14-3
+    kind: lookup
+    question: In which years did the Raising the Bar reforms take effect for examination requests?
+    gold:
+      - doc_id: erp14-raising-the-bar
+        quote: The dashed vertical lines mark exam request years of 2013 and 2014, the period in which the Raising the Bar reforms took effect.
+  - id: erp14-4
+    kind: explain
+    question: Were broad Australian patents already becoming less common before the 2013 reforms?
+    gold:
+      - doc_id: erp14-raising-the-bar
+        quote: While it is out of the scope of this report to try to analyse and find the true cause of the pre-RTB reforms downtrend in the proportion of broader patents
+  # --- erp15-patenting-firms ------------------------------------------------------------------------------
+  - id: erp15-1
+    kind: explain
+    question: Does filing or being granted a patent predict that a firm will grow quickly?
+    gold:
+      - doc_id: erp15-patenting-firms
+        quote: Firm turnover growth is strongly associated with firms' size, age and industry but never with indicators of firms filing or being granted patents at the beginning of the growth period.
+  - id: erp15-2
+    kind: paraphrase
+    question: Are firms that let their patents lapse less likely to grow afterwards?
+    gold:
+      - doc_id: erp15-patenting-firms
+        quote: Interestingly, we observe a consistent pattern where firms retiring patents is negatively associated with future turnover growth.
+  - id: erp15-3
+    kind: lookup
+    question: Which sizes of firm are most and least likely to file patents?
+    gold:
+      - doc_id: erp15-patenting-firms
+        quote: Notably, small firms are less likely to file patents than micro firms, while medium and large firms exhibit a higher propensity for patent applications, with large firms standing out as the most active filers.
+  - id: erp15-4
+    kind: lookup
+    question: Are patent filings concentrated in particular states?
+    gold:
+      - doc_id: erp15-patenting-firms
+        quote: While patent applications are more concentrated in NSW, the distribution of granted patents is more evenly spread across various regions.
+  - id: erp15-5
+    kind: paraphrase
+    question: Do the very smallest businesses work with overseas partners more than slightly bigger ones?
+    gold:
+      - doc_id: erp15-patenting-firms
+        quote: micro firms demonstrate a greater tendency to engage with domestic collaborators than small firms and exhibit a higher propensity for overseas collaborations compared to small and mediumsized firms.
+
+  # --- erp16-cii-patent-trends ----------------------------------------------------------------------------
+  - id: erp16-1
+    kind: explain
+    question: How did the computer-implemented inventions study estimate the causal effect of changes in legal standards?
+    gold:
+      - doc_id: erp16-cii-patent-trends
+        quote: In essence, the DID analysis aims to identify the causal effect of the changes in the legal standards by comparing the propensity of CII patent applications to be filed before and after the changes relative to the propensity of non-CII patent applications.
+  - id: erp16-2
+    kind: paraphrase
+    question: Did the 2014 court rulings put foreign applicants off filing software patents in Australia?
+    gold:
+      - doc_id: erp16-cii-patent-trends
+        quote: However, the magnitude of the impact, a reduction in the probability of applying by an average of 0.3 percentage points (for USPTO applicants) or 1.7 percentage points (for EPO applicants), is small compared to the 5% to 13% average propensity for subsequent filing at IPA.
+  - id: erp16-3
+    kind: explain
+    question: What information did the machine learning models use to classify computer-implemented invention applications?
+    gold:
+      - doc_id: erp16-cii-patent-trends
+        quote: the development of the ML models primarily relies on features that can be engineered from the textual information contained in patent document titles, abstracts, claims, and, if feasible, descriptions.
+
+  # --- ipr-2015 ----------------------------------------------------------------------------------------------
+  - id: ipr15-1
+    kind: explain
+    question: Why were there fewer standard patent applications in 2014 than in 2013?
+    gold:
+      - doc_id: ipr-2015
+        quote: It can reasonably be assumed that the historically high number of applications in 2013 was caused by the early filing of applications which otherwise would have been filed in 2014.
+  - id: ipr15-2
+    kind: lookup
+    question: What did IP Australia's economic review of the innovation patent examine?
+    gold:
+      - doc_id: ipr-2015
+        quote: The economic review examined the relationship between the innovation patent system and research and development expenditure, firm performance, market competition, regulatory costs
+  - id: ipr15-3
+    kind: trend
+    question: How quickly has private investment in intellectual property been growing in Australia?
+    gold:
+      - doc_id: ipr-2015
+        quote: Over the past decade Australian private investment in IP has increased an average of seven per cent annually.
+  - id: ipr15-4
+    kind: paraphrase
+    question: Can two unrelated companies use the same brand name?
+    gold:
+      - doc_id: ipr-2015
+        quote: Different firms can have the same trade mark in different classes, such as the 'Lotus' trade mark name which is used by software, automobile and door companies in Australia.
+  - id: ipr15-5
+    kind: paraphrase
+    question: What protection does a provisional patent application give?
+    gold:
+      - doc_id: ipr-2015
+        quote: This type of application offers no protection other than an option to claim a priority date in a later patent application.
+
+  # --- ipr-2016 ----------------------------------------------------------------------------------------------
+  - id: ipr16-1
+    kind: lookup
+    question: How many trade mark applications did IP Australia receive in 2015?
+    gold:
+      - doc_id: ipr-2016
+        quote: In 2015, IP Australia received a record number of trade mark applications (73 188).
+  - id: ipr16-2
+    kind: lookup
+    question: Which countries did Australians most often seek trade mark protection in overseas around 2014?
+    gold:
+      - doc_id: ipr-2016
+        quote: China received 17 per cent of Australian filings abroad in 2014, in line with the global trend of trade mark applicants seeking protection in China.
+  - id: ipr16-3
+    kind: paraphrase
+    question: Do a small number of heavy users account for much of the demand for IP rights?
+    gold:
+      - doc_id: ipr-2016
+        quote: close to half of applications come from the top five per cent of applicants (as measured by their number of applications).
+  - id: ipr16-4
+    kind: lookup
+    question: What is the Patent Analytics Hub meant to do?
+    gold:
+      - doc_id: ipr-2016
+        quote: The mission of the Hub is to help Australian innovators make the most of their intellectual property, by aiding understanding of their technology areas, finding collaborators and boosting the commercial returns from research.
+  - id: ipr16-5
+    kind: lookup
+    question: Where did foreign plant breeder's rights registrants come from in 2015?
+    gold:
+      - doc_id: ipr-2016
+        quote: The largest non-resident registrants were from the US, the Netherlands, New Zealand and Japan, receiving 76 per cent of total registrations.
+
+  # --- ipr-2017 ----------------------------------------------------------------------------------------------
+  - id: ipr17-1
+    kind: trend
+    question: Did Australian residents file more patent applications in 2016 even though total filings fell?
+    gold:
+      - doc_id: ipr-2017
+        quote: applications by Australian residents increased by 15 per cent from 2284 in 2015 to 2620 in 2016.
+  - id: ipr17-2
+    kind: explain
+    question: Why did trade mark applications from overseas applicants fall in 2016?
+    gold:
+      - doc_id: ipr-2017
+        quote: The reduction in applications by non-residents in 2016 is due to a fall in applications through WIPO's Madrid system for filing trade mark applications in multiple jurisdictions.
+  - id: ipr17-3
+    kind: paraphrase
+    question: What sorts of plants are most new protected plant varieties?
+    gold:
+      - doc_id: ipr-2017
+        quote: The development of plant varieties was largely in ornamentals and fruit crops which made up 35 per cent and 25 per cent, respectively, of total applications in 2016.
+  - id: ipr17-4
+    kind: lookup
+    question: How do Australian universities rank internationally on collaborative international patent filings?
+    gold:
+      - doc_id: ipr-2017
+        quote: Australia's universities rank 19 among all 35 OECD countries in terms of the proportion of PCT applications that are collaborative
+  - id: ipr17-5
+    kind: lookup
+    question: When did IP Australia establish its Office of the Chief Economist?
+    gold:
+      - doc_id: ipr-2017
+        quote: IP Australia set up the Office of the Chief Economist (OCE) in November 2012.
+        # also verbatim in ipr-2019; the loader finds every verbatim copy itself
+
+  # --- ipr-2019 ----------------------------------------------------------------------------------------------
+  - id: ipr19-1
+    kind: paraphrase
+    question: Does a registered trade mark ever expire?
+    gold:
+      - doc_id: ipr-2019
+        quote: Trade marks can be renewed indefinitely, with fees payable every 10 years.
+  - id: ipr19-2
+    kind: trend
+    question: How did growth in design applications in 2018 compare with the previous decade?
+    gold:
+      - doc_id: ipr-2019
+        quote: The 2018 growth rate in applications, being around one per cent, is well below the five per cent average annual growth experienced over the past decade.
+  - id: ipr19-3
+    kind: lookup
+    question: Who filed the most design applications in Australia in 2018?
+    gold:
+      - doc_id: ipr-2019
+        quote: Australian-based fashion house Zimmerman Wear was the top applicant, filing a total of 118 applications in 2018.
+  - id: ipr19-4
+    kind: lookup
+    question: Which Australian industry relies most heavily on registered designs?
+    gold:
+      - doc_id: ipr-2019
+        quote: Based on 2005-16 filing data, the most design IP-intensive industry in Australia is Rigid and semi-rigid polymer product manufacturing.
+  - id: ipr19-5
+    kind: trend
+    question: How fast have blockchain patent filings been growing?
+    gold:
+      - doc_id: ipr-2019
+        quote: The report found that blockchain is a small but rapidly growing technology, with between a 140 and 230 per cent increase in patent filings every year since 2013.
+
+  # --- ipr-2020 ----------------------------------------------------------------------------------------------
+  - id: ipr20-1
+    kind: lookup
+    question: Who were the leading applicants for original patents in Australia around 2019?
+    gold:
+      - doc_id: ipr-2020
+        quote: Among the top five applicants for original patents filed for in Australia (Figure 4), three are based in China and four manufacture mobile communication equipment such as smartphones.
+  - id: ipr20-2
+    kind: paraphrase
+    question: Did the 2008 financial crisis hit design filings for tech gadgets?
+    gold:
+      - doc_id: ipr-2020
+        quote: The sharp fall of ICT-related designs in 2009 may reflect the impact of the global financial crisis.
+  - id: ipr20-3
+    kind: lookup
+    question: Which country files the most ICT-related design applications in Australia?
+    gold:
+      - doc_id: ipr-2020
+        quote: The US is by far the biggest source of ICT-related design right applications in Australia.
+  - id: ipr20-4
+    kind: explain
+    question: Do the findings on IP rights and profitability apply to businesses that make a loss?
+    gold:
+      - doc_id: ipr-2020
+        quote: This means that our econometric results do not hold for businesses that do not make a profit.
+  - id: ipr20-5
+    kind: lookup
+    question: Are patent landscape reports still part of IP Australia's international type search?
+    gold:
+      - doc_id: ipr-2020
+        quote: Following evaluation of the trial, these reports now form part of IP Australia's standard international type search service.
+
+  # --- ipr-2022 ----------------------------------------------------------------------------------------------
+  - id: ipr22-1
+    kind: trend
+    question: How did patent filings by small and medium businesses change in 2021?
+    gold:
+      - doc_id: ipr-2022
+        quote: In 2021, SME patent filings grew 27% from 2020, and the SME share of patent applicants has reached a decadal high, reversing a downward trend in recent years.
+  - id: ipr22-2
+    kind: lookup
+    question: Can patents on medicines last longer than 20 years?
+    gold:
+      - doc_id: ipr-2022
+        quote: Pharmaceutical substances that have experienced a delay in market approval can receive standard patent extensions, granting up to 25 years protection.
+  - id: ipr22-3
+    kind: lookup
+    question: Among countries that file heavily in Australia, which grew fastest in 2021?
+    gold:
+      - doc_id: ipr-2022
+        quote: Turkey recorded the strongest growth in 2021, with a 56% increase in application, followed by Sweden (+43%) and Israel (+33%).
+  - id: ipr22-4
+    kind: paraphrase
+    question: Did lockdowns change what kinds of products people registered designs for?
+    gold:
+      - doc_id: ipr-2022
+        quote: Applications for Games, toys, tents and sports goods (Class 21) grew 33% in 2020 and a further 23% in 2021 as millions of people at home searched for new forms of entertainment.
+  - id: ipr22-5
+    kind: explain
+    question: What does overseas research say about how a patent grant affects firm size?
+    gold:
+      - doc_id: ipr-2022
+        quote: A recent study estimates a 22% increase in firm size following the grant of a patent.
+
+  # --- ipr-2023 ----------------------------------------------------------------------------------------------
+  - id: ipr23-1
+    kind: trend
+    question: Did digital technology patenting grow in Australia during COVID?
+    gold:
+      - doc_id: ipr-2023
+        quote: In 2021, Computer technology became the fifth top field for new patent filings, ahead of Civil engineering.
+  - id: ipr23-2
+    kind: explain
+    question: Do trade mark filings usually rise and fall with the economy, and what happened during the pandemic?
+    gold:
+      - doc_id: ipr-2023
+        quote: 'Trends in trade mark filing activity tend to be procyclical: they exhibit positive growth during periods of economic expansion and are negative when the economy contracts.'
+  - id: ipr23-3
+    kind: lookup
+    question: What share of design applications in Australia come from overseas applicants?
+    gold:
+      - doc_id: ipr-2023
+        quote: Non-residents account for 72.8% of all design applications in Australia.
+  - id: ipr23-4
+    kind: explain
+    question: How does workforce diversity relate to innovation in Australian businesses?
+    gold:
+      - doc_id: ipr-2023
+        quote: While research investment is lower in businesses with higher women participation, they are more productive in converting R&D into patents.
+  - id: ipr23-5
+    kind: paraphrase
+    question: Are firms using AI mostly for breakthrough inventions or for automating what they already do?
+    gold:
+      - doc_id: ipr-2023
+        quote: However, as currently applied, AI may be more important for automating operations than radical recombinant innovation.
+
+  # --- ipr-2024 ----------------------------------------------------------------------------------------------
+  - id: ipr24-1
+    kind: explain
+    question: Does slowing down the patent grant help small firms commercialise their inventions?
+    gold:
+      - doc_id: ipr-2024
+        quote: a longer duration between patent filing and grant - such as when an applicant delays the patent process - tends to increase the likelihood that smaller firms will eventually commercialise a patent-protected product.
+  - id: ipr24-2
+    kind: lookup
+    question: By how much did the Raising the Bar reforms reduce the chance of Australian patents being broader than overseas equivalents?
+    gold:
+      - doc_id: ipr-2024
+        quote: contributed to reducing the likelihood of Australian patents being broader than their international equivalents by between 1.0 and 4.0 percentage points.
+  - id: ipr24-3
+    kind: lookup
+    question: What must a plant variety show to qualify for plant breeder's rights?
+    gold:
+      - doc_id: ipr-2024
+        quote: To be eligible for protection, a plant variety must be clearly identifiable and distinguishable from other varieties, uniform and stable upon propagation.
+  - id: ipr24-4
+    kind: lookup
+    question: How much did Copyright Agency distribute to rights-holders?
+    gold:
+      - doc_id: ipr-2024
+        quote: $142 million was allocated to more than 36,000 rights-holders, including writers, artists, publishers and agents, by Copyright Agency Limited (CAL).
+  - id: ipr24-5
+    kind: paraphrase
+    question: In which technologies is patenting in Australia still growing strongly?
+    gold:
+      - doc_id: ipr-2024
+        quote: growth in patent filings is sustained in technologies that are the focus of strategic competition between countries (e.g., semiconductors) and where Australia is a key destination market (e.g., clean energy technology).
+
+  # --- ipr-2025 ----------------------------------------------------------------------------------------------
+  - id: ipr25-1
+    kind: explain
+    question: What has driven growth in transport-related IP filings recently?
+    gold:
+      - doc_id: ipr-2025
+        quote: These trends reflect China's growing market share in electric vehicles and related parts (including batteries), which has increased market competition.
+  - id: ipr25-2
+    kind: lookup
+    question: What is the Riyadh Design Law Treaty meant to do?
+    gold:
+      - doc_id: ipr-2025
+        quote: the Riyadh Design Law Treaty, aims to simplify access to international markets for designers and reduce the regulatory burdens they face in seeking design protection.
+  - id: ipr25-3
+    kind: explain
+    question: Is there historical evidence that patents helped Australia's economy grow?
+    gold:
+      - doc_id: ipr-2025
+        quote: a recent study found that patents significantly contributed to Australia's economic expansion between 1947 and 2010
+  - id: ipr25-4
+    kind: lookup
+    question: Which state or territory files the most trade marks relative to its number of businesses?
+    gold:
+      - doc_id: ipr-2025
+        quote: However, the Australian Capital Territory (ACT) was the most trade mark-intensive in 2024 with 21 applications per thousand businesses in the territory
+  - id: ipr25-5
+    kind: explain
+    question: Why did Australian plant breeders file fewer PBR applications between 2018 and 2022?
+    gold:
+      - doc_id: ipr-2025
+        quote: The decline in resident filings was likely a result of economic losses from Australia's devastating bushfires in 2019-20, and the severe droughts across Eastern Australia from 2017-2019.
+
+  # --- note-patenting-structural-change --------------------------------------------------------------------
+  - id: note-sc-1
+    kind: explain
+    question: Why might growth in venture capital not have helped all innovative firms scale up?
+    gold:
+      - doc_id: note-patenting-structural-change
+        quote: At the same time, international data suggests VC investment is increasingly concentrated on a narrow band of technology, notably in software and related businesses.
+  - id: note-sc-2
+    kind: trend
+    question: How has the number of small firms in engineering services changed since the early 2000s?
+    gold:
+      - doc_id: note-patenting-structural-change
+        quote: In comparison, in engineering services, the number of SMEs remained relatively stable from 2002 to 2016, followed by moderate growth to 2022.
+  - id: note-sc-3
+    kind: paraphrase
+    question: Are smaller businesses becoming more important for invention in Australia?
+    gold:
+      - doc_id: note-patenting-structural-change
+        quote: In Australia, small and medium enterprises (SMEs) are an increasingly important engine of innovation.
+
+  # --- note-tm-leading-indicator ----------------------------------------------------------------------------
+  - id: note-tm-1
+    kind: lookup
+    question: How much does a rise in trade mark filings predict about GDP growth?
+    gold:
+      - doc_id: note-tm-leading-indicator
+        quote: Linear regression model estimates suggest that every 10% increase per quarter in the number of trade mark applications filed in Australia predicts an approximate 1.8% increase in real GDP in the next quarter
+  - id: note-tm-2
+    kind: explain
+    question: How did the trade mark study check that its link with GDP isn't spurious?
+    gold:
+      - doc_id: note-tm-leading-indicator
+        quote: The results of this Engle-Granger test indicated that trade marks and real GDP time series are cointegrated
+  - id: note-tm-3
+    kind: paraphrase
+    question: Are new brand registrations a better early warning of the economy than consumer confidence?
+    gold:
+      - doc_id: note-tm-leading-indicator
+        quote: we demonstrate the ability of new trade mark filings to predict economic cycles, ranking above other highly regarded indicators such as current gross domestic product and the consumer confidence index.
+
+  # --- across documents --------------------------------------------------------------------------------------
+  - id: multi-1
+    kind: multi
+    question: What statistical methods have IP Australia's economists used to estimate causal effects?
+    gold:
+      - doc_id: erp16-cii-patent-trends
+        quote: In essence, the DID analysis aims to identify the causal effect of the changes in the legal standards
+      - doc_id: erp14-raising-the-bar
+        quote: it is functionally equivalent to a Difference-in-Differences model with the first difference represented by the AU-EP and AU-US claim comparisons.
+      - doc_id: erp10-ip-profitability-competition
+        quote: However, the potential endogeneity problem may be alleviated by using statistical techniques such as the Generalised Method of Moments (GMM).
+  - id: multi-2
+    kind: multi
+    question: Which IP Australia studies say their findings are correlations rather than causal effects?
+    gold:
+      - doc_id: erp15-patenting-firms
+        quote: our analysis does not provide a foundation to establish a causal relationship between patenting activity and collaboration.
+      - doc_id: ipr-2024
+        quote: The finding is based on conditional correlations and no causality can be inferred.
+      - doc_id: erp11-exporters-trade-marks
+        quote: We are careful in this study not to ascribe causal interpretations to export behaviour predicted by trade mark activity
+  - id: multi-3
+    kind: multi
+    question: How much did the Raising the Bar reforms narrow the scope of Australian patents?
+    gold:
+      - doc_id: erp14-raising-the-bar
+        quote: the impact of Raising the Bar reforms could reach as high as 5.7 percentage point reduction in the probability of Australian patent having a broader scope.
+      - doc_id: ipr-2024
+        quote: contributed to reducing the likelihood of Australian patents being broader than their international equivalents by between 1.0 and 4.0 percentage points.
+  - id: multi-4
+    kind: multi
+    question: Is there evidence that filing for IP rights helps small businesses grow?
+    gold:
+      - doc_id: ipr-2022
+        quote: Regression model estimates suggest that SMEs filing for at least one IP right in a year are 16% more likely to achieve high employment growth than non filers.
+        alt:
+          - doc_id: ipr-2024
+            quote: After filing for an IP right, Australian SMEs are 16% more likely to experience high employment growth than their peers without recent filings.
+      - doc_id: erp15-patenting-firms
+        quote: Firm turnover growth is strongly associated with firms' size, age and industry but never with indicators of firms filing or being granted patents at the beginning of the growth period.
+  - id: multi-5
+    kind: trend
+    question: What happened to trade mark filings in Australia during the COVID-19 pandemic and after?
+    gold:
+      - doc_id: ipr-2022
+        quote: The growth adds to the 8% increase in trade mark applications in 2020 - despite Australia's economy having entered recession for the first time in 30 years.
+      - doc_id: ipr-2023
+        quote: In 2022, applications by residents fell by 16.3% below their level in 2021, to 44,646.
+  - id: multi-6
+    kind: trend
+    question: How have Australians' trade mark filings overseas changed?
+    gold:
+      - doc_id: ipr-2015
+        quote: Australian trade mark applications filed abroad increased 10 per cent in 2013, to 16 267 filings.
+      - doc_id: ipr-2023
+        quote: In 2021, Australians filed 22,893 trade mark applications abroad, up 11.9% from the 2020 level
+
+  # --- oce-ai-investment -------------------------------------------------------------------------------------
+  - id: oce-ai-1
+    kind: explain
+    question: Are companies that hold patents more likely to invest in artificial intelligence?
+    gold:
+      - doc_id: oce-ai-investment
+        quote: Third, companies that have patents are more likely to be investing in AI by hiring AI staff
+  - id: oce-ai-2
+    kind: lookup
+    question: Do large companies or SMEs advertise relatively more AI jobs?
+    gold:
+      - doc_id: oce-ai-investment
+        quote: Large companies are posting relatively more ads hiring AI-staff, compared to SMEs, but also compared to their own general hiring activity.
+  - id: oce-ai-3
+    kind: paraphrase
+    question: Do small businesses that already employ AI specialists keep hiring more of them?
+    gold:
+      - doc_id: oce-ai-investment
+        quote: Further, SMEs with existing AI-staff are more likely to hire more AI-staff than other SMEs.
+  - id: oce-ai-4
+    kind: explain
+    question: Where did the data on AI hiring come from?
+    gold:
+      - doc_id: oce-ai-investment
+        quote: allowing us in some sense to automatically communicate and interact with the LinkedIn website and retrieve detailed microdata on job advertisements, companies, and people/skills.
+
+  # --- ipr-2026 ----------------------------------------------------------------------------------------------
+  - id: ipr26-1
+    kind: lookup
+    question: How much can patents and trade marks raise investors' valuations of a startup?
+    gold:
+      - doc_id: ipr-2026
+        quote: International studies estimate that patents and trade marks increase investors' estimates of a startup's value by around 20% in certain industries
+  - id: ipr26-2
+    kind: trend
+    question: Is international collaboration on Australian patent applications rising or falling?
+    gold:
+      - doc_id: ipr-2026
+        quote: The share of total filings that involve international collaboration declined from 4.9% in 2024 to 4.2% in 2025.
+  - id: ipr26-3
+    kind: lookup
+    question: What share of patent families on refining critical metals for batteries come from Australian applicants?
+    gold:
+      - doc_id: ipr-2026
+        quote: In the refinement of critical metals for batteries, Australian applicants account for 8.9% of patent families published since 2000.
+  - id: ipr26-4
+    kind: paraphrase
+    question: What makes a product's look eligible for design protection?
+    gold:
+      - doc_id: ipr-2026
+        quote: For a design to be eligible for protection, it must be new and distinctive - not similar in its overall impression to other designs that constitute prior art.
+  - id: ipr26-5
+    kind: explain
+    question: Why should year-to-year swings in plant breeder's rights numbers be read with caution?
+    gold:
+      - doc_id: ipr-2026
+        quote: 'Interpretation therefore requires caution: year-to-year volatility often reflects the behaviour of a small number of large breeding programs.'
+  - id: multi-7
+    kind: multi
+    question: What does the knowledge base say about artificial intelligence and innovation in Australian firms?
+    gold:
+      - doc_id: oce-ai-investment
+        quote: Third, companies that have patents are more likely to be investing in AI by hiring AI staff
+      - doc_id: ipr-2023
+        quote: However, as currently applied, AI may be more important for automating operations than radical recombinant innovation.
+
+  # --- ipr-2018 (text from OCR) ---------------------------------------------------------------------------
+  - id: ipr18-1
+    kind: lookup
+    question: Why doesn't the IP Report cover copyright, and who administers it?
+    gold:
+      - doc_id: ipr-2018
+        quote: In Australia, copyright is administered separately by the Department of Communications and the Arts, and is therefore not covered in this report.
+  - id: ipr18-2
+    kind: explain
+    question: Was the innovation patent achieving its goal of helping SMEs innovate?
+    gold:
+      - doc_id: ipr-2018
+        quote: Innovation patents were introduced in 2001 to encourage innovation among Australian SMEs.
+  - id: ipr18-3
+    kind: paraphrase
+    question: Why do businesses put place names like regions in their brands?
+    gold:
+      - doc_id: ipr-2018
+        quote: By invoking a location, which has various desirable characteristics associated with it, businesses can gain competitive advantage and become more profitable through premium pricing of their products.
+  - id: ipr18-4
+    kind: lookup
+    question: Which place name appears most often in Australian trade marks?
+    gold:
+      - doc_id: ipr-2018
+        quote: is the most frequently used location name in Australian-origin trade marks, while Champagne
+  - id: ipr18-5
+    kind: explain
+    question: How did the Swinburne study test whether collaborative research grants lead to more patenting?
+    gold:
+      - doc_id: ipr-2018
+        quote: The Swinburne analysis accounts for multiple firm characteristics and compares the outcomes experienced by businesses who received collaborative grants with similar businesses who did not receive a collaborative grant.
+
+  # --- ipr-2021 (text from OCR) ---------------------------------------------------------------------------
+  - id: ipr21-1
+    kind: trend
+    question: What happened to innovation patent applications in 2020, and who drove it?
+    gold:
+      - doc_id: ipr-2021
+        quote: In 2020, we saw a large increase in the total number of innovation patent applications filed in Australia, reaching 4 586, approximately 2.5 times their 2019 level.
+  - id: ipr21-2
+    kind: lookup
+    question: Who were the leading overseas applicants for design rights in Australia in 2020?
+    gold:
+      - doc_id: ipr-2021
+        quote: Lead applicants included Philips (109 applications), Google (96), Apple (79) and Beijing-based computer and smartphone manufacturer Xiaomi (78).
+  - id: ipr21-3
+    kind: paraphrase
+    question: Did people use more copyright content such as screen and audio during COVID lockdowns?
+    gold:
+      - doc_id: ipr-2021
+        quote: Screenrights reported an exponential growth in the use of members' content, processing over 50 per cent more usage records than anticipated for the 2019–20 period due to COVID-19
+  - id: ipr21-4
+    kind: trend
+    question: How has the overseas share of design applications in Australia changed over the decade to 2020?
+    gold:
+      - doc_id: ipr-2021
+        quote: The non-resident share of total applications has steadily increased over the past decade, from 60 per cent in 2011 to 64 per cent in 2020.
+  - id: multi-8
+    kind: multi
+    question: What happened to the innovation patent, and why?
+    gold:
+      - doc_id: ipr-2018
+        quote: The Government has recently accepted the recommendation of the Productivity Commission to phase out the innovation patent.
+      - doc_id: ipr-2015
+        quote: An economic review of the innovation patent system was undertaken by IP Australia in 2014-15

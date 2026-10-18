@@ -307,16 +307,26 @@ def _key(text: str) -> str:
     return re.sub(r"[^a-z0-9]+", "", text.lower())
 
 
-def boilerplate(docs: dict[str, list[Element]], min_docs: int = 3, min_chars: int = 40) -> set[str]:
-    """Paragraphs that recur nearly verbatim in at least `min_docs` documents: licence terms, disclaimers,
-    contact details. They carry no findings and crowd out content (a question about copyright retrieved
-    the CC BY notice of every report)."""
+def boilerplate(
+    docs: dict[str, list[Element]], min_docs: int = 3, min_chars: int = 40, front: int = 4, back: int = 2
+) -> set[str]:
+    """Front and back matter that recurs nearly verbatim in at least `min_docs` documents: licence terms,
+    disclaimers, contact details. They carry no findings and crowd out content (a question about copyright
+    retrieved the CC BY notice of every report). A recurring paragraph counts only if every occurrence is
+    in the first `front` or last `back` pages of its document: the reports also restate definitions of
+    the IP rights in their body text, and those must stay searchable (D-004)."""
     seen: dict[str, set[str]] = {}
+    outside: set[str] = set()
     for doc_id, els in docs.items():
+        last = max((e.page for e in els), default=0)
         for e in els:
-            if not is_heading(e) and len(e.text) >= min_chars:
-                seen.setdefault(_key(e.text), set()).add(doc_id)
-    return {k for k, ids in seen.items() if len(ids) >= min_docs}
+            if is_heading(e) or len(e.text) < min_chars:
+                continue
+            k = _key(e.text)
+            seen.setdefault(k, set()).add(doc_id)
+            if front < e.page <= last - back:
+                outside.add(k)
+    return {k for k, ids in seen.items() if len(ids) >= min_docs and k not in outside}
 
 
 def chunk_document(

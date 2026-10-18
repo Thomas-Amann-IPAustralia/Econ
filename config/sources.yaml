@@ -72,18 +72,21 @@ documents:
     year: 2014
     series: IP Australia Economic Research Paper 01
     authors: [Ahmer Iqbal Siddiqui]
+    note: "An independent report commissioned by IP Australia: the findings are the researchers', not necessarily IP Australia's."
   - doc_id: erp03-market-for-design
     key: The market for design insights from interviews with Australian firms.pdf
     title: "The market for design: insights from interviews with Australian firms"
     year: 2014
     series: IP Australia Economic Research Paper 03
     authors: [Kwanghui Lim, Don O'Sullivan, Michael R. Falk]
+    note: "An independent report commissioned by IP Australia: the findings are the researchers', not necessarily IP Australia's."
   - doc_id: erp04-mining-innovation
     key: innovation-in-the-mining-industry.pdf
     title: "The Australian Mining Industry: More than Just Shovels and Being the Lucky Country"
     year: 2015
     series: IP Australia Economic Research Paper 04
     authors: [Emma Francis]
+    note: "An independent report commissioned by IP Australia: the findings are the researchers', not necessarily IP Australia's."
   - doc_id: erp08-designs-law-practice
     key: designs-law-and-practice.pdf
     title: "Designs Law and Practice: Design within Australia and how Australia compares to its international peers"

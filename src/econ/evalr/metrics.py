@@ -19,6 +19,9 @@ COVER = 0.5
 
 
 def covers(chunk: dict, gold, cover: float = COVER) -> bool:
+    """`gold` is one Gold or a tuple of alternatives, any of which counts."""
+    if isinstance(gold, tuple):
+        return any(covers(chunk, g, cover) for g in gold)
     if chunk["doc_id"] != gold.doc_id:
         return False
     need = (gold.end - gold.start) * cover
@@ -58,7 +61,7 @@ def per_need(ranked: Sequence[dict], golds, budgets=(1000, 2000, 4000, 8000)) ->
                 break
             cov |= h
         out[f"recall@{t // 1000}k_tok"] = len(cov) / n
-    gold_docs = {g.doc_id for g in golds}
+    gold_docs = {g.doc_id for item in golds for g in (item if isinstance(item, tuple) else (item,))}
     out["doc_hit@5"] = 1.0 if any(c["doc_id"] in gold_docs for c in ranked[:5]) else 0.0
     return out
 
