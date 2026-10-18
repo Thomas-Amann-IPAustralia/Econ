@@ -51,6 +51,12 @@ Adding each passage's document title and section heading to its text, a common r
 difference here: twelve of the documents are annual editions of the same report with nearly the same
 title, so the heading words don't tell passages apart.
 
+One more cut was made after reading results for the five questions you supplied: reference-list
+entries ("Surname, I. (2019). Title. Journal.") kept appearing near the top of broad questions, because
+they are dense with words like "innovation" and "economics" while answering nothing. They are now left
+out (the pages themselves are untouched). The test questions scored the same with and without them, and
+none of the five questions' top 20 passages is a reference any more.
+
 ## The embedding model: a mid-sized one was as good as the big ones
 
 Fourteen freely licensed embedding models were compared, from 23 million to 600 million parameters

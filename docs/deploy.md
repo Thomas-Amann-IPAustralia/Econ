@@ -45,6 +45,8 @@ curl -s -H "Authorization: Bearer $TOKEN" $URL/health     # shows the model, its
   keeps everyone else out. The stronger alternative, IAM-authenticated calls, would need a Google
   service-account key stored on Render.
 - `--max-instances 2` caps what a flood of requests could cost.
+- Sizing, measured locally: the service holds about 720 MB with the model loaded; a warm query takes
+  about 45 ms on one vCPU; loading the model takes about 2 s, on top of Cloud Run's own start-up.
 - To redeploy from GitHub instead, set up Workload Identity Federation and the repository variables
   named at the top of `.github/workflows/embedder.yml`, then run that workflow by hand.
 

@@ -1,6 +1,6 @@
 # Handover: the first version of the evidence chat
 
-For the next Claude Code session. Read `CLAUDE.md` first, then the decisions log (D-001 to D-006). Build
+For the next Claude Code session. Read `CLAUDE.md` first, then the decisions log (D-001 to D-009). Build
 only what the owner asks for next; anything that calls a language model spends money and needs a budget.
 
 **Status (2026-10-18):** built, measured and verified locally; not deployed. Branch
@@ -9,9 +9,14 @@ only what the owner asks for next; anything that calls a language model spends m
 ## Where things stand
 - **Knowledge base:** 24 PDFs, 1,099 pages, 8,601 elements with page and box provenance (D-002, D-004).
   The 2018 and 2021 reports are OCR'd; about 40 of their elements have garbled stretches.
-- **Retrieval:** chunking S384-noprefix (D-005), embedder and fusion per D-006, measured on the silver
-  test set (`eval/testset/silver-v1.yaml`, 114 needs). Serving index in `library/index/`, verified against
-  the measurement by `econ verify-embedder` (`reports/embedder-verification.md`).
+- **Retrieval:** structure-aware chunks of up to 384 tokens without a prefix (D-005), without reference
+  entries (D-007 to D-009); the arctic-embed-m-v1.5 embedder and 0.7/0.3 score fusion (D-006). Measured on
+  the silver test set (`eval/testset/silver-v1.yaml`, 114 needs): ndcg@10 0.554, recall@4k_tok 0.80 over
+  all needs. Serving index in `library/index/` (1,896 passages), verified against the measurement by
+  `econ verify-embedder` (`reports/embedder-verification.md`).
+- **Memory, measured locally:** the API 121 MB (Render free: 512 MB); the embedder 722 MB after a fix that
+  stops concurrent cold requests loading two copies (Cloud Run: 2 GiB). Query embedding about 45 ms on
+  one thread, warm; model load about 2 s.
 - **Answering:** plan, search, answer, check, with one retry (`src/econ/answer/`). Tested only with the
   scripted model: no live model call has been made (no keys).
 - **Service:** the Render API, the Cloud Run embedder and the GitHub Pages front end all ran together
@@ -55,4 +60,4 @@ only what the owner asks for next; anything that calls a language model spends m
 - `pkill -f` patterns must not appear elsewhere in the same command line, or the shell kills itself; use
   `pkill -f "[u]vicorn econ.service"` as a separate command.
 - Grids and test sets are committed before any number; deviations are disclosed in the decision entry.
-- Next free decision number: **D-007**.
+- Next free decision number: **D-010**.

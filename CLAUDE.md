@@ -9,7 +9,7 @@ claim an answer makes quotes a passage, and every passage leads to its page.
 
 **Current scope: the retrieval-augmented chatbot, first version.** Built: the knowledge base, the
 retrieval measurement on a silver test set, the serving index, the API (Render), the embedder (Cloud
-Run), the front end (GitHub Pages). Not yet possible: anything that calls a language model (no keys
+Run), the front end (GitHub Pages), all run together locally; nothing deployed yet. Not yet possible: anything that calls a language model (no keys
 yet), so the answer path is tested only with a scripted model; Langfuse tracing; the TREC-style test set
 with model judges (SOP §17); the agent evaluation and model choice (SOP §20.5). Build those when the
 owner provides keys and a budget.
@@ -69,11 +69,17 @@ decision log) and the latest `docs/handover-*.md` before acting.
 `econ ask "question"` runs one question locally (evidence-only unless `--confirm` and a key);
 `econ serve` runs the API locally. Nothing in the pipeline spends money.
 
-## Retrieval (see D-005 and D-006 for the measured choice)
-- Chunking: `chunking.adopted` in `config/pipeline.yaml`. Embedder: `embedding.adopted`.
+## Retrieval (adopted: D-005 to D-009)
+- Chunking `S384-noprefix-nocite`: chunks never cross a section, up to 384 tokens, no heading prefix,
+  and no bibliography entries or citation-only endnotes (`is_citation`, 475 elements). 1,896 passages.
+- Embedder `arctic-m-v1.5` (Snowflake/snowflake-arctic-embed-m-v1.5 @ e58a8f75, 768 dimensions), served
+  from its ONNX export pinned by sha256. `econ verify-embedder` shows the serving path ranks exactly as
+  measured (identical top 10 on all 114 test questions).
 - Search: a dense lane (Cloud Run embedder) and a BM25 lane, min-max score fusion with alpha 0.7,
   100 candidates per lane. A question may be split into up to 4 searches by the plan; their rankings are
   merged by reciprocal rank. The answer model sees 20 passages, at most 8 from one document.
+- Measured on the silver set (all 114 needs): ndcg@10 0.554, recall@4k_tok 0.80, doc_hit@5 about 0.95.
+  Close calls to re-test on a bigger set: S256 chunks, the arctic-l-v2 embedder.
 - If the embedder fails, search runs on BM25 alone and says so.
 
 ## The answer (built; untested against live models)
