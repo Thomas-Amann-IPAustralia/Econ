@@ -131,6 +131,39 @@ def eval_retrieval(
     )
 
 
+@app.command("eval-retrieval-v2")
+@loud
+def eval_retrieval_v2(
+    stage: str = typer.Option("stage1", help="stage1 | stage2 | final"),
+    judgments: str = typer.Option("judged-v1", help="Judgments file under eval/judgments/."),
+) -> None:
+    """Grid retrieval-v2 on the judged test set (no API calls; reads cached plans, notes and reranker scores)."""
+    from econ.evalr import grid2, judged
+    from econ.manifest import write_text_atomic
+
+    with run("eval-retrieval-v2", _hash(), stage=stage, judgments=judgments) as r:
+        needs = judged.load()
+        r.counts["needs"] = len(needs)
+        if stage == "stage1":
+            res = grid2.run_stage1(needs, judgments)
+            out = config.path("reports/retrieval-v2-stage1.md")
+            write_text_atomic(out, grid2.render_stage1(res, needs))
+            r.add_output(out)
+            ch = res["choice"]
+            r.counts.update(settings=len(res["settings"]), chosen=ch["chosen"])
+        elif stage in ("stage2", "final"):
+            res = (
+                grid2.run_stage2(needs, judgments) if stage == "stage2" else grid2.run_final(needs, judgments)
+            )
+            out = config.path(f"reports/retrieval-v2-{stage}.md")
+            write_text_atomic(out, res["report"])
+            r.add_output(out)
+            ch = res["choice"]
+        else:
+            raise StageError(f"unknown stage {stage}")
+    typer.echo(f"{stage}: chosen {ch['chosen']} ({ch['primary']} dev {ch['dev'][ch['chosen']]:.3f})")
+
+
 @app.command()
 @loud
 def index(

@@ -1,0 +1,72 @@
+{
+ "cost_usd": 0.001774,
+ "data": [
+  {
+   "grade": 0,
+   "id": "p1"
+  },
+  {
+   "grade": 1,
+   "id": "p2"
+  },
+  {
+   "grade": 1,
+   "id": "p3"
+  },
+  {
+   "grade": 0,
+   "id": "p4"
+  },
+  {
+   "grade": 0,
+   "id": "p5"
+  },
+  {
+   "grade": 3,
+   "id": "p6"
+  },
+  {
+   "grade": 0,
+   "id": "p7"
+  },
+  {
+   "grade": 0,
+   "id": "p8"
+  },
+  {
+   "grade": 0,
+   "id": "p9"
+  },
+  {
+   "grade": 2,
+   "id": "p10"
+  },
+  {
+   "grade": 0,
+   "id": "p11"
+  },
+  {
+   "grade": 0,
+   "id": "p12"
+  },
+  {
+   "grade": 3,
+   "id": "p13"
+  }
+ ],
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "judge:judge-v1:gemini-3.8-flash",
+ "schema_name": "grades",
+ "tag": "explore-policy-5",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.003548,
+  "input": 3721,
+  "model": "gemini-3.8-flash",
+  "output": 202,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

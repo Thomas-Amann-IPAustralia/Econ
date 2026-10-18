@@ -351,3 +351,119 @@ def render_stage1(res: dict, needs: list[Need]) -> str:
         "- Dev chooses, test reports. With 92 test needs, differences under about 0.03 are hard to separate.",
     ]
     return "\n".join(lines) + "\n"
+
+
+# --- stage 2 (the per-document cap) and the final report -------------------------------------------
+
+
+def named(name: str) -> systems.System:
+    """Rebuild a setting from its name, e.g. 'plan:luna-plan-v2/enriched/ettin-32m/cap5'."""
+    parts = name.split("/")
+    q, t, rr = parts[0], parts[1], parts[2]
+    kw = {}
+    for extra in parts[3:]:
+        if extra.startswith("cap"):
+            kw["cap"] = int(extra[3:])
+        elif extra.startswith("rr"):
+            kw["rr_depth"] = int(extra[2:])
+    return make(q, PLAIN if t == "plain" else ENRICHED, None if rr == "none" else rr, **kw)
+
+
+def _choice_of(stage: str) -> dict:
+    return json.loads((config.path("eval/runs/retrieval-v2") / stage / "choice.json").read_text())
+
+
+def run_stage2(needs: list[Need], judgments: str) -> dict:
+    sp = spec()
+    st2 = sp["stage2"]
+    primary = sp["amendment_1"]["primary"]
+    base = named(_choice_of("stage1")["chosen"])
+    grades = grades_by_need(judgments)
+    settings = [replace(base, cap=c, name=setting_name(replace(base, cap=c))) for c in st2["cap"]]
+    rows = {s.name: evaluate(s, needs, grades) for s in settings}
+    for s in settings:
+        save_rows("stage2", s.name, rows[s.name])
+    dev = {s.name: mean_of(rows[s.name], primary, split="dev") for s in settings}
+    keep = settings[0].name  # cap 8, the configured value
+    best = max(dev, key=dev.get)
+    chosen = best if dev[best] > dev[keep] + st2["margin"] else keep
+    choice = {"stage": "stage2", "primary": primary, "chosen": chosen, "dev": dev, "judgments": judgments}
+    save_choice("stage2", choice)
+    lines = [
+        "# Retrieval grid v2, stage 2: the per-document cap",
+        "",
+        f"On stage 1's choice `{base.name}`. Rule: {st2['rule']} **Chosen: `{chosen}`.**",
+        "",
+        f"| Setting | Dev {primary} | Test {primary} | judged@10 (test) | rel_recall@20 (test) |",
+        "|---|---|---|---|---|",
+    ]
+    for s in settings:
+        r = rows[s.name]
+        lines.append(
+            f"| `{s.name}` | {_fmt(dev[s.name])} | {_fmt(mean_of(r, primary, split='test'))} | "
+            f"{_fmt(mean_of(r, 'judged@10', split='test'))} | {_fmt(mean_of(r, 'rel_recall@20', split='test'))} |"
+        )
+    return {"choice": choice, "rows": rows, "report": "\n".join(lines) + "\n"}
+
+
+def topup_targets(needs: list[Need], names: list[str], depth: int, grades: dict) -> dict[str, list[str]]:
+    """Unjudged passages in the top `depth` of the named settings' contexts, per need."""
+    out: dict[str, set[str]] = {n.id: set() for n in needs}
+    for name in names:
+        s = named(name)
+        for n in needs:
+            for r in context_rows(s, n)[:depth]:
+                cid = systems.chunks()[r]["chunk_id"]
+                if cid not in grades.get(n.id, {}):
+                    out[n.id].add(cid)
+    return {k: sorted(v) for k, v in out.items() if v}
+
+
+def run_final(needs: list[Need], judgments: str) -> dict:
+    """The chosen setting against the baseline on test, fully judged to depth 20 (after the top-up)."""
+    sp = spec()
+    base = sp["stage1"]["baseline"]
+    chosen = (
+        _choice_of("stage2")["chosen"]
+        if (config.path("eval/runs/retrieval-v2/stage2/choice.json")).exists()
+        else _choice_of("stage1")["chosen"]
+    )
+    grades = grades_by_need(judgments)
+    a, b = evaluate(named(base), needs, grades), evaluate(named(chosen), needs, grades)
+    save_rows("final", base, a)
+    save_rows("final", chosen, b)
+    ms = ["ndcg@10", "ndcg@20", "rel_recall@20", "p@20", "gold_recall@20", "gold_recall@4k_tok"]
+    comps, ps = {}, {}
+    for fam in ("all", "silver", "explore"):
+        for m in ms:
+            where = {"split": "test"} | ({} if fam == "all" else {"family": fam})
+            xa, xb = paired(a, b, m, **where)
+            if len(xa) < 5:
+                continue
+            comps[(fam, m)] = (metrics.mean(xa), metrics.mean(xb), metrics.compare(xa, xb), len(xa))
+            ps[f"{fam}:{m}"] = comps[(fam, m)][2]["p"]
+    adj = metrics.holm(ps)
+    lines = [
+        "# Retrieval grid v2: the choice against the baseline on test",
+        "",
+        f"Baseline `{base}` (the service today); chosen `{chosen}`. Judgments `{judgments}`, topped up so both "
+        "settings' 20-passage contexts are fully judged on every need.",
+        "",
+        f"judged@20 on test: baseline {_fmt(mean_of(a, 'judged@20', split='test'))}, chosen {_fmt(mean_of(b, 'judged@20', split='test'))}.",
+        "",
+        "| Needs | Metric | n | Baseline | Chosen | Difference | 95% CI | p (Holm) |",
+        "|---|---|---|---|---|---|---|---|",
+    ]
+    for (fam, m), (ma, mb, c, n) in comps.items():
+        lines.append(
+            f"| {fam} | {m} | {n} | {ma:.3f} | {mb:.3f} | {c['diff']:+.3f} | [{c['ci'][0]:+.3f}, {c['ci'][1]:+.3f}] | {adj[f'{fam}:{m}']:.3f} |"
+        )
+    choice = {
+        "stage": "final",
+        "primary": "ndcg@20",
+        "chosen": chosen,
+        "baseline": base,
+        "dev": {chosen: mean_of(b, "ndcg@20", split="dev"), base: mean_of(a, "ndcg@20", split="dev")},
+    }
+    save_choice("final", choice)
+    return {"choice": choice, "report": "\n".join(lines) + "\n"}

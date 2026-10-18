@@ -1,0 +1,68 @@
+{
+ "cost_usd": 0.001841,
+ "data": [
+  {
+   "id": "p1",
+   "score": 0
+  },
+  {
+   "id": "p2",
+   "score": 3
+  },
+  {
+   "id": "p3",
+   "score": 3
+  },
+  {
+   "id": "p4",
+   "score": 0
+  },
+  {
+   "id": "p5",
+   "score": 0
+  },
+  {
+   "id": "p6",
+   "score": 2
+  },
+  {
+   "id": "p7",
+   "score": 2
+  },
+  {
+   "id": "p8",
+   "score": 3
+  },
+  {
+   "id": "p9",
+   "score": 1
+  },
+  {
+   "id": "p10",
+   "score": 1
+  },
+  {
+   "id": "p11",
+   "score": 3
+  },
+  {
+   "id": "p12",
+   "score": 2
+  }
+ ],
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "judge:judge-v1:gemini-3.8-flash",
+ "schema_name": "grades",
+ "tag": "erp08-1",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.003682,
+  "input": 3979,
+  "model": "gemini-3.8-flash",
+  "output": 186,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}
