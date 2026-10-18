@@ -1,0 +1,52 @@
+{
+  "argv": [
+    "eval-retrieval-v2",
+    "--stage",
+    "stage1"
+  ],
+  "command": "eval-retrieval-v2",
+  "config_hash": "98883ce1aa85b4d8",
+  "counts": {
+    "chosen": "plan+q:luna-plan-v2/enriched/none",
+    "needs": 178,
+    "settings": 66
+  },
+  "error": null,
+  "git": {
+    "commit": "6c1ca228a96f0021dfafec61bb5fca19f967a3be",
+    "dirty": true,
+    "dirty_paths": [
+      "eval/cache/rerank/"
+    ]
+  },
+  "git_at_end": {
+    "commit": "6c1ca228a96f0021dfafec61bb5fca19f967a3be",
+    "dirty": true,
+    "dirty_paths": [
+      "eval/cache/rerank/"
+    ]
+  },
+  "inputs": {},
+  "outputs": {
+    "reports/retrieval-v2-stage1.md": "2d2b5e355fa12f4eb0ad8d28d43c74603cc96d4ed4602ae42d8ebe8b42a49ebf"
+  },
+  "params": {
+    "judgments": "judged-v1",
+    "stage": "stage1"
+  },
+  "run_id": "20261018T145710Z",
+  "seconds": 193.0,
+  "status": "passed",
+  "upstream": {},
+  "versions": {
+    "docling": "2.140.0",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.0",
+    "pypdfium2": "5.14.0",
+    "python": "3.12.3",
+    "sentence-transformers": "6.1.0",
+    "tokenizers": "0.23.3",
+    "torch": "2.14.1+cpu"
+  },
+  "warnings": []
+}
