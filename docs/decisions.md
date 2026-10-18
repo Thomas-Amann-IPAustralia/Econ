@@ -638,3 +638,47 @@ the 2.5 s reranking budget. A top-up judged the 213 unjudged passages in the var
 candidate worth a second look on a larger test set; a test-only gain is not a reason to adopt.
 
 **Spend:** OpenAI $0.014 (plan-v3 plans), Gemini $0.067 (top-up). Totals: OpenAI $2.15, Gemini $1.92.
+
+---
+
+## D-017 — Context depth: 40 and 60 passages reach much more of a broad question's evidence (Claude; a recommendation, the owner decides)
+
+**Context.** After D-016 the owner asked whether 0.68 to 0.72 ndcg@10 is good. The ranking is strong for
+lookups; the weak point is how much of a broad question's evidence the answer model's 20 passages hold
+(0.566 on the exploratory test needs in D-013). Grid `eval/grids/retrieval-depth.yaml`, committed at
+`f1c0b0a` before any number: the adopted ranking extended to 40 and 60 passages (same first stage, cap 8 per
+document, so the first 20 are the served context), on the 92 test needs, with ranks 21-60 judged first
+(1,388 passages, 122 of them relevant). Report `reports/retrieval-depth.md`; rows in
+`eval/runs/retrieval-v2/depth/`.
+
+**Results** (share of a need's judged grade-2/3 passages in the context; test needs).
+
+| | 20 passages | 40 | 60 |
+|---|---|---|---|
+| Exploratory (33) | 0.491 | 0.682 (+0.191 [+0.150, +0.231]) | 0.760 (+0.269 [+0.211, +0.327]) |
+| Silver lookups (59) | 0.765 | 0.830 (+0.065) | 0.851 (+0.086) |
+| Passage tokens, exploratory (mean) | 5,004 | 9,578 | 13,122 |
+
+- The 20-passage figure for exploratory needs falls from D-013's 0.566 to 0.491 because the top-up found
+  relevant passages at ranks 21-60 that no earlier pool had judged: the old figure overstated recall.
+- The band added is still useful for broad questions: 26% of passages 21-40 and 16% of 41-60 are relevant
+  (5% and 3% for lookups).
+- The cap and the first stage's depth stop contexts short: the 60-passage contexts average 46 passages
+  (51.5 for exploratory needs).
+- Breadth rules (60 for broad questions, else 20): with a perfect classifier (the need's family) recall is
+  0.763 at 30.6 passages on average, against 0.818 at 46.3 for always 60 and 0.777 at 34.8 for always 40.
+  The free proxy, the plan writing 2 or more queries, catches 15 of 33 exploratory needs and 6 of 59
+  lookups: 0.722.
+
+**Not shown.** Retrieval only: whether the answer model uses the extra passages, how long its answers take
+and whether lookups get worse with more distractors need an end-to-end run (the answers-v1 set). Extra input
+cost at 60 passages, about 8,000 tokens of gpt-6.1-sol: about $0.016 an answer at the standard tier.
+
+**Recommendation (the owner decides; it changes what the answer model reads and an answer's cost).** Give broad
+questions a deeper context. Two options, both to be confirmed end to end before adoption:
+1. Always 40 passages: no classifier, most of the gain (0.777 overall, 0.682 exploratory).
+2. A breadth field in the plan (a new plan prompt version; the plan call already runs, so it is near free):
+   60 passages for broad questions, 20 otherwise. Worth it only if the classifier gets close to the oracle;
+   the plan's query count is too weak a signal.
+
+**Spend:** Gemini $0.23 (the top-up, Batch). Totals: OpenAI $2.15, Gemini $2.16 of $2.50 each.

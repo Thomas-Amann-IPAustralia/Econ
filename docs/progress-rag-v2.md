@@ -145,3 +145,10 @@ Fusion weight, note-reading rerankers and an answer-shaped query (plan-v3), pre-
 fully judged top 10s: none beats the adopted setting on dev by the margin. Rerankers with notes are still
 harmful at 17M and 32M; the fusion weight is flat between 0.6 and 0.8; plan-v3 is level on dev and +0.022 on
 test (interval includes zero). Final spend: OpenAI $2.15 of $2.50, Gemini $1.92 of $2.50.
+
+## 2026-10-18 — Context depth (D-017): broad questions need more than 20 passages
+The adopted ranking at 40 and 60 passages, pre-registered, ranks 21-60 judged on the 92 test needs (1,388
+passages, $0.23). Exploratory needs: relevant evidence reached 0.491 at 20, 0.682 at 40, 0.760 at 60; lookups
+0.765 to 0.851. A perfect breadth classifier (60 for broad questions) gets 0.763 at 31 passages on average;
+the plan's query count is a weak proxy. Recommended to the owner, pending an end-to-end check: always 40, or a
+breadth field in the plan. Spend: OpenAI $2.15 of $2.50, Gemini $2.16 of $2.50.

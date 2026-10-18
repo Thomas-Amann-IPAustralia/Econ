@@ -1,0 +1,46 @@
+{
+  "argv": [
+    "eval-retrieval-v2",
+    "--stage",
+    "depth"
+  ],
+  "command": "eval-retrieval-v2",
+  "config_hash": "5b0996b679236558",
+  "counts": {
+    "needs": 178
+  },
+  "error": null,
+  "git": {
+    "commit": "376e11b19f3f0fc1a77f0a42cdcec70ecfe7e01e",
+    "dirty": false,
+    "dirty_paths": []
+  },
+  "git_at_end": {
+    "commit": "376e11b19f3f0fc1a77f0a42cdcec70ecfe7e01e",
+    "dirty": false,
+    "dirty_paths": []
+  },
+  "inputs": {},
+  "outputs": {
+    "reports/retrieval-depth.md": "be6bad35d9381b48e972d86dfc423c0b690c21c6ef251d1b81f8fc251bbe9f6d"
+  },
+  "params": {
+    "judgments": "judged-v1",
+    "stage": "depth"
+  },
+  "run_id": "20261018T214707Z",
+  "seconds": 13.9,
+  "status": "passed",
+  "upstream": {},
+  "versions": {
+    "docling": "2.140.0",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.0",
+    "pypdfium2": "5.14.0",
+    "python": "3.12.3",
+    "sentence-transformers": "6.1.0",
+    "tokenizers": "0.23.3",
+    "torch": "2.14.1+cpu"
+  },
+  "warnings": []
+}
