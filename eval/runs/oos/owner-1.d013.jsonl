@@ -1,0 +1,1 @@
+{"category": "control", "check_passed": true, "cite_ok": true, "cited_docs": ["erp10-ip-profitability-competition", "erp11-exporters-trade-marks", "erp15-patenting-firms"], "cost_usd": 0.026625, "coverage": "partial", "expect": ["complete", "partial"], "flags": [], "id": "control:owner-1", "passed_rule": true}

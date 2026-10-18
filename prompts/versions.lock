@@ -4,6 +4,11 @@
     "schema_sha256": "385f1d567dabf1a6",
     "sha256": "aba6f91761444afa"
   },
+  "answer-v2": {
+    "schema": "answer",
+    "schema_sha256": "385f1d567dabf1a6",
+    "sha256": "871098355d27afc6"
+  },
   "plan-v1": {
     "schema": "plan",
     "schema_sha256": "ab394bace1984c1e",

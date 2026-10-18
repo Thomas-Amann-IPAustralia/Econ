@@ -118,3 +118,24 @@ pavlova. gpt-6.1-sol was more concise and added a caveat; Gemini quoted more.
   - rerankers help the plain index (ettin-68m: 0.654 to 0.706 dev) but not the enriched one (0.736 to
     0.711 with plan+q): they read only the passage, not its context note. The small ones (17M, 32M,
     MiniLM) are neutral to harmful throughout.
+
+## 2026-10-18 — Adoption, verification, answers, out-of-scope set (D-012 to D-015)
+- **Stage 1 (formal)** chose `plan+q:luna-plan-v2/enriched/none`; stage 2 kept the cap at 8; the final,
+  fully judged test comparison: ndcg@10 0.597 to 0.682, ndcg@20 0.616 to 0.694, relevant-passage recall in
+  the context 0.623 to 0.715, all Holm p 0.002. Re-run on every judgment, the rule picks the same setting.
+- **Adopted** (D-013): context notes in the index, plan-v2, the question kept as a search. Index rebuilt
+  (ONNX); `econ verify-search` against the measurement: top-10 overlap 0.996, judged ndcg@10 0.7038 served
+  vs 0.7039 measured.
+- **Bug found and fixed:** the shared Snowball stemmer is not thread-safe (81 wrong, 17 errors in 200 calls
+  on 8 threads); the service tokenises in a thread pool. Now per thread.
+- **End-to-end answers** (D-014): 60 test needs x 2, all pass the check; exploratory answers cite 4.2 to
+  5.0 relevant passages; Gemini (both orders) prefers the new answers 19 to 7 on exploratory needs, Claude
+  (blind) 18 to 6; they agree on all 20 pairs where both had a preference.
+- **Out-of-scope set** (D-015), first run, live pipeline: 13 of 18 by the rule, every answer read. A poem
+  request was obeyed; "What's the trend?" and a thin question labelled `complete`. PROMPT_1 now answered
+  well. A transient 502 left one question unanswered: provider calls now retry once. answer-v2 proposed
+  to the owner (declines non-information requests, an advice caveat, stricter `complete`); on 9 items it
+  fixes the poem and the advice caveat with no loss on the controls.
+- **Spend at the end:** OpenAI $2.13 of $2.50, Gemini $1.86 of $2.50.
+- Records: D-011 to D-015, `CLAUDE.md`, `README.md`, `docs/handover-rag-v2.md`,
+  `docs/rag-v2-results-explained.md`.
