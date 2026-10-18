@@ -1,0 +1,74 @@
+{
+ "cost_usd": 0.014577,
+ "data": {
+  "answer": "**NSW leads in application volumes, while the ACT leads relative to the number of businesses.** The 2025 report’s figures for 2024 show this pattern for both standard patents and trade marks.[1][2][3]\n\n- **Standard patent volumes:** NSW accounted for 38.9 per cent of resident applications, followed by Victoria (23.3 per cent) and Queensland (17.3 per cent).[1]\n- **Trade mark volumes:** NSW was also the largest source of resident applications, followed by Victoria and Queensland.[2]\n- **Activity relative to business numbers:** The ACT recorded just over 2 standard patent applications and 21 trade mark applications per thousand businesses—the highest intensity for both rights. For trade marks, Victoria, NSW and Queensland each recorded 19 applications per thousand businesses.[3]\n\n**Recent growth differed across jurisdictions and rights:**\n\n- **Standard patents, 2024:** Applications increased in South Australia (31.5 per cent), Tasmania (30.8 per cent), Western Australia (7.9 per cent) and Victoria (5.4 per cent). They fell in NSW (3.9 per cent) and Queensland (6.1 per cent), while the Northern Territory was stable.[4]\n- **Trade marks, 2024:** Application volumes fell everywhere except Victoria and the Northern Territory. The report suggests Victoria’s highest-ranked new business entry rate was likely driving new trade mark activity; this is a qualified explanation, not an established causal finding.[5]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "Among Australian states and territories, New South Wales (NSW) is the leading source for standard patent applications in Australia (38.9% of resident applications), followed by Victoria (23.3%) and Queensland (17.3%)."
+     }
+    ],
+    "text": "In 2024, NSW led resident standard patent applications with 38.9 per cent, followed by Victoria with 23.3 per cent and Queensland with 17.3 per cent."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "Among Australian states and territories, New South Wales (NSW) is the leading source for resident trade mark applications in Australia, followed by Victoria and Queensland."
+     }
+    ],
+    "text": "In 2024, NSW was the leading source of resident trade mark applications, followed by Victoria and Queensland."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "However, the Australian Capital Territory (ACT) is the most patent-intensive, with just over 2 applications per thousand businesses in the territory"
+     },
+     {
+      "evidence": 4,
+      "quote": "However, the Australian Capital Territory (ACT) was the most trade mark-intensive in 2024 with 21 applications per thousand businesses in the territory (compared to 19 in Victoria, New South Wales and Queensland)."
+     }
+    ],
+    "text": "In 2024, the ACT had the highest application intensity per thousand businesses for standard patents and trade marks, with just over 2 and 21 respectively; Victoria, NSW and Queensland each had 19 trade mark applications per thousand businesses."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "In 2024, filings increased in South Australia (+31.5% on their level in 2023), Tasmania (+30.8%), Western Australia (+7.9%) and Victoria (+5.4%). Applications fell in NSW (-3.9%) and Queensland (-6.1%), while filings from the Northern Territory were stable."
+     }
+    ],
+    "text": "In 2024, standard patent filings rose in South Australia, Tasmania, Western Australia and Victoria, fell in NSW and Queensland, and were stable in the Northern Territory, at the rates stated in the answer."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "In 2024, application volumes fell in all states and territories except for the Northern Territory and Victoria (Figure 3.7). In 2024, Victoria overtook New South Wales and Queensland to have the highest new business entry rate, likely driving new trade mark activity in the state."
+     }
+    ],
+    "text": "In 2024, trade mark volumes fell in all jurisdictions except Victoria and the Northern Territory; the report offers a qualified explanation linking Victoria’s new business entry rate to new trade mark activity, rather than establishing causation."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "explore-compare-7",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.029154,
+  "input": 6977,
+  "model": "gpt-6.1-sol",
+  "output": 1520,
+  "reasoning": 510,
+  "seconds": 22.5
+ }
+}

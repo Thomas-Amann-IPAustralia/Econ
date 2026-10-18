@@ -1,0 +1,115 @@
+{
+ "cost_usd": 0.012885,
+ "data": {
+  "answer": "Researchers compared the scope of Australian patent claims with equivalent patents overseas, then used economic modelling to estimate whether the Raising the Bar reforms changed that relative scope.[1][3]\n\n- **Compare the same inventions.** They matched Australian patents with equivalent patents in the same patent family granted by the European Patent Office and US Patent and Trademark Office. They examined both first claims and full claim sets.[1]\n- **Classify relative scope.** Patent examiners manually assessed whether Australian claims were narrower, similar or broader than their overseas equivalents; a machine-learning classifier also estimated these categories. The 2024 Australian IP Report describes a small manual-assessment sample of 500 patent pairs.[2]\n- **Estimate the reforms’ effect.** Models estimated changes in the probability of each scope category. The reported specifications included patent-text similarity measures, an AU–US comparison indicator and examination sections; Table 12 used a 2010–16 window.[3]\n- **Test robustness.** Researchers varied the study window, including focusing more closely on the period immediately before and after the reforms. Estimates across the alternative windows in Table 11 consistently indicated a reduced probability of Australian patents being broader.[4]\n\n**What they found:** The 2024 Australian IP Report estimated a reduction of 1.0–4.0 percentage points in the likelihood of Australian patents being broader. The separate 2024 research paper reported an effect as high as 5.7 percentage points, so the reported magnitudes differ.[5]\n\n**Important qualification:** This measured *relative* narrowing, not necessarily changes in Australian patents alone: overseas patent scope could also change. The Australian IP Report also cautioned against attributing the change entirely to the reforms because narrowing appeared to begin beforehand.[6]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "equivalent patents (the set of \"identical\" patents which belong to the same patent family) granted by the European Patent Office (EPO) and the United States Patent and Trademark Office (USPTO)"
+     },
+     {
+      "evidence": 9,
+      "quote": "The figure presents results based on both the full set of claims in the patents and the patents' first claims."
+     }
+    ],
+    "text": "Researchers compared Australian patents with same-family equivalents granted by the EPO and USPTO, using first claims and full claim sets."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "Dependent variable is a multinomial indicator set to 0 if the scope of the claim is Narrower, 1 if the scope is Similar or 2 if the scope of the claim is Broader."
+     },
+     {
+      "evidence": 6,
+      "quote": "Columns (1) to (3) use the Manual Assessment Data where the scope of patent claims are assessed by patent examiners."
+     },
+     {
+      "evidence": 15,
+      "quote": "These findings are consistent with results from the manual assessment of 500 patents pairs by examiners. Based on a small sample of patents"
+     },
+     {
+      "evidence": 6,
+      "quote": "Columns (4) to (6) use the Machine Learning Classifier Data"
+     }
+    ],
+    "text": "Manual examiner assessments and machine-learning classification categorised relative scope as narrower, similar or broader; the Australian IP Report described a small manual sample of 500 patent pairs."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "Coefficient estimates are the average marginal effects of adopting the Raising the Bar reforms on the probability of a patent being assessed as either being narrower, similar or broader in scope to its international equivalent."
+     },
+     {
+      "evidence": 6,
+      "quote": "| Time window | 2010-16 | 2010-16 | 2010-16 | 2010-16 | 2010-16 | 2010-16 |"
+     },
+     {
+      "evidence": 6,
+      "quote": "| AU-US | Yes | Yes | Yes | Yes | Yes | Yes |\n| Similarity Measures | Yes | Yes | Yes | Yes | Yes | Yes |\n| Exam Sections | Yes | Yes | Yes | Yes | Yes | Yes |"
+     }
+    ],
+    "text": "Economic models estimated the reforms’ effects on scope-category probabilities, with specifications including similarity measures, AU–US and examination sections; Table 12 used 2010–16."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 12,
+      "quote": "the results were robust to shortening the study's timeframe to focus on the period immediately before and after the reforms."
+     },
+     {
+      "evidence": 8,
+      "quote": "| Time window | 2000-19 (1) | 2005-19 (2) | 2010-19 (3) |\n|---|---|---|---|\n| Raising the Bar | -0.010*** (0.002) | -0.020*** (0.002) | -0.041*** (0.002) |"
+     }
+    ],
+    "text": "Researchers tested alternative study windows, including closer to the reform, and Table 11 consistently estimated a reduction in the probability of broader Australian patents."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 12,
+      "quote": "Based on economic modelling, the reforms are estimated to have reduced the likelihood of Australian patents being broader than their international equivalents by between 1.0 and 4.0 percentage points."
+     },
+     {
+      "evidence": 3,
+      "quote": "the impact of Raising the Bar reforms could reach as high as 5.7 percentage point reduction in the probability of Australian patent having a broader scope."
+     }
+    ],
+    "text": "The two 2024 publications reported different magnitudes: 1.0–4.0 percentage points in the Australian IP Report and up to 5.7 percentage points in the research paper."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 9,
+      "quote": "Any changes in relative scope over time may reflect changes in Australian patents but may also partially reflect changes in patent scope within the United States or European Union."
+     },
+     {
+      "evidence": 12,
+      "quote": "Given that the narrowing of Australian patents appears to have begun prior to the reforms, caution is warranted in ascribing causality to the reforms."
+     }
+    ],
+    "text": "Relative scope can change because overseas patents change, and narrowing before the reforms warrants caution about attributing the change entirely to the reforms."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "explore-methods-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.02577,
+  "input": 5275,
+  "model": "gpt-6.1-sol",
+  "output": 1522,
+  "reasoning": 256,
+  "seconds": 21.41
+ }
+}

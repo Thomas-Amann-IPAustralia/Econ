@@ -1,0 +1,139 @@
+{
+ "cost_usd": 0.015407,
+ "data": {
+  "answer": "The researchers identify several areas for further work, ranging from IP policy settings to innovation, participation and emerging technologies.\n\n### Latest priorities: 2025\n- **IP administration and patent policy:** application timeframes across registered rights, and the economic implications of patent scope and subject matter eligibility.[1]\n- **Global developments and access to IP:** impacts of rising protectionism and Chinese IP filings; barriers to entering the IP system, including trade mark clutter; and continued monitoring of innovation trends and IP’s value and functions.[2]\n\n### Other areas identified for further research\n- **Innovation and R&D investment:** understanding Australia’s changing innovation structure and the drivers of R&D investment, particularly the potential influence of IP rights. This is described as an ongoing research program in 2024.[3]\n- **AI investment and diffusion:** the 2023 AI report proposes improving data collection, exploring geographical differences, and linking patent data with alternative measures such as job postings. It also recommends analysing differences in adoption across industries and firms of different sizes, locations and patenting behaviours.[4][5]\n- **Participation and employee outcomes:** the 2022 report identifies research into barriers associated with education, age and gender, alongside work examining how business IP activity relates to employee mobility and earnings.[6]\n- **Business performance and competition:** the 2019 report identifies linked-data research into IP rights’ effects on business performance and their links with competition, with further linked-data research envisaged.[7]\n\n### Earlier research agendas\n- **University collaboration and patenting:** the 2017 report identifies ongoing work on collaborative grants and universities’ patent productivity, trade mark forecasting, and further exploration of links between R&D and patenting.[8]\n- **Wider economic and sectoral questions:** the 2015 agenda included IP activity and the economy, the changing innovation landscape, emerging ways of trading IP rights and productivity analysis. It also identified research into who innovates in mining, technological strengths in textiles, clothing and footwear, and the economic relevance of geographical indicators in Australia.[9][10]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 7,
+      "quote": "Application timeframe issues across the registered rights.\n\nThe economic implications of patent policy settings - such as patent scope and subject matter eligibility."
+     }
+    ],
+    "text": "The 2025 research priorities include application timeframes across registered rights and the economic implications of patent scope and subject matter eligibility."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 7,
+      "quote": "Impacts for the IP system of global policy and trade developments, such as rising protectionism, and the rapid rise in IP filings from China.\n\nBarriers to entry into the IP system including the extent and sources of trade mark clutter."
+     },
+     {
+      "evidence": 7,
+      "quote": "Our ongoing research program includes activity to monitor trends in the innovation system and evaluate the value and functions of IP across settings to inform policy development."
+     }
+    ],
+    "text": "The 2025 agenda includes global policy and trade developments, barriers to IP entry, trade mark clutter, and ongoing monitoring of innovation and IP's value and functions."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 18,
+      "quote": "IP Australia has an ongoing program of research to understand the changing structure of innovation in Australia and drivers of R&D investment, with focus on the potential influence of intellectual property rights."
+     }
+    ],
+    "text": "The 2024 research program seeks to understand Australia's changing innovation structure and drivers of R&D investment, focusing on the potential influence of IP rights."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "recommendations on how IP Australia may reconsider its data collection process, implement targeted interventions towards different AI leaders and laggers, and explore area-level differences, keeping in mind the geographical nature of innovation."
+     },
+     {
+      "evidence": 5,
+      "quote": "linking patent data to other alternative measures of knowledge and skills diffusion, investment, and development (e.g., job postings)."
+     }
+    ],
+    "text": "The 2023 AI report proposes improving data collection, exploring geographical differences and linking patent data with alternative measures such as job postings."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "By separating out the heterogeneity in adoption across industries and faceting company microdata along dimensions such as size, location, patent behaviour, and others, we can more accurately analyse and monitor trends (emerging, sustained) in different sub-populations."
+     }
+    ],
+    "text": "The AI report recommends analysing differences in adoption across industries and firms by size, location and patent behaviour."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 15,
+      "quote": "Analysed at an aggregate level, the linkage will provide a valuable picture of how IP activity impacts employee mobility and earnings."
+     },
+     {
+      "evidence": 15,
+      "quote": "The OCE is researching the barriers to participation in IP, such as education, age and gender, to inform IP Australia's ongoing efforts to expand education and access to the IP system."
+     }
+    ],
+    "text": "The 2022 research agenda covers barriers to IP participation associated with education, age and gender, and how business IP activity relates to employee mobility and earnings."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 12,
+      "quote": "In 2018, the OCE commenced work on a project analysing the impact of IP rights on business performance, using the ABS BLADE dataset. A second EDAN project will examine the links between IP rights and competition."
+     },
+     {
+      "evidence": 12,
+      "quote": "the OCE will aim to conduct further IP research using linked data assets over the coming years."
+     }
+    ],
+    "text": "The 2019 report identifies research into IP rights and business performance and competition, with further linked-data research envisaged."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 9,
+      "quote": "Looking forward, there is ongoing work to investigate the impact that collaborative grants have on the patent productivity of universities, as well as operational research to complete work on trade mark forecasting, and we hope to further explore the links between R&D and patenting in Australia."
+     }
+    ],
+    "text": "The 2017 agenda includes collaborative grants and university patent productivity, trade mark forecasting, and further exploration of R&D–patenting links."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "investigating the relationship between IP activity and the economy\n\nthe evolution of the IP system and the changing nature of the innovation landscape domestically and internationally\n\nemerging ways of trading IP rights\n\nproductivity analysis."
+     }
+    ],
+    "text": "The 2015 agenda includes IP and the economy, the changing innovation landscape, emerging IP trading methods and productivity analysis."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 11,
+      "quote": "By investigating innovation trends in the industry, the research will determine who is undertaking innovation"
+     },
+     {
+      "evidence": 11,
+      "quote": "This project will use patent analytics to understand which Australian TCF companies are filing patents, within which technology areas the patents are filed, and where any areas of technological strength lie."
+     },
+     {
+      "evidence": 11,
+      "quote": "This project seeks to correct this by producing data on potential Australian GIs and investigate the economic impacts of GIs in Australia."
+     }
+    ],
+    "text": "The 2015 sectoral agenda includes identifying mining innovators, technological strengths in textiles, clothing and footwear, and the relevance and economic impacts of geographical indicators in Australia."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "explore-strategy-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.030814,
+  "input": 5957,
+  "model": "gpt-6.1-sol",
+  "output": 1890,
+  "reasoning": 412,
+  "seconds": 26.76
+ }
+}

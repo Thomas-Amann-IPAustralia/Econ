@@ -1,0 +1,86 @@
+{
+ "cost_usd": 0.010699,
+ "data": {
+  "answer": "**Not uniformly: the evidence suggests registered designs are not central to every designer’s protection strategy.** In a 2014 interview study, formal IP protection featured only weakly in the strategies of firms that differentiated themselves through design. This is an interview finding, not a measure of all designers’ reliance on registered designs.[1]\n\n- **The nature of the work matters.** The study found that design was commonly sold as a service and co-created with clients, making formal protection of the resulting product less relevant to those transactions.[2]\n- **Some designers choose other protection.** One interviewed industrial and furniture designer, Henry Wilson, used trade mark protection for his name and brand rather than patents or design registration for his products.[3]\n- **Use varies across sectors.** A 2019 study found little indication that creative arts designers used the designs system, despite substantial designer employment. It suggested copyright might be more relevant to them, but said further research was needed to establish whether other agents registered their designs.[4]\n\n**Registration also differs from enforceable protection.** The 2020 report states that a registered design must be examined and certified before it can be enforced; it reported that certifications had been around 16 per cent of registrations.[5]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 10,
+      "quote": "In this section we present key findings that emerge from interviews with buyers and sellers."
+     },
+     {
+      "evidence": 10,
+      "quote": "Formal protection of intellectual property rights (IPRs) feature only weakly in the strategies employed by firms that differentiate themselves through design."
+     }
+    ],
+    "text": "The 2014 interview study found formal IP protection played a weak role in design-differentiating firms’ strategies; this was an interview finding rather than a population-wide measure."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "One factor contributing to the limited perceived relevance of intellectual property rights is that design is commonly sold as a service rather than simply as an artifact."
+     },
+     {
+      "evidence": 6,
+      "quote": "Interviewees were broadly of the view that design is a service that is typically co-created with the client."
+     }
+    ],
+    "text": "Design’s frequent sale as a co-created service reduced the perceived relevance of formal product protection in those transactions."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 16,
+      "quote": "Wilson's IP strategy has been to take out trademark protection on his name and brand, eschewing options of patents and design registration for his products."
+     }
+    ],
+    "text": "Henry Wilson used trade mark protection for his name and brand instead of patents and design registration for his products."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "Further, large numbers of designers (4 020) are employed in the creative arts, representing 20 per cent of that sector's workforce. We see little indication that these designers use the designs system."
+     },
+     {
+      "evidence": 3,
+      "quote": "Further research is needed to determine whether creative arts professionals are producing designs registered by other agents. Alternatively, they may be oriented more toward the copyright system than registered designs."
+     }
+    ],
+    "text": "The 2019 study found little indication of designs-system use by creative arts designers and raised copyright orientation or registration by other agents as possibilities requiring investigation."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 19,
+      "quote": "A design right is only enforceable if, after registration, it is examined and certified by IP Australia."
+     },
+     {
+      "evidence": 19,
+      "quote": "In Australia, the proportion of designs that are certified has been around 16 per cent of design registrations."
+     }
+    ],
+    "text": "The 2020 report states that enforcement requires examination and certification, and certifications had been around 16 per cent of registrations."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "explore-synthesis-9",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.021398,
+  "input": 6054,
+  "model": "gpt-6.1-sol",
+  "output": 929,
+  "reasoning": 169,
+  "seconds": 13.71
+ }
+}

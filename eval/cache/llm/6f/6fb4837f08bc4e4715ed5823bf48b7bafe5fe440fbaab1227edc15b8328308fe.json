@@ -1,0 +1,95 @@
+{
+ "cost_usd": 0.013199,
+ "data": {
+  "answer": "**Yes—patenting is associated with AI capability investment, but the evidence is correlational, not proof that patents cause that investment.** The 2023 research found that patent-holding firms were more likely to build AI capability.[1]\n\nImportantly, the study measured capability building through **hiring AI-skilled employees**, rather than direct expenditure. It linked LinkedIn firm, employee and job advertisement data with international patent records.[2]\n\nThe main factors associated with investment were:\n\n- **Company characteristics and existing capability:** large corporations, SMEs with existing AI capacity, patent-holding firms and younger companies had a higher tendency to adopt AI. Company size and location were also correlated with expanding AI capacity.[3]\n- **Industry:** AI capability existed across most Australian industries, but was more pronounced in technology-focused industries, including information and communication technologies and professional services.[4]\n- **Innovation and patenting:** having a patent predicted AI capability building among specialised technical start-ups and across the overall sample. AI adoption was particularly associated with patenting in Physics, which encompasses computer technologies.[5]\n\nThe report suggests that businesses **may use patents to capture returns from developing AI systems**—a possible explanation for the relationship, rather than a demonstrated causal mechanism.[6]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "We then correlate AI adoption with patent activity to explore the importance of IP to these firms."
+     },
+     {
+      "evidence": 7,
+      "quote": "Firms that demonstrate a greater focus on innovation, proxied by being the listed owner of at least one patent, are more likely to increase their involvement with AI in their operations."
+     }
+    ],
+    "text": "The 2023 research found a correlation between patent holding and AI capability building, not proof that patents cause investment."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "We use the hiring of AI-skilled employees as a proxy for AI capacity building such as inward technology transfer and AI adoption."
+     },
+     {
+      "evidence": 4,
+      "quote": "For this report, we create a novel database that links international patent data from the Lens patent database with firm microdata constructed from LinkedIn's Jobs, Company, and People datasets."
+     }
+    ],
+    "text": "The study used AI-skilled hiring as a proxy for capability building and linked LinkedIn data with international patent records, rather than measuring investment expenditure directly."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "We identified four groups of companies that have a higher tendency to adopt AI technology: (i) large corporations, (ii) small and medium size enterprises (SMEs) with existing AI capacity, (iii) patent-holding firms, and (iv) younger companies."
+     },
+     {
+      "evidence": 2,
+      "quote": "Company attributes such as size and location are correlated with the likelihood of a firm enlarging its AI capacity."
+     }
+    ],
+    "text": "Large corporations, SMEs with existing AI capacity, patent-holding firms and younger companies were more likely to adopt AI; size and location correlated with expanding capability."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "What we find is that AI capacity has been developed across most industries in Australia, but capacity is more pronounced in industries with a strong technology focus such as information and communication technologies and professional services."
+     }
+    ],
+    "text": "AI capability was present across most Australian industries but more pronounced in technology-focused industries, including information and communication technologies and professional services."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "However, it identified the emergence of highly specialised, technical start-ups focused on AI development in Australia."
+     },
+     {
+      "evidence": 6,
+      "quote": "For these businesses - as for the overall sample - having a patent was a good predictor of whether they were engaged in building AI capability: businesses with a stronger innovation and patent focus adopt AI at a higher rate. Adoption was strongly associated with patenting focused on the Physics field, which encompasses computer technologies."
+     }
+    ],
+    "text": "Patents predicted AI capability building among specialised technical start-ups and the overall sample, with adoption strongly associated with Physics patenting, including computer technologies."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "This may indicate that businesses use patents to capture returns from developing AI systems."
+     }
+    ],
+    "text": "The report offers patents' role in capturing returns from AI development as a possible explanation, not a demonstrated causal mechanism."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "explore-synthesis-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.026398,
+  "input": 6139,
+  "model": "gpt-6.1-sol",
+  "output": 1412,
+  "reasoning": 362,
+  "seconds": 19.21
+ }
+}

@@ -1,0 +1,64 @@
+{
+ "cost_usd": 0.01038,
+ "data": {
+  "answer": "The 2024 study’s best patent-scope classifier was the **MLP classifier**, scoring **0.780 on F1** for “broader versus not broader”, using first and all claims.[1] F1 is the harmonic mean of precision and recall—not percentage accuracy.[2]\n\nThe three-way model actually deployed for the main analysis classified patents as narrower, similar or broader and achieved an **F1 score of 0.772**.[3]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 7,
+      "quote": "| First & All | Broader, Not Broader | MLP Classifier | 0.780 |"
+     },
+     {
+      "evidence": 8,
+      "quote": "the best model's F1 scores based on in-scope prediction is 0.780."
+     }
+    ],
+    "text": "The 2024 study’s best patent-scope classifier was the MLP classifier, scoring 0.780 on F1 for broader versus not broader, using first and all claims."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "F1 - The harmonic mean of Precision and Recall."
+     },
+     {
+      "evidence": 7,
+      "quote": "Accuracy - The fraction of predictions the modelling correctly predicted"
+     }
+    ],
+    "text": "F1 is the harmonic mean of precision and recall, rather than percentage accuracy."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "Ultimately, Narrower v. Similar v. Broader (with \"scope3\" as the target variable) was deployed to produce the data used in the descriptive and regression analyses in the main text."
+     },
+     {
+      "evidence": 7,
+      "quote": "| First & All | Narrower, Similar, Broader | MLP Classifier | 0.772 |"
+     }
+    ],
+    "text": "The three-way model deployed for the main analysis classified patents as narrower, similar or broader and achieved an F1 score of 0.772."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "erp14-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.02076,
+  "input": 6965,
+  "model": "gpt-6.1-sol",
+  "output": 683,
+  "reasoning": 235,
+  "seconds": 11.28
+ }
+}

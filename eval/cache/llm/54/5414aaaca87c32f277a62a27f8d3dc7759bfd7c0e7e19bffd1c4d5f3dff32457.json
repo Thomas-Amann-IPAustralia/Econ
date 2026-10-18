@@ -1,0 +1,141 @@
+{
+ "cost_usd": 0.014579,
+ "data": {
+  "answer": "## Gender gap in patenting\n\nThe reports describe **rising participation by women, but a persistent gender gap**. The 2023 report says women’s representation among inventors on patents is below the world average, despite evidence of no systematic productivity differences between women and men in creative and innovative endeavours.[1]\n\n- **Participation on applications is increasing:** in the three years to 2022, the share of Australian PCT applications naming at least one woman inventor rose by 3 percentage points to 26%. But women’s share of unique Australian inventors on PCT applications remained at 14.6% in both 2021 and 2022.[2]\n- **More applications need not mean a larger inventor pool:** the 2023 report links growth to mixed-gender teams, while offering an alternative interpretation that existing women inventors are patenting more intensively, without significant growth in their numbers.[3]\n\n## Diversity and innovation\n\nThe 2023 report says diversity can improve marketplace understanding, creativity and problem-solving. It also reports that gender-diverse teams tend to produce more radical innovations and higher-impact scientific ideas.[4]\n\nIts Australian business research finds:\n\n- **Women’s representation and innovation efficiency:** among R&D businesses, greater representation of women in leadership was associated with lower R&D intensity but greater efficiency in converting R&D expenditure into patents. A 10 percentage point increase in women’s leadership share was associated with a 0.1% efficiency increase. These are associations, not demonstrated causal effects; the analysis compared similarly sized businesses in the same industry.[5]\n- **Cultural diversity and research investment:** cultural and ethnic diversity in leadership was associated with increased research intensity. Businesses with registered IP also had larger shares of women and migrants in their STEM workforce than businesses without IP.[6]\n- **Start-ups:** women’s participation in management was associated with greater overall IP holdings, including trade marks, designs and plant breeder’s rights. The reported effect was incremental—around 1% or less for each 10 percentage point increase in participation.[7]\n\n**The benefits are not uniform across every form of diversity.** The 2024 research distinguishes collaboration-partner diversity from workforce diversity: it reports benefits for product innovation from diverse partners, but also evidence that organisationally homogeneous partnerships can have higher innovative potential and that excessive collaboration breadth can bring diminishing returns.[8]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "However, the representation of women inventors on patents is below the world average."
+     },
+     {
+      "evidence": 5,
+      "quote": "Evidence shows there are no systematic productivity differences between women and men in creative and innovative endeavours"
+     },
+     {
+      "evidence": 3,
+      "quote": "Studies on the gender of inventors on patents show that gender imbalances persist, with substantial differences across countries and technology fields. However, women's participation in patenting is rising."
+     }
+    ],
+    "text": "The reports identify a persistent gender gap: women inventors are under-represented relative to the world average, despite evidence of no systematic gender productivity differences."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "in the three years to 2022, the share of PCT applications from Australia with at least one woman inventor increased by three percentage points to 26%"
+     },
+     {
+      "evidence": 5,
+      "quote": "In 2022, women constituted 14.6% of Australian inventors, the same level as in 2021."
+     }
+    ],
+    "text": "Australian PCT applications naming women rose to 26% in 2022, but women remained 14.6% of Australian inventors in both 2021 and 2022."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "Data on Australians' patenting activity suggests that growth in women's participation is occurring in mixed-gender teams."
+     },
+     {
+      "evidence": 5,
+      "quote": "An alternative reading of these trends is that women inventors are filing patents more intensively without significant growth in the women inventor pool."
+     }
+    ],
+    "text": "The 2023 report links participation growth to mixed-gender teams, but suggests it could instead reflect more intensive patenting by existing women inventors."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "a business can gain greater marketplace understanding and diversity can enhance creativity and problem-solving ability"
+     },
+     {
+      "evidence": 5,
+      "quote": "However, gender diverse teams tend to produce more radical innovations and higher-impact scientific ideas"
+     }
+    ],
+    "text": "Diversity can enhance marketplace understanding, creativity and problem-solving, while gender-diverse teams tend to produce more radical innovations and higher-impact ideas."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 8,
+      "quote": "The analysis compared businesses of similar size operating within the same industry."
+     },
+     {
+      "evidence": 8,
+      "quote": "Women's representation in leadership and STEM was associated with lower R&D intensity."
+     },
+     {
+      "evidence": 8,
+      "quote": "Nevertheless, among R&D businesses, those with a greater share of women in leadership were more efficient in converting R&D investment into patents"
+     },
+     {
+      "evidence": 8,
+      "quote": "For every 10 percentage point increase in the women's share of leadership, efficiency in converting R&D expenditure into patents increased by 0.1%."
+     }
+    ],
+    "text": "The Australian study associates women's leadership with lower R&D intensity but higher patent-conversion efficiency among R&D businesses; a 10 percentage point leadership increase corresponded to a 0.1% efficiency increase, comparing similarly sized firms in the same industry rather than establishing causation."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "Cultural and ethnic diversity in leadership is associated with increased research intensity."
+     },
+     {
+      "evidence": 4,
+      "quote": "Compared to businesses without IP, those with registered IP have a notably larger share of women and migrants in their STEM workforce."
+     }
+    ],
+    "text": "Cultural and ethnic leadership diversity is associated with higher research intensity, and registered-IP businesses have greater representation of women and migrants in STEM."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 8,
+      "quote": "Women's participation in the management team of start-ups was associated with increased overall IP holdings. Separately, it predicted increased holdings of trade marks, designs and PBRs. The effect was incremental, at around 1% or less for every 10 percentage point increase in women participation ."
+     }
+    ],
+    "text": "Women's participation in start-up management was associated with greater IP holdings, with incremental effects of around 1% or less per 10 percentage point increase."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 12,
+      "quote": "Collaboration with suppliers, clients, and research organisations positively affects product innovation, with diversity among partners enhancing the effects."
+     },
+     {
+      "evidence": 11,
+      "quote": "Organisational diversity in collaborative research projects can negatively impact innovation potential. Homogeneous partnerships, such as SME-SME or large company-large company, tend to have higher innovative potential"
+     },
+     {
+      "evidence": 12,
+      "quote": "It brings increasing returns but can lead to decreasing returns when the breadth of dept of collaboration partners becomes excessive"
+     }
+    ],
+    "text": "The 2024 research presents mixed findings about collaboration diversity, including product-innovation benefits, higher innovative potential for homogeneous organisational partnerships and diminishing returns to excessive collaboration breadth."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "explore-synthesis-6",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.029158,
+  "input": 5879,
+  "model": "gpt-6.1-sol",
+  "output": 1740,
+  "reasoning": 276,
+  "seconds": 23.82
+ }
+}

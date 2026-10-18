@@ -1,0 +1,62 @@
+{
+ "cost_usd": 0.008899,
+ "data": {
+  "answer": "**Yes—if by allowing patents to lapse you mean retiring them.** A 2024 study found that firms retiring patents were less likely to experience subsequent **high turnover growth**.[1] It examined patent retirement three years before turnover growth was assessed.[2]\n\nThis is an association, not evidence that retirement causes slower growth. The mechanism linking patent retirement to reduced turnover growth remains unknown.[3]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 19,
+      "quote": "Firms are less likely to experience high growth once patents are retired"
+     },
+     {
+      "evidence": 1,
+      "quote": "firms retiring patents is negatively associated with future turnover growth"
+     }
+    ],
+    "text": "A 2024 study found that firms retiring patents were less likely to experience subsequent high turnover growth."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "filed, was granted or retired a patent 3 years before its turnoverbased growth is assessed."
+     }
+    ],
+    "text": "The study examined patent retirement three years before turnover growth was assessed."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "This relationship is worth investigating to better understand the mechanisms producing this consistent negative correlation."
+     },
+     {
+      "evidence": 19,
+      "quote": "The mechanism that associates patent retirement with reduced turnover growth is unknown and deserves further investigation."
+     }
+    ],
+    "text": "The finding is an association rather than demonstrated causation, and the mechanism linking patent retirement to reduced turnover growth is unknown."
+   }
+  ],
+  "coverage": "partial",
+  "gaps": [
+   "The passages do not define patent retirement or establish whether allowing a patent to lapse is treated identically in this study."
+  ]
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "erp15-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.017798,
+  "input": 6294,
+  "model": "gpt-6.1-sol",
+  "output": 521,
+  "reasoning": 194,
+  "seconds": 9.55
+ }
+}

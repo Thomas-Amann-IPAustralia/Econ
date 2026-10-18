@@ -1,0 +1,51 @@
+{
+ "cost_usd": 0.010102,
+ "data": {
+  "answer": "**Switzerland was the clearest leader**, while **Germany and the United Kingdom** were also above the sample average on both design IP intensity and design labour intensity. In the 2019 study’s comparison covering 2011–2016, Switzerland scored more than one standard deviation above the mean on both measures.[1]\n\n**Denmark and Sweden stood out for growth rather than existing intensity.** Both were classified as ‘followers’, but experienced high growth in both measures, making them examples of strengthening design economies.[2]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 8,
+      "quote": "Figure 2. Countries by design IP intensity (vertical axis) and design labour intensity (horizontal axis), 2011 and 2016"
+     },
+     {
+      "evidence": 8,
+      "quote": "Among Australia's international peers, Switzerland (CH) is a leader, scoring higher than one standard deviation above the mean on both intensity measures. Germany (DE) and the United Kingdom (GB) are each above the sample mean on both measures."
+     }
+    ],
+    "text": "In the 2019 study comparing 2011–2016, Switzerland was the clearest leader, exceeding one standard deviation above the mean on both intensity measures; Germany and the United Kingdom were above the mean on both."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 7,
+      "quote": "Australia should look to design leaders, but also to countries like Denmark and Sweden which have smaller but strengthening design economies."
+     },
+     {
+      "evidence": 4,
+      "quote": "We identify, as well, several followers with strengthening design economies. Denmark and Sweden are examples of countries that are low in design IP intensity and low in design labour intensity also, but which are growing at a high rate on both measures."
+     }
+    ],
+    "text": "Denmark and Sweden were followers in intensity levels but stood out as strengthening design economies through high growth on both measures."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "erp08-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.020204,
+  "input": 6387,
+  "model": "gpt-6.1-sol",
+  "output": 743,
+  "reasoning": 284,
+  "seconds": 12.01
+ }
+}

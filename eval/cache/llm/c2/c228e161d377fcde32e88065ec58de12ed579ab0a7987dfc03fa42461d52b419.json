@@ -1,0 +1,47 @@
+{
+ "cost_usd": 0.008476,
+ "data": {
+  "answer": "**Yes—if it is not renewed.** A registered trade mark is protected for 10 years and must be renewed every 10 years to remain registered.[1]\n\nThere is no fixed maximum lifespan: a trade mark can be renewed in perpetuity, so long as it is in use.[2]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "Registered trade marks are afforded protection for 10 years."
+     },
+     {
+      "evidence": 7,
+      "quote": "To remain registered, a registered trade mark must be renewed every 10 years."
+     }
+    ],
+    "text": "A registered trade mark is protected for 10 years and must be renewed every 10 years to remain registered; otherwise its registration expires."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "Trade marks can be renewed every 10 years in perpetuity so long as they are in use"
+     }
+    ],
+    "text": "A trade mark has no fixed maximum lifespan and can be renewed in perpetuity so long as it is in use."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "ipr19-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.016952,
+  "input": 6391,
+  "model": "gpt-6.1-sol",
+  "output": 417,
+  "reasoning": 195,
+  "seconds": 7.35
+ }
+}

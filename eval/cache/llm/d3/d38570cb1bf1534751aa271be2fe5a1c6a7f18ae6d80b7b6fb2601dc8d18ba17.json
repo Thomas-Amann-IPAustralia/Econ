@@ -1,0 +1,68 @@
+{
+ "cost_usd": 0.011446,
+ "data": {
+  "answer": "**Transport is the clearest growth leader: Australian patent filings in this field rose 12.8% in 2024**, the strongest relative growth reported for that year in the 2025 Australian IP Report.[1]\n\nOther notable growth areas were:\n- **Biotechnology:** filings increased 4.7% in 2024, bucking downward corrections in pharmaceuticals and medical technology.[2]\n- **Biotechnology among Australian applicants:** filings rose 31.7% in 2024. Biotechnology and computer technology were the fields where Australian innovators most rapidly increased their share of domestic filings over the preceding three years—distinct from growth across all applicants.[3]\n\nThe **2026 report**, covering 2025, highlights Chinese expansion in industrial and applied technologies and growth in Australian filings in certain engineering-focused domains, but the supplied passages do not give comparable growth rates or identify the fastest-growing field for 2025.[4]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "Transport saw the strongest relative patent growth in 2024, overall filings in this field are up 12.8%."
+     }
+    ],
+    "text": "Transport recorded the strongest relative patent growth in Australia in 2024, with filings up 12.8%."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "In 2024, a downward correction was observed in pharmaceutical and medical technology patents, from elevated levels during the COVID-19 shock. Biotechnology was an exception, with 4.7% more filings in this field than during 2023."
+     }
+    ],
+    "text": "Biotechnology filings increased 4.7% in 2024 while pharmaceuticals and medical technology experienced downward corrections."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 9,
+      "quote": "However, biotechnology and computer technology are the fields where Australian innovators have most rapidly increased their share of domestic filings over the past 3 years."
+     },
+     {
+      "evidence": 9,
+      "quote": "With Australian biotechnology patent filings up by 31.7% in 2024, this likely reflects the reported strengthening of Australia's industry and global partnerships."
+     }
+    ],
+    "text": "Australian biotechnology filings rose 31.7% in 2024; biotechnology and computer technology had the fastest increases in their share of domestic filings over the preceding three years."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 11,
+      "quote": "While US activity is increasingly concentrated in health, China is expanding in industrial and applied technologies, and Australian filings are growing in certain engineering-focused domains."
+     }
+    ],
+    "text": "The 2026 report's discussion of 2025 highlights Chinese expansion in industrial and applied technologies and Australian growth in certain engineering-focused domains."
+   }
+  ],
+  "coverage": "partial",
+  "gaps": [
+   "The supplied 2026 report passages do not provide field-level growth rates or a fastest-growing-field ranking for 2025.",
+   "The passages do not provide a complete comparative ranking of growth across technology fields."
+  ]
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "explore-trend-9",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.022892,
+  "input": 6496,
+  "model": "gpt-6.1-sol",
+  "output": 990,
+  "reasoning": 296,
+  "seconds": 15.13
+ }
+}

@@ -1,0 +1,73 @@
+{
+ "cost_usd": 0.008695,
+ "data": {
+  "answer": "The study created its training benchmark through **manual assessments by IP Australia patent examiners**, rather than an automated proxy for scope.[1]\n\n- **Matched sample:** Examiners assessed 500 randomly selected patent triplets—families covering the same or similar technical content, with patents granted in Australia, Europe and the United States.[1]\n- **Relative-scope labels:** Australian patents were compared separately with their European and US equivalents. Assessments covered both the first claim and all claims, distinguishing broader scope from narrower or similar scope.[2]\n- **Training data:** These manual assessments supplied the labelled data for a supervised machine-learning model, which extended the comparison to more than 80,000 patent triplets.[3]\n\nThe benchmark concerned **granted claims**, not claims in the initial applications.[4]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "we tasked a team of patent examiners at IP Australia with manually assessing a random sample of 500 \"patent triplets\" - collections of patent application families covering the same or similar technical content which were granted by IP Australia, the EPO and the USPTO - for their relative patent scope."
+     }
+    ],
+    "text": "IP Australia patent examiners manually assessed 500 randomly selected patent triplets covering the same or similar technical content and granted in Australia, Europe and the United States."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "We assess relative patent scope as the scope of an Australian patent compared to the scope of its equivalent patent granted in Europe and, separately, to the scope of its equivalent patent granted in the United States."
+     },
+     {
+      "evidence": 5,
+      "quote": "For each pair, predictions based on the first claim and all claims manual assessment are shown"
+     },
+     {
+      "evidence": 5,
+      "quote": "\"broader\" (as opposed to \"narrower\" or \"similar\") in scope."
+     }
+    ],
+    "text": "Australian patents were compared separately with European and US equivalents, using first-claim and all-claims assessments to distinguish broader scope from narrower or similar scope."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "we used the labelled data from the manual assessment of 500 randomly selected patent triplets of the first stage to develop a supervised Machine Learning (ML) model for predicting the relative scope for a large sample of patent triplets."
+     },
+     {
+      "evidence": 1,
+      "quote": "After ensuring that there is complete information on the claim text of the patents, we end up with over 80,000 patent triplets."
+     }
+    ],
+    "text": "The manual assessments provided labelled training data for a supervised machine-learning model that extended the comparison to more than 80,000 patent triplets."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 7,
+      "quote": "This report focuses only on the scope of granted patent claims. It does not assess the relative scope of the claims within the initial application."
+     }
+    ],
+    "text": "The benchmark assessed granted claims, not claims in initial applications."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "erp14-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.01739,
+  "input": 4380,
+  "model": "gpt-6.1-sol",
+  "output": 863,
+  "reasoning": 186,
+  "seconds": 12.83
+ }
+}

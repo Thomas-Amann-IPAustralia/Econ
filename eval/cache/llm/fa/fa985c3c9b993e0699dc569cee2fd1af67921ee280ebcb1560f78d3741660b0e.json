@@ -1,0 +1,34 @@
+{
+ "cost_usd": 0.006954,
+ "data": {
+  "answer": "Driverless trucks at mine sites are controversial because of safety concerns about unmanned vehicles and the potential loss of haulage truck drivers’ jobs, according to the 2015 mining report.[1]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "The adoption of autonomous vehicles by mines, such as Rio Tinto's iron mines in the Pilbara, is a contentious issue not only due to safety concerns of unmanned vehicles, but also because it may lead to the redundancy of haulage truck and train drivers."
+     }
+    ],
+    "text": "The 2015 mining report identifies safety concerns about unmanned vehicles and potential redundancies among haulage truck drivers as reasons driverless trucks at mine sites are controversial."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "erp04-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.013908,
+  "input": 6139,
+  "model": "gpt-6.1-sol",
+  "output": 163,
+  "reasoning": 0,
+  "seconds": 4.05
+ }
+}

@@ -1,0 +1,72 @@
+{
+ "cost_usd": 0.012486,
+ "data": {
+  "answer": "**Around 4 per cent of actively trading Australian businesses owned at least one patent, trade mark or design in 2015–16**, according to the 2020 economic research paper. The proportion rose from **2.3 per cent in 2001–02 to 4.2 per cent in 2015–16**—approximately doubling over 15 years.[1]\n\nThere is a discrepancy with the **2020 Australian IP Report**: it says the proportion using IP rights remained broadly stable at **6–7 per cent** over the same period. That passage discusses businesses filing rights, whereas the research paper reports ownership among actively trading businesses.[2]\n\nFor **SMEs specifically**, the 2022 report provides a later observation: the share with an active right doubled from **2 per cent in 2002 to 4 per cent in 2017**, with trade marks the main driver of growth.[3]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "Australian actively trading businesses owning at least one patent, trade mark or design"
+     },
+     {
+      "evidence": 13,
+      "quote": "The number of businesses that owned at least one registrable IPR increased from 15 195 in 2001-02 to 28 384 in 2015-16, accounting for 2.3 and 4.2 per cent of active businesses respectively."
+     }
+    ],
+    "text": "The 2020 economic research paper reports that ownership of at least one patent, trade mark or design among actively trading Australian businesses rose from 2.3 per cent in 2001–02 to 4.2 per cent in 2015–16, approximately doubling."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "The number of Australian businesses that filed at least one patent, trade mark or design doubled in the 15 years from 2001-02 to 2015-16."
+     },
+     {
+      "evidence": 1,
+      "quote": "the overall proportion of Australian firms that used IP rights is still relatively stable, approximately six to seven per cent across all the years in the 15-year period."
+     },
+     {
+      "evidence": 13,
+      "quote": "accounting for 2.3 and 4.2 per cent of active businesses respectively."
+     }
+    ],
+    "text": "The 2020 annual report instead describes a stable 6–7 per cent proportion over the same period; its passage discusses filing, while the research paper measures ownership among actively trading businesses."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "While the share of Australian SMEs with an active right is low it has doubled over recent decades, from 2% in 2002 to 4% in 2017."
+     },
+     {
+      "evidence": 3,
+      "quote": "the key driver of growth in the use of IP by SMEs has been an upsurge in the use of trade marks."
+     }
+    ],
+    "text": "The 2022 report states that the SME share with an active right doubled from 2 per cent in 2002 to 4 per cent in 2017, with trade marks the main driver of growth."
+   }
+  ],
+  "coverage": "partial",
+  "gaps": [
+   "The passages provide no more recent ownership proportion for Australian businesses as a whole than 2015–16.",
+   "The passages do not reconcile the differing proportions reported in the two 2020 publications.",
+   "The whole-business ownership figures explicitly cover patents, trade marks and designs, rather than all registered IP right types."
+  ]
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "erp10-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.024972,
+  "input": 7066,
+  "model": "gpt-6.1-sol",
+  "output": 1084,
+  "reasoning": 376,
+  "seconds": 18.77
+ }
+}

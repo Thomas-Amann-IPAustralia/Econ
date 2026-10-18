@@ -1,0 +1,60 @@
+{
+ "cost_usd": 0.009702,
+ "data": {
+  "answer": "The best patent-scope classifier in the 2024 study was the **multilayer perceptron (MLP)**, which achieved an **F1 score of 0.780** for classifying patents as broader or not broader, using first and all claims.[1] F1 is the harmonic mean of precision and recall—not the percentage of predictions classified correctly.[2]\n\nThe model actually deployed for the report’s analysis used three categories—narrower, similar and broader—and achieved a slightly lower **F1 score of 0.772**.[3]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 7,
+      "quote": "| First & All | Broader, Not Broader | MLP Classifier | 0.780 |"
+     }
+    ],
+    "text": "The best patent-scope classifier in the 2024 study was the MLP, with an F1 score of 0.780 for broader versus not broader using first and all claims."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "F1 - The harmonic mean of Precision and Recall."
+     },
+     {
+      "evidence": 7,
+      "quote": "Accuracy - The fraction of predictions the modelling correctly predicted"
+     }
+    ],
+    "text": "F1 is the harmonic mean of precision and recall, rather than the percentage of predictions classified correctly."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "Ultimately, Narrower v. Similar v. Broader (with \"scope3\" as the target variable) was deployed to produce the data used in the descriptive and regression analyses in the main text."
+     },
+     {
+      "evidence": 7,
+      "quote": "| First & All | Narrower, Similar, Broader | MLP Classifier | 0.772 |"
+     }
+    ],
+    "text": "The model deployed for the report’s analysis classified patents as narrower, similar or broader and achieved an F1 score of 0.772."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "erp14-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.019404,
+  "input": 6922,
+  "model": "gpt-6.1-sol",
+  "output": 556,
+  "reasoning": 114,
+  "seconds": 9.2
+ }
+}

@@ -1,0 +1,78 @@
+{
+ "cost_usd": 0.011119,
+ "data": {
+  "answer": "**Yes—Australian evidence links filing for IP rights with stronger small-business employment growth, although this should not be treated as proof of causation.**[1]\n\n- **SMEs:** The 2025 Australian IP Report states that, after filing for an IP right, Australian SMEs are **16 per cent more likely to experience high employment growth** than peers without recent filings.[2]\n- **Start-ups:** The 2024 report states that start-ups filing for IP in their first year are **twice as likely to experience high growth**.[3]\n\nThe underlying SME study covered around **600,000 Australian SMEs active during 2002–2017**. It defined high growth as at least **20 per cent annual employment growth over three consecutive years**.[4]\n\nThe distinction between prediction and causation matters. The 2026 report’s newer firm-level analysis explicitly says it does not establish pure causality: firms already on stronger growth paths may be more likely to invest in IP.[5]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "The results reveal that Australian SMEs that file for registered IP rights are more likely to achieve high growth and employ more people than their peers with no recent filings."
+     },
+     {
+      "evidence": 16,
+      "quote": "The analysis does not claim pure causality."
+     }
+    ],
+    "text": "Australian evidence links filing for IP rights with stronger SME employment growth, but this is not proof of causation."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 7,
+      "quote": "After filing for an IP right, Australian SMEs are 16% more likely to experience high employment growth than their peers without recent filings (Zhang, 2021)."
+     }
+    ],
+    "text": "The 2025 Australian IP Report states that Australian SMEs are 16 per cent more likely to experience high employment growth after filing for an IP right than peers without recent filings."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "Start-ups that file IP in their first year are twice as likely to experience high growth (Zhang, 2021)."
+     }
+    ],
+    "text": "The 2024 report states that start-ups filing for IP in their first year are twice as likely to experience high growth."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "The present study focused on around 600,000 SMEs active over the period 2002 to 2017. High-growth SMEs were identified as those that achieve at least 20% annual growth in employment over 3 consecutive years."
+     }
+    ],
+    "text": "The SME study covered around 600,000 Australian SMEs active during 2002–2017 and defined high growth as at least 20 per cent annual employment growth over three consecutive years."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 16,
+      "quote": "Selection effects are likely present: firms on stronger growth paths may be more likely to invest in IP."
+     },
+     {
+      "evidence": 16,
+      "quote": "The analysis does not claim pure causality."
+     }
+    ],
+    "text": "The 2026 report’s newer firm-level analysis does not establish pure causality and notes that firms on stronger growth paths may be more likely to invest in IP."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "multi-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.022238,
+  "input": 6724,
+  "model": "gpt-6.1-sol",
+  "output": 879,
+  "reasoning": 223,
+  "seconds": 13.55
+ }
+}

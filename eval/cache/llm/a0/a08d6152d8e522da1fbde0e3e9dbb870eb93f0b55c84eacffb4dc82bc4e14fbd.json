@@ -1,0 +1,81 @@
+{
+ "cost_usd": 0.012315,
+ "data": {
+  "answer": "**The latest Australian IP Report (2026) puts cultural and creative activity at $63.7 billion, or 2.5 per cent of GDP, in 2022–23.** This is an indicator of copyright-related economic activity, rather than a direct valuation of copyright itself.[1]\n\nOther estimates help put that figure in context:\n\n- **Copyright-reliant industries:** PwC estimated their contribution at **$124.1 billion in 2018**, equivalent to **6.8 per cent of GDP**. They also accounted for 8.3 per cent of Australian employment and $4.8 billion in exports.[2]\n- **Do not interpret the newer, lower figure as a decline.** The 2024 report estimated cultural and creative activity at $122.3 billion, or 6.2 per cent of GDP, in 2019–20. However, the methodology was updated in 2024, and the newer figures are explicitly not comparable with previous Australian IP reports.[3]\n- **Licensing returns:** The 2026 report records **over $800 million paid through collecting societies in 2023–24** to support economic returns for artists, musicians, writers and screen industry workers.[4]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "In 2022-23, using this methodology, it was estimated 'cultural and creative activity' contributed $63.7 billion to the Australian economy and was equivalent to 2.5% of Australia's GDP."
+     },
+     {
+      "evidence": 2,
+      "quote": "While this research does not specifically relate to the economic value of copyright"
+     },
+     {
+      "evidence": 2,
+      "quote": "it illustrates the significant economic impact of copyright-related sectors."
+     }
+    ],
+    "text": "The 2026 report estimates cultural and creative activity at $63.7 billion, or 2.5 per cent of GDP, in 2022–23; this is an indicator rather than a direct valuation of copyright."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "The research found that Australian industries relying on copyright protection in 2018 (including Press & Literature and Radio & Television) contributed $124.1 billion to the Australian economy, equivalent to 6.8 per cent of Australia's gross domestic product (Figure C1)."
+     },
+     {
+      "evidence": 4,
+      "quote": "The copyright industries also accounted for 8.3 per cent of total employment in Australia and generated $4.8 billion in exports."
+     }
+    ],
+    "text": "PwC estimated copyright-reliant industries contributed $124.1 billion in 2018, or 6.8 per cent of GDP, and accounted for 8.3 per cent of employment and $4.8 billion in exports."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "in 2019 -2020 'cultural and creative activity' contributed $122.3 billion to the Australian economy (see Figure 5.1)."
+     },
+     {
+      "evidence": 2,
+      "quote": "was equivalent to 6.2% of Australia's GDP."
+     },
+     {
+      "evidence": 8,
+      "quote": "In 2024, the methodology used to measure cultural and creative activity was updated, and the figures are not comparable with previous Australian IP reports."
+     }
+    ],
+    "text": "The 2024 report's estimate of $122.3 billion and 6.2 per cent of GDP for 2019–20 cannot be compared with the newer figures to infer a decline because the methodology changed in 2024."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 9,
+      "quote": "Licensing of copyright material is a significant driver of economic returns for artists, musicians, writers and screen industry workers, with over $800 million paid through collecting societies in 2023-24."
+     }
+    ],
+    "text": "The 2026 report records over $800 million paid through collecting societies in 2023–24 as economic returns for creative workers."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "explore-synthesis-11",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.02463,
+  "input": 6570,
+  "model": "gpt-6.1-sol",
+  "output": 1149,
+  "reasoning": 265,
+  "seconds": 16.18
+ }
+}

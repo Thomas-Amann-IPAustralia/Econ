@@ -1,0 +1,59 @@
+{
+ "cost_usd": 0.011715,
+ "data": {
+  "answer": "**In 2015–16, 4.2 per cent of actively trading Australian businesses owned at least one registrable IP right**, according to the 2020 economic research paper. This was up from 2.3 per cent in 2001–02—nearly doubling over 15 years. The number of owning businesses rose from 15,195 to 28,384.[1]\n\nHere, ownership means holding at least one valid patent, trade mark or design right at the end of a financial year; the measure does not include plant breeder’s rights.[2]\n\n**There is a discrepancy between publications.** The Australian Intellectual Property Report 2020 instead reports that approximately six to seven per cent of firms used IP rights throughout the same period, describing that share as relatively stable while the number of businesses filing doubled.[3]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "The number of businesses that owned at least one registrable IPR increased from 15 195 in 2001-02 to 28 384 in 2015-16, accounting for 2.3 and 4.2 per cent of active businesses respectively."
+     }
+    ],
+    "text": "The 2020 research paper reports that ownership rose from 2.3 per cent in 2001–02 to 4.2 per cent in 2015–16, with owner numbers increasing from 15,195 to 28,384."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 20,
+      "quote": "IPR owners refer to any businesses owning at least one valid patent, trade mark, or design right at the end of a financial year during the period from 2001-02 to 2015-16"
+     }
+    ],
+    "text": "The ownership measure covers valid patents, trade marks and designs held at financial year-end, rather than plant breeder’s rights."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "The number of Australian businesses that filed at least one patent, trade mark or design doubled in the 15 years from 2001-02 to 2015-16."
+     },
+     {
+      "evidence": 3,
+      "quote": "the overall proportion of Australian firms that used IP rights is still relatively stable, approximately six to seven per cent across all the years in the 15-year period."
+     }
+    ],
+    "text": "The Australian Intellectual Property Report 2020 gives a different account: business filing numbers doubled, but the share using IP rights remained relatively stable at approximately six to seven per cent."
+   }
+  ],
+  "coverage": "partial",
+  "gaps": [
+   "The passages provide no overall business ownership estimate after 2015–16.",
+   "The passages do not explain how to reconcile the conflicting overall shares and trends reported in the two 2020 publications."
+  ]
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "erp10-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.02343,
+  "input": 6850,
+  "model": "gpt-6.1-sol",
+  "output": 973,
+  "reasoning": 325,
+  "seconds": 14.07
+ }
+}

@@ -1,0 +1,82 @@
+{
+ "cost_usd": 0.014769,
+ "data": {
+  "answer": "For **standard patent applications**, Australian residents’ share has fluctuated rather than increased steadily. Most recently, it rose from **8.5 per cent in 2024 to 9.3 per cent in 2025**, its highest level since 2021, according to the 2026 report.[1]\n\nEarlier reports show:\n- **2014–2015:** residents accounted for 8 per cent of filings in both years. The 2014 share followed a 35 per cent fall in resident applications.[2]\n- **2016–2017:** the resident share was around 9 per cent in each year.[3]\n- **2020–2021:** the share increased by one percentage point to 9 per cent in 2021, as resident applications rebounded by 25 per cent after falling in 2020.[4]\n\nThese movements should not be treated as a broad measure of business dynamism: the 2026 report cautions that resident patenting reflects a relatively small subset of R&D-intensive, technologically specialised firms.[5]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "As a share of total standard complete filings, residents accounted for 9.3%, up from 8.5% in 2024 and the highest share since 2021."
+     },
+     {
+      "evidence": 4,
+      "quote": "As a result, the resident share of applications increased by a percentage point, to 9%."
+     }
+    ],
+    "text": "The resident share has fluctuated rather than increased steadily; it rose from 8.5 per cent in 2024 to 9.3 per cent in 2025, its highest since 2021."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 14,
+      "quote": "This was a decrease of 35 per cent from the previous year and the proportion of applications made by Australian residents fell to eight per cent."
+     },
+     {
+      "evidence": 11,
+      "quote": "Standard patent filings by Australian residents increased by 16 per cent to 2 291 applications in 2015, and accounted for eight per cent of all patent filings."
+     }
+    ],
+    "text": "Residents accounted for 8 per cent of standard patent filings in both 2014 and 2015; resident applications fell 35 per cent in 2014."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "This includes those who filed directly with IP Australia and those who entered through the PCT route, and together account for around nine per cent of total patent applications."
+     },
+     {
+      "evidence": 8,
+      "quote": "These figures include those who filed directly with IP Australia and those who entered through the PCT route, together accounting for around nine per cent of total patent applications in Australia."
+     }
+    ],
+    "text": "Residents accounted for around 9 per cent of standard patent applications in both 2016 and 2017."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "After declining 10% in 2020, standard patent applications from Australian residents have rebounded, rising 25% (from 2,401 in 2020 to 2,996 in 2021). As a result, the resident share of applications increased by a percentage point, to 9%."
+     }
+    ],
+    "text": "The resident share rose one percentage point to 9 per cent in 2021, as resident applications rebounded 25 per cent after falling in 2020."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Unlike trade marks or designs, patenting in Australia is not a broad barometer of business dynamism and commercial activity. Instead, resident patenting reflects activity by a relatively small subset of firms engaged in R&D-intensive and technologically specialised innovation."
+     }
+    ],
+    "text": "Resident patenting is not a broad measure of business dynamism, reflecting a relatively small subset of R&D-intensive, technologically specialised firms."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "explore-trend-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.029538,
+  "input": 8974,
+  "model": "gpt-6.1-sol",
+  "output": 1159,
+  "reasoning": 357,
+  "seconds": 17.02
+ }
+}

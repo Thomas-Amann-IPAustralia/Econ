@@ -1,0 +1,60 @@
+{
+ "cost_usd": 0.011828,
+ "data": {
+  "answer": "Innovation patent applications surged in 2020 to **4,586—approximately 2.5 times their 2019 level**, including standard patent applications converted to innovation patent applications.[1]\n\n**Non-residents drove the increase**, with 3,573 applications, while resident applications remained relatively stable at 1,013. China and India were the major sources of the surge, filing 2,640 and 527 applications respectively.[2]\n\nThere is a minor reporting difference: the 2022 report gives the 2020 total as 4,585, rather than the 4,586 reported in 2021.[3]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 8,
+      "quote": "In 2020, we saw a large increase in the total number of innovation patent applications filed in Australia, reaching 4 586, approximately 2.5 times their 2019 level. This total (which includes standard patent applications converted to innovation patent applications)"
+     }
+    ],
+    "text": "Innovation patent applications reached 4,586 in 2020, approximately 2.5 times their 2019 level, including conversions from standard patent applications."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 8,
+      "quote": "was almost wholly comprised of non-resident applications, which reached 3 573, an increase of 3 times their level from 2019, while resident applications remained relatively stable with 1 013 applications. China and India were the 2 major sources of the surge in non-resident innovation patent applications."
+     },
+     {
+      "evidence": 8,
+      "quote": "Applications from China totalled 2 640 in 2020, representing an increase of 4.4 times their 2019 level, while India filed 527 innovation patent applications, a 52 times increase on 2019."
+     }
+    ],
+    "text": "Non-residents drove the increase, filing 3,573 applications while resident applications remained relatively stable at 1,013; China and India were the major sources, with 2,640 and 527 applications respectively."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "grew 71% on 2020 (from 4,585 to 7,844)"
+     },
+     {
+      "evidence": 8,
+      "quote": "In 2020, we saw a large increase in the total number of innovation patent applications filed in Australia, reaching 4 586"
+     }
+    ],
+    "text": "The 2022 report gives the 2020 total as 4,585, whereas the 2021 report gives 4,586."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "ipr21-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.023656,
+  "input": 8073,
+  "model": "gpt-6.1-sol",
+  "output": 751,
+  "reasoning": 214,
+  "seconds": 10.61
+ }
+}

@@ -1,0 +1,53 @@
+{
+ "cost_usd": 0.012015,
+ "data": {
+  "answer": "The latest figures in the **2026 report**, covering **2024**, show majority use of both the PCT and Madrid systems by Australians filing abroad—but with different trends:[1][2]\n\n- **Patents — PCT:** Australians routed **60.4% of overseas patent filings** through the PCT in 2024, down from **64.7% in 2023**. It remains the dominant channel, allowing applicants to file a single international application before entering national phases.[1]\n- **Trade marks — Madrid System:** **56.6% of Australian trade mark classes filed abroad** went through Madrid in 2024, up from **45.0% in 2019**. Madrid allows applicants to seek protection in multiple jurisdictions through a single international application. These percentages measure trade mark classes, rather than applications.[2]\n- **Designs — Hague System:** The supplied evidence does not quantify Australians’ use of this system.",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 16,
+      "quote": "Australians can seek patent protection abroad either by filing directly at foreign patent offices or by filing a single international application under the Patent Cooperation Treaty (PCT) and then entering national phases."
+     },
+     {
+      "evidence": 16,
+      "quote": "The share of Australian filings abroad routed through the PCT fell from over 70% in earlier years, to 64.7% in 2023, then to 60.4% in 2024."
+     }
+    ],
+    "text": "The 2026 report shows that the PCT remained Australians’ dominant overseas patent-filing channel in 2024, accounting for 60.4% of filings, down from 64.7% in 2023; it involves a single international application followed by national phases."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "Trade mark applicants can seek protection in multiple jurisdictions through a single international application under the Madrid system."
+     },
+     {
+      "evidence": 2,
+      "quote": "As it has expanded to cover more countries, the share of Australian classes filed abroad through the Madrid system has increased, from 45.0% in 2019 to 56.6% in 2024."
+     }
+    ],
+    "text": "The 2026 report shows that Madrid accounted for 56.6% of Australian trade mark classes filed abroad in 2024, up from 45.0% in 2019; the system enables a single international application covering multiple jurisdictions, and the reported shares count classes rather than applications."
+   }
+  ],
+  "coverage": "partial",
+  "gaps": [
+   "The evidence provides no count or share of Australians’ international design filings through the Hague System."
+  ]
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "explore-policy-7",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.02403,
+  "input": 6340,
+  "model": "gpt-6.1-sol",
+  "output": 1135,
+  "reasoning": 516,
+  "seconds": 19.7
+ }
+}

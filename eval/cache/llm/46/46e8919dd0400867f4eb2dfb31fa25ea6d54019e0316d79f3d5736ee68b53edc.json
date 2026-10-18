@@ -1,0 +1,85 @@
+{
+ "cost_usd": 0.014552,
+ "data": {
+  "answer": "The clearest reported area where Australia is falling behind is **designs**, particularly growth in registered-design use and the design workforce.[1]\n\n- **Design IP intensity and design labour intensity:** The 2019 report found that Australia lagged its peers in growth on both measures over **2011–2016**. These measure registered-design activity and employment in design-related occupations respectively.[1]\n- **Progress towards a stronger design economy:** Over that period, Australia’s design IP intensity went backwards and its design labour intensity grew less than other countries’. Sweden and Denmark, by contrast, strengthened on both measures.[2]\n- **ICT-related design use:** A narrower comparison in the 2020 report showed that ICT-related designs accounted for just **3 per cent** of Australia’s design applications at IP Australia in **2015–2018**, ranking it **22nd** for this measure. The corresponding shares were 16 per cent for the US and 20 per cent for the Republic of Korea. This was low relative intensity, not declining Australian filings: Australia’s ICT-related design count rose by 53 per cent between the periods compared.[3]\n\n**University–industry collaboration is a more qualified case.** Although the survey-based OECD measure placed Australia last, the 2017 report’s patent-based comparison placed Australia 13th among 35 countries for university–industry PCT applications as a share of all PCT applications over 2000–2015—well ahead of the US, UK and Germany.[4]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "Design labour intensity is assessed by measuring the number of persons employed within a country or industry in design-related occupations. The design IP intensity of a country or industry is assessed by measuring its annual number of registered designs."
+     },
+     {
+      "evidence": 6,
+      "quote": "Based on data from 2011 to 2016, Australia lagged its peers for growth in both design IP intensity and design labour intensity."
+     }
+    ],
+    "text": "The 2019 report identified lagging Australian growth in design IP intensity and design labour intensity over 2011–2016, measuring registered designs and design-related employment."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "from 2011 to 2016, Australia travelled less far than other countries along the horizontal axis (design labour intensity) and travelled backward along the vertical axis (design IP intensity)."
+     },
+     {
+      "evidence": 6,
+      "quote": "Sweden (SE) and Denmark (DK), in yellow, were among those countries identified as strengthening their design economies, based on their movement up both axes"
+     }
+    ],
+    "text": "Australia's design IP intensity declined and its design labour intensity grew less than peers, while Sweden and Denmark strengthened on both measures."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 20,
+      "quote": "Table 3: Top 10 economies filing ICT-related designs at IP Australia: number and percentage of countries' total applications to IP Australia, 2005-08 and 2015-18"
+     },
+     {
+      "evidence": 20,
+      "quote": "| Australia | 195 | 299 | 53% | 2 | 3 | 22 |"
+     },
+     {
+      "evidence": 20,
+      "quote": "| USA | 407 | 1 239 | 204% | 9 | 16 | 7 |"
+     },
+     {
+      "evidence": 20,
+      "quote": "| Republic of Korea | 46 | 77 | 67% | 27 | 20 | 3 |"
+     }
+    ],
+    "text": "In the 2020 report, Australia's ICT-related design intensity in 2015–2018 was 3 per cent and ranked 22nd, versus 16 per cent for the US and 20 per cent for Korea; Australian ICT-related filings nevertheless increased 53 per cent."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "On the OECD measure, Australia ranks last among OECD countries."
+     },
+     {
+      "evidence": 1,
+      "quote": "Figure 17 shows the number of university-industry PCT applications filed between 2000 and 2015 as a percentage of all PCT applications filed from a country. Australia ranks 13 among the 35 countries as make up 2.2 per cent of PCT applications, well ahead of other OECD countries such as the US, UK and Germany."
+     }
+    ],
+    "text": "University–industry collaboration rankings depend on the measure: Australia ranked last on the OECD survey measure but 13th of 35 on the 2017 report's university–industry share of PCT applications for 2000–2015, ahead of the US, UK and Germany."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "explore-strategy-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.029104,
+  "input": 6982,
+  "model": "gpt-6.1-sol",
+  "output": 1514,
+  "reasoning": 485,
+  "seconds": 20.71
+ }
+}

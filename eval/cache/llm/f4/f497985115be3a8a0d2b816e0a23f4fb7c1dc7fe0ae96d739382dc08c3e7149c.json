@@ -1,0 +1,109 @@
+{
+ "cost_usd": 0.013748,
+ "data": {
+  "answer": "## How long does it take?\n\nThe **2025 Australian IP Report** gives a median of **1.3 years from requesting substantive examination to acceptance for grant**, using 2020 data—the latest complete data reported. Timeframes vary significantly, largely because of applicant behaviour and preferences.[1] Including the period before examination is requested, the median from Australian filing to final acceptance for grant was **2.8 years**, based on 2020 filings.[2]\n\nThese figures measure time to **acceptance for grant**, not necessarily the date of grant.[1][2]\n\n## Options to change the timing\n\n- **Defer or request examination voluntarily:** applicants have up to **5 years after filing** to request examination before the application lapses. They can request examination early without waiting for a direction.[3]\n- **Respond to a direction:** the Commissioner of Patents may direct an applicant to request examination during that period. The applicant then has **2 months** to request it or the application lapses.[4] Older 2014 material describes a six-month deadline, although that report also notes its reduction to two months from April 2013.[5]\n- **Seek expedited examination:** fast-track examination is available for green technology applications and applications from small and medium enterprises. Applicants can also request it for specific needs, such as commercial licensing pressures or infringement proceedings.[6]\n- **Use the Patent Prosecution Highway:** applicants with a patent allowed in another eligible jurisdiction can have the corresponding Australian application examined more quickly.[7]\n\nThird parties, including competitors, can also ask IP Australia to direct an applicant to request examination, helping resolve uncertainty around pending claims sooner.[8]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "The median time from when an applicant requests IP Australia to commence substantive examination of their patent to when the patent is accepted for grant is 1.3 years, as of 2020 (latest complete data). There is significant variation in patent application timeframes, driven largely by applicant behaviour and preferences."
+     }
+    ],
+    "text": "The 2025 report gives a median of 1.3 years from examination request to acceptance for grant, using 2020 data, with substantial variation largely driven by applicant behaviour and preferences."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 16,
+      "quote": "the median time from when an application is filed in Australia to its final acceptance for grant is 2.8 years, based on 2020 filings"
+     }
+    ],
+    "text": "The median from Australian filing to final acceptance for grant was 2.8 years, based on 2020 filings."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "After filing for a patent in Australia, applicants have 5 years to submit an RFE or their application will lapse."
+     },
+     {
+      "evidence": 3,
+      "quote": "Rather than waiting to be directed, applicants can voluntarily request examination early and unprompted."
+     }
+    ],
+    "text": "Applicants can defer requesting examination for up to five years after filing or voluntarily request it early; failure to request within five years causes lapse."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "Within that period, Australia's Commissioner of Patents may direct an applicant to request examination. The applicant then has 2 months to submit an RFE or the application lapses."
+     }
+    ],
+    "text": "The Commissioner can direct an applicant to request examination, giving them two months to comply before lapse."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 12,
+      "quote": "this direction requires the applicant to file a request for examination within six months."
+     },
+     {
+      "evidence": 5,
+      "quote": "As of April 2013 this has been reduced to two months with the Raising the Bar reform."
+     }
+    ],
+    "text": "Older 2014 material describes six months after direction, but the report also notes that this was reduced to two months from April 2013."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 19,
+      "quote": "\"Fast track\" examination is available for applications related to green technology and for applications submitted by small and medium enterprise."
+     },
+     {
+      "evidence": 19,
+      "quote": "Applicants can request fast track examination on the basis of specific needs, such as pressures in commercial licensing or infringement proceedings."
+     }
+    ],
+    "text": "Fast-track examination is available for green technology and SME applications, and can be requested for specific needs including commercial licensing or infringement proceedings."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 19,
+      "quote": "Applicants who hold a patent allowed in another eligible jurisdiction qualify to have a corresponding Australian patent application examined more quickly through the Patent Prosecution Highway."
+     }
+    ],
+    "text": "A patent allowed in another eligible jurisdiction can qualify a corresponding Australian application for quicker examination through the Patent Prosecution Highway."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 17,
+      "quote": "they may ask the patent office to direct an applicant to submit a timely examination request. This has the advantage of more quickly resolving uncertainty around pending patent claims."
+     }
+    ],
+    "text": "Third parties can ask IP Australia to direct an examination request to resolve uncertainty around pending claims sooner."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "explore-policy-6",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.027496,
+  "input": 5948,
+  "model": "gpt-6.1-sol",
+  "output": 1560,
+  "reasoning": 340,
+  "seconds": 21.43
+ }
+}

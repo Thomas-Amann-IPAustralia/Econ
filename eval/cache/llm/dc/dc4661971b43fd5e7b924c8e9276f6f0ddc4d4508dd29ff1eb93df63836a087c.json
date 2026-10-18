@@ -1,0 +1,73 @@
+{
+ "cost_usd": 0.010561,
+ "data": {
+  "answer": "**Yes—SMEs already employing AI specialists were more likely to seek additional AI staff than other SMEs**, according to the 2023 *Drivers of AI investment* study. Large companies showed the opposite pattern: those with existing AI staff were less likely to hire more than other large companies.[1]\n\nThe authors interpreted the SME pattern as suggesting increased AI specialisation among AI-based SMEs.[2]\n\nThe finding concerns **recruitment activity, not confirmed hires**: the study compared LinkedIn job advertisements and employee skills profiles, with job-ad searches conducted in August and September 2022.[3] The authors also cautioned that employee data could be incomplete, potentially missing existing AI skills, particularly in larger companies.[4]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "Further, SMEs with existing AI-staff are more likely to hire more AI-staff than other SMEs. Conversely, large companies with existing AI-staff are less likely to hire additional AI-staff than other large companies (model 9)."
+     }
+    ],
+    "text": "The 2023 study found that SMEs with existing AI staff were more likely to hire additional AI staff than other SMEs, while large companies showed the opposite pattern."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "Together this suggests increased AI specialisation by AI-based SMEs"
+     }
+    ],
+    "text": "The authors interpreted the SME pattern as suggesting increased AI specialisation among AI-based SMEs."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 9,
+      "quote": "The search for AI job ads and general job ads was undertaken on 28 August and 2 September 2022, respectively."
+     },
+     {
+      "evidence": 9,
+      "quote": "Next, using the People/Skills LinkedIn datasets, we classify whether the employees are \"AI-skilled\" or not."
+     },
+     {
+      "evidence": 9,
+      "quote": "the decision to post job advertisements to hire additional AI employees"
+     }
+    ],
+    "text": "The finding measures recruitment activity through LinkedIn job advertisements and employee skills profiles rather than confirmed hires; the job-ad searches occurred in August and September 2022."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "for each company, the data provides a potentially incomplete sample of staff (limited to ~1000 records) on the basis of which existing AI skills have been identified."
+     },
+     {
+      "evidence": 5,
+      "quote": "For larger companies, there is likely to have a smaller sample of the total population of workers at that company, so they are potentially less likely to identify existing AI skills"
+     }
+    ],
+    "text": "Incomplete employee data could miss existing AI skills, particularly in larger companies."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "oce-ai-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.021122,
+  "input": 6746,
+  "model": "gpt-6.1-sol",
+  "output": 763,
+  "reasoning": 221,
+  "seconds": 13.24
+ }
+}

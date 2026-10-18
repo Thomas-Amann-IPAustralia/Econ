@@ -51,7 +51,10 @@ def test_answer_passes_the_check_first_time(index_dir):
     m = ScriptedModel(good_answer)
     svc = pipeline.Services(index=Index(), embedder=FakeEmbedder(), model=m, provider=PROVIDER)
     ev, _ = events(pipeline.Request(question="Did small firms patent more?"), svc)
-    assert ev["plan"]["queries"] == ["small firm patent filings"]
+    planned = ["small firm patent filings"]
+    if service().answer.plan_keeps_question:  # D-013: the standalone question is searched too
+        planned = ["How did small firm patent filings change?", *planned]
+    assert ev["plan"]["queries"] == planned
     assert ev["check"]["passed"] and ev["done"]["outcome"] == "passed" and ev["done"]["attempts"] == 1
     assert ev["done"]["cost_usd"] > 0
     # The model saw exactly the evidence the UI shows, wrapped and numbered.

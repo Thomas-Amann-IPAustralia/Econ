@@ -1,0 +1,47 @@
+{
+ "cost_usd": 0.006327,
+ "data": {
+  "answer": "Yes. The 2023 study found that small and medium enterprises (SMEs) already employing AI staff were more likely to hire additional AI staff than other SMEs, suggesting continued AI specialisation.[1]\n\nHowever, this is a sample-based finding: existing AI skills were identified using potentially incomplete staff records, limited to around 1,000 per company.[2]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Further, SMEs with existing AI-staff are more likely to hire more AI-staff than other SMEs."
+     },
+     {
+      "evidence": 1,
+      "quote": "Together this suggests increased AI specialisation by AI-based SMEs"
+     }
+    ],
+    "text": "The 2023 study found that SMEs with existing AI staff were more likely to hire additional AI staff than other SMEs, suggesting continued AI specialisation."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "for each company, the data provides a potentially incomplete sample of staff (limited to ~1000 records) on the basis of which existing AI skills have been identified."
+     }
+    ],
+    "text": "The finding is sample-based, with existing AI skills identified from potentially incomplete staff records limited to around 1,000 per company."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "oce-ai-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.012654,
+  "input": 3667,
+  "model": "gpt-6.1-sol",
+  "output": 532,
+  "reasoning": 214,
+  "seconds": 8.54
+ }
+}

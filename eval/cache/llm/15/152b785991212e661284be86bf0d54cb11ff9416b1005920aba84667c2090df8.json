@@ -1,0 +1,34 @@
+{
+ "cost_usd": 0.007735,
+ "data": {
+  "answer": "The Raising the Bar reforms took effect for patent examination requests in **2013**.[1]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "The new law applied to all applications requested for examination after April 2013."
+     }
+    ],
+    "text": "The Raising the Bar reforms took effect for patent examination requests in 2013."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "erp14-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.01547,
+  "input": 7290,
+  "model": "gpt-6.1-sol",
+  "output": 89,
+  "reasoning": 0,
+  "seconds": 3.85
+ }
+}

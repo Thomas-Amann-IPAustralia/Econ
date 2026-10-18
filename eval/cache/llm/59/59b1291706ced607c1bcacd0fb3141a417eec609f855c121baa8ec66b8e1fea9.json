@@ -1,0 +1,71 @@
+{
+ "cost_usd": 0.010872,
+ "data": {
+  "answer": "The passages provide a partial picture, but **do not name the statistical estimators or identification strategies used to establish causal effects**.\n\nThe clearest example is the **2024 evaluation of the Raising the Bar reforms**:\n\n- **Supervised machine learning combined with human expert inputs** was used to assess patent scope for policy-impact analysis. This is a method for measuring patent scope, rather than a specified causal estimator.[1]\n- **Econometric analysis** was used to estimate reform impacts. The report says more highly disaggregated estimation would require a larger manually validated sample, which did not cover all examination sections.[2]\n- **Causal attribution remains qualified:** unknown factors beginning around 2010 may have affected patent scope. Depending on whether those factors were related to the reforms, the estimated effects could understate the reforms’ full impact or include effects not attributable to them.[3]\n\nThe supplied evidence therefore supports identifying measurement and econometric approaches, but not explaining precisely how the economists isolated causal effects.",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "this report demonstrates new possibilities in how supervised Machine Learning (ML) methods combined with human expert inputs can be used to improve the quality of assessing patent scope for a large scale policy impact analysis."
+     }
+    ],
+    "text": "The 2024 Raising the Bar evaluation used supervised machine learning with human expert inputs to assess patent scope for policy-impact analysis; this describes measurement rather than a specified causal estimator."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "To enable a highly disaggregated estimation of the RTB reforms' impacts requires a much larger sample size than the original manual validation sample data."
+     },
+     {
+      "evidence": 2,
+      "quote": "For the future, increasing the size of the manually validated sample could turn out to be highly valuable for improving econometric analysis of the reforms."
+     },
+     {
+      "evidence": 2,
+      "quote": "our sample of manually assessed patents did not cover the full spectrum of examination sections within IP Australia"
+     }
+    ],
+    "text": "The report used econometric analysis to estimate reform impacts, but more disaggregated estimation required a larger manually validated sample covering more examination sections."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "there are other factors (which may or may not be related to the RTB reform) which, starting around 2010, led to a decline in the proportion of broader AU patents."
+     },
+     {
+      "evidence": 2,
+      "quote": "If these unknown factors were related to the RTB reforms, then the full impact of the RTB reforms would be higher than indicated by the estimates presented in the report."
+     },
+     {
+      "evidence": 2,
+      "quote": "However, if these factors were unrelated to the RTB reforms, then some components of the estimated impacts of RTB may not be attributable to the reforms."
+     }
+    ],
+    "text": "Unknown factors beginning around 2010 complicate causal attribution: estimated effects could understate the reforms’ full impact or include effects unrelated to the reforms."
+   }
+  ],
+  "coverage": "partial",
+  "gaps": [
+   "The passages do not name specific causal estimators or describe their identification assumptions, comparison groups or statistical implementation.",
+   "They do not provide enough methodological detail to catalogue the causal-effect estimation methods used across IP Australia’s economic research."
+  ]
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "multi-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.021744,
+  "input": 5662,
+  "model": "gpt-6.1-sol",
+  "output": 1042,
+  "reasoning": 378,
+  "seconds": 16.58
+ }
+}

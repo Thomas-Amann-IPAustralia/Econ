@@ -1,0 +1,51 @@
+{
+ "cost_usd": 0.004537,
+ "data": {
+  "answer": "The AI-hiring data came from **LinkedIn job advertisements**, linked to LinkedIn company and People/Skills datasets. The AI job-ad search was conducted on **28 August 2022**, with a general job-ad search on **2 September 2022** providing a comparison baseline.[1][2]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "firm microdata we construct from LinkedIn jobs, company, and people datasets"
+     },
+     {
+      "evidence": 4,
+      "quote": "Using the LinkedIn Jobs, Companies and People/Skills datasets, we present descriptive results that map AI-hiring"
+     }
+    ],
+    "text": "The AI-hiring data came from LinkedIn job advertisements linked to LinkedIn company and People/Skills datasets."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "This provides a baseline measure to explore the relative focus of companies and industries on hiring for AI skills, accounting for general hiring patterns."
+     },
+     {
+      "evidence": 1,
+      "quote": "The search for AI job ads and general job ads was undertaken on 28 August and 2 September 2022, respectively."
+     }
+    ],
+    "text": "The AI job-ad search was conducted on 28 August 2022 and the general job-ad search on 2 September 2022, providing a comparison baseline."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "oce-ai-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.009074,
+  "input": 3157,
+  "model": "gpt-6.1-sol",
+  "output": 276,
+  "reasoning": 0,
+  "seconds": 5.27
+ }
+}

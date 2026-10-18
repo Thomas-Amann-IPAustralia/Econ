@@ -1,0 +1,73 @@
+{
+ "cost_usd": 0.011324,
+ "data": {
+  "answer": "Innovation patent applications **surged in 2020**, reaching 4,586—approximately 2.5 times their 2019 level—according to the 2021 report. This includes standard patent applications converted to innovation patent applications.[1]\n\n**Non-resident applicants drove the increase:** their applications reached 3,573, three times the 2019 level, while resident applications remained relatively stable at 1,013.[2] China and India were the main sources of the surge, filing 2,640 and 527 applications respectively in 2020.[3]\n\nThere is a small reporting discrepancy: the 2022 report gives the 2020 total as 4,585 rather than 4,586.[4]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 8,
+      "quote": "In 2020, we saw a large increase in the total number of innovation patent applications filed in Australia, reaching 4 586, approximately 2.5 times their 2019 level."
+     },
+     {
+      "evidence": 8,
+      "quote": "This total (which includes standard patent applications converted to innovation patent applications)"
+     }
+    ],
+    "text": "The 2021 report records 4,586 innovation patent applications in 2020, approximately 2.5 times the 2019 level, including converted standard applications."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 8,
+      "quote": "was almost wholly comprised of non-resident applications, which reached 3 573, an increase of 3 times their level from 2019, while resident applications remained relatively stable with 1 013 applications."
+     }
+    ],
+    "text": "Non-residents drove the increase, with 3,573 applications, three times their 2019 level, while resident applications remained relatively stable at 1,013."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 8,
+      "quote": "China and India were the 2 major sources of the surge in non-resident innovation patent applications."
+     },
+     {
+      "evidence": 8,
+      "quote": "Applications from China totalled 2 640 in 2020, representing an increase of 4.4 times their 2019 level, while India filed 527 innovation patent applications"
+     }
+    ],
+    "text": "China and India were the main sources of the surge, filing 2,640 and 527 innovation patent applications respectively in 2020."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "grew 71% on 2020 (from 4,585 to 7,844)"
+     },
+     {
+      "evidence": 8,
+      "quote": "reaching 4 586, approximately 2.5 times their 2019 level."
+     }
+    ],
+    "text": "The 2022 report gives a 2020 total of 4,585, differing from the 2021 report's 4,586."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "ipr21-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.022648,
+  "input": 7369,
+  "model": "gpt-6.1-sol",
+  "output": 791,
+  "reasoning": 206,
+  "seconds": 12.61
+ }
+}

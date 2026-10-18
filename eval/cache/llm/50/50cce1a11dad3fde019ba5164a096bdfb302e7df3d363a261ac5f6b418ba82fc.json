@@ -1,0 +1,99 @@
+{
+ "cost_usd": 0.015112,
+ "data": {
+  "answer": "**Large businesses are much more likely to own IP rights, and to combine different types of rights.** The 2020 research paper, using 2016–17 data, found that 43.9 per cent of large businesses owned patents, trade marks or designs, compared with 3.2 per cent of SMEs.[1]\n\n- **SMEs’ portfolios are more concentrated in trade marks.** Among IP-owning businesses, 88.7 per cent of SMEs held trade marks only, compared with 73.6 per cent of large businesses. Large businesses more often combined patents and trade marks (11.2 versus 3.0 per cent) or held all three rights (8.4 versus 1.3 per cent).[2]\n- **Resources help explain the difference.** The 2020 report notes that IP ownership involves attorney, application, renewal and sometimes litigation costs. Larger businesses tend to have greater financial, knowledge and organisational resources to apply for and use rights.[3]\n- **SME use has nevertheless been growing.** The 2022 report recorded an increase in SMEs with an active right from 2 per cent in 2002 to 4 per cent in 2017, driven mainly by trade marks. The 2024 report found that, over the preceding two decades, the number of patent-holding SMEs had grown at five times the rate of SMEs overall—a pattern not observed for large firms.[4]\n- **Patents can serve different commercialisation roles.** The 2024 report describes patents as helping small innovators trade technology with larger firms that have established commercialisation resources, while also giving small firms time to secure resources and finance.[5]\n\nThese differences do not mean IP use is confined to established businesses: the 2024 report still found large firms more likely to patent than smaller firms, but young firms aged 0–5 more likely to patent than older firms.[6]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 10,
+      "quote": "| Type of owners | Large (%) | SME (%) | Overall (%) |\n|---|---|---|---|\n| Non-owners of IPR | 56.1 | 96.8 | 96.5 |\n| IPR owners | 43.9 | 3.2 | 3.5 |"
+     },
+     {
+      "evidence": 10,
+      "quote": "Source: ABS BLADE (2016-17 frame)."
+     }
+    ],
+    "text": "Large businesses are more likely to own IP rights: in the 2020 paper’s 2016–17 data, 43.9 per cent owned rights compared with 3.2 per cent of SMEs."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "11.2 per cent of large IPR owners own a combination of patents and trade marks and 8.4 per cent own all three types of IPRs, while only 3.0 per cent and 1.3 per cent of SME IPR businesses own the same two combinations."
+     },
+     {
+      "evidence": 1,
+      "quote": "among all IPR owners, 88.7 per cent of all SME IPR owners and 73.6 per cent of all large IPR owners use trade marks only and have no other rights in their portfolio."
+     }
+    ],
+    "text": "Among IP owners, SMEs more often hold trade marks only, while large businesses more often combine patents and trade marks or hold all three rights, at the stated percentages."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "IPRs can be a costly venture, with attorney fees, application and renewal fees and, in some instances, litigation costs. Older or larger businesses tend to have greater resources, including financial, knowledge and organisational capital, to equip them to apply for and use IP rights."
+     }
+    ],
+    "text": "The 2020 report identifies IP costs and larger businesses’ greater financial, knowledge and organisational resources as explanations for differences in use."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "While the share of Australian SMEs with an active right is low it has doubled over recent decades, from 2% in 2002 to 4% in 2017."
+     },
+     {
+      "evidence": 3,
+      "quote": "the key driver of growth in the use of IP by SMEs has been an upsurge in the use of trade marks."
+     },
+     {
+      "evidence": 20,
+      "quote": "In the past two decades, the number of Australian SMEs that hold patents has increased at 5 times the rate of SMEs in the economy, a pattern not observed for large firms"
+     }
+    ],
+    "text": "SME ownership increased from 2 per cent in 2002 to 4 per cent in 2017, mainly driven by trade marks; the 2024 report also records disproportionately strong growth in patent-holding SMEs."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 7,
+      "quote": "Patents facilitate technology trade, for example between small innovators and larger firms with established commercialisation resources. By protecting innovators from copying, patents can also provide small firms the time necessary to obtain resources and financing."
+     }
+    ],
+    "text": "The 2024 report describes patents as enabling technology trade between small innovators and larger firms, and giving small firms time to secure resources and financing."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 7,
+      "quote": "large firms are more likely to patent than smaller firms."
+     },
+     {
+      "evidence": 7,
+      "quote": "However, young firms (aged between 0 and 5) are more likely to patent than older firms."
+     }
+    ],
+    "text": "The 2024 report finds large firms more likely to patent than smaller firms, but young firms aged 0–5 more likely to patent than older firms."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "explore-compare-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.030224,
+  "input": 7422,
+  "model": "gpt-6.1-sol",
+  "output": 1538,
+  "reasoning": 196,
+  "seconds": 20.89
+ }
+}

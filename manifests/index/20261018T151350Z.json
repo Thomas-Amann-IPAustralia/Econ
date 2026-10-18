@@ -1,0 +1,76 @@
+{
+  "argv": [
+    "index"
+  ],
+  "command": "index",
+  "config_hash": "5b0996b679236558",
+  "counts": {
+    "chunks": 1896,
+    "dim": 768
+  },
+  "error": null,
+  "git": {
+    "commit": "e76bf2e11e848233622e73f2f63d01649428ff84",
+    "dirty": true,
+    "dirty_paths": [
+      "eval/cache/rerank/"
+    ]
+  },
+  "git_at_end": {
+    "commit": "e76bf2e11e848233622e73f2f63d01649428ff84",
+    "dirty": true,
+    "dirty_paths": [
+      "eval/spend/ledger.jsonl",
+      "eval/cache/llm/03/03d0c74d3b3b717288944bac5a936d3da0ee8141c0a18f75866943b05d214eeb.json",
+      "eval/cache/llm/04/042a5f3d005e27a16e4a59b31a6340554aa1f45d1ea7eead623e691a11e2ee69.json",
+      "eval/cache/llm/09/0940eab2d343bc71838b03806fe968b6edee2b313fd9345add2224eee19e8670.json",
+      "eval/cache/llm/0f/0f49ead6759b165732f6988c5b42fde5ab74613798012d639fbe51510cc79843.json",
+      "eval/cache/llm/15/152b785991212e661284be86bf0d54cb11ff9416b1005920aba84667c2090df8.json",
+      "eval/cache/llm/15/15e0fb87b9a447c12dfe7ae15a965f303262d69f750d02deb07875681cfe59b5.json",
+      "eval/cache/llm/17/17fbbedef38ce4f7be977c07fd4831921f008d65343c5c4e497c975c797fdc0c.json",
+      "eval/cache/llm/19/19c70d56a2169445dacdb2df84c5a770d41d4df4541edf81b3715474af7377bf.json",
+      "eval/cache/llm/1a/1aa1cd326ded40501d9c0303106dee9df33a09339c80542c77e28553c3052918.json",
+      "eval/cache/llm/1e/1e2fde366d78fea2b4f9280876361830624c43671525651d3d07bc2329c85e08.json",
+      "eval/cache/llm/24/249fad5ce1ce1559e07d447e4a71e6bc9aeaa125d0abcdc1db36e431074de4fa.json",
+      "eval/cache/llm/26/261cb61e851328f05ec8afc0e662c80edf83ccb2c9ae0e761c62f7eda9d0cb73.json",
+      "eval/cache/llm/2a/2a318abb35f5291995ac595b70ba9e60fda8a64a60a8cfb8a80523ab510ced2a.json",
+      "eval/cache/llm/2d/2d23b6875f954ff636049eea1e89127cd878b60a9c87385cccf2b51b04646b58.json",
+      "eval/cache/llm/43/437984cee6e463442b42f1f80de631c7fd273b3d474591eb1dad1e014d9aa48d.json",
+      "eval/cache/llm/46/464ccef5c3561755a7a7aaf2e5b4036cbf9a6fad807b15d939dc777d744cffb8.json",
+      "eval/cache/llm/46/4678e889ef1c6544ee34a1edb9f714658f263596657bb95d48488a44fc7179a8.json",
+      "eval/cache/llm/46/46e8919dd0400867f4eb2dfb31fa25ea6d54019e0316d79f3d5736ee68b53edc.json",
+      "eval/cache/llm/46/46fbebd7aff5ba5d2585cdd3de621100d4bbb43986c306be6a11c905cef2732f.json"
+    ]
+  },
+  "inputs": {},
+  "outputs": {
+    "library/index/bm25.npz": "1f7b8a389d5043328137aa7d44bca8c6a14e084836e8d4404d0b851cab1ccf8a",
+    "library/index/bm25.vocab.json": "943e57f59ab47285d0a50c353814537d4dc3daf78a9f24fbc24b333eba2b2f60",
+    "library/index/chunks.jsonl": "d2b565450dc3dffb4118ab9d2182cb1a6925b1b9e02610d6725f5b8ca13801eb",
+    "library/index/docs.json": "af355e79100875f0826e5c77768c9dd9dbe96214ae34229a09020d2a2d481b7a",
+    "library/index/index.json": "791844dde57c4e30c5e334221a41c739e2e553255f756eb9f56b01027b0a57a9",
+    "library/index/vectors.f16.npy": "b38e7ebdab2d691c963a4679131248ed422fc01db32c60f0bc8c7d0d94e59850"
+  },
+  "params": {
+    "embedder": "arctic-m-v1.5",
+    "out": "library/index",
+    "strategy": "S384-noprefix-nocite"
+  },
+  "run_id": "20261018T151350Z",
+  "seconds": 537.8,
+  "status": "passed",
+  "upstream": {
+    "chunk": "20261018T035127Z"
+  },
+  "versions": {
+    "docling": "2.140.0",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.0",
+    "pypdfium2": "5.14.0",
+    "python": "3.12.3",
+    "sentence-transformers": "6.1.0",
+    "tokenizers": "0.23.3",
+    "torch": "2.14.1+cpu"
+  },
+  "warnings": []
+}

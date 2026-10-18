@@ -1,0 +1,47 @@
+{
+ "cost_usd": 0.009714,
+ "data": {
+  "answer": "Possibly, but the link is tentative. The 2020 report identifies a sharp fall in ICT-related design applications in 2009 and says this **“may reflect” the global financial crisis**. Its discussion covers digital products such as mobile phones and laptop computers.[1]\n\nThe decline was followed by a rapid recovery: ICT-related design applications trebled after 2009 to reach 746 in 2013.[2]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "The sharp fall of ICT-related designs in 2009 may reflect the impact of the global financial crisis."
+     },
+     {
+      "evidence": 1,
+      "quote": "Competing in global markets for digital products, such as mobile phones and laptop computers"
+     }
+    ],
+    "text": "The 2020 report tentatively links a sharp fall in ICT-related design applications in 2009 to the global financial crisis, in a discussion covering products such as mobile phones and laptops."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "After 2009, ICT-related applications recovered quickly and trebled to 746 in 2013"
+     }
+    ],
+    "text": "ICT-related design applications recovered quickly after 2009 and trebled to 746 in 2013."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "ipr20-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.019428,
+  "input": 7439,
+  "model": "gpt-6.1-sol",
+  "output": 455,
+  "reasoning": 187,
+  "seconds": 7.52
+ }
+}

@@ -1,0 +1,56 @@
+{
+ "cost_usd": 0.007907,
+ "data": {
+  "answer": "Year-to-year changes in PBR numbers should be interpreted cautiously for three reasons:\n\n- **Small volumes amplify percentage changes.** Relatively modest changes in application numbers can produce large proportional movements.[1]\n- **A few applicants can drive the result.** Annual volatility often reflects decisions by a small number of large breeding programs, even when underlying breeding investment remains steady.[2]\n- **Registrations reflect processing timing as well as filings.** Registration typically takes around 2.5 years, including examination and a comparative growing trial. The 2026 report attributes the rise in registrations in 2025 to examination timing and pipeline dynamics, rather than a structural shift in filing behaviour.[3]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "The low numbers of applications for PBRs generally mean small annual fluctuations result in large proportional rates of change."
+     }
+    ],
+    "text": "Small PBR application volumes mean modest numerical changes can produce large proportional movements."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 12,
+      "quote": "As a result, annual movements can appear pronounced even when underlying breeding investment remains steady. Interpretation therefore requires caution: year-to-year volatility often reflects the behaviour of a small number of large breeding programs."
+     }
+    ],
+    "text": "Annual volatility often reflects decisions by a small number of large breeding programs, even when underlying breeding investment remains steady."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "Though timeframes vary by plant type, the process of registering a PBR typically takes around 2.5 years. This is because the application must pass a substantive examination process and a comparative growing trial."
+     },
+     {
+      "evidence": 12,
+      "quote": "Registrations increased from 124 in 2024 to 169 in 2025. The rise reflects examination timing and pipeline dynamics rather than a structural shift in filing behaviour."
+     }
+    ],
+    "text": "Registration typically takes around 2.5 years, including examination and a comparative growing trial; the 2026 report attributes the 2025 registration rise to examination timing and pipeline dynamics rather than a structural shift in filing behaviour."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "ipr26-5",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.015814,
+  "input": 5722,
+  "model": "gpt-6.1-sol",
+  "output": 437,
+  "reasoning": 0,
+  "seconds": 7.14
+ }
+}

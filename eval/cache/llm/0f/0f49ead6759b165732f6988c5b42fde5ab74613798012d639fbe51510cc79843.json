@@ -1,0 +1,111 @@
+{
+ "cost_usd": 0.014986,
+ "data": {
+  "answer": "The research points to five main policy priorities for supporting small businesses:\n\n- **Embed IP consideration early and make guidance accessible.** The 2022 report advocates helping businesses make informed IP decisions early in their life, supported by practical guidance and application assistance. This should encompass trade marks, not just patents: trade marks were the main driver of increased SME use of IP.[1]\n\n- **Preserve flexibility in patent timing—not simply faster processing for everyone.** The 2025 research finds that flexibility delivers economic benefits for small innovators. Smaller businesses may need time after establishing priority to find funding, partners and commercialisation resources; delays can therefore serve a strategic purpose.[2]\n\n- **Prioritise IP quality and commercial use over registration counts.** The 2020 research explicitly suggests focusing policy on the quality of rights, the innovations they protect and how businesses exploit them, rather than merely increasing the number of rights.[3]\n\n- **Support different commercialisation pathways.** Protection can give small businesses time to build commercialisation capability, while licensing or selling ideas provides an alternative to bringing products to market themselves. The 2025 report highlights how strong protection can enable collaboration and ideas-trading with established businesses.[4]\n\n- **Tailor support to particular innovation communities.** For AI, the 2023 research recommends targeted consultation with SMEs and younger companies, alongside interventions connecting smaller AI leaders with larger companies and AI-lagging SMEs to facilitate knowledge transfer.[5]\n\n**The evidence supports these priorities, but should not be read as a blanket causal claim.** The 2025 report reports that Australian SMEs filing for IP are 16 per cent more likely to experience high employment growth than peers without recent filings. The 2026 analysis explicitly cautions that stronger-growth firms may select into IP ownership and does not claim pure causality.[6]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 7,
+      "quote": "Based on the available evidence, IP Australia is working to embed consideration of IP early in a company's life, to ensure that small businesses have the information they need to make informed decisions about IP protection."
+     },
+     {
+      "evidence": 7,
+      "quote": "IP Australia offers a range of services and practical guidance to help SMEs apply for IP rights."
+     },
+     {
+      "evidence": 7,
+      "quote": "the key driver of growth in the use of IP by SMEs has been an upsurge in the use of trade marks."
+     }
+    ],
+    "text": "The 2022 report advocates early, informed IP decisions and accessible guidance for SMEs, with attention to trade marks as well as patents."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 14,
+      "quote": "The research found that for small innovators, who may engage with IP early in their strategic development, this flexibility delivers tangible economic benefits - more innovations, more commercialised products, greater lifetime value to their IP."
+     },
+     {
+      "evidence": 3,
+      "quote": "They may need to establish a priority claim to their invention before searching for funding to further their R&D, identifying commercialisation partners, or otherwise seeking resources to bring their innovations to market."
+     },
+     {
+      "evidence": 20,
+      "quote": "In contrast, delays appear to be particularly beneficial for small innovators."
+     }
+    ],
+    "text": "The 2025 research supports patent-timing flexibility for small innovators, including time to secure funding and commercialisation resources rather than uniformly accelerating processing."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "A potential implication is that IP policy should aim not at increasing the number of IPRs alone but should rather focus more on the quality of IPRs, the underlying innovations they are protecting and how businesses exploit IPRs in the marketplace."
+     }
+    ],
+    "text": "The 2020 research suggests prioritising IP quality, underlying innovation and marketplace exploitation rather than increasing rights counts alone."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "IP rights facilitate technology transfer, enabling innovators to license or sell their ideas to others. By reducing the threat of imitation, IP rights provide businesses the time needed to build commercialisation capability."
+     },
+     {
+      "evidence": 3,
+      "quote": "For example, strong IP protections enable ideas-trading as a viable strategy, where innovators may collaborate with existing market leaders and trade or license their ideas."
+     }
+    ],
+    "text": "Research supports commercialisation through capability-building, licensing and selling ideas, with strong IP protection enabling collaboration with established businesses."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 8,
+      "quote": "This involves engaging with key players in AI adoption, such as AI-related SMEs and younger companies, and understanding their engagement with AI and the IP system."
+     },
+     {
+      "evidence": 8,
+      "quote": "This would include connecting leaders and laggers (especially from smaller AI-focused companies with larger companies and AI-lagging SMEs) to facilitate knowledge transfer."
+     }
+    ],
+    "text": "The 2023 AI research recommends targeted consultation with SMEs and younger companies and knowledge-transfer connections between smaller AI leaders, larger companies and AI-lagging SMEs."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 18,
+      "quote": "After filing for an IP right, Australian SMEs are 16% more likely to experience high employment growth than their peers without recent filings (Zhang, 2021)."
+     },
+     {
+      "evidence": 16,
+      "quote": "Selection effects are likely present: firms on stronger growth paths may be more likely to invest in IP."
+     },
+     {
+      "evidence": 16,
+      "quote": "The analysis does not claim pure causality."
+     }
+    ],
+    "text": "The 2025 report records a 16 per cent higher likelihood of high employment growth for SME IP filers, while the 2026 analysis warns about selection effects and does not claim pure causality."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "explore-strategy-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.029972,
+  "input": 6601,
+  "model": "gpt-6.1-sol",
+  "output": 1677,
+  "reasoning": 424,
+  "seconds": 26.05
+ }
+}

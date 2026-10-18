@@ -1,0 +1,43 @@
+{
+ "cost_usd": 0.00894,
+ "data": {
+  "answer": "The study marks **2013 and 2014** as the examination-request years in which the Raising the Bar reforms took effect.[1] More precisely, the new law applied to applications for which examination was requested **after 12 April 2013**.[2]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "The dashed vertical lines mark exam request years of 2013 and 2014, the period in which the Raising the Bar reforms took effect."
+     }
+    ],
+    "text": "The study marks 2013 and 2014 as the examination-request years in which the reforms took effect."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 15,
+      "quote": "The new law applied to applications for which examination was requested after April 12 2013"
+     }
+    ],
+    "text": "The new law applied to applications for which examination was requested after 12 April 2013."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "erp14-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.01788,
+  "input": 7330,
+  "model": "gpt-6.1-sol",
+  "output": 322,
+  "reasoning": 98,
+  "seconds": 5.81
+ }
+}

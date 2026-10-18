@@ -1,0 +1,86 @@
+{
+ "cost_usd": 0.01289,
+ "data": {
+  "answer": "**IP rights can help firms cope with uncertainty by preserving investment options and protecting customer relationships.** The 2026 Australian IP Report describes these as complementary ways to support productive risk-taking and resilience.[1]\n\n- **Patents provide flexibility and potential recovery value.** Firms can stage, delay or redirect investment. Where patents can be licensed, traded or used to attract investment, they offer opportunities to recoup innovation expenditure despite volatile conditions.[2]\n- **Trade marks help protect demand.** By protecting customer relationships and goodwill built around brands, they can stabilise demand, support differentiation and facilitate entry into new markets.[3]\n- **Overseas trade marks are associated with greater export resilience.** A 2021 study using data on around 9,000 Australian manufacturing exporters over 2005–2017 found that, after filing trade marks in a destination market, firms were more likely to enter, tended to perform better, became more resilient to exchange rate changes and expanded exports more in response to tariff reductions. These are findings for that manufacturing-exporter sample, rather than evidence covering all firms.[4]\n- **The estimated differences can be substantial.** In that study, a 10 per cent tariff reduction was estimated to increase export revenue by 71 per cent after recent destination-market trade mark filings rose from zero to one, compared with 32 per cent with no recent trade mark activity. The study describes overseas trade mark activity as *associated with* muted exchange rate responses and amplified tariff responses.[5]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 10,
+      "quote": "Patents are increasingly understood as real options: assets that allow firms to stage, delay or redirect investment decisions."
+     },
+     {
+      "evidence": 10,
+      "quote": "They protect customer relationships and goodwill that firms have accrued under their brands."
+     },
+     {
+      "evidence": 10,
+      "quote": "These results suggest that IP can support both productive risk-taking and firm resilience in periods of economic instability and change."
+     }
+    ],
+    "text": "The 2026 Australian IP Report describes IP as supporting productive risk-taking and resilience through investment flexibility and protection of customer relationships."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 10,
+      "quote": "Patents are increasingly understood as real options: assets that allow firms to stage, delay or redirect investment decisions. Where patents can be licensed, traded or used to attract investment, they provide firms in volatile conditions with options to later recoup returns from investing in innovation."
+     }
+    ],
+    "text": "Patents allow firms to stage, delay or redirect investment and, where licensing, trading or investment opportunities exist, potentially recover innovation expenditure in volatile conditions."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 10,
+      "quote": "Trade marks operate in a complementary way. They protect customer relationships and goodwill that firms have accrued under their brands. In this way, trade marks can help stabilise demand, support differentiation and facilitate entry into new markets."
+     }
+    ],
+    "text": "Trade marks protect customer relationships and brand goodwill, helping stabilise demand, differentiate products and facilitate entry into new markets."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "The study uses customs and firm microdata in the Business Longitudinal Analysis Data Environment (BLADE) on a panel of around 8,937 Australian manufacturing firms per year over 2005-2017."
+     },
+     {
+      "evidence": 2,
+      "quote": "The study finds that, after filing trade marks in an export market, exporters are more likely to enter that market, tend to perform better after entry, become more resilient to changes in the real exchange rate, and will expand exports more in response to tariff reductions."
+     }
+    ],
+    "text": "A 2021 study of around 9,000 Australian manufacturing exporters over 2005–2017 linked destination-market trade mark filing with greater entry, better performance, exchange rate resilience and stronger export expansion following tariff reductions; its sample was manufacturing exporters, not all firms."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "after a firm has increased its recent trade marks in a destination market from zero to one, a 10% tariff reduction will induce a 71% increase in export revenue, more than double the 32% increase in revenue for the firm with no recent trade mark activity."
+     },
+     {
+      "evidence": 2,
+      "quote": "We present evidence that an exporter's trade mark activity abroad is associated with both muted responses to the real exchange rate and amplified responses to tariffs."
+     }
+    ],
+    "text": "The 2021 study estimated that a 10 per cent tariff reduction would increase export revenue by 71 per cent when recent destination-market trade mark filings rose from zero to one, versus 32 per cent without recent activity, and characterised trade mark activity as associated with muted exchange rate and amplified tariff responses."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "explore-synthesis-7",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.02578,
+  "input": 6255,
+  "model": "gpt-6.1-sol",
+  "output": 1327,
+  "reasoning": 359,
+  "seconds": 19.06
+ }
+}

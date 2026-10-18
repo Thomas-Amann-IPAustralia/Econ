@@ -1,0 +1,68 @@
+{
+ "cost_usd": 0.005955,
+ "data": {
+  "answer": "The AI-hiring data came from **LinkedIn job advertisements**, collected on **28 August 2022** for the 2023 *Drivers of AI investment* report. The researchers also collected a general-hiring comparison sample on **2 September 2022**, using a search without a keyword parameter.[1]\n\nThey linked job-ad data with LinkedIn company and People/Skills datasets. Employees were classified as AI-skilled if their profiles listed at least one AI-related keyword, using keyword dictionaries from the **Stanford AI Index 2022** report.[2]\n\nThe data was a snapshot of job postings and current employees, rather than a dataset tracking changes over time.[3]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Specifically, we replicate the process above (retrieving Jobs, Companies and People/Skills) using a general search in which we do not include a keyword parameter in the search for job advertisements."
+     },
+     {
+      "evidence": 1,
+      "quote": "The search for AI job ads and general job ads was undertaken on 28 August and 2 September 2022, respectively."
+     }
+    ],
+    "text": "The 2023 report used LinkedIn AI job advertisements collected on 28 August 2022 and a general-hiring comparison search without a keyword parameter collected on 2 September 2022."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Specifically, we replicate the process above (retrieving Jobs, Companies and People/Skills)"
+     },
+     {
+      "evidence": 1,
+      "quote": "Next, using the People/Skills LinkedIn datasets, we classify whether the employees are \"AI-skilled\" or not."
+     },
+     {
+      "evidence": 1,
+      "quote": "This binary distinction is based on whether the skills listed in the employee's profile contain at least one AIrelated keyword"
+     },
+     {
+      "evidence": 1,
+      "quote": "We adopt the skills keywords (any of the artificial intelligence, natural language processing, neural networks, ML, robotics, or visual image recognition dictionaries of keywords) presented in the Stanford AI Index 2022 report (Zhang et al., 2022)."
+     }
+    ],
+    "text": "The researchers linked job-ad, company and People/Skills data from LinkedIn, identifying AI-skilled employees through profile keywords drawn from Stanford AI Index 2022 dictionaries."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "Our analysis relied on only a snapshot of job ad postings and current employees in time. This data cannot say much about the dynamics or temporal elements of firms' skills-bases and needs."
+     }
+    ],
+    "text": "The data was a snapshot of job postings and current employees, not a dataset tracking changes over time."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "oce-ai-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.01191,
+  "input": 3200,
+  "model": "gpt-6.1-sol",
+  "output": 551,
+  "reasoning": 0,
+  "seconds": 8.5
+ }
+}

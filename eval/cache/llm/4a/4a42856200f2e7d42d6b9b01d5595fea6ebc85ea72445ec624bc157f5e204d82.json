@@ -1,0 +1,189 @@
+{
+ "cost_usd": 0.011321,
+ "data": {
+  "answer": "The researchers acknowledge limitations in **data coverage, measurement, causal attribution and comparability**, with specific caveats varying by study.[1][2][3][4][5][6][7][8][9][10]\n\n- **AI data are a limited snapshot.** *Drivers of AI investment* (2023) uses a once-off, relatively small sample of LinkedIn activity rather than longitudinal data covering the full population.[1] Its Australian job-ad and employee data may miss overseas AI development, outsourced AI work and industries less reliant on LinkedIn’s predominantly white-collar users.[2]\n- **Patent data have truncation and identification problems.** The computer-implemented inventions study (2024) identifies EPO patent-family problems, long examination delays and small early-period samples. Some analyses therefore use the narrower 2010–17 period.[3]\n- **Some policy effects cannot be separated.** The computer-implemented inventions study cannot disentangle the effects of “Alice” and “Research Affiliates”.[4] The *Raising the Bar* study (2024) acknowledges that anticipation or other factors operating from around 2010 could mean its estimates either understate the reforms’ full effects or attribute unrelated changes to them.[5]\n- **Patent-scope measurement and validation are imperfect.** The *Raising the Bar* study warns that claim word count can measure scope poorly. Its manually validated sample is too small for highly disaggregated estimates and does not cover all examination sections, limiting conclusions outside the sample.[6]\n- **Econometric models retain weaknesses.** The profitability and competition study (2020) notes that fixed- and random-effects models may retain omitted-variable bias; adding lagged outcomes can alleviate that problem but creates a new endogeneity problem.[7]\n- **“IP-intensive” industry classifications depend on the method.** The same study notes that an above-average threshold may classify about half of industries as IP-intensive and can be distorted by industries with little or no registered IP. Its classification also excludes rights issued to individuals and foreign companies.[8]\n- **Co-filing is an incomplete collaboration indicator.** The 2022 IP Report cautions that technology transfer and IP trading may occur without co-filing, while foreign co-applicants may be related companies rather than independent collaborators.[9]\n- **Comparisons are not always like-for-like.** Reports flag differences in countries’ collection periods, populations and coverage, and warn that survey methodology changes require caution when comparing 2022 results with earlier years.[10]\n- **Interview findings are exploratory.** The design-market study (2014) reports seven formal in-depth interviews, supplemented by informal interviews. Its purpose was to understand how the market operates, not test a model; it acknowledges that a survey could have captured a larger sample.[11]\n\nSeparately, administrative-data disclaimers clarify that discussions of weaknesses concern **statistical use**, not the data’s fitness for agencies’ operational purposes. The 2026 IP Report also states that access was restricted and results confidentialised to protect identities.[12]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "At the current stage, this analyses only provides a once-off snapshot in terms of both time period and only a relatively small snippet or sample population of the entire possible LinkedIn job posting activities, companies, and people"
+     }
+    ],
+    "text": "The 2023 AI investment study provides a once-off, relatively small LinkedIn sample rather than longitudinal population coverage."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "The data may not reflect the full picture of AI capacity building of the companies in our sample."
+     },
+     {
+      "evidence": 3,
+      "quote": "our methodology is more likely to capture companies that aim to increase their 'in-house' AI capacity while potentially underrepresenting those that outsource AI effort and functions"
+     },
+     {
+      "evidence": 3,
+      "quote": "our dataset may not fully represent AI skills and adoption in industries that have a lower reliance on white-collar workers or professionals"
+     }
+    ],
+    "text": "The AI study’s measures may miss overseas AI development, outsourced work and industries less reliant on white-collar LinkedIn users."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "EPO data appeared to have some truncation and other issues related to the identification of patent families"
+     },
+     {
+      "evidence": 2,
+      "quote": "some of the analyses focused only on a subset of 2010-17 period in order to minimise the effect of data truncation (caused by long pendency period particularly at the EPO) and small sample size in the early period"
+     }
+    ],
+    "text": "The 2024 computer-implemented inventions study identifies EPO patent-family and truncation problems, long pendency and small early samples, restricting some analyses to 2010–17."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "It is not possible in our analysis to disentangle the possible differential effect of \"Alice\" and \"Research Affiliates\"."
+     }
+    ],
+    "text": "The computer-implemented inventions study cannot separate the effects of Alice and Research Affiliates."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 8,
+      "quote": "some of the effects of the RTB reforms could have been anticipated or that there are other factors (which may or may not be related to the RTB reform) which, starting around 2010, led to a decline in the proportion of broader AU patents."
+     },
+     {
+      "evidence": 8,
+      "quote": "However, if these factors were unrelated to the RTB reforms, then some components of the estimated impacts of RTB may not be attributable to the reforms."
+     }
+    ],
+    "text": "The 2024 Raising the Bar study acknowledges that anticipation or other factors from around 2010 complicate attribution and could mean estimated effects are understated or partly unrelated to the reforms."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 8,
+      "quote": "relying on previous methods of assessing patent scope such as claim word count may ultimately result in poor accuracy."
+     },
+     {
+      "evidence": 8,
+      "quote": "To enable a highly disaggregated estimation of the RTB reforms' impacts requires a much larger sample size than the original manual validation sample data."
+     },
+     {
+      "evidence": 8,
+      "quote": "our sample of manually assessed patents did not cover the full spectrum of examination sections within IP Australia"
+     }
+    ],
+    "text": "The Raising the Bar study warns about inaccurate claim-word-count measures and a validation sample too small for detailed estimates and not covering all examination sections."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 16,
+      "quote": "Typically, the assumption that some important omitted variables are time invariant is implausible, and the models may still suffer from an OVB."
+     },
+     {
+      "evidence": 16,
+      "quote": "However, introducing one or more lagged dependent variables as explanatory variables will cause a new endogeneity problem."
+     }
+    ],
+    "text": "The 2020 profitability study notes that fixed- and random-effects models may retain omitted-variable bias, while adding lagged outcomes creates endogeneity."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 7,
+      "quote": "First, by definition, about half of the industries may be identified as IP-intensive given their relative IP intensities will be above the average value"
+     },
+     {
+      "evidence": 7,
+      "quote": "Second, only IPRs issued to domestic companies are included, while those issued to individuals and foreign companies are excluded."
+     },
+     {
+      "evidence": 7,
+      "quote": "a large number of industries may have zero or very few IP registrations, which drags down the average value and makes it less meaningful as a yardstick."
+     }
+    ],
+    "text": "The 2020 industry classification can identify about half of industries as IP-intensive, is affected by low-registration industries, and excludes individuals and foreign companies."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 14,
+      "quote": "R&D and commercialisation partnerships can involve technology transfer and IP trading that is not reflected in co-filing data. Further, foreign entities listed on resident applications may be parents or subsidiaries of Australian companies, so interpreting co-filing as evidence of international collaboration requires some care."
+     }
+    ],
+    "text": "The 2022 report cautions that co-filing misses some technology transfer and IP trading and may reflect corporate relationships rather than independent collaboration."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 17,
+      "quote": "other countries count a three-year basis, may focus on innovation active companies, or have broader data collection than Australia"
+     },
+     {
+      "evidence": 6,
+      "quote": "due to changes to the survey's methodology, comparisons between 2022 and earlier survey results should be made with caution."
+     }
+    ],
+    "text": "International collection differences and survey methodology changes limit comparability across countries and years."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 11,
+      "quote": "We report on seven in-depth formal interviews. Our research also involved triangulation through informal interviews with a broader, targeted field of market participants."
+     },
+     {
+      "evidence": 11,
+      "quote": "A survey methodology (i.e., mail or phone questionnaire) would have enabled us to capture data on a larger sample"
+     },
+     {
+      "evidence": 11,
+      "quote": "our goal was to understand how the market operates, rather than test a model of market behaviour."
+     }
+    ],
+    "text": "The 2014 design-market study uses seven formal interviews and informal triangulation for exploratory understanding rather than model testing, acknowledging surveys could provide a larger sample."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 15,
+      "quote": "Any discussion of data limitations or weaknesses is in the context of using the data for statistical purposes and is not related to the ability of the data to support the ABR or ATO's core operational requirements."
+     },
+     {
+      "evidence": 15,
+      "quote": "Only people authorised under the ABS Act 1975 have viewed data about any firm when conducting these analyses."
+     },
+     {
+      "evidence": 15,
+      "quote": "results have been confidentialised to ensure that they are not likely to enable the identification of a particular person or organisation."
+     }
+    ],
+    "text": "The 2026 administrative-data disclaimer distinguishes statistical limitations from operational fitness and notes restricted access and confidentialised results."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "explore-evidence-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 6756,
+  "cost_usd": 0.022642,
+  "input": 3,
+  "model": "gpt-6.1-sol",
+  "output": 2196,
+  "reasoning": 172,
+  "seconds": 27.95
+ }
+}

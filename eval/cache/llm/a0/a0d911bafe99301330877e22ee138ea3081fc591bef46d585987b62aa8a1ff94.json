@@ -1,0 +1,65 @@
+{
+ "cost_usd": 0.012038,
+ "data": {
+  "answer": "Yes. The **2025 Australian IP Report** reports that Australian SMEs filing for an IP right are **16 per cent more likely to experience high employment growth** than peers without recent filings.[1]\n\nThe underlying research, summarised in the 2022 report, provides further detail:\n- **Start-ups:** those filing for at least one IP right in their first year were **twice as likely to achieve high growth** as peers without rights in their first year.[2]\n- **Study scope:** the research covered around **600,000 Australian SMEs active during 2002–2017**. High growth meant at least **20 per cent annual employment growth over three consecutive years**.[3]\n\n**The qualification:** these Australian findings should be read as an association and a forward indicator of growth, rather than proof that filing itself causes growth. The report describes regression estimates and identifies IP activity as a predictor of future employment growth.[4]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "After filing for an IP right, Australian SMEs are 16% more likely to experience high employment growth than their peers without recent filings (Zhang, 2021)."
+     }
+    ],
+    "text": "The 2025 Australian IP Report reports that Australian SMEs filing for an IP right are 16 per cent more likely to experience high employment growth than peers without recent filings."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Focusing just on startups, those that file for at least one IP right in their first year are twice as likely to achieve high growth than their peers with no rights in their first year."
+     }
+    ],
+    "text": "The 2022 report finds that start-ups filing for at least one IP right in their first year were twice as likely to achieve high growth as peers without rights in their first year."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "The present study focused on around 600,000 SMEs active over the period 2002 to 2017. High-growth SMEs were identified as those that achieve at least 20% annual growth in employment over 3 consecutive years."
+     }
+    ],
+    "text": "The study covered around 600,000 Australian SMEs active during 2002–2017 and defined high growth as at least 20 per cent annual employment growth over three consecutive years."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Regression model estimates suggest that SMEs filing for at least one IP right in a year are 16% more likely to achieve high employment growth than non filers."
+     },
+     {
+      "evidence": 10,
+      "quote": "The above estimates suggest that IP activity is a significant forward indicator of employment growth for Australian SMEs."
+     }
+    ],
+    "text": "The Australian findings are an association and forward indicator, rather than proof that filing causes growth: the report presents regression estimates and describes IP activity as a predictor of employment growth."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "multi-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.024076,
+  "input": 7243,
+  "model": "gpt-6.1-sol",
+  "output": 959,
+  "reasoning": 262,
+  "seconds": 13.71
+ }
+}

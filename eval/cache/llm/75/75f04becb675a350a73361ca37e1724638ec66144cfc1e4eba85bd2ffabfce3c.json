@@ -1,0 +1,43 @@
+{
+ "cost_usd": 0.010162,
+ "data": {
+  "answer": "**Large firms are the most likely to file patents, and small firms the least likely**, according to the 2024 study’s pooled OLS results. Compared with micro firms, small firms were less likely to file, while medium and large firms were more likely—with large firms showing the strongest propensity.[1]\n\nThese findings describe conditional correlations, not demonstrated causal effects of firm size.[2]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Additionally, small firms exhibit a lower likelihood of patent filing than micro firms, while medium and large firms are more inclined to file patent applications. Notably, large firms stand out as they display a significantly higher propensity for patent filing compared to smaller counterparts."
+     }
+    ],
+    "text": "The 2024 pooled OLS results indicate that large firms are most likely and small firms least likely to file patents: small firms rank below micro firms, while medium and large firms rank above them."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 10,
+      "quote": "firm size exhibits a positive conditional correlation with the likelihood of a patent being filed or granted."
+     }
+    ],
+    "text": "The findings describe conditional correlations rather than demonstrated causal effects of firm size."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "erp15-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.020324,
+  "input": 7927,
+  "model": "gpt-6.1-sol",
+  "output": 447,
+  "reasoning": 190,
+  "seconds": 9.47
+ }
+}

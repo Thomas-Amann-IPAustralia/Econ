@@ -1,0 +1,69 @@
+{
+ "cost_usd": 0.009455,
+ "data": {
+  "answer": "The study established its benchmark through **expert manual assessment**. IP Australia patent examiners assessed a random sample of 500 ‘patent triplets’—families covering the same or similar technical content granted in Australia, Europe and the United States.[1] Relative scope meant comparing each Australian patent separately with its European and US equivalents.[2]\n\nThese examiner assessments supplied the labelled data used to train and test supervised machine learning models.[3] They also validated a key predictive metric: differences in first-claim word length, where longer claims tend to contain more detail and qualifications that narrow scope. Model quality was tested on data not used for training.[4]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "we tasked a team of patent examiners at IP Australia with manually assessing a random sample of 500 \"patent triplets\" - collections of patent application families covering the same or similar technical content which were granted by IP Australia, the EPO and the USPTO - for their relative patent scope."
+     }
+    ],
+    "text": "IP Australia patent examiners manually assessed a random sample of 500 patent triplets covering the same or similar technical content granted in Australia, Europe and the United States."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "We assess relative patent scope as the scope of an Australian patent compared to the scope of its equivalent patent granted in Europe and, separately, to the scope of its equivalent patent granted in the United States."
+     }
+    ],
+    "text": "Relative scope compared each Australian patent separately with its European and US equivalents."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 12,
+      "quote": "Second, the CTI team used these assessments to validate certain metrics and as inputs to train and test supervised machine learning models."
+     },
+     {
+      "evidence": 2,
+      "quote": "we used the labelled data from the manual assessment of 500 randomly selected patent triplets of the first stage to develop a supervised Machine Learning (ML) model"
+     }
+    ],
+    "text": "The examiner assessments supplied labelled data for training and testing supervised machine learning models."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 12,
+      "quote": "longer claims (e.g., \"an incandescent lamp using carbonised paper as filament\" vs \"the incandescent lamp\") tend to include more detail and modifying statements which will narrow a patent's scope. The CTI team validated this metric against the examiners' manual assessments."
+     },
+     {
+      "evidence": 6,
+      "quote": "We assess the quality of the modelling by testing the model parameters using data that was not used to train the model."
+     }
+    ],
+    "text": "Examiner assessments validated first-claim word-length differences as a predictive metric, with longer claims tending to narrow scope through added detail; model quality was tested using data not used for training."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "erp14-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.01891,
+  "input": 5875,
+  "model": "gpt-6.1-sol",
+  "output": 716,
+  "reasoning": 145,
+  "seconds": 13.23
+ }
+}

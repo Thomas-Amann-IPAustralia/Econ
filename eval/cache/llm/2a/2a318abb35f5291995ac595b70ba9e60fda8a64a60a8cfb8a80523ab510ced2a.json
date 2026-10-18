@@ -1,0 +1,98 @@
+{
+ "cost_usd": 0.014269,
+ "data": {
+  "answer": "**The United States remains the largest source of standard patent applications in Australia, but the country mix is shifting towards China.** In 2025—the latest year reported, in the 2026 report—the US accounted for 40.8% of filings, followed by China at 9.7% and Australian residents at 9.3%.[1]\n\nRecent changes are more evident in filing volumes than in the leading rankings:\n\n- **US filings are declining:** they fell 5.0% in 2025. Its share was down from 42.7% in 2024 to 40.8% in 2025.[2]\n- **China is gaining share:** filings rose 13.4% in 2025, and its share increased from 8.5% in 2024 to 9.7% in 2025.[3]\n- **The next tier has changed somewhat:** the 2025 report lists Japan, the UK and Switzerland after the US and China for 2024. The previous report’s leading overseas origins for 2023 included Germany rather than Switzerland.[4]\n\nOver a longer period, **China’s rise is the clearest ranking shift**: it was the sixth-largest source in 2017, overtook Japan and Germany in 2019, and remained the second-largest source in 2025.[5]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "In 2025, the United States remained the dominant source of standard complete patent applications in Australia, accounting for 40.8% of filings. China was the second-largest source at 9.7%, followed by Australian residents at 9.3%."
+     }
+    ],
+    "text": "In 2025, the US led standard patent applications in Australia with 40.8%, followed by China at 9.7% and Australian residents at 9.3%."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "US-origin filings declined in absolute terms (-5.0% from 2024 levels), continuing a longer-term easing in Australia."
+     },
+     {
+      "evidence": 5,
+      "quote": "the United States (US residents are named as applicants on 42.7% of total filings)"
+     },
+     {
+      "evidence": 1,
+      "quote": "accounting for 40.8% of filings."
+     }
+    ],
+    "text": "US filings fell 5.0% in 2025, while its share declined from 42.7% in 2024 to 40.8% in 2025."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "China-origin filings increased markedly (+13.4%), reflecting ongoing growth in applied and industrial technologies and continued outward engagement by Chinese firms."
+     },
+     {
+      "evidence": 5,
+      "quote": "China (8.5%), Japan (5.0%), the United Kingdom (4.7%) and Switzerland (4.3%)."
+     },
+     {
+      "evidence": 1,
+      "quote": "China was the second-largest source at 9.7%"
+     }
+    ],
+    "text": "China’s filings rose 13.4% in 2025 and its share increased from 8.5% in 2024 to 9.7% in 2025."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "the lead overseas origins for standard patent filings in Australia are the United States (US residents are named as applicants on 42.7% of total filings), China (8.5%), Japan (5.0%), the United Kingdom (4.7%) and Switzerland (4.3%)."
+     },
+     {
+      "evidence": 15,
+      "quote": "The lead origins for standard patent applications in Australia are the United States and China, followed by Japan, the United Kingdom and Germany"
+     }
+    ],
+    "text": "The leading overseas origins after the US and China were Japan, the UK and Switzerland in 2024; the 2023 list included Germany rather than Switzerland."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 10,
+      "quote": "Applications from China grew 20 per cent to 1067, making it now the sixth largest source of patent filings in Australia."
+     },
+     {
+      "evidence": 14,
+      "quote": "China's share of non-resident applications in Australia grew to seven per cent in 2019, outranking Germany and Japan for the first time."
+     },
+     {
+      "evidence": 1,
+      "quote": "China was the second-largest source at 9.7%"
+     }
+    ],
+    "text": "China rose from sixth-largest source in 2017, overtook Japan and Germany in 2019, and remained second-largest in 2025."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "explore-trend-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.028538,
+  "input": 8149,
+  "model": "gpt-6.1-sol",
+  "output": 1224,
+  "reasoning": 276,
+  "seconds": 16.78
+ }
+}

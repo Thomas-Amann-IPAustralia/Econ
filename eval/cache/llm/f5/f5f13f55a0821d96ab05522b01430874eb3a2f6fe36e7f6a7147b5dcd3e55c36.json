@@ -1,0 +1,90 @@
+{
+ "cost_usd": 0.012369,
+ "data": {
+  "answer": "**Trade mark cluttering** occurs when a register contains unused or overly broad marks that block registration of the same or similar marks. It increases the cost to other applicants of creating and registering new trade marks.[1]\n\n**Australia’s 2019 assessment found low levels of cluttering—not an immediate concern—but identified emerging risks.** The research concluded that cluttering was not unduly hindering the system and that mechanisms for removing blocking, unused marks appeared to be working effectively.[2]\n\nSupporting evidence and qualifications include:\n- **Few non-use removals:** removals doubled from 219 in 2006 to 437 in 2016, but remained below 0.1 per cent of marks in force each year, with no increase in that proportion over the period.[3]\n- **A growing potential source:** first-term renewal rates fell from around 70 per cent in the 1980s to 50 per cent in the 2000s. The report linked this to increasing numbers of potentially unused marks remaining registered during their first ten years, while stressing that the timing of non-use is very difficult to establish.[4]\n\n**The 2019 finding should not be treated as a definitive assessment of today’s register.** The 2026 report warns that large numbers of marks with limited commercial presence or enforcement intent may raise search and clearance costs. It describes ongoing monitoring of unusual marks, applicant behaviour, trade mark quality and outcomes.[5]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Trade mark cluttering occurs when a trade mark register contains many unused or overly broad marks that block the same or similar marks from being registered. Cluttering of a register increases the costs to other applicants of creating and registering new trade marks."
+     }
+    ],
+    "text": "Trade mark cluttering involves unused or overly broad marks blocking the same or similar registrations and increasing other applicants’ costs."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "Overall, our results suggest that there is a low incidence of cluttering in IP Australia's trade mark register, although there is evidence of applicant behaviour that can lead to additional trade mark cluttering in the future."
+     },
+     {
+      "evidence": 3,
+      "quote": "In summary, we find that at present the overall state of trade mark cluttering in Australia is not unduly hindering the system."
+     },
+     {
+      "evidence": 3,
+      "quote": "It appears the current mechanisms for removing non-use marks that block other traders are working effectively."
+     }
+    ],
+    "text": "The 2019 assessment found low cluttering, emerging risks, no undue hindrance to the system, and apparently effective non-use removal mechanisms."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "although the number of marks removed due to non-use doubled, from 219 in 2006 to 437 in 2016, these represent less than 0.1 per cent of the total marks in force each year. This proportion has not increased over the last 10 years"
+     }
+    ],
+    "text": "Non-use removals rose from 219 in 2006 to 437 in 2016, remaining below 0.1 per cent of marks in force, with no increase in the proportion over that period."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "The renewal rate after the first ten-year registration term has dropped from around 70 per cent in the 1980s to 50 per cent in the 2000s"
+     },
+     {
+      "evidence": 6,
+      "quote": "The number of potential non-use trade marks which remain on the register during their first ten years has been increasing, and this has likely contributed to trade mark cluttering in Australia."
+     },
+     {
+      "evidence": 6,
+      "quote": "It is almost impossible, though, to know exactly when a mark stopped being used."
+     }
+    ],
+    "text": "Declining first-term renewal rates indicated growing potential non-use during the first ten years, but the timing of non-use was uncertain."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 11,
+      "quote": "Large numbers of trade marks with limited commercial presence or enforcement intent may increase search and clearance costs for other businesses seeking to enter and compete in related markets."
+     },
+     {
+      "evidence": 11,
+      "quote": "IP Australia continues to scan the registry routinely for unusual trade marks; monitor changes in applicant behaviour, trade mark quality and outcomes; and evaluate international policy responses to market developments."
+     }
+    ],
+    "text": "The historical finding does not establish current conditions: the 2026 report flags potential search and clearance costs and describes ongoing monitoring."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "explore-synthesis-10",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.024738,
+  "input": 6374,
+  "model": "gpt-6.1-sol",
+  "output": 1199,
+  "reasoning": 271,
+  "seconds": 17.03
+ }
+}

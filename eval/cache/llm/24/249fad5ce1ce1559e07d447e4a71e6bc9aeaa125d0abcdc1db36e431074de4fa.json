@@ -1,0 +1,34 @@
+{
+ "cost_usd": 0.007857,
+ "data": {
+  "answer": "Yes. In Australia, patents for pharmaceutical substances that experience a delay in market approval can receive an extension beyond the standard 20-year term, providing **up to 25 years of protection**.[1]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 10,
+      "quote": "The maximum term of a patent is 20 years, though pharmaceutical substances that experience a delay in market approval can receive an extension, providing up to 25 years of protection."
+     }
+    ],
+    "text": "Australian patents for pharmaceutical substances that experience a delay in market approval can be extended beyond the standard 20-year term to provide up to 25 years of protection."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "ipr22-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.015714,
+  "input": 7127,
+  "model": "gpt-6.1-sol",
+  "output": 146,
+  "reasoning": 0,
+  "seconds": 3.55
+ }
+}
