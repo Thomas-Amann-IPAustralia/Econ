@@ -1,0 +1,104 @@
+"""The retrieval test set: needs with verbatim gold spans, located in each document's canonical text.
+
+A need is a question plus one or more gold quotes, each a verbatim passage that answers it (or part of
+it). Gold is located by text, not by chunk, so one set scores every chunking strategy: a chunk is
+relevant to a gold when its spans cover at least `cover` of the gold's characters.
+
+The split is fixed by a hash of the need id: dev to choose, test to report.
+"""
+
+from __future__ import annotations
+
+import hashlib
+import re
+from dataclasses import dataclass
+from pathlib import Path
+
+import yaml
+
+from econ import config
+from econ.kb.chunk import canonical_text, load_elements
+from econ.manifest import StageError
+from econ.textcheck import normalise
+
+KINDS = ("lookup", "explain", "paraphrase", "multi", "trend")
+
+
+@dataclass(frozen=True)
+class Gold:
+    doc_id: str
+    start: int
+    end: int
+    quote: str
+
+
+@dataclass(frozen=True)
+class Need:
+    id: str
+    kind: str
+    question: str
+    golds: tuple[Gold, ...]
+    split: str
+
+
+def split_of(need_id: str) -> str:
+    return "dev" if int(hashlib.sha256(need_id.encode()).hexdigest(), 16) % 2 == 0 else "test"
+
+
+def _norm_map(text: str) -> tuple[str, list[int]]:
+    """Normalised text and, for each of its characters, the index of the original character."""
+    out, idx = [], []
+    prev_space = True
+    for i, ch in enumerate(text):
+        n = normalise(ch) if not ch.isspace() else " "
+        if n == "":
+            continue
+        if n == " ":
+            if prev_space:
+                continue
+            prev_space = True
+        else:
+            prev_space = False
+        for c in n:
+            out.append(c)
+            idx.append(i)
+    return "".join(out), idx
+
+
+_cache: dict[str, tuple[str, list[int]]] = {}
+
+
+def locate(doc_id: str, quote: str) -> Gold:
+    if doc_id not in _cache:
+        _cache[doc_id] = _norm_map(canonical_text(load_elements(doc_id)))
+    norm, idx = _cache[doc_id]
+    q = normalise(quote)
+    q = re.sub(r"\s+", " ", q).strip()
+    i = norm.find(q)
+    if i < 0:
+        raise StageError("gold quote not found in its document's text", item=f"{doc_id}: {quote[:60]!r}")
+    if norm.find(q, i + 1) >= 0:
+        raise StageError("gold quote occurs more than once; lengthen it", item=f"{doc_id}: {quote[:60]!r}")
+    return Gold(doc_id, idx[i], idx[i + len(q) - 1] + 1, quote)
+
+
+def load(path: Path | None = None) -> list[Need]:
+    path = path or config.path("eval/testset/silver-v1.yaml")
+    data = yaml.safe_load(path.read_text(encoding="utf-8"))
+    known = set(config.sources().by_id())
+    needs, seen = [], set()
+    for n in data["needs"]:
+        if n["id"] in seen:
+            raise StageError("duplicate need id", item=n["id"])
+        seen.add(n["id"])
+        if n["kind"] not in KINDS:
+            raise StageError(f"unknown kind {n['kind']!r}", item=n["id"])
+        golds = []
+        for g in n["gold"]:
+            if g["doc_id"] not in known:
+                raise StageError(f"unknown doc_id {g['doc_id']!r}", item=n["id"])
+            if len(g["quote"].split()) < 8:
+                raise StageError("gold quote shorter than 8 words", item=n["id"])
+            golds.append(locate(g["doc_id"], g["quote"]))
+        needs.append(Need(n["id"], n["kind"], n["question"].strip(), tuple(golds), split_of(n["id"])))
+    return needs

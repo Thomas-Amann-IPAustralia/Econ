@@ -1,0 +1,25 @@
+# Raw corpus and build intermediates (hashes are in the manifests)
+data/
+.cache/
+models/
+*.onnx
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.ruff_cache/
+dist/
+build/
+*.egg-info/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Editors and OS
+.DS_Store
+.idea/
+.vscode/

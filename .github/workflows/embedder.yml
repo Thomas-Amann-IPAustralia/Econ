@@ -1,0 +1,33 @@
+name: embedder
+# Builds the embedding image and deploys it to Cloud Run. Run by hand (Actions > embedder > Run workflow).
+# Needs Workload Identity Federation (no keys stored in GitHub) and these repository variables:
+#   GCP_PROJECT, GCP_REGION (e.g. australia-southeast1), GCP_WIF_PROVIDER, GCP_SERVICE_ACCOUNT
+# and the secret EMBEDDER_TOKEN held in Secret Manager as `econ-embedder-token`. See docs/deploy.md.
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+  id-token: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    if: vars.GCP_PROJECT != ''
+    steps:
+      - uses: actions/checkout@v4
+      - uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ vars.GCP_WIF_PROVIDER }}
+          service_account: ${{ vars.GCP_SERVICE_ACCOUNT }}
+      - uses: google-github-actions/setup-gcloud@v2
+      - name: Build and push
+        run: |
+          IMAGE="${{ vars.GCP_REGION }}-docker.pkg.dev/${{ vars.GCP_PROJECT }}/econ/embedder:${GITHUB_SHA::12}"
+          echo "IMAGE=$IMAGE" >> "$GITHUB_ENV"
+          gcloud builds submit --project "${{ vars.GCP_PROJECT }}" --config deploy/embedder/cloudbuild.yaml \
+            --substitutions "_IMAGE=$IMAGE" .
+      - name: Deploy
+        run: |
+          gcloud run deploy econ-embedder --project "${{ vars.GCP_PROJECT }}" --region "${{ vars.GCP_REGION }}" \
+            --image "$IMAGE" --cpu 1 --memory 2Gi --cpu-boost --min-instances 0 --max-instances 2 \
+            --concurrency 8 --timeout 60 --allow-unauthenticated \
+            --set-secrets EMBEDDER_TOKEN=econ-embedder-token:latest

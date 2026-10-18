@@ -1,0 +1,138 @@
+# The corpus registry. One entry per object in the R2 bucket; the fetch stage fails if the two disagree.
+# Identity is the R2 object key (the source's canonical id). doc_id is a stable, readable alias used in
+# chunk ids and citations; never change a doc_id once answers cite it.
+# `url` is the authoritative public copy, where one is known; the UI links to it beside the in-app viewer.
+bucket: econ-knowledge
+endpoint: "https://{account_id}.eu.r2.cloudflarestorage.com"
+publisher: IP Australia
+documents:
+  - doc_id: ipr-2015
+    key: 2015_IP_Report.pdf
+    title: Australian Intellectual Property Report 2015
+    year: 2015
+    series: Australian IP Report
+  - doc_id: ipr-2016
+    key: 2016_IP_Report.pdf
+    title: Australian Intellectual Property Report 2016
+    year: 2016
+    series: Australian IP Report
+  - doc_id: ipr-2017
+    key: 2017_IP_Report.pdf
+    title: Australian Intellectual Property Report 2017
+    year: 2017
+    series: Australian IP Report
+  - doc_id: ipr-2018
+    key: 2018_IP_Report.pdf
+    title: Australian Intellectual Property Report 2018
+    year: 2018
+    series: Australian IP Report
+  - doc_id: ipr-2019
+    key: 2019_IP_report.pdf
+    title: Australian Intellectual Property Report 2019
+    year: 2019
+    series: Australian IP Report
+  - doc_id: ipr-2020
+    key: 2020_IP_Report.pdf
+    title: Australian Intellectual Property Report 2020
+    year: 2020
+    series: Australian IP Report
+  - doc_id: ipr-2021
+    key: 2021_IP_Report.pdf
+    title: Australian Intellectual Property Report 2021
+    year: 2021
+    series: Australian IP Report
+  - doc_id: ipr-2022
+    key: 2022_IP_Report.pdf
+    title: Australian Intellectual Property Report 2022
+    year: 2022
+    series: Australian IP Report
+  - doc_id: ipr-2023
+    key: 2023_IP_Report.pdf
+    title: Australian IP Report 2023
+    year: 2023
+    series: Australian IP Report
+  - doc_id: ipr-2024
+    key: 2024_IP_Report.pdf
+    title: Australian IP Report 2024
+    year: 2024
+    series: Australian IP Report
+  - doc_id: ipr-2025
+    key: 2025_IP_Report.pdf
+    title: Australian IP Report 2025
+    year: 2025
+    series: Australian IP Report
+  - doc_id: ipr-2026
+    key: 2026_IP_Report.pdf
+    title: Australian IP Report 2026
+    year: 2026
+    series: Australian IP Report
+  - doc_id: erp01-patent-backlogs
+    key: report-on-patents-backlogs-inventories-and-pendency.pdf
+    title: Report on patent backlogs, inventories and pendency
+    year: 2014
+    series: IP Australia Economic Research Paper 01
+    authors: [Ahmer Iqbal Siddiqui]
+  - doc_id: erp03-market-for-design
+    key: The market for design insights from interviews with Australian firms.pdf
+    title: "The market for design: insights from interviews with Australian firms"
+    year: 2014
+    series: IP Australia Economic Research Paper 03
+    authors: [Kwanghui Lim, Don O'Sullivan, Michael R. Falk]
+  - doc_id: erp04-mining-innovation
+    key: innovation-in-the-mining-industry.pdf
+    title: "The Australian Mining Industry: More than Just Shovels and Being the Lucky Country"
+    year: 2015
+    series: IP Australia Economic Research Paper 04
+    authors: [Emma Francis]
+  - doc_id: erp08-designs-law-practice
+    key: designs-law-and-practice.pdf
+    title: "Designs Law and Practice: Design within Australia and how Australia compares to its international peers"
+    year: 2019
+    series: IP Australia Economic Research Paper 08
+  - doc_id: erp10-ip-profitability-competition
+    key: business-profitability-and-competition-in-the-australian-economy.pdf
+    title: Intellectual property rights, business profitability and competition in the Australian economy
+    year: 2020
+    series: IP Australia Economic Research Paper 10
+    authors: [Haiyang Zhang]
+  - doc_id: erp11-exporters-trade-marks
+    key: exporter-responses-to-shocks-the-role-of-trade-marks-report.pdf
+    title: "Exporter responses to shocks: The role of trade marks"
+    year: 2021
+    series: IP Australia Economic Research Paper 11
+    authors: [Michael R. Falk]
+  - doc_id: oce-ai-investment
+    key: Drivers_of_AI_investment_report (1).pdf
+    title: Drivers of AI investment
+    year: 2023
+    series: Office of the Chief Economist report
+    authors: [Steve J. Bickley, Ho Fai Chan, Uwe Dulleck, Benno Torgler]
+  - doc_id: erp14-raising-the-bar
+    key: Raising the Bar reforms - Measuring the impact on relative patent scope.pdf
+    title: "Raising the Bar reforms: Measuring the impact on relative patent scope"
+    year: 2024
+    series: IP Australia Economic Research Paper 14
+    authors: [Trevor Kollmann, Alfons Palangkaraya, Aneeq Sarwar, Elizabeth Webster, Corrine Anglim, Michael Falk]
+  - doc_id: erp15-patenting-firms
+    key: The business environment of patenting firms in Australia.pdf
+    title: The business environment of patenting firms in Australia
+    year: 2024
+    series: IP Australia Economic Research Paper 15
+    authors: [Flavio Menezes, Tina Rampino, Martie-Louise Verreynne]
+  - doc_id: erp16-cii-patent-trends
+    key: Computer implemented inventions 12NOV24.pdf
+    title: "Computer implemented inventions: patent trends at IP Australia, EPO and USPTO"
+    year: 2024
+    series: IP Australia Economic Research Paper 16
+    authors: [Michael Falk, Sarah Hegarty, Trevor Kollmann, Alfons Palangkaraya, Elizabeth Webster]
+  - doc_id: note-patenting-structural-change
+    key: The structural change in patenting behaviour in Australia Analytic Note.pdf
+    title: The structural change in patenting behaviour in Australia
+    year: 2024
+    series: Office of the Chief Economist analytic note
+  - doc_id: note-tm-leading-indicator
+    key: Evaluating trade marks as a leading economic indicator of the Australian business cycle.pdf
+    title: Evaluating trade marks as a leading economic indicator of the Australian business cycle
+    year: 2025
+    series: Office of the Chief Economist analytic note
+    authors: [Kevin Nguyen, Ye Rin Yoo, Michael Falk]

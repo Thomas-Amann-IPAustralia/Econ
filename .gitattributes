@@ -1,0 +1,6 @@
+*.npy binary
+*.npz binary
+*.sqlite binary
+*.parquet binary
+library/** linguist-generated=true
+eval/runs/** linguist-generated=true
