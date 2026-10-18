@@ -18,5 +18,10 @@
     "schema": "plan",
     "schema_sha256": "ab394bace1984c1e",
     "sha256": "50ae3b3a64aaa983"
+  },
+  "plan-v3": {
+    "schema": "plan",
+    "schema_sha256": "ab394bace1984c1e",
+    "sha256": "f541f68cf35b4764"
   }
 }
