@@ -1,0 +1,56 @@
+{
+ "cost_usd": 0.001765,
+ "data": [
+  {
+   "grade": 0,
+   "id": "p1"
+  },
+  {
+   "grade": 0,
+   "id": "p2"
+  },
+  {
+   "grade": 0,
+   "id": "p3"
+  },
+  {
+   "grade": 0,
+   "id": "p4"
+  },
+  {
+   "grade": 0,
+   "id": "p5"
+  },
+  {
+   "grade": 0,
+   "id": "p6"
+  },
+  {
+   "grade": 0,
+   "id": "p7"
+  },
+  {
+   "grade": 0,
+   "id": "p8"
+  },
+  {
+   "grade": 0,
+   "id": "p9"
+  }
+ ],
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "judge:judge-v1:gemini-3.8-flash",
+ "schema_name": "grades",
+ "tag": "ipr23-5",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00353,
+  "input": 4017,
+  "model": "gemini-3.8-flash",
+  "output": 138,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}
