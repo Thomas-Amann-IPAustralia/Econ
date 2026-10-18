@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000714,
+ "data": {
+  "reason": "Both answers provide the exact same facts, figures, and details, addressing all aspects of the prompt cleanly and concisely with fully supported claims. There is no meaningful difference in quality between the two.",
+  "winner": "tie"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "ipr21-1:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001429,
+  "input": 1666,
+  "model": "gemini-3.8-flash",
+  "output": 48,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

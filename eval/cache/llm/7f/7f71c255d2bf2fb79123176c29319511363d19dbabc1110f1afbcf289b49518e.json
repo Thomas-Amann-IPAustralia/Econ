@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000371,
+ "data": {
+  "reason": "Both answers directly and accurately answer the question using the exact same quote. Answer B is slightly better as it helpfully attributes the fact to the specific source document (the 2023 Australian IP Report).",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "ipr22-2:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000743,
+  "input": 726,
+  "model": "gemini-3.8-flash",
+  "output": 53,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

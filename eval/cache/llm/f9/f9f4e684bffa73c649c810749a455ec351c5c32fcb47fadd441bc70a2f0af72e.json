@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000718,
+ "data": {
+  "reason": "Answer B is more thorough and directly answers the question about which years (plural) the reforms took effect, citing the specific study text that identifies 2013 and 2014 as the relevant examination-request years. It also provides the exact effective date from the legislation.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "erp14-3:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001436,
+  "input": 715,
+  "model": "gemini-3.8-flash",
+  "output": 240,
+  "reasoning": 172,
+  "seconds": 0.0
+ }
+}

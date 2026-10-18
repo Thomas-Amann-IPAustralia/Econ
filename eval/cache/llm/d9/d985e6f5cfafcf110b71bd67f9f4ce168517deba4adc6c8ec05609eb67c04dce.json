@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.00092,
+ "data": {
+  "reason": "Both answers accurately address the question using supported claims from the reports. Answer A is slightly better because it includes the specific empirical indicator requested by the narrative (non-use removal statistics) to illustrate how low the rate of cluttering was found to be.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-synthesis-10:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00184,
+  "input": 2153,
+  "model": "gemini-3.8-flash",
+  "output": 60,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

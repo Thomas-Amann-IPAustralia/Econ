@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000536,
+ "data": {
+  "reason": "Answer A directly answers the question with specific performance metrics and details about the best-performing model found in the publications, while carefully noting that the score reported is F1 rather than percentage accuracy. Answer B incorrectly claims that no numerical accuracy or F1-scores were reported.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "erp14-2:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001073,
+  "input": 1111,
+  "model": "gemini-3.8-flash",
+  "output": 64,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

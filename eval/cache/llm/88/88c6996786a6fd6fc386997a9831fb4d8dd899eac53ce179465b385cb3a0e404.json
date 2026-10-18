@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001579,
+ "data": {
+  "reason": "Both answers are very well-structured and thoroughly supported by quotes. Answer A is slightly better as it includes richer empirical context from the reports regarding Australian AI patent counts, global share, and specific company applications, while Answer B introduces general statements about patents from 2024 that are not AI-specific.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "multi-7:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.003158,
+  "input": 3850,
+  "model": "gemini-3.8-flash",
+  "output": 72,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.00066,
+ "data": {
+  "reason": "Both answers accurately explain that the drop in standard patent applications was due to filings being brought forward into 2013 prior to the Raising the Bar reforms taking effect. Answer A is slightly better because it highlights the important caveat in the source that the decrease 'may be attributed' to the reforms, properly preserving the qualification from the evidence.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "ipr15-1:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00132,
+  "input": 1370,
+  "model": "gemini-3.8-flash",
+  "output": 78,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.00109,
+ "data": {
+  "reason": "Both answers are very well supported by their cited quotes and cover the primary industry-level findings and caveats. Answer B is superior because it explicitly addresses the narrative's prompt regarding patent scope as a competition issue, drawing on relevant findings from both the 2024 and 2026 reports.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-evidence-4:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00218,
+  "input": 2547,
+  "model": "gemini-3.8-flash",
+  "output": 72,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

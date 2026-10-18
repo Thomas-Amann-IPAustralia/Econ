@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000766,
+ "data": {
+  "reason": "Answer B has much more up-to-date and directly comparable evidence for PCT use, providing figures from the 2026 report covering 2023 and 2024 rather than relying on figures from 2017 as Answer A does. Both answers accurately note the absence of usage statistics for the Hague system.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-policy-7:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001532,
+  "input": 1642,
+  "model": "gemini-3.8-flash",
+  "output": 80,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

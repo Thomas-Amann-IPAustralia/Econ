@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000622,
+ "data": {
+  "reason": "Both answers provide the same core facts and figures, directly answering the question with accurate supporting quotes. Answer B is slightly better structured with clear bullet points and explicitly supports the comparison between 2024 volume leaders and intensity leaders with its evidence.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "erp15-4:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001244,
+  "input": 1329,
+  "model": "gemini-3.8-flash",
+  "output": 66,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

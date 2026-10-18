@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000929,
+ "data": {
+  "reason": "Both answers accurately cover the relevant evidence across the reports. Answer B is slightly better as it includes additional helpful context regarding the treaty ratification requirements and carefully frames its potential benefits as intended rather than established outcomes.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-policy-8:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001859,
+  "input": 2229,
+  "model": "gemini-3.8-flash",
+  "output": 50,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

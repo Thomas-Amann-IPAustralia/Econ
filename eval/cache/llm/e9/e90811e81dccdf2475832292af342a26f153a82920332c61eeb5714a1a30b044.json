@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000891,
+ "data": {
+  "reason": "Answer A directly addresses the specific context of 'first trade mark filing' using the matched descriptive comparison from the 2022 report, whereas Answer B omits this finding. Answer A also accurately distinguishes between first filings and first grants while contextualizing the caveats effectively.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-synthesis-1:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001781,
+  "input": 2055,
+  "model": "gemini-3.8-flash",
+  "output": 64,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

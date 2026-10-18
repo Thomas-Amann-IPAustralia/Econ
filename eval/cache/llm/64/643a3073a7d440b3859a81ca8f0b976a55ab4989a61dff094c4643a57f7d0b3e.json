@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001066,
+ "data": {
+  "reason": "Both answers accurately track the timeline of resident filing shares using well-supported quotes. Answer A is superior because it provides a more comprehensive answer to the broader question on patent applications by also addressing non-standard patent types (provisional and innovation patents), where resident shares differ drastically from standard patents.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-trend-3:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002132,
+  "input": 2503,
+  "model": "gemini-3.8-flash",
+  "output": 68,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

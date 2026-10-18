@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.00044,
+ "data": {
+  "reason": "Both answers accurately and fully answer the question using verified quotes from the provided sources. Answer B is slightly more integrated and concise, but both provide virtually identical information and meet all criteria equally well.",
+  "winner": "tie"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "ipr26-4:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000879,
+  "input": 932,
+  "model": "gemini-3.8-flash",
+  "output": 48,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

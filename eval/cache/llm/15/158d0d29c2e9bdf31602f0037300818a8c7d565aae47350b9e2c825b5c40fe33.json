@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000959,
+ "data": {
+  "reason": "Both answers are very well-matched and draw on the exact same underlying points from IP Australia's research. Answer A is slightly better because its phrasing under the commercialisation bullet point connects directly back to why firms exhibit lower scale-up rates (referencing the 'division of innovative labour' from the source report).",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "note-sc-1:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001919,
+  "input": 2189,
+  "model": "gemini-3.8-flash",
+  "output": 74,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

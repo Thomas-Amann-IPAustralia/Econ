@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001494,
+ "data": {
+  "reason": "Answer B is significantly more thorough and covers a wider range of data sources mentioned in the narrative, including overseas patent and trade mark offices (USPTO, CIPO, EUIPO, UKIPO), international statistical databases (WIPO, PATSTAT, OECD REGPAT), web/commercial data (Google Patents, BigQuery), and specific ABS surveys. Answer A is much more limited in scope.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-methods-4:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002987,
+  "input": 3538,
+  "model": "gemini-3.8-flash",
+  "output": 89,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

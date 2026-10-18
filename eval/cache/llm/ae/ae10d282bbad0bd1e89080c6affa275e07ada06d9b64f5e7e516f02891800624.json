@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000556,
+ "data": {
+  "reason": "Both answers accurately extract the exact same findings from the source text and present them clearly. Answer A is slightly better organized with distinct headings/bulleted sections distinguishing the absolute leaders from the growth followers, though both are exceptionally well-aligned with the prompt.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "erp08-2:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001112,
+  "input": 1183,
+  "model": "gemini-3.8-flash",
+  "output": 60,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

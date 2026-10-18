@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000859,
+ "data": {
+  "reason": "Answer A provides a more comprehensive and specific answer, incorporating quantitative details on design IP intensity, design labour intensity, and ICT-related designs (as specifically mentioned in the narrative). It also provides specific metrics and context regarding the OECD vs. IP data on university-industry collaboration.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-strategy-1:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001718,
+  "input": 1966,
+  "model": "gemini-3.8-flash",
+  "output": 65,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

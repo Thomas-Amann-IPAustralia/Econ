@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000692,
+ "data": {
+  "reason": "Both answers accurately explain the primary reason for the drop in standard patent applications between 2013 and 2014 using sound evidence. Answer A is slightly better because it includes the explicit reasoning from the source that the 2013 spike reflected early filings that otherwise would have been filed in 2014, as well as the context that filings reverted to trend in 2015.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "ipr15-1:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001384,
+  "input": 1370,
+  "model": "gemini-3.8-flash",
+  "output": 95,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

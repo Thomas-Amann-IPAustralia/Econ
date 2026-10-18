@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001517,
+ "data": {
+  "reason": "Both answers cover the core material well, but Answer B is more comprehensive and detailed. It includes specific data on how the gender gap varies across technology fields (such as biotechnology and pharmaceuticals), cites reported contributing factors (funding disparities, under-crediting), and includes findings on first-time versus repeat patenting.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-synthesis-6:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.003035,
+  "input": 3687,
+  "model": "gemini-3.8-flash",
+  "output": 72,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

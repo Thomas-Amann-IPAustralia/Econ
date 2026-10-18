@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001357,
+ "data": {
+  "reason": "Answer B directly answers how AI-related inventions are showing up in patent filings, giving specific company examples, technology sectors, and applicant details (including recent 2024 data on Canva). Answer A strays into discussing AI as a tool for filing patents (e.g. self-filing provisional applications), which is about the drafting process rather than AI-related inventions.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-trend-11:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002715,
+  "input": 3185,
+  "model": "gemini-3.8-flash",
+  "output": 87,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

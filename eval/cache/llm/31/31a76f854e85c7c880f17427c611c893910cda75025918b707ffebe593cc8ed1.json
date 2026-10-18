@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001199,
+ "data": {
+  "reason": "Both answers address the prompt accurately and structure the information well. Answer B is slightly better as it includes additional context on why the system needed reform (incorporating evidence on usability, business-model fit, and administrative friction) and supports its observation regarding the Hague Agreement's implementation status by noting that the 2024 report still cites a 10-year maximum protection term.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-policy-3:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002398,
+  "input": 2757,
+  "model": "gemini-3.8-flash",
+  "output": 88,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

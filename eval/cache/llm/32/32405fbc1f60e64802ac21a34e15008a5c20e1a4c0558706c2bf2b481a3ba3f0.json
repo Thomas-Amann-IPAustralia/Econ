@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000812,
+ "data": {
+  "reason": "Both answers accurately capture the overall figures from 2001–02 to 2015–16 and note the discrepancy with the 2020 report. Answer B is slightly better as it includes additional relevant data for SMEs extending up to 2017, providing fuller coverage of the question.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "erp10-1:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001623,
+  "input": 1779,
+  "model": "gemini-3.8-flash",
+  "output": 77,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000542,
+ "data": {
+  "reason": "Both answers accurately convey the exact figures and appropriate statistical caveats from the study. Answer A is slightly better because it specifies the precise tariff scenario from the source (a tariff cut from 10 per cent to zero) and explicitly quantifies the difference (roughly 39 percentage points more).",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "erp11-1:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001084,
+  "input": 1100,
+  "model": "gemini-3.8-flash",
+  "output": 69,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

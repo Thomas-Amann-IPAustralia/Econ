@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000349,
+ "data": {
+  "reason": "Both answers directly, accurately, and concisely answer the question using the exact same quote from the source material. Neither answer provides a meaningful advantage over the other.",
+  "winner": "tie"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "ipr22-2:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000698,
+  "input": 726,
+  "model": "gemini-3.8-flash",
+  "output": 41,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

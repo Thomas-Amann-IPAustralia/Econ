@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000943,
+ "data": {
+  "reason": "Both answers address the prompt accurately and draw on the same core points. Answer B is slightly better because its third bullet point directly links the acquisition and division of innovative labour to lower scale-up rates, using quotes that explicitly frame this strategic choice as an explanation for observed trends.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "note-sc-1:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001886,
+  "input": 2189,
+  "model": "gemini-3.8-flash",
+  "output": 65,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

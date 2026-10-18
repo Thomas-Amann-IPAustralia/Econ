@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001135,
+ "data": {
+  "reason": "Both answers accurately explain how IP records (IPLORD) are linked to firm performance data in BLADE via ABNs. Answer B is superior because it provides richer detail on the linkage mechanisms and business performance variables, including name-matching with TM-LINK, export data, and linked employer–employee data.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-methods-1:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002269,
+  "input": 2665,
+  "model": "gemini-3.8-flash",
+  "output": 72,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

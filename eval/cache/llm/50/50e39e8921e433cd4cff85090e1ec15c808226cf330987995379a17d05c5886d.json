@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001076,
+ "data": {
+  "reason": "Both answers are well-supported by quotes and directly address the question. Answer A is slightly better because its characterisation of procedural flexibility—noting that small businesses often benefit from strategic delays to secure funding and partners rather than simply fast examination—more accurately captures the policy insight from the 2025 research.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-strategy-3:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002153,
+  "input": 2506,
+  "model": "gemini-3.8-flash",
+  "output": 73,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

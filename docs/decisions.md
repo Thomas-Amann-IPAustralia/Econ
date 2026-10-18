@@ -542,3 +542,30 @@ luna ($0.00006); the notes cost $0.14 once per corpus build, and new documents n
 The owner can reverse any of the three in config.
 
 **Spend:** included in D-012's totals, plus $0.14 OpenAI for the notes.
+
+---
+
+## D-014 — End-to-end answers confirm the adopted retrieval (Claude; 2026-10-18)
+
+**Context.** D-013 adopted retrieval by graded relevance. Grid `answers-v1` (committed at `4f4218e` before any
+answer) asked whether the answers improve too. 60 test needs (all 33 exploratory, a seeded 27 silver), each
+answered by gpt-6.1-sol (medium effort, answer-v1, Flex tier) on the service today (A) and on the adopted
+retrieval (B). Report `reports/answers-v1.md`; runs in `eval/runs/answers/`.
+
+**Results.**
+- **The check:** 60/60 passed on both; B needed the retry once. No answer was `not_in_kb`; complete 47 against 52.
+- **Grounding** (the judgments cover every cited passage): distinct relevant passages cited per answer 3.28
+  to 3.78 (+0.50 [+0.10, +0.93]); on exploratory needs 4.24 to 5.00 (+0.76 [+0.18, +1.39]). Silver answers
+  citing the gold passage: 52% to 78% (+0.26 [+0.07, +0.44]). Cost per answer unchanged ($0.011 on Flex).
+- **Preference, two judges from other families, blind:** gemini-3.8-flash in both orders (a preference counts only
+  when both agree) preferred B on 28 needs and A on 16 (p = 0.096); on the exploratory needs 19 to 7 (p = 0.029);
+  on silver lookups 9 to 9. Claude, reading the 33 exploratory pairs blind in a seeded order: B 18, A 6, 9 ties
+  (p = 0.023). Where both judges stated a preference (20 pairs), they agreed on all 20.
+
+**Decision.** Confirmed under the rule fixed in advance. The service's retrieval stays as adopted in D-013.
+
+**Not shown.** The judges see each answer and its verified quotes, not the corpus, so they judge how well an
+answer reports what it found. One answer model at one effort; the model choice (SOP §20.5) is still open.
+
+**Spend:** OpenAI $1.35 for the 120 answers (Flex); Gemini $0.11 for the pairwise judge. Totals: OpenAI $1.63,
+Gemini $1.86.

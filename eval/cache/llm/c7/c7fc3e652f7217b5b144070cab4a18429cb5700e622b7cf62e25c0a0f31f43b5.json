@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000929,
+ "data": {
+  "reason": "Both answers accurately report the 11.6–12.0 percentage point reduction in grant probability from the 2024 study. Answer A is superior because its source material includes the conditional results regarding filing behaviour across different applicant countries (Australia and Japan), directly addressing filing effects, whereas Answer B lacked those results and had to report a gap.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-policy-4:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001859,
+  "input": 2069,
+  "model": "gemini-3.8-flash",
+  "output": 82,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

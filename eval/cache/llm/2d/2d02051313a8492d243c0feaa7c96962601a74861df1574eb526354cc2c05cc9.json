@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000568,
+ "data": {
+  "reason": "Both answers accurately cite the key study linking patents to Australia's economic growth between 1947 and 2010. Answer A is slightly better as it adds useful context on how IP Australia interprets causal versus correlational findings on economic outcomes in its reports.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "ipr25-3:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001136,
+  "input": 1189,
+  "model": "gemini-3.8-flash",
+  "output": 65,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

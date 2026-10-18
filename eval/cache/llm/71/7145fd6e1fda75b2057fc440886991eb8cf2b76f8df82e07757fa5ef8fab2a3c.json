@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001406,
+ "data": {
+  "reason": "Answer A includes more recent data through 2025 (from the 2026 report), whereas Answer B's latest aggregate figures only go up to 2024. Both answers accurately represent their quoted sources, but Answer A provides a more complete and up-to-date picture of application trends, crop breakdowns, and leading origin countries.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-trend-6:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002812,
+  "input": 3329,
+  "model": "gemini-3.8-flash",
+  "output": 84,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

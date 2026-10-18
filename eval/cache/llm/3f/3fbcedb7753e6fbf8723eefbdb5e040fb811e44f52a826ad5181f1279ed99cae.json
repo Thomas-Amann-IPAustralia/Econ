@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000905,
+ "data": {
+  "reason": "Both answers accurately address the question and narrative using well-supported claims. Answer A is slightly better structured, opening with a direct answer to the two-part question and comprehensively listing all key firm attributes (size, age, location, and existing capacity) noted in the evidence.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-synthesis-4:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001809,
+  "input": 2087,
+  "model": "gemini-3.8-flash",
+  "output": 65,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

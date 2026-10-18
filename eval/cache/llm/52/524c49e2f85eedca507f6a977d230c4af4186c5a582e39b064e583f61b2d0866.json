@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000411,
+ "data": {
+  "reason": "Answer A provides a more comprehensive answer grounded in the sources, noting both the period (2013 and 2014) identified in the study's data as when the reforms took effect and the exact cutoff date (after 12 April 2013). Answer B is accurate but less complete.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "erp14-3:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000821,
+  "input": 715,
+  "model": "gemini-3.8-flash",
+  "output": 76,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

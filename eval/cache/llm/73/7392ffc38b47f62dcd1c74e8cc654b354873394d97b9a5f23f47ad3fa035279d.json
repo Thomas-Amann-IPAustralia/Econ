@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000319,
+ "data": {
+  "reason": "Both answers directly, accurately, and concisely answer the question using clear citations supported by direct quotes from IP Australia publications. Because they convey the identical information with equal precision, there is no meaningful difference between them.",
+  "winner": "tie"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "ipr17-5:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000638,
+  "input": 595,
+  "model": "gemini-3.8-flash",
+  "output": 51,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

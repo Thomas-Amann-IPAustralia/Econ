@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000834,
+ "data": {
+  "reason": "Answer A is more comprehensive and informative. While both answers capture the 2001–02 to 2015–16 research paper data and the apparent discrepancy in the 2020 IP Report, Answer A correctly notes the distinction between filing and ownership and incorporates valuable newer data from the 2022 report on SMEs through 2017.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "erp10-1:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001668,
+  "input": 1779,
+  "model": "gemini-3.8-flash",
+  "output": 89,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

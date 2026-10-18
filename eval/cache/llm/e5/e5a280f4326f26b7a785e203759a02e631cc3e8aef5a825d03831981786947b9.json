@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000583,
+ "data": {
+  "reason": "Both answers accurately identify LinkedIn job advertisements and the specific dates of collection. Answer A provides helpful additional context on the sources used to identify AI skills (the Stanford AI Index 2022 report) and the nature of the dataset as a snapshot in time.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "oce-ai-4:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001165,
+  "input": 1243,
+  "model": "gemini-3.8-flash",
+  "output": 62,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

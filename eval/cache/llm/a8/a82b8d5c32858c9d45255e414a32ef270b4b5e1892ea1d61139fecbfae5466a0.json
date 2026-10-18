@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.00071,
+ "data": {
+  "reason": "Both answers directly answer the prompt with strong evidence from IP Australia reports. Answer B is slightly more comprehensive and provides concrete contextual details and examples explaining why administrative timing causes swings across different reporting years.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "ipr26-5:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001421,
+  "input": 1654,
+  "model": "gemini-3.8-flash",
+  "output": 48,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

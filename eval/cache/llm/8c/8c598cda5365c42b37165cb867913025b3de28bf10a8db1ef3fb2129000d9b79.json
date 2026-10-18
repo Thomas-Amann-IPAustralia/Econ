@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001089,
+ "data": {
+  "reason": "Both answers accurately present the primary statistics comparing SME and large firm IP ownership. Answer A is stronger because it includes dynamic trends over time and specifically addresses how the commercialisation use-cases of patents differ between small and large businesses, directly answering the question of how they differ in their 'use' of IP.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-compare-1:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002179,
+  "input": 2550,
+  "model": "gemini-3.8-flash",
+  "output": 71,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

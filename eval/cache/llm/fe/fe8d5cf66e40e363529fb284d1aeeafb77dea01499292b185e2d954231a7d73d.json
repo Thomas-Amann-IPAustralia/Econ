@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.00103,
+ "data": {
+  "reason": "Answer B directly and comprehensively answers the question by identifying multiple specific econometric methods used by IP Australia's economists (Difference-in-Differences, matched event studies, fixed-effects panel models, and GMM), backed by extensive verbatim quotes. Answer A incorrectly claims that the evidence does not name specific statistical estimators.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "multi-1:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00206,
+  "input": 2386,
+  "model": "gemini-3.8-flash",
+  "output": 72,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

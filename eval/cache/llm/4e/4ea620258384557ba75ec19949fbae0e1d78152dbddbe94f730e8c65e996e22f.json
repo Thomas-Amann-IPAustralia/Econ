@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000654,
+ "data": {
+  "reason": "Both answers accurately address the question using identical evidence and caveats. Answer B is slightly better as it spells out the METS acronym (mining equipment, technology and services), making the response clearer for the reader.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "erp04-2:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001307,
+  "input": 898,
+  "model": "gemini-3.8-flash",
+  "output": 169,
+  "reasoning": 118,
+  "seconds": 0.0
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000403,
+ "data": {
+  "reason": "Both answers accurately extract the reasons from the source quote. Answer B is slightly more tailored to the specific question about driverless trucks by focusing on haulage truck drivers rather than extraneous train-driving jobs, though Answer A captures the quote slightly more completely. Overall, they provide virtually identical quality and accuracy.",
+  "winner": "tie"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "erp04-3:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000806,
+  "input": 725,
+  "model": "gemini-3.8-flash",
+  "output": 70,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000583,
+ "data": {
+  "reason": "Both answers accurately address the question using findings from the 2024 study on patent retirement and high turnover growth. Answer B is slightly better because it provides helpful context on how 'high growth' was defined (at least 20 per cent annualised turnover growth over three consecutive financial years) and notes that the models controlled for key firm characteristics.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "erp15-2:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001166,
+  "input": 1150,
+  "model": "gemini-3.8-flash",
+  "output": 81,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

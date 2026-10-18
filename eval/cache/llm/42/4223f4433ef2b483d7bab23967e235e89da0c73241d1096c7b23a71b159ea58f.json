@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000427,
+ "data": {
+  "reason": "Both answers accurately address the question using supported quotes from the publications. Answer A is slightly clearer and more direct in how it structures the explanation, integrating the 'in use' condition naturally into the rule rather than framing it as a specific report qualification.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "ipr19-1:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000853,
+  "input": 842,
+  "model": "gemini-3.8-flash",
+  "output": 59,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

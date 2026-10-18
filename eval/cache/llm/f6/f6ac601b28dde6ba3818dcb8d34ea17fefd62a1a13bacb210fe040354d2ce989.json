@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000914,
+ "data": {
+  "reason": "Answer B provides a much more direct comparison across all three rights, specifically defining the subject matter, registration requirements, and duration/scope for trade marks, designs, and copyright. It clearly highlights how they intersect around visual material such as logos, packaging, and artwork.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "owner-3:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001827,
+  "input": 2121,
+  "model": "gemini-3.8-flash",
+  "output": 63,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

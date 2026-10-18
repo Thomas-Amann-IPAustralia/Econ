@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000565,
+ "data": {
+  "reason": "Both answers accurately extract the relevant correlation between patent retirement and lower growth, while appropriately noting that correlation does not imply causation and addressing the terminological gap regarding 'lapsing'. Answer A is slightly better as it provides helpful context on how 'high growth' was specifically measured and the controls included in the model.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "erp15-2:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001129,
+  "input": 1150,
+  "model": "gemini-3.8-flash",
+  "output": 71,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001337,
+ "data": {
+  "reason": "Both answers are very well-supported and clearly structured. Answer B is slightly better as it provides the global context (including the worldwide patent family count) alongside Australian figures, and brings in the findings on AI-adopting firms' patenting classes, directly addressing the question and narrative more completely.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-trend-11:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002674,
+  "input": 3185,
+  "model": "gemini-3.8-flash",
+  "output": 76,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000779,
+ "data": {
+  "reason": "Both answers accurately address the question using identical core evidence from IP Australia publications. Answer A is slightly better because its caveat about causality directly cites IP Australia's explicit methodological statements regarding selection effects and lack of pure causality, rather than inferring the caveat from phrasing like 'regression model' or 'forward indicator'.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "multi-4:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001557,
+  "input": 1716,
+  "model": "gemini-3.8-flash",
+  "output": 72,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

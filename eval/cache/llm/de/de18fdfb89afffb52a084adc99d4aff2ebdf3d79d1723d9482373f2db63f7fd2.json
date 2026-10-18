@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000932,
+ "data": {
+  "reason": "Answer B directly addresses the core of the question—how these rights intersect and complement one another—by citing research on bundling multiple IP rights and cross-jurisdictional rules regarding copyright-design overlap. Answer A largely just defines the three rights separately and speculates on potential intersections.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "owner-3:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001865,
+  "input": 2121,
+  "model": "gemini-3.8-flash",
+  "output": 73,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000909,
+ "data": {
+  "reason": "Answer B is more complete, as it includes the econometric findings on filing behaviour (covering Australian and Japanese applicants) which Answer A lacked. Both answers accurately report the 11.6 to 12.0 percentage point reduction in grant probability, but Answer B provides a fuller picture of the evidence.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-policy-4:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001818,
+  "input": 2069,
+  "model": "gemini-3.8-flash",
+  "output": 71,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}
