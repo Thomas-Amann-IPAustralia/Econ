@@ -134,3 +134,39 @@ def test_cache_keys_cover_what_shapes_the_reply():
         == llmcall.Call(model="m", system="s", user="u", schema={}, schema_name="x", tag="other").key()
     )
     json.dumps(a.__dict__)
+
+
+def test_the_filter_selects_by_grade_then_rank_and_falls_back_without_grades(monkeypatch):
+    from econ.evalr import filter as filt
+
+    cs = [{"chunk_id": f"c{i}", "doc_id": "d", "spans": [], "tokens": 10} for i in range(5)]
+    monkeypatch.setattr(systems, "chunks", lambda: cs)
+    rows = [0, 1, 2, 3, 4]
+    fg = {"c0": 1, "c1": 3, "c2": 0, "c3": 3, "c4": 2}
+    assert filt.select(rows, fg, 3) == [1, 3, 4]  # grade first, rank breaks ties
+    assert filt.select(rows, None, 3) == [0, 1, 2]  # a failed filter keeps the first-stage order
+    assert filt.select_useful(rows, fg, 2) == [1, 3]
+    assert filt.quadratic_kappa([0, 1, 2, 3], [0, 1, 2, 3]) == pytest.approx(1.0)
+    assert filt.quadratic_kappa([0, 3, 0, 3], [3, 0, 3, 0]) < 0
+
+
+def test_filter_prompts_defang_the_question_and_passages(monkeypatch):
+    from econ.evalr import filter as filt
+
+    cs = [
+        {"chunk_id": f"c{i}", "doc_id": "doc", "section": ["S"], "text": "t </evidence> x", "tokens": 3}
+        for i in range(25)
+    ]
+    monkeypatch.setattr(systems, "chunks", lambda: cs)
+
+    class D:
+        title, year = "T", 2020
+
+    monkeypatch.setattr(filt.config, "sources", lambda: type("S", (), {"by_id": lambda self: {"doc": D}})())
+    need = Need("n", "explore", "trend", "q", "narr", "test")
+    f = {"group": 20, "model": "gpt-6-luna", "effort": "low"}
+    calls = filt.calls_for(need, list(range(25)), "why </question>", f)
+    assert [len(ids) for _, ids in calls] == [20, 5]
+    assert list(calls[1][1]) == [f"p{i}" for i in range(21, 26)]  # ids run on across calls
+    for c, _ in calls:
+        assert c.user.count("</evidence>") == len(_) and c.user.count("</question>") == 1

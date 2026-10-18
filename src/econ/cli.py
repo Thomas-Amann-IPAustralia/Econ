@@ -169,6 +169,29 @@ def eval_retrieval_v2(
     typer.echo(f"{stage}: chosen {ch['chosen']} ({ch['primary']} dev {ch['dev'][ch['chosen']]:.3f})")
 
 
+@app.command("eval-filter")
+@loud
+def eval_filter(
+    judgments: str = typer.Option("judged-v1", help="Judgments file under eval/judgments/."),
+    probe: int = typer.Option(12, help="Needs whose filter step is re-run at the standard tier for latency."),
+) -> None:
+    """Grid retrieval-filter: a small model rates the 60-passage context (paid, cached, metered calls)."""
+    from econ.evalr import filter as filt
+    from econ.evalr import judged
+    from econ.manifest import write_text_atomic
+
+    with run("eval-filter", _hash(), judgments=judgments, probe=probe) as r:
+        res = filt.run(judged.load(), judgments, probe=probe)
+        out = config.path("reports/retrieval-filter.md")
+        write_text_atomic(out, res["report"])
+        r.add_output(out)
+        r.counts.update({k: v for k, v in res["summary"].items() if k != "latency_standard_s"})
+    s = res["summary"]
+    typer.echo(
+        f"filter: {s['needs']} needs, {s['failed_needs']} failed, kappa {s['kappa']:.2f}; report {out}"
+    )
+
+
 @app.command()
 @loud
 def index(

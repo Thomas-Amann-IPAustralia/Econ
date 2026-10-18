@@ -1,0 +1,27 @@
+# A relevance filter: a small model reads the 60-passage context and the answer model gets the best 20.
+# Committed before any filter call. A measurement that ends in a recommendation to the owner.
+grid: retrieval-filter
+testset: [eval/testset/silver-v1.yaml, eval/testset/explore-v1.yaml]
+judgments: judged-v1        # the 60-passage contexts are fully judged (grid retrieval-depth): no top-up
+needs: test                 # 92 (59 silver, 33 exploratory)
+input: plan+q:luna-plan-v2/enriched/none at 60 passages (cap 8)   # the depth grid's contexts
+filter:
+  prompt: prompts/eval/filter-v1.md   # sees the plan's standalone question, not the judge's narrative
+  model: gpt-6-luna                   # another family than the judge (gemini-3.8-flash)
+  effort: low
+  group: 20                           # passages per call, in rank order; a need's calls run in parallel
+  tier: flex                          # for cost; latency measured on a standard-tier probe (12 needs)
+selection:
+  primary: by filter grade (3, 2, 1, 0), ties by rank; the first 20
+  secondary: the passages graded 2-3 by the filter, in rank order, up to 40 (a variable-length context)
+  on_failure: a need whose filter call fails keeps the first-stage order (as the service would)
+compare_with: [the adopted 20, the adopted 40 and 60, the oracle filter (judge's grades, 60 to 20)]
+metrics: [rel_recall@20, rel3_recall@20, doc coverage, ndcg@10, ndcg@20, p@20]
+agreement: the filter's grades against the judge's on every passage it read (quadratic kappa; precision
+  and recall of "2 or 3")
+worth_an_end_to_end_test_if: >-
+  On the exploratory test needs, the filtered 20 reach at least 0.59 of the relevant passages (half of the
+  oracle filter's gain over the adopted 0.491); on the silver needs they lose no more than 0.02 against the
+  adopted 0.765; and the filter step (the slowest of a need's parallel calls) has a median standard-tier
+  latency of 5 s or less.
+report: reports/retrieval-filter.md
