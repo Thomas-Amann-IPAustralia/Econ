@@ -1,0 +1,16 @@
+{
+  "baseline": "hybrid",
+  "chosen": "hybrid",
+  "dev": {
+    "bm25": 0.44794003126579457,
+    "dense": 0.5740797270478487,
+    "hybrid": 0.5897406313076411,
+    "rrf": 0.532811056853082,
+    "score-0.5": 0.587339162036778,
+    "score-0.85": 0.5842455689712273
+  },
+  "margin": 0.02,
+  "primary": "ndcg@10",
+  "rule": "Keep the configured hybrid (min-max score fusion, alpha 0.7) unless another lane beats it on dev ndcg@10 by more than 0.02.",
+  "stage": "fusion"
+}

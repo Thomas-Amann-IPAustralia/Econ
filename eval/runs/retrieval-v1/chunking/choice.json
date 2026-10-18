@@ -1,0 +1,15 @@
+{
+  "baseline": "F384",
+  "chosen": "S384-noprefix",
+  "dev": {
+    "F384": 0.6833333333333333,
+    "S256": 0.803030303030303,
+    "S384": 0.7924242424242425,
+    "S384-noprefix": 0.793939393939394,
+    "S512": 0.7530303030303029
+  },
+  "margin": 0.02,
+  "primary": "recall@4k_tok",
+  "rule": "The first strategy, in the listed order, whose dev recall@4k_tok (averaged over the two embedders, hybrid lane) is within 0.02 of the best strategy's.",
+  "stage": "chunking"
+}

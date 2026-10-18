@@ -1,0 +1,24 @@
+{
+  "baseline": "bge-small",
+  "chosen": "arctic-m-v1.5",
+  "dev": {
+    "arctic-l-v2": 0.5885474287412756,
+    "arctic-m-v1.5": 0.5897406313076411,
+    "arctic-s": 0.5353741193618481,
+    "bge-base": 0.568090790525663,
+    "bge-large": 0.5685290296722569,
+    "bge-small": 0.5430401760727315,
+    "granite-r2": 0.5352805479163248,
+    "granite-small-r2": 0.5174458276409518,
+    "gte-modernbert": 0.530145524506934,
+    "leaf-ir": 0.5696397966076443,
+    "minilm-l6": 0.5259579630165822,
+    "modernbert-embed": 0.5577953588040154,
+    "mxbai-large": 0.557142867775522,
+    "qwen3-0.6b": 0.5765073952010515
+  },
+  "margin": 0.02,
+  "primary": "ndcg@10",
+  "rule": "The smallest candidate whose dev ndcg@10 (hybrid lane) is within 0.02 of the best candidate's.",
+  "stage": "embedders"
+}
