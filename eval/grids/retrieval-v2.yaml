@@ -42,3 +42,19 @@ stage2:
 # Reporting: the choice against the baseline on test, with paired bootstrap 95% intervals and Holm-adjusted
 # paired randomisation p-values; by family (silver, explore) and by kind; judged@20 for every setting. Before
 # the final report, any unjudged passage in the chosen setting's test contexts is judged (a top-up).
+
+# --- Amendment 1 (2026-10-18), before any pool judgment; the only grades that existed were the judge
+# pilot's (12 needs, read for agreement, not for any system's score) ---------------------------------
+# The judge pilot (eval/judgments/pilot-*.jsonl; Claude's blind grades of 100 pilot pairs) chose the judge
+# by a rule set before it ran: gemini-3.5-flash-lite only if its quadratic kappa with gemini-3.8-flash was
+# at least 0.6 and its kappa with Claude's grades within 0.1 of Flash's. Lite: 0.83 with Flash, 0.77 with
+# Claude against Flash's 0.92, so Flash judges. At Flash's price ($0.00016 a passage by Batch) the budget
+# cannot judge every system to depth 20 (about 16,000 passages), so:
+amendment_1:
+  judge: gemini-3.8-flash (thinking low, Batch), prompts/eval/judge-v1.md
+  pool_depth: 10        # every system's context, top 10 (the pilot needs keep their depth-20 grades)
+  primary: ndcg@10      # stage 1 chooses on ndcg@10 (dev), where every system is fully judged
+  topup: >-
+    after the choice, ranks 11-20 of the chosen setting and the baseline are judged on all needs, and the
+    test report gives ndcg@20 and rel_recall@20 for both, fully judged
+  reference_rerankers: [gte-mb, ettin-150m]   # granite-r2 dropped to save CPU time and judging cost

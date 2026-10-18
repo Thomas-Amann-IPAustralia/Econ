@@ -50,7 +50,7 @@ def stage1_settings(include_reference: bool = True) -> list[systems.System]:
                 out.append(make(q, t, None if rr == "none" else rr))
     if include_reference:
         # The reference rerankers ran on three first stages only (scratch job, see the progress log).
-        for rr in st["reference_rerankers"]:
+        for rr in spec()["amendment_1"]["reference_rerankers"]:
             for q, t in (("raw", PLAIN), ("plan:luna-plan-v2", ENRICHED), ("raw", ENRICHED)):
                 out.append(make(q, t, rr))
     return out
@@ -90,12 +90,10 @@ def context_rows(s: systems.System, need: Need) -> list[int]:
 
 def pool_systems() -> list[tuple[systems.System, int]]:
     """Every system whose context goes into the pool, with how deep."""
-    out: list[tuple[systems.System, int]] = []
-    for s in stage1_settings():
-        deep = s.query in ("raw", "plan:luna-plan-v1") and s.text == PLAIN and s.reranker is None
-        out.append((s, 20 if deep else 10))
-    out.append((make("raw", "plain", None, lane="bm25"), 10))
-    out.append((make("raw", "plain", None, lane="dense"), 10))
+    k = spec()["amendment_1"]["pool_depth"]
+    out = [(s, k) for s in stage1_settings()]
+    out.append((make("raw", "plain", None, lane="bm25"), k))
+    out.append((make("raw", "plain", None, lane="dense"), k))
     return out
 
 

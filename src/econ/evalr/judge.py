@@ -88,24 +88,35 @@ def requests_for(
 
 
 def parse(reply: dict, ids: dict) -> dict[str, int] | None:
-    """chunk_id -> grade, or None if the reply doesn't grade every passage exactly once."""
+    """chunk_id -> grade, or None if the reply doesn't grade every passage exactly once.
+
+    Batch ignores the response schema (seen in the first batches, as in the reference build's D-027), so
+    the grades come back in several shapes: {"grades": [...]}, a bare list, items keyed "grade" or
+    "score", or a map from passage id to grade. All are read; the exactly-once check still applies."""
     if "error" in reply:
         return None
     data = reply["data"]
-    # Batch ignores the response schema (seen in the first batch, as in the reference build's D-027) and
-    # may return the bare list; both shapes are read, and the exactly-once check below still applies.
-    items = data if isinstance(data, list) else data.get("grades", []) if isinstance(data, dict) else []
-    got = {}
-    for g in items:
-        if not isinstance(g, dict):
-            continue
+    if isinstance(data, dict) and isinstance(data.get("grades"), list | dict):
+        data = data["grades"]
+    pairs: list[tuple] = []
+    if isinstance(data, list):
+        for g in data:
+            if isinstance(g, dict):
+                val = next((g[k] for k in ("grade", "score", "relevance") if k in g), None)
+                pairs.append((g.get("id"), val))
+    elif isinstance(data, dict):
+        pairs = list(data.items())
+    got: dict[str, int] = {}
+    for pid, val in pairs:
         if (
-            g.get("id") in ids
-            and g["id"] not in got
-            and isinstance(g.get("grade"), int)
-            and 0 <= g["grade"] <= 3
+            pid not in ids
+            or pid in got
+            or isinstance(val, bool)
+            or not isinstance(val, int)
+            or not 0 <= val <= 3
         ):
-            got[g["id"]] = g["grade"]
+            return None
+        got[pid] = val
     if set(got) != set(ids):
         return None
     return {ids[k]: v for k, v in got.items()}
