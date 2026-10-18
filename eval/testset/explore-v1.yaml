@@ -1,0 +1,450 @@
+# Exploratory needs v1: broad questions like the owner's prompts (test/prompts/PROMPT_1..5).
+# Written by Claude on 2026-10-18, before any retrieval number on them, from the corpus's section headings
+# (not from individual passages), so the questions use a researcher's words rather than a passage's.
+# Five are the owner's own prompts, verbatim, typos included. Each need has a narrative that tells the
+# judge what a helpful answer must cover and which passages count as relevant. Relevance is graded per
+# passage by a model from another family (Gemini), 0 to 3:
+#   3 directly answers a key part of the need; 2 helps answer part of it; 1 on topic but adds nothing an
+#   answer could use; 0 not relevant. "Relevant" means 2 or 3.
+# `context_file` holds material the user pasted (never evidence); `context` is short pasted material inline.
+# Kinds: methods, evidence, trend, compare, policy, synthesis, strategy, context.
+# Split: by a hash of the id, as in silver-v1 (dev to choose, test to report).
+version: explore-v1
+needs:
+  # --- the owner's prompts -------------------------------------------------------------------------
+  - id: owner-1
+    kind: methods
+    owner: true
+    question: What statistical methods are used by the cheif economist to establish causality?
+    narrative: >-
+      The user wants the econometric or statistical techniques that IP Australia's economic research uses to
+      move from correlation towards causal effects: for example panel fixed effects, instrumental variables,
+      dynamic panel GMM, difference-in-differences, event studies, matching, placebo or falsification tests,
+      lags to address reverse causality, and robustness checks. Relevant passages name or describe such a method
+      as used in a study, or state the study's limits on causal interpretation (correlation, not causation).
+      Passages that only report a result without saying how it was estimated are at most 1.
+  - id: owner-2
+    kind: evidence
+    owner: true
+    question: How sure can we be that the IP system is actually beneficial for innovation?
+    narrative: >-
+      The user wants the evidence on whether IP rights help innovation and economic outcomes, and how strong
+      that evidence is. Relevant passages report measured effects of IP on innovation, productivity, firm
+      growth, profits, exports or collaboration; or discuss costs of IP (competition, cluttering, scope);
+      or state caveats about the evidence (correlation versus causation, samples, data limits, mixed
+      findings). Simple counts of filings with no link to outcomes are at most 1.
+  - id: owner-3
+    kind: compare
+    owner: true
+    question: How is do Trade Marks, Design rights and Copyright intersect?
+    narrative: >-
+      The user wants to know how trade marks, registered designs and copyright relate and overlap: what each
+      protects, how they differ (registration, duration, subject matter) and where they complement each other
+      or overlap (for example a product's appearance, branding, creative works, fashion). Relevant passages
+      define one of these rights in a way that shows its scope relative to the others, or discuss two of them
+      together, or describe firms using more than one. A passage about only one right's filing statistics is
+      at most 1.
+  - id: owner-4
+    kind: context
+    owner: true
+    question: I got the information below from WIPO. Does any of the information in the knowledge base agree or disagree with their findings?
+    context_file: test/prompts/PROMPT_4.txt
+    narrative: >-
+      The pasted material is WIPO's Global Innovation Index 2026 profile of Australia: its GII ranking 2020 to
+      2026, its innovation clusters, recent growth in R&D, venture capital, scientific publications and
+      international patent filings, technology adoption, and its strengths and weaknesses. Relevant passages
+      in the knowledge base give Australia's international standing or rankings (including any GII rank),
+      trends in Australian patent filings at home and abroad, R&D, venture or investment, collaboration,
+      or Australia's innovation strengths and weaknesses relative to other countries. Generic report
+      introductions are at most 1.
+  - id: owner-5
+    kind: strategy
+    owner: true
+    question: Looking at the trends and data within the various documents, what opportunity spaces should IP Australia take advantage of which may not yet be getting explored?
+    narrative: >-
+      The user wants opportunities suggested by the evidence: growing or under-served areas of IP use,
+      gaps between Australia and its peers, groups that under-use IP (SMEs, women, regions, Indigenous
+      knowledge), emerging technologies, new data or tools, and areas the researchers flag for future work or
+      policy. Relevant passages report a trend, gap or finding that points to such an opportunity, or state a
+      policy implication or recommendation. Routine statistics with no pointer to an opportunity are at most 1.
+
+  # --- methods --------------------------------------------------------------------------------------
+  - id: explore-methods-1
+    kind: methods
+    question: How does the Office of the Chief Economist link IP filings to data on how businesses perform?
+    narrative: >-
+      Relevant passages describe linking IP rights records to firm-level data (for example ABS business
+      microdata such as BLADE, ABNs, tax or survey data) and what that linked data allows researchers to study.
+  - id: explore-methods-2
+    kind: methods
+    question: What machine learning approaches has IP Australia's economics team used in its research?
+    narrative: >-
+      Relevant passages describe machine learning or AI models used in the research (for example to measure
+      patent scope, classify patent applications, or check trade mark availability), what they were trained on,
+      and how well they performed.
+  - id: explore-methods-3
+    kind: methods
+    question: How did researchers work out whether Australian patents became narrower after the Raising the Bar reforms?
+    narrative: >-
+      Relevant passages describe how relative patent scope was measured (manual comparison of claims with
+      overseas equivalents, machine learning, word counts) and the empirical strategy used to estimate the
+      reforms' effect.
+  - id: explore-methods-4
+    kind: methods
+    question: What data sources does IP Australia's economic research rely on?
+    narrative: >-
+      Relevant passages name and describe data sources used in the research: IP Australia's own registers and
+      datasets (for example IPGOD, TM-Link, the IP Data Platform), ABS and business microdata, overseas patent
+      offices' data, commercial or web data (for example LinkedIn or Lens), surveys and interviews.
+  - id: explore-methods-5
+    kind: methods
+    question: How is design intensity defined and measured in the research on registered designs?
+    narrative: >-
+      Relevant passages define design IP intensity or design labour intensity, explain how they are calculated,
+      or describe the data and comparisons used.
+  - id: explore-methods-6
+    kind: methods
+    question: what methods did they use to test whether trade marks predict the business cycle
+    narrative: >-
+      Relevant passages describe the analysis of trade mark filings as a leading indicator: turning point
+      analysis, time series methods, the benchmark indicators compared, and what the tests found.
+
+  # --- evidence and its strength ------------------------------------------------------------------
+  - id: explore-evidence-1
+    kind: evidence
+    question: What limitations do the researchers acknowledge in their own studies?
+    narrative: >-
+      Relevant passages state a limitation of a study: data coverage or quality, samples, measurement problems,
+      the inability to establish causation, or results that should be read with caution.
+  - id: explore-evidence-2
+    kind: evidence
+    question: Is there evidence that owning IP rights makes firms more profitable, or do profitable firms just file more IP?
+    narrative: >-
+      Relevant passages report the relationship between IP rights and profitability, and how the research dealt
+      with reverse causality or selection (for example, effects only for already profitable firms, lags, panel
+      methods).
+  - id: explore-evidence-3
+    kind: evidence
+    question: Do trade marks actually help Australian exporters, and how strong is that evidence?
+    narrative: >-
+      Relevant passages report findings on trade marks and export entry, revenue, diversification or responses
+      to tariffs and exchange rates, and any caveats on interpretation.
+  - id: explore-evidence-4
+    kind: evidence
+    question: What does the research say about whether patents and other IP rights reduce competition?
+    narrative: >-
+      Relevant passages report findings on IP rights and market concentration or competition, patent scope as a
+      competition issue, or caveats on those findings.
+  - id: explore-evidence-5
+    kind: evidence
+    question: Can trade mark filings be used to predict recessions in Australia?
+    narrative: >-
+      Relevant passages report whether trade mark filings lead or track the business cycle, how far ahead, how
+      reliably, and with what caveats.
+  - id: explore-evidence-6
+    kind: evidence
+    question: Is university–industry collaboration in Australia really as weak as people say?
+    narrative: >-
+      Relevant passages report evidence on research collaboration between universities and businesses in
+      Australia, international comparisons of it, or outcomes of collaborative research grants.
+
+  # --- trends --------------------------------------------------------------------------------------
+  - id: explore-trend-1
+    kind: trend
+    question: How have standard patent applications in Australia changed over the past decade?
+    narrative: >-
+      Relevant passages give numbers or directions of change in standard patent applications (and grants) in
+      Australia in particular years, with reasons offered for the changes.
+  - id: explore-trend-2
+    kind: trend
+    question: What happened to trade mark filings in Australia during and after COVID-19?
+    narrative: >-
+      Relevant passages report trade mark application numbers or growth in 2020 to 2023 and explanations
+      linked to the pandemic, online retail or the economy.
+  - id: explore-trend-3
+    kind: trend
+    question: How has the share of patent applications filed by Australian residents changed over time?
+    narrative: >-
+      Relevant passages give resident versus non-resident patent filings or shares in particular years, and
+      their direction of change.
+  - id: explore-trend-4
+    kind: trend
+    question: Which countries file the most patents in Australia, and has that shifted recently?
+    narrative: >-
+      Relevant passages name the leading countries of origin for patent applications in Australia in a given
+      year, or report changes in their filings (for example the United States, China, Japan, Europe).
+  - id: explore-trend-5
+    kind: trend
+    question: How has the use of provisional patent applications changed?
+    narrative: >-
+      Relevant passages give provisional application numbers or trends, who files them, or what they are used
+      for.
+  - id: explore-trend-6
+    kind: trend
+    question: What are the trends in plant breeder's rights applications?
+    narrative: >-
+      Relevant passages give PBR application or grant numbers over time, resident versus non-resident shares,
+      leading countries or plant types.
+  - id: explore-trend-7
+    kind: trend
+    question: How have design right filings from overseas applicants changed in recent years?
+    narrative: >-
+      Relevant passages report non-resident or international design applications in Australia, their growth or
+      fall, and leading countries or filing routes (for example the Hague Agreement).
+  - id: explore-trend-8
+    kind: trend
+    question: Are Australians filing more or fewer patents overseas?
+    narrative: >-
+      Relevant passages report Australian patent filings abroad, their destinations and how they changed.
+  - id: explore-trend-9
+    kind: trend
+    question: Which technology fields are growing fastest in Australian patent filings?
+    narrative: >-
+      Relevant passages report growth or decline in patent applications by technology field (for example
+      medical technology, pharmaceuticals, ICT, energy, transport, civil engineering) in Australia.
+  - id: explore-trend-10
+    kind: trend
+    question: whats happened with the innovation patent over the years
+    narrative: >-
+      Relevant passages report innovation patent filings over time, who used them, the review of the
+      innovation patent and its phase-out.
+  - id: explore-trend-11
+    kind: trend
+    question: How are AI-related inventions showing up in patent filings?
+    narrative: >-
+      Relevant passages report patent filings in artificial intelligence, globally or in Australia, their
+      growth, applicants and technology areas.
+  - id: explore-trend-12
+    kind: trend
+    question: How has China's role in Australian IP filings changed?
+    narrative: >-
+      Relevant passages report Chinese applicants' patent, trade mark, design or PBR filings in Australia, their
+      growth or share, or Australian filings in China.
+
+  # --- comparisons ---------------------------------------------------------------------------------
+  - id: explore-compare-1
+    kind: compare
+    question: How do small and large businesses differ in their use of IP rights?
+    narrative: >-
+      Relevant passages compare SMEs and large firms in IP ownership or filing rates, the types of rights they
+      use, or the outcomes associated with IP.
+  - id: explore-compare-2
+    kind: compare
+    question: How does Australia compare with other countries on design IP intensity?
+    narrative: >-
+      Relevant passages compare Australia's design registrations or design intensity with other countries (for
+      example the UK, Sweden, Switzerland) and say how Australia ranks or grows.
+  - id: explore-compare-3
+    kind: compare
+    question: How do outcomes for computer-implemented invention patents at IP Australia compare with Europe and the United States?
+    narrative: >-
+      Relevant passages compare grant rates, filing propensity or pendency of computer-implemented invention
+      (software) patent applications at IP Australia, the EPO and the USPTO.
+  - id: explore-compare-4
+    kind: compare
+    question: Which industries are the most intensive users of IP in Australia?
+    narrative: >-
+      Relevant passages identify industries with high IP ownership or intensity (for example manufacturing,
+      wholesale trade) or how IP use is distributed across industries.
+  - id: explore-compare-5
+    kind: compare
+    question: How do the different IP rights compare in their contribution to the Australian economy?
+    narrative: >-
+      Relevant passages estimate the economic contribution or value of an IP right or its users (copyright
+      industries, PBR users, IP-intensive industries), or compare rights' economic roles.
+  - id: explore-compare-6
+    kind: compare
+    question: Are patenting firms more likely to collaborate, and who do they collaborate with?
+    narrative: >-
+      Relevant passages report collaboration rates of patenting versus other firms, collaboration partners
+      (universities, overseas partners, other firms) and the link between collaboration and IP.
+  - id: explore-compare-7
+    kind: compare
+    question: How do the states and territories differ in patent and trade mark activity?
+    narrative: >-
+      Relevant passages give patent or trade mark applications by Australian state or territory, per capita or
+      in total, and how they compare or changed.
+
+  # --- policy --------------------------------------------------------------------------------------
+  - id: explore-policy-1
+    kind: policy
+    question: What did the Productivity Commission's inquiry into IP arrangements recommend, and what followed?
+    narrative: >-
+      Relevant passages describe the Productivity Commission's inquiry into IP, its recommendations (for example
+      on the innovation patent, inventive step, designs) and the government's or IP Australia's response.
+  - id: explore-policy-2
+    kind: policy
+    question: What were the Raising the Bar reforms and what effect did they have?
+    narrative: >-
+      Relevant passages explain the Raising the Bar reforms (their aims and changes to patentability standards)
+      and report measured effects, for example on patent scope relative to overseas equivalents.
+  - id: explore-policy-3
+    kind: policy
+    question: What changes have been made to the designs system, and why?
+    narrative: >-
+      Relevant passages describe reforms or reviews of the designs system (for example the Designs Review, a
+      grace period, improved protections for designers, international treaties such as the Hague Agreement or
+      the Riyadh Design Law Treaty) and their rationale or expected impact.
+  - id: explore-policy-4
+    kind: policy
+    question: What effect did the 2014 court decisions have on software patent applications in Australia?
+    narrative: >-
+      Relevant passages report how court decisions on patentable subject matter changed grant probabilities or
+      filing behaviour for computer-implemented inventions at IP Australia.
+  - id: explore-policy-5
+    kind: policy
+    question: Is Australia's website blocking scheme for copyright infringement working?
+    narrative: >-
+      Relevant passages report evidence on website blocking, online copyright infringement levels, or unlawful
+      access to copyright content.
+  - id: explore-policy-6
+    kind: policy
+    question: How long does patent examination take at IP Australia, and what options do applicants have to change the timing?
+    narrative: >-
+      Relevant passages report patent pendency or examination timeframes, the examination deferral system,
+      directions to request examination, and options to expedite or delay examination.
+  - id: explore-policy-7
+    kind: policy
+    question: How much do Australians use international filing systems like the PCT, Madrid and Hague?
+    narrative: >-
+      Relevant passages report the use of the PCT, Madrid system or Hague Agreement by Australian or overseas
+      applicants, and their costs, benefits or trends.
+  - id: explore-policy-8
+    kind: policy
+    question: What is IP Australia doing about Indigenous Knowledge in the IP system?
+    narrative: >-
+      Relevant passages describe work, reforms or findings on Indigenous Knowledge and the IP system.
+
+  # --- synthesis across documents ------------------------------------------------------------------
+  - id: explore-synthesis-1
+    kind: synthesis
+    question: What happens to small businesses after they file for IP rights for the first time?
+    narrative: >-
+      Relevant passages report outcomes for SMEs after filing or registering IP: employment, turnover or
+      income growth, productivity, high growth, survival, or scaling up.
+  - id: explore-synthesis-2
+    kind: synthesis
+    question: Is there a link between IP and productivity or wages in Australian firms?
+    narrative: >-
+      Relevant passages report associations between IP rights and productivity (labour productivity, total
+      factor productivity) or wages, with the methods and caveats.
+  - id: explore-synthesis-3
+    kind: synthesis
+    question: Why are fewer patent-holding small firms growing into large firms?
+    narrative: >-
+      Relevant passages report the decline in SMEs scaling into large firms, the shift of patent holdings
+      toward smaller firms, and explanations offered.
+  - id: explore-synthesis-4
+    kind: synthesis
+    question: What drives Australian companies to invest in AI capability, and is it related to patenting?
+    narrative: >-
+      Relevant passages report factors associated with AI adoption or hiring (industry, size, location, age)
+      and the relationship between AI capability and patenting.
+  - id: explore-synthesis-5
+    kind: synthesis
+    question: What role does IP play in Australia's mining sector?
+    narrative: >-
+      Relevant passages report mining-related patenting, the roles of miners, METS firms and public research,
+      collaboration, technology areas and exports of mining technology.
+  - id: explore-synthesis-6
+    kind: synthesis
+    question: What do the reports say about the gender gap in patenting and diversity in innovation?
+    narrative: >-
+      Relevant passages report women's participation as inventors or applicants, the gender gap, its trend, or
+      diversity and innovation.
+  - id: explore-synthesis-7
+    kind: synthesis
+    question: How does IP help firms deal with economic shocks and uncertainty?
+    narrative: >-
+      Relevant passages report how IP relates to resilience: responses to tariffs, exchange rates, recessions,
+      pandemics or market uncertainty, and the strategic use of IP timing.
+  - id: explore-synthesis-8
+    kind: synthesis
+    question: What evidence is there on clean energy, electric vehicle or green technology patenting?
+    narrative: >-
+      Relevant passages report patenting in clean energy, batteries, electric vehicles, energy or transport
+      technologies, or sustainability-related IP, in Australia or by country.
+  - id: explore-synthesis-9
+    kind: synthesis
+    question: Do designers actually rely on registered designs to protect their work?
+    narrative: >-
+      Relevant passages report how designers and design firms protect their work (registered designs,
+      trade marks, secrecy, reputation, relationships) and the limited role of formal IP.
+  - id: explore-synthesis-10
+    kind: synthesis
+    question: What is trade mark cluttering and is it a problem in Australia?
+    narrative: >-
+      Relevant passages define trade mark cluttering, report indicators of it (non-use removals, broad
+      specifications) and conclusions on whether it is a concern.
+  - id: explore-synthesis-11
+    kind: synthesis
+    question: How much is copyright worth to the Australian economy?
+    narrative: >-
+      Relevant passages estimate the economic contribution of copyright industries or copyright content,
+      licensing revenue, or the effects of COVID-19 on them.
+  - id: explore-synthesis-12
+    kind: synthesis
+    question: How do place names and geographical indications show up in trade marks?
+    narrative: >-
+      Relevant passages report the use of location names in trade marks (for example in food, wine and
+      beverages) or geographical indications data.
+  - id: explore-synthesis-13
+    kind: synthesis
+    question: What is the economic contribution of businesses that use plant breeder's rights?
+    narrative: >-
+      Relevant passages report the characteristics, size or economic contribution of PBR users, or the
+      economic and policy landscape of PBR.
+  - id: explore-synthesis-14
+    kind: synthesis
+    question: What data products and tools has IP Australia built for researchers and businesses?
+    narrative: >-
+      Relevant passages describe datasets, platforms or tools released by IP Australia (for example IPGOD,
+      TM-Link, the IP Data Platform, TM Checker, patent analytics services) and what they are for.
+
+  # --- strategy ------------------------------------------------------------------------------------
+  - id: explore-strategy-1
+    kind: strategy
+    question: Where is Australia falling behind its peers in how it uses IP, according to the reports?
+    narrative: >-
+      Relevant passages report areas where Australia lags other countries (for example design intensity, filing
+      intensity, ICT-related IP, SME scaling, overseas filing) or comparisons that put Australia below average.
+  - id: explore-strategy-2
+    kind: strategy
+    question: What areas do the researchers say need more research?
+    narrative: >-
+      Relevant passages state future research directions, open questions or next steps named in the studies.
+  - id: explore-strategy-3
+    kind: strategy
+    question: What policy implications does the research draw for supporting small businesses with IP?
+    narrative: >-
+      Relevant passages state policy implications, recommendations or programs relevant to SMEs and IP (access,
+      awareness, costs, tools, scaling up).
+  - id: explore-strategy-4
+    kind: strategy
+    question: Based on the evidence, should IP Australia be worried about falling demand for its services?
+    narrative: >-
+      Relevant passages report recent declines or slowdowns in applications for any IP right, their causes
+      (economy, overseas filers, filing routes), and the outlook given in the reports.
+
+  # --- pasted material to compare (never evidence) ------------------------------------------------
+  - id: explore-context-1
+    kind: context
+    question: A briefing I was sent makes the claims below. Does IP Australia's research back them up?
+    context: |-
+      ## Briefing notes
+      - Australian residents file only a small minority of standard patent applications; most come from overseas.
+      - Small businesses that register IP grow faster afterwards.
+      - IP rights have no measurable effect on market competition.
+    narrative: >-
+      Relevant passages report the resident share of standard patent applications, SME outcomes after IP
+      filing (employment or growth), or findings on IP and market competition.
+  - id: explore-context-2
+    kind: context
+    question: How does this claim compare with IP Australia's own analysis?
+    context: |-
+      ## Commentary
+      Trade mark applications are a reliable early-warning signal for recessions and lead GDP turning points by
+      about two quarters.
+    narrative: >-
+      Relevant passages report the analysis of trade mark filings as a leading indicator of the business cycle,
+      how far they lead, and with what reliability or caveats.

@@ -82,10 +82,12 @@ class Model:
 class OpenAIModel(Model):
     name = "openai"
 
-    def __init__(self, provider: Provider, key: str, timeout: float):
+    def __init__(self, provider: Provider, key: str, timeout: float, service_tier: str | None = None):
         self.base = provider.base_url.rstrip("/")
         self.key = key
         self.timeout = timeout
+        # "flex" (evaluation only): half price, slower, and may be refused when capacity is short.
+        self.service_tier = service_tier
 
     def generate_json(self, *, system, user, schema, schema_name, model, effort, max_output_tokens) -> Reply:
         body = {
@@ -100,6 +102,8 @@ class OpenAIModel(Model):
         }
         if effort:
             body["reasoning"] = {"effort": effort}
+        if self.service_tier:
+            body["service_tier"] = self.service_tier
         t = time.time()
         try:
             r = httpx.post(
