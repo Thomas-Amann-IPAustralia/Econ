@@ -1,0 +1,102 @@
+{
+ "cost_usd": 0.000282,
+ "data": {
+  "grades": [
+   {
+    "grade": 3,
+    "id": "p1"
+   },
+   {
+    "grade": 3,
+    "id": "p2"
+   },
+   {
+    "grade": 0,
+    "id": "p3"
+   },
+   {
+    "grade": 0,
+    "id": "p4"
+   },
+   {
+    "grade": 3,
+    "id": "p5"
+   },
+   {
+    "grade": 0,
+    "id": "p6"
+   },
+   {
+    "grade": 0,
+    "id": "p7"
+   },
+   {
+    "grade": 3,
+    "id": "p8"
+   },
+   {
+    "grade": 0,
+    "id": "p9"
+   },
+   {
+    "grade": 0,
+    "id": "p10"
+   },
+   {
+    "grade": 0,
+    "id": "p11"
+   },
+   {
+    "grade": 0,
+    "id": "p12"
+   },
+   {
+    "grade": 0,
+    "id": "p13"
+   },
+   {
+    "grade": 0,
+    "id": "p14"
+   },
+   {
+    "grade": 0,
+    "id": "p15"
+   },
+   {
+    "grade": 0,
+    "id": "p16"
+   },
+   {
+    "grade": 0,
+    "id": "p17"
+   },
+   {
+    "grade": 0,
+    "id": "p18"
+   },
+   {
+    "grade": 0,
+    "id": "p19"
+   },
+   {
+    "grade": 0,
+    "id": "p20"
+   }
+  ]
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "filter:filter-v1:gpt-6-luna",
+ "schema_name": "grades",
+ "tag": "ipr17-5",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000565,
+  "input": 4688,
+  "model": "gpt-6-luna",
+  "output": 192,
+  "reasoning": 0,
+  "seconds": 1.94
+ }
+}

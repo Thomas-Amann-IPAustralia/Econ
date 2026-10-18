@@ -1,0 +1,38 @@
+{
+ "cost_usd": 0.000117,
+ "data": {
+  "grades": [
+   {
+    "grade": 1,
+    "id": "p41"
+   },
+   {
+    "grade": 0,
+    "id": "p42"
+   },
+   {
+    "grade": 0,
+    "id": "p43"
+   },
+   {
+    "grade": 0,
+    "id": "p44"
+   }
+  ]
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "filter:filter-v1:gpt-6-luna",
+ "schema_name": "grades",
+ "tag": "erp15-5",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000235,
+  "input": 1108,
+  "model": "gpt-6-luna",
+  "output": 248,
+  "reasoning": 198,
+  "seconds": 3.46
+ }
+}

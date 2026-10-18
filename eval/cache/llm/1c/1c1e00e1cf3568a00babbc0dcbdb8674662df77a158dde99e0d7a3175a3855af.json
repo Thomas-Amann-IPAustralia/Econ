@@ -1,0 +1,42 @@
+{
+ "cost_usd": 0.000162,
+ "data": {
+  "grades": [
+   {
+    "grade": 0,
+    "id": "p41"
+   },
+   {
+    "grade": 1,
+    "id": "p42"
+   },
+   {
+    "grade": 1,
+    "id": "p43"
+   },
+   {
+    "grade": 0,
+    "id": "p44"
+   },
+   {
+    "grade": 0,
+    "id": "p45"
+   }
+  ]
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "filter:filter-v1:gpt-6-luna",
+ "schema_name": "grades",
+ "tag": "ipr18-5",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000325,
+  "input": 1911,
+  "model": "gpt-6-luna",
+  "output": 268,
+  "reasoning": 209,
+  "seconds": 3.18
+ }
+}

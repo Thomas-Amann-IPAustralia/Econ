@@ -1,0 +1,90 @@
+{
+ "cost_usd": 0.000282,
+ "data": {
+  "grades": [
+   {
+    "grade": 2,
+    "id": "p1"
+   },
+   {
+    "grade": 3,
+    "id": "p2"
+   },
+   {
+    "grade": 2,
+    "id": "p3"
+   },
+   {
+    "grade": 1,
+    "id": "p4"
+   },
+   {
+    "grade": 2,
+    "id": "p5"
+   },
+   {
+    "grade": 3,
+    "id": "p6"
+   },
+   {
+    "grade": 2,
+    "id": "p7"
+   },
+   {
+    "grade": 2,
+    "id": "p8"
+   },
+   {
+    "grade": 2,
+    "id": "p9"
+   },
+   {
+    "grade": 1,
+    "id": "p10"
+   },
+   {
+    "grade": 1,
+    "id": "p11"
+   },
+   {
+    "grade": 2,
+    "id": "p12"
+   },
+   {
+    "grade": 0,
+    "id": "p13"
+   },
+   {
+    "grade": 0,
+    "id": "p14"
+   },
+   {
+    "grade": 1,
+    "id": "p15"
+   },
+   {
+    "grade": 0,
+    "id": "p16"
+   },
+   {
+    "grade": 0,
+    "id": "p17"
+   }
+  ]
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "filter:filter-v1:gpt-6-luna",
+ "schema_name": "grades",
+ "tag": "explore-methods-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000563,
+  "input": 4810,
+  "model": "gpt-6-luna",
+  "output": 165,
+  "reasoning": 0,
+  "seconds": 1.83
+ }
+}
