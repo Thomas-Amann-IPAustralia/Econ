@@ -60,6 +60,29 @@ class Reply:
     meta: dict = field(default_factory=dict)
 
 
+TRANSIENT = (429, 500, 502, 503, 504)
+RETRY_WAIT = 2.0
+
+
+def post_once_more(url: str, *, json: dict, headers: dict, timeout: float) -> httpx.Response:
+    """POST, and once more after a short wait if the first try failed transiently: a rate limit, a 5xx or
+    a dropped connection. Those replies are not billed. Seen in D-014's run: an answer call returned
+    "HTTP 502: upstream request failed" and the user would have had no answer."""
+    for attempt in (1, 2):
+        try:
+            r = httpx.post(url, json=json, timeout=timeout, headers=headers)
+        except (httpx.TimeoutException, httpx.NetworkError):
+            if attempt == 2:
+                raise
+            time.sleep(RETRY_WAIT)
+            continue
+        if r.status_code in TRANSIENT and attempt == 1:
+            time.sleep(RETRY_WAIT)
+            continue
+        return r
+    raise AssertionError("unreachable")
+
+
 class Model:
     """generate_json(system, user, schema) -> Reply. Subclasses are the only network code."""
 
@@ -106,7 +129,7 @@ class OpenAIModel(Model):
             body["service_tier"] = self.service_tier
         t = time.time()
         try:
-            r = httpx.post(
+            r = post_once_more(
                 f"{self.base}/responses",
                 json=body,
                 timeout=self.timeout,
@@ -175,7 +198,7 @@ class GeminiModel(Model):
         }
         t = time.time()
         try:
-            r = httpx.post(
+            r = post_once_more(
                 f"{self.base}/models/{model}:generateContent",
                 json=body,
                 timeout=self.timeout,

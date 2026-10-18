@@ -142,3 +142,44 @@ def test_configured_picks_the_first_provider_with_a_key(monkeypatch):
     assert p.name == "gemini" and isinstance(m, GeminiModel)
     monkeypatch.delenv("GEMINI_API_KEY")
     assert providers.configured() is None
+
+
+class Sequence:
+    """Replies in turn: a transient failure first, then the real reply."""
+
+    def __init__(self, *replies):
+        self.replies, self.calls = list(replies), 0
+
+    def __call__(self, url, json=None, timeout=None, headers=None):
+        self.calls += 1
+        status, body = self.replies.pop(0)
+        return httpx.Response(status, json=body, request=httpx.Request("POST", url))
+
+
+OK_BODY = {
+    "status": "completed",
+    "output": [{"type": "message", "content": [{"type": "output_text", "text": '{"a": 1}'}]}],
+    "usage": {"input_tokens": 10, "output_tokens": 5},
+}
+
+
+def test_a_transient_failure_is_retried_once(monkeypatch):
+    # D-014: an answer call returned HTTP 502 and the user would have had no answer.
+    monkeypatch.setattr(providers, "RETRY_WAIT", 0)
+    seq = Sequence((502, {"error": "upstream request failed"}), (200, OK_BODY))
+    monkeypatch.setattr(httpx, "post", seq)
+    rep = OpenAIModel(OPENAI, "k", 30).generate_json(model="gpt-6.1-sol", **ARGS)
+    assert rep.data == {"a": 1} and seq.calls == 2
+
+
+def test_a_second_transient_failure_raises_and_a_client_error_is_not_retried(monkeypatch):
+    monkeypatch.setattr(providers, "RETRY_WAIT", 0)
+    seq = Sequence((503, {}), (503, {}))
+    monkeypatch.setattr(httpx, "post", seq)
+    with pytest.raises(ProviderError, match="503"):
+        OpenAIModel(OPENAI, "k", 30).generate_json(model="gpt-6.1-sol", **ARGS)
+    seq = Sequence((400, {"error": "bad request"}))
+    monkeypatch.setattr(httpx, "post", seq)
+    with pytest.raises(ProviderError, match="400"):
+        GeminiModel(GEMINI, "k", 30).generate_json(model="gemini-3.8-flash", **ARGS)
+    assert seq.calls == 1
