@@ -1,0 +1,112 @@
+{
+  "argv": [
+    "parse"
+  ],
+  "command": "parse",
+  "config_hash": "f82e99ff3b79bcf8",
+  "counts": {
+    "documents": 24,
+    "elements": 8601,
+    "parsed_now": 0,
+    "text_findings": 0
+  },
+  "error": null,
+  "git": {
+    "commit": "411f27b49154d76cda530ac6a1ff95ee6a0447e4",
+    "dirty": true,
+    "dirty_paths": [
+      "README.md",
+      "src/econ/cli.py",
+      "src/econ/evalr/metrics.py",
+      "src/econ/evalr/testset.py",
+      "tests/test_chunk.py",
+      "CLAUDE.md",
+      "docs/deploy.md",
+      "eval/testset/",
+      "tests/test_providers.py"
+    ]
+  },
+  "inputs": {
+    "data/raw/erp01-patent-backlogs.pdf": "d11316584eede159bceb517f4ef119c1c61a9a24def5e5a3f22aea3dcf061df9",
+    "data/raw/erp03-market-for-design.pdf": "0bf538c3232a1df4c83ada9eded0fef3f04d9cb9863e202e78e2d17303a0226e",
+    "data/raw/erp04-mining-innovation.pdf": "b564d2c7a96ef250ad49064967bd60580c4a3bd0d5a322d76228782d964e9da7",
+    "data/raw/erp08-designs-law-practice.pdf": "94054a51196f3980c5cf6b5a75b5d412a1868b2e12b02b736ad82899deefec41",
+    "data/raw/erp10-ip-profitability-competition.pdf": "7d7092b0df7a553fb53c2c984da2b2db612ba1c0d9f8b8b3578daf88981a3b85",
+    "data/raw/erp11-exporters-trade-marks.pdf": "00bd119dff8ec5cd9d4ff655161c943cb4ace33b788fbc314ead317daf5a94be",
+    "data/raw/erp14-raising-the-bar.pdf": "de57065b2232e7118931b3c8a16a66151a9f5adb067280d1aafa59fbca70e29b",
+    "data/raw/erp15-patenting-firms.pdf": "d54cbf0181230f9b0929bcf7feb8d3ab5e4c6351fd5dca9cfdea2c45a5e40185",
+    "data/raw/erp16-cii-patent-trends.pdf": "30b2cc112d3a4b6dcd6c4bac482bff20296d83c9e2105ed415866dfceb1b7bdc",
+    "data/raw/ipr-2015.pdf": "5e012979477ddcb6655d681382956d678c9c1432b07fd37c79a2e0b4e97738d3",
+    "data/raw/ipr-2016.pdf": "a40e5c90fcf782abeb66eb80a4d0b93657d0dfd544fee6c66753f4fbbc16ee6a",
+    "data/raw/ipr-2017.pdf": "a7e0ea6a83aace07b9cdc51b61ce608af5acfa6541c148b0577186618604bed0",
+    "data/raw/ipr-2018.pdf": "55501b20ad956a9863bcdd97d124195a7d41e471f8b394437a39acc3550ba97a",
+    "data/raw/ipr-2019.pdf": "ae0901e2b5b61e6f5262e4a8837df528c2d45a6a5b1c10a2307f22435a2032cb",
+    "data/raw/ipr-2020.pdf": "98a0d3d440bce0e34acc9f09e7dd19dc84e9047d2d8aecaec2e170ec5f864fd4",
+    "data/raw/ipr-2021.pdf": "037e81a6db9b0595f9928ee1e09ea235c6330ab08ca186db6493d3b5600ff717",
+    "data/raw/ipr-2022.pdf": "840be65053bbed3960836a170a8a6b381d89f38d27420d4328db362526c5962e",
+    "data/raw/ipr-2023.pdf": "1a5da52bacc26ed765b2b633c3383bb4ffbd593a2eded68e86175f4230c4f8fe",
+    "data/raw/ipr-2024.pdf": "0c0356f082c1fd8f33865040cce6e4bffd6bc1d2cd3ae71c9614fa3ee523ff9c",
+    "data/raw/ipr-2025.pdf": "eb1e510fec0d3c67527eaca24838ff44da410a2e254690d7d32008f159c95781",
+    "data/raw/ipr-2026.pdf": "38bc36a6a12961ac6df6281e822b3a5064fcdb02e53ed0a6d3ae748924aaf9ed",
+    "data/raw/note-patenting-structural-change.pdf": "5bd247eb94068b9185c42d76b0d75db687b7bf8eeafb305a3c2550dbf0d084bb",
+    "data/raw/note-tm-leading-indicator.pdf": "a49e8009403bd236062f131d23030a1690cb72c3f0fb92c292ffb4ba7878e143",
+    "data/raw/oce-ai-investment.pdf": "845fccbab680b18b8396af078a83746d0ad3914b0d1ec58e75337d5d354be0ca"
+  },
+  "outputs": {
+    "library/elements/erp01-patent-backlogs.jsonl": "be0865e87267b9aeae8de6a2201727fbc5c89ae0882beae875836c2419f9f18c",
+    "library/elements/erp03-market-for-design.jsonl": "842564faebca4def9228d83ac90daa4e2cc05761223f015476df99c38ebe4caf",
+    "library/elements/erp04-mining-innovation.jsonl": "d9b3a58c83150f226dd617854e2bdfb81de55683fd08f24528ef95d4f1044c70",
+    "library/elements/erp08-designs-law-practice.jsonl": "856bf30d13071382098f64b26393ef4f0fb2a3189c57bcb979d1e179ef238ee9",
+    "library/elements/erp10-ip-profitability-competition.jsonl": "dc0dd426714c1fe5acdd89e038734ab08bab1e8fa2174e5a572c0ab52b8c6320",
+    "library/elements/erp11-exporters-trade-marks.jsonl": "1bde2a002cc3245e59346256998baf408ae085cb852f0b1be474ad9da5fe097b",
+    "library/elements/erp14-raising-the-bar.jsonl": "c09d69fef2136dbb3ad0e2c2ef7efa2a61135a75c84318a420f003688b0cba1b",
+    "library/elements/erp15-patenting-firms.jsonl": "f474f1677fed7d8b3c539f25dbc4b0a1d47b1929a3cc5fd158d606fdf804f5bf",
+    "library/elements/erp16-cii-patent-trends.jsonl": "a40fcd9444624d0d39bd19cc6769b23cf8d3be67521062eab08ed35334f47a0a",
+    "library/elements/ipr-2015.jsonl": "fb57ab22627457133c19de9b6c7b68dc2ccb67e9975fe96fa237035ab063684f",
+    "library/elements/ipr-2016.jsonl": "ce39494415b7d02dfab9df6bd550919f06406f01b877b237a61629f9f937243d",
+    "library/elements/ipr-2017.jsonl": "0708619b397190de4a71bf1378a1994a702428d8d9e772dff13cd57b545880a4",
+    "library/elements/ipr-2018.jsonl": "84c2934569ad5c8df1177b2880620ee5becec8e8be8fc9937efc34b0d05a9f3f",
+    "library/elements/ipr-2019.jsonl": "18f7239c98f71dd86f40f3522249f53468c3ae233891307037eec443f520c505",
+    "library/elements/ipr-2020.jsonl": "bfb51b2ca6ee8f07ae421d0a50cdcfd2b813c13992d5ca90047d82fd91b1610f",
+    "library/elements/ipr-2021.jsonl": "c221a22a82ffeba52fcc69a6992212eda96336fea54fc956a54688906542b7cc",
+    "library/elements/ipr-2022.jsonl": "3af6be16be7a4a412bb2756dae482341bf2434b8118c388440bab6c77255962f",
+    "library/elements/ipr-2023.jsonl": "3b0d60c65ea5e84f5a83a2fc28cefa20ee008f4d702b31ced0ad008abcef5e3b",
+    "library/elements/ipr-2024.jsonl": "c4cf4f1bf339395b1f8559339b897932c8deb3fe249ff8830aac2a8b7c41bf5f",
+    "library/elements/ipr-2025.jsonl": "bb1ed968a0653f5e4dccd8a2d7c8e97eaafe1f142865e1622b9990e565f5e88c",
+    "library/elements/ipr-2026.jsonl": "16720ab302a96021e79b1be5b50eb5d5b83f3dc76ccb4f8e52cfe8040e2d2e51",
+    "library/elements/note-patenting-structural-change.jsonl": "27b0727ece38d08564960e8d290d0dee37e82b0f69f61a1665728de08275146b",
+    "library/elements/note-tm-leading-indicator.jsonl": "7c990b2c46d2b44cf12f6fba63eae34a648071646e880cd4376d2dc0013441be",
+    "library/elements/oce-ai-investment.jsonl": "1138af9a6809c0df5daae720a5e8860b28f8e5ba15cd3abcba6144c4c52f4ffe",
+    "library/parse.json": "3c926f397c88a3ff7d17bb77b287f0c64c4e8a753ee468bd2f7dd12487ccf055"
+  },
+  "params": {
+    "only": [],
+    "timings": {},
+    "workers": 1
+  },
+  "run_id": "20261018T010627Z",
+  "seconds": 7.9,
+  "status": "passed",
+  "upstream": {
+    "sweep": "20261018T002149Z"
+  },
+  "versions": {
+    "docling": "2.140.0",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.0",
+    "pypdfium2": "5.14.0",
+    "python": "3.12.3",
+    "sentence-transformers": "6.1.0",
+    "tokenizers": "0.23.3",
+    "torch": "2.14.1+cpu"
+  },
+  "warnings": [
+    "erp08-designs-law-practice: no licence statement found in the extracted text",
+    "ipr-2021: no licence statement found in the extracted text",
+    "ipr-2022: no licence statement found in the extracted text",
+    "ipr-2025: no licence statement found in the extracted text",
+    "ipr-2026: no licence statement found in the extracted text",
+    "note-patenting-structural-change: no licence statement found in the extracted text",
+    "note-tm-leading-indicator: no licence statement found in the extracted text"
+  ]
+}
