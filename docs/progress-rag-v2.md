@@ -152,3 +152,11 @@ passages, $0.23). Exploratory needs: relevant evidence reached 0.491 at 20, 0.68
 0.765 to 0.851. A perfect breadth classifier (60 for broad questions) gets 0.763 at 31 passages on average;
 the plan's query count is a weak proxy. Recommended to the owner, pending an end-to-end check: always 40, or a
 breadth field in the plan. Spend: OpenAI $2.15 of $2.50, Gemini $2.16 of $2.50.
+
+## 2026-10-18 — A relevance filter (D-018): the best 20 of 60
+Free diagnosis first: the missing evidence is mostly found but ranked 21-60; re-chunking, de-duplication and
+query interleaving would not help; removing the per-document cap helps a little. Then, pre-registered: gpt-6-luna
+rates the 60-passage context and the answer model gets the best 20. Exploratory evidence reached 0.491 to 0.635,
+lookups 0.765 to 0.833, ndcg@10 0.672 to 0.846, same context size; filter step 4.4 s median, about $0.002 a
+question. Recommended to the owner, pending an end-to-end answer comparison (needs about $0.60 more OpenAI
+budget). Spend: OpenAI $2.25 of $2.50, Gemini $2.16 of $2.50.

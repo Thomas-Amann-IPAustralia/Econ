@@ -1,0 +1,74 @@
+{
+  "argv": [
+    "eval-filter",
+    "--probe",
+    "8"
+  ],
+  "command": "eval-filter",
+  "config_hash": "5b0996b679236558",
+  "counts": {
+    "cost_usd_new": 0.089404,
+    "failed_needs": 0,
+    "kappa": 0.7619576159060455,
+    "latency_flex_s_median": 5.125,
+    "needs": 92,
+    "precision_2plus": 0.5939226519337016,
+    "recall_2plus": 0.9237379162191193,
+    "stage": "filter"
+  },
+  "error": null,
+  "git": {
+    "commit": "33156961cce3af4cf005ba2cc55e63677970d331",
+    "dirty": false,
+    "dirty_paths": []
+  },
+  "git_at_end": {
+    "commit": "0df78599146370a4476f913ea13c75b77ff85e63",
+    "dirty": true,
+    "dirty_paths": [
+      "eval/spend/ledger.jsonl",
+      "eval/cache/llm/06/062abb767a394f76e870f68892955da40e084d2b09afaa85ac990d112501bc6f.json",
+      "eval/cache/llm/09/0943236c238119bb106dc76c12fb6a39100c809fa69b69fd9d25a7d5a5858191.json",
+      "eval/cache/llm/09/09a80923ccb7519214396090f9c56dd765299a99cfa0b1f2737c3aea09020c80.json",
+      "eval/cache/llm/0a/0a2cbcf76d7ba61ffb4d7e52cdc0a02675c9a2d15cdc33e8d2c57ffe6548965b.json",
+      "eval/cache/llm/0c/0ccc8ace1b9a71e5e16791b98b886640238c1567fb957997ca44b56216f8251b.json",
+      "eval/cache/llm/0d/0dad5cf07d3e76b302d1970bcdaca583f043325e43ee47c7d8e4627972c0cf9d.json",
+      "eval/cache/llm/10/10056749974bdecbf8d5b66f787c8e71fbd220d0bc5d79607049596003174061.json",
+      "eval/cache/llm/10/10578857edbdf41286752001e500bb4c858beb822fb16866404a67c48227ede5.json",
+      "eval/cache/llm/15/15a701409ba0d26e7362cbe54f136d0dce8390bbf2679f45af20863f3592678f.json",
+      "eval/cache/llm/15/15b9a7cbd87a5cb3c9c2915ba6fb50059e276b376c855bc1ec08960ec29aeafc.json",
+      "eval/cache/llm/20/20b2319b51edd836d731db527c9acd8be2836994f0eb93a6fcd67d8c21ef9555.json",
+      "eval/cache/llm/20/20dbe7b7b572303b519e7f5d01adfa21bcd3f0f68bfd40b7c8ca07944c4a503b.json",
+      "eval/cache/llm/21/21f26b90fde1c5a4c7e8a0853001c9f3e46ed728f106b7dbc2d0a1a00ca4a90e.json",
+      "eval/cache/llm/24/2489541f91b2f1cd9a6cd03af12cc2c83d5996b5f2cbb957c5c64aef53d484c4.json",
+      "eval/cache/llm/25/2555fdca88f7842dabbc487aa2a29466970e3c3f26b8cdee86ff058f4b21c8a2.json",
+      "eval/cache/llm/27/27e157ebcee60b4b40725d8995cde8b9d6c0ebc5421efa8c976321f17f538bca.json",
+      "eval/cache/llm/30/30280a53b911c6af7682c30e33a3807cd34eaa1872e2bcbe440e6615aba0c545.json",
+      "eval/cache/llm/33/33835fa33442a1e9f402de659d6e4a42d7351d01b1f697c5cc0f6c978980c720.json",
+      "eval/cache/llm/35/351b9e5564172eb698a122cc270d2c45714ba1f05b1c88f6568f6ccc871a1b83.json"
+    ]
+  },
+  "inputs": {},
+  "outputs": {
+    "reports/retrieval-filter.md": "7eb352b1ac481315c5b00cea26ac9bd5cdc0a5d64ac3c73c75bdb1ac80692f95"
+  },
+  "params": {
+    "judgments": "judged-v1",
+    "probe": 8
+  },
+  "run_id": "20261018T221847Z",
+  "seconds": 169.1,
+  "status": "passed",
+  "upstream": {},
+  "versions": {
+    "docling": "2.140.0",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.0",
+    "pypdfium2": "5.14.0",
+    "python": "3.12.3",
+    "sentence-transformers": "6.1.0",
+    "tokenizers": "0.23.3",
+    "torch": "2.14.1+cpu"
+  },
+  "warnings": []
+}

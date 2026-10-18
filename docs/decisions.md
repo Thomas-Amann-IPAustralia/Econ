@@ -682,3 +682,61 @@ questions a deeper context. Two options, both to be confirmed end to end before 
    the plan's query count is too weak a signal.
 
 **Spend:** Gemini $0.23 (the top-up, Batch). Totals: OpenAI $2.15, Gemini $2.16 of $2.50 each.
+
+---
+
+## D-018 — A relevance filter: a small model reads 60 passages and passes the best 20 (Claude; a recommendation, the owner decides)
+
+**Context.** D-017 showed that broad questions lose most of their evidence for want of room in the
+20-passage context. A free diagnosis on the existing judgments and answers (before any spend):
+- Of the relevant passages missing from the exploratory test needs' 20, 62% are found but ranked 21-60, 13%
+  are never retrieved, 12% are dropped by the per-document cap, 12% rank below 60. Two-thirds sit in a
+  document that already contributes a relevant passage.
+- Not worth building, on that evidence: re-chunking (D-005 found 256, 384 and 512 tokens within noise at a
+  fixed token budget; 62% of sections are one chunk; adding same-section neighbours did worse; a re-chunk
+  voids every judgment and note); de-duplication (2% of the 20 are near-duplicates); interleaving the plan's
+  queries (worse); a deeper first stage (small).
+- The cap: removing it helps lookups at 20 passages (0.765 to 0.812, p 0.009) and both families at 40
+  (exploratory 0.682 to 0.761, p 0.025), at a small cost in distinct documents; D-013 tried only lower caps.
+- The answer is a second funnel: on broad questions answer-v1 cites 59% of the relevant passages it is given,
+  from 3.1 of 5.0 relevant documents, in about 220 words ("be direct and concise").
+
+Grid `eval/grids/retrieval-filter.yaml` and prompt `prompts/eval/filter-v1.md`, committed at `3315696` before
+any filter call: gpt-6-luna (low effort; another family than the judge) rates each passage of the adopted
+setting's 60-passage context 0-3 from the plan's standalone question (never the judge's narrative), 20
+passages a call, a need's calls in parallel; the answer model gets the 20 rated highest (ties by rank).
+Every passage in those contexts is judged (D-017), so no top-up. Report `reports/retrieval-filter.md`.
+
+**Results** (92 test needs; no filter call failed).
+
+| | Served today (20) | Filter, 60 read, 20 passed | Oracle filter (ceiling) | Adopted, 40 |
+|---|---|---|---|---|
+| Relevant reached, exploratory | 0.491 | **0.635** (+0.145 [+0.107, +0.183]) | 0.694 | 0.682 |
+| Relevant reached, lookups | 0.765 | **0.833** (+0.068 [+0.038, +0.102]) | 0.847 | 0.830 |
+| Relevant documents, exploratory | 0.767 | **0.892** | 0.930 | 0.932 |
+| ndcg@10, all | 0.672 | **0.846** (+0.174 [+0.143, +0.206]) | 0.919 | 0.672 |
+| Passage tokens, all | 4,945 | 5,009 | 4,991 | 8,945 |
+
+- The filter recovers 71% of the oracle's gain on exploratory needs at today's context size and answer cost.
+- Agreement with the judge: quadratic kappa 0.76; the filter is generous (it rates 92% of the judge's
+  relevant passages 2-3; 59% of its 2-3 ratings are the judge's 2-3).
+- A variable context (the filter's 2-3 passages, up to 40) sizes itself by breadth: 22.9 passages on
+  exploratory needs (0.697 reached), 11.7 on lookups (0.822). It does the job of the scope classifier
+  considered in D-017 without one.
+- Latency of the filter step at the standard tier (8 needs): median 4.4 s, slowest 7.1 s; an answer takes
+  about 17 s (median, Flex). Cost about $0.001 a question at Flex, $0.002 at the standard tier.
+- Against the rule fixed in advance (exploratory at least 0.59, lookups no loss beyond 0.02, median latency at
+  most 5 s): met.
+
+**Not shown.** Retrieval only. The filter and the judge are both language models grading relevance, so part of
+the gain could be shared model taste rather than better evidence; the families differ and the judge agreed with
+Claude's blind grades at kappa 0.92, but only answers judged blind settle it. The latency probe is 8 needs.
+
+**Recommendation (the owner decides: it adds a model call to every question).** Run the answers-v1 comparison
+(60 test needs, answer-v1 unchanged) with the filter's 20 against the adopted 20 before adopting. The filter's
+replies for those needs are cached, so the cost is the answers (about $0.70 at Flex) and the pairwise judge
+(about $0.11 Gemini); it needs about $0.60 more OpenAI budget than is left. The answer-side funnel
+(answer-v1's brevity) is a separate, later decision on the answer format.
+
+**Spend:** OpenAI $0.103 (filter calls at Flex, $0.089, and the standard-tier latency probe). Totals: OpenAI
+$2.25, Gemini $2.16 of $2.50 each.

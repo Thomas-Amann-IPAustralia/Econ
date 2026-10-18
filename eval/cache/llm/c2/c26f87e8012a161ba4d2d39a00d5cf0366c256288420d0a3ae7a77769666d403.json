@@ -1,0 +1,42 @@
+{
+ "cost_usd": 0.00014,
+ "data": {
+  "grades": [
+   {
+    "grade": 0,
+    "id": "p41"
+   },
+   {
+    "grade": 0,
+    "id": "p42"
+   },
+   {
+    "grade": 0,
+    "id": "p43"
+   },
+   {
+    "grade": 0,
+    "id": "p44"
+   },
+   {
+    "grade": 0,
+    "id": "p45"
+   }
+  ]
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "filter:filter-v1:gpt-6-luna",
+ "schema_name": "grades",
+ "tag": "explore-trend-11",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00028,
+  "input": 1479,
+  "model": "gpt-6-luna",
+  "output": 264,
+  "reasoning": 205,
+  "seconds": 2.88
+ }
+}
