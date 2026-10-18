@@ -69,13 +69,13 @@ largest models beat it reliably.
 
 Searching by meaning alone, by keywords alone, and by several blends of the two were compared with the
 chosen model. The blend already configured (70% meaning, 30% keywords) did best on both halves. Meaning
-alone missed answers that keywords catch (exact figures, names of reforms), and keywords alone did much
-worse than either.
+alone put the answering passages lower in the list (the difference's interval just excludes zero), and
+keywords alone did much worse than either.
 
 ## What this means for you
 
-- The chatbot will usually put the passage that answers a factual question within its top few results,
-  and the right document in its top five about 95% of the time.
+- On the checking half, the passage that answers a question was in the top 10 results for about three
+  quarters of the questions, and the right document was in the top five for 95% of them.
 - Broad questions that need several documents ("what does the research say about X?") are harder: the
   test set's few such questions were found less reliably. The question planner, which splits a broad
   question into several searches, needs a language model and is switched on once a key is added.
