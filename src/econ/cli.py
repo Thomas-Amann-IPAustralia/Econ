@@ -379,7 +379,9 @@ def verify_embedder(
 @loud
 def verify_search(
     plans: str = typer.Option("luna-plan-v2", help="Cached plans standing in for the live planner."),
-    setting: str = typer.Option("", help="The measured setting to match (default: grid retrieval-v2's choice)."),
+    setting: str = typer.Option(
+        "", help="The measured setting to match (default: grid retrieval-v2's choice)."
+    ),
 ) -> None:
     """Show that the served search reproduces the measured one (SOP §19): the serving index (ONNX, float16),
     ONNX query vectors and the service's query rule, fed by cached plans, against the measurement path,
@@ -389,13 +391,16 @@ def verify_search(
     import numpy as np
 
     from econ.answer.pipeline import context_queries
-    from econ.evalr import grid2, judged, plans as plans_mod
+    from econ.evalr import grid2, judged
+    from econ.evalr import plans as plans_mod
     from econ.manifest import write_text_atomic
     from econ.retrieval.index import Index
 
     idx = Index()
     key = idx.meta["embedder"]
-    setting = setting or _json.loads(config.path("eval/runs/retrieval-v2/final/choice.json").read_text())["chosen"]
+    setting = (
+        setting or _json.loads(config.path("eval/runs/retrieval-v2/final/choice.json").read_text())["chosen"]
+    )
     with run("verify-search", _hash(), plans=plans, setting=setting) as r:
         needs = judged.load()
         grades = grid2.grades_by_need("judged-v1")
