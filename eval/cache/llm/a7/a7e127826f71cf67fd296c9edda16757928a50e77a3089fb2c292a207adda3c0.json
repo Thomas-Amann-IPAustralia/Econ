@@ -1,0 +1,33 @@
+{
+ "cost_usd": 0.001555,
+ "data": {
+  "p1": 0,
+  "p10": 0,
+  "p11": 0,
+  "p12": 1,
+  "p13": 3,
+  "p2": 3,
+  "p3": 2,
+  "p4": 0,
+  "p5": 0,
+  "p6": 0,
+  "p7": 0,
+  "p8": 0,
+  "p9": 0
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "judge:judge-v1:gemini-3.5-flash-lite",
+ "schema_name": "grades",
+ "tag": "note-tm-3",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00311,
+  "input": 4941,
+  "model": "gemini-3.5-flash-lite",
+  "output": 651,
+  "reasoning": 528,
+  "seconds": 0.0
+ }
+}

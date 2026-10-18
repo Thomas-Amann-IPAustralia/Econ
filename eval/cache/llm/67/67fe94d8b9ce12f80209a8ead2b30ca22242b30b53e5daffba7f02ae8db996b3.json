@@ -1,0 +1,40 @@
+{
+ "cost_usd": 0.001963,
+ "data": {
+  "p1": 0,
+  "p10": 0,
+  "p11": 2,
+  "p12": 1,
+  "p13": 0,
+  "p14": 1,
+  "p15": 2,
+  "p16": 0,
+  "p17": 2,
+  "p18": 0,
+  "p19": 0,
+  "p2": 0,
+  "p20": 0,
+  "p3": 1,
+  "p4": 1,
+  "p5": 0,
+  "p6": 1,
+  "p7": 0,
+  "p8": 0,
+  "p9": 2
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "judge:judge-v1:gemini-3.5-flash-lite",
+ "schema_name": "grades",
+ "tag": "explore-strategy-4",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.003926,
+  "input": 6471,
+  "model": "gemini-3.5-flash-lite",
+  "output": 794,
+  "reasoning": 643,
+  "seconds": 0.0
+ }
+}
