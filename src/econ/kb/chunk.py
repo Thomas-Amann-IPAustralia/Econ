@@ -38,6 +38,7 @@ class Element:
     level: int | None
     start: int = 0
     end: int = 0
+    cite: bool = False  # set by mark_citations
 
 
 @dataclass
@@ -298,7 +299,7 @@ def records(doc: Document, chunks: list[Chunk], st: ChunkStrategy) -> list[dict]
                 "elements": [c.pieces[0].el.seq, c.pieces[-1].el.seq],
                 "labels": sorted({p.el.label for p in c.pieces}),
                 "pieces": len(c.pieces),
-                "citation_pieces": sum(is_citation(p.el) for p in c.pieces),
+                "citation_pieces": sum(p.el.cite for p in c.pieces),
                 "tokens": tokens.count(pfx + text),
             }
         )
@@ -312,6 +313,7 @@ _CITE_START = re.compile(
     r"""^\s*(\d{1,3}\s*[\x07\s]*)?
     (?:[A-Z][A-Za-z'’\-]+(?:\s[A-Z][A-Za-z'’\-]+)?,\s*(?:[A-Z]\.\s*){1,3}(?:,|&|and|\(|\d)
       |[A-Z][A-Za-z&'’\-\s]{2,60}\s\((19|20)\d{2}[a-z]?\)[,.]?
+      |(?:[A-Z][A-Za-z'’\-]+,\s*[A-Z]{1,2},\s*){2}
     )""",
     re.X,
 )
@@ -320,13 +322,40 @@ _CITE_SIGNAL = re.compile(
 )
 
 
-def is_citation(e: Element) -> bool:
-    return (
-        e.label in ("text", "list_item", "footnote", "reference")
-        and len(e.text) < 600
-        and bool(_CITE_START.match(e.text))
-        and bool(_CITE_SIGNAL.search(e.text))
-    )
+_REF_HEADING = re.compile(r"\b(references?|bibliography|end ?notes|sources|works cited)\b", re.I)
+_YEAR = re.compile(r"\b(19|20)\d{2}[a-z]?\b")
+_PUBLICATION = re.compile(
+    r"(Retrieved|Accessed|Available|https?://|www\.|doi|Journal|Review|Press|Working Paper|Discussion Paper"
+    r"|Report|Proceedings|Economics|Policy|vol\.|pp\.|\d+\(\d+\)|[A-Z][a-z]+, [A-Z]\.?,|et al)"
+)
+_MARKER = re.compile(r"((19|20)\d{2}|https?://|www\.|doi|Journal|Working Paper|Press)")
+
+
+def has_substance(text: str) -> bool:
+    """A sentence of 10 or more words with no year, link or publication marker: something an endnote says,
+    as opposed to the source it names. Such an element is kept even when it starts with a citation."""
+    return any(len(s.split()) >= 10 and not _MARKER.search(s) for s in re.split(r"(?<=[.!?])\s+", text))
+
+
+def is_citation(e: Element, heading: str = "") -> bool:
+    """A bibliography entry or citation-only endnote. Anywhere: a short element that starts like a
+    reference and carries a publication signal. Under a References, Bibliography or Endnotes heading,
+    also any element with a year and a publication marker (D-008). Never when it says something."""
+    if e.label not in ("text", "list_item", "footnote", "reference") or has_substance(e.text):
+        return False
+    if len(e.text) < 600 and _CITE_START.match(e.text) and _CITE_SIGNAL.search(e.text):
+        return True
+    return bool(_REF_HEADING.search(heading) and _YEAR.search(e.text) and _PUBLICATION.search(e.text))
+
+
+def mark_citations(els: list[Element]) -> list[Element]:
+    heading = ""
+    for e in els:
+        if is_heading(e):
+            heading = e.text
+        else:
+            e.cite = is_citation(e, heading)
+    return els
 
 
 def _key(text: str) -> str:
@@ -362,7 +391,8 @@ def chunk_document(
     text (so gold offsets don't move) but enter no chunk."""
     els = els if els is not None else load_elements(doc.doc_id)
     kept = [e for e in els if not (skip and not is_heading(e) and _key(e.text) in skip)]
+    mark_citations(els)
     if st.drop_citations:
-        kept = [e for e in kept if not is_citation(e)]
+        kept = [e for e in kept if not e.cite]
     chunks = structure_chunks(doc, kept, st) if st.kind == "structure" else fixed_chunks(doc, kept, st, els)
     return records(doc, chunks, st)

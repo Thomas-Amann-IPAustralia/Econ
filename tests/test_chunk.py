@@ -146,3 +146,33 @@ def test_a_sentence_that_mentions_a_year_is_not_a_citation():
         None,
     )
     assert not is_citation(e)
+
+
+def test_under_a_references_heading_looser_citations_go_but_substantive_notes_stay():
+    from econ.kb.chunk import mark_citations
+
+    rows = [
+        ("section_header", "Endnotes", 1),
+        (
+            "list_item",
+            "7 Sample, M, Example, A (2015), Widget productivity in Placeland, Widget Review.",
+            None,
+        ),
+        (
+            "list_item",
+            "Widget Statistics Office. Widget accounts, December 2020. Retrieved 3 May 2021.",
+            None,
+        ),
+        (
+            "list_item",
+            "23 Widget Review Final Report March 2015. The review found that Placeland has no overarching widget policy at all.",
+            None,
+        ),
+        (
+            "list_item",
+            "Once granted, a widget right lets the holder exclude others for up to twenty years in Placeland.",
+            None,
+        ),
+    ]
+    flags = [e.cite for e in mark_citations(els(*rows))][1:]
+    assert flags == [True, True, False, False]
