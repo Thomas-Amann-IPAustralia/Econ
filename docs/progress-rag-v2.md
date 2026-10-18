@@ -100,3 +100,21 @@ pavlova. gpt-6.1-sol was more concise and added a caveat; Gemini quoted more.
   first-stage order with a visible status, as search does when the embedder fails.
 - Tests: `tests/test_rerank.py` (7). Revisions pinned in `config/pipeline.yaml` and `econ.evalr.systems`.
 - The answer-eval runner (`econ.evalr.answers`) mirrors the service's answer step on any setting.
+
+## 2026-10-18 — Pool judged; first look at stage 1
+- **Pool judgments** (`eval/judgments/judged-v1.jsonl`): 8,246 graded (need, passage) pairs: the top 10
+  of all 62 non-ceiling settings plus BM25 and dense alone, and the pilot's depth-20 grades for 12 needs.
+  Two Batch jobs, 446 requests, every reply parsed. $1.15 (Gemini total $1.56).
+- **Judge validity on the whole silver set:** 128 of 129 passages that hold a gold answer were graded
+  relevant (125 of them 3). Every one of the 178 needs has at least one relevant passage. Grade mix: 54%
+  0, 22% 1, 12% 2, 12% 3.
+- **First look** (ndcg@10; the formal run waits for the latency measurement and the ceiling rerankers,
+  which can't change the choice under the rule):
+  - the service today, `plan:luna-plan-v1/plain/none`: dev 0.654, test 0.606;
+  - context notes alone, `plan:luna-plan-v1/enriched/none`: dev 0.713, test 0.675;
+  - no planner at all, enriched index, `raw/enriched/none`: dev 0.689, test 0.670;
+  - best: `plan+q:luna-plan-v2/enriched/none` (plan-v2 queries plus the question, enriched index, no
+    reranker): dev 0.736, test 0.692; on exploratory dev needs 0.739 against the baseline's 0.599;
+  - rerankers help the plain index (ettin-68m: 0.654 to 0.706 dev) but not the enriched one (0.736 to
+    0.711 with plan+q): they read only the passage, not its context note. The small ones (17M, 32M,
+    MiniLM) are neutral to harmful throughout.
