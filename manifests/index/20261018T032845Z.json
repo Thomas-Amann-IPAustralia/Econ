@@ -1,0 +1,55 @@
+{
+  "argv": [
+    "index",
+    "--model-dir",
+    "data/models/onnx/arctic-m-v1.5"
+  ],
+  "command": "index",
+  "config_hash": "8c1b3875a9fa6f5c",
+  "counts": {
+    "chunks": 1913,
+    "dim": 768
+  },
+  "error": null,
+  "git": {
+    "commit": "1437b9920a418874c3c808a64cceec83dfe1103f",
+    "dirty": false,
+    "dirty_paths": []
+  },
+  "git_at_end": {
+    "commit": "1437b9920a418874c3c808a64cceec83dfe1103f",
+    "dirty": false,
+    "dirty_paths": []
+  },
+  "inputs": {},
+  "outputs": {
+    "library/index/bm25.npz": "c151ef393f6c06c3ee43ef9310ae649a20703c004cccbf1c5b9e0395c2e8254d",
+    "library/index/bm25.vocab.json": "6fe8a1322d9f7aa0b98cba40dc577938ad748e7759d2a01237226e43b3ca4d25",
+    "library/index/chunks.jsonl": "29a11d2ddb2daff2468c95cb1bc6e5723b6053429805d7496d04bc000da9aeeb",
+    "library/index/docs.json": "abf5afb0e36ef32321fc674e3ee45c303af0a8f112d75ec27d21003882a20a76",
+    "library/index/index.json": "ae2bd507bddd578cebac865850207f724b5c6bb47384b2be5bea23bd1929c178",
+    "library/index/vectors.f16.npy": "2eef1d5b58cbc0e17a324f88e7b4458234dcfcf69bc3be34c4706bd6478e43fc"
+  },
+  "params": {
+    "embedder": "arctic-m-v1.5",
+    "out": "library/index",
+    "strategy": "S384-noprefix-nocite"
+  },
+  "run_id": "20261018T032845Z",
+  "seconds": 363.9,
+  "status": "passed",
+  "upstream": {
+    "chunk": "20261018T032300Z"
+  },
+  "versions": {
+    "docling": "2.140.0",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.0",
+    "pypdfium2": "5.14.0",
+    "python": "3.12.3",
+    "sentence-transformers": "6.1.0",
+    "tokenizers": "0.23.3",
+    "torch": "2.14.1+cpu"
+  },
+  "warnings": []
+}

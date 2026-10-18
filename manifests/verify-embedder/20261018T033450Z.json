@@ -1,0 +1,46 @@
+{
+  "argv": [
+    "verify-embedder"
+  ],
+  "command": "verify-embedder",
+  "config_hash": "8c1b3875a9fa6f5c",
+  "counts": {
+    "doc_min_cosine": 0.9999367594718933,
+    "query_min_cosine": 0.9999998211860657,
+    "top10_overlap": 1.0
+  },
+  "error": null,
+  "git": {
+    "commit": "1437b9920a418874c3c808a64cceec83dfe1103f",
+    "dirty": false,
+    "dirty_paths": []
+  },
+  "git_at_end": {
+    "commit": "1437b9920a418874c3c808a64cceec83dfe1103f",
+    "dirty": false,
+    "dirty_paths": []
+  },
+  "inputs": {},
+  "outputs": {
+    "reports/embedder-verification.md": "16a90801ce29b48b02d0bd0b1dcc3ae29ad48a2c5493c2e4710e3a5185e31cd0"
+  },
+  "params": {
+    "sample": 300,
+    "url": ""
+  },
+  "run_id": "20261018T033450Z",
+  "seconds": 56.9,
+  "status": "passed",
+  "upstream": {},
+  "versions": {
+    "docling": "2.140.0",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.0",
+    "pypdfium2": "5.14.0",
+    "python": "3.12.3",
+    "sentence-transformers": "6.1.0",
+    "tokenizers": "0.23.3",
+    "torch": "2.14.1+cpu"
+  },
+  "warnings": []
+}

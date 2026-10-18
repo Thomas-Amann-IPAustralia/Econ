@@ -3,7 +3,7 @@
     "authors": [
       "Ahmer Iqbal Siddiqui"
     ],
-    "chunks": 49,
+    "chunks": 48,
     "doc_id": "erp01-patent-backlogs",
     "licence": "CC BY 4.0",
     "note": "An independent report commissioned by IP Australia: the findings are the researchers', not necessarily IP Australia's.",
@@ -492,7 +492,7 @@
   },
   "erp08-designs-law-practice": {
     "authors": [],
-    "chunks": 58,
+    "chunks": 56,
     "doc_id": "erp08-designs-law-practice",
     "licence": null,
     "note": null,
@@ -623,7 +623,7 @@
     "authors": [
       "Haiyang Zhang"
     ],
-    "chunks": 126,
+    "chunks": 124,
     "doc_id": "erp10-ip-profitability-competition",
     "licence": "CC BY 4.0",
     "note": null,
@@ -798,7 +798,7 @@
     "authors": [
       "Michael R. Falk"
     ],
-    "chunks": 154,
+    "chunks": 149,
     "doc_id": "erp11-exporters-trade-marks",
     "licence": "CC BY 4.0",
     "note": null,
@@ -1010,7 +1010,7 @@
       "Corrine Anglim",
       "Michael Falk"
     ],
-    "chunks": 82,
+    "chunks": 77,
     "doc_id": "erp14-raising-the-bar",
     "licence": "CC BY 4.0",
     "note": null,
@@ -1215,7 +1215,7 @@
       "Tina Rampino",
       "Martie-Louise Verreynne"
     ],
-    "chunks": 87,
+    "chunks": 84,
     "doc_id": "erp15-patenting-firms",
     "licence": "CC BY 4.0",
     "note": null,
@@ -1414,7 +1414,7 @@
       "Alfons Palangkaraya",
       "Elizabeth Webster"
     ],
-    "chunks": 136,
+    "chunks": 132,
     "doc_id": "erp16-cii-patent-trends",
     "licence": "CC BY 4.0",
     "note": null,
@@ -2419,7 +2419,7 @@
   },
   "ipr-2019": {
     "authors": [],
-    "chunks": 58,
+    "chunks": 57,
     "doc_id": "ipr-2019",
     "licence": "CC BY 4.0",
     "note": null,
@@ -2536,7 +2536,7 @@
   },
   "ipr-2020": {
     "authors": [],
-    "chunks": 76,
+    "chunks": 74,
     "doc_id": "ipr-2020",
     "licence": "CC BY 4.0",
     "note": null,
@@ -2761,7 +2761,7 @@
   },
   "ipr-2021": {
     "authors": [],
-    "chunks": 76,
+    "chunks": 75,
     "doc_id": "ipr-2021",
     "licence": null,
     "note": null,
@@ -2894,7 +2894,7 @@
   },
   "ipr-2022": {
     "authors": [],
-    "chunks": 91,
+    "chunks": 90,
     "doc_id": "ipr-2022",
     "licence": null,
     "note": null,
@@ -3111,7 +3111,7 @@
   },
   "ipr-2023": {
     "authors": [],
-    "chunks": 139,
+    "chunks": 126,
     "doc_id": "ipr-2023",
     "licence": "CC BY 4.0",
     "note": null,
@@ -3492,7 +3492,7 @@
   },
   "ipr-2024": {
     "authors": [],
-    "chunks": 134,
+    "chunks": 126,
     "doc_id": "ipr-2024",
     "licence": "CC BY 4.0",
     "note": null,
@@ -3893,7 +3893,7 @@
   },
   "ipr-2025": {
     "authors": [],
-    "chunks": 107,
+    "chunks": 105,
     "doc_id": "ipr-2025",
     "licence": null,
     "note": null,
@@ -4547,7 +4547,7 @@
   },
   "note-patenting-structural-change": {
     "authors": [],
-    "chunks": 14,
+    "chunks": 13,
     "doc_id": "note-patenting-structural-change",
     "licence": null,
     "note": null,
@@ -4654,7 +4654,7 @@
       "Uwe Dulleck",
       "Benno Torgler"
     ],
-    "chunks": 91,
+    "chunks": 86,
     "doc_id": "oce-ai-investment",
     "licence": "CC BY 4.0",
     "note": null,
