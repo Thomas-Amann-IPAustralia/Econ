@@ -1,0 +1,30 @@
+# Render Blueprint for the API service (free instance: 512 MB, 0.1 CPU, sleeps after 15 idle minutes).
+# Create it from the Render dashboard: New > Blueprint > this repository. Secrets are entered there.
+services:
+  - type: web
+    name: econ-api
+    runtime: python
+    plan: free
+    region: singapore          # Render's closest region to Australia
+    # Editable install: the service reads config/, prompts/ and library/index/ from the checkout.
+    buildCommand: pip install --upgrade pip && pip install -e .
+    startCommand: uvicorn econ.service.app:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    autoDeploy: true
+    buildFilter:
+      paths:
+        - src/**
+        - config/**
+        - prompts/**
+        - library/index/**
+        - pyproject.toml
+        - render.yaml
+    envVars:
+      - key: EMBEDDER_URL        # the Cloud Run service URL, e.g. https://econ-embedder-xxxx.a.run.app
+        sync: false
+      - key: EMBEDDER_TOKEN      # the same random token the Cloud Run service has
+        sync: false
+      - key: OPENAI_API_KEY      # set one of these two to turn on answers; with neither, evidence only
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false

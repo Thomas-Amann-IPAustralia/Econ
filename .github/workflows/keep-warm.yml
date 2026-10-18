@@ -1,0 +1,17 @@
+name: keep-warm
+# Optional: pings the API every 10 minutes in Canberra business hours, so staff rarely meet a cold start.
+# Off unless the repository variable KEEP_WARM is "true". One free Render service running all month uses
+# about 744 of the workspace's 750 free hours; business hours alone use about 220. GitHub may delay or skip
+# scheduled runs, so this reduces cold starts rather than removing them.
+on:
+  schedule:
+    - cron: "*/10 21-23 * * 0-4"   # 8am to 11am AEDT (UTC+11), Monday to Friday
+    - cron: "*/10 0-6 * * 1-5"     # 11am to 6pm AEDT
+  workflow_dispatch:
+permissions: {}
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    if: vars.KEEP_WARM == 'true' && vars.RENDER_API_URL != ''
+    steps:
+      - run: curl -fsS --max-time 90 "${{ vars.RENDER_API_URL }}/api/health" > /dev/null

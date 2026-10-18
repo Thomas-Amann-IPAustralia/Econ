@@ -1,0 +1,75 @@
+[project]
+name = "econ"
+version = "0.1.0"
+description = "A RAG chatbot over IP Australia's Office of the Chief Economist publications, built for traceability."
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = { text = "MIT" }
+# Runtime of the Render API service. Keep it light: the free instance has 512 MB and 0.1 CPU.
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn>=0.30",
+    "numpy>=2.0",
+    "httpx>=0.27",
+    "pydantic>=2.8",
+    "pyyaml>=6.0",
+    "typer>=0.12",
+    "snowballstemmer>=2.2",
+]
+
+[project.optional-dependencies]
+# The Cloud Run embedding service (econ.embedder).
+embedder = [
+    "onnxruntime>=1.20",
+    "tokenizers>=0.20",
+]
+# Building the knowledge base and measuring retrieval. Heavy (torch); never installed on Render.
+build = [
+    "econ[embedder]",
+    "docling>=2.50",
+    "pypdfium2>=4.30",
+    "boto3>=1.35",
+    "sentence-transformers>=3.3",
+    "torch>=2.5",
+    "torchvision>=0.20",
+    "huggingface-hub>=0.26",
+]
+
+[project.scripts]
+econ = "econ.cli:app"
+
+[dependency-groups]
+dev = ["pytest>=8.3", "ruff>=0.7"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/econ"]
+
+[tool.uv]
+index-strategy = "unsafe-best-match"
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
+torchvision = { index = "pytorch-cpu" }
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM"]
+ignore = ["E501", "B008", "SIM905"]  # B008: typer options; SIM905: word lists read better as strings
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+markers = ["realdata: needs the raw corpus or built library; skipped in CI"]

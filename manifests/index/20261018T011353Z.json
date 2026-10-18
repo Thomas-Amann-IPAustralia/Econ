@@ -1,0 +1,62 @@
+{
+  "argv": [
+    "index",
+    "--strategy",
+    "S384",
+    "--embedder",
+    "bge-small",
+    "--out",
+    "data/provisional-index"
+  ],
+  "command": "index",
+  "config_hash": "1ec8d6c7ffe4cb37",
+  "counts": {
+    "chunks": 2037,
+    "dim": 384
+  },
+  "error": null,
+  "git": {
+    "commit": "374a744da9809cf4a6d1f91eec66047d5afe8bed",
+    "dirty": true,
+    "dirty_paths": [
+      "config/pipeline.yaml",
+      "config/sources.yaml",
+      "docs/decisions.md",
+      "src/econ/answer/pipeline.py",
+      "src/econ/cli.py",
+      "web/app.js",
+      "web/style.css"
+    ]
+  },
+  "inputs": {},
+  "outputs": {
+    "data/provisional-index/bm25.npz": "3270c842b59ae49d627163ce2cb23aa6b28f50af4faa632c6ce33db261410f1a",
+    "data/provisional-index/bm25.vocab.json": "29b67f596ce41274368bdcce61dbca3b63e301d95506dce658c936556b60a020",
+    "data/provisional-index/chunks.jsonl": "9affd550b86fdfc4907e44ee5d24100c807b7c5f103f59fecf531df0cf3ea863",
+    "data/provisional-index/docs.json": "8d723361837d583c51db053680b6d984017161dd80d038992e19a9ae3651723a",
+    "data/provisional-index/index.json": "0174650b721f3a3b562b4798f76bbc1b0765b3808a162425253fb8f797ee8a30",
+    "data/provisional-index/vectors.f16.npy": "100e11951351a41eeea015947ed1a7bf4e41a40fbf365e62c7b19c685ff6766d"
+  },
+  "params": {
+    "embedder": "bge-small",
+    "out": "data/provisional-index",
+    "strategy": "S384"
+  },
+  "run_id": "20261018T011353Z",
+  "seconds": 311.5,
+  "status": "passed",
+  "upstream": {
+    "chunk": "20261018T010921Z"
+  },
+  "versions": {
+    "docling": "2.140.0",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.0",
+    "pypdfium2": "5.14.0",
+    "python": "3.12.3",
+    "sentence-transformers": "6.1.0",
+    "tokenizers": "0.23.3",
+    "torch": "2.14.1+cpu"
+  },
+  "warnings": []
+}

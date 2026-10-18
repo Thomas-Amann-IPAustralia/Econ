@@ -1,0 +1,90 @@
+{
+  "argv": [
+    "chunk"
+  ],
+  "command": "chunk",
+  "config_hash": "f82e99ff3b79bcf8",
+  "counts": {
+    "F384": {
+      "chunks": 1561,
+      "max_tokens": 381,
+      "median_tokens": 380,
+      "total_tokens": 589860
+    },
+    "S256": {
+      "chunks": 3022,
+      "max_tokens": 256,
+      "median_tokens": 210,
+      "total_tokens": 580117
+    },
+    "S384": {
+      "chunks": 2029,
+      "max_tokens": 384,
+      "median_tokens": 274,
+      "total_tokens": 517066
+    },
+    "S384-noprefix": {
+      "chunks": 1962,
+      "max_tokens": 384,
+      "median_tokens": 261,
+      "total_tokens": 480458
+    },
+    "S512": {
+      "chunks": 1641,
+      "max_tokens": 512,
+      "median_tokens": 310,
+      "total_tokens": 502772
+    },
+    "boilerplate_paragraphs": 29
+  },
+  "error": null,
+  "git": {
+    "commit": "411f27b49154d76cda530ac6a1ff95ee6a0447e4",
+    "dirty": true,
+    "dirty_paths": [
+      "README.md",
+      "src/econ/cli.py",
+      "src/econ/evalr/metrics.py",
+      "src/econ/evalr/testset.py",
+      "tests/test_chunk.py",
+      "CLAUDE.md",
+      "docs/deploy.md",
+      "eval/testset/",
+      "tests/test_providers.py"
+    ]
+  },
+  "inputs": {},
+  "outputs": {
+    "library/chunks/F384.jsonl": "92694cd1e00f59a8e89690b258a46df3baabaf0b1b3355a1be9f13a353c48056",
+    "library/chunks/S256.jsonl": "e78905b19501895b38ec5b2e8f7bd4de0bcc57d00684dfca0f1a7fb1a588fc9c",
+    "library/chunks/S384-noprefix.jsonl": "18cdae45287e3ee1457bf9a8e6318458eb2fa6cafd971370268067b412bdc329",
+    "library/chunks/S384.jsonl": "bc4e7d813dd71f33640d53c049aa6df7de63c06e429260471e2c63e7e544ca1d",
+    "library/chunks/S512.jsonl": "a5f5e1be1519d9a464d6ab11ab03a151908b4b38a3ec7cdfe6fb1ddf50162550"
+  },
+  "params": {
+    "strategies": [
+      "F384",
+      "S256",
+      "S384",
+      "S512",
+      "S384-noprefix"
+    ]
+  },
+  "run_id": "20261018T010704Z",
+  "seconds": 23.4,
+  "status": "passed",
+  "upstream": {
+    "parse": "20261018T010627Z"
+  },
+  "versions": {
+    "docling": "2.140.0",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.0",
+    "pypdfium2": "5.14.0",
+    "python": "3.12.3",
+    "sentence-transformers": "6.1.0",
+    "tokenizers": "0.23.3",
+    "torch": "2.14.1+cpu"
+  },
+  "warnings": []
+}

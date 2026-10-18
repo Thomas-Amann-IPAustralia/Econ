@@ -1,0 +1,531 @@
+// IP economics evidence chat: a static front end for the API on Render.
+// Every string from the server is escaped before it reaches the page.
+
+const CFG = Object.assign({ api: "", pdfBase: "pdfs/" }, window.ECON_CONFIG || {});
+const params = new URLSearchParams(location.search);
+if (params.get("api")) CFG.api = params.get("api");
+const API = CFG.api.replace(/\/$/, "");
+const PDFJS = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.min.mjs";
+const PDFJS_WORKER = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/4.10.38/pdf.worker.min.mjs";
+
+const STARTERS = [
+  "What statistical methods does the Office of the Chief Economist use to establish causality?",
+  "How sure can we be that the IP system is actually beneficial for innovation?",
+  "How do trade marks, design rights and copyright intersect?",
+  "Looking across the documents, what opportunity spaces could IP Australia take advantage of that may not yet be explored?",
+];
+
+const $ = (s, el = document) => el.querySelector(s);
+const h = (tag, attrs = {}, ...kids) => {
+  const el = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (v == null || v === false) continue;
+    if (k === "class") el.className = v;
+    else if (k.startsWith("on")) el.addEventListener(k.slice(2), v);
+    else el.setAttribute(k, v === true ? "" : v);
+  }
+  for (const k of kids.flat()) if (k != null && k !== false) el.append(k.nodeType ? k : document.createTextNode(String(k)));
+  return el;
+};
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
+const pages = (p) => (p.length === 1 ? `p. ${p[0]}` : `pp. ${p[0]}–${p[p.length - 1]}`);
+
+const state = { docs: {}, turns: [], selected: null, health: null };
+
+// --- server status: wake Render (and through it Cloud Run) as soon as the page opens ----------------
+
+async function wake() {
+  const el = $("#status"), txt = $("#status-text");
+  if (!API) {
+    el.className = "status down";
+    txt.textContent = "No API configured";
+    return;
+  }
+  const t0 = Date.now();
+  el.className = "status waking";
+  for (let i = 0; i < 40; i++) {
+    try {
+      const r = await fetch(`${API}/api/health`, { cache: "no-store" });
+      if (r.ok) {
+        state.health = await r.json();
+        const llm = state.health.llm;
+        const emb = state.health.embedder;
+        if (llm.mode === "answer") {
+          el.className = "status ready";
+          txt.textContent = `Ready · ${llm.answer_model}`;
+        } else {
+          el.className = "status evidence";
+          txt.textContent = llm.budget_reached ? "Evidence only (daily budget reached)" : "Evidence only (no model key)";
+        }
+        el.title = `Search model: ${state.health.build.index.embedder} (${emb.configured ? (emb.warm ? "warm" : "waking") : "not configured"})`;
+        $("#build").textContent = `Build ${String(state.health.build.commit).slice(0, 8)} · index ${state.health.build.index.strategy} / ${state.health.build.index.embedder} · ${state.health.build.index.chunks} passages · prompt ${state.health.build.prompt}`;
+        return;
+      }
+    } catch (e) { /* still waking */ }
+    const s = Math.round((Date.now() - t0) / 1000);
+    txt.textContent = `Waking the server… ${s}s (free hosting sleeps when idle; about a minute)`;
+    await new Promise((r) => setTimeout(r, 3000));
+  }
+  el.className = "status down";
+  txt.textContent = "Server unavailable";
+}
+
+// --- the library ---------------------------------------------------------------------------------------
+
+async function loadCatalogue() {
+  let docs = null;
+  try {
+    const r = await fetch("data/catalogue.json");
+    if (r.ok) docs = (await r.json()).documents;
+  } catch (e) { /* fall back to the API */ }
+  if (!docs && API) {
+    try { docs = (await (await fetch(`${API}/api/catalogue`)).json()).documents; } catch (e) { docs = {}; }
+  }
+  state.docs = docs || {};
+  const list = Object.values(state.docs).sort((a, b) => b.year - a.year || a.title.localeCompare(b.title));
+  const lib = $("#library");
+  lib.replaceChildren(...list.map((d) => h("div", { class: "doc" },
+    h("div", { class: "doc-year" }, d.year),
+    h("div", {},
+      h("div", { class: "doc-title" }, d.title),
+      h("div", { class: "doc-meta" }, `${d.series} · ${d.page_count} pages · ${d.chunks} passages · ${d.licence || "no licence statement in the document"}${d.ocr ? " · text from OCR" : ""}`),
+      d.note ? h("div", { class: "doc-meta" }, d.note) : null),
+    h("div", {}, h("button", { class: "linkish", onclick: () => openViewer(d.doc_id, 1, []) }, "View"),
+      d.url ? h("a", { class: "linkish", href: d.url, target: "_blank", rel: "noopener" }, "Publisher page") : null),
+  )));
+  const pagesTotal = list.reduce((a, d) => a + d.page_count, 0);
+  $("#lib-summary").textContent = `${list.length} documents, ${pagesTotal} pages, published by IP Australia under Creative Commons Attribution 4.0 unless noted.`;
+  const years = [...new Set(list.map((d) => d.year))].sort();
+  for (const sel of [$("#y0"), $("#y1")]) sel.replaceChildren(...years.map((y) => h("option", { value: y }, y)));
+  $("#y0").value = years[0];
+  $("#y1").value = years[years.length - 1];
+}
+
+// --- asking -----------------------------------------------------------------------------------------------
+
+async function* sse(resp) {
+  const reader = resp.body.getReader();
+  const dec = new TextDecoder();
+  let buf = "";
+  for (;;) {
+    const { value, done } = await reader.read();
+    if (done) break;
+    buf += dec.decode(value, { stream: true });
+    let i;
+    while ((i = buf.indexOf("\n\n")) >= 0) {
+      const block = buf.slice(0, i);
+      buf = buf.slice(i + 2);
+      const data = block.split("\n").filter((l) => l.startsWith("data: ")).map((l) => l.slice(6)).join("\n");
+      if (data) yield JSON.parse(data);
+    }
+  }
+}
+
+async function ask(question, context) {
+  $("#empty")?.remove();
+  const years = [+$("#y0").value, +$("#y1").value].sort((a, b) => a - b);
+  const allYears = Object.values(state.docs).map((d) => d.year);
+  const filtered = allYears.length && (years[0] > Math.min(...allYears) || years[1] < Math.max(...allYears));
+  const turn = { question, context, events: {}, checks: [], el: null };
+  state.turns.push(turn);
+  $("#thread").append(h("div", { class: "msg user" }, question,
+    context ? h("span", { class: "ctxnote" }, `+ ${context.length.toLocaleString()} characters of your material`) : null,
+    filtered ? h("span", { class: "ctxnote" }, `Limited to ${years[0]}–${years[1]}`) : null));
+  const bot = h("div", { class: "msg bot", tabindex: "0", onclick: () => {
+    select(turn);
+    if (window.matchMedia("(max-width: 860px)").matches) $("#trail").scrollIntoView({ behavior: "smooth" });
+  } },
+    h("div", { class: "progress" }, h("span", { class: "spinner" }), h("span", {}, "Planning the search…")));
+  turn.el = bot;
+  $("#thread").append(bot);
+  bot.scrollIntoView({ block: "end" });
+  select(turn);
+
+  const history = state.turns.slice(0, -1).flatMap((t) => [
+    { role: "user", text: t.question },
+    t.events.answer ? { role: "assistant", text: t.events.answer.answer.replace(/\[\d+\]/g, "") } : null,
+  ]).filter(Boolean).slice(-6);
+
+  $("#send").disabled = true;
+  try {
+    const resp = await fetch(`${API}/api/ask`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ question, context, history, years: filtered ? years : null }),
+    });
+    if (!resp.ok) {
+      const msg = (await resp.json().catch(() => ({}))).detail || `The server answered ${resp.status}.`;
+      throw new Error(msg);
+    }
+    for await (const ev of sse(resp)) {
+      if (ev.event === "check") turn.checks.push(ev);
+      if (ev.event === "answer") turn.events.answers = [...(turn.events.answers || []), ev];
+      turn.events[ev.event] = ev;
+      renderBot(turn);
+      if (state.selected === turn) renderTrail(turn);
+    }
+  } catch (e) {
+    turn.events.error = { message: e.message || String(e) };
+    renderBot(turn);
+  } finally {
+    $("#send").disabled = false;
+  }
+}
+
+function progressText(t) {
+  const e = t.events;
+  if (e.error && !e.answer) return null;
+  if (e.done) return null;
+  if (e.answer) return "Checking the quotes…";
+  if (e.retrieval) return e.meta?.mode === "answer" ? `Found ${e.retrieval.evidence.length} passages. Writing the answer…` : "Collecting passages…";
+  if (e.plan) return `Searching: ${e.plan.queries.join(" · ")}`;
+  return "Planning the search…";
+}
+
+// Markdown-lite: escape first, then paragraphs, lists, bold, italics; [n] markers become buttons.
+function renderMarkdown(md, claims) {
+  const failed = new Set((claims || []).filter((c) => !c.verified).map((c) => c.n));
+  const inline = (s) => esc(s)
+    .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+    .replace(/(^|[^*])\*([^*]+)\*/g, "$1<em>$2</em>")
+    .replace(/\[(\d{1,3})\]/g, (_, n) => `<button class="cite${failed.has(+n) ? " failed" : ""}" data-claim="${n}" title="Claim ${n}${failed.has(+n) ? ": failed the check" : ""}">${n}</button>`);
+  const out = [];
+  let list = null;
+  for (const raw of md.split("\n")) {
+    const line = raw.trimEnd();
+    const m = line.match(/^\s*([-*•]|\d+[.)])\s+(.*)$/);
+    if (m) {
+      const kind = /\d/.test(m[1]) ? "ol" : "ul";
+      if (!list || list.kind !== kind) { if (list) out.push(`</${list.kind}>`); out.push(`<${kind}>`); list = { kind }; }
+      out.push(`<li>${inline(m[2])}</li>`);
+      continue;
+    }
+    if (list) { out.push(`</${list.kind}>`); list = null; }
+    if (!line.trim()) continue;
+    const hd = line.match(/^#{1,4}\s+(.*)$/);
+    out.push(hd ? `<p><strong>${inline(hd[1])}</strong></p>` : `<p>${inline(line)}</p>`);
+  }
+  if (list) out.push(`</${list.kind}>`);
+  return out.join("");
+}
+
+function renderBot(t) {
+  const e = t.events;
+  const el = t.el;
+  el.replaceChildren();
+  const prog = progressText(t);
+  const meta = e.meta;
+  const check = t.checks[t.checks.length - 1];
+  const badges = h("div", { class: "badges" });
+  if (e.answer) {
+    const cov = { complete: ["ok", "Complete answer"], partial: ["warn", "Partial answer"], not_in_kb: ["info", "Not in the library"] }[e.answer.coverage];
+    badges.append(h("span", { class: `badge ${cov[0]}` }, cov[1]));
+    if (check) {
+      const n = check.claims.length, bad = check.claims.filter((c) => !c.verified).length;
+      badges.append(check.passed
+        ? h("span", { class: "badge ok" }, n ? `All ${n} claims quote their sources verbatim` : "Checked")
+        : h("span", { class: "badge bad", title: check.errors.join("\n") }, `${bad || "Some"} of ${n} claims failed the check`));
+    }
+  } else if (meta?.mode === "evidence_only" && e.retrieval) {
+    badges.append(h("span", { class: "badge info" }, "Evidence only"));
+  }
+  if (badges.childNodes.length) el.append(badges);
+  if (e.answer) {
+    const body = h("div");
+    body.innerHTML = renderMarkdown(e.answer.answer, check?.claims);
+    el.append(body);
+    if (e.answer.gaps?.length) el.append(h("div", { class: "gaps" }, "Not covered: ", e.answer.gaps.join("; ")));
+  } else if (e.retrieval && meta?.mode === "evidence_only") {
+    const docs = new Set(e.retrieval.evidence.map((x) => x.doc_id));
+    el.append(h("p", {}, `No language model is configured, so here are the ${e.retrieval.evidence.length} most relevant passages, from ${docs.size} documents. They are in the evidence trail, best first.`));
+  }
+  if (e.error) el.append(h("p", { class: "badge bad" }, `Something went wrong: ${e.error.message}`));
+  if (prog) el.append(h("div", { class: "progress" }, h("span", { class: "spinner" }), h("span", {}, prog)));
+  if (e.done) {
+    const cost = e.done.cost_usd ? ` · US$${e.done.cost_usd.toFixed(4)}` : "";
+    el.append(h("div", { class: "gaps" }, `${e.done.seconds}s${cost} · ${window.matchMedia("(max-width: 860px)").matches ? "tap to see the evidence trail" : "select to see the evidence trail"}`));
+  }
+  el.querySelectorAll(".cite").forEach((b) => b.addEventListener("click", (ev) => {
+    ev.stopPropagation();
+    select(t);
+    focusClaim(t, +b.dataset.claim);
+  }));
+}
+
+// --- the evidence trail ---------------------------------------------------------------------------------
+
+function select(t) {
+  state.selected = t;
+  document.querySelectorAll(".msg.bot").forEach((m) => m.classList.toggle("selected", m === t.el));
+  renderTrail(t);
+}
+
+function quoteRanges(t) {
+  // evidence n -> [{start, end, claim}] from the last check
+  const check = t.checks[t.checks.length - 1];
+  const by = {};
+  for (const c of check?.claims || []) {
+    for (const cit of c.citations) {
+      if (cit.found && cit.start != null) (by[cit.evidence] ||= []).push({ start: cit.start, end: cit.end, claim: c.n });
+    }
+  }
+  return by;
+}
+
+function highlight(text, quotes, terms) {
+  const ranges = (quotes || []).map((q) => ({ ...q, cls: "q" }));
+  if (terms?.length) {
+    const re = new RegExp(`\\b(${terms.map((s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})\\w*`, "gi");
+    for (const m of text.matchAll(re)) {
+      const s = m.index, e = s + m[0].length;
+      if (!ranges.some((r) => r.cls === "q" && s < r.end && e > r.start)) ranges.push({ start: s, end: e, cls: "t" });
+    }
+  }
+  ranges.sort((a, b) => a.start - b.start);
+  let out = "", pos = 0;
+  for (const r of ranges) {
+    if (r.start < pos) continue;
+    out += esc(text.slice(pos, r.start));
+    out += `<mark class="${r.cls}"${r.claim ? ` data-claim="${r.claim}"` : ""}>${esc(text.slice(r.start, r.end))}</mark>`;
+    pos = r.end;
+  }
+  return out + esc(text.slice(pos));
+}
+
+function step(n, cls, title, detail, extra) {
+  return h("li", { class: `step ${cls}` }, h("span", { class: "n" }, n), h("div", {}, h("div", { class: "t" }, title), detail ? h("div", { class: "d" }, detail) : null, extra || null));
+}
+
+function renderTrail(t) {
+  const e = t.events;
+  const pane = $("#trail");
+  pane.replaceChildren(h("h2", {}, "Evidence trail"));
+  if (!e.meta && !e.error) { pane.append(h("p", { class: "muted" }, "Waiting for the server…")); return; }
+  const check = t.checks[t.checks.length - 1];
+  const steps = h("ol", { class: "steps" });
+  if (e.plan) {
+    steps.append(step(1, e.plan.error ? "warn" : "ok", "Planned the search",
+      e.plan.error || (e.plan.standalone_question !== t.question ? `Read as: “${e.plan.standalone_question}”` : null),
+      h("div", { class: "chips" }, e.plan.queries.map((q) => h("span", { class: "chip" }, q)))));
+  } else if (e.retrieval) {
+    steps.append(step(1, "ok", "Searched for the question as asked", null, h("div", { class: "chips" }, e.retrieval.queries.map((q) => h("span", { class: "chip" }, q)))));
+  }
+  if (e.retrieval) {
+    const r = e.retrieval;
+    const docs = new Set(r.evidence.map((x) => x.doc_id));
+    steps.append(step(2, r.dense === "ok" ? "ok" : "warn", `Found ${r.candidates} candidate passages; kept the best ${r.evidence.length} from ${docs.size} documents`,
+      r.dense === "ok" ? `Meaning and keyword search, combined (${e.meta.index.embedder}, ${e.meta.index.strategy} passages)` : `Meaning search ${r.dense}`));
+  }
+  if (e.answers?.length) {
+    const last = e.answers[e.answers.length - 1];
+    steps.append(step(3, "ok", `Answer written by ${e.meta.answer_model}`, last.attempt > 1 ? "Second attempt, after the first failed the check" : `${last.claims.length} claims, ${last.claims.reduce((a, c) => a + c.citations.length, 0)} quotes`));
+  }
+  if (check) {
+    steps.append(step(4, check.passed ? "ok" : "bad", check.passed ? "Every quote was found word for word in its passage" : "The check found problems", check.passed ? null : check.errors.slice(0, 4).join("; ")));
+  }
+  if (e.done) {
+    const tm = e.done.timings || {};
+    steps.append(step(e.meta.mode === "answer" ? 5 : 3, "ok", `Done in ${e.done.seconds}s`, `search ${((tm.embed || 0) + (tm.search || 0)).toFixed(1)}s${tm.answer_1 ? ` · answer ${tm.answer_1}s` : ""}${e.done.cost_usd ? ` · US$${e.done.cost_usd.toFixed(4)}` : ""}`));
+  }
+  if (e.error) steps.append(step("!", "bad", "Error", e.error.message));
+  pane.append(steps);
+
+  if (check?.claims?.length) {
+    pane.append(h("h3", {}, "Claims"));
+    pane.append(h("ul", { class: "claimlist" }, check.claims.map((c) => h("li", { class: c.verified ? "" : "failed" },
+      h("button", { class: `cite${c.verified ? "" : " failed"}`, onclick: () => focusClaim(t, c.n) }, c.n), " ", c.text, " ",
+      h("span", { class: "muted" }, `(evidence ${[...new Set(c.citations.map((x) => x.evidence))].join(", ")})`),
+      c.errors.length ? h("div", { class: "why-failed" }, c.errors.join("; ")) : null))));
+  }
+
+  if (!e.retrieval) return;
+  const ev = e.retrieval.evidence;
+  const quotes = quoteRanges(t);
+  const citedBy = {};
+  for (const c of check?.claims || []) for (const x of c.citations) (citedBy[x.evidence] ||= new Set()).add(c.n);
+
+  // Source map: where the evidence came from, by year.
+  pane.append(h("h3", {}, "Where the evidence came from"));
+  const byYear = {};
+  for (const x of ev) (byYear[x.year] ||= {})[x.doc_id] = [...((byYear[x.year] || {})[x.doc_id] || []), x];
+  const map = h("div", { class: "map" });
+  for (const y of Object.keys(byYear).sort().reverse()) {
+    map.append(h("div", { class: "map-row" }, h("span", { class: "map-year" }, y), h("div", { class: "map-docs" },
+      Object.entries(byYear[y]).map(([doc, xs]) => h("button", { class: "map-doc", title: state.docs[doc]?.title || doc, onclick: (ev) => filterDoc(doc, ev.currentTarget) },
+        (state.docs[doc]?.series || "").replace("IP Australia Economic Research Paper", "ERP").replace("Australian IP Report", "IP Report").replace("Office of the Chief Economist", "OCE"),
+        xs.map((x) => h("span", { class: `pip${citedBy[x.n] ? " cited" : ""}`, title: `Passage ${x.n}${citedBy[x.n] ? ", cited" : ""}` })))))));
+  }
+  pane.append(map);
+
+  pane.append(h("div", { class: "ev-head" }, h("h3", {}, `Passages (${ev.length})`), h("span", { class: "filter-note muted", id: "filter-note" }, "Filled pips and a blue edge mark cited passages.")));
+  const list = h("div", { id: "evlist" });
+  for (const x of ev) {
+    const cited = citedBy[x.n];
+    const textEl = h("div", { class: "ev-text" });
+    textEl.innerHTML = highlight(x.text, quotes[x.n], x.matched_terms);
+    const why = h("details", { class: "why" }, h("summary", {}, "Why it ranked"), h("table", {},
+      h("tr", {}, h("th", {}, "Search"), h("th", {}, "Rank"), h("th", {}, "Meaning"), h("th", {}, "Keywords")),
+      Object.entries(x.per_query).map(([qi, s]) => h("tr", {},
+        h("td", {}, e.retrieval.queries[+qi]), h("td", {}, s.rank),
+        h("td", {}, s.dense != null ? `${s.dense.toFixed(3)} (#${s.dense_rank})` : "–"),
+        h("td", {}, s.bm25 != null ? `${s.bm25.toFixed(2)} (#${s.bm25_rank})` : "–")))),
+      x.matched_terms.length ? h("p", { class: "muted" }, `Keywords matched: ${x.matched_terms.join(", ")}`) : null);
+    list.append(h("article", { class: `ev${cited ? " cited" : ""}`, id: `ev-${x.n}`, "data-doc": x.doc_id },
+      h("div", { class: "ev-top" }, h("div", {}, h("span", { class: "ev-n" }, x.n), h("span", { class: "ev-title" }, x.title)),
+        cited ? h("span", { class: "badge info" }, `cited by ${[...cited].map((n) => `[${n}]`).join("")}`) : null),
+      h("div", { class: "ev-meta" }, `${x.year} · ${x.section.length ? x.section.join(" › ") + " · " : ""}${pages(x.pages)} · rank ${x.merged_rank}`),
+      x.note ? h("div", { class: "ev-note" }, x.note) : null,
+      x.ocr ? h("div", { class: "ev-note" }, "Text read from a scanned page by OCR: check the wording against the page.") : null,
+      textEl,
+      h("div", { class: "ev-actions" },
+        h("button", { onclick: () => textEl.classList.toggle("open") }, "Expand"),
+        h("button", { onclick: () => openViewer(x.doc_id, x.pages[0], x.boxes) }, `Show on ${pages(x.pages)}`),
+        h("button", { onclick: (ev2) => readAround(x.chunk_id, textEl, ev2.target) }, "Read around")),
+      why));
+  }
+  pane.append(list);
+
+  const trace = h("details", { class: "trace" }, h("summary", {}, "Full search trace"));
+  for (const tr of e.retrieval.traces) {
+    const maxD = Math.max(...tr.hits.map((x) => x.dense || 0), 1e-9), maxB = Math.max(...tr.hits.map((x) => x.bm25 || 0), 1e-9);
+    trace.append(h("p", {}, h("strong", {}, `“${tr.query}”`), ` · lanes: ${tr.lanes.join(" + ")}`));
+    trace.append(h("table", {}, h("tr", {}, h("th", {}, "#"), h("th", {}, "Passage"), h("th", {}, "Meaning"), h("th", {}, "Keywords"), h("th", {}, "Combined")),
+      tr.hits.map((x) => h("tr", {}, h("td", {}, x.rank), h("td", {}, x.chunk_id),
+        h("td", {}, x.dense != null ? h("span", { class: "bar", style: `width:${Math.round(60 * x.dense / maxD)}px`, title: x.dense.toFixed(3) }) : "–"),
+        h("td", {}, x.bm25 != null ? h("span", { class: "bar kw", style: `width:${Math.round(60 * x.bm25 / maxB)}px`, title: x.bm25.toFixed(2) }) : "–"),
+        h("td", {}, x.score.toFixed(3))))));
+  }
+  pane.append(trace);
+}
+
+function filterDoc(doc, btn) {
+  const items = document.querySelectorAll("#evlist .ev");
+  const on = [...items].some((a) => a.style.display === "none") && [...items].find((a) => a.style.display !== "none")?.dataset.doc === doc;
+  items.forEach((a) => { a.style.display = on || a.dataset.doc === doc ? "" : "none"; });
+  document.querySelectorAll(".map-doc").forEach((b) => b.classList.remove("active"));
+  if (!on) btn?.classList.add("active");
+  $("#filter-note").textContent = on ? "Filled pips and a blue edge mark cited passages." : `Showing ${state.docs[doc]?.title || doc}. Select it again to show all.`;
+}
+
+function focusClaim(t, n) {
+  const check = t.checks[t.checks.length - 1];
+  const claim = check?.claims.find((c) => c.n === n);
+  document.querySelectorAll(".cite").forEach((b) => b.classList.toggle("on", +b.dataset.claim === n));
+  document.querySelectorAll(".ev").forEach((a) => a.classList.remove("focus"));
+  if (!claim) return;
+  let first = null;
+  for (const c of claim.citations) {
+    const card = $(`#ev-${c.evidence}`);
+    if (!card) continue;
+    card.style.display = "";
+    card.classList.add("focus");
+    card.querySelector(".ev-text").classList.add("open");
+    first ||= card.querySelector(`mark[data-claim="${n}"]`) || card;
+  }
+  first?.scrollIntoView({ behavior: "smooth", block: "center" });
+}
+
+async function readAround(chunkId, textEl, btn) {
+  btn.disabled = true;
+  try {
+    const cur = await (await fetch(`${API}/api/chunk/${encodeURIComponent(chunkId)}`)).json();
+    const get = async (id) => (id ? (await (await fetch(`${API}/api/chunk/${encodeURIComponent(id)}`)).json()).text : "");
+    const [before, after] = await Promise.all([get(cur.prev), get(cur.next)]);
+    const extra = (s, label) => (s ? `<div class="muted">${label}</div><div>${esc(s)}</div>` : "");
+    textEl.insertAdjacentHTML("afterbegin", extra(before, "Before:") + (before ? "<hr>" : ""));
+    textEl.insertAdjacentHTML("beforeend", (after ? "<hr>" : "") + extra(after, "After:"));
+    textEl.classList.add("open");
+    btn.textContent = "Showing neighbours";
+  } catch (e) {
+    btn.textContent = "Couldn't load";
+  }
+}
+
+// --- the page viewer: PDF.js renders the cited page and the passage's boxes are drawn over it -----------
+
+let pdfjs = null;
+const viewer = { doc: null, pdf: null, page: 1, boxes: [] };
+
+async function openViewer(docId, page, boxes) {
+  const d = state.docs[docId] || { title: docId, pages: {} };
+  const dlg = $("#viewer");
+  $("#viewer-title").textContent = d.title;
+  $("#viewer-meta").textContent = ` · ${d.year || ""} · ${d.licence || ""}`;
+  const url = `${CFG.pdfBase}${docId}.pdf`;
+  $("#viewer-open").href = d.url || url;
+  $("#viewer-open").textContent = d.url ? "Publisher page" : "Open PDF";
+  $("#viewer-msg").textContent = "Loading the document…";
+  if (!dlg.open) dlg.showModal();
+  try {
+    pdfjs ||= await import(PDFJS);
+    pdfjs.GlobalWorkerOptions.workerSrc = PDFJS_WORKER;
+    if (viewer.doc !== docId) {
+      viewer.pdf = await pdfjs.getDocument({ url }).promise;
+      viewer.doc = docId;
+    }
+    viewer.boxes = boxes;
+    await renderPage(page);
+    $("#viewer-msg").textContent = boxes.length ? "Highlighted: the passage's text blocks on this page." : "";
+  } catch (e) {
+    $("#viewer-msg").textContent = `This copy of the PDF isn't available here (${e.message || e}). ${d.url ? "Use the publisher page link above." : ""}`;
+  }
+}
+
+async function renderPage(n) {
+  const pdf = viewer.pdf;
+  n = Math.max(1, Math.min(n, pdf.numPages));
+  viewer.page = n;
+  const page = await pdf.getPage(n);
+  const base = page.getViewport({ scale: 1 });
+  const width = Math.min($("#viewer-body").clientWidth - 30, 900);
+  const scale = width / base.width;
+  const vp = page.getViewport({ scale });
+  const canvas = $("#page-canvas");
+  const ratio = window.devicePixelRatio || 1;
+  canvas.width = vp.width * ratio;
+  canvas.height = vp.height * ratio;
+  canvas.style.width = `${vp.width}px`;
+  canvas.style.height = `${vp.height}px`;
+  await page.render({ canvasContext: canvas.getContext("2d"), viewport: vp, transform: ratio !== 1 ? [ratio, 0, 0, ratio, 0, 0] : null }).promise;
+  const size = state.docs[viewer.doc]?.pages?.[n];
+  const sx = size ? vp.width / size.width : scale, sy = size ? vp.height / size.height : scale;
+  const marks = $("#page-marks");
+  marks.replaceChildren();
+  for (const b of viewer.boxes.filter((x) => x.page === n)) {
+    const [l, t, r, bt] = b.bbox;
+    marks.append(h("div", { class: "box", style: `left:${l * sx - 3}px;top:${t * sy - 3}px;width:${(r - l) * sx + 6}px;height:${(bt - t) * sy + 6}px` }));
+  }
+  $("#pg-num").textContent = `${n} / ${pdf.numPages}`;
+  marks.firstChild?.scrollIntoView({ block: "center" });
+}
+
+// --- wiring ---------------------------------------------------------------------------------------------
+
+function init() {
+  document.querySelectorAll(".tab").forEach((b) => b.addEventListener("click", () => {
+    document.querySelectorAll(".tab").forEach((x) => { x.classList.toggle("active", x === b); x.removeAttribute("aria-current"); });
+    b.setAttribute("aria-current", "page");
+    document.querySelectorAll(".view").forEach((v) => v.classList.toggle("active", v.id === `view-${b.dataset.view}`));
+  }));
+  $("#starters").append(...STARTERS.map((q) => h("button", { class: "starter", type: "button", onclick: () => { $("#q").value = q; $("#q").focus(); } }, q)));
+  $("#ask").addEventListener("submit", (ev) => {
+    ev.preventDefault();
+    const q = $("#q").value.trim();
+    if (!q || $("#send").disabled) return;
+    const ctx = $("#ctx").value.trim();
+    $("#q").value = "";
+    $("#ctx").value = "";
+    $("#extra").open = false;
+    ask(q, ctx);
+  });
+  $("#q").addEventListener("keydown", (ev) => {
+    if (ev.key === "Enter" && !ev.shiftKey) { ev.preventDefault(); $("#ask").requestSubmit(); }
+  });
+  $("#viewer-close").addEventListener("click", () => $("#viewer").close());
+  $("#pg-prev").addEventListener("click", () => viewer.pdf && renderPage(viewer.page - 1));
+  $("#pg-next").addEventListener("click", () => viewer.pdf && renderPage(viewer.page + 1));
+  wake();
+  loadCatalogue();
+}
+
+init();

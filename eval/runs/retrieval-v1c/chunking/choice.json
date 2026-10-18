@@ -1,0 +1,12 @@
+{
+  "baseline": "S384-noprefix",
+  "chosen": "S384-noprefix-nocite",
+  "dev": {
+    "S384-noprefix": 0.8424242424242425,
+    "S384-noprefix-nocite": 0.8424242424242425
+  },
+  "margin": 0.01,
+  "primary": "recall@4k_tok",
+  "rule": "Adopt S384-noprefix-nocite unless its dev recall@4k_tok (arctic-m-v1.5, hybrid lane) is more than 0.01 below S384-noprefix's. Checked beforehand: no gold passage, or verbatim copy of one, lies in an element the filter drops.",
+  "stage": "chunking"
+}

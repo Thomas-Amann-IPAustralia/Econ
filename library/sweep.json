@@ -1,0 +1,423 @@
+{
+  "erp01-patent-backlogs": {
+    "findings": [],
+    "image_only_pages": 4,
+    "pages": 37,
+    "quarantined": false,
+    "text_layer_chars": 56822
+  },
+  "erp03-market-for-design": {
+    "findings": [],
+    "image_only_pages": 0,
+    "pages": 36,
+    "quarantined": false,
+    "text_layer_chars": 126887
+  },
+  "erp04-mining-innovation": {
+    "findings": [],
+    "image_only_pages": 0,
+    "pages": 35,
+    "quarantined": false,
+    "text_layer_chars": 76231
+  },
+  "erp08-designs-law-practice": {
+    "findings": [],
+    "image_only_pages": 1,
+    "pages": 28,
+    "quarantined": false,
+    "text_layer_chars": 75200
+  },
+  "erp10-ip-profitability-competition": {
+    "findings": [],
+    "image_only_pages": 1,
+    "pages": 39,
+    "quarantined": false,
+    "text_layer_chars": 128350
+  },
+  "erp11-exporters-trade-marks": {
+    "findings": [],
+    "image_only_pages": 1,
+    "pages": 47,
+    "quarantined": false,
+    "text_layer_chars": 153543
+  },
+  "erp14-raising-the-bar": {
+    "findings": [
+      {
+        "allowlisted": false,
+        "excerpt": "ChiefEconomist@ipaustralia.gov.au",
+        "page": 3,
+        "rule": "email_address",
+        "severity": "low"
+      }
+    ],
+    "image_only_pages": 3,
+    "pages": 46,
+    "quarantined": false,
+    "text_layer_chars": 104454
+  },
+  "erp15-patenting-firms": {
+    "findings": [
+      {
+        "allowlisted": false,
+        "excerpt": "ChiefEconomist@ipaustralia.gov.au",
+        "page": 3,
+        "rule": "email_address",
+        "severity": "low"
+      }
+    ],
+    "image_only_pages": 2,
+    "pages": 44,
+    "quarantined": false,
+    "text_layer_chars": 92982
+  },
+  "erp16-cii-patent-trends": {
+    "findings": [
+      {
+        "allowlisted": false,
+        "excerpt": "ChiefEconomist@ipaustralia.gov.au",
+        "page": 3,
+        "rule": "email_address",
+        "severity": "low"
+      }
+    ],
+    "image_only_pages": 3,
+    "pages": 56,
+    "quarantined": false,
+    "text_layer_chars": 138337
+  },
+  "ipr-2015": {
+    "findings": [
+      {
+        "allowlisted": false,
+        "excerpt": "ipreport@ipaustralia.gov.au",
+        "page": 6,
+        "rule": "email_address",
+        "severity": "low"
+      },
+      {
+        "allowlisted": false,
+        "excerpt": "ipreport@ipaustralia.gov.au",
+        "page": 33,
+        "rule": "email_address",
+        "severity": "low"
+      }
+    ],
+    "image_only_pages": 3,
+    "pages": 42,
+    "quarantined": false,
+    "text_layer_chars": 61368
+  },
+  "ipr-2016": {
+    "findings": [
+      {
+        "allowlisted": false,
+        "excerpt": "ipreport@ipaustralia.gov.au",
+        "page": 6,
+        "rule": "email_address",
+        "severity": "low"
+      },
+      {
+        "allowlisted": false,
+        "excerpt": "ipreport@ipaustralia.gov.au",
+        "page": 37,
+        "rule": "email_address",
+        "severity": "low"
+      }
+    ],
+    "image_only_pages": 4,
+    "pages": 44,
+    "quarantined": false,
+    "text_layer_chars": 67291
+  },
+  "ipr-2017": {
+    "findings": [
+      {
+        "allowlisted": false,
+        "excerpt": "ipreport@ipaustralia.gov.au",
+        "page": 5,
+        "rule": "email_address",
+        "severity": "low"
+      },
+      {
+        "allowlisted": false,
+        "excerpt": "ipreport@ipaustralia.gov.au",
+        "page": 35,
+        "rule": "email_address",
+        "severity": "low"
+      },
+      {
+        "allowlisted": false,
+        "excerpt": "ipgod@ipaustralia.gov.au",
+        "page": 35,
+        "rule": "email_address",
+        "severity": "low"
+      }
+    ],
+    "image_only_pages": 1,
+    "pages": 40,
+    "quarantined": false,
+    "text_layer_chars": 118696
+  },
+  "ipr-2018": {
+    "findings": [],
+    "image_only_pages": 48,
+    "pages": 48,
+    "quarantined": false,
+    "text_layer_chars": 0
+  },
+  "ipr-2019": {
+    "findings": [
+      {
+        "allowlisted": false,
+        "excerpt": "chiefeconomist@ipaustralia.gov.au",
+        "page": 4,
+        "rule": "email_address",
+        "severity": "low"
+      },
+      {
+        "allowlisted": false,
+        "excerpt": "chiefeconomist@ipaustralia.gov.au",
+        "page": 17,
+        "rule": "email_address",
+        "severity": "low"
+      }
+    ],
+    "image_only_pages": 3,
+    "pages": 25,
+    "quarantined": false,
+    "text_layer_chars": 80754
+  },
+  "ipr-2020": {
+    "findings": [
+      {
+        "allowlisted": false,
+        "excerpt": "chiefeconomist@ipaustralia.gov.au",
+        "page": 6,
+        "rule": "email_address",
+        "severity": "low"
+      },
+      {
+        "allowlisted": false,
+        "excerpt": "ipdataplatform@ipaustralia.gov.au",
+        "page": 45,
+        "rule": "email_address",
+        "severity": "low"
+      }
+    ],
+    "image_only_pages": 3,
+    "pages": 52,
+    "quarantined": false,
+    "text_layer_chars": 102903
+  },
+  "ipr-2021": {
+    "findings": [],
+    "image_only_pages": 29,
+    "pages": 29,
+    "quarantined": false,
+    "text_layer_chars": 0
+  },
+  "ipr-2022": {
+    "findings": [
+      {
+        "allowlisted": false,
+        "excerpt": "chiefeconomist@ipaustralia.gov.au",
+        "page": 4,
+        "rule": "email_address",
+        "severity": "low"
+      },
+      {
+        "allowlisted": false,
+        "excerpt": "data@ipaustralia.gov.au",
+        "page": 48,
+        "rule": "email_address",
+        "severity": "low"
+      }
+    ],
+    "image_only_pages": 1,
+    "pages": 50,
+    "quarantined": false,
+    "text_layer_chars": 122449
+  },
+  "ipr-2023": {
+    "findings": [
+      {
+        "allowlisted": false,
+        "excerpt": "chiefeconomist@ipaustralia.gov.au",
+        "page": 8,
+        "rule": "email_address",
+        "severity": "low"
+      },
+      {
+        "allowlisted": false,
+        "excerpt": "data@ipaustralia.gov.au",
+        "page": 89,
+        "rule": "email_address",
+        "severity": "low"
+      }
+    ],
+    "image_only_pages": 2,
+    "pages": 91,
+    "quarantined": false,
+    "text_layer_chars": 158731
+  },
+  "ipr-2024": {
+    "findings": [
+      {
+        "allowlisted": false,
+        "excerpt": "chiefeconomist@ipaustralia.gov.au",
+        "page": 8,
+        "rule": "email_address",
+        "severity": "low"
+      },
+      {
+        "allowlisted": false,
+        "excerpt": "chiefeconomist@ipaustralia.gov.au",
+        "page": 92,
+        "rule": "email_address",
+        "severity": "low"
+      },
+      {
+        "allowlisted": false,
+        "excerpt": "data@ipaustralia.gov.au",
+        "page": 92,
+        "rule": "email_address",
+        "severity": "low"
+      },
+      {
+        "allowlisted": false,
+        "excerpt": "analytics@ipaustralia.gov.au",
+        "page": 93,
+        "rule": "email_address",
+        "severity": "low"
+      }
+    ],
+    "image_only_pages": 24,
+    "pages": 96,
+    "quarantined": false,
+    "text_layer_chars": 154411
+  },
+  "ipr-2025": {
+    "findings": [
+      {
+        "allowlisted": false,
+        "excerpt": "chiefeconomist@ipaustralia.gov.au",
+        "page": 6,
+        "rule": "email_address",
+        "severity": "low"
+      },
+      {
+        "allowlisted": false,
+        "excerpt": "chiefeconomist@ipaustralia.gov.au",
+        "page": 65,
+        "rule": "email_address",
+        "severity": "low"
+      },
+      {
+        "allowlisted": false,
+        "excerpt": "data@ipaustralia.gov.au",
+        "page": 66,
+        "rule": "email_address",
+        "severity": "low"
+      },
+      {
+        "allowlisted": false,
+        "excerpt": "analytics@ipaustralia.gov.au",
+        "page": 66,
+        "rule": "email_address",
+        "severity": "low"
+      }
+    ],
+    "image_only_pages": 9,
+    "pages": 69,
+    "quarantined": false,
+    "text_layer_chars": 117198
+  },
+  "ipr-2026": {
+    "findings": [
+      {
+        "allowlisted": false,
+        "excerpt": "chiefeconomist@ipaustralia.gov.au",
+        "page": 6,
+        "rule": "email_address",
+        "severity": "low"
+      },
+      {
+        "allowlisted": false,
+        "excerpt": "chiefeconomist@ipaustralia.gov.au",
+        "page": 83,
+        "rule": "email_address",
+        "severity": "low"
+      },
+      {
+        "allowlisted": false,
+        "excerpt": "data@ipaustralia.gov.au",
+        "page": 84,
+        "rule": "email_address",
+        "severity": "low"
+      },
+      {
+        "allowlisted": false,
+        "excerpt": "analytics@ipaustralia.gov.au",
+        "page": 84,
+        "rule": "email_address",
+        "severity": "low"
+      }
+    ],
+    "image_only_pages": 9,
+    "pages": 86,
+    "quarantined": false,
+    "text_layer_chars": 160411
+  },
+  "note-patenting-structural-change": {
+    "findings": [
+      {
+        "allowlisted": false,
+        "excerpt": "ChiefEconomist@ipaustralia.gov.au",
+        "page": 4,
+        "rule": "email_address",
+        "severity": "low"
+      },
+      {
+        "allowlisted": false,
+        "excerpt": "ChiefEconomist@ipaustralia.gov.au",
+        "page": 7,
+        "rule": "email_address",
+        "severity": "low"
+      }
+    ],
+    "image_only_pages": 0,
+    "pages": 7,
+    "quarantined": false,
+    "text_layer_chars": 17109
+  },
+  "note-tm-leading-indicator": {
+    "findings": [
+      {
+        "allowlisted": false,
+        "excerpt": "ChiefEconomist@IPAustralia.gov.au",
+        "page": 4,
+        "rule": "email_address",
+        "severity": "low"
+      },
+      {
+        "allowlisted": false,
+        "excerpt": "ChiefEconomist@ipaustralia.gov.au",
+        "page": 9,
+        "rule": "email_address",
+        "severity": "low"
+      }
+    ],
+    "image_only_pages": 0,
+    "pages": 9,
+    "quarantined": false,
+    "text_layer_chars": 27262
+  },
+  "oce-ai-investment": {
+    "findings": [],
+    "image_only_pages": 1,
+    "pages": 43,
+    "quarantined": false,
+    "text_layer_chars": 105566
+  }
+}

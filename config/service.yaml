@@ -1,0 +1,61 @@
+# The Render API service and its calls to the Cloud Run embedder and the answer model.
+# Model ids and prices were checked on the providers' pages on 2026-10-18. The answer models are
+# provisional defaults so the service can run once a key exists; the owner adopts a model after the
+# agent evaluation (SOP §20.5). Unknown keys are errors.
+
+cors_origins:
+  - https://thomas-amann-ipaustralia.github.io
+  - http://localhost:8000
+  - http://127.0.0.1:8000
+
+embedder:
+  url_env: EMBEDDER_URL        # the Cloud Run service URL
+  token_env: EMBEDDER_TOKEN    # shared bearer token; the service refuses calls without it when set
+  timeout_seconds: 8           # a warm call takes well under a second
+  cold_timeout_seconds: 40     # the first call after a scale-to-zero waits for the model to load
+
+llm:
+  # The first provider whose key is present answers. With none, the service runs in evidence-only mode.
+  providers:
+    - name: openai
+      key_env: OPENAI_API_KEY
+      base_url: https://api.openai.com/v1
+      answer_model: gpt-6.1-sol    # the reference build's adopted model for general production work
+      answer_effort: medium
+      plan_model: gpt-6-luna       # query planning is light extraction: the small model
+      plan_effort: low
+    - name: gemini
+      key_env: GEMINI_API_KEY
+      base_url: https://generativelanguage.googleapis.com/v1beta
+      answer_model: gemini-3.8-flash
+      answer_effort: medium
+      plan_model: gemini-3.5-flash-lite
+      plan_effort: low
+  prices_per_mtok:                 # input, cached input, output (output includes reasoning)
+    gpt-6.1-sol: [2.00, 2.00, 10.00]      # cached-input price not listed; metered at the full price
+    gpt-6-luna: [0.10, 0.10, 0.50]
+    gemini-3.8-flash: [0.75, 0.075, 3.75] # until 2026-12-31; doubles from 2027-01-01
+    gemini-3.5-flash-lite: [0.30, 0.03, 2.50]
+  daily_budget_usd: 2.00           # in memory; resets when the instance restarts (see the handover)
+  max_output_tokens: 3000
+  timeout_seconds: 90
+  query_planning: true             # rewrite follow-ups and split broad questions into searches
+
+answer:
+  prompt: answer-v1
+  plan_prompt: plan-v1
+  max_queries: 4
+  # The answer check (SOP §20.7). Each claim's quotes together must hold at least `quote_claim_ratio`
+  # times the claim's words, and every quote at least `min_quote_words` words.
+  min_quote_words: 5
+  quote_claim_ratio: 0.5
+  max_quote_words: 80
+
+limits:
+  requests_per_hour_per_client: 30
+  max_question_chars: 2000
+  max_context_chars: 20000
+  max_history_turns: 6
+
+logging:
+  record_questions: true           # one JSON line per answer on stdout (Render's log)

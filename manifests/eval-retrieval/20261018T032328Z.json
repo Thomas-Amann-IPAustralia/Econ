@@ -1,0 +1,50 @@
+{
+  "argv": [
+    "eval-retrieval",
+    "--grid",
+    "retrieval-v1b",
+    "--stage",
+    "chunking"
+  ],
+  "command": "eval-retrieval",
+  "config_hash": "0ba9d973788df007",
+  "counts": {
+    "dev": 55,
+    "needs": 114,
+    "settings": 2
+  },
+  "error": null,
+  "git": {
+    "commit": "cfba7bff0c2e057f140e3daf4df5cbef32b5018f",
+    "dirty": false,
+    "dirty_paths": []
+  },
+  "git_at_end": {
+    "commit": "cfba7bff0c2e057f140e3daf4df5cbef32b5018f",
+    "dirty": false,
+    "dirty_paths": []
+  },
+  "inputs": {},
+  "outputs": {
+    "reports/retrieval-v1b-chunking.md": "7ab8443dc01e80e5c103a1c6c488685f4ae2431538926fdeb4d90c37cc46a12e"
+  },
+  "params": {
+    "grid": "retrieval-v1b",
+    "stage": "chunking"
+  },
+  "run_id": "20261018T032328Z",
+  "seconds": 285.6,
+  "status": "passed",
+  "upstream": {},
+  "versions": {
+    "docling": "2.140.0",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.0",
+    "pypdfium2": "5.14.0",
+    "python": "3.12.3",
+    "sentence-transformers": "6.1.0",
+    "tokenizers": "0.23.3",
+    "torch": "2.14.1+cpu"
+  },
+  "warnings": []
+}

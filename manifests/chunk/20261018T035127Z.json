@@ -1,0 +1,93 @@
+{
+  "argv": [
+    "chunk"
+  ],
+  "command": "chunk",
+  "config_hash": "8c1b3875a9fa6f5c",
+  "counts": {
+    "F384": {
+      "chunks": 1568,
+      "max_tokens": 381,
+      "median_tokens": 380,
+      "total_tokens": 592300
+    },
+    "S256": {
+      "chunks": 3032,
+      "max_tokens": 256,
+      "median_tokens": 209,
+      "total_tokens": 582157
+    },
+    "S384": {
+      "chunks": 2037,
+      "max_tokens": 384,
+      "median_tokens": 275,
+      "total_tokens": 519084
+    },
+    "S384-noprefix": {
+      "chunks": 1969,
+      "max_tokens": 384,
+      "median_tokens": 261,
+      "total_tokens": 482397
+    },
+    "S384-noprefix-nocite": {
+      "chunks": 1896,
+      "max_tokens": 384,
+      "median_tokens": 252,
+      "total_tokens": 455822
+    },
+    "S512": {
+      "chunks": 1647,
+      "max_tokens": 512,
+      "median_tokens": 311,
+      "total_tokens": 504763
+    },
+    "boilerplate_paragraphs": 12
+  },
+  "error": null,
+  "git": {
+    "commit": "c711804742aec0087b81b6db95fbb824d2ec7e0c",
+    "dirty": false,
+    "dirty_paths": []
+  },
+  "git_at_end": {
+    "commit": "c711804742aec0087b81b6db95fbb824d2ec7e0c",
+    "dirty": false,
+    "dirty_paths": []
+  },
+  "inputs": {},
+  "outputs": {
+    "library/chunks/F384.jsonl": "ab9e1be8ab3ba0e1ac490605ff14f11bb80a801061783209439f86e56a1a167a",
+    "library/chunks/S256.jsonl": "a381a3eb64756177bbf53e0f1ba278f7695e5ec002d8565d5918de172bc414ba",
+    "library/chunks/S384-noprefix-nocite.jsonl": "a5ece4d11ddec87775ea47c3a70c1b0accea2a13f2830828969f3ecda3d801b5",
+    "library/chunks/S384-noprefix.jsonl": "9d6994935b8e8857a2dd1d40930099368c53265f936c472dba64a7b0c53f6f94",
+    "library/chunks/S384.jsonl": "79f6cb256f7b053527af91f3e612dfa491383575d9f8dc3f171bddad2579ab0e",
+    "library/chunks/S512.jsonl": "62f4776fa7b8f673254428fa083738e9a6c8ec332ebb405bbb5e2e0f97cf4b8d"
+  },
+  "params": {
+    "strategies": [
+      "F384",
+      "S256",
+      "S384",
+      "S512",
+      "S384-noprefix",
+      "S384-noprefix-nocite"
+    ]
+  },
+  "run_id": "20261018T035127Z",
+  "seconds": 27.8,
+  "status": "passed",
+  "upstream": {
+    "parse": "20261018T010913Z"
+  },
+  "versions": {
+    "docling": "2.140.0",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.0",
+    "pypdfium2": "5.14.0",
+    "python": "3.12.3",
+    "sentence-transformers": "6.1.0",
+    "tokenizers": "0.23.3",
+    "torch": "2.14.1+cpu"
+  },
+  "warnings": []
+}

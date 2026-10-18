@@ -1,0 +1,12 @@
+{
+  "answer-v1": {
+    "schema": "answer",
+    "schema_sha256": "385f1d567dabf1a6",
+    "sha256": "aba6f91761444afa"
+  },
+  "plan-v1": {
+    "schema": "plan",
+    "schema_sha256": "ab394bace1984c1e",
+    "sha256": "33e99566ddb80c3d"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "argv": [
+    "chunk"
+  ],
+  "command": "chunk",
+  "config_hash": "7140eba97feae54e",
+  "counts": {
+    "F384": {
+      "chunks": 1568,
+      "max_tokens": 381,
+      "median_tokens": 380,
+      "total_tokens": 592300
+    },
+    "S256": {
+      "chunks": 3032,
+      "max_tokens": 256,
+      "median_tokens": 209,
+      "total_tokens": 582157
+    },
+    "S384": {
+      "chunks": 2037,
+      "max_tokens": 384,
+      "median_tokens": 275,
+      "total_tokens": 519084
+    },
+    "S384-noprefix": {
+      "chunks": 1969,
+      "max_tokens": 384,
+      "median_tokens": 261,
+      "total_tokens": 482397
+    },
+    "S512": {
+      "chunks": 1647,
+      "max_tokens": 512,
+      "median_tokens": 311,
+      "total_tokens": 504763
+    },
+    "boilerplate_paragraphs": 12
+  },
+  "error": null,
+  "git": {
+    "commit": "d18a50432161c2e65cff9dba82bce78e88c1fac7",
+    "dirty": false,
+    "dirty_paths": []
+  },
+  "inputs": {},
+  "outputs": {
+    "library/chunks/F384.jsonl": "27db3ebbda8450370af921eafe96d99aff704ddaeba45a73a377f7ce26f8bce0",
+    "library/chunks/S256.jsonl": "f22ee216b8fb6938020e8052604f12d86e1a2111f3627aac272ff652b29016c8",
+    "library/chunks/S384-noprefix.jsonl": "46c2ca330c10a61c13c6894fb1b5d682ce3375efef0ae5469617d16b795e7ee4",
+    "library/chunks/S384.jsonl": "9affd550b86fdfc4907e44ee5d24100c807b7c5f103f59fecf531df0cf3ea863",
+    "library/chunks/S512.jsonl": "2f0a530ac402f6e960a74dd38bbd3a7dafaa3ef86ac761b20d90d85d7a792913"
+  },
+  "params": {
+    "strategies": [
+      "F384",
+      "S256",
+      "S384",
+      "S512",
+      "S384-noprefix"
+    ]
+  },
+  "run_id": "20261018T010921Z",
+  "seconds": 23.9,
+  "status": "passed",
+  "upstream": {
+    "parse": "20261018T010913Z"
+  },
+  "versions": {
+    "docling": "2.140.0",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.0",
+    "pypdfium2": "5.14.0",
+    "python": "3.12.3",
+    "sentence-transformers": "6.1.0",
+    "tokenizers": "0.23.3",
+    "torch": "2.14.1+cpu"
+  },
+  "warnings": []
+}

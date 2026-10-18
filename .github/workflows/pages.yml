@@ -1,0 +1,39 @@
+name: pages
+# Publishes web/ with its catalogue (and, when the R2 secrets exist, the PDFs) to GitHub Pages.
+# Needs Settings > Pages > Source: GitHub Actions, and the repository variable RENDER_API_URL.
+on:
+  push:
+    branches: [main]
+    paths: ["web/**", "library/index/docs.json", "deploy/pages/**", ".github/workflows/pages.yml"]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install pyyaml boto3
+      - run: python deploy/pages/build_site.py --out _site
+        env:
+          RENDER_API_URL: ${{ vars.RENDER_API_URL }}
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4

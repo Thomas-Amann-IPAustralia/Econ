@@ -1,0 +1,9 @@
+# Build and push the embedder image with Cloud Build, from the repository root:
+#   gcloud builds submit --config deploy/embedder/cloudbuild.yaml \
+#     --substitutions _IMAGE=australia-southeast1-docker.pkg.dev/PROJECT/econ/embedder:TAG .
+steps:
+  - name: gcr.io/cloud-builders/docker
+    args: ["build", "-f", "deploy/embedder/Dockerfile", "-t", "${_IMAGE}", "."]
+images: ["${_IMAGE}"]
+options:
+  machineType: E2_HIGHCPU_8

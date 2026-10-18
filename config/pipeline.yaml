@@ -1,0 +1,190 @@
+# Pipeline configuration. Tune behaviour here, not in code. Unknown keys are errors.
+# `adopted` values change only when the owner adopts a measured recommendation (docs/decisions.md).
+
+paths:
+  raw: data/raw
+  library: library
+  manifests: manifests
+  reports: reports
+  models: data/models
+
+parse:
+  ocr_min_chars_per_page: 100   # a page with fewer text-layer characters counts as image-only
+  ocr_page_share: 0.5           # OCR the whole document when at least this share of pages is image-only
+  ocr_scale: 2.0                # render scale for OCR; 1.0 garbled the 2018 report in a probe
+  threads: 2                    # per worker; `econ parse --workers 2` uses all 4 vCPUs
+  table_structure: true
+
+chunking:
+  # Token counts use one reference tokenizer, so every embedder sees the same chunks. It is the
+  # uncased WordPiece vocabulary that all the 512-token candidates share; the ModernBERT and Qwen
+  # candidates take 8k+ tokens, so they never truncate.
+  tokenizer: BAAI/bge-small-en-v1.5
+  tokenizer_revision: 5c38ec7c405ec4b44b94cc5a9bb96e735b38267a
+  strategies:
+    F384:            # baseline: fixed windows over the document's reading-order text
+      kind: fixed
+      max_tokens: 384
+      overlap_tokens: 64
+      prefix: title
+    S256:
+      kind: structure
+      max_tokens: 256
+    S384:
+      kind: structure
+      max_tokens: 384
+    S512:
+      kind: structure
+      max_tokens: 512
+    S384-noprefix:   # ablation of the heading prefix
+      kind: structure
+      max_tokens: 384
+      prefix: none
+    S384-noprefix-nocite:   # D-007: without bibliography entries and citation-only endnotes
+      kind: structure
+      max_tokens: 384
+      prefix: none
+      drop_citations: true
+  adopted: S384-noprefix-nocite   # D-005, refined in D-007
+
+embedding:
+  batch_size: 16
+  # Screened: permissive licence, no trust_remote_code, pinned revision. Public benchmarks only
+  # shortlisted them. `onnx_file` names the repository's own single-file ONNX export where it has one;
+  # its sha256 is pinned when a model is adopted. Served on Cloud Run (D-003), so size is a cost and latency question, not a limit.
+  candidates:
+    minilm-l6:
+      hf_id: sentence-transformers/all-MiniLM-L6-v2
+      revision: 1110a243fdf4706b3f48f1d95db1a4f5529b4d41
+      params_m: 22.7
+      dim: 384
+      pooling: mean
+      max_tokens: 256
+      licence: apache-2.0
+      onnx_file: onnx/model.onnx
+    leaf-ir:
+      hf_id: MongoDB/mdbr-leaf-ir
+      revision: 4262131b32c3182bd06e67e92ae69d7bd66e0c5c
+      params_m: 22.6
+      dim: 768
+      pooling: mean
+      query_prefix: "Represent this sentence for searching relevant passages: "
+      licence: apache-2.0
+    bge-small:
+      hf_id: BAAI/bge-small-en-v1.5
+      revision: 5c38ec7c405ec4b44b94cc5a9bb96e735b38267a
+      params_m: 33.4
+      dim: 384
+      pooling: cls
+      query_prefix: "Represent this sentence for searching relevant passages: "
+      licence: mit
+      onnx_file: onnx/model.onnx
+    arctic-s:
+      hf_id: Snowflake/snowflake-arctic-embed-s
+      revision: e596f507467533e48a2e17c007f0e1dacc837b33
+      params_m: 33.2
+      dim: 384
+      pooling: cls
+      query_prefix: "Represent this sentence for searching relevant passages: "
+      licence: apache-2.0
+      onnx_file: onnx/model.onnx
+    granite-small-r2:
+      hf_id: ibm-granite/granite-embedding-small-english-r2
+      revision: 2ab6fa8ea2d674564defd37171ae19079b864b33
+      params_m: 47.7
+      dim: 384
+      pooling: cls
+      max_tokens: 8192
+      licence: apache-2.0
+    bge-base:
+      hf_id: BAAI/bge-base-en-v1.5
+      revision: a5beb1e3e68b9ab74eb54cfd186867f64f240e1a
+      params_m: 109.5
+      dim: 768
+      pooling: cls
+      query_prefix: "Represent this sentence for searching relevant passages: "
+      licence: mit
+      onnx_file: onnx/model.onnx
+    arctic-m-v1.5:
+      hf_id: Snowflake/snowflake-arctic-embed-m-v1.5
+      revision: e58a8f756156a1293d763f17e3aae643474e9b8a
+      params_m: 108.9
+      dim: 768
+      pooling: cls
+      query_prefix: "Represent this sentence for searching relevant passages: "
+      licence: apache-2.0
+      onnx_file: onnx/model.onnx
+      onnx_sha256: bc6f7662487a0796e6f86229c8e5c3ab2f7059e08e0bb2f524125273f72171c4
+    granite-r2:
+      hf_id: ibm-granite/granite-embedding-english-r2
+      revision: 47ea694b257b703fee9253d75c2b1f2985180498
+      params_m: 149.0
+      dim: 768
+      pooling: cls
+      max_tokens: 8192
+      licence: apache-2.0
+    gte-modernbert:
+      hf_id: Alibaba-NLP/gte-modernbert-base
+      revision: e7f32e3c00f91d699e8c43b53106206bcc72bb22
+      params_m: 149.0
+      dim: 768
+      pooling: cls
+      max_tokens: 8192
+      licence: apache-2.0
+      onnx_file: onnx/model.onnx
+    modernbert-embed:
+      hf_id: nomic-ai/modernbert-embed-base
+      revision: d556a88e332558790b210f7bdbe87da2fa94a8d8
+      params_m: 149.0
+      dim: 768
+      pooling: mean
+      max_tokens: 8192
+      query_prefix: "search_query: "
+      doc_prefix: "search_document: "
+      licence: apache-2.0
+      onnx_file: onnx/model.onnx
+    bge-large:
+      hf_id: BAAI/bge-large-en-v1.5
+      revision: d4aa6901d3a41ba39fb536a557fa166f842b0e09
+      params_m: 335.1
+      dim: 1024
+      pooling: cls
+      query_prefix: "Represent this sentence for searching relevant passages: "
+      licence: mit
+      onnx_file: onnx/model.onnx
+    mxbai-large:
+      hf_id: mixedbread-ai/mxbai-embed-large-v1
+      revision: b33106f585b9ce46904ad7443a3b52b7a63e231c
+      params_m: 335.1
+      dim: 1024
+      pooling: cls
+      query_prefix: "Represent this sentence for searching relevant passages: "
+      licence: apache-2.0
+      onnx_file: onnx/model.onnx
+    arctic-l-v2:
+      hf_id: Snowflake/snowflake-arctic-embed-l-v2.0
+      revision: ac6544c8a46e00af67e330e85a9028c66b8cfd9a
+      params_m: 568.0
+      dim: 1024
+      pooling: cls
+      max_tokens: 8192
+      query_prefix: "query: "
+      licence: apache-2.0
+    qwen3-0.6b:
+      hf_id: Qwen/Qwen3-Embedding-0.6B
+      revision: 97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3
+      params_m: 595.8
+      dim: 1024
+      pooling: last
+      max_tokens: 8192
+      query_prefix: "Instruct: Given a question about intellectual property economics, retrieve passages from IP Australia reports that answer it\nQuery:"
+      licence: apache-2.0
+  adopted: arctic-m-v1.5   # D-006
+
+retrieval:
+  lane_depth: 100      # candidates taken from each lane before fusion
+  fusion: score        # min-max normalised score fusion; kept over rrf and other weights (D-006)
+  alpha: 0.7           # weight on the dense lane
+  rrf_k: 60
+  context_chunks: 20   # passages given to the answer model
+  per_doc_cap: 8       # at most this many of those from one document

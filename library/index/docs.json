@@ -1,0 +1,4844 @@
+{
+  "erp01-patent-backlogs": {
+    "authors": [
+      "Ahmer Iqbal Siddiqui"
+    ],
+    "chunks": 48,
+    "doc_id": "erp01-patent-backlogs",
+    "licence": "CC BY 4.0",
+    "note": "An independent report commissioned by IP Australia: the findings are the researchers', not necessarily IP Australia's.",
+    "ocr": false,
+    "page_count": 37,
+    "pages": {
+      "1": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "10": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "11": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "12": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "13": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "14": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "15": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "16": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "17": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "18": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "19": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "2": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "20": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "21": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "22": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "23": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "24": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "25": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "26": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "27": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "28": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "29": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "3": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "30": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "31": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "32": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "33": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "34": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "35": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "36": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "37": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "4": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "5": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "6": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "7": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "8": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "9": {
+        "height": 841.92,
+        "width": 595.32
+      }
+    },
+    "publisher": "IP Australia",
+    "series": "IP Australia Economic Research Paper 01",
+    "source_sha256": "d11316584eede159bceb517f4ef119c1c61a9a24def5e5a3f22aea3dcf061df9",
+    "title": "Report on patent backlogs, inventories and pendency",
+    "url": null,
+    "year": 2014
+  },
+  "erp03-market-for-design": {
+    "authors": [
+      "Kwanghui Lim",
+      "Don O'Sullivan",
+      "Michael R. Falk"
+    ],
+    "chunks": 89,
+    "doc_id": "erp03-market-for-design",
+    "licence": "CC BY 4.0",
+    "note": "An independent report commissioned by IP Australia: the findings are the researchers', not necessarily IP Australia's.",
+    "ocr": false,
+    "page_count": 36,
+    "pages": {
+      "1": {
+        "height": 842.0,
+        "width": 595.22
+      },
+      "10": {
+        "height": 842.0,
+        "width": 595.22
+      },
+      "11": {
+        "height": 842.0,
+        "width": 595.22
+      },
+      "12": {
+        "height": 842.0,
+        "width": 595.22
+      },
+      "13": {
+        "height": 842.0,
+        "width": 595.22
+      },
+      "14": {
+        "height": 842.0,
+        "width": 595.22
+      },
+      "15": {
+        "height": 842.0,
+        "width": 595.22
+      },
+      "16": {
+        "height": 842.0,
+        "width": 595.22
+      },
+      "17": {
+        "height": 842.0,
+        "width": 595.22
+      },
+      "18": {
+        "height": 842.0,
+        "width": 595.22
+      },
+      "19": {
+        "height": 842.0,
+        "width": 595.22
+      },
+      "2": {
+        "height": 842.0,
+        "width": 595.22
+      },
+      "20": {
+        "height": 842.0,
+        "width": 595.22
+      },
+      "21": {
+        "height": 842.0,
+        "width": 595.22
+      },
+      "22": {
+        "height": 842.0,
+        "width": 595.22
+      },
+      "23": {
+        "height": 842.0,
+        "width": 595.22
+      },
+      "24": {
+        "height": 842.0,
+        "width": 595.22
+      },
+      "25": {
+        "height": 842.0,
+        "width": 595.22
+      },
+      "26": {
+        "height": 842.0,
+        "width": 595.22
+      },
+      "27": {
+        "height": 842.0,
+        "width": 595.22
+      },
+      "28": {
+        "height": 842.0,
+        "width": 595.22
+      },
+      "29": {
+        "height": 842.0,
+        "width": 595.22
+      },
+      "3": {
+        "height": 842.0,
+        "width": 595.22
+      },
+      "30": {
+        "height": 842.0,
+        "width": 595.22
+      },
+      "31": {
+        "height": 842.0,
+        "width": 595.22
+      },
+      "32": {
+        "height": 842.0,
+        "width": 595.22
+      },
+      "33": {
+        "height": 842.0,
+        "width": 595.22
+      },
+      "34": {
+        "height": 842.0,
+        "width": 595.22
+      },
+      "35": {
+        "height": 842.0,
+        "width": 595.22
+      },
+      "36": {
+        "height": 842.0,
+        "width": 595.22
+      },
+      "4": {
+        "height": 842.0,
+        "width": 595.22
+      },
+      "5": {
+        "height": 842.0,
+        "width": 595.22
+      },
+      "6": {
+        "height": 842.0,
+        "width": 595.22
+      },
+      "7": {
+        "height": 842.0,
+        "width": 595.22
+      },
+      "8": {
+        "height": 842.0,
+        "width": 595.22
+      },
+      "9": {
+        "height": 842.0,
+        "width": 595.22
+      }
+    },
+    "publisher": "IP Australia",
+    "series": "IP Australia Economic Research Paper 03",
+    "source_sha256": "0bf538c3232a1df4c83ada9eded0fef3f04d9cb9863e202e78e2d17303a0226e",
+    "title": "The market for design: insights from interviews with Australian firms",
+    "url": null,
+    "year": 2014
+  },
+  "erp04-mining-innovation": {
+    "authors": [
+      "Emma Francis"
+    ],
+    "chunks": 60,
+    "doc_id": "erp04-mining-innovation",
+    "licence": "CC BY 4.0",
+    "note": "An independent report commissioned by IP Australia: the findings are the researchers', not necessarily IP Australia's.",
+    "ocr": false,
+    "page_count": 35,
+    "pages": {
+      "1": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "10": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "11": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "12": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "13": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "14": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "15": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "16": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "17": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "18": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "19": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "2": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "20": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "21": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "22": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "23": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "24": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "25": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "26": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "27": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "28": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "29": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "3": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "30": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "31": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "32": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "33": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "34": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "35": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "4": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "5": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "6": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "7": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "8": {
+        "height": 841.92,
+        "width": 595.32
+      },
+      "9": {
+        "height": 841.92,
+        "width": 595.32
+      }
+    },
+    "publisher": "IP Australia",
+    "series": "IP Australia Economic Research Paper 04",
+    "source_sha256": "b564d2c7a96ef250ad49064967bd60580c4a3bd0d5a322d76228782d964e9da7",
+    "title": "The Australian Mining Industry: More than Just Shovels and Being the Lucky Country",
+    "url": null,
+    "year": 2015
+  },
+  "erp08-designs-law-practice": {
+    "authors": [],
+    "chunks": 55,
+    "doc_id": "erp08-designs-law-practice",
+    "licence": null,
+    "note": null,
+    "ocr": false,
+    "page_count": 28,
+    "pages": {
+      "1": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "10": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "11": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "12": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "13": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "14": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "15": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "16": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "17": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "18": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "19": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "2": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "20": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "21": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "22": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "23": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "24": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "25": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "26": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "27": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "28": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "3": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "4": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "5": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "6": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "7": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "8": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "9": {
+        "height": 841.89,
+        "width": 595.28
+      }
+    },
+    "publisher": "IP Australia",
+    "series": "IP Australia Economic Research Paper 08",
+    "source_sha256": "94054a51196f3980c5cf6b5a75b5d412a1868b2e12b02b736ad82899deefec41",
+    "title": "Designs Law and Practice: Design within Australia and how Australia compares to its international peers",
+    "url": "https://www.ipaustralia.gov.au/tools-and-research/professional-resources/data-research-and-reports/publications-and-reports/designs-law-and-practice",
+    "year": 2019
+  },
+  "erp10-ip-profitability-competition": {
+    "authors": [
+      "Haiyang Zhang"
+    ],
+    "chunks": 121,
+    "doc_id": "erp10-ip-profitability-competition",
+    "licence": "CC BY 4.0",
+    "note": null,
+    "ocr": false,
+    "page_count": 39,
+    "pages": {
+      "1": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "10": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "11": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "12": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "13": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "14": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "15": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "16": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "17": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "18": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "19": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "2": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "20": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "21": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "22": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "23": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "24": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "25": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "26": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "27": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "28": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "29": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "3": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "30": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "31": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "32": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "33": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "34": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "35": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "36": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "37": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "38": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "39": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "4": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "5": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "6": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "7": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "8": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "9": {
+        "height": 841.89,
+        "width": 595.28
+      }
+    },
+    "publisher": "IP Australia",
+    "series": "IP Australia Economic Research Paper 10",
+    "source_sha256": "7d7092b0df7a553fb53c2c984da2b2db612ba1c0d9f8b8b3578daf88981a3b85",
+    "title": "Intellectual property rights, business profitability and competition in the Australian economy",
+    "url": null,
+    "year": 2020
+  },
+  "erp11-exporters-trade-marks": {
+    "authors": [
+      "Michael R. Falk"
+    ],
+    "chunks": 148,
+    "doc_id": "erp11-exporters-trade-marks",
+    "licence": "CC BY 4.0",
+    "note": null,
+    "ocr": false,
+    "page_count": 47,
+    "pages": {
+      "1": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "10": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "11": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "12": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "13": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "14": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "15": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "16": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "17": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "18": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "19": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "2": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "20": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "21": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "22": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "23": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "24": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "25": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "26": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "27": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "28": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "29": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "3": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "30": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "31": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "32": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "33": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "34": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "35": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "36": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "37": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "38": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "39": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "4": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "40": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "41": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "42": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "43": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "44": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "45": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "46": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "47": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "5": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "6": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "7": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "8": {
+        "height": 842.0,
+        "width": 595.0
+      },
+      "9": {
+        "height": 842.0,
+        "width": 595.0
+      }
+    },
+    "publisher": "IP Australia",
+    "series": "IP Australia Economic Research Paper 11",
+    "source_sha256": "00bd119dff8ec5cd9d4ff655161c943cb4ace33b788fbc314ead317daf5a94be",
+    "title": "Exporter responses to shocks: The role of trade marks",
+    "url": "https://www.ipaustralia.gov.au/tools-and-research/professional-resources/data-research-and-reports/publications-and-reports/the-role-of-trade-marks",
+    "year": 2021
+  },
+  "erp14-raising-the-bar": {
+    "authors": [
+      "Trevor Kollmann",
+      "Alfons Palangkaraya",
+      "Aneeq Sarwar",
+      "Elizabeth Webster",
+      "Corrine Anglim",
+      "Michael Falk"
+    ],
+    "chunks": 77,
+    "doc_id": "erp14-raising-the-bar",
+    "licence": "CC BY 4.0",
+    "note": null,
+    "ocr": false,
+    "page_count": 46,
+    "pages": {
+      "1": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "10": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "11": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "12": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "13": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "14": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "15": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "16": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "17": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "18": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "19": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "2": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "20": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "21": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "22": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "23": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "24": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "25": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "26": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "27": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "28": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "29": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "3": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "30": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "31": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "32": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "33": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "34": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "35": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "36": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "37": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "38": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "39": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "4": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "40": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "41": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "42": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "43": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "44": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "45": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "46": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "5": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "6": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "7": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "8": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "9": {
+        "height": 841.89,
+        "width": 595.28
+      }
+    },
+    "publisher": "IP Australia",
+    "series": "IP Australia Economic Research Paper 14",
+    "source_sha256": "de57065b2232e7118931b3c8a16a66151a9f5adb067280d1aafa59fbca70e29b",
+    "title": "Raising the Bar reforms: Measuring the impact on relative patent scope",
+    "url": "https://www.ipaustralia.gov.au/tools-and-research/professional-resources/data-research-and-reports/publications-and-reports/how-broad-are-australian-patents",
+    "year": 2024
+  },
+  "erp15-patenting-firms": {
+    "authors": [
+      "Flavio Menezes",
+      "Tina Rampino",
+      "Martie-Louise Verreynne"
+    ],
+    "chunks": 84,
+    "doc_id": "erp15-patenting-firms",
+    "licence": "CC BY 4.0",
+    "note": null,
+    "ocr": false,
+    "page_count": 44,
+    "pages": {
+      "1": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "10": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "11": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "12": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "13": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "14": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "15": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "16": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "17": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "18": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "19": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "2": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "20": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "21": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "22": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "23": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "24": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "25": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "26": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "27": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "28": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "29": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "3": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "30": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "31": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "32": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "33": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "34": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "35": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "36": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "37": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "38": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "39": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "4": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "40": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "41": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "42": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "43": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "44": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "5": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "6": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "7": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "8": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "9": {
+        "height": 841.89,
+        "width": 595.28
+      }
+    },
+    "publisher": "IP Australia",
+    "series": "IP Australia Economic Research Paper 15",
+    "source_sha256": "d54cbf0181230f9b0929bcf7feb8d3ab5e4c6351fd5dca9cfdea2c45a5e40185",
+    "title": "The business environment of patenting firms in Australia",
+    "url": "https://www.ipaustralia.gov.au/tools-and-research/professional-resources/data-research-and-reports/publications-and-reports/business-environment-of-patenting-firms-in-australia",
+    "year": 2024
+  },
+  "erp16-cii-patent-trends": {
+    "authors": [
+      "Michael Falk",
+      "Sarah Hegarty",
+      "Trevor Kollmann",
+      "Alfons Palangkaraya",
+      "Elizabeth Webster"
+    ],
+    "chunks": 132,
+    "doc_id": "erp16-cii-patent-trends",
+    "licence": "CC BY 4.0",
+    "note": null,
+    "ocr": false,
+    "page_count": 56,
+    "pages": {
+      "1": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "10": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "11": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "12": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "13": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "14": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "15": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "16": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "17": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "18": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "19": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "2": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "20": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "21": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "22": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "23": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "24": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "25": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "26": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "27": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "28": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "29": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "3": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "30": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "31": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "32": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "33": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "34": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "35": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "36": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "37": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "38": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "39": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "4": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "40": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "41": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "42": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "43": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "44": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "45": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "46": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "47": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "48": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "49": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "5": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "50": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "51": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "52": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "53": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "54": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "55": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "56": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "6": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "7": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "8": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "9": {
+        "height": 841.89,
+        "width": 595.28
+      }
+    },
+    "publisher": "IP Australia",
+    "series": "IP Australia Economic Research Paper 16",
+    "source_sha256": "30b2cc112d3a4b6dcd6c4bac482bff20296d83c9e2105ed415866dfceb1b7bdc",
+    "title": "Computer implemented inventions: patent trends at IP Australia, EPO and USPTO",
+    "url": "https://www.ipaustralia.gov.au/tools-and-research/professional-resources/data-research-and-reports/publications-and-reports/computer-implemented-inventions-patent-trends-IP-Australia-EPO-USPTO",
+    "year": 2024
+  },
+  "ipr-2015": {
+    "authors": [],
+    "chunks": 33,
+    "doc_id": "ipr-2015",
+    "licence": "CC BY 4.0",
+    "note": null,
+    "ocr": false,
+    "page_count": 42,
+    "pages": {
+      "1": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "10": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "11": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "12": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "13": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "14": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "15": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "16": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "17": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "18": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "19": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "2": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "20": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "21": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "22": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "23": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "24": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "25": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "26": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "27": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "28": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "29": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "3": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "30": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "31": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "32": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "33": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "34": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "35": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "36": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "37": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "38": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "39": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "4": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "40": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "41": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "42": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "5": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "6": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "7": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "8": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "9": {
+        "height": 708.66,
+        "width": 498.9
+      }
+    },
+    "publisher": "IP Australia",
+    "series": "Australian IP Report",
+    "source_sha256": "5e012979477ddcb6655d681382956d678c9c1432b07fd37c79a2e0b4e97738d3",
+    "title": "Australian Intellectual Property Report 2015",
+    "url": "https://www.ipaustralia.gov.au/tools-and-research/professional-resources/data-research-and-reports/publications-and-reports/Australian-Intellectual-Property-Report-2015",
+    "year": 2015
+  },
+  "ipr-2016": {
+    "authors": [],
+    "chunks": 39,
+    "doc_id": "ipr-2016",
+    "licence": "CC BY 4.0",
+    "note": null,
+    "ocr": false,
+    "page_count": 44,
+    "pages": {
+      "1": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "10": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "11": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "12": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "13": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "14": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "15": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "16": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "17": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "18": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "19": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "2": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "20": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "21": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "22": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "23": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "24": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "25": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "26": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "27": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "28": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "29": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "3": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "30": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "31": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "32": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "33": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "34": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "35": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "36": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "37": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "38": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "39": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "4": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "40": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "41": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "42": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "43": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "44": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "5": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "6": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "7": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "8": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "9": {
+        "height": 708.66,
+        "width": 498.9
+      }
+    },
+    "publisher": "IP Australia",
+    "series": "Australian IP Report",
+    "source_sha256": "a40e5c90fcf782abeb66eb80a4d0b93657d0dfd544fee6c66753f4fbbc16ee6a",
+    "title": "Australian Intellectual Property Report 2016",
+    "url": "https://www.ipaustralia.gov.au/tools-and-research/professional-resources/data-research-and-reports/publications-and-reports/Australian-Intellectual-Property-Report-2016",
+    "year": 2016
+  },
+  "ipr-2017": {
+    "authors": [],
+    "chunks": 45,
+    "doc_id": "ipr-2017",
+    "licence": "CC BY 4.0",
+    "note": null,
+    "ocr": false,
+    "page_count": 40,
+    "pages": {
+      "1": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "10": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "11": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "12": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "13": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "14": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "15": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "16": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "17": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "18": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "19": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "2": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "20": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "21": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "22": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "23": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "24": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "25": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "26": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "27": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "28": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "29": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "3": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "30": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "31": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "32": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "33": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "34": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "35": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "36": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "37": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "38": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "39": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "4": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "40": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "5": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "6": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "7": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "8": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "9": {
+        "height": 708.66,
+        "width": 498.9
+      }
+    },
+    "publisher": "IP Australia",
+    "series": "Australian IP Report",
+    "source_sha256": "a7e0ea6a83aace07b9cdc51b61ce608af5acfa6541c148b0577186618604bed0",
+    "title": "Australian Intellectual Property Report 2017",
+    "url": "https://www.ipaustralia.gov.au/tools-and-research/professional-resources/data-research-and-reports/publications-and-reports/Australian-Intellectual-Property-Report-2017",
+    "year": 2017
+  },
+  "ipr-2018": {
+    "authors": [],
+    "chunks": 49,
+    "doc_id": "ipr-2018",
+    "licence": "CC BY 4.0",
+    "note": null,
+    "ocr": true,
+    "page_count": 48,
+    "pages": {
+      "1": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "10": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "11": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "12": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "13": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "14": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "15": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "16": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "17": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "18": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "19": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "2": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "20": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "21": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "22": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "23": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "24": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "25": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "26": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "27": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "28": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "29": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "3": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "30": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "31": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "32": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "33": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "34": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "35": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "36": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "37": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "38": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "39": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "4": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "40": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "41": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "42": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "43": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "44": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "45": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "46": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "47": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "48": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "5": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "6": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "7": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "8": {
+        "height": 792.0,
+        "width": 612.0
+      },
+      "9": {
+        "height": 792.0,
+        "width": 612.0
+      }
+    },
+    "publisher": "IP Australia",
+    "series": "Australian IP Report",
+    "source_sha256": "55501b20ad956a9863bcdd97d124195a7d41e471f8b394437a39acc3550ba97a",
+    "title": "Australian Intellectual Property Report 2018",
+    "url": "https://www.ipaustralia.gov.au/tools-and-research/professional-resources/data-research-and-reports/publications-and-reports/Australian-Intellectual-Property-Report-2018",
+    "year": 2018
+  },
+  "ipr-2019": {
+    "authors": [],
+    "chunks": 58,
+    "doc_id": "ipr-2019",
+    "licence": "CC BY 4.0",
+    "note": null,
+    "ocr": false,
+    "page_count": 25,
+    "pages": {
+      "1": {
+        "height": 750.66,
+        "width": 540.9
+      },
+      "10": {
+        "height": 750.66,
+        "width": 1039.8
+      },
+      "11": {
+        "height": 750.66,
+        "width": 1039.8
+      },
+      "12": {
+        "height": 750.66,
+        "width": 1039.8
+      },
+      "13": {
+        "height": 750.66,
+        "width": 1039.8
+      },
+      "14": {
+        "height": 750.66,
+        "width": 1039.8
+      },
+      "15": {
+        "height": 750.66,
+        "width": 1039.8
+      },
+      "16": {
+        "height": 750.66,
+        "width": 1039.8
+      },
+      "17": {
+        "height": 750.66,
+        "width": 1039.8
+      },
+      "18": {
+        "height": 750.66,
+        "width": 1039.8
+      },
+      "19": {
+        "height": 750.66,
+        "width": 1039.8
+      },
+      "2": {
+        "height": 750.66,
+        "width": 1039.8
+      },
+      "20": {
+        "height": 750.66,
+        "width": 1039.8
+      },
+      "21": {
+        "height": 750.66,
+        "width": 1039.8
+      },
+      "22": {
+        "height": 750.66,
+        "width": 1039.8
+      },
+      "23": {
+        "height": 750.66,
+        "width": 1039.8
+      },
+      "24": {
+        "height": 750.66,
+        "width": 1039.8
+      },
+      "25": {
+        "height": 750.66,
+        "width": 540.9
+      },
+      "3": {
+        "height": 750.66,
+        "width": 1039.8
+      },
+      "4": {
+        "height": 750.66,
+        "width": 1039.8
+      },
+      "5": {
+        "height": 750.66,
+        "width": 1039.8
+      },
+      "6": {
+        "height": 750.66,
+        "width": 1039.8
+      },
+      "7": {
+        "height": 750.66,
+        "width": 1039.8
+      },
+      "8": {
+        "height": 750.66,
+        "width": 1039.8
+      },
+      "9": {
+        "height": 750.66,
+        "width": 1039.8
+      }
+    },
+    "publisher": "IP Australia",
+    "series": "Australian IP Report",
+    "source_sha256": "ae0901e2b5b61e6f5262e4a8837df528c2d45a6a5b1c10a2307f22435a2032cb",
+    "title": "Australian Intellectual Property Report 2019",
+    "url": "https://www.ipaustralia.gov.au/tools-and-research/professional-resources/data-research-and-reports/publications-and-reports/Australian-Intellectual-Property-Report-2019",
+    "year": 2019
+  },
+  "ipr-2020": {
+    "authors": [],
+    "chunks": 76,
+    "doc_id": "ipr-2020",
+    "licence": "CC BY 4.0",
+    "note": null,
+    "ocr": false,
+    "page_count": 52,
+    "pages": {
+      "1": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "10": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "11": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "12": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "13": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "14": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "15": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "16": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "17": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "18": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "19": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "2": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "20": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "21": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "22": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "23": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "24": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "25": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "26": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "27": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "28": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "29": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "3": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "30": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "31": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "32": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "33": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "34": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "35": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "36": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "37": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "38": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "39": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "4": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "40": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "41": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "42": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "43": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "44": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "45": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "46": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "47": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "48": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "49": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "5": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "50": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "51": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "52": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "6": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "7": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "8": {
+        "height": 708.66,
+        "width": 498.9
+      },
+      "9": {
+        "height": 708.66,
+        "width": 498.9
+      }
+    },
+    "publisher": "IP Australia",
+    "series": "Australian IP Report",
+    "source_sha256": "98a0d3d440bce0e34acc9f09e7dd19dc84e9047d2d8aecaec2e170ec5f864fd4",
+    "title": "Australian Intellectual Property Report 2020",
+    "url": "https://www.ipaustralia.gov.au/tools-and-research/professional-resources/data-research-and-reports/publications-and-reports/Australian-Intellectual-Property-Report-2020",
+    "year": 2020
+  },
+  "ipr-2021": {
+    "authors": [],
+    "chunks": 74,
+    "doc_id": "ipr-2021",
+    "licence": null,
+    "note": null,
+    "ocr": true,
+    "page_count": 29,
+    "pages": {
+      "1": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "10": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "11": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "12": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "13": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "14": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "15": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "16": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "17": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "18": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "19": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "2": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "20": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "21": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "22": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "23": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "24": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "25": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "26": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "27": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "28": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "29": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "3": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "4": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "5": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "6": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "7": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "8": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "9": {
+        "height": 841.89,
+        "width": 595.28
+      }
+    },
+    "publisher": "IP Australia",
+    "series": "Australian IP Report",
+    "source_sha256": "037e81a6db9b0595f9928ee1e09ea235c6330ab08ca186db6493d3b5600ff717",
+    "title": "Australian Intellectual Property Report 2021",
+    "url": "https://www.ipaustralia.gov.au/tools-and-research/professional-resources/data-research-and-reports/publications-and-reports/australian-intellectual-property-report-2021",
+    "year": 2021
+  },
+  "ipr-2022": {
+    "authors": [],
+    "chunks": 87,
+    "doc_id": "ipr-2022",
+    "licence": null,
+    "note": null,
+    "ocr": false,
+    "page_count": 50,
+    "pages": {
+      "1": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "10": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "11": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "12": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "13": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "14": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "15": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "16": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "17": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "18": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "19": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "2": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "20": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "21": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "22": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "23": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "24": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "25": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "26": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "27": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "28": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "29": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "3": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "30": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "31": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "32": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "33": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "34": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "35": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "36": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "37": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "38": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "39": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "4": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "40": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "41": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "42": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "43": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "44": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "45": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "46": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "47": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "48": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "49": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "5": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "50": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "6": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "7": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "8": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "9": {
+        "height": 841.89,
+        "width": 595.28
+      }
+    },
+    "publisher": "IP Australia",
+    "series": "Australian IP Report",
+    "source_sha256": "840be65053bbed3960836a170a8a6b381d89f38d27420d4328db362526c5962e",
+    "title": "Australian Intellectual Property Report 2022",
+    "url": "https://www.ipaustralia.gov.au/tools-and-research/professional-resources/data-research-and-reports/publications-and-reports/Australian-Intellectual-Property-Report-2022",
+    "year": 2022
+  },
+  "ipr-2023": {
+    "authors": [],
+    "chunks": 132,
+    "doc_id": "ipr-2023",
+    "licence": "CC BY 4.0",
+    "note": null,
+    "ocr": false,
+    "page_count": 91,
+    "pages": {
+      "1": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "10": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "11": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "12": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "13": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "14": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "15": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "16": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "17": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "18": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "19": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "2": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "20": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "21": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "22": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "23": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "24": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "25": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "26": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "27": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "28": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "29": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "3": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "30": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "31": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "32": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "33": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "34": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "35": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "36": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "37": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "38": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "39": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "4": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "40": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "41": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "42": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "43": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "44": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "45": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "46": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "47": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "48": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "49": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "5": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "50": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "51": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "52": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "53": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "54": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "55": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "56": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "57": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "58": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "59": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "6": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "60": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "61": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "62": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "63": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "64": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "65": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "66": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "67": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "68": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "69": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "7": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "70": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "71": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "72": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "73": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "74": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "75": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "76": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "77": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "78": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "79": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "8": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "80": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "81": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "82": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "83": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "84": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "85": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "86": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "87": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "88": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "89": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "9": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "90": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "91": {
+        "height": 841.89,
+        "width": 595.28
+      }
+    },
+    "publisher": "IP Australia",
+    "series": "Australian IP Report",
+    "source_sha256": "1a5da52bacc26ed765b2b633c3383bb4ffbd593a2eded68e86175f4230c4f8fe",
+    "title": "Australian IP Report 2023",
+    "url": "https://www.ipaustralia.gov.au/tools-and-research/professional-resources/data-research-and-reports/publications-and-reports/Australian-Intellectual-Property-Report-2023",
+    "year": 2023
+  },
+  "ipr-2024": {
+    "authors": [],
+    "chunks": 128,
+    "doc_id": "ipr-2024",
+    "licence": "CC BY 4.0",
+    "note": null,
+    "ocr": false,
+    "page_count": 96,
+    "pages": {
+      "1": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "10": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "11": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "12": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "13": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "14": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "15": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "16": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "17": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "18": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "19": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "2": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "20": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "21": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "22": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "23": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "24": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "25": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "26": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "27": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "28": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "29": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "3": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "30": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "31": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "32": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "33": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "34": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "35": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "36": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "37": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "38": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "39": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "4": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "40": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "41": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "42": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "43": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "44": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "45": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "46": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "47": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "48": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "49": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "5": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "50": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "51": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "52": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "53": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "54": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "55": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "56": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "57": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "58": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "59": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "6": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "60": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "61": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "62": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "63": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "64": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "65": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "66": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "67": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "68": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "69": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "7": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "70": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "71": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "72": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "73": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "74": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "75": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "76": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "77": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "78": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "79": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "8": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "80": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "81": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "82": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "83": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "84": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "85": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "86": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "87": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "88": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "89": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "9": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "90": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "91": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "92": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "93": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "94": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "95": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "96": {
+        "height": 841.89,
+        "width": 595.28
+      }
+    },
+    "publisher": "IP Australia",
+    "series": "Australian IP Report",
+    "source_sha256": "0c0356f082c1fd8f33865040cce6e4bffd6bc1d2cd3ae71c9614fa3ee523ff9c",
+    "title": "Australian IP Report 2024",
+    "url": null,
+    "year": 2024
+  },
+  "ipr-2025": {
+    "authors": [],
+    "chunks": 106,
+    "doc_id": "ipr-2025",
+    "licence": null,
+    "note": null,
+    "ocr": false,
+    "page_count": 69,
+    "pages": {
+      "1": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "10": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "11": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "12": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "13": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "14": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "15": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "16": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "17": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "18": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "19": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "2": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "20": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "21": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "22": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "23": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "24": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "25": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "26": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "27": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "28": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "29": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "3": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "30": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "31": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "32": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "33": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "34": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "35": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "36": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "37": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "38": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "39": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "4": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "40": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "41": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "42": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "43": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "44": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "45": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "46": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "47": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "48": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "49": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "5": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "50": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "51": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "52": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "53": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "54": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "55": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "56": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "57": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "58": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "59": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "6": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "60": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "61": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "62": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "63": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "64": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "65": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "66": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "67": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "68": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "69": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "7": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "8": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "9": {
+        "height": 595.28,
+        "width": 841.89
+      }
+    },
+    "publisher": "IP Australia",
+    "series": "Australian IP Report",
+    "source_sha256": "eb1e510fec0d3c67527eaca24838ff44da410a2e254690d7d32008f159c95781",
+    "title": "Australian IP Report 2025",
+    "url": "https://www.ipaustralia.gov.au/tools-and-research/professional-resources/data-research-and-reports/australian-ip-report-2025",
+    "year": 2025
+  },
+  "ipr-2026": {
+    "authors": [],
+    "chunks": 134,
+    "doc_id": "ipr-2026",
+    "licence": null,
+    "note": null,
+    "ocr": false,
+    "page_count": 86,
+    "pages": {
+      "1": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "10": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "11": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "12": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "13": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "14": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "15": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "16": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "17": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "18": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "19": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "2": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "20": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "21": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "22": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "23": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "24": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "25": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "26": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "27": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "28": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "29": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "3": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "30": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "31": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "32": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "33": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "34": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "35": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "36": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "37": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "38": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "39": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "4": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "40": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "41": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "42": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "43": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "44": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "45": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "46": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "47": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "48": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "49": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "5": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "50": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "51": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "52": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "53": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "54": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "55": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "56": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "57": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "58": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "59": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "6": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "60": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "61": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "62": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "63": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "64": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "65": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "66": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "67": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "68": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "69": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "7": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "70": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "71": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "72": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "73": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "74": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "75": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "76": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "77": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "78": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "79": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "8": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "80": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "81": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "82": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "83": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "84": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "85": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "86": {
+        "height": 595.28,
+        "width": 841.89
+      },
+      "9": {
+        "height": 595.28,
+        "width": 841.89
+      }
+    },
+    "publisher": "IP Australia",
+    "series": "Australian IP Report",
+    "source_sha256": "38bc36a6a12961ac6df6281e822b3a5064fcdb02e53ed0a6d3ae748924aaf9ed",
+    "title": "Australian IP Report 2026",
+    "url": "https://www.ipaustralia.gov.au/tools-and-research/professional-resources/data-research-and-reports/australian-ip-report-2026/overview",
+    "year": 2026
+  },
+  "note-patenting-structural-change": {
+    "authors": [],
+    "chunks": 13,
+    "doc_id": "note-patenting-structural-change",
+    "licence": null,
+    "note": null,
+    "ocr": false,
+    "page_count": 7,
+    "pages": {
+      "1": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "2": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "3": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "4": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "5": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "6": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "7": {
+        "height": 841.89,
+        "width": 595.28
+      }
+    },
+    "publisher": "IP Australia",
+    "series": "Office of the Chief Economist analytic note",
+    "source_sha256": "5bd247eb94068b9185c42d76b0d75db687b7bf8eeafb305a3c2550dbf0d084bb",
+    "title": "The structural change in patenting behaviour in Australia",
+    "url": null,
+    "year": 2024
+  },
+  "note-tm-leading-indicator": {
+    "authors": [
+      "Kevin Nguyen",
+      "Ye Rin Yoo",
+      "Michael Falk"
+    ],
+    "chunks": 23,
+    "doc_id": "note-tm-leading-indicator",
+    "licence": null,
+    "note": null,
+    "ocr": false,
+    "page_count": 9,
+    "pages": {
+      "1": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "2": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "3": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "4": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "5": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "6": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "7": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "8": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "9": {
+        "height": 841.89,
+        "width": 595.28
+      }
+    },
+    "publisher": "IP Australia",
+    "series": "Office of the Chief Economist analytic note",
+    "source_sha256": "a49e8009403bd236062f131d23030a1690cb72c3f0fb92c292ffb4ba7878e143",
+    "title": "Evaluating trade marks as a leading economic indicator of the Australian business cycle",
+    "url": null,
+    "year": 2025
+  },
+  "oce-ai-investment": {
+    "authors": [
+      "Steve J. Bickley",
+      "Ho Fai Chan",
+      "Uwe Dulleck",
+      "Benno Torgler"
+    ],
+    "chunks": 85,
+    "doc_id": "oce-ai-investment",
+    "licence": "CC BY 4.0",
+    "note": null,
+    "ocr": false,
+    "page_count": 43,
+    "pages": {
+      "1": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "10": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "11": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "12": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "13": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "14": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "15": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "16": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "17": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "18": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "19": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "2": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "20": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "21": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "22": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "23": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "24": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "25": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "26": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "27": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "28": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "29": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "3": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "30": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "31": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "32": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "33": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "34": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "35": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "36": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "37": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "38": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "39": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "4": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "40": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "41": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "42": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "43": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "5": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "6": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "7": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "8": {
+        "height": 841.89,
+        "width": 595.28
+      },
+      "9": {
+        "height": 841.89,
+        "width": 595.28
+      }
+    },
+    "publisher": "IP Australia",
+    "series": "Office of the Chief Economist report",
+    "source_sha256": "845fccbab680b18b8396af078a83746d0ad3914b0d1ec58e75337d5d354be0ca",
+    "title": "Drivers of AI investment",
+    "url": "https://www.ipaustralia.gov.au/tools-and-research/professional-resources/data-research-and-reports/publications-and-reports/drivers-of-ai-investment",
+    "year": 2023
+  }
+}

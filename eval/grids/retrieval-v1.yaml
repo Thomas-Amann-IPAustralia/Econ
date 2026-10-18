@@ -1,0 +1,45 @@
+# Retrieval grid v1. Committed before any retrieval number existed (the decision entry names the commit).
+# Stages run in order; `@stage` means the setting an earlier stage chose. Choice is on the dev split;
+# the report gives test numbers with paired 95% bootstrap intervals against the baseline.
+version: retrieval-v1
+testset: eval/testset/silver-v1.yaml
+cover: 0.5      # a chunk covers a gold passage when it holds at least half of its characters
+
+stages:
+  chunking:
+    # Simplest first: fewest components added to the fixed-window baseline (structure, then the heading
+    # prefix); among sizes, the a-priori default 384 first, then 256, then 512.
+    strategies: [F384, S384-noprefix, S384, S256, S512]
+    # Two embedders from different families, so the choice isn't tied to one model's quirks.
+    embedders: [bge-small, gte-modernbert]
+    lane: hybrid
+    primary: recall@4k_tok
+    margin: 0.02
+    baseline: F384
+    rule: >-
+      The first strategy, in the listed order, whose dev recall@4k_tok (averaged over the two embedders,
+      hybrid lane) is within 0.02 of the best strategy's.
+
+  embedders:
+    strategy: "@chunking"
+    # Smallest first (parameters). Size costs Cloud Run cold-start time and CPU seconds, so a larger
+    # model must win by more than the margin to be chosen.
+    candidates: [leaf-ir, minilm-l6, arctic-s, bge-small, granite-small-r2, arctic-m-v1.5, bge-base,
+                 granite-r2, gte-modernbert, modernbert-embed, bge-large, mxbai-large, arctic-l-v2, qwen3-0.6b]
+    lane: hybrid
+    primary: ndcg@10
+    margin: 0.02
+    baseline: bge-small
+    rule: >-
+      The smallest candidate whose dev ndcg@10 (hybrid lane) is within 0.02 of the best candidate's.
+
+  fusion:
+    strategy: "@chunking"
+    embedder: "@embedders"
+    lanes: [hybrid, dense, bm25, score-0.5, score-0.85, rrf]
+    primary: ndcg@10
+    margin: 0.02
+    baseline: hybrid
+    rule: >-
+      Keep the configured hybrid (min-max score fusion, alpha 0.7) unless another lane beats it on dev
+      ndcg@10 by more than 0.02.

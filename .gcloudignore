@@ -1,0 +1,7 @@
+# gcloud builds submit uploads only what the embedder image needs (same rules as .dockerignore).
+*
+!pyproject.toml
+!README.md
+!src/**
+!config/**
+**/__pycache__

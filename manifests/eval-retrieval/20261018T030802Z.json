@@ -1,0 +1,58 @@
+{
+  "argv": [
+    "eval-retrieval",
+    "--stage",
+    "fusion"
+  ],
+  "command": "eval-retrieval",
+  "config_hash": "1ec8d6c7ffe4cb37",
+  "counts": {
+    "dev": 55,
+    "needs": 114,
+    "settings": 6
+  },
+  "error": null,
+  "git": {
+    "commit": "2f62fd98d8f49d66fc4583bcbd545ffe3d367562",
+    "dirty": true,
+    "dirty_paths": [
+      "docs/decisions.md",
+      "web/app.js",
+      "docs/handover-v1.md",
+      "docs/retrieval-results-explained.md"
+    ]
+  },
+  "git_at_end": {
+    "commit": "2f62fd98d8f49d66fc4583bcbd545ffe3d367562",
+    "dirty": true,
+    "dirty_paths": [
+      "docs/decisions.md",
+      "web/app.js",
+      "docs/handover-v1.md",
+      "docs/retrieval-results-explained.md"
+    ]
+  },
+  "inputs": {},
+  "outputs": {
+    "reports/retrieval-fusion.md": "f42490006b6fad472b579741c98758bddbc59babff834568eb609ebc3b0507a1"
+  },
+  "params": {
+    "grid": "retrieval-v1",
+    "stage": "fusion"
+  },
+  "run_id": "20261018T030802Z",
+  "seconds": 8.3,
+  "status": "passed",
+  "upstream": {},
+  "versions": {
+    "docling": "2.140.0",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.0",
+    "pypdfium2": "5.14.0",
+    "python": "3.12.3",
+    "sentence-transformers": "6.1.0",
+    "tokenizers": "0.23.3",
+    "torch": "2.14.1+cpu"
+  },
+  "warnings": []
+}

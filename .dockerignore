@@ -1,0 +1,7 @@
+# Keep the embedder's build context small: it needs only pyproject.toml, README.md, src/ and config/.
+*
+!pyproject.toml
+!README.md
+!src/**
+!config/**
+**/__pycache__
