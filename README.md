@@ -55,8 +55,20 @@ uv run pytest -q                                                      # tests: n
 To try the front end locally, serve `web/` (for example `python -m http.server -d web 8000`) and open
 `http://localhost:8000/?api=http://127.0.0.1:8787`.
 
+## Source documents
+
+The knowledge base is built from IP Australia's public reports: the Australian IP Reports and the Office
+of the Chief Economist's research papers and notes, as published at
+[ipaustralia.gov.au](https://www.ipaustralia.gov.au/tools-and-research/professional-resources/data-research-and-reports).
+They are © Commonwealth of Australia (IP Australia); most state a Creative Commons Attribution 4.0
+licence, and `library/index/docs.json` records each one's licence as found in its text. Three research
+papers are independent reports commissioned by IP Australia, and their findings are their authors'.
+
+This repository holds text extracted from those reports (`library/`), and the published site serves
+copies of the PDFs, for reference and traceability. The published reports are the authoritative source:
+extracted text can contain conversion errors, most of all in the 2018 and 2021 reports, which were
+read by OCR.
+
 ## Licence
 
-Code: MIT (see `LICENSE`). The documents are IP Australia publications, © Commonwealth of Australia, and
-state a Creative Commons Attribution 4.0 licence; `library/index/docs.json` records each one's licence as
-found in its text.
+Code: MIT (see `LICENSE`). The source documents keep their own licences (above).

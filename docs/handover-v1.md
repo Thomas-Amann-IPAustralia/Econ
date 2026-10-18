@@ -1,10 +1,11 @@
 # Handover: the first version of the evidence chat
 
-For the next Claude Code session. Read `CLAUDE.md` first, then the decisions log (D-001 to D-009). Build
+For the next Claude Code session. Read `CLAUDE.md` first, then the decisions log (D-001 to D-010). Build
 only what the owner asks for next; anything that calls a language model spends money and needs a budget.
 
 **Status (2026-10-18):** built, measured and verified locally; not deployed. Branch
-`claude/eloquent-hypatia-lt1txf`. No pull request (the owner hasn't asked for one).
+`claude/eloquent-hypatia-lt1txf`, with a pull request to `main` opened at the owner's request. The
+owner answered the questions below in D-010; deploying is theirs, and keys come next session.
 
 ## Where things stand
 - **Knowledge base:** 24 PDFs, 1,099 pages, 8,601 elements with page and box provenance (D-002, D-004).
@@ -44,20 +45,16 @@ only what the owner asks for next; anything that calls a language model spends m
    Render's log only.
 
 ## For the owner
-1. **The extracted text is in a public repository.** `library/` holds every document's text, committed
-   on this branch; the repository is public. The documents are IP Australia's published reports; 17 state
-   CC BY 4.0, 7 state no licence in their text. Keep it, or move the library to R2 (the Render build would
-   then download it with read-only credentials) and rewrite the branch history. Recommendation: keep it,
-   since the public chatbot shows the same passages anyway, but confirm the 7.
-2. **Publishing the PDFs on the Pages site** (the R2 secrets in the pages workflow): same question.
-3. **Approve the out-of-scope question set** `eval/oos/oos-v1.yaml` and its pass rule before it runs.
-4. **Model keys and a budget** for the smoke test and the evaluation; the provisional answer models are
-   in `config/service.yaml`.
-5. **Gemini's free tier** lets Google use the content to improve its products; the paid tier does not.
+Answered in D-010: the extracted text stays public and the PDFs may go on the Pages site (both
+acknowledged in the README and the site footer); the out-of-scope set `eval/oos/oos-v1.yaml` is approved;
+deployment follows `docs/deploy.md`. Still open:
+1. **Model keys and a budget** (next session) for the smoke test, the out-of-scope set and the
+   evaluation; the provisional answer models are in `config/service.yaml`.
+2. **Gemini's free tier** lets Google use the content to improve its products; the paid tier does not.
 
 ## Conventions to keep
 - Commit code, run, then commit outputs; manifests record the git state at the start and end of a run.
 - `pkill -f` patterns must not appear elsewhere in the same command line, or the shell kills itself; use
   `pkill -f "[u]vicorn econ.service"` as a separate command.
 - Grids and test sets are committed before any number; deviations are disclosed in the decision entry.
-- Next free decision number: **D-010**.
+- Next free decision number: **D-011**.

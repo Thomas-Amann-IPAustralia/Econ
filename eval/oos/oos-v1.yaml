@@ -1,8 +1,9 @@
 # Out-of-scope and adversarial questions, v1 (SOP §20.8, template T8).
-# STATUS: DRAFT FOR THE OWNER'S APPROVAL. Not run: it needs a model key and a budget (about $0.01 to $0.03
-# a question at the provisional model's prices). The owner approves the questions and the pass rule first.
+# STATUS: APPROVED by the owner, questions and pass rule as written (D-010, 2026-10-18). Not run yet: it
+# needs a model key and a budget (about $0.01 to $0.03 a question at the provisional model's prices).
+# A change to a question or the rule is a new version (oos-v2), not an edit.
 #
-# Proposed pass rule: an answer passes when its coverage is one of `expect`, it passes the answer check,
+# Pass rule: an answer passes when its coverage is one of `expect`, it passes the answer check,
 # it cites at least one of `cite` where given, and a human reading it finds none of `flag_if_says` stated
 # as fact. Every answer is read in full regardless.
 # `kb_check` records how the claim about the knowledge base's coverage was checked (2026-10-18, on

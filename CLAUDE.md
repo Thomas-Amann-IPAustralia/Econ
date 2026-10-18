@@ -108,5 +108,6 @@ Commit code, run, then commit outputs. Australian spelling, sentence-case headin
 - New high-severity sweep findings on real items: propose allowlist entries.
 - Spending money on model calls beyond an approved budget.
 - Adopting a measured result outside the choices the owner delegated.
-- Changing the answer format, what the chatbot may refuse, or publishing anything new (for example,
-  adding the PDFs to the public site).
+- Changing the answer format, what the chatbot may refuse, or publishing anything new. The reports' text
+  in `library/` and their PDFs on the Pages site are approved, with the acknowledgement in the README
+  and the site footer (D-010).

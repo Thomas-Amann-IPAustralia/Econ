@@ -370,3 +370,31 @@ citation-heavy share of the top 10 from 2.2% to 0.0%. Index rebuilt (1,896 passa
 (`3b2fdc9 clean`; identical top 10 on all 114 questions).
 
 **Spend:** $0.
+
+---
+
+## D-010 — Publication, the out-of-scope set, and keys (owner; 2026-10-18)
+
+**Context.** The handover (D-009 state) put five questions to the owner: whether the extracted text may
+stay in the public repository, whether the PDFs may be published on the Pages site, how to deploy, the
+out-of-scope question set, and model keys.
+
+**Decision (owner).**
+1. **The extracted text stays public** in `library/`. Every PDF was taken from IP Australia's public
+   website; a static acknowledgement in the README is enough. Done: README "Source documents".
+2. **The PDFs may be published on the Pages site** (the R2 secrets in the pages workflow), with a short
+   static disclaimer that they are IP Australia's public reports. Done: a footer on every view of the
+   site, linking to the reports' page on ipaustralia.gov.au and naming the published reports as the
+   authoritative source.
+3. **Deployment** is the owner's, following `docs/deploy.md`; Claude gave the steps in the session.
+4. **Model keys and a budget** come in the next session. Until then the service runs evidence-only.
+5. **The out-of-scope set `eval/oos/oos-v1.yaml` is approved**, its questions and pass rule as written
+   ("comfortable with it if you are"). Claude re-checked the four corpus facts it relies on against
+   `library/elements/` (the 2014 GII rank in ipr-2015, the innovation patent's phase-out in ipr-2018,
+   the 16% SME growth finding in ipr-2022 and ipr-2024, 88,725 trade mark applications in 2021 in
+   ipr-2022). It runs with the first model budget.
+
+**Consequence.** `CLAUDE.md` no longer lists adding the PDFs to the public site as a question for the
+owner; publishing anything else new still is.
+
+**Spend:** $0.
