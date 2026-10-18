@@ -3,9 +3,12 @@
 For the next Claude Code session. Read `CLAUDE.md` first, then the decisions log (D-001 to D-010). Build
 only what the owner asks for next; anything that calls a language model spends money and needs a budget.
 
-**Status (2026-10-18):** built, measured and verified locally; not deployed. Branch
-`claude/eloquent-hypatia-lt1txf`, with a pull request to `main` opened at the owner's request. The
-owner answered the questions below in D-010; deploying is theirs, and keys come next session.
+**Status (2026-10-18):** built, measured and verified; the embedder is live on Cloud Run
+(`https://econ-embedder-1033950575668.australia-southeast1.run.app`, project `gen-lang-client-0664096123`),
+verified by `econ verify-embedder --url` (cosine 1.00000 to the local ONNX path). Render and Pages are not
+yet set up. The first version is merged into `main` (pull request 1); later fixes go on branch
+`claude/eloquent-hypatia-lt1txf`. The owner answered the questions below in D-010; deploying is theirs,
+and keys come next session.
 
 ## Where things stand
 - **Knowledge base:** 24 PDFs, 1,099 pages, 8,601 elements with page and box provenance (D-002, D-004).

@@ -1,7 +1,10 @@
-# gcloud builds submit uploads only what the embedder image needs (same rules as .dockerignore).
+# gcloud builds submit uploads only what the embedder image needs: the .dockerignore set, plus the
+# Dockerfile, which Cloud Build reads from the upload (a local docker build reads it from disk).
 *
 !pyproject.toml
 !README.md
 !src/**
 !config/**
+!deploy/
+!deploy/embedder/
 **/__pycache__
