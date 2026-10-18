@@ -1,0 +1,44 @@
+{
+ "cost_usd": 0.001354,
+ "data": [
+  {
+   "passage_id": "p1",
+   "score": 0
+  },
+  {
+   "passage_id": "p2",
+   "score": 0
+  },
+  {
+   "passage_id": "p3",
+   "score": 0
+  },
+  {
+   "passage_id": "p4",
+   "score": 0
+  },
+  {
+   "passage_id": "p5",
+   "score": 0
+  },
+  {
+   "passage_id": "p6",
+   "score": 0
+  }
+ ],
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "judge:judge-v1:gemini-3.8-flash",
+ "schema_name": "grades",
+ "tag": "erp04-2",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002707,
+  "input": 2874,
+  "model": "gemini-3.8-flash",
+  "output": 147,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

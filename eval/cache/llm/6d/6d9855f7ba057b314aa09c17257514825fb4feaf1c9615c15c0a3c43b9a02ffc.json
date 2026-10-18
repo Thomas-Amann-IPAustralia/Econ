@@ -1,0 +1,44 @@
+{
+ "cost_usd": 0.001256,
+ "data": [
+  {
+   "grade": 0,
+   "id": "p1"
+  },
+  {
+   "grade": 1,
+   "id": "p2"
+  },
+  {
+   "grade": 0,
+   "id": "p3"
+  },
+  {
+   "grade": 0,
+   "id": "p4"
+  },
+  {
+   "grade": 0,
+   "id": "p5"
+  },
+  {
+   "grade": 2,
+   "id": "p6"
+  }
+ ],
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "judge:judge-v1:gemini-3.8-flash",
+ "schema_name": "grades",
+ "tag": "explore-synthesis-9",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002511,
+  "input": 2673,
+  "model": "gemini-3.8-flash",
+  "output": 135,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}
