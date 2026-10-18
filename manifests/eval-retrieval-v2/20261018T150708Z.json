@@ -1,0 +1,50 @@
+{
+  "argv": [
+    "eval-retrieval-v2",
+    "--stage",
+    "final"
+  ],
+  "command": "eval-retrieval-v2",
+  "config_hash": "98883ce1aa85b4d8",
+  "counts": {
+    "needs": 178
+  },
+  "error": null,
+  "git": {
+    "commit": "6879324d798fd002aa67319e3d41c3defd499230",
+    "dirty": true,
+    "dirty_paths": [
+      "eval/cache/rerank/"
+    ]
+  },
+  "git_at_end": {
+    "commit": "6879324d798fd002aa67319e3d41c3defd499230",
+    "dirty": true,
+    "dirty_paths": [
+      "eval/cache/rerank/"
+    ]
+  },
+  "inputs": {},
+  "outputs": {
+    "reports/retrieval-v2-final.md": "faaf6a28b94aa333cbcae175bd2824fbb9b192d84809bfce3d9fb904f7625af8"
+  },
+  "params": {
+    "judgments": "judged-v1",
+    "stage": "final"
+  },
+  "run_id": "20261018T150708Z",
+  "seconds": 51.4,
+  "status": "passed",
+  "upstream": {},
+  "versions": {
+    "docling": "2.140.0",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.0",
+    "pypdfium2": "5.14.0",
+    "python": "3.12.3",
+    "sentence-transformers": "6.1.0",
+    "tokenizers": "0.23.3",
+    "torch": "2.14.1+cpu"
+  },
+  "warnings": []
+}

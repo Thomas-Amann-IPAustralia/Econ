@@ -22,3 +22,7 @@ judged@20 on test: baseline 1.000, chosen 1.000.
 | explore | ndcg@20 | 33 | 0.553 | 0.632 | +0.079 | [+0.023, +0.136] | 0.064 |
 | explore | rel_recall@20 | 33 | 0.487 | 0.566 | +0.080 | [+0.031, +0.132] | 0.025 |
 | explore | p@20 | 33 | 0.420 | 0.501 | +0.081 | [+0.033, +0.133] | 0.025 |
+
+## Robustness: the stage-1 rule on every judgment
+
+Re-run on all judgments (pool and top-up), the rule chooses `plan+q:luna-plan-v2/enriched/none` (the same setting). Best five on dev by ndcg@10: `plan+q:luna-plan-v2/enriched/none` 0.727; `plan:luna-plan-v2/enriched/ettin-68m` 0.726; `plan:flashlite-plan-v2/enriched/ettin-68m` 0.719; `plan:luna-plan-v2/plain/ettin-68m` 0.710; `plan:luna-plan-v1/enriched/ettin-68m` 0.707.
