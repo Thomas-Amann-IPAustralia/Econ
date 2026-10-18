@@ -23,7 +23,12 @@ from econ.config import Provider
 
 
 class ProviderError(Exception):
-    pass
+    """A failed call. `usage` is set when the provider billed for it (a truncated or blocked reply), so
+    the caller can still meter what it cost."""
+
+    def __init__(self, message: str, usage: Usage | None = None):
+        super().__init__(message)
+        self.usage = usage
 
 
 @dataclass
@@ -108,21 +113,6 @@ class OpenAIModel(Model):
         if r.status_code != 200:
             raise ProviderError(f"openai: HTTP {r.status_code}: {r.text[:300]}")
         d = r.json()
-        if d.get("status") == "incomplete":
-            raise ProviderError(f"openai: incomplete ({(d.get('incomplete_details') or {}).get('reason')})")
-        text, refusal = None, None
-        for item in d.get("output", []):
-            if item.get("type") != "message":
-                continue
-            for c in item.get("content", []):
-                if c.get("type") == "output_text":
-                    text = c.get("text")
-                elif c.get("type") == "refusal":
-                    refusal = c.get("refusal")
-        if refusal:
-            raise ProviderError(f"openai: refused: {refusal[:200]}")
-        if text is None:
-            raise ProviderError("openai: no output text")
         u = d.get("usage") or {}
         cached = (u.get("input_tokens_details") or {}).get("cached_tokens", 0) or 0
         usage = Usage(
@@ -133,10 +123,26 @@ class OpenAIModel(Model):
             reasoning=(u.get("output_tokens_details") or {}).get("reasoning_tokens", 0) or 0,
             seconds=round(time.time() - t, 2),
         ).price()
+        if d.get("status") == "incomplete":
+            reason = (d.get("incomplete_details") or {}).get("reason")
+            raise ProviderError(f"openai: incomplete ({reason})", usage)
+        text, refusal = None, None
+        for item in d.get("output", []):
+            if item.get("type") != "message":
+                continue
+            for c in item.get("content", []):
+                if c.get("type") == "output_text":
+                    text = c.get("text")
+                elif c.get("type") == "refusal":
+                    refusal = c.get("refusal")
+        if refusal:
+            raise ProviderError(f"openai: refused: {refusal[:200]}", usage)
+        if text is None:
+            raise ProviderError("openai: no output text", usage)
         try:
             data = json.loads(text)
         except json.JSONDecodeError as e:
-            raise ProviderError("openai: output is not JSON") from e
+            raise ProviderError("openai: output is not JSON", usage) from e
         return Reply(
             data=data, usage=usage, raw_finish=d.get("status", ""), meta={"response_id": d.get("id")}
         )
@@ -176,31 +182,35 @@ class GeminiModel(Model):
         if r.status_code != 200:
             raise ProviderError(f"gemini: HTTP {r.status_code}: {r.text[:300]}")
         d = r.json()
+        usage = _gemini_usage(d, model, time.time() - t)
         cands = d.get("candidates") or []
         if not cands:
             block = (d.get("promptFeedback") or {}).get("blockReason")
-            raise ProviderError(f"gemini: no candidates (blocked: {block})")
+            raise ProviderError(f"gemini: no candidates (blocked: {block})", usage)
         finish = cands[0].get("finishReason", "")
         if finish not in ("STOP", ""):
-            raise ProviderError(f"gemini: finished with {finish}")
+            raise ProviderError(f"gemini: finished with {finish}", usage)
         parts = (cands[0].get("content") or {}).get("parts") or []
         text = "".join(p.get("text", "") for p in parts if not p.get("thought"))
-        u = d.get("usageMetadata") or {}
-        cached = u.get("cachedContentTokenCount", 0) or 0
-        thoughts = u.get("thoughtsTokenCount", 0) or 0
-        usage = Usage(
-            model=model,
-            input=(u.get("promptTokenCount", 0) or 0) - cached,
-            cached_input=cached,
-            output=(u.get("candidatesTokenCount", 0) or 0) + thoughts,
-            reasoning=thoughts,
-            seconds=round(time.time() - t, 2),
-        ).price()
         try:
             data = json.loads(text)
         except json.JSONDecodeError as e:
-            raise ProviderError("gemini: output is not JSON") from e
+            raise ProviderError("gemini: output is not JSON", usage) from e
         return Reply(data=data, usage=usage, raw_finish=finish, meta={"model_version": d.get("modelVersion")})
+
+
+def _gemini_usage(d: dict, model: str, seconds: float) -> Usage:
+    u = d.get("usageMetadata") or {}
+    cached = u.get("cachedContentTokenCount", 0) or 0
+    thoughts = u.get("thoughtsTokenCount", 0) or 0
+    return Usage(
+        model=model,
+        input=(u.get("promptTokenCount", 0) or 0) - cached,
+        cached_input=cached,
+        output=(u.get("candidatesTokenCount", 0) or 0) + thoughts,
+        reasoning=thoughts,
+        seconds=round(seconds, 2),
+    ).price()
 
 
 class ScriptedModel(Model):

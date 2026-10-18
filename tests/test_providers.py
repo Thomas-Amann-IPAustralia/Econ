@@ -55,7 +55,7 @@ def test_openai_request_is_pinned_and_strict(monkeypatch):
     assert set(sent["headers"]) == {"Authorization"}
     assert rep.data == {"a": 1}
     assert (rep.usage.input, rep.usage.cached_input, rep.usage.output) == (600, 400, 200)
-    assert rep.usage.cost_usd == pytest.approx((600 * 2 + 400 * 2 + 200 * 10) / 1e6)
+    assert rep.usage.cost_usd == pytest.approx((600 * 2 + 400 * 0.10 + 200 * 10) / 1e6)
 
 
 @pytest.mark.parametrize(
@@ -104,12 +104,28 @@ def test_gemini_skips_thought_parts_and_bills_thinking_as_output(monkeypatch):
     assert rep.data == {"b": 2} and rep.usage.output == 400 and rep.usage.reasoning == 300
 
 
-def test_gemini_non_stop_finish_raises(monkeypatch):
-    monkeypatch.setattr(
-        httpx, "post", Fake(200, {"candidates": [{"finishReason": "MAX_TOKENS", "content": {"parts": []}}]})
-    )
-    with pytest.raises(ProviderError, match="MAX_TOKENS"):
+def test_gemini_non_stop_finish_raises_with_the_billed_usage(monkeypatch):
+    # D-011: a truncated reply is still billed, so the error carries its usage for the meter.
+    body = {
+        "candidates": [{"finishReason": "MAX_TOKENS", "content": {"parts": []}}],
+        "usageMetadata": {"promptTokenCount": 8000, "candidatesTokenCount": 0, "thoughtsTokenCount": 3000},
+    }
+    monkeypatch.setattr(httpx, "post", Fake(200, body))
+    with pytest.raises(ProviderError, match="MAX_TOKENS") as e:
         GeminiModel(GEMINI, "k", 30).generate_json(model="gemini-3.8-flash", **ARGS)
+    assert e.value.usage.output == 3000 and e.value.usage.cost_usd > 0
+
+
+def test_openai_incomplete_reply_carries_its_usage(monkeypatch):
+    body = {
+        "status": "incomplete",
+        "incomplete_details": {"reason": "max_output_tokens"},
+        "usage": {"input_tokens": 5000, "output_tokens": 3000},
+    }
+    monkeypatch.setattr(httpx, "post", Fake(200, body))
+    with pytest.raises(ProviderError) as e:
+        OpenAIModel(OPENAI, "k", 30).generate_json(model="gpt-6.1-sol", **ARGS)
+    assert e.value.usage.output == 3000
 
 
 def test_http_errors_raise_without_leaking_the_key(monkeypatch):

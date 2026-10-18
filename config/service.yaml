@@ -32,12 +32,15 @@ llm:
       plan_model: gemini-3.5-flash-lite
       plan_effort: low
   prices_per_mtok:                 # input, cached input, output (output includes reasoning)
-    gpt-6.1-sol: [2.00, 2.00, 10.00]      # cached-input price not listed; metered at the full price
-    gpt-6-luna: [0.10, 0.10, 0.50]
+    gpt-6.1-sol: [2.00, 0.10, 10.00]      # rechecked 2026-10-18 (developers.openai.com/api/docs/pricing)
+    gpt-6-luna: [0.10, 0.01, 0.50]
     gemini-3.8-flash: [0.75, 0.075, 3.75] # until 2026-12-31; doubles from 2027-01-01
     gemini-3.5-flash-lite: [0.30, 0.03, 2.50]
   daily_budget_usd: 2.00           # in memory; resets when the instance restarts (see the handover)
-  max_output_tokens: 3000
+  # Both providers count reasoning (thinking) tokens inside these limits, and bill only what is generated.
+  # 3000 truncated Gemini 3.8 Flash at medium thinking in the first smoke test (D-011).
+  max_output_tokens: 12000
+  plan_max_output_tokens: 1500
   timeout_seconds: 90
   query_planning: true             # rewrite follow-ups and split broad questions into searches
 

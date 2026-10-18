@@ -163,7 +163,8 @@ class LlmCfg(Strict):
     providers: list[Provider]
     prices_per_mtok: dict[str, tuple[float, float, float]]
     daily_budget_usd: float
-    max_output_tokens: int = 3000
+    max_output_tokens: int = 3000  # includes reasoning (thinking) tokens on both providers
+    plan_max_output_tokens: int = 1500
     timeout_seconds: float = 90
     query_planning: bool = True
 

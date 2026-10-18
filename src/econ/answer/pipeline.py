@@ -155,7 +155,7 @@ def run(req: Request, svc: Services) -> Iterator[dict]:
                 schema_name="plan",
                 model=p.plan_model,
                 effort=p.plan_effort,
-                max_output_tokens=600,
+                max_output_tokens=scfg.llm.plan_max_output_tokens,
             )
             plan = Plan.model_validate(rep.data)
             usages.append(rep.usage)
@@ -169,6 +169,8 @@ def run(req: Request, svc: Services) -> Iterator[dict]:
                 "usage": rep.usage.__dict__,
             }
         except (ProviderError, ValidationError) as e:
+            if getattr(e, "usage", None):
+                usages.append(e.usage)  # a failed call is still billed, so it is still metered
             yield {
                 "event": "plan",
                 "standalone_question": question,
@@ -253,6 +255,8 @@ def run(req: Request, svc: Services) -> Iterator[dict]:
                 max_output_tokens=scfg.llm.max_output_tokens,
             )
         except ProviderError as e:
+            if e.usage:
+                usages.append(e.usage)
             yield {"event": "error", "stage": "answer", "message": str(e)[:300]}
             break
         usages.append(rep.usage)

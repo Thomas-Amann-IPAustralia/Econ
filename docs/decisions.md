@@ -398,3 +398,38 @@ out-of-scope question set, and model keys.
 owner; publishing anything else new still is.
 
 **Spend:** $0.
+
+---
+
+## D-011 — The first live calls: both providers work after two fixes; the plan can sink a broad question (Claude; 2026-10-18)
+
+**Context.** The owner set a budget for this session ($2.50 of OpenAI, $2.50 of Gemini) and asked for the
+best RAG system that stays free to run (progress log: `docs/progress-rag-v2.md`). No live model call had
+ever been made, so the first step was the SOP §20.4 smoke test: a lookup, the owner's PROMPT_1 (causal
+methods) and an off-topic question, on each provider, with the local ONNX embedder. Events:
+`eval/smoke/*.jsonl`.
+
+**Decision (Claude).**
+- **Spend is metered and capped in code** for evaluation work: `config/eval.yaml` (the two budgets, cap
+  at 96%) and `econ.spend` (a committed ledger, `eval/spend/ledger.jsonl`, and a guard that refuses a
+  call whose reserve would cross the cap).
+- **Fix 1: output limits include thinking.** Gemini 3.8 Flash at medium thinking used about 3,300 to
+  3,700 thought tokens, and both providers count reasoning inside the output limit, so the configured
+  3,000 truncated every Gemini answer. `llm.max_output_tokens` is now 12,000 and the plan's limit
+  (`plan_max_output_tokens`, previously hard-coded at 600) is 1,500. Only generated tokens are billed.
+- **Fix 2: a failed call is still metered.** A truncated or refused reply is billed, but the adapters
+  dropped its usage, so it escaped both the ledger and the service's daily cap. `ProviderError` now
+  carries the usage, and the pipeline adds it. Tests: `test_gemini_non_stop_finish_raises_with_the_billed_usage`,
+  `test_openai_incomplete_reply_carries_its_usage`.
+- **Prices corrected:** the cached-input prices of gpt-6.1-sol ($0.10) and gpt-6-luna ($0.01) are now
+  listed on OpenAI's page; config had metered them at the full input price.
+
+**What the answers showed.** Both models answered the lookup correctly with verified quotes (gpt-6.1-sol
+$0.021, 15 s; gemini-3.8-flash $0.022, 29 s) and both returned `not_in_kb` for pavlova. On PROMPT_1 the
+OpenAI planner (gpt-6-luna) wrote a single query ending "Office of the Chief Economist IP Australia"; it
+retrieved forewords and contents pages, and gpt-6.1-sol answered `not_in_kb`, which is wrong. The
+Gemini planner wrote three short queries, found the method passages in erp10, erp11 and erp15 (GMM,
+fixed effects, placebo tests, lags), and Gemini answered well. The plan and the search's robustness to
+corpus-wide words are now measured candidates (the next entries).
+
+**Spend:** OpenAI $0.048; Gemini $0.069 (one truncated call's cost is an estimate, $0.017, recorded as such).
