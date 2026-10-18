@@ -45,7 +45,7 @@ chunking:
       max_tokens: 384
       prefix: none
       drop_citations: true
-  adopted: S384-noprefix   # D-005
+  adopted: S384-noprefix-nocite   # D-005, refined in D-007
 
 embedding:
   batch_size: 16

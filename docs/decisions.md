@@ -287,3 +287,36 @@ recorded its start state (`2f62fd9`); its uncommitted edits were to docs and `we
 - Open, in order of expected value: re-test S256 and arctic-l-v2 on a larger test set; measure neighbour
   expansion and a lower per-document cap (D-005); try the int8 ONNX export (110 MB, faster cold starts)
   against the float32 index.
+
+---
+
+## D-007 — Leave bibliography entries and citation-only endnotes out of the chunks (Claude, within the delegated chunking choice; 2026-10-18)
+
+**Context.** Read on the adopted index, the owner's broad prompts returned reference-list entries among
+their top passages: "Achen, H. C. 2000, Why lagged dependent variables…" at rank 3 for PROMPT_1 (causal
+methods), and three endnotes citing the same WIPO paper leading PROMPT_4. Reference lists are dense with
+the vocabulary of broad questions ("innovation", "economics", "patents") and answer nothing; each one takes
+a slot the answer model could use. The silver test set never has a gold passage in a reference, so its
+metrics can't see this.
+
+**Decision.** `chunking.adopted: S384-noprefix-nocite`: S384-noprefix, plus `drop_citations`. An element is
+a citation when it is a short paragraph or list item (under 600 characters) that starts like a reference
+("Surname, I. …" or "Organisation (2020) …", after an optional endnote number) and carries a publication
+signal (a year, "Retrieved", a URL, "Journal", "Working Paper"…). 397 of 8,601 elements qualify. They keep
+their place in the canonical text and their pages; they enter no chunk. Endnotes that say something
+substantive stay (two gold answers are endnotes).
+
+**Method.** Grid `retrieval-v1b`, committed at `cfba7bf` before its numbers. Rule: non-inferiority, adopt
+unless dev recall@4k_tok falls more than 0.01. Checked beforehand: no gold passage, or verbatim copy of one,
+lies in a dropped element. A first pattern also caught an ordinary sentence ("Despite the overall decline
+in applications in 2016, …") and was tightened before the run; regression test
+`test_a_sentence_that_mentions_a_year_is_not_a_citation`.
+
+**Results** (run `eval-retrieval/…` for grid `retrieval-v1b`; report `reports/retrieval-v1b-chunking.md`):
+
+| | recall@4k_tok dev / test | ndcg@10, all 114 | Citation-heavy share of the top 10, all 114 |
+|---|---|---|---|
+| S384-noprefix | 0.842 / 0.771 | 0.555 | 1.8% |
+| **S384-noprefix-nocite** | 0.842 / 0.771 | 0.549 (−0.005 [−0.016, +0.001]) | 0.0% |
+
+**Spend:** $0. **Consequences.** The index is rebuilt and re-verified on the new chunks (1,913 passages).
