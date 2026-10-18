@@ -8,4 +8,4 @@ Model `arctic-m-v1.5` (Snowflake/snowflake-arctic-embed-m-v1.5 @ e58a8f756156), 
 | Chunk vectors, index (ONNX, float16) vs sentence-transformers (float32), 300 chunks: cosine | min 0.99994, mean 1.00000 |
 | Top-10 overlap, ONNX vs sentence-transformers queries (hybrid lane) | mean 1.000, min 1.0 |
 | ndcg@10, all needs: ONNX queries / sentence-transformers queries | 0.5540 / 0.5540 |
-| Live service vs local ONNX (32 questions): cosine | min 1.00000 (1.65s for the batch, including any cold start) |
+| Live service vs local ONNX (32 questions): cosine | min 1.00000 (5.82s for the batch, including any cold start) |

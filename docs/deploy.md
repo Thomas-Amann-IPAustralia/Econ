@@ -8,7 +8,8 @@ GitHub Pages (front end, PDFs)  ──►  Render (API: search, answer, check)  
                                                  └──►  OpenAI or Gemini (answers, when a key is set)
 ```
 
-Nothing here has been deployed yet: the build session had no GCP credentials or Render API key.
+Deployed so far: the embedder on Cloud Run (2026-10-18, project `gen-lang-client-0664096123`,
+`australia-southeast1`). Render and Pages are next.
 
 ## 0. Merge to `main`
 
@@ -22,31 +23,39 @@ alerts): at this scale the cost should be small, but an alert makes sure. Check
 [Cloud Run pricing](https://cloud.google.com/run/pricing) for the free tier in your region. The commands
 assume `australia-southeast1` (Sydney), close to both Australian users and Render's Singapore region.
 
-```bash
-PROJECT=your-project-id
-REGION=australia-southeast1
-gcloud config set project $PROJECT
-gcloud services enable run.googleapis.com cloudbuild.googleapis.com artifactregistry.googleapis.com secretmanager.googleapis.com
-gcloud artifacts repositories create econ --repository-format=docker --location=$REGION
+Paste this in Cloud Shell. It turns off gcloud's y/n prompts (a prompt would swallow the next pasted
+line as its answer) and is safe to run again: it reuses the repository and the secret, and the token
+it prints always matches the newest secret version.
 
-# A random token that Render will present; keep a copy for step 2.
+```bash
+cd ~/Econ                                   # your clone of this repository
+export CLOUDSDK_CORE_DISABLE_PROMPTS=1
+PROJECT=$(gcloud config get-value project); REGION=australia-southeast1
+echo "Deploying to $PROJECT"
+gcloud services enable run.googleapis.com cloudbuild.googleapis.com artifactregistry.googleapis.com secretmanager.googleapis.com
+gcloud artifacts repositories describe econ --location=$REGION >/dev/null 2>&1 || \
+  gcloud artifacts repositories create econ --repository-format=docker --location=$REGION
 TOKEN=$(openssl rand -hex 24)
-printf %s "$TOKEN" | gcloud secrets create econ-embedder-token --data-file=-
+gcloud secrets describe econ-embedder-token >/dev/null 2>&1 || \
+  gcloud secrets create econ-embedder-token --replication-policy=automatic
+printf %s "$TOKEN" | gcloud secrets versions add econ-embedder-token --data-file=-
 gcloud secrets add-iam-policy-binding econ-embedder-token \
   --member="serviceAccount:$(gcloud projects describe $PROJECT --format='value(projectNumber)')-compute@developer.gserviceaccount.com" \
   --role=roles/secretmanager.secretAccessor
-
-# Build (from the repository root, about 5 to 10 minutes) and deploy.
 IMAGE=$REGION-docker.pkg.dev/$PROJECT/econ/embedder:$(git rev-parse --short=12 HEAD)
 gcloud builds submit --config deploy/embedder/cloudbuild.yaml --substitutions _IMAGE=$IMAGE .
 gcloud run deploy econ-embedder --region $REGION --image $IMAGE \
   --cpu 1 --memory 2Gi --cpu-boost --min-instances 0 --max-instances 2 --concurrency 8 --timeout 60 \
   --allow-unauthenticated --set-secrets EMBEDDER_TOKEN=econ-embedder-token:latest
-
 URL=$(gcloud run services describe econ-embedder --region $REGION --format='value(status.url)')
 curl -s -H "Authorization: Bearer $TOKEN" $URL/health     # shows the model, its revision and hash
-echo "EMBEDDER_URL=$URL"; echo "EMBEDDER_TOKEN=$TOKEN"    # both go to Render in step 2
+echo "EMBEDDER_URL=$URL"; echo "EMBEDDER_TOKEN=$TOKEN"    # both go to Render in step 2, and nowhere else
 ```
+
+The build takes about a minute and a half; the image then starts in about 8 s on a cold start.
+Each run adds a secret version; disable the old ones (`gcloud secrets versions disable N
+--secret=econ-embedder-token`). To check the live service ranks exactly as measured, run
+`EMBEDDER_TOKEN=... econ verify-embedder --url $URL` from a full checkout.
 
 - `--allow-unauthenticated` lets Render reach the service without a Google identity; the bearer token
   keeps everyone else out. The stronger alternative, IAM-authenticated calls, would need a Google

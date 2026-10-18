@@ -9,7 +9,8 @@ claim an answer makes quotes a passage, and every passage leads to its page.
 
 **Current scope: the retrieval-augmented chatbot, first version.** Built: the knowledge base, the
 retrieval measurement on a silver test set, the serving index, the API (Render), the embedder (Cloud
-Run), the front end (GitHub Pages), all run together locally; nothing deployed yet. Not yet possible: anything that calls a language model (no keys
+Run), the front end (GitHub Pages), all run together locally; the embedder is live on Cloud Run, the API and front end not yet
+deployed. Not yet possible: anything that calls a language model (no keys
 yet), so the answer path is tested only with a scripted model; Langfuse tracing; the TREC-style test set
 with model judges (SOP §17); the agent evaluation and model choice (SOP §20.5). Build those when the
 owner provides keys and a budget.
