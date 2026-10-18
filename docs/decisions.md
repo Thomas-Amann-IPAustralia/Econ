@@ -105,3 +105,56 @@ a question of cold-start time and CPU seconds, so the measurement (D-004) includ
 key. `docs/deploy.md` gives the owner's steps.
 
 **Spend:** $0.
+
+---
+
+## D-004 — The knowledge base and the silver test set: 8,601 elements, five chunkings, 114 needs written before any number (2026-10-18)
+
+**Context.** The full parse (manifest `parse/20261018T002206Z`) took 37 minutes on two workers: about
+2 s a page for text documents and about 7 s a page for the two OCR'd reports.
+
+**Decision (Claude).**
+- **Elements.** 24 documents, 8,601 elements (headings, paragraphs, list items, captions, footnotes,
+  tables). No high-severity text findings.
+- **OCR quality, measured.** In the two scanned reports, 5.7% (2018) and 4.1% (2021) of word tokens are
+  not in the vocabulary of the 22 text-layer documents; many are names and references. About 40 of their
+  630 elements have garbled stretches at the start of a line ("Wi aunh a u o r avo nn ann n anng
+  2010–16, China has been…"). They stay in: the rest of each paragraph is sound, every OCR passage is
+  labelled in the UI, and the page viewer shows the real page. Re-OCR of those pages is an open item.
+- **Boilerplate, corrected on first sight.** The first rule (paragraphs recurring verbatim in 3 or more
+  documents) dropped 29 paragraphs, including the reports' recurring definitions of copyright, design
+  rights, plant breeder's rights and provisional patents: exactly what a question like the owner's
+  PROMPT_3 needs. The rule now requires every occurrence to sit in a document's first 4 or last 2 pages.
+  It drops 12 paragraphs (licence terms, the Director General's signature line, the "commissioned
+  report" disclaimer). The disclaimer's content is kept as a `note` on the three commissioned reports
+  and shown with every passage from them. Regression test: `test_definitions_restated_in_body_text_are_not_boilerplate`.
+- **Licences.** 17 documents state CC BY 4.0 in their text. 7 state no licence anywhere in their text
+  (erp08, ipr-2021, ipr-2022, ipr-2025, ipr-2026 and both analytic notes); the catalogue says so rather
+  than assuming.
+- **Publisher pages.** 17 of 24 documents have a page on ipaustralia.gov.au that resolves (checked by
+  status code and page title; the site returns a true 404 for missing pages). The other 7 are left empty
+  rather than guessed.
+- **Chunkings built** (`econ chunk`, manifest clean at `d18a504`): F384 1,568 chunks; S256 3,032;
+  S384 2,037; S512 1,647; S384-noprefix 1,962.
+
+**The silver test set (`eval/testset/silver-v1.yaml`, committed at `d18a504` before any retrieval
+number).** No model budget exists yet for the SOP's TREC-style set (§17), so Claude wrote a smaller
+known-item set from the parsed text:
+- 114 needs over all 24 documents: 41 lookups, 28 explanations, 25 paraphrases (everyday words for a
+  technical passage), 14 trends and 6 cross-document needs; 125 gold passages. Split by hashed id: 55
+  dev, 59 test.
+- 98 needs come from a seeded random sample of 8 to 10 body passages per document; 16 cross-document
+  needs come from searching the parsed text for findings the owner's prompts touch (causal methods,
+  correlation caveats, SME growth, the Raising the Bar reforms, the pandemic, AI, the innovation patent).
+- Gold is located by text, so one set scores every chunking: a chunk covers a gold passage when it
+  holds at least half of its characters. Every verbatim copy of a gold quote anywhere in the corpus
+  counts as an equally correct find (8 gold items have copies); `alt` adds restatements.
+- **Its limits.** It measures finding the passage a question was written from. Other passages that also
+  answer count as misses. The writer saw each passage before writing its question, which favours keyword
+  overlap, so most questions were deliberately paraphrased. With 55 dev needs, differences under about
+  0.05 are hard to separate.
+
+**Spend:** $0.
+
+**Consequences.** For the owner: whether the extracted text may sit in this public repository (see the
+reply of 2026-10-18 and the handover); the 7 documents without a licence statement.

@@ -63,6 +63,18 @@ def _context_block(context: str) -> str:
     return f"<context>\n{defang(context)}\n</context>\n\n" if context.strip() else ""
 
 
+def context_queries(context: str, k: int) -> list[str]:
+    """Markdown headings in pasted material, as extra searches (the fallback when no model plans)."""
+    heads = []
+    for line in context.splitlines():
+        m = re.match(r"^#{1,4}\s+(\S.*)$", line.strip())
+        if m:
+            h = re.sub(r"[*_`]", "", m.group(1)).strip()[:160]
+            if h and h not in heads and not textcheck.high(textcheck.scan(h)):
+                heads.append(h)
+    return heads[:k]
+
+
 def evidence_block(n: int, chunk: dict, doc: dict) -> str:
     pages = chunk["pages"]
     pg = f"{pages[0]}" if len(pages) == 1 else f"{pages[0]}-{pages[-1]}"
@@ -84,6 +96,10 @@ def evidence_view(svc: Services, sel, n: int, queries: list[str]) -> dict:
         "title": d["title"],
         "year": d["year"],
         "series": d["series"],
+        "licence": d.get("licence"),
+        "ocr": d.get("ocr", False),
+        "note": d.get("note"),
+        "url": d.get("url"),
         "section": c["section"],
         "pages": c["pages"],
         "boxes": c["boxes"],
@@ -123,6 +139,8 @@ def run(req: Request, svc: Services) -> Iterator[dict]:
     if req.history:
         prev = next((h["text"] for h in reversed(req.history) if h["role"] == "user"), "")
         queries = [f"{prev} {question}".strip()]
+    # Without a planner, pasted material still steers the search through its own headings.
+    queries += context_queries(req.context, scfg.answer.max_queries - 1)
     if svc.model and scfg.llm.query_planning:
         user = (
             _history_block(req.history)

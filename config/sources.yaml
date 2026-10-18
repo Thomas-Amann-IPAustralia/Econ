@@ -1,7 +1,8 @@
 # The corpus registry. One entry per object in the R2 bucket; the fetch stage fails if the two disagree.
 # Identity is the R2 object key (the source's canonical id). doc_id is a stable, readable alias used in
 # chunk ids and citations; never change a doc_id once answers cite it.
-# `url` is the authoritative public copy, where one is known; the UI links to it beside the in-app viewer.
+# `url` is the publisher's page for the document, checked to resolve on 2026-10-18 (17 of 24 found; the
+# rest are left empty rather than guessed). The UI links to it beside the in-app viewer.
 bucket: econ-knowledge
 endpoint: "https://{account_id}.eu.r2.cloudflarestorage.com"
 publisher: IP Australia
@@ -11,46 +12,55 @@ documents:
     title: Australian Intellectual Property Report 2015
     year: 2015
     series: Australian IP Report
+    url: https://www.ipaustralia.gov.au/tools-and-research/professional-resources/data-research-and-reports/publications-and-reports/Australian-Intellectual-Property-Report-2015
   - doc_id: ipr-2016
     key: 2016_IP_Report.pdf
     title: Australian Intellectual Property Report 2016
     year: 2016
     series: Australian IP Report
+    url: https://www.ipaustralia.gov.au/tools-and-research/professional-resources/data-research-and-reports/publications-and-reports/Australian-Intellectual-Property-Report-2016
   - doc_id: ipr-2017
     key: 2017_IP_Report.pdf
     title: Australian Intellectual Property Report 2017
     year: 2017
     series: Australian IP Report
+    url: https://www.ipaustralia.gov.au/tools-and-research/professional-resources/data-research-and-reports/publications-and-reports/Australian-Intellectual-Property-Report-2017
   - doc_id: ipr-2018
     key: 2018_IP_Report.pdf
     title: Australian Intellectual Property Report 2018
     year: 2018
     series: Australian IP Report
+    url: https://www.ipaustralia.gov.au/tools-and-research/professional-resources/data-research-and-reports/publications-and-reports/Australian-Intellectual-Property-Report-2018
   - doc_id: ipr-2019
     key: 2019_IP_report.pdf
     title: Australian Intellectual Property Report 2019
     year: 2019
     series: Australian IP Report
+    url: https://www.ipaustralia.gov.au/tools-and-research/professional-resources/data-research-and-reports/publications-and-reports/Australian-Intellectual-Property-Report-2019
   - doc_id: ipr-2020
     key: 2020_IP_Report.pdf
     title: Australian Intellectual Property Report 2020
     year: 2020
     series: Australian IP Report
+    url: https://www.ipaustralia.gov.au/tools-and-research/professional-resources/data-research-and-reports/publications-and-reports/Australian-Intellectual-Property-Report-2020
   - doc_id: ipr-2021
     key: 2021_IP_Report.pdf
     title: Australian Intellectual Property Report 2021
     year: 2021
     series: Australian IP Report
+    url: https://www.ipaustralia.gov.au/tools-and-research/professional-resources/data-research-and-reports/publications-and-reports/australian-intellectual-property-report-2021
   - doc_id: ipr-2022
     key: 2022_IP_Report.pdf
     title: Australian Intellectual Property Report 2022
     year: 2022
     series: Australian IP Report
+    url: https://www.ipaustralia.gov.au/tools-and-research/professional-resources/data-research-and-reports/publications-and-reports/Australian-Intellectual-Property-Report-2022
   - doc_id: ipr-2023
     key: 2023_IP_Report.pdf
     title: Australian IP Report 2023
     year: 2023
     series: Australian IP Report
+    url: https://www.ipaustralia.gov.au/tools-and-research/professional-resources/data-research-and-reports/publications-and-reports/Australian-Intellectual-Property-Report-2023
   - doc_id: ipr-2024
     key: 2024_IP_Report.pdf
     title: Australian IP Report 2024
@@ -61,11 +71,13 @@ documents:
     title: Australian IP Report 2025
     year: 2025
     series: Australian IP Report
+    url: https://www.ipaustralia.gov.au/tools-and-research/professional-resources/data-research-and-reports/australian-ip-report-2025
   - doc_id: ipr-2026
     key: 2026_IP_Report.pdf
     title: Australian IP Report 2026
     year: 2026
     series: Australian IP Report
+    url: https://www.ipaustralia.gov.au/tools-and-research/professional-resources/data-research-and-reports/australian-ip-report-2026/overview
   - doc_id: erp01-patent-backlogs
     key: report-on-patents-backlogs-inventories-and-pendency.pdf
     title: Report on patent backlogs, inventories and pendency
@@ -92,6 +104,7 @@ documents:
     title: "Designs Law and Practice: Design within Australia and how Australia compares to its international peers"
     year: 2019
     series: IP Australia Economic Research Paper 08
+    url: https://www.ipaustralia.gov.au/tools-and-research/professional-resources/data-research-and-reports/publications-and-reports/designs-law-and-practice
   - doc_id: erp10-ip-profitability-competition
     key: business-profitability-and-competition-in-the-australian-economy.pdf
     title: Intellectual property rights, business profitability and competition in the Australian economy
@@ -103,30 +116,35 @@ documents:
     title: "Exporter responses to shocks: The role of trade marks"
     year: 2021
     series: IP Australia Economic Research Paper 11
+    url: https://www.ipaustralia.gov.au/tools-and-research/professional-resources/data-research-and-reports/publications-and-reports/the-role-of-trade-marks
     authors: [Michael R. Falk]
   - doc_id: oce-ai-investment
     key: Drivers_of_AI_investment_report (1).pdf
     title: Drivers of AI investment
     year: 2023
     series: Office of the Chief Economist report
+    url: https://www.ipaustralia.gov.au/tools-and-research/professional-resources/data-research-and-reports/publications-and-reports/drivers-of-ai-investment
     authors: [Steve J. Bickley, Ho Fai Chan, Uwe Dulleck, Benno Torgler]
   - doc_id: erp14-raising-the-bar
     key: Raising the Bar reforms - Measuring the impact on relative patent scope.pdf
     title: "Raising the Bar reforms: Measuring the impact on relative patent scope"
     year: 2024
     series: IP Australia Economic Research Paper 14
+    url: https://www.ipaustralia.gov.au/tools-and-research/professional-resources/data-research-and-reports/publications-and-reports/how-broad-are-australian-patents
     authors: [Trevor Kollmann, Alfons Palangkaraya, Aneeq Sarwar, Elizabeth Webster, Corrine Anglim, Michael Falk]
   - doc_id: erp15-patenting-firms
     key: The business environment of patenting firms in Australia.pdf
     title: The business environment of patenting firms in Australia
     year: 2024
     series: IP Australia Economic Research Paper 15
+    url: https://www.ipaustralia.gov.au/tools-and-research/professional-resources/data-research-and-reports/publications-and-reports/business-environment-of-patenting-firms-in-australia
     authors: [Flavio Menezes, Tina Rampino, Martie-Louise Verreynne]
   - doc_id: erp16-cii-patent-trends
     key: Computer implemented inventions 12NOV24.pdf
     title: "Computer implemented inventions: patent trends at IP Australia, EPO and USPTO"
     year: 2024
     series: IP Australia Economic Research Paper 16
+    url: https://www.ipaustralia.gov.au/tools-and-research/professional-resources/data-research-and-reports/publications-and-reports/computer-implemented-inventions-patent-trends-IP-Australia-EPO-USPTO
     authors: [Michael Falk, Sarah Hegarty, Trevor Kollmann, Alfons Palangkaraya, Elizabeth Webster]
   - doc_id: note-patenting-structural-change
     key: The structural change in patenting behaviour in Australia Analytic Note.pdf

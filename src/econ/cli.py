@@ -134,11 +134,14 @@ def eval_retrieval(
 @app.command()
 @loud
 def index(
-    model_dir: str = typer.Option(
-        "", help="Directory with the adopted model's ONNX files (fetched if empty)."
+    model_dir: str = typer.Option("", help="Directory with the model's ONNX files (fetched if empty)."),
+    strategy: str = typer.Option("", help="A chunking strategy other than the adopted one (a named option)."),
+    embedder: str = typer.Option("", help="An embedder other than the adopted one (a named option)."),
+    out: str = typer.Option(
+        "library/index", help="Where to write; only the adopted build belongs in library/index."
     ),
 ) -> None:
-    """Build the serving index (library/index/) from the adopted strategy and embedder, via ONNX."""
+    """Build the serving index from the adopted strategy and embedder (or named ones), via ONNX."""
     import json as _json
 
     import numpy as np
@@ -149,10 +152,12 @@ def index(
     from econ.manifest import require_upstream, sha256_file, write_json_atomic, write_text_atomic
 
     cfg = config.pipeline()
-    strategy, key = cfg.chunking.adopted, cfg.embedding.adopted
+    strategy, key = strategy or cfg.chunking.adopted, embedder or cfg.embedding.adopted
     if not strategy or not key:
         raise StageError("chunking.adopted and embedding.adopted must be set in config/pipeline.yaml")
-    with run("index", _hash(), strategy=strategy, embedder=key) as r:
+    if out == "library/index" and (strategy != cfg.chunking.adopted or key != cfg.embedding.adopted):
+        raise StageError("a non-adopted build must go elsewhere: pass --out")
+    with run("index", _hash(), strategy=strategy, embedder=key, out=out) as r:
         r.upstream["chunk"] = require_upstream("chunk")["run_id"]
         from pathlib import Path
 
@@ -162,7 +167,7 @@ def index(
         emb = OnnxEmbedder(key, mdir, threads=4)
         chunks = load_chunks(strategy)
         vecs = emb.encode([c["embed_text"] for c in chunks], kind="doc")
-        out = config.path("library/index")
+        out = config.path(out)
         out.mkdir(parents=True, exist_ok=True)
         np.save(out / "vectors.f16.npy", vecs.astype(np.float16))
         bm = BM25.build([c["embed_text"] for c in chunks])

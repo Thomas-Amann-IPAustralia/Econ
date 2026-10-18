@@ -45,7 +45,8 @@ chunking:
 embedding:
   batch_size: 16
   # Screened: permissive licence, no trust_remote_code, pinned revision. Public benchmarks only
-  # shortlisted them. Served on Cloud Run (D-003), so size is a cost and latency question, not a limit.
+  # shortlisted them. `onnx_file` names the repository's own single-file ONNX export where it has one;
+  # its sha256 is pinned when a model is adopted. Served on Cloud Run (D-003), so size is a cost and latency question, not a limit.
   candidates:
     minilm-l6:
       hf_id: sentence-transformers/all-MiniLM-L6-v2
@@ -55,6 +56,7 @@ embedding:
       pooling: mean
       max_tokens: 256
       licence: apache-2.0
+      onnx_file: onnx/model.onnx
     leaf-ir:
       hf_id: MongoDB/mdbr-leaf-ir
       revision: 4262131b32c3182bd06e67e92ae69d7bd66e0c5c
@@ -71,6 +73,7 @@ embedding:
       pooling: cls
       query_prefix: "Represent this sentence for searching relevant passages: "
       licence: mit
+      onnx_file: onnx/model.onnx
     arctic-s:
       hf_id: Snowflake/snowflake-arctic-embed-s
       revision: e596f507467533e48a2e17c007f0e1dacc837b33
@@ -79,6 +82,7 @@ embedding:
       pooling: cls
       query_prefix: "Represent this sentence for searching relevant passages: "
       licence: apache-2.0
+      onnx_file: onnx/model.onnx
     granite-small-r2:
       hf_id: ibm-granite/granite-embedding-small-english-r2
       revision: 2ab6fa8ea2d674564defd37171ae19079b864b33
@@ -95,6 +99,7 @@ embedding:
       pooling: cls
       query_prefix: "Represent this sentence for searching relevant passages: "
       licence: mit
+      onnx_file: onnx/model.onnx
     arctic-m-v1.5:
       hf_id: Snowflake/snowflake-arctic-embed-m-v1.5
       revision: e58a8f756156a1293d763f17e3aae643474e9b8a
@@ -103,6 +108,7 @@ embedding:
       pooling: cls
       query_prefix: "Represent this sentence for searching relevant passages: "
       licence: apache-2.0
+      onnx_file: onnx/model.onnx
     granite-r2:
       hf_id: ibm-granite/granite-embedding-english-r2
       revision: 47ea694b257b703fee9253d75c2b1f2985180498
@@ -119,6 +125,7 @@ embedding:
       pooling: cls
       max_tokens: 8192
       licence: apache-2.0
+      onnx_file: onnx/model.onnx
     modernbert-embed:
       hf_id: nomic-ai/modernbert-embed-base
       revision: d556a88e332558790b210f7bdbe87da2fa94a8d8
@@ -129,6 +136,7 @@ embedding:
       query_prefix: "search_query: "
       doc_prefix: "search_document: "
       licence: apache-2.0
+      onnx_file: onnx/model.onnx
     bge-large:
       hf_id: BAAI/bge-large-en-v1.5
       revision: d4aa6901d3a41ba39fb536a557fa166f842b0e09
@@ -137,6 +145,7 @@ embedding:
       pooling: cls
       query_prefix: "Represent this sentence for searching relevant passages: "
       licence: mit
+      onnx_file: onnx/model.onnx
     mxbai-large:
       hf_id: mixedbread-ai/mxbai-embed-large-v1
       revision: b33106f585b9ce46904ad7443a3b52b7a63e231c
@@ -145,6 +154,7 @@ embedding:
       pooling: cls
       query_prefix: "Represent this sentence for searching relevant passages: "
       licence: apache-2.0
+      onnx_file: onnx/model.onnx
     arctic-l-v2:
       hf_id: Snowflake/snowflake-arctic-embed-l-v2.0
       revision: ac6544c8a46e00af67e330e85a9028c66b8cfd9a

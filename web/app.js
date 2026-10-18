@@ -88,7 +88,8 @@ async function loadCatalogue() {
     h("div", { class: "doc-year" }, d.year),
     h("div", {},
       h("div", { class: "doc-title" }, d.title),
-      h("div", { class: "doc-meta" }, `${d.series} · ${d.page_count} pages · ${d.chunks} passages · ${d.licence || "licence not stated"}${d.ocr ? " · text from OCR" : ""}`)),
+      h("div", { class: "doc-meta" }, `${d.series} · ${d.page_count} pages · ${d.chunks} passages · ${d.licence || "no licence statement in the document"}${d.ocr ? " · text from OCR" : ""}`),
+      d.note ? h("div", { class: "doc-meta" }, d.note) : null),
     h("div", {}, h("button", { class: "linkish", onclick: () => openViewer(d.doc_id, 1, []) }, "View"),
       d.url ? h("a", { class: "linkish", href: d.url, target: "_blank", rel: "noopener" }, "Publisher page") : null),
   )));
@@ -130,7 +131,10 @@ async function ask(question, context) {
   $("#thread").append(h("div", { class: "msg user" }, question,
     context ? h("span", { class: "ctxnote" }, `+ ${context.length.toLocaleString()} characters of your material`) : null,
     filtered ? h("span", { class: "ctxnote" }, `Limited to ${years[0]}–${years[1]}`) : null));
-  const bot = h("div", { class: "msg bot", tabindex: "0", onclick: () => select(turn) },
+  const bot = h("div", { class: "msg bot", tabindex: "0", onclick: () => {
+    select(turn);
+    if (window.matchMedia("(max-width: 860px)").matches) $("#trail").scrollIntoView({ behavior: "smooth" });
+  } },
     h("div", { class: "progress" }, h("span", { class: "spinner" }), h("span", {}, "Planning the search…")));
   turn.el = bot;
   $("#thread").append(bot);
@@ -239,7 +243,7 @@ function renderBot(t) {
   if (prog) el.append(h("div", { class: "progress" }, h("span", { class: "spinner" }), h("span", {}, prog)));
   if (e.done) {
     const cost = e.done.cost_usd ? ` · US$${e.done.cost_usd.toFixed(4)}` : "";
-    el.append(h("div", { class: "gaps" }, `${e.done.seconds}s${cost} · select to see the evidence trail`));
+    el.append(h("div", { class: "gaps" }, `${e.done.seconds}s${cost} · ${window.matchMedia("(max-width: 860px)").matches ? "tap to see the evidence trail" : "select to see the evidence trail"}`));
   }
   el.querySelectorAll(".cite").forEach((b) => b.addEventListener("click", (ev) => {
     ev.stopPropagation();
@@ -370,6 +374,8 @@ function renderTrail(t) {
       h("div", { class: "ev-top" }, h("div", {}, h("span", { class: "ev-n" }, x.n), h("span", { class: "ev-title" }, x.title)),
         cited ? h("span", { class: "badge info" }, `cited by ${[...cited].map((n) => `[${n}]`).join("")}`) : null),
       h("div", { class: "ev-meta" }, `${x.year} · ${x.section.length ? x.section.join(" › ") + " · " : ""}${pages(x.pages)} · rank ${x.merged_rank}`),
+      x.note ? h("div", { class: "ev-note" }, x.note) : null,
+      x.ocr ? h("div", { class: "ev-note" }, "Text read from a scanned page by OCR: check the wording against the page.") : null,
       textEl,
       h("div", { class: "ev-actions" },
         h("button", { onclick: () => textEl.classList.toggle("open") }, "Expand"),

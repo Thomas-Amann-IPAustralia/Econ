@@ -31,8 +31,9 @@ def main(out: Path) -> None:
     (out / "config.js").write_text(
         "window.ECON_CONFIG = " + json.dumps({"api": api, "pdfBase": "pdfs/"}) + ";\n", encoding="utf-8"
     )
-    docs = json.loads((ROOT / "library/index/docs.json").read_text())
-    meta = json.loads((ROOT / "library/index/index.json").read_text())
+    index = Path(os.environ.get("ECON_INDEX_DIR") or ROOT / "library/index")
+    docs = json.loads((index / "docs.json").read_text())
+    meta = json.loads((index / "index.json").read_text())
     (out / "data").mkdir(exist_ok=True)
     (out / "data/catalogue.json").write_text(json.dumps({"documents": docs, "index": meta}), encoding="utf-8")
     (out / ".nojekyll").write_text("")

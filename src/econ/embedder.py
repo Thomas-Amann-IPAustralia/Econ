@@ -24,12 +24,20 @@ import time
 from pathlib import Path
 
 import numpy as np
+from pydantic import BaseModel, Field
 
 from econ import config
 from econ.config import Embedder
 
 MAX_TEXTS = 64
 MAX_CHARS = 4000
+
+
+class EmbedIn(BaseModel):
+    # Module level: FastAPI can't resolve a request model defined inside the app factory when
+    # annotations are postponed, and silently treats the body as a query parameter (a 422).
+    texts: list[str] = Field(min_length=1, max_length=MAX_TEXTS)
+    kind: str = Field(pattern="^(query|doc)$")
 
 
 class OnnxEmbedder:
@@ -137,7 +145,6 @@ def fetch_model(key: str, dest: Path) -> dict:
 
 def create_app():
     from fastapi import FastAPI, Header, HTTPException
-    from pydantic import BaseModel, Field
 
     model_dir = Path(os.environ.get("ECON_EMBEDDER_DIR", "/models"))
     key = (
@@ -156,10 +163,6 @@ def create_app():
         return state["m"]
 
     api = FastAPI(title="econ embedder", docs_url=None, redoc_url=None)
-
-    class EmbedIn(BaseModel):
-        texts: list[str] = Field(min_length=1, max_length=MAX_TEXTS)
-        kind: str = Field(pattern="^(query|doc)$")
 
     def check(auth: str | None) -> None:
         if token and not hmac.compare_digest(auth or "", f"Bearer {token}"):
