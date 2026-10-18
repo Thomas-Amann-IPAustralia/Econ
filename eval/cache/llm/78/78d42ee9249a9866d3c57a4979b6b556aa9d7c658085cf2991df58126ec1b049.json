@@ -1,0 +1,184 @@
+{
+ "cost_usd": 0.011985,
+ "data": {
+  "answer": "IP Australia’s economic research relies principally on **IP administrative records linked to business-level economic data**, supplemented by surveys, international IP databases and study-specific sources.[1][2]\n\n### Core data sources\n- **IPGOD and IPLORD:** Intellectual Property Government Open Data (IPGOD) captures the life cycle of patents, trade marks, designs and plant breeder’s rights administered by IP Australia. Intellectual Property Longitudinal Research Data (IPLORD) transforms these records into annual measures of applicants’ IP activity over time.[1]\n- **ABS business microdata:** The Business Longitudinal Analysis Data Environment (BLADE) brings together business records from the Australian Taxation Office and other agencies. Its core includes Business Activity Statement, Pay As You Go and Business Income Tax data, providing measures such as sales, wages, income, expenses, profits, assets and liabilities.[2]\n- **Latest linked-data example:** The 2026 Australian IP Report uses IPLORD–BLADE data covering 2014–2023. Linking IP records to business income tax data provides close to full coverage of active Australian firms and supports analysis of income, labour productivity and total factor productivity.[3]\n\n### Supplementary sources\n- **Business characteristics and surveys:** Research uses Australian Business Registry information on location and industry, alongside turnover, employment and business-age records. ABS surveys—including Business Expenditure on Research and Development, the Business Characteristics Survey and its Innovation Module—add information on R&D, innovation and collaboration.[4][5]\n- **International trade marks and trade data:** TM-LINK supplies foreign trade mark applications linked to Australian firms. Export research has combined these with Australian customs data, World Trade Organization tariffs, and exchange rates from the OECD and International Monetary Fund.[6][7]\n- **Employer–employee and commercialisation data:** The 2024 report describes research using BLADE and the Person Level Integrated Data Asset (PLIDA), linked employer–employee information, and IPRoduct, which links patents to products through webpage-listed patent markings.[8]\n- **Specialist IP databases:** Particular studies also draw on WIPO and national design registries, or patent sources including IPRAPID, an API for claims text, Google Patents and Google BigQuery, with missing abstracts supplemented from equivalent USPTO or EPO applications.[9][10]\n\n**Coverage depends on the study and linkage.** For example, the 2024 patenting-firms study matched up to 50 per cent of firms in IPLORD to business characteristics across all its other administrative sources; this is distinct from the economy-wide coverage described in the 2026 report.[11][3]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "IPLORD is the annual snapshot of the stocks and flows of registrable intellectual property (IP) rights for Australian and international applicants since 1997-98 onwards."
+     },
+     {
+      "evidence": 3,
+      "quote": "IPLORD was built from the Intellectual Property Government Open Data (IPGOD), which captures the life cycle of all patents, trade marks, designs and plant breeder's rights administered by IP Australia."
+     },
+     {
+      "evidence": 3,
+      "quote": "IPLORD systematically transforms all the application information in IPGOD into derived variables to track each applicant's IP activity over time."
+     }
+    ],
+    "text": "IPGOD captures the life cycle of Australia's administered IP rights, while IPLORD derives annual applicant-level IP activity measures from it."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 13,
+      "quote": "This report draws from the Business Longitudinal Analysis Data Environment (BLADE), which is a collection of business level data sourced from the Australian Taxation Office (ATO) and other government agencies, that is managed by the ABS."
+     },
+     {
+      "evidence": 13,
+      "quote": "At the core of BLADE are the ATO's Business Activity Statement (BAS), Pay As You Go (PAYG), and Business Income Tax (BIT) data."
+     },
+     {
+      "evidence": 13,
+      "quote": "The data items available include total sales, other GST free sales, non capital purchases, capital purchases, export sales, wages and salaries."
+     },
+     {
+      "evidence": 13,
+      "quote": "Across the four different types of BIT forms the majority of items reported are similar, such as income, expenses, profit or loss, sales, total and current assets, and total and current liabilities."
+     }
+    ],
+    "text": "BLADE combines ATO and other agency business data; its BAS, PAYG and BIT core supplies financial and employment-related measures."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 17,
+      "quote": "The analysis draws on linked administrative data covering 2014 to 2023 from the Intellectual Property Longitudinal Research Database (IPLORD) and the Australian Bureau of Statistics (ABS) Business Longitudinal Analysis Data Environment (BLADE)."
+     },
+     {
+      "evidence": 17,
+      "quote": "By linking IP records to business income tax data, the dataset captures close to the full population of active firms in Australia."
+     },
+     {
+      "evidence": 17,
+      "quote": "` total income (sales in dollar terms)\n\n` labour productivity (output per full-time equivalent worker)\n\n` total factor productivity (TFP), which captures efficiency after accounting for labour, capital and intermediate inputs."
+     }
+    ],
+    "text": "The 2026 report links IPLORD and BLADE for 2014–2023, covering close to the full active-firm population and measuring income and productivity."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Indicative data items associated with a business ABN and compiled from the Australian Business Registry:"
+     },
+     {
+      "evidence": 1,
+      "quote": "» Geographical location: state and territory of main business operation.\n\n» Industry: ANZSIC 2006 industry divisions of main business activity."
+     },
+     {
+      "evidence": 1,
+      "quote": "Business Activity Statement (BAS):\n\n» Firm's Turnover.\n\nPay As You Go (PAYG):\n\n» Firm's size: headcount figures.\n\nBirthdate\n\n» Firm's financial year of birth."
+     }
+    ],
+    "text": "Administrative sources provide business location, industry, turnover, employment and age information."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 11,
+      "quote": "The business surveys available as part of BLADE provide relevant information on the type of innovation collaborations and R&D expenditure businesses rely on."
+     },
+     {
+      "evidence": 11,
+      "quote": "Business Expenditure on Research and Development (BERD) Survey\n\nBusiness Characteristics Survey (BCS) 5 : an annual survey that captures business use of information technology; innovation 6 ; and a broad range of other non-financial business characteristics\n\nBCS - Innovation Module (IM): a bi-annual survey on business use of innovation and a broad range of other non-financial business characteristics."
+     }
+    ],
+    "text": "ABS BERD, BCS and BCS Innovation Module surveys supplement administrative data with R&D, innovation and collaboration information."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "We collaborated with the ABS to integrate into BLADE a large microdataset with information on firms' foreign trade mark filings and link this at the firm level to the exports data."
+     },
+     {
+      "evidence": 2,
+      "quote": "Our source for trade mark data was TM-LINK, a global trade mark database developed by IP Australia and its research partners."
+     }
+    ],
+    "text": "TM-LINK provides foreign trade mark filings linked to Australian firms."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 10,
+      "quote": "We linked Australian customs data with information on firms' annual trade mark filings in select destination markets"
+     },
+     {
+      "evidence": 10,
+      "quote": "We sourced information on tariffs from the World Trade Organization, and exchange rate data from the OECD and International Monetary Fund."
+     }
+    ],
+    "text": "Export research combines customs and trade mark data with WTO tariffs and OECD and IMF exchange rates."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "These include the Business Longitudinal Analysis Data Environment (BLADE) and the Person Level Integrated Data Asset (PLIDA)."
+     },
+     {
+      "evidence": 5,
+      "quote": "Separately, IP Australia has used the ABS data linking information on employers and their employees."
+     },
+     {
+      "evidence": 5,
+      "quote": "It examines commercialisation outcomes using IPRoduct, a dataset linking patents to products based on the webpage-listed patent markings."
+     }
+    ],
+    "text": "The 2024 report uses BLADE, PLIDA, linked employer–employee information and IPRoduct patent-to-product links."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 12,
+      "quote": "For design IP data at the country level we rely on data from the World Intellectual Property Organization (WIPO) and the design registries of national IP offices."
+     }
+    ],
+    "text": "Design research also draws on WIPO and national IP office registries."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 20,
+      "quote": "Data from IP Australia (IPA) are obtained from IPA's IPRAPID, Application Programming Interface (API) for accessing the claims text, Google Patents, and Google BigQuery's."
+     },
+     {
+      "evidence": 20,
+      "quote": "For those patents, we merged abstract data from the equivalent family application within the USPTO or EPO, with preference being given to the USPTO patent application."
+     }
+    ],
+    "text": "Specialist patent research uses IPRAPID, a claims-text API, Google Patents and BigQuery, supplemented with equivalent USPTO or EPO abstracts."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "We were able to match up to 50% of firms observed in IPLORD with the business characteristics available across all the remaining data sources."
+     }
+    ],
+    "text": "Linkage coverage varies: the 2024 patenting-firms study matched up to 50 per cent of IPLORD firms to business characteristics across all remaining sources."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v2.C",
+ "schema_name": "answer",
+ "tag": "explore-methods-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 6444,
+  "cost_usd": 0.02397,
+  "input": 3,
+  "model": "gpt-6.1-sol",
+  "output": 2332,
+  "reasoning": 331,
+  "seconds": 58.73
+ }
+}
