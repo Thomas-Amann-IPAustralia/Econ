@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.00012,
+ "data": {
+  "queries": [
+   "linkage of IP rights records to business-level financial data",
+   "IP application records are linked to business data on revenue, employment and productivity to compare firms with and without IP rights."
+  ],
+  "standalone_question": "How does the Office of the Chief Economist link intellectual property filings to data on business performance?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-methods-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00024,
+  "input": 767,
+  "model": "gpt-6-luna",
+  "output": 326,
+  "reasoning": 254,
+  "seconds": 3.8
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "cost_usd": 8.7e-05,
+ "data": {
+  "queries": [
+   "A plant variety must be distinct, uniform and stable, and meet novelty and denomination requirements to qualify for plant breeder’s rights."
+  ],
+  "standalone_question": "What must a plant variety show to qualify for plant breeder’s rights?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr24-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000175,
+  "input": 763,
+  "model": "gpt-6-luna",
+  "output": 197,
+  "reasoning": 139,
+  "seconds": 2.21
+ }
+}

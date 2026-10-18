@@ -1,0 +1,25 @@
+{
+ "cost_usd": 5.3e-05,
+ "data": {
+  "queries": [
+   "mining innovation autonomous driverless trucks employment productivity METS firms",
+   "Mining operations adopted autonomous trucks, raising concerns about employment, productivity and the effects on mining services firms."
+  ],
+  "standalone_question": "Why are driverless trucks at mine sites controversial?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp04-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000106,
+  "input": 759,
+  "model": "gpt-6-luna",
+  "output": 60,
+  "reasoning": 0,
+  "seconds": 1.56
+ }
+}

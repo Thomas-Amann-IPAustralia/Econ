@@ -1,0 +1,27 @@
+{
+ "cost_usd": 0.000108,
+ "data": {
+  "queries": [
+   "IP rights business profitability competition innovation",
+   "Raising the Bar reforms patent scope innovation effects",
+   "patenting firms collaboration innovation business environment",
+   "Evidence that intellectual property rights promote innovation is mixed, with findings varying by measure, firm characteristics and competitive conditions."
+  ],
+  "standalone_question": "How confident can we be that the intellectual property system benefits innovation?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "owner-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000217,
+  "input": 764,
+  "model": "gpt-6-luna",
+  "output": 281,
+  "reasoning": 202,
+  "seconds": 3.13
+ }
+}

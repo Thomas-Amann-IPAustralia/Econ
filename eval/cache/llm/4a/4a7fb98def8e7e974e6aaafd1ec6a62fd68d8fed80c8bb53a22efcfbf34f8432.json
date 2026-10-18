@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000121,
+ "data": {
+  "queries": [
+   "patent filing likelihood by firm size",
+   "Large firms are more likely than small firms to file patents, with patent filing propensity increasing by firm size."
+  ],
+  "standalone_question": "Which firm sizes are most and least likely to file patents?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp15-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000241,
+  "input": 762,
+  "model": "gpt-6-luna",
+  "output": 329,
+  "reasoning": 269,
+  "seconds": 3.5
+ }
+}

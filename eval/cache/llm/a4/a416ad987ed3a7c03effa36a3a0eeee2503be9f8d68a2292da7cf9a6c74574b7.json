@@ -1,0 +1,25 @@
+{
+ "cost_usd": 5.5e-05,
+ "data": {
+  "queries": [
+   "standard patent applications annual filing trends decade",
+   "Standard patent applications increased decreased by X per cent over the past decade, with filings changing from X in 2015 to X in 2025."
+  ],
+  "standalone_question": "How have standard patent applications in Australia changed over the past decade?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-trend-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00011,
+  "input": 762,
+  "model": "gpt-6-luna",
+  "output": 68,
+  "reasoning": 0,
+  "seconds": 1.33
+ }
+}

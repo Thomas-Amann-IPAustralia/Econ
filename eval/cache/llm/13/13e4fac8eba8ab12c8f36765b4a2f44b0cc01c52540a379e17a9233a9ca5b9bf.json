@@ -1,0 +1,25 @@
+{
+ "cost_usd": 5e-05,
+ "data": {
+  "queries": [
+   "Australian patent filings growth technology fields",
+   "Strong growth in patent applications continued in X technology fields."
+  ],
+  "standalone_question": "In which technology fields is patenting in Australia still growing strongly?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr24-5",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.0001,
+  "input": 761,
+  "model": "gpt-6-luna",
+  "output": 48,
+  "reasoning": 0,
+  "seconds": 1.1
+ }
+}

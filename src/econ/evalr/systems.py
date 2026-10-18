@@ -89,6 +89,13 @@ def index_texts(text: str) -> tuple[str, ...]:
 
 
 @lru_cache
+def _notes(name: str) -> dict[str, str]:
+    from econ.kb import enrich
+
+    return enrich.load(name)
+
+
+@lru_cache
 def bm25(text: str) -> BM25:
     return BM25.build(list(index_texts(text)))
 
@@ -218,6 +225,11 @@ def passage(row: int, rr_input: str) -> str:
     c = chunks()[row]
     if rr_input == "text":
         return c["text"]
+    if rr_input.startswith("noted:"):
+        # Grid v3: the chunk's context note, then its text (the reranker in v2 saw only the text).
+
+        note = _notes(rr_input.split(":", 1)[1]).get(c["chunk_id"], "")
+        return (note + "\n\n" + c["text"]).strip()
     d = config.sources().by_id()[c["doc_id"]]
     sec = " > ".join(c["section"]) if c["section"] else ""
     return f"{d.title} ({d.year}). {sec}\n{c['text']}"

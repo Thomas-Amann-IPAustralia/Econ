@@ -1,0 +1,25 @@
+{
+ "cost_usd": 8.3e-05,
+ "data": {
+  "queries": [
+   "Raising the Bar reforms patent scope measurement methodology",
+   "Researchers assessed whether patent scope narrowed after the Raising the Bar reforms by comparing X across patents filed before and after implementation."
+  ],
+  "standalone_question": "How did researchers determine whether Australian patents became narrower after the Raising the Bar reforms?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-methods-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000167,
+  "input": 766,
+  "model": "gpt-6-luna",
+  "output": 181,
+  "reasoning": 113,
+  "seconds": 2.41
+ }
+}

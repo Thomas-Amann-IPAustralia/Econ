@@ -1,0 +1,24 @@
+{
+ "cost_usd": 8.3e-05,
+ "data": {
+  "queries": [
+   "Applicants voluntarily request patent examination X years after filing, with timing varying according to whether examination is required or prompted."
+  ],
+  "standalone_question": "How soon after filing do patent applicants request examination when they are not required to do so?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp01-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000167,
+  "input": 766,
+  "model": "gpt-6-luna",
+  "output": 180,
+  "reasoning": 121,
+  "seconds": 3.28
+ }
+}

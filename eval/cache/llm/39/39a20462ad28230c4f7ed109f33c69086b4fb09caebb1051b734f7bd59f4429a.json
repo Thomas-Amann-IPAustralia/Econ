@@ -1,0 +1,25 @@
+{
+ "cost_usd": 5.2e-05,
+ "data": {
+  "queries": [
+   "industry reliance on registered designs design intensity",
+   "Registered design use is highest in the X industry, measured by X per cent of firms or design applications."
+  ],
+  "standalone_question": "Which Australian industry relies most heavily on registered designs?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr19-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000104,
+  "input": 759,
+  "model": "gpt-6-luna",
+  "output": 56,
+  "reasoning": 0,
+  "seconds": 1.61
+ }
+}

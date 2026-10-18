@@ -1,0 +1,25 @@
+{
+ "cost_usd": 5.3e-05,
+ "data": {
+  "queries": [
+   "patent-holding firms AI investment likelihood",
+   "Companies holding patents were X times more likely to invest in artificial intelligence than companies without patents."
+  ],
+  "standalone_question": "Are companies that hold patents more likely to invest in artificial intelligence?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "oce-ai-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000105,
+  "input": 762,
+  "model": "gpt-6-luna",
+  "output": 57,
+  "reasoning": 0,
+  "seconds": 1.3
+ }
+}

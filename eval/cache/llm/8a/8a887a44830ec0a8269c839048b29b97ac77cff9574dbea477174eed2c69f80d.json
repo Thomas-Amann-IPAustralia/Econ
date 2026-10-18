@@ -1,0 +1,24 @@
+{
+ "cost_usd": 7.4e-05,
+ "data": {
+  "queries": [
+   "Designers rely on registered designs to protect their work, while other protection strategies include confidentiality, copyright and market lead time."
+  ],
+  "standalone_question": "Do designers actually rely on registered designs to protect their work?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-synthesis-9",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000149,
+  "input": 761,
+  "model": "gpt-6-luna",
+  "output": 146,
+  "reasoning": 91,
+  "seconds": 2.71
+ }
+}

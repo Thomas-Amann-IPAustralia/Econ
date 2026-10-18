@@ -1,0 +1,26 @@
+{
+ "cost_usd": 9.3e-05,
+ "data": {
+  "queries": [
+   "clean energy patenting trends and technologies",
+   "electric vehicle and environmental technology patent filings",
+   "Green technology patent applications increased by X per cent, with growth concentrated in [technology] and [period]."
+  ],
+  "standalone_question": "What evidence is available on patenting in clean energy, electric vehicles, and other green technologies?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-synthesis-8",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000187,
+  "input": 765,
+  "model": "gpt-6-luna",
+  "output": 221,
+  "reasoning": 146,
+  "seconds": 2.69
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "cost_usd": 6.4e-05,
+ "data": {
+  "queries": [
+   "computer-implemented invention patent outcomes grant rates examination IP Australia EPO USPTO",
+   "differences in computer-implemented invention patent eligibility and examination outcomes across offices",
+   "Computer-implemented invention patents had different examination outcomes at IP Australia, the EPO and the USPTO, with rates varying by X."
+  ],
+  "standalone_question": "How do outcomes for computer-implemented invention patents at IP Australia compare with those at the European Patent Office and the United States Patent and Trademark Office?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-compare-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000129,
+  "input": 769,
+  "model": "gpt-6-luna",
+  "output": 104,
+  "reasoning": 0,
+  "seconds": 1.69
+ }
+}

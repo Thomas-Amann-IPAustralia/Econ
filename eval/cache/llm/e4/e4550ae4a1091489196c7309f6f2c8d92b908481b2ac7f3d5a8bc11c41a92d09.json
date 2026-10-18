@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000118,
+ "data": {
+  "queries": [
+   "business prevalence of registered patents trade marks and designs",
+   "The proportion of businesses holding registered IP rights changed from X per cent in YYYY to Y per cent in YYYY."
+  ],
+  "standalone_question": "What share of Australian businesses own a registered IP right, and how has that share changed over time?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp10-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000237,
+  "input": 766,
+  "model": "gpt-6-luna",
+  "output": 321,
+  "reasoning": 250,
+  "seconds": 3.23
+ }
+}

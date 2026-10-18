@@ -1,0 +1,24 @@
+{
+ "cost_usd": 9.6e-05,
+ "data": {
+  "queries": [
+   "Patents and trade marks increase startup valuations by X per cent among firms seeking investor funding."
+  ],
+  "standalone_question": "How much can patents and trade marks increase investors’ valuations of startups?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr26-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000192,
+  "input": 764,
+  "model": "gpt-6-luna",
+  "output": 231,
+  "reasoning": 180,
+  "seconds": 2.74
+ }
+}

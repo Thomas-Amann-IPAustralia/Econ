@@ -1,0 +1,24 @@
+{
+ "cost_usd": 8.8e-05,
+ "data": {
+  "queries": [
+   "The overseas share of design applications in Australia changed from X per cent in 2010 to Y per cent in 2020."
+  ],
+  "standalone_question": "How did the overseas share of design applications in Australia change over the decade to 2020?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr21-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000177,
+  "input": 768,
+  "model": "gpt-6-luna",
+  "output": 200,
+  "reasoning": 136,
+  "seconds": 2.66
+ }
+}

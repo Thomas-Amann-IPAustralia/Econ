@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000113,
+ "data": {
+  "queries": [
+   "IP rights use by business size",
+   "Small businesses use formal IP rights at different rates than large businesses, with variation across patents, trade marks and designs."
+  ],
+  "standalone_question": "How do small and large businesses differ in their use of IP rights?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-compare-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000226,
+  "input": 763,
+  "model": "gpt-6-luna",
+  "output": 300,
+  "reasoning": 237,
+  "seconds": 3.56
+ }
+}

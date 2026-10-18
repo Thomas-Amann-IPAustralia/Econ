@@ -74,6 +74,7 @@
 {"chunk_id": "ipr-2025:0026", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp01-2", "source": "pool"}
 {"chunk_id": "ipr-2025:0027", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp01-2", "source": "pool"}
 {"chunk_id": "erp01-patent-backlogs:0002", "grade": 3, "judge": "gemini-3.8-flash", "need": "erp01-3", "source": "pool"}
+{"chunk_id": "erp01-patent-backlogs:0005", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp01-3", "source": "topup-v3"}
 {"chunk_id": "erp01-patent-backlogs:0008", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp01-3", "source": "pool"}
 {"chunk_id": "erp01-patent-backlogs:0009", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp01-3", "source": "topup"}
 {"chunk_id": "erp01-patent-backlogs:0021", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp01-3", "source": "pool"}
@@ -123,6 +124,8 @@
 {"chunk_id": "erp01-patent-backlogs:0018", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp01-4", "source": "pool"}
 {"chunk_id": "erp01-patent-backlogs:0026", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp01-4", "source": "pool"}
 {"chunk_id": "erp01-patent-backlogs:0029", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp01-4", "source": "pool"}
+{"chunk_id": "erp01-patent-backlogs:0032", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp01-4", "source": "topup-v3"}
+{"chunk_id": "erp01-patent-backlogs:0033", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp01-4", "source": "topup-v3"}
 {"chunk_id": "erp01-patent-backlogs:0036", "grade": 3, "judge": "gemini-3.8-flash", "need": "erp01-4", "source": "pool"}
 {"chunk_id": "erp14-raising-the-bar:0051", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp01-4", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0018", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp01-4", "source": "pool"}
@@ -203,6 +206,7 @@
 {"chunk_id": "ipr-2025:0056", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp03-1", "source": "pool"}
 {"chunk_id": "ipr-2026:0022", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp03-1", "source": "pool"}
 {"chunk_id": "ipr-2026:0063", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp03-1", "source": "pool"}
+{"chunk_id": "ipr-2026:0069", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp03-1", "source": "topup-v3"}
 {"chunk_id": "ipr-2026:0085", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp03-1", "source": "pool"}
 {"chunk_id": "ipr-2026:0087", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp03-1", "source": "topup"}
 {"chunk_id": "ipr-2026:0095", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp03-1", "source": "pool"}
@@ -223,6 +227,8 @@
 {"chunk_id": "erp03-market-for-design:0028", "grade": 3, "judge": "gemini-3.8-flash", "need": "erp03-2", "source": "pool"}
 {"chunk_id": "erp03-market-for-design:0029", "grade": 2, "judge": "gemini-3.8-flash", "need": "erp03-2", "source": "pool"}
 {"chunk_id": "erp03-market-for-design:0030", "grade": 3, "judge": "gemini-3.8-flash", "need": "erp03-2", "source": "pool"}
+{"chunk_id": "erp03-market-for-design:0034", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp03-2", "source": "topup-v3"}
+{"chunk_id": "erp03-market-for-design:0035", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp03-2", "source": "topup-v3"}
 {"chunk_id": "erp03-market-for-design:0036", "grade": 2, "judge": "gemini-3.8-flash", "need": "erp03-2", "source": "pool"}
 {"chunk_id": "erp03-market-for-design:0037", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp03-2", "source": "pool"}
 {"chunk_id": "erp03-market-for-design:0038", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp03-2", "source": "pool"}
@@ -284,8 +290,10 @@
 {"chunk_id": "erp03-market-for-design:0051", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp03-3", "source": "pool"}
 {"chunk_id": "erp03-market-for-design:0052", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp03-3", "source": "pool"}
 {"chunk_id": "erp03-market-for-design:0054", "grade": 2, "judge": "gemini-3.8-flash", "need": "erp03-3", "source": "pool"}
+{"chunk_id": "erp03-market-for-design:0055", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp03-3", "source": "topup-v3"}
 {"chunk_id": "erp03-market-for-design:0056", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp03-3", "source": "pool"}
 {"chunk_id": "erp03-market-for-design:0057", "grade": 3, "judge": "gemini-3.8-flash", "need": "erp03-3", "source": "pool"}
+{"chunk_id": "erp03-market-for-design:0058", "grade": 2, "judge": "gemini-3.8-flash", "need": "erp03-3", "source": "topup-v3"}
 {"chunk_id": "erp03-market-for-design:0059", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp03-3", "source": "pool"}
 {"chunk_id": "erp03-market-for-design:0061", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp03-3", "source": "pool"}
 {"chunk_id": "erp03-market-for-design:0063", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp03-3", "source": "pool"}
@@ -356,6 +364,7 @@
 {"chunk_id": "ipr-2018:0041", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp03-4", "source": "pool"}
 {"chunk_id": "ipr-2019:0002", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp03-4", "source": "pool"}
 {"chunk_id": "ipr-2019:0016", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp03-4", "source": "pool"}
+{"chunk_id": "ipr-2019:0050", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp03-4", "source": "topup-v3"}
 {"chunk_id": "ipr-2019:0052", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp03-4", "source": "pool"}
 {"chunk_id": "ipr-2019:0054", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp03-4", "source": "pool"}
 {"chunk_id": "ipr-2020:0001", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp03-4", "source": "pool"}
@@ -380,6 +389,7 @@
 {"chunk_id": "erp04-mining-innovation:0006", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp04-1", "source": "pilot"}
 {"chunk_id": "erp04-mining-innovation:0009", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp04-1", "source": "pilot"}
 {"chunk_id": "erp04-mining-innovation:0013", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp04-1", "source": "pilot"}
+{"chunk_id": "erp04-mining-innovation:0016", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp04-1", "source": "topup-v3"}
 {"chunk_id": "erp04-mining-innovation:0017", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp04-1", "source": "pilot"}
 {"chunk_id": "erp04-mining-innovation:0019", "grade": 3, "judge": "gemini-3.8-flash", "need": "erp04-1", "source": "pilot"}
 {"chunk_id": "erp04-mining-innovation:0020", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp04-1", "source": "pilot"}
@@ -392,6 +402,7 @@
 {"chunk_id": "erp04-mining-innovation:0033", "grade": 2, "judge": "gemini-3.8-flash", "need": "erp04-1", "source": "pilot"}
 {"chunk_id": "erp04-mining-innovation:0036", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp04-1", "source": "pilot"}
 {"chunk_id": "erp04-mining-innovation:0037", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp04-1", "source": "pilot"}
+{"chunk_id": "erp04-mining-innovation:0038", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp04-1", "source": "topup-v3"}
 {"chunk_id": "erp04-mining-innovation:0039", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp04-1", "source": "pilot"}
 {"chunk_id": "erp04-mining-innovation:0043", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp04-1", "source": "pilot"}
 {"chunk_id": "erp04-mining-innovation:0044", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp04-1", "source": "pilot"}
@@ -399,6 +410,10 @@
 {"chunk_id": "erp04-mining-innovation:0048", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp04-1", "source": "pilot"}
 {"chunk_id": "erp04-mining-innovation:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp04-1", "source": "pilot"}
 {"chunk_id": "erp04-mining-innovation:0050", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp04-1", "source": "pilot"}
+{"chunk_id": "erp04-mining-innovation:0052", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp04-1", "source": "topup-v3"}
+{"chunk_id": "erp04-mining-innovation:0053", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp04-1", "source": "topup-v3"}
+{"chunk_id": "erp04-mining-innovation:0054", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp04-1", "source": "topup-v3"}
+{"chunk_id": "erp04-mining-innovation:0057", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp04-1", "source": "topup-v3"}
 {"chunk_id": "erp04-mining-innovation:0059", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp04-1", "source": "pilot"}
 {"chunk_id": "erp14-raising-the-bar:0015", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp04-1", "source": "pilot"}
 {"chunk_id": "erp14-raising-the-bar:0022", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp04-1", "source": "pilot"}
@@ -460,6 +475,7 @@
 {"chunk_id": "oce-ai-investment:0024", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp04-1", "source": "pilot"}
 {"chunk_id": "oce-ai-investment:0039", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp04-1", "source": "pilot"}
 {"chunk_id": "erp03-market-for-design:0066", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp04-2", "source": "pool"}
+{"chunk_id": "erp04-mining-innovation:0001", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp04-2", "source": "topup-v3"}
 {"chunk_id": "erp04-mining-innovation:0004", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp04-2", "source": "pool"}
 {"chunk_id": "erp04-mining-innovation:0005", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp04-2", "source": "pool"}
 {"chunk_id": "erp04-mining-innovation:0006", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp04-2", "source": "pool"}
@@ -477,6 +493,8 @@
 {"chunk_id": "erp04-mining-innovation:0030", "grade": 3, "judge": "gemini-3.8-flash", "need": "erp04-2", "source": "pool"}
 {"chunk_id": "erp04-mining-innovation:0032", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp04-2", "source": "pool"}
 {"chunk_id": "erp04-mining-innovation:0037", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp04-2", "source": "pool"}
+{"chunk_id": "erp04-mining-innovation:0038", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp04-2", "source": "topup-v3"}
+{"chunk_id": "erp04-mining-innovation:0039", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp04-2", "source": "topup-v3"}
 {"chunk_id": "erp04-mining-innovation:0044", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp04-2", "source": "pool"}
 {"chunk_id": "erp04-mining-innovation:0045", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp04-2", "source": "pool"}
 {"chunk_id": "erp04-mining-innovation:0048", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp04-2", "source": "pool"}
@@ -528,6 +546,7 @@
 {"chunk_id": "erp04-mining-innovation:0046", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp04-3", "source": "pool"}
 {"chunk_id": "erp04-mining-innovation:0047", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp04-3", "source": "pool"}
 {"chunk_id": "erp04-mining-innovation:0048", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp04-3", "source": "pool"}
+{"chunk_id": "erp04-mining-innovation:0050", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp04-3", "source": "topup-v3"}
 {"chunk_id": "erp04-mining-innovation:0059", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp04-3", "source": "pool"}
 {"chunk_id": "erp11-exporters-trade-marks:0006", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp04-3", "source": "pool"}
 {"chunk_id": "erp11-exporters-trade-marks:0009", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp04-3", "source": "pool"}
@@ -652,6 +671,7 @@
 {"chunk_id": "erp08-designs-law-practice:0008", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp08-2", "source": "pool"}
 {"chunk_id": "erp08-designs-law-practice:0009", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp08-2", "source": "pool"}
 {"chunk_id": "erp08-designs-law-practice:0010", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp08-2", "source": "pool"}
+{"chunk_id": "erp08-designs-law-practice:0015", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp08-2", "source": "topup-v3"}
 {"chunk_id": "erp08-designs-law-practice:0018", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp08-2", "source": "pool"}
 {"chunk_id": "erp08-designs-law-practice:0019", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp08-2", "source": "pool"}
 {"chunk_id": "erp08-designs-law-practice:0025", "grade": 3, "judge": "gemini-3.8-flash", "need": "erp08-2", "source": "pool"}
@@ -684,6 +704,7 @@
 {"chunk_id": "ipr-2026:0098", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp08-2", "source": "pool"}
 {"chunk_id": "erp08-designs-law-practice:0020", "grade": 3, "judge": "gemini-3.8-flash", "need": "erp08-3", "source": "pool"}
 {"chunk_id": "erp08-designs-law-practice:0035", "grade": 2, "judge": "gemini-3.8-flash", "need": "erp08-3", "source": "topup"}
+{"chunk_id": "erp08-designs-law-practice:0037", "grade": 2, "judge": "gemini-3.8-flash", "need": "erp08-3", "source": "topup-v3"}
 {"chunk_id": "ipr-2016:0016", "grade": 3, "judge": "gemini-3.8-flash", "need": "erp08-3", "source": "pool"}
 {"chunk_id": "ipr-2016:0036", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp08-3", "source": "pool"}
 {"chunk_id": "ipr-2018:0021", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp08-3", "source": "pool"}
@@ -718,6 +739,7 @@
 {"chunk_id": "erp08-designs-law-practice:0000", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp08-4", "source": "pool"}
 {"chunk_id": "erp08-designs-law-practice:0001", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp08-4", "source": "pool"}
 {"chunk_id": "erp08-designs-law-practice:0003", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp08-4", "source": "pool"}
+{"chunk_id": "erp08-designs-law-practice:0005", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp08-4", "source": "topup-v3"}
 {"chunk_id": "erp08-designs-law-practice:0006", "grade": 3, "judge": "gemini-3.8-flash", "need": "erp08-4", "source": "pool"}
 {"chunk_id": "erp08-designs-law-practice:0007", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp08-4", "source": "pool"}
 {"chunk_id": "erp08-designs-law-practice:0008", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp08-4", "source": "pool"}
@@ -758,6 +780,7 @@
 {"chunk_id": "erp10-ip-profitability-competition:0017", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp10-1", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0018", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp10-1", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0019", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp10-1", "source": "topup"}
+{"chunk_id": "erp10-ip-profitability-competition:0034", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp10-1", "source": "topup-v3"}
 {"chunk_id": "erp10-ip-profitability-competition:0038", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp10-1", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0064", "grade": 2, "judge": "gemini-3.8-flash", "need": "erp10-1", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0074", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp10-1", "source": "pool"}
@@ -783,6 +806,7 @@
 {"chunk_id": "ipr-2022:0077", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp10-1", "source": "pool"}
 {"chunk_id": "ipr-2022:0080", "grade": 3, "judge": "gemini-3.8-flash", "need": "erp10-1", "source": "pool"}
 {"chunk_id": "ipr-2022:0083", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp10-1", "source": "pool"}
+{"chunk_id": "ipr-2023:0038", "grade": 2, "judge": "gemini-3.8-flash", "need": "erp10-1", "source": "topup-v3"}
 {"chunk_id": "ipr-2023:0050", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp10-1", "source": "pool"}
 {"chunk_id": "ipr-2023:0056", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp10-1", "source": "pool"}
 {"chunk_id": "ipr-2023:0058", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp10-1", "source": "pool"}
@@ -826,6 +850,7 @@
 {"chunk_id": "erp10-ip-profitability-competition:0085", "grade": 2, "judge": "gemini-3.8-flash", "need": "erp10-2", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0086", "grade": 2, "judge": "gemini-3.8-flash", "need": "erp10-2", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0087", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp10-2", "source": "pool"}
+{"chunk_id": "erp10-ip-profitability-competition:0104", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp10-2", "source": "topup-v3"}
 {"chunk_id": "erp11-exporters-trade-marks:0007", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp10-2", "source": "pool"}
 {"chunk_id": "erp11-exporters-trade-marks:0024", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp10-2", "source": "pool"}
 {"chunk_id": "erp11-exporters-trade-marks:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp10-2", "source": "pool"}
@@ -853,6 +878,7 @@
 {"chunk_id": "erp10-ip-profitability-competition:0011", "grade": 3, "judge": "gemini-3.8-flash", "need": "erp10-3", "source": "topup"}
 {"chunk_id": "erp10-ip-profitability-competition:0013", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp10-3", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0016", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp10-3", "source": "topup"}
+{"chunk_id": "erp10-ip-profitability-competition:0018", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp10-3", "source": "topup-v3"}
 {"chunk_id": "erp10-ip-profitability-competition:0025", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp10-3", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0026", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp10-3", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0032", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp10-3", "source": "pool"}
@@ -903,6 +929,7 @@
 {"chunk_id": "erp10-ip-profitability-competition:0038", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp10-4", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0043", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp10-4", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0044", "grade": 2, "judge": "gemini-3.8-flash", "need": "erp10-4", "source": "pool"}
+{"chunk_id": "erp10-ip-profitability-competition:0045", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp10-4", "source": "topup-v3"}
 {"chunk_id": "erp10-ip-profitability-competition:0046", "grade": 2, "judge": "gemini-3.8-flash", "need": "erp10-4", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0047", "grade": 3, "judge": "gemini-3.8-flash", "need": "erp10-4", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0048", "grade": 3, "judge": "gemini-3.8-flash", "need": "erp10-4", "source": "pool"}
@@ -950,6 +977,7 @@
 {"chunk_id": "erp10-ip-profitability-competition:0007", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp10-5", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0008", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp10-5", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0018", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp10-5", "source": "pool"}
+{"chunk_id": "erp10-ip-profitability-competition:0020", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp10-5", "source": "topup-v3"}
 {"chunk_id": "erp10-ip-profitability-competition:0025", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp10-5", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0051", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp10-5", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0053", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp10-5", "source": "pool"}
@@ -1002,6 +1030,7 @@
 {"chunk_id": "erp11-exporters-trade-marks:0056", "grade": 2, "judge": "gemini-3.8-flash", "need": "erp11-1", "source": "pool"}
 {"chunk_id": "erp11-exporters-trade-marks:0075", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp11-1", "source": "pool"}
 {"chunk_id": "erp11-exporters-trade-marks:0076", "grade": 3, "judge": "gemini-3.8-flash", "need": "erp11-1", "source": "pool"}
+{"chunk_id": "erp11-exporters-trade-marks:0084", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp11-1", "source": "topup-v3"}
 {"chunk_id": "erp11-exporters-trade-marks:0092", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp11-1", "source": "pool"}
 {"chunk_id": "erp11-exporters-trade-marks:0105", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp11-1", "source": "pool"}
 {"chunk_id": "erp11-exporters-trade-marks:0106", "grade": 2, "judge": "gemini-3.8-flash", "need": "erp11-1", "source": "pool"}
@@ -1051,6 +1080,7 @@
 {"chunk_id": "erp11-exporters-trade-marks:0082", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp11-2", "source": "pool"}
 {"chunk_id": "erp11-exporters-trade-marks:0091", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp11-2", "source": "pool"}
 {"chunk_id": "erp11-exporters-trade-marks:0094", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp11-2", "source": "pool"}
+{"chunk_id": "erp11-exporters-trade-marks:0098", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp11-2", "source": "topup-v3"}
 {"chunk_id": "erp11-exporters-trade-marks:0110", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp11-2", "source": "pool"}
 {"chunk_id": "erp11-exporters-trade-marks:0111", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp11-2", "source": "pool"}
 {"chunk_id": "erp11-exporters-trade-marks:0112", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp11-2", "source": "pool"}
@@ -1089,6 +1119,7 @@
 {"chunk_id": "erp11-exporters-trade-marks:0092", "grade": 2, "judge": "gemini-3.8-flash", "need": "erp11-3", "source": "topup"}
 {"chunk_id": "erp11-exporters-trade-marks:0093", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp11-3", "source": "pool"}
 {"chunk_id": "erp11-exporters-trade-marks:0099", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp11-3", "source": "pool"}
+{"chunk_id": "erp11-exporters-trade-marks:0118", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp11-3", "source": "topup-v3"}
 {"chunk_id": "erp11-exporters-trade-marks:0146", "grade": 3, "judge": "gemini-3.8-flash", "need": "erp11-3", "source": "pool"}
 {"chunk_id": "erp11-exporters-trade-marks:0147", "grade": 3, "judge": "gemini-3.8-flash", "need": "erp11-3", "source": "pool"}
 {"chunk_id": "ipr-2021:0029", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp11-3", "source": "pool"}
@@ -1102,6 +1133,7 @@
 {"chunk_id": "erp03-market-for-design:0055", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp11-4", "source": "pool"}
 {"chunk_id": "erp04-mining-innovation:0035", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp11-4", "source": "pool"}
 {"chunk_id": "erp11-exporters-trade-marks:0003", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp11-4", "source": "pool"}
+{"chunk_id": "erp11-exporters-trade-marks:0004", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp11-4", "source": "topup-v3"}
 {"chunk_id": "erp11-exporters-trade-marks:0005", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp11-4", "source": "pool"}
 {"chunk_id": "erp11-exporters-trade-marks:0010", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp11-4", "source": "pool"}
 {"chunk_id": "erp11-exporters-trade-marks:0012", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp11-4", "source": "pool"}
@@ -1184,11 +1216,15 @@
 {"chunk_id": "erp14-raising-the-bar:0008", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp14-1", "source": "pilot"}
 {"chunk_id": "erp14-raising-the-bar:0013", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp14-1", "source": "pilot"}
 {"chunk_id": "erp14-raising-the-bar:0014", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp14-1", "source": "pilot"}
+{"chunk_id": "erp14-raising-the-bar:0016", "grade": 3, "judge": "gemini-3.8-flash", "need": "erp14-1", "source": "topup-v3"}
 {"chunk_id": "erp14-raising-the-bar:0019", "grade": 2, "judge": "gemini-3.8-flash", "need": "erp14-1", "source": "pilot"}
+{"chunk_id": "erp14-raising-the-bar:0020", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp14-1", "source": "topup-v3"}
 {"chunk_id": "erp14-raising-the-bar:0021", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp14-1", "source": "pilot"}
 {"chunk_id": "erp14-raising-the-bar:0027", "grade": 2, "judge": "gemini-3.8-flash", "need": "erp14-1", "source": "pilot"}
 {"chunk_id": "erp14-raising-the-bar:0030", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp14-1", "source": "pilot"}
 {"chunk_id": "erp14-raising-the-bar:0033", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp14-1", "source": "pilot"}
+{"chunk_id": "erp14-raising-the-bar:0034", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp14-1", "source": "topup-v3"}
+{"chunk_id": "erp14-raising-the-bar:0035", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp14-1", "source": "topup-v3"}
 {"chunk_id": "erp14-raising-the-bar:0037", "grade": 2, "judge": "gemini-3.8-flash", "need": "erp14-1", "source": "pilot"}
 {"chunk_id": "erp14-raising-the-bar:0040", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp14-1", "source": "pilot"}
 {"chunk_id": "erp14-raising-the-bar:0042", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp14-1", "source": "pilot"}
@@ -1200,8 +1236,10 @@
 {"chunk_id": "erp14-raising-the-bar:0067", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp14-1", "source": "pilot"}
 {"chunk_id": "erp14-raising-the-bar:0068", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp14-1", "source": "pilot"}
 {"chunk_id": "erp14-raising-the-bar:0069", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp14-1", "source": "pilot"}
+{"chunk_id": "erp14-raising-the-bar:0070", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp14-1", "source": "topup-v3"}
 {"chunk_id": "erp14-raising-the-bar:0071", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp14-1", "source": "pilot"}
 {"chunk_id": "erp14-raising-the-bar:0074", "grade": 2, "judge": "gemini-3.8-flash", "need": "erp14-1", "source": "pilot"}
+{"chunk_id": "erp14-raising-the-bar:0075", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp14-1", "source": "topup-v3"}
 {"chunk_id": "erp16-cii-patent-trends:0016", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp14-1", "source": "pilot"}
 {"chunk_id": "erp16-cii-patent-trends:0017", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp14-1", "source": "pilot"}
 {"chunk_id": "erp16-cii-patent-trends:0093", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp14-1", "source": "pilot"}
@@ -1230,6 +1268,7 @@
 {"chunk_id": "erp14-raising-the-bar:0020", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp14-2", "source": "pool"}
 {"chunk_id": "erp14-raising-the-bar:0027", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp14-2", "source": "pool"}
 {"chunk_id": "erp14-raising-the-bar:0030", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp14-2", "source": "pool"}
+{"chunk_id": "erp14-raising-the-bar:0036", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp14-2", "source": "topup-v3"}
 {"chunk_id": "erp14-raising-the-bar:0037", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp14-2", "source": "pool"}
 {"chunk_id": "erp14-raising-the-bar:0040", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp14-2", "source": "pool"}
 {"chunk_id": "erp14-raising-the-bar:0048", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp14-2", "source": "pool"}
@@ -1240,6 +1279,7 @@
 {"chunk_id": "erp14-raising-the-bar:0059", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp14-2", "source": "pool"}
 {"chunk_id": "erp14-raising-the-bar:0060", "grade": 2, "judge": "gemini-3.8-flash", "need": "erp14-2", "source": "pool"}
 {"chunk_id": "erp14-raising-the-bar:0067", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp14-2", "source": "pool"}
+{"chunk_id": "erp14-raising-the-bar:0070", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp14-2", "source": "topup-v3"}
 {"chunk_id": "erp14-raising-the-bar:0071", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp14-2", "source": "pool"}
 {"chunk_id": "erp16-cii-patent-trends:0004", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp14-2", "source": "topup"}
 {"chunk_id": "erp16-cii-patent-trends:0007", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp14-2", "source": "topup"}
@@ -1250,6 +1290,7 @@
 {"chunk_id": "erp16-cii-patent-trends:0094", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp14-2", "source": "pool"}
 {"chunk_id": "erp16-cii-patent-trends:0095", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp14-2", "source": "pool"}
 {"chunk_id": "erp16-cii-patent-trends:0096", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp14-2", "source": "pool"}
+{"chunk_id": "erp16-cii-patent-trends:0106", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp14-2", "source": "topup-v3"}
 {"chunk_id": "ipr-2020:0059", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp14-2", "source": "topup"}
 {"chunk_id": "ipr-2024:0029", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp14-2", "source": "topup"}
 {"chunk_id": "ipr-2024:0032", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp14-2", "source": "pool"}
@@ -1276,6 +1317,7 @@
 {"chunk_id": "erp14-raising-the-bar:0030", "grade": 3, "judge": "gemini-3.8-flash", "need": "erp14-3", "source": "pool"}
 {"chunk_id": "erp14-raising-the-bar:0031", "grade": 3, "judge": "gemini-3.8-flash", "need": "erp14-3", "source": "pool"}
 {"chunk_id": "erp14-raising-the-bar:0033", "grade": 2, "judge": "gemini-3.8-flash", "need": "erp14-3", "source": "pool"}
+{"chunk_id": "erp14-raising-the-bar:0036", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp14-3", "source": "topup-v3"}
 {"chunk_id": "erp14-raising-the-bar:0042", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp14-3", "source": "pool"}
 {"chunk_id": "erp14-raising-the-bar:0046", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp14-3", "source": "pool"}
 {"chunk_id": "erp14-raising-the-bar:0066", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp14-3", "source": "pool"}
@@ -1313,6 +1355,7 @@
 {"chunk_id": "erp14-raising-the-bar:0026", "grade": 3, "judge": "gemini-3.8-flash", "need": "erp14-4", "source": "pool"}
 {"chunk_id": "erp14-raising-the-bar:0027", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp14-4", "source": "pool"}
 {"chunk_id": "erp14-raising-the-bar:0028", "grade": 3, "judge": "gemini-3.8-flash", "need": "erp14-4", "source": "pool"}
+{"chunk_id": "erp14-raising-the-bar:0029", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp14-4", "source": "topup-v3"}
 {"chunk_id": "erp14-raising-the-bar:0030", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp14-4", "source": "pool"}
 {"chunk_id": "erp14-raising-the-bar:0031", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp14-4", "source": "pool"}
 {"chunk_id": "erp14-raising-the-bar:0032", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp14-4", "source": "pool"}
@@ -1359,6 +1402,7 @@
 {"chunk_id": "erp15-patenting-firms:0039", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-1", "source": "topup"}
 {"chunk_id": "erp15-patenting-firms:0040", "grade": 3, "judge": "gemini-3.8-flash", "need": "erp15-1", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0041", "grade": 3, "judge": "gemini-3.8-flash", "need": "erp15-1", "source": "pool"}
+{"chunk_id": "erp15-patenting-firms:0042", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp15-1", "source": "topup-v3"}
 {"chunk_id": "erp15-patenting-firms:0043", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp15-1", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0044", "grade": 2, "judge": "gemini-3.8-flash", "need": "erp15-1", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0045", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-1", "source": "pool"}
@@ -1371,6 +1415,7 @@
 {"chunk_id": "erp15-patenting-firms:0076", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-1", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0077", "grade": 3, "judge": "gemini-3.8-flash", "need": "erp15-1", "source": "pool"}
 {"chunk_id": "ipr-2016:0022", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp15-1", "source": "pool"}
+{"chunk_id": "ipr-2018:0027", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-1", "source": "topup-v3"}
 {"chunk_id": "ipr-2018:0046", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-1", "source": "pool"}
 {"chunk_id": "ipr-2021:0005", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-1", "source": "topup"}
 {"chunk_id": "ipr-2022:0015", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-1", "source": "topup"}
@@ -1475,7 +1520,9 @@
 {"chunk_id": "erp15-patenting-firms:0031", "grade": 2, "judge": "gemini-3.8-flash", "need": "erp15-3", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0032", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-3", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0033", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-3", "source": "pool"}
+{"chunk_id": "erp15-patenting-firms:0034", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp15-3", "source": "topup-v3"}
 {"chunk_id": "erp15-patenting-firms:0036", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-3", "source": "pool"}
+{"chunk_id": "erp15-patenting-firms:0037", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-3", "source": "topup-v3"}
 {"chunk_id": "erp15-patenting-firms:0039", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-3", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0040", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-3", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0041", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-3", "source": "pool"}
@@ -1487,6 +1534,7 @@
 {"chunk_id": "erp15-patenting-firms:0052", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-3", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0057", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-3", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0060", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-3", "source": "pool"}
+{"chunk_id": "erp15-patenting-firms:0070", "grade": 2, "judge": "gemini-3.8-flash", "need": "erp15-3", "source": "topup-v3"}
 {"chunk_id": "erp15-patenting-firms:0073", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp15-3", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0076", "grade": 3, "judge": "gemini-3.8-flash", "need": "erp15-3", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0077", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-3", "source": "pool"}
@@ -1579,6 +1627,7 @@
 {"chunk_id": "erp03-market-for-design:0071", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-5", "source": "pool"}
 {"chunk_id": "erp04-mining-innovation:0030", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-5", "source": "topup"}
 {"chunk_id": "erp04-mining-innovation:0038", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-5", "source": "pool"}
+{"chunk_id": "erp04-mining-innovation:0039", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-5", "source": "topup-v3"}
 {"chunk_id": "erp10-ip-profitability-competition:0010", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-5", "source": "pool"}
 {"chunk_id": "erp11-exporters-trade-marks:0060", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-5", "source": "pool"}
 {"chunk_id": "erp11-exporters-trade-marks:0061", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-5", "source": "topup"}
@@ -1647,6 +1696,8 @@
 {"chunk_id": "erp14-raising-the-bar:0047", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp16-1", "source": "pool"}
 {"chunk_id": "erp14-raising-the-bar:0064", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp16-1", "source": "pool"}
 {"chunk_id": "erp14-raising-the-bar:0066", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp16-1", "source": "pool"}
+{"chunk_id": "erp14-raising-the-bar:0067", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp16-1", "source": "topup-v3"}
+{"chunk_id": "erp14-raising-the-bar:0070", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp16-1", "source": "topup-v3"}
 {"chunk_id": "erp14-raising-the-bar:0071", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp16-1", "source": "pool"}
 {"chunk_id": "erp14-raising-the-bar:0072", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp16-1", "source": "pool"}
 {"chunk_id": "erp14-raising-the-bar:0073", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp16-1", "source": "topup"}
@@ -1674,8 +1725,10 @@
 {"chunk_id": "erp16-cii-patent-trends:0055", "grade": 2, "judge": "gemini-3.8-flash", "need": "erp16-1", "source": "topup"}
 {"chunk_id": "erp16-cii-patent-trends:0058", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp16-1", "source": "pool"}
 {"chunk_id": "erp16-cii-patent-trends:0070", "grade": 2, "judge": "gemini-3.8-flash", "need": "erp16-1", "source": "pool"}
+{"chunk_id": "erp16-cii-patent-trends:0071", "grade": 3, "judge": "gemini-3.8-flash", "need": "erp16-1", "source": "topup-v3"}
 {"chunk_id": "erp16-cii-patent-trends:0073", "grade": 3, "judge": "gemini-3.8-flash", "need": "erp16-1", "source": "pool"}
 {"chunk_id": "erp16-cii-patent-trends:0076", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp16-1", "source": "pool"}
+{"chunk_id": "erp16-cii-patent-trends:0077", "grade": 2, "judge": "gemini-3.8-flash", "need": "erp16-1", "source": "topup-v3"}
 {"chunk_id": "erp16-cii-patent-trends:0080", "grade": 2, "judge": "gemini-3.8-flash", "need": "erp16-1", "source": "pool"}
 {"chunk_id": "erp16-cii-patent-trends:0081", "grade": 2, "judge": "gemini-3.8-flash", "need": "erp16-1", "source": "pool"}
 {"chunk_id": "erp16-cii-patent-trends:0082", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp16-1", "source": "pool"}
@@ -1727,6 +1780,8 @@
 {"chunk_id": "erp16-cii-patent-trends:0082", "grade": 2, "judge": "gemini-3.8-flash", "need": "erp16-2", "source": "pool"}
 {"chunk_id": "erp16-cii-patent-trends:0083", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp16-2", "source": "pool"}
 {"chunk_id": "erp16-cii-patent-trends:0084", "grade": 2, "judge": "gemini-3.8-flash", "need": "erp16-2", "source": "pool"}
+{"chunk_id": "erp16-cii-patent-trends:0086", "grade": 2, "judge": "gemini-3.8-flash", "need": "erp16-2", "source": "topup-v3"}
+{"chunk_id": "erp16-cii-patent-trends:0087", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp16-2", "source": "topup-v3"}
 {"chunk_id": "erp16-cii-patent-trends:0088", "grade": 2, "judge": "gemini-3.8-flash", "need": "erp16-2", "source": "pool"}
 {"chunk_id": "erp16-cii-patent-trends:0129", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp16-2", "source": "pool"}
 {"chunk_id": "ipr-2015:0004", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp16-2", "source": "pool"}
@@ -1816,6 +1871,7 @@
 {"chunk_id": "erp16-cii-patent-trends:0105", "grade": 2, "judge": "gemini-3.8-flash", "need": "erp16-3", "source": "topup"}
 {"chunk_id": "erp16-cii-patent-trends:0106", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp16-3", "source": "pool"}
 {"chunk_id": "erp16-cii-patent-trends:0109", "grade": 2, "judge": "gemini-3.8-flash", "need": "erp16-3", "source": "pool"}
+{"chunk_id": "erp16-cii-patent-trends:0117", "grade": 2, "judge": "gemini-3.8-flash", "need": "erp16-3", "source": "topup-v3"}
 {"chunk_id": "erp16-cii-patent-trends:0128", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp16-3", "source": "pool"}
 {"chunk_id": "ipr-2020:0059", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp16-3", "source": "pool"}
 {"chunk_id": "ipr-2021:0011", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp16-3", "source": "topup"}
@@ -1946,7 +2002,9 @@
 {"chunk_id": "erp16-cii-patent-trends:0023", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-compare-3", "source": "pool"}
 {"chunk_id": "erp16-cii-patent-trends:0024", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-compare-3", "source": "pool"}
 {"chunk_id": "erp16-cii-patent-trends:0025", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-compare-3", "source": "pool"}
+{"chunk_id": "erp16-cii-patent-trends:0029", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-compare-3", "source": "topup-v3"}
 {"chunk_id": "erp16-cii-patent-trends:0036", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-compare-3", "source": "pool"}
+{"chunk_id": "erp16-cii-patent-trends:0041", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-compare-3", "source": "topup-v3"}
 {"chunk_id": "erp16-cii-patent-trends:0044", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-compare-3", "source": "pool"}
 {"chunk_id": "erp16-cii-patent-trends:0048", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-compare-3", "source": "pool"}
 {"chunk_id": "erp16-cii-patent-trends:0049", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-compare-3", "source": "pool"}
@@ -1993,6 +2051,7 @@
 {"chunk_id": "erp08-designs-law-practice:0025", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-compare-4", "source": "pool"}
 {"chunk_id": "erp08-designs-law-practice:0031", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-compare-4", "source": "pool"}
 {"chunk_id": "erp08-designs-law-practice:0033", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-compare-4", "source": "pool"}
+{"chunk_id": "erp08-designs-law-practice:0034", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-compare-4", "source": "topup-v3"}
 {"chunk_id": "erp08-designs-law-practice:0045", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-compare-4", "source": "pool"}
 {"chunk_id": "erp08-designs-law-practice:0046", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-compare-4", "source": "pool"}
 {"chunk_id": "erp08-designs-law-practice:0047", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-compare-4", "source": "pool"}
@@ -2005,6 +2064,7 @@
 {"chunk_id": "erp10-ip-profitability-competition:0023", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-compare-4", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0024", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-compare-4", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0025", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-compare-4", "source": "pool"}
+{"chunk_id": "erp10-ip-profitability-competition:0053", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-compare-4", "source": "topup-v3"}
 {"chunk_id": "erp10-ip-profitability-competition:0054", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-compare-4", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0057", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-compare-4", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0077", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-compare-4", "source": "pool"}
@@ -2075,6 +2135,7 @@
 {"chunk_id": "erp10-ip-profitability-competition:0071", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-compare-5", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0077", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-compare-5", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0078", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-compare-5", "source": "pool"}
+{"chunk_id": "erp10-ip-profitability-competition:0079", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-compare-5", "source": "topup-v3"}
 {"chunk_id": "ipr-2015:0002", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-compare-5", "source": "pool"}
 {"chunk_id": "ipr-2015:0004", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-compare-5", "source": "pool"}
 {"chunk_id": "ipr-2015:0023", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-compare-5", "source": "pool"}
@@ -2138,10 +2199,13 @@
 {"chunk_id": "erp15-patenting-firms:0017", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-compare-6", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0050", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-compare-6", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0052", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-compare-6", "source": "pool"}
+{"chunk_id": "erp15-patenting-firms:0053", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-compare-6", "source": "topup-v3"}
 {"chunk_id": "erp15-patenting-firms:0054", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-compare-6", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0055", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-compare-6", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0056", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-compare-6", "source": "pool"}
+{"chunk_id": "erp15-patenting-firms:0057", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-compare-6", "source": "topup-v3"}
 {"chunk_id": "erp15-patenting-firms:0059", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-compare-6", "source": "pool"}
+{"chunk_id": "erp15-patenting-firms:0060", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-compare-6", "source": "topup-v3"}
 {"chunk_id": "erp15-patenting-firms:0062", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-compare-6", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0063", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-compare-6", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0064", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-compare-6", "source": "pool"}
@@ -2202,6 +2266,7 @@
 {"chunk_id": "ipr-2025:0062", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-compare-7", "source": "pool"}
 {"chunk_id": "ipr-2026:0003", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-compare-7", "source": "pool"}
 {"chunk_id": "ipr-2026:0013", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-compare-7", "source": "pool"}
+{"chunk_id": "ipr-2026:0058", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-compare-7", "source": "topup-v3"}
 {"chunk_id": "ipr-2026:0067", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-compare-7", "source": "pool"}
 {"chunk_id": "ipr-2026:0080", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-compare-7", "source": "topup"}
 {"chunk_id": "note-tm-leading-indicator:0000", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-compare-7", "source": "pool"}
@@ -2358,6 +2423,7 @@
 {"chunk_id": "erp03-market-for-design:0026", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-context-2", "source": "pool"}
 {"chunk_id": "erp04-mining-innovation:0003", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-context-2", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0074", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-context-2", "source": "pool"}
+{"chunk_id": "erp10-ip-profitability-competition:0083", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-context-2", "source": "topup-v3"}
 {"chunk_id": "erp10-ip-profitability-competition:0119", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-context-2", "source": "pool"}
 {"chunk_id": "erp11-exporters-trade-marks:0000", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-context-2", "source": "pool"}
 {"chunk_id": "erp11-exporters-trade-marks:0001", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-context-2", "source": "pool"}
@@ -2444,6 +2510,7 @@
 {"chunk_id": "note-tm-leading-indicator:0008", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-context-2", "source": "pool"}
 {"chunk_id": "note-tm-leading-indicator:0009", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-context-2", "source": "pool"}
 {"chunk_id": "note-tm-leading-indicator:0010", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-context-2", "source": "pool"}
+{"chunk_id": "note-tm-leading-indicator:0011", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-context-2", "source": "topup-v3"}
 {"chunk_id": "note-tm-leading-indicator:0012", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-context-2", "source": "pool"}
 {"chunk_id": "note-tm-leading-indicator:0013", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-context-2", "source": "pool"}
 {"chunk_id": "note-tm-leading-indicator:0016", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-context-2", "source": "pool"}
@@ -2472,6 +2539,7 @@
 {"chunk_id": "erp10-ip-profitability-competition:0029", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-evidence-1", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0056", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-evidence-1", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0059", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-evidence-1", "source": "topup"}
+{"chunk_id": "erp10-ip-profitability-competition:0069", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-evidence-1", "source": "topup-v3"}
 {"chunk_id": "erp10-ip-profitability-competition:0070", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-evidence-1", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0078", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-evidence-1", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0080", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-evidence-1", "source": "pool"}
@@ -2517,6 +2585,7 @@
 {"chunk_id": "erp16-cii-patent-trends:0049", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-evidence-1", "source": "pool"}
 {"chunk_id": "erp16-cii-patent-trends:0079", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-evidence-1", "source": "pool"}
 {"chunk_id": "erp16-cii-patent-trends:0086", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-evidence-1", "source": "pool"}
+{"chunk_id": "erp16-cii-patent-trends:0129", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-evidence-1", "source": "topup-v3"}
 {"chunk_id": "erp16-cii-patent-trends:0130", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-evidence-1", "source": "pool"}
 {"chunk_id": "ipr-2017:0036", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-evidence-1", "source": "pool"}
 {"chunk_id": "ipr-2017:0042", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-evidence-1", "source": "pool"}
@@ -2600,15 +2669,18 @@
 {"chunk_id": "erp11-exporters-trade-marks:0012", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-evidence-3", "source": "pool"}
 {"chunk_id": "erp11-exporters-trade-marks:0013", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-evidence-3", "source": "pool"}
 {"chunk_id": "erp11-exporters-trade-marks:0018", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-evidence-3", "source": "pool"}
+{"chunk_id": "erp11-exporters-trade-marks:0019", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-evidence-3", "source": "topup-v3"}
 {"chunk_id": "erp11-exporters-trade-marks:0022", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-evidence-3", "source": "pool"}
 {"chunk_id": "erp11-exporters-trade-marks:0025", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-evidence-3", "source": "pool"}
 {"chunk_id": "erp11-exporters-trade-marks:0048", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-evidence-3", "source": "pool"}
 {"chunk_id": "erp11-exporters-trade-marks:0054", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-evidence-3", "source": "pool"}
 {"chunk_id": "erp11-exporters-trade-marks:0066", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-evidence-3", "source": "pool"}
+{"chunk_id": "erp11-exporters-trade-marks:0067", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-evidence-3", "source": "topup-v3"}
 {"chunk_id": "erp11-exporters-trade-marks:0076", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-evidence-3", "source": "pool"}
 {"chunk_id": "erp11-exporters-trade-marks:0077", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-evidence-3", "source": "pool"}
 {"chunk_id": "erp11-exporters-trade-marks:0103", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-evidence-3", "source": "pool"}
 {"chunk_id": "erp11-exporters-trade-marks:0106", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-evidence-3", "source": "pool"}
+{"chunk_id": "erp11-exporters-trade-marks:0126", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-evidence-3", "source": "topup-v3"}
 {"chunk_id": "erp11-exporters-trade-marks:0146", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-evidence-3", "source": "pool"}
 {"chunk_id": "erp11-exporters-trade-marks:0147", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-evidence-3", "source": "pool"}
 {"chunk_id": "ipr-2018:0018", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-evidence-3", "source": "topup"}
@@ -2626,6 +2698,7 @@
 {"chunk_id": "ipr-2023:0033", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-evidence-3", "source": "pool"}
 {"chunk_id": "ipr-2023:0038", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-evidence-3", "source": "topup"}
 {"chunk_id": "ipr-2023:0039", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-evidence-3", "source": "topup"}
+{"chunk_id": "ipr-2024:0067", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-evidence-3", "source": "topup-v3"}
 {"chunk_id": "ipr-2026:0078", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-evidence-3", "source": "topup"}
 {"chunk_id": "note-tm-leading-indicator:0004", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-evidence-3", "source": "topup"}
 {"chunk_id": "erp03-market-for-design:0004", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-evidence-4", "source": "pool"}
@@ -2645,6 +2718,7 @@
 {"chunk_id": "erp10-ip-profitability-competition:0064", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-evidence-4", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0067", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-evidence-4", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0068", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-evidence-4", "source": "pool"}
+{"chunk_id": "erp10-ip-profitability-competition:0108", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-evidence-4", "source": "topup-v3"}
 {"chunk_id": "erp15-patenting-firms:0005", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-evidence-4", "source": "pool"}
 {"chunk_id": "ipr-2015:0008", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-evidence-4", "source": "topup"}
 {"chunk_id": "ipr-2015:0017", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-evidence-4", "source": "pool"}
@@ -2735,6 +2809,7 @@
 {"chunk_id": "ipr-2016:0026", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-evidence-6", "source": "pool"}
 {"chunk_id": "ipr-2016:0027", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-evidence-6", "source": "pool"}
 {"chunk_id": "ipr-2016:0031", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-evidence-6", "source": "pool"}
+{"chunk_id": "ipr-2017:0003", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-evidence-6", "source": "topup-v3"}
 {"chunk_id": "ipr-2017:0005", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-evidence-6", "source": "pool"}
 {"chunk_id": "ipr-2017:0022", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-evidence-6", "source": "pool"}
 {"chunk_id": "ipr-2017:0023", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-evidence-6", "source": "pool"}
@@ -2772,11 +2847,13 @@
 {"chunk_id": "ipr-2015:0031", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "pool"}
 {"chunk_id": "ipr-2016:0022", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "pool"}
 {"chunk_id": "ipr-2016:0030", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "pool"}
+{"chunk_id": "ipr-2016:0031", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "topup-v3"}
 {"chunk_id": "ipr-2016:0037", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "pool"}
 {"chunk_id": "ipr-2017:0005", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "pool"}
 {"chunk_id": "ipr-2017:0029", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "pool"}
 {"chunk_id": "ipr-2017:0030", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "pool"}
 {"chunk_id": "ipr-2017:0034", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "pool"}
+{"chunk_id": "ipr-2017:0035", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "topup-v3"}
 {"chunk_id": "ipr-2018:0015", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "pool"}
 {"chunk_id": "ipr-2018:0028", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "pool"}
 {"chunk_id": "ipr-2018:0035", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "pool"}
@@ -2794,12 +2871,15 @@
 {"chunk_id": "ipr-2020:0056", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "pool"}
 {"chunk_id": "ipr-2020:0057", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "pool"}
 {"chunk_id": "ipr-2020:0060", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "pool"}
+{"chunk_id": "ipr-2020:0071", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "topup-v3"}
 {"chunk_id": "ipr-2021:0000", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "pool"}
 {"chunk_id": "ipr-2021:0058", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "pool"}
 {"chunk_id": "ipr-2021:0059", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "pool"}
 {"chunk_id": "ipr-2021:0069", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "pool"}
+{"chunk_id": "ipr-2022:0076", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "topup-v3"}
 {"chunk_id": "ipr-2022:0079", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "pool"}
 {"chunk_id": "ipr-2022:0081", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "topup"}
+{"chunk_id": "ipr-2022:0083", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "topup-v3"}
 {"chunk_id": "ipr-2022:0084", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "pool"}
 {"chunk_id": "ipr-2023:0009", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "pool"}
 {"chunk_id": "ipr-2023:0122", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "pool"}
@@ -2911,6 +2991,7 @@
 {"chunk_id": "erp14-raising-the-bar:0026", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-methods-3", "source": "topup"}
 {"chunk_id": "erp14-raising-the-bar:0032", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-methods-3", "source": "pool"}
 {"chunk_id": "erp14-raising-the-bar:0033", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-methods-3", "source": "pool"}
+{"chunk_id": "erp14-raising-the-bar:0035", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-methods-3", "source": "topup-v3"}
 {"chunk_id": "erp14-raising-the-bar:0037", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-methods-3", "source": "topup"}
 {"chunk_id": "erp14-raising-the-bar:0038", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-methods-3", "source": "pool"}
 {"chunk_id": "erp14-raising-the-bar:0042", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-methods-3", "source": "pool"}
@@ -3065,6 +3146,7 @@
 {"chunk_id": "note-tm-leading-indicator:0000", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-methods-6", "source": "pool"}
 {"chunk_id": "note-tm-leading-indicator:0001", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-methods-6", "source": "pool"}
 {"chunk_id": "note-tm-leading-indicator:0002", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-methods-6", "source": "pool"}
+{"chunk_id": "note-tm-leading-indicator:0003", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-methods-6", "source": "topup-v3"}
 {"chunk_id": "note-tm-leading-indicator:0004", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-methods-6", "source": "pool"}
 {"chunk_id": "note-tm-leading-indicator:0005", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-methods-6", "source": "pool"}
 {"chunk_id": "note-tm-leading-indicator:0008", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-methods-6", "source": "pool"}
@@ -3123,12 +3205,15 @@
 {"chunk_id": "erp14-raising-the-bar:0023", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-2", "source": "pool"}
 {"chunk_id": "erp14-raising-the-bar:0030", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-policy-2", "source": "pool"}
 {"chunk_id": "erp14-raising-the-bar:0032", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-policy-2", "source": "pool"}
+{"chunk_id": "erp14-raising-the-bar:0038", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-policy-2", "source": "topup-v3"}
+{"chunk_id": "erp14-raising-the-bar:0042", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-policy-2", "source": "topup-v3"}
 {"chunk_id": "erp14-raising-the-bar:0043", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-policy-2", "source": "pool"}
 {"chunk_id": "erp14-raising-the-bar:0046", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-policy-2", "source": "pool"}
 {"chunk_id": "erp14-raising-the-bar:0065", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-policy-2", "source": "pool"}
 {"chunk_id": "erp14-raising-the-bar:0066", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-policy-2", "source": "pool"}
 {"chunk_id": "erp14-raising-the-bar:0067", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-policy-2", "source": "pool"}
 {"chunk_id": "erp14-raising-the-bar:0068", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-policy-2", "source": "topup"}
+{"chunk_id": "erp14-raising-the-bar:0070", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-policy-2", "source": "topup-v3"}
 {"chunk_id": "erp14-raising-the-bar:0071", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-policy-2", "source": "pool"}
 {"chunk_id": "ipr-2016:0009", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-policy-2", "source": "topup"}
 {"chunk_id": "ipr-2016:0033", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-policy-2", "source": "pool"}
@@ -3160,6 +3245,7 @@
 {"chunk_id": "erp08-designs-law-practice:0012", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-3", "source": "pool"}
 {"chunk_id": "erp08-designs-law-practice:0013", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-policy-3", "source": "pool"}
 {"chunk_id": "erp08-designs-law-practice:0014", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-policy-3", "source": "pool"}
+{"chunk_id": "erp08-designs-law-practice:0015", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-policy-3", "source": "topup-v3"}
 {"chunk_id": "erp08-designs-law-practice:0028", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-policy-3", "source": "topup"}
 {"chunk_id": "erp08-designs-law-practice:0029", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-3", "source": "pool"}
 {"chunk_id": "erp08-designs-law-practice:0032", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-3", "source": "pool"}
@@ -3187,6 +3273,7 @@
 {"chunk_id": "ipr-2022:0052", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-policy-3", "source": "pool"}
 {"chunk_id": "ipr-2023:0050", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-3", "source": "pool"}
 {"chunk_id": "ipr-2023:0052", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-policy-3", "source": "topup"}
+{"chunk_id": "ipr-2023:0053", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-3", "source": "topup-v3"}
 {"chunk_id": "ipr-2023:0056", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-3", "source": "pool"}
 {"chunk_id": "ipr-2023:0057", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-3", "source": "pool"}
 {"chunk_id": "ipr-2023:0058", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-policy-3", "source": "pool"}
@@ -3216,6 +3303,7 @@
 {"chunk_id": "erp16-cii-patent-trends:0034", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-4", "source": "pool"}
 {"chunk_id": "erp16-cii-patent-trends:0038", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-policy-4", "source": "pool"}
 {"chunk_id": "erp16-cii-patent-trends:0039", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-policy-4", "source": "pool"}
+{"chunk_id": "erp16-cii-patent-trends:0047", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-policy-4", "source": "topup-v3"}
 {"chunk_id": "erp16-cii-patent-trends:0049", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-policy-4", "source": "pool"}
 {"chunk_id": "erp16-cii-patent-trends:0055", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-policy-4", "source": "pool"}
 {"chunk_id": "erp16-cii-patent-trends:0066", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-policy-4", "source": "pool"}
@@ -3367,6 +3455,7 @@
 {"chunk_id": "ipr-2025:0063", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-policy-7", "source": "pool"}
 {"chunk_id": "ipr-2026:0041", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-policy-7", "source": "pool"}
 {"chunk_id": "ipr-2026:0062", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-policy-7", "source": "pool"}
+{"chunk_id": "ipr-2026:0069", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-policy-7", "source": "topup-v3"}
 {"chunk_id": "ipr-2026:0070", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-policy-7", "source": "pool"}
 {"chunk_id": "ipr-2026:0084", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-policy-7", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0001", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-8", "source": "pool"}
@@ -3429,6 +3518,7 @@
 {"chunk_id": "erp08-designs-law-practice:0007", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-strategy-1", "source": "pool"}
 {"chunk_id": "erp08-designs-law-practice:0008", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-strategy-1", "source": "pool"}
 {"chunk_id": "erp08-designs-law-practice:0009", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-strategy-1", "source": "pool"}
+{"chunk_id": "erp08-designs-law-practice:0010", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-1", "source": "topup-v3"}
 {"chunk_id": "erp08-designs-law-practice:0018", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-strategy-1", "source": "pool"}
 {"chunk_id": "erp08-designs-law-practice:0025", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-strategy-1", "source": "pool"}
 {"chunk_id": "erp08-designs-law-practice:0026", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-strategy-1", "source": "pool"}
@@ -3570,6 +3660,7 @@
 {"chunk_id": "erp14-raising-the-bar:0042", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-2", "source": "pool"}
 {"chunk_id": "erp14-raising-the-bar:0047", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-strategy-2", "source": "pool"}
 {"chunk_id": "erp14-raising-the-bar:0074", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-2", "source": "pool"}
+{"chunk_id": "erp15-patenting-firms:0005", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-2", "source": "topup-v3"}
 {"chunk_id": "erp15-patenting-firms:0009", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-strategy-2", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0014", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-2", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0015", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-2", "source": "pool"}
@@ -3783,6 +3874,7 @@
 {"chunk_id": "ipr-2023:0016", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-strategy-4", "source": "pilot"}
 {"chunk_id": "ipr-2023:0021", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-strategy-4", "source": "pilot"}
 {"chunk_id": "ipr-2023:0031", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-strategy-4", "source": "pilot"}
+{"chunk_id": "ipr-2023:0032", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-strategy-4", "source": "topup-v3"}
 {"chunk_id": "ipr-2023:0033", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-4", "source": "pilot"}
 {"chunk_id": "ipr-2023:0039", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-4", "source": "pilot"}
 {"chunk_id": "ipr-2023:0040", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-strategy-4", "source": "pilot"}
@@ -3873,6 +3965,7 @@
 {"chunk_id": "ipr-2017:0038", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-1", "source": "pool"}
 {"chunk_id": "ipr-2019:0003", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-1", "source": "pool"}
 {"chunk_id": "ipr-2019:0016", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-1", "source": "pool"}
+{"chunk_id": "ipr-2020:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-1", "source": "topup-v3"}
 {"chunk_id": "ipr-2020:0050", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-synthesis-1", "source": "pool"}
 {"chunk_id": "ipr-2021:0069", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-synthesis-1", "source": "pool"}
 {"chunk_id": "ipr-2022:0004", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-synthesis-1", "source": "topup"}
@@ -3903,6 +3996,7 @@
 {"chunk_id": "ipr-2026:0013", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-synthesis-1", "source": "pool"}
 {"chunk_id": "ipr-2026:0016", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-synthesis-1", "source": "pool"}
 {"chunk_id": "ipr-2026:0017", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-synthesis-1", "source": "pool"}
+{"chunk_id": "ipr-2026:0019", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-synthesis-1", "source": "topup-v3"}
 {"chunk_id": "ipr-2026:0023", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-synthesis-1", "source": "pool"}
 {"chunk_id": "ipr-2026:0078", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-1", "source": "pool"}
 {"chunk_id": "ipr-2026:0132", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-1", "source": "pool"}
@@ -4345,6 +4439,7 @@
 {"chunk_id": "erp11-exporters-trade-marks:0018", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-synthesis-7", "source": "pool"}
 {"chunk_id": "erp11-exporters-trade-marks:0077", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-synthesis-7", "source": "pool"}
 {"chunk_id": "erp11-exporters-trade-marks:0093", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-synthesis-7", "source": "pool"}
+{"chunk_id": "erp11-exporters-trade-marks:0106", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-synthesis-7", "source": "topup-v3"}
 {"chunk_id": "erp11-exporters-trade-marks:0146", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-synthesis-7", "source": "pool"}
 {"chunk_id": "erp11-exporters-trade-marks:0147", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-synthesis-7", "source": "pool"}
 {"chunk_id": "ipr-2020:0048", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-7", "source": "pool"}
@@ -4393,6 +4488,7 @@
 {"chunk_id": "erp15-patenting-firms:0060", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-8", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0078", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-8", "source": "pool"}
 {"chunk_id": "erp16-cii-patent-trends:0024", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-8", "source": "pool"}
+{"chunk_id": "erp16-cii-patent-trends:0123", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-8", "source": "topup-v3"}
 {"chunk_id": "ipr-2015:0024", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-8", "source": "pool"}
 {"chunk_id": "ipr-2015:0025", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-8", "source": "pool"}
 {"chunk_id": "ipr-2019:0007", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-8", "source": "pool"}
@@ -4411,6 +4507,7 @@
 {"chunk_id": "ipr-2024:0031", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-8", "source": "pool"}
 {"chunk_id": "ipr-2024:0039", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-synthesis-8", "source": "pool"}
 {"chunk_id": "ipr-2024:0040", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-8", "source": "pool"}
+{"chunk_id": "ipr-2024:0043", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-8", "source": "topup-v3"}
 {"chunk_id": "ipr-2024:0044", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-8", "source": "pool"}
 {"chunk_id": "ipr-2024:0046", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-synthesis-8", "source": "pool"}
 {"chunk_id": "ipr-2025:0004", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-synthesis-8", "source": "pool"}
@@ -4593,6 +4690,7 @@
 {"chunk_id": "erp16-cii-patent-trends:0014", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-11", "source": "pool"}
 {"chunk_id": "erp16-cii-patent-trends:0027", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-11", "source": "topup"}
 {"chunk_id": "erp16-cii-patent-trends:0034", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-11", "source": "pool"}
+{"chunk_id": "erp16-cii-patent-trends:0101", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-11", "source": "topup-v3"}
 {"chunk_id": "erp16-cii-patent-trends:0103", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-11", "source": "topup"}
 {"chunk_id": "erp16-cii-patent-trends:0104", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-11", "source": "topup"}
 {"chunk_id": "erp16-cii-patent-trends:0109", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-11", "source": "pool"}
@@ -4695,6 +4793,7 @@
 {"chunk_id": "ipr-2024:0070", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-trend-12", "source": "pilot"}
 {"chunk_id": "ipr-2024:0079", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-trend-12", "source": "pilot"}
 {"chunk_id": "ipr-2024:0083", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-trend-12", "source": "pilot"}
+{"chunk_id": "ipr-2024:0089", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-trend-12", "source": "topup-v3"}
 {"chunk_id": "ipr-2024:0094", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-trend-12", "source": "pilot"}
 {"chunk_id": "ipr-2025:0004", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-trend-12", "source": "pilot"}
 {"chunk_id": "ipr-2025:0029", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-trend-12", "source": "pilot"}
@@ -4747,6 +4846,7 @@
 {"chunk_id": "ipr-2023:0032", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-trend-2", "source": "pool"}
 {"chunk_id": "ipr-2023:0035", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-trend-2", "source": "pool"}
 {"chunk_id": "ipr-2023:0040", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-trend-2", "source": "pool"}
+{"chunk_id": "ipr-2023:0044", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-trend-2", "source": "topup-v3"}
 {"chunk_id": "ipr-2024:0061", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-trend-2", "source": "pool"}
 {"chunk_id": "ipr-2024:0063", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-trend-2", "source": "pool"}
 {"chunk_id": "ipr-2024:0064", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-trend-2", "source": "pool"}
@@ -4772,6 +4872,7 @@
 {"chunk_id": "ipr-2017:0009", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-trend-3", "source": "pool"}
 {"chunk_id": "ipr-2017:0010", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-trend-3", "source": "pool"}
 {"chunk_id": "ipr-2017:0011", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-3", "source": "pool"}
+{"chunk_id": "ipr-2017:0039", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-3", "source": "topup-v3"}
 {"chunk_id": "ipr-2018:0006", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-trend-3", "source": "pool"}
 {"chunk_id": "ipr-2018:0007", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-trend-3", "source": "topup"}
 {"chunk_id": "ipr-2018:0009", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-trend-3", "source": "pool"}
@@ -4899,11 +5000,14 @@
 {"chunk_id": "ipr-2022:0003", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-trend-6", "source": "pool"}
 {"chunk_id": "ipr-2022:0054", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-trend-6", "source": "pool"}
 {"chunk_id": "ipr-2022:0055", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-trend-6", "source": "pool"}
+{"chunk_id": "ipr-2022:0059", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-trend-6", "source": "topup-v3"}
 {"chunk_id": "ipr-2022:0062", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-trend-6", "source": "pool"}
 {"chunk_id": "ipr-2023:0064", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-6", "source": "pool"}
+{"chunk_id": "ipr-2023:0065", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-trend-6", "source": "topup-v3"}
 {"chunk_id": "ipr-2023:0069", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-trend-6", "source": "pool"}
 {"chunk_id": "ipr-2023:0072", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-6", "source": "pool"}
 {"chunk_id": "ipr-2023:0074", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-trend-6", "source": "pool"}
+{"chunk_id": "ipr-2023:0075", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-trend-6", "source": "topup-v3"}
 {"chunk_id": "ipr-2024:0006", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-trend-6", "source": "topup"}
 {"chunk_id": "ipr-2024:0098", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-trend-6", "source": "pool"}
 {"chunk_id": "ipr-2024:0100", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-trend-6", "source": "pool"}
@@ -4964,6 +5068,7 @@
 {"chunk_id": "erp14-raising-the-bar:0018", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-8", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0056", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-8", "source": "pool"}
 {"chunk_id": "ipr-2015:0011", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-trend-8", "source": "pool"}
+{"chunk_id": "ipr-2015:0012", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-trend-8", "source": "topup-v3"}
 {"chunk_id": "ipr-2016:0006", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-8", "source": "topup"}
 {"chunk_id": "ipr-2016:0008", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-trend-8", "source": "pool"}
 {"chunk_id": "ipr-2016:0034", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-trend-8", "source": "pool"}
@@ -5045,6 +5150,7 @@
 {"chunk_id": "ipr-2026:0042", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-trend-9", "source": "pilot"}
 {"chunk_id": "ipr-2026:0056", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-9", "source": "pilot"}
 {"chunk_id": "erp01-patent-backlogs:0011", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-1", "source": "pool"}
+{"chunk_id": "erp01-patent-backlogs:0036", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-1", "source": "topup-v3"}
 {"chunk_id": "erp14-raising-the-bar:0022", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr15-1", "source": "topup"}
 {"chunk_id": "erp15-patenting-firms:0018", "grade": 2, "judge": "gemini-3.8-flash", "need": "ipr15-1", "source": "pool"}
 {"chunk_id": "erp16-cii-patent-trends:0038", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-1", "source": "pool"}
@@ -5145,6 +5251,7 @@
 {"chunk_id": "ipr-2024:0042", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-2", "source": "pool"}
 {"chunk_id": "ipr-2024:0122", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-2", "source": "pool"}
 {"chunk_id": "ipr-2024:0123", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-2", "source": "topup"}
+{"chunk_id": "ipr-2025:0008", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-2", "source": "topup-v3"}
 {"chunk_id": "ipr-2025:0010", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-2", "source": "pool"}
 {"chunk_id": "ipr-2025:0023", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-2", "source": "topup"}
 {"chunk_id": "ipr-2025:0096", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-2", "source": "topup"}
@@ -5187,6 +5294,7 @@
 {"chunk_id": "ipr-2022:0000", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-3", "source": "pool"}
 {"chunk_id": "ipr-2022:0003", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-3", "source": "pool"}
 {"chunk_id": "ipr-2022:0008", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-3", "source": "pool"}
+{"chunk_id": "ipr-2022:0054", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr15-3", "source": "topup-v3"}
 {"chunk_id": "ipr-2022:0076", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-3", "source": "pool"}
 {"chunk_id": "ipr-2022:0083", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-3", "source": "pool"}
 {"chunk_id": "ipr-2023:0001", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr15-3", "source": "pool"}
@@ -5197,6 +5305,7 @@
 {"chunk_id": "ipr-2025:0001", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-3", "source": "pool"}
 {"chunk_id": "ipr-2026:0002", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-3", "source": "pool"}
 {"chunk_id": "ipr-2026:0003", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-3", "source": "pool"}
+{"chunk_id": "ipr-2026:0014", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-3", "source": "topup-v3"}
 {"chunk_id": "note-patenting-structural-change:0001", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-3", "source": "pool"}
 {"chunk_id": "note-patenting-structural-change:0003", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-3", "source": "pool"}
 {"chunk_id": "note-patenting-structural-change:0008", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-3", "source": "topup"}
@@ -5214,10 +5323,12 @@
 {"chunk_id": "erp03-market-for-design:0072", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-4", "source": "topup"}
 {"chunk_id": "erp10-ip-profitability-competition:0013", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-4", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0068", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr15-4", "source": "pool"}
+{"chunk_id": "erp10-ip-profitability-competition:0088", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-4", "source": "topup-v3"}
 {"chunk_id": "erp10-ip-profitability-competition:0089", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-4", "source": "topup"}
 {"chunk_id": "erp10-ip-profitability-competition:0098", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-4", "source": "pool"}
 {"chunk_id": "erp11-exporters-trade-marks:0002", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-4", "source": "pool"}
 {"chunk_id": "erp11-exporters-trade-marks:0017", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr15-4", "source": "topup"}
+{"chunk_id": "erp11-exporters-trade-marks:0022", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-4", "source": "topup-v3"}
 {"chunk_id": "erp11-exporters-trade-marks:0106", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-4", "source": "pool"}
 {"chunk_id": "erp14-raising-the-bar:0064", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-4", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0015", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-4", "source": "pool"}
@@ -5485,6 +5596,7 @@
 {"chunk_id": "ipr-2022:0070", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-3", "source": "pool"}
 {"chunk_id": "ipr-2022:0073", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-3", "source": "pool"}
 {"chunk_id": "ipr-2022:0077", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-3", "source": "pool"}
+{"chunk_id": "ipr-2022:0078", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-3", "source": "topup-v3"}
 {"chunk_id": "ipr-2022:0080", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-3", "source": "pool"}
 {"chunk_id": "ipr-2023:0005", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-3", "source": "pool"}
 {"chunk_id": "ipr-2023:0025", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr16-3", "source": "pool"}
@@ -5554,6 +5666,7 @@
 {"chunk_id": "ipr-2022:0056", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-5", "source": "topup"}
 {"chunk_id": "ipr-2022:0057", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-5", "source": "pool"}
 {"chunk_id": "ipr-2023:0064", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-5", "source": "pool"}
+{"chunk_id": "ipr-2023:0065", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-5", "source": "topup-v3"}
 {"chunk_id": "ipr-2023:0066", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-5", "source": "topup"}
 {"chunk_id": "ipr-2023:0067", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-5", "source": "pool"}
 {"chunk_id": "ipr-2023:0069", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-5", "source": "pool"}
@@ -5604,7 +5717,9 @@
 {"chunk_id": "ipr-2025:0028", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-1", "source": "pool"}
 {"chunk_id": "ipr-2026:0037", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-1", "source": "pool"}
 {"chunk_id": "ipr-2026:0101", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-1", "source": "pool"}
+{"chunk_id": "ipr-2026:0102", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-1", "source": "topup-v3"}
 {"chunk_id": "ipr-2015:0010", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-2", "source": "pool"}
+{"chunk_id": "ipr-2016:0010", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-2", "source": "topup-v3"}
 {"chunk_id": "ipr-2016:0011", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-2", "source": "pool"}
 {"chunk_id": "ipr-2016:0013", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-2", "source": "topup"}
 {"chunk_id": "ipr-2016:0014", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-2", "source": "pool"}
@@ -5644,6 +5759,7 @@
 {"chunk_id": "ipr-2025:0050", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-2", "source": "pool"}
 {"chunk_id": "ipr-2025:0052", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-2", "source": "pool"}
 {"chunk_id": "ipr-2025:0063", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-2", "source": "pool"}
+{"chunk_id": "ipr-2026:0005", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-2", "source": "topup-v3"}
 {"chunk_id": "ipr-2026:0006", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-2", "source": "pool"}
 {"chunk_id": "ipr-2026:0067", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-2", "source": "pool"}
 {"chunk_id": "ipr-2026:0070", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-2", "source": "pool"}
@@ -5658,6 +5774,7 @@
 {"chunk_id": "ipr-2018:0022", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-3", "source": "topup"}
 {"chunk_id": "ipr-2018:0023", "grade": 3, "judge": "gemini-3.8-flash", "need": "ipr17-3", "source": "topup"}
 {"chunk_id": "ipr-2019:0022", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-3", "source": "pool"}
+{"chunk_id": "ipr-2019:0023", "grade": 3, "judge": "gemini-3.8-flash", "need": "ipr17-3", "source": "topup-v3"}
 {"chunk_id": "ipr-2019:0025", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-3", "source": "pool"}
 {"chunk_id": "ipr-2019:0026", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-3", "source": "topup"}
 {"chunk_id": "ipr-2020:0030", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-3", "source": "pool"}
@@ -5726,6 +5843,7 @@
 {"chunk_id": "ipr-2026:0040", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-4", "source": "pool"}
 {"chunk_id": "ipr-2026:0055", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-4", "source": "pool"}
 {"chunk_id": "ipr-2026:0056", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-4", "source": "topup"}
+{"chunk_id": "ipr-2026:0061", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-4", "source": "topup-v3"}
 {"chunk_id": "ipr-2026:0108", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-4", "source": "pool"}
 {"chunk_id": "erp01-patent-backlogs:0000", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr17-5", "source": "pool"}
 {"chunk_id": "erp03-market-for-design:0001", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr17-5", "source": "topup"}
@@ -5780,10 +5898,12 @@
 {"chunk_id": "ipr-2021:0057", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-1", "source": "pool"}
 {"chunk_id": "ipr-2022:0000", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr18-1", "source": "topup"}
 {"chunk_id": "ipr-2022:0001", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-1", "source": "pool"}
+{"chunk_id": "ipr-2022:0066", "grade": 3, "judge": "gemini-3.8-flash", "need": "ipr18-1", "source": "topup-v3"}
 {"chunk_id": "ipr-2022:0067", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr18-1", "source": "pool"}
 {"chunk_id": "ipr-2022:0075", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-1", "source": "pool"}
 {"chunk_id": "ipr-2023:0077", "grade": 2, "judge": "gemini-3.8-flash", "need": "ipr18-1", "source": "pool"}
 {"chunk_id": "ipr-2023:0078", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr18-1", "source": "pool"}
+{"chunk_id": "ipr-2023:0079", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-1", "source": "topup-v3"}
 {"chunk_id": "ipr-2023:0084", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-1", "source": "pool"}
 {"chunk_id": "ipr-2024:0002", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr18-1", "source": "pool"}
 {"chunk_id": "ipr-2024:0006", "grade": 2, "judge": "gemini-3.8-flash", "need": "ipr18-1", "source": "pool"}
@@ -5798,6 +5918,7 @@
 {"chunk_id": "ipr-2025:0085", "grade": 2, "judge": "gemini-3.8-flash", "need": "ipr18-1", "source": "pool"}
 {"chunk_id": "ipr-2025:0086", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-1", "source": "pool"}
 {"chunk_id": "ipr-2025:0088", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-1", "source": "pool"}
+{"chunk_id": "ipr-2025:0089", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-1", "source": "topup-v3"}
 {"chunk_id": "ipr-2025:0090", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-1", "source": "pool"}
 {"chunk_id": "ipr-2025:0093", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-1", "source": "pool"}
 {"chunk_id": "ipr-2025:0100", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-1", "source": "topup"}
@@ -5860,6 +5981,7 @@
 {"chunk_id": "erp10-ip-profitability-competition:0068", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-3", "source": "pool"}
 {"chunk_id": "erp11-exporters-trade-marks:0017", "grade": 2, "judge": "gemini-3.8-flash", "need": "ipr18-3", "source": "pool"}
 {"chunk_id": "erp11-exporters-trade-marks:0022", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-3", "source": "pool"}
+{"chunk_id": "erp11-exporters-trade-marks:0029", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-3", "source": "topup-v3"}
 {"chunk_id": "ipr-2015:0029", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-3", "source": "topup"}
 {"chunk_id": "ipr-2017:0030", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr18-3", "source": "pool"}
 {"chunk_id": "ipr-2018:0015", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-3", "source": "topup"}
@@ -5884,6 +6006,7 @@
 {"chunk_id": "ipr-2026:0069", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-3", "source": "pool"}
 {"chunk_id": "ipr-2026:0073", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-3", "source": "topup"}
 {"chunk_id": "ipr-2026:0077", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-3", "source": "pool"}
+{"chunk_id": "ipr-2026:0093", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-3", "source": "topup-v3"}
 {"chunk_id": "ipr-2026:0097", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-3", "source": "pool"}
 {"chunk_id": "note-tm-leading-indicator:0003", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-3", "source": "pool"}
 {"chunk_id": "note-tm-leading-indicator:0004", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-3", "source": "pool"}
@@ -5894,6 +6017,7 @@
 {"chunk_id": "ipr-2015:0013", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-4", "source": "topup"}
 {"chunk_id": "ipr-2015:0016", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-4", "source": "pool"}
 {"chunk_id": "ipr-2015:0029", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-4", "source": "pool"}
+{"chunk_id": "ipr-2016:0012", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-4", "source": "topup-v3"}
 {"chunk_id": "ipr-2016:0013", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-4", "source": "pool"}
 {"chunk_id": "ipr-2016:0014", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-4", "source": "pool"}
 {"chunk_id": "ipr-2017:0016", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-4", "source": "pool"}
@@ -5954,6 +6078,7 @@
 {"chunk_id": "ipr-2018:0029", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr18-5", "source": "pool"}
 {"chunk_id": "ipr-2018:0045", "grade": 2, "judge": "gemini-3.8-flash", "need": "ipr18-5", "source": "pool"}
 {"chunk_id": "ipr-2018:0046", "grade": 2, "judge": "gemini-3.8-flash", "need": "ipr18-5", "source": "pool"}
+{"chunk_id": "ipr-2022:0013", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-5", "source": "topup-v3"}
 {"chunk_id": "ipr-2024:0003", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-5", "source": "pool"}
 {"chunk_id": "ipr-2024:0009", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-5", "source": "pool"}
 {"chunk_id": "ipr-2024:0018", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-5", "source": "topup"}
@@ -6023,6 +6148,7 @@
 {"chunk_id": "ipr-2024:0085", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-2", "source": "pool"}
 {"chunk_id": "ipr-2024:0087", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-2", "source": "pool"}
 {"chunk_id": "ipr-2024:0090", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-2", "source": "pool"}
+{"chunk_id": "ipr-2024:0091", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-2", "source": "topup-v3"}
 {"chunk_id": "ipr-2025:0004", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-2", "source": "pool"}
 {"chunk_id": "ipr-2025:0064", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-2", "source": "pool"}
 {"chunk_id": "ipr-2025:0066", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-2", "source": "pool"}
@@ -6039,6 +6165,7 @@
 {"chunk_id": "ipr-2017:0017", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-3", "source": "pool"}
 {"chunk_id": "ipr-2018:0020", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-3", "source": "pool"}
 {"chunk_id": "ipr-2018:0043", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-3", "source": "pool"}
+{"chunk_id": "ipr-2019:0006", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-3", "source": "topup-v3"}
 {"chunk_id": "ipr-2019:0019", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr19-3", "source": "pool"}
 {"chunk_id": "ipr-2019:0020", "grade": 3, "judge": "gemini-3.8-flash", "need": "ipr19-3", "source": "pool"}
 {"chunk_id": "ipr-2019:0039", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-3", "source": "topup"}
@@ -6057,6 +6184,7 @@
 {"chunk_id": "ipr-2021:0041", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-3", "source": "pool"}
 {"chunk_id": "ipr-2022:0044", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-3", "source": "topup"}
 {"chunk_id": "ipr-2022:0046", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-3", "source": "pool"}
+{"chunk_id": "ipr-2022:0047", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-3", "source": "topup-v3"}
 {"chunk_id": "ipr-2022:0048", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-3", "source": "topup"}
 {"chunk_id": "ipr-2022:0050", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-3", "source": "pool"}
 {"chunk_id": "ipr-2022:0051", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-3", "source": "pool"}
@@ -6095,11 +6223,13 @@
 {"chunk_id": "erp08-designs-law-practice:0033", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr19-4", "source": "pool"}
 {"chunk_id": "erp08-designs-law-practice:0034", "grade": 2, "judge": "gemini-3.8-flash", "need": "ipr19-4", "source": "pool"}
 {"chunk_id": "erp08-designs-law-practice:0035", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr19-4", "source": "pool"}
+{"chunk_id": "erp08-designs-law-practice:0041", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr19-4", "source": "topup-v3"}
 {"chunk_id": "erp08-designs-law-practice:0047", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-4", "source": "pool"}
 {"chunk_id": "erp08-designs-law-practice:0048", "grade": 2, "judge": "gemini-3.8-flash", "need": "ipr19-4", "source": "pool"}
 {"chunk_id": "ipr-2016:0015", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr19-4", "source": "pool"}
 {"chunk_id": "ipr-2016:0016", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr19-4", "source": "topup"}
 {"chunk_id": "ipr-2017:0017", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-4", "source": "pool"}
+{"chunk_id": "ipr-2017:0019", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-4", "source": "topup-v3"}
 {"chunk_id": "ipr-2018:0019", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-4", "source": "pool"}
 {"chunk_id": "ipr-2018:0020", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-4", "source": "topup"}
 {"chunk_id": "ipr-2019:0020", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr19-4", "source": "pool"}
@@ -6131,6 +6261,7 @@
 {"chunk_id": "ipr-2017:0008", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-5", "source": "pool"}
 {"chunk_id": "ipr-2018:0006", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-5", "source": "pool"}
 {"chunk_id": "ipr-2018:0011", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-5", "source": "pool"}
+{"chunk_id": "ipr-2019:0005", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-5", "source": "topup-v3"}
 {"chunk_id": "ipr-2019:0006", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-5", "source": "pool"}
 {"chunk_id": "ipr-2019:0007", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-5", "source": "topup"}
 {"chunk_id": "ipr-2019:0048", "grade": 3, "judge": "gemini-3.8-flash", "need": "ipr19-5", "source": "pool"}
@@ -6182,6 +6313,7 @@
 {"chunk_id": "ipr-2019:0007", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-1", "source": "pool"}
 {"chunk_id": "ipr-2019:0008", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-1", "source": "pool"}
 {"chunk_id": "ipr-2019:0009", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-1", "source": "pool"}
+{"chunk_id": "ipr-2019:0013", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-1", "source": "topup-v3"}
 {"chunk_id": "ipr-2020:0003", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-1", "source": "pool"}
 {"chunk_id": "ipr-2020:0005", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-1", "source": "pool"}
 {"chunk_id": "ipr-2020:0007", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-1", "source": "pool"}
@@ -6218,6 +6350,7 @@
 {"chunk_id": "ipr-2025:0040", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-1", "source": "pool"}
 {"chunk_id": "ipr-2026:0038", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-1", "source": "pool"}
 {"chunk_id": "ipr-2026:0053", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-1", "source": "pool"}
+{"chunk_id": "ipr-2026:0054", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-1", "source": "topup-v3"}
 {"chunk_id": "ipr-2026:0056", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-1", "source": "pool"}
 {"chunk_id": "ipr-2026:0103", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-1", "source": "pool"}
 {"chunk_id": "erp01-patent-backlogs:0033", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-2", "source": "topup"}
@@ -6306,6 +6439,7 @@
 {"chunk_id": "erp10-ip-profitability-competition:0006", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-4", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0007", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-4", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0008", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-4", "source": "pool"}
+{"chunk_id": "erp10-ip-profitability-competition:0011", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-4", "source": "topup-v3"}
 {"chunk_id": "erp10-ip-profitability-competition:0015", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr20-4", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0026", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-4", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0028", "grade": 3, "judge": "gemini-3.8-flash", "need": "ipr20-4", "source": "pool"}
@@ -6320,6 +6454,7 @@
 {"chunk_id": "erp10-ip-profitability-competition:0068", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-4", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0069", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-4", "source": "topup"}
 {"chunk_id": "erp10-ip-profitability-competition:0072", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-4", "source": "pool"}
+{"chunk_id": "erp10-ip-profitability-competition:0108", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-4", "source": "topup-v3"}
 {"chunk_id": "ipr-2020:0048", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-4", "source": "pool"}
 {"chunk_id": "ipr-2020:0050", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr20-4", "source": "pool"}
 {"chunk_id": "ipr-2020:0051", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-4", "source": "topup"}
@@ -6389,6 +6524,7 @@
 {"chunk_id": "ipr-2026:0040", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-5", "source": "topup"}
 {"chunk_id": "ipr-2026:0079", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-5", "source": "pool"}
 {"chunk_id": "ipr-2026:0130", "grade": 3, "judge": "gemini-3.8-flash", "need": "ipr20-5", "source": "pool"}
+{"chunk_id": "ipr-2026:0131", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-5", "source": "topup-v3"}
 {"chunk_id": "erp15-patenting-firms:0078", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-1", "source": "pool"}
 {"chunk_id": "erp16-cii-patent-trends:0010", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-1", "source": "pool"}
 {"chunk_id": "ipr-2015:0007", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-1", "source": "pool"}
@@ -6440,6 +6576,7 @@
 {"chunk_id": "ipr-2019:0020", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-2", "source": "pool"}
 {"chunk_id": "ipr-2020:0003", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-2", "source": "pool"}
 {"chunk_id": "ipr-2020:0026", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-2", "source": "pool"}
+{"chunk_id": "ipr-2020:0043", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-2", "source": "topup-v3"}
 {"chunk_id": "ipr-2021:0008", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-2", "source": "pool"}
 {"chunk_id": "ipr-2021:0009", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-2", "source": "pool"}
 {"chunk_id": "ipr-2021:0034", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-2", "source": "pool"}
@@ -6464,6 +6601,7 @@
 {"chunk_id": "ipr-2023:0063", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-2", "source": "topup"}
 {"chunk_id": "ipr-2024:0089", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-2", "source": "pool"}
 {"chunk_id": "ipr-2024:0092", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-2", "source": "pool"}
+{"chunk_id": "ipr-2024:0093", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-2", "source": "topup-v3"}
 {"chunk_id": "ipr-2024:0094", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-2", "source": "pool"}
 {"chunk_id": "ipr-2025:0052", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-2", "source": "pool"}
 {"chunk_id": "ipr-2025:0068", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-2", "source": "pool"}
@@ -6516,6 +6654,7 @@
 {"chunk_id": "ipr-2021:0012", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-4", "source": "pool"}
 {"chunk_id": "ipr-2021:0034", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-4", "source": "pool"}
 {"chunk_id": "ipr-2021:0035", "grade": 3, "judge": "gemini-3.8-flash", "need": "ipr21-4", "source": "pool"}
+{"chunk_id": "ipr-2021:0036", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-4", "source": "topup-v3"}
 {"chunk_id": "ipr-2021:0037", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-4", "source": "pool"}
 {"chunk_id": "ipr-2021:0040", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr21-4", "source": "pool"}
 {"chunk_id": "ipr-2021:0041", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-4", "source": "pool"}
@@ -6544,10 +6683,12 @@
 {"chunk_id": "erp15-patenting-firms:0018", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-1", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0021", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-1", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0024", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-1", "source": "pool"}
+{"chunk_id": "erp15-patenting-firms:0056", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-1", "source": "topup-v3"}
 {"chunk_id": "erp15-patenting-firms:0067", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-1", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0076", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-1", "source": "pool"}
 {"chunk_id": "ipr-2016:0021", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-1", "source": "pool"}
 {"chunk_id": "ipr-2020:0013", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr22-1", "source": "topup"}
+{"chunk_id": "ipr-2021:0005", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-1", "source": "topup-v3"}
 {"chunk_id": "ipr-2021:0006", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr22-1", "source": "pool"}
 {"chunk_id": "ipr-2021:0015", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-1", "source": "pool"}
 {"chunk_id": "ipr-2021:0069", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-1", "source": "pool"}
@@ -6576,6 +6717,7 @@
 {"chunk_id": "ipr-2024:0019", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-1", "source": "pool"}
 {"chunk_id": "ipr-2024:0051", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr22-1", "source": "pool"}
 {"chunk_id": "ipr-2024:0058", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-1", "source": "pool"}
+{"chunk_id": "ipr-2024:0072", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-1", "source": "topup-v3"}
 {"chunk_id": "ipr-2024:0090", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-1", "source": "pool"}
 {"chunk_id": "ipr-2025:0007", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-1", "source": "pool"}
 {"chunk_id": "ipr-2025:0028", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr22-1", "source": "pool"}
@@ -6587,6 +6729,7 @@
 {"chunk_id": "note-patenting-structural-change:0001", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-1", "source": "pool"}
 {"chunk_id": "note-patenting-structural-change:0004", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-1", "source": "pool"}
 {"chunk_id": "note-patenting-structural-change:0005", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-1", "source": "pool"}
+{"chunk_id": "note-patenting-structural-change:0006", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-1", "source": "topup-v3"}
 {"chunk_id": "note-patenting-structural-change:0007", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-1", "source": "topup"}
 {"chunk_id": "note-patenting-structural-change:0009", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr22-1", "source": "topup"}
 {"chunk_id": "note-tm-leading-indicator:0005", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-1", "source": "pool"}
@@ -6695,6 +6838,7 @@
 {"chunk_id": "ipr-2025:0047", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-3", "source": "pool"}
 {"chunk_id": "ipr-2025:0052", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-3", "source": "pool"}
 {"chunk_id": "ipr-2025:0063", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-3", "source": "pool"}
+{"chunk_id": "ipr-2025:0068", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr22-3", "source": "topup-v3"}
 {"chunk_id": "ipr-2025:0069", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-3", "source": "pool"}
 {"chunk_id": "ipr-2025:0080", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-3", "source": "pool"}
 {"chunk_id": "ipr-2026:0006", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-3", "source": "pool"}
@@ -6736,6 +6880,7 @@
 {"chunk_id": "ipr-2019:0041", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-4", "source": "pool"}
 {"chunk_id": "ipr-2019:0044", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-4", "source": "pool"}
 {"chunk_id": "ipr-2020:0015", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-4", "source": "pool"}
+{"chunk_id": "ipr-2020:0024", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-4", "source": "topup-v3"}
 {"chunk_id": "ipr-2020:0025", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-4", "source": "pool"}
 {"chunk_id": "ipr-2020:0026", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-4", "source": "topup"}
 {"chunk_id": "ipr-2021:0002", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-4", "source": "pool"}
@@ -6771,8 +6916,10 @@
 {"chunk_id": "erp15-patenting-firms:0006", "grade": 2, "judge": "gemini-3.8-flash", "need": "ipr22-5", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0020", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-5", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0021", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-5", "source": "pool"}
+{"chunk_id": "erp15-patenting-firms:0022", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-5", "source": "topup-v3"}
 {"chunk_id": "erp15-patenting-firms:0024", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-5", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0025", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-5", "source": "pool"}
+{"chunk_id": "erp15-patenting-firms:0026", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-5", "source": "topup-v3"}
 {"chunk_id": "erp15-patenting-firms:0027", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-5", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0030", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-5", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0035", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-5", "source": "topup"}
@@ -6785,8 +6932,10 @@
 {"chunk_id": "erp15-patenting-firms:0047", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-5", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-5", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0050", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-5", "source": "pool"}
+{"chunk_id": "erp15-patenting-firms:0052", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-5", "source": "topup-v3"}
 {"chunk_id": "erp15-patenting-firms:0056", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-5", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0069", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-5", "source": "pool"}
+{"chunk_id": "erp15-patenting-firms:0071", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-5", "source": "topup-v3"}
 {"chunk_id": "erp15-patenting-firms:0072", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-5", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0075", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-5", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0076", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-5", "source": "pool"}
@@ -6840,6 +6989,7 @@
 {"chunk_id": "ipr-2020:0021", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr23-1", "source": "pool"}
 {"chunk_id": "ipr-2020:0033", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr23-1", "source": "pool"}
 {"chunk_id": "ipr-2020:0036", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr23-1", "source": "pool"}
+{"chunk_id": "ipr-2020:0037", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr23-1", "source": "topup-v3"}
 {"chunk_id": "ipr-2020:0038", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr23-1", "source": "pool"}
 {"chunk_id": "ipr-2020:0045", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr23-1", "source": "topup"}
 {"chunk_id": "ipr-2021:0000", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr23-1", "source": "pool"}
@@ -6867,6 +7017,7 @@
 {"chunk_id": "ipr-2023:0020", "grade": 2, "judge": "gemini-3.8-flash", "need": "ipr23-1", "source": "pool"}
 {"chunk_id": "ipr-2023:0021", "grade": 3, "judge": "gemini-3.8-flash", "need": "ipr23-1", "source": "pool"}
 {"chunk_id": "ipr-2023:0022", "grade": 2, "judge": "gemini-3.8-flash", "need": "ipr23-1", "source": "pool"}
+{"chunk_id": "ipr-2023:0023", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr23-1", "source": "topup-v3"}
 {"chunk_id": "ipr-2023:0024", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr23-1", "source": "pool"}
 {"chunk_id": "ipr-2024:0041", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr23-1", "source": "pool"}
 {"chunk_id": "ipr-2024:0043", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr23-1", "source": "pool"}
@@ -6929,6 +7080,7 @@
 {"chunk_id": "ipr-2019:0044", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr23-3", "source": "pool"}
 {"chunk_id": "ipr-2020:0025", "grade": 3, "judge": "gemini-3.8-flash", "need": "ipr23-3", "source": "pool"}
 {"chunk_id": "ipr-2020:0026", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr23-3", "source": "pool"}
+{"chunk_id": "ipr-2020:0043", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr23-3", "source": "topup-v3"}
 {"chunk_id": "ipr-2021:0008", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr23-3", "source": "pool"}
 {"chunk_id": "ipr-2021:0035", "grade": 3, "judge": "gemini-3.8-flash", "need": "ipr23-3", "source": "pool"}
 {"chunk_id": "ipr-2021:0038", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr23-3", "source": "pool"}
@@ -6939,6 +7091,7 @@
 {"chunk_id": "ipr-2022:0044", "grade": 3, "judge": "gemini-3.8-flash", "need": "ipr23-3", "source": "pool"}
 {"chunk_id": "ipr-2022:0045", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr23-3", "source": "pool"}
 {"chunk_id": "ipr-2022:0046", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr23-3", "source": "pool"}
+{"chunk_id": "ipr-2022:0047", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr23-3", "source": "topup-v3"}
 {"chunk_id": "ipr-2022:0050", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr23-3", "source": "topup"}
 {"chunk_id": "ipr-2022:0051", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr23-3", "source": "pool"}
 {"chunk_id": "ipr-2022:0052", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr23-3", "source": "pool"}
@@ -7035,6 +7188,7 @@
 {"chunk_id": "oce-ai-investment:0019", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr23-5", "source": "pool"}
 {"chunk_id": "oce-ai-investment:0025", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr23-5", "source": "topup"}
 {"chunk_id": "oce-ai-investment:0031", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr23-5", "source": "pool"}
+{"chunk_id": "oce-ai-investment:0034", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr23-5", "source": "topup-v3"}
 {"chunk_id": "oce-ai-investment:0037", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr23-5", "source": "pool"}
 {"chunk_id": "oce-ai-investment:0038", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr23-5", "source": "pool"}
 {"chunk_id": "oce-ai-investment:0039", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr23-5", "source": "pool"}
@@ -7042,6 +7196,9 @@
 {"chunk_id": "oce-ai-investment:0045", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr23-5", "source": "pool"}
 {"chunk_id": "oce-ai-investment:0047", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr23-5", "source": "pool"}
 {"chunk_id": "oce-ai-investment:0048", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr23-5", "source": "pool"}
+{"chunk_id": "oce-ai-investment:0056", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr23-5", "source": "topup-v3"}
+{"chunk_id": "oce-ai-investment:0060", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr23-5", "source": "topup-v3"}
+{"chunk_id": "oce-ai-investment:0061", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr23-5", "source": "topup-v3"}
 {"chunk_id": "oce-ai-investment:0065", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr23-5", "source": "pool"}
 {"chunk_id": "oce-ai-investment:0066", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr23-5", "source": "pool"}
 {"chunk_id": "oce-ai-investment:0068", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr23-5", "source": "pool"}
@@ -7165,9 +7322,11 @@
 {"chunk_id": "ipr-2022:0065", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr24-4", "source": "pool"}
 {"chunk_id": "ipr-2022:0066", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr24-4", "source": "pool"}
 {"chunk_id": "ipr-2022:0067", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr24-4", "source": "pool"}
+{"chunk_id": "ipr-2022:0069", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr24-4", "source": "topup-v3"}
 {"chunk_id": "ipr-2022:0070", "grade": 3, "judge": "gemini-3.8-flash", "need": "ipr24-4", "source": "pool"}
 {"chunk_id": "ipr-2022:0075", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr24-4", "source": "pool"}
 {"chunk_id": "ipr-2023:0077", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr24-4", "source": "topup"}
+{"chunk_id": "ipr-2023:0078", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr24-4", "source": "topup-v3"}
 {"chunk_id": "ipr-2023:0079", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr24-4", "source": "topup"}
 {"chunk_id": "ipr-2023:0080", "grade": 3, "judge": "gemini-3.8-flash", "need": "ipr24-4", "source": "pool"}
 {"chunk_id": "ipr-2023:0084", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr24-4", "source": "pool"}
@@ -7204,6 +7363,7 @@
 {"chunk_id": "ipr-2022:0008", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr24-5", "source": "pool"}
 {"chunk_id": "ipr-2022:0014", "grade": 2, "judge": "gemini-3.8-flash", "need": "ipr24-5", "source": "pool"}
 {"chunk_id": "ipr-2022:0015", "grade": 3, "judge": "gemini-3.8-flash", "need": "ipr24-5", "source": "pool"}
+{"chunk_id": "ipr-2022:0019", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr24-5", "source": "topup-v3"}
 {"chunk_id": "ipr-2022:0020", "grade": 2, "judge": "gemini-3.8-flash", "need": "ipr24-5", "source": "pool"}
 {"chunk_id": "ipr-2022:0086", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr24-5", "source": "pool"}
 {"chunk_id": "ipr-2023:0005", "grade": 2, "judge": "gemini-3.8-flash", "need": "ipr24-5", "source": "pool"}
@@ -7233,6 +7393,7 @@
 {"chunk_id": "ipr-2026:0033", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr24-5", "source": "pool"}
 {"chunk_id": "ipr-2026:0042", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr24-5", "source": "pool"}
 {"chunk_id": "ipr-2026:0056", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr24-5", "source": "pool"}
+{"chunk_id": "note-patenting-structural-change:0003", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr24-5", "source": "topup-v3"}
 {"chunk_id": "note-patenting-structural-change:0005", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr24-5", "source": "pool"}
 {"chunk_id": "erp01-patent-backlogs:0031", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-1", "source": "pool"}
 {"chunk_id": "erp04-mining-innovation:0021", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr25-1", "source": "topup"}
@@ -7293,6 +7454,7 @@
 {"chunk_id": "erp08-designs-law-practice:0001", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-2", "source": "topup"}
 {"chunk_id": "erp08-designs-law-practice:0003", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-2", "source": "pool"}
 {"chunk_id": "erp08-designs-law-practice:0006", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-2", "source": "pool"}
+{"chunk_id": "erp08-designs-law-practice:0010", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-2", "source": "topup-v3"}
 {"chunk_id": "erp08-designs-law-practice:0012", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-2", "source": "pool"}
 {"chunk_id": "erp08-designs-law-practice:0013", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-2", "source": "pool"}
 {"chunk_id": "erp08-designs-law-practice:0014", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-2", "source": "pool"}
@@ -7300,6 +7462,8 @@
 {"chunk_id": "erp08-designs-law-practice:0016", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-2", "source": "pool"}
 {"chunk_id": "erp08-designs-law-practice:0017", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-2", "source": "pool"}
 {"chunk_id": "erp08-designs-law-practice:0029", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-2", "source": "pool"}
+{"chunk_id": "erp08-designs-law-practice:0041", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-2", "source": "topup-v3"}
+{"chunk_id": "erp08-designs-law-practice:0043", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-2", "source": "topup-v3"}
 {"chunk_id": "erp08-designs-law-practice:0047", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-2", "source": "pool"}
 {"chunk_id": "erp08-designs-law-practice:0054", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-2", "source": "pool"}
 {"chunk_id": "ipr-2016:0017", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-2", "source": "topup"}
@@ -7335,6 +7499,7 @@
 {"chunk_id": "erp10-ip-profitability-competition:0070", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr25-3", "source": "pool"}
 {"chunk_id": "erp14-raising-the-bar:0028", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-3", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0002", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-3", "source": "pool"}
+{"chunk_id": "erp15-patenting-firms:0006", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr25-3", "source": "topup-v3"}
 {"chunk_id": "ipr-2015:0002", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr25-3", "source": "topup"}
 {"chunk_id": "ipr-2015:0018", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-3", "source": "pool"}
 {"chunk_id": "ipr-2016:0003", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-3", "source": "pool"}
@@ -7415,6 +7580,7 @@
 {"chunk_id": "ipr-2017:0014", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr25-4", "source": "topup"}
 {"chunk_id": "ipr-2018:0013", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-4", "source": "topup"}
 {"chunk_id": "ipr-2018:0016", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-4", "source": "pool"}
+{"chunk_id": "ipr-2018:0033", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-4", "source": "topup-v3"}
 {"chunk_id": "ipr-2019:0013", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-4", "source": "pool"}
 {"chunk_id": "ipr-2019:0014", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr25-4", "source": "topup"}
 {"chunk_id": "ipr-2020:0016", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-4", "source": "topup"}
@@ -7476,6 +7642,7 @@
 {"chunk_id": "ipr-2024:0098", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-5", "source": "pool"}
 {"chunk_id": "ipr-2024:0099", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-5", "source": "pool"}
 {"chunk_id": "ipr-2024:0100", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-5", "source": "pool"}
+{"chunk_id": "ipr-2024:0101", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-5", "source": "topup-v3"}
 {"chunk_id": "ipr-2024:0103", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr25-5", "source": "topup"}
 {"chunk_id": "ipr-2024:0106", "grade": 3, "judge": "gemini-3.8-flash", "need": "ipr25-5", "source": "pool"}
 {"chunk_id": "ipr-2024:0111", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-5", "source": "pool"}
@@ -7533,6 +7700,7 @@
 {"chunk_id": "ipr-2026:0009", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr26-1", "source": "pool"}
 {"chunk_id": "ipr-2026:0010", "grade": 3, "judge": "gemini-3.8-flash", "need": "ipr26-1", "source": "pool"}
 {"chunk_id": "ipr-2026:0013", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr26-1", "source": "pool"}
+{"chunk_id": "ipr-2026:0015", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr26-1", "source": "topup-v3"}
 {"chunk_id": "ipr-2026:0016", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr26-1", "source": "pool"}
 {"chunk_id": "ipr-2026:0022", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr26-1", "source": "topup"}
 {"chunk_id": "ipr-2026:0023", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr26-1", "source": "topup"}
@@ -7605,6 +7773,7 @@
 {"chunk_id": "erp04-mining-innovation:0036", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr26-3", "source": "pool"}
 {"chunk_id": "erp04-mining-innovation:0037", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr26-3", "source": "pool"}
 {"chunk_id": "erp04-mining-innovation:0043", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr26-3", "source": "pool"}
+{"chunk_id": "erp04-mining-innovation:0048", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr26-3", "source": "topup-v3"}
 {"chunk_id": "erp04-mining-innovation:0049", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr26-3", "source": "pool"}
 {"chunk_id": "erp04-mining-innovation:0058", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr26-3", "source": "topup"}
 {"chunk_id": "erp14-raising-the-bar:0015", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr26-3", "source": "pool"}
@@ -7672,6 +7841,7 @@
 {"chunk_id": "ipr-2016:0018", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr26-5", "source": "pool"}
 {"chunk_id": "ipr-2016:0019", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr26-5", "source": "topup"}
 {"chunk_id": "ipr-2017:0020", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr26-5", "source": "pool"}
+{"chunk_id": "ipr-2017:0021", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr26-5", "source": "topup-v3"}
 {"chunk_id": "ipr-2018:0003", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr26-5", "source": "pool"}
 {"chunk_id": "ipr-2018:0021", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr26-5", "source": "topup"}
 {"chunk_id": "ipr-2018:0022", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr26-5", "source": "topup"}
@@ -7703,6 +7873,7 @@
 {"chunk_id": "ipr-2025:0076", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr26-5", "source": "pool"}
 {"chunk_id": "ipr-2025:0077", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr26-5", "source": "pool"}
 {"chunk_id": "ipr-2025:0078", "grade": 3, "judge": "gemini-3.8-flash", "need": "ipr26-5", "source": "topup"}
+{"chunk_id": "ipr-2025:0079", "grade": 3, "judge": "gemini-3.8-flash", "need": "ipr26-5", "source": "topup-v3"}
 {"chunk_id": "ipr-2025:0081", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr26-5", "source": "pool"}
 {"chunk_id": "ipr-2026:0099", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr26-5", "source": "pool"}
 {"chunk_id": "ipr-2026:0100", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr26-5", "source": "pool"}
@@ -7725,15 +7896,18 @@
 {"chunk_id": "erp10-ip-profitability-competition:0043", "grade": 2, "judge": "gemini-3.8-flash", "need": "multi-1", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0046", "grade": 3, "judge": "gemini-3.8-flash", "need": "multi-1", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0055", "grade": 2, "judge": "gemini-3.8-flash", "need": "multi-1", "source": "pool"}
+{"chunk_id": "erp10-ip-profitability-competition:0056", "grade": 2, "judge": "gemini-3.8-flash", "need": "multi-1", "source": "topup-v3"}
 {"chunk_id": "erp10-ip-profitability-competition:0057", "grade": 2, "judge": "gemini-3.8-flash", "need": "multi-1", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0070", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-1", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0072", "grade": 2, "judge": "gemini-3.8-flash", "need": "multi-1", "source": "pool"}
+{"chunk_id": "erp10-ip-profitability-competition:0082", "grade": 1, "judge": "gemini-3.8-flash", "need": "multi-1", "source": "topup-v3"}
 {"chunk_id": "erp10-ip-profitability-competition:0083", "grade": 3, "judge": "gemini-3.8-flash", "need": "multi-1", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0086", "grade": 2, "judge": "gemini-3.8-flash", "need": "multi-1", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0087", "grade": 2, "judge": "gemini-3.8-flash", "need": "multi-1", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0091", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-1", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0103", "grade": 1, "judge": "gemini-3.8-flash", "need": "multi-1", "source": "topup"}
 {"chunk_id": "erp10-ip-profitability-competition:0111", "grade": 1, "judge": "gemini-3.8-flash", "need": "multi-1", "source": "topup"}
+{"chunk_id": "erp10-ip-profitability-competition:0115", "grade": 1, "judge": "gemini-3.8-flash", "need": "multi-1", "source": "topup-v3"}
 {"chunk_id": "erp10-ip-profitability-competition:0117", "grade": 2, "judge": "gemini-3.8-flash", "need": "multi-1", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0118", "grade": 2, "judge": "gemini-3.8-flash", "need": "multi-1", "source": "pool"}
 {"chunk_id": "erp11-exporters-trade-marks:0007", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-1", "source": "pool"}
@@ -7755,6 +7929,7 @@
 {"chunk_id": "erp14-raising-the-bar:0040", "grade": 1, "judge": "gemini-3.8-flash", "need": "multi-1", "source": "topup"}
 {"chunk_id": "erp14-raising-the-bar:0041", "grade": 1, "judge": "gemini-3.8-flash", "need": "multi-1", "source": "pool"}
 {"chunk_id": "erp14-raising-the-bar:0042", "grade": 1, "judge": "gemini-3.8-flash", "need": "multi-1", "source": "pool"}
+{"chunk_id": "erp14-raising-the-bar:0043", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-1", "source": "topup-v3"}
 {"chunk_id": "erp14-raising-the-bar:0046", "grade": 1, "judge": "gemini-3.8-flash", "need": "multi-1", "source": "pool"}
 {"chunk_id": "erp14-raising-the-bar:0047", "grade": 1, "judge": "gemini-3.8-flash", "need": "multi-1", "source": "pool"}
 {"chunk_id": "erp14-raising-the-bar:0066", "grade": 1, "judge": "gemini-3.8-flash", "need": "multi-1", "source": "pool"}
@@ -7831,9 +8006,11 @@
 {"chunk_id": "oce-ai-investment:0062", "grade": 1, "judge": "gemini-3.8-flash", "need": "multi-1", "source": "pool"}
 {"chunk_id": "erp03-market-for-design:0072", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-2", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0002", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-2", "source": "pool"}
+{"chunk_id": "erp10-ip-profitability-competition:0005", "grade": 1, "judge": "gemini-3.8-flash", "need": "multi-2", "source": "topup-v3"}
 {"chunk_id": "erp10-ip-profitability-competition:0008", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-2", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0034", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-2", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0064", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-2", "source": "pool"}
+{"chunk_id": "erp10-ip-profitability-competition:0069", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-2", "source": "topup-v3"}
 {"chunk_id": "erp10-ip-profitability-competition:0070", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-2", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0072", "grade": 1, "judge": "gemini-3.8-flash", "need": "multi-2", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0080", "grade": 1, "judge": "gemini-3.8-flash", "need": "multi-2", "source": "pool"}
@@ -7948,10 +8125,12 @@
 {"chunk_id": "erp14-raising-the-bar:0032", "grade": 1, "judge": "gemini-3.8-flash", "need": "multi-3", "source": "pool"}
 {"chunk_id": "erp14-raising-the-bar:0037", "grade": 3, "judge": "gemini-3.8-flash", "need": "multi-3", "source": "pool"}
 {"chunk_id": "erp14-raising-the-bar:0038", "grade": 3, "judge": "gemini-3.8-flash", "need": "multi-3", "source": "pool"}
+{"chunk_id": "erp14-raising-the-bar:0042", "grade": 2, "judge": "gemini-3.8-flash", "need": "multi-3", "source": "topup-v3"}
 {"chunk_id": "erp14-raising-the-bar:0045", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-3", "source": "pool"}
 {"chunk_id": "erp14-raising-the-bar:0046", "grade": 3, "judge": "gemini-3.8-flash", "need": "multi-3", "source": "pool"}
 {"chunk_id": "erp14-raising-the-bar:0067", "grade": 3, "judge": "gemini-3.8-flash", "need": "multi-3", "source": "pool"}
 {"chunk_id": "erp14-raising-the-bar:0068", "grade": 2, "judge": "gemini-3.8-flash", "need": "multi-3", "source": "pool"}
+{"chunk_id": "erp14-raising-the-bar:0070", "grade": 3, "judge": "gemini-3.8-flash", "need": "multi-3", "source": "topup-v3"}
 {"chunk_id": "erp14-raising-the-bar:0071", "grade": 1, "judge": "gemini-3.8-flash", "need": "multi-3", "source": "pool"}
 {"chunk_id": "erp14-raising-the-bar:0072", "grade": 3, "judge": "gemini-3.8-flash", "need": "multi-3", "source": "pool"}
 {"chunk_id": "ipr-2016:0005", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-3", "source": "topup"}
@@ -8004,6 +8183,7 @@
 {"chunk_id": "ipr-2022:0078", "grade": 3, "judge": "gemini-3.8-flash", "need": "multi-4", "source": "pilot"}
 {"chunk_id": "ipr-2022:0079", "grade": 3, "judge": "gemini-3.8-flash", "need": "multi-4", "source": "pilot"}
 {"chunk_id": "ipr-2022:0080", "grade": 2, "judge": "gemini-3.8-flash", "need": "multi-4", "source": "pilot"}
+{"chunk_id": "ipr-2022:0081", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-4", "source": "topup-v3"}
 {"chunk_id": "ipr-2022:0083", "grade": 2, "judge": "gemini-3.8-flash", "need": "multi-4", "source": "pilot"}
 {"chunk_id": "ipr-2023:0001", "grade": 1, "judge": "gemini-3.8-flash", "need": "multi-4", "source": "pilot"}
 {"chunk_id": "ipr-2023:0107", "grade": 1, "judge": "gemini-3.8-flash", "need": "multi-4", "source": "pilot"}
@@ -8379,8 +8559,10 @@
 {"chunk_id": "erp15-patenting-firms:0056", "grade": 0, "judge": "gemini-3.8-flash", "need": "note-sc-3", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0076", "grade": 1, "judge": "gemini-3.8-flash", "need": "note-sc-3", "source": "pool"}
 {"chunk_id": "ipr-2016:0021", "grade": 3, "judge": "gemini-3.8-flash", "need": "note-sc-3", "source": "pool"}
+{"chunk_id": "ipr-2017:0007", "grade": 1, "judge": "gemini-3.8-flash", "need": "note-sc-3", "source": "topup-v3"}
 {"chunk_id": "ipr-2017:0041", "grade": 0, "judge": "gemini-3.8-flash", "need": "note-sc-3", "source": "topup"}
 {"chunk_id": "ipr-2018:0005", "grade": 1, "judge": "gemini-3.8-flash", "need": "note-sc-3", "source": "pool"}
+{"chunk_id": "ipr-2020:0050", "grade": 1, "judge": "gemini-3.8-flash", "need": "note-sc-3", "source": "topup-v3"}
 {"chunk_id": "ipr-2021:0006", "grade": 1, "judge": "gemini-3.8-flash", "need": "note-sc-3", "source": "pool"}
 {"chunk_id": "ipr-2022:0004", "grade": 2, "judge": "gemini-3.8-flash", "need": "note-sc-3", "source": "pool"}
 {"chunk_id": "ipr-2022:0009", "grade": 3, "judge": "gemini-3.8-flash", "need": "note-sc-3", "source": "topup"}
@@ -8491,6 +8673,7 @@
 {"chunk_id": "erp11-exporters-trade-marks:0098", "grade": 0, "judge": "gemini-3.8-flash", "need": "note-tm-2", "source": "pool"}
 {"chunk_id": "erp11-exporters-trade-marks:0114", "grade": 0, "judge": "gemini-3.8-flash", "need": "note-tm-2", "source": "pool"}
 {"chunk_id": "erp11-exporters-trade-marks:0119", "grade": 0, "judge": "gemini-3.8-flash", "need": "note-tm-2", "source": "pool"}
+{"chunk_id": "erp11-exporters-trade-marks:0129", "grade": 0, "judge": "gemini-3.8-flash", "need": "note-tm-2", "source": "topup-v3"}
 {"chunk_id": "ipr-2016:0031", "grade": 1, "judge": "gemini-3.8-flash", "need": "note-tm-2", "source": "topup"}
 {"chunk_id": "ipr-2018:0030", "grade": 0, "judge": "gemini-3.8-flash", "need": "note-tm-2", "source": "pool"}
 {"chunk_id": "ipr-2018:0037", "grade": 0, "judge": "gemini-3.8-flash", "need": "note-tm-2", "source": "pool"}
@@ -8500,6 +8683,7 @@
 {"chunk_id": "ipr-2021:0020", "grade": 0, "judge": "gemini-3.8-flash", "need": "note-tm-2", "source": "pool"}
 {"chunk_id": "ipr-2021:0059", "grade": 0, "judge": "gemini-3.8-flash", "need": "note-tm-2", "source": "pool"}
 {"chunk_id": "ipr-2021:0066", "grade": 0, "judge": "gemini-3.8-flash", "need": "note-tm-2", "source": "pool"}
+{"chunk_id": "ipr-2021:0067", "grade": 0, "judge": "gemini-3.8-flash", "need": "note-tm-2", "source": "topup-v3"}
 {"chunk_id": "ipr-2023:0038", "grade": 0, "judge": "gemini-3.8-flash", "need": "note-tm-2", "source": "pool"}
 {"chunk_id": "ipr-2023:0039", "grade": 0, "judge": "gemini-3.8-flash", "need": "note-tm-2", "source": "pool"}
 {"chunk_id": "ipr-2023:0040", "grade": 1, "judge": "gemini-3.8-flash", "need": "note-tm-2", "source": "pool"}
@@ -8522,6 +8706,7 @@
 {"chunk_id": "note-tm-leading-indicator:0010", "grade": 1, "judge": "gemini-3.8-flash", "need": "note-tm-2", "source": "pool"}
 {"chunk_id": "note-tm-leading-indicator:0012", "grade": 0, "judge": "gemini-3.8-flash", "need": "note-tm-2", "source": "pool"}
 {"chunk_id": "note-tm-leading-indicator:0016", "grade": 1, "judge": "gemini-3.8-flash", "need": "note-tm-2", "source": "pool"}
+{"chunk_id": "note-tm-leading-indicator:0017", "grade": 1, "judge": "gemini-3.8-flash", "need": "note-tm-2", "source": "topup-v3"}
 {"chunk_id": "note-tm-leading-indicator:0020", "grade": 1, "judge": "gemini-3.8-flash", "need": "note-tm-2", "source": "pool"}
 {"chunk_id": "erp03-market-for-design:0053", "grade": 0, "judge": "gemini-3.8-flash", "need": "note-tm-3", "source": "pilot"}
 {"chunk_id": "erp10-ip-profitability-competition:0068", "grade": 0, "judge": "gemini-3.8-flash", "need": "note-tm-3", "source": "pilot"}
@@ -8681,8 +8866,10 @@
 {"chunk_id": "oce-ai-investment:0033", "grade": 3, "judge": "gemini-3.8-flash", "need": "oce-ai-2", "source": "pool"}
 {"chunk_id": "oce-ai-investment:0034", "grade": 1, "judge": "gemini-3.8-flash", "need": "oce-ai-2", "source": "pool"}
 {"chunk_id": "oce-ai-investment:0038", "grade": 1, "judge": "gemini-3.8-flash", "need": "oce-ai-2", "source": "pool"}
+{"chunk_id": "oce-ai-investment:0049", "grade": 1, "judge": "gemini-3.8-flash", "need": "oce-ai-2", "source": "topup-v3"}
 {"chunk_id": "oce-ai-investment:0050", "grade": 2, "judge": "gemini-3.8-flash", "need": "oce-ai-2", "source": "pool"}
 {"chunk_id": "oce-ai-investment:0063", "grade": 2, "judge": "gemini-3.8-flash", "need": "oce-ai-2", "source": "pool"}
+{"chunk_id": "oce-ai-investment:0064", "grade": 1, "judge": "gemini-3.8-flash", "need": "oce-ai-2", "source": "topup-v3"}
 {"chunk_id": "oce-ai-investment:0083", "grade": 1, "judge": "gemini-3.8-flash", "need": "oce-ai-2", "source": "pool"}
 {"chunk_id": "erp04-mining-innovation:0038", "grade": 0, "judge": "gemini-3.8-flash", "need": "oce-ai-3", "source": "pool"}
 {"chunk_id": "ipr-2017:0041", "grade": 0, "judge": "gemini-3.8-flash", "need": "oce-ai-3", "source": "pool"}
@@ -8717,6 +8904,7 @@
 {"chunk_id": "oce-ai-investment:0035", "grade": 0, "judge": "gemini-3.8-flash", "need": "oce-ai-3", "source": "pool"}
 {"chunk_id": "oce-ai-investment:0037", "grade": 0, "judge": "gemini-3.8-flash", "need": "oce-ai-3", "source": "pool"}
 {"chunk_id": "oce-ai-investment:0038", "grade": 1, "judge": "gemini-3.8-flash", "need": "oce-ai-3", "source": "pool"}
+{"chunk_id": "oce-ai-investment:0041", "grade": 0, "judge": "gemini-3.8-flash", "need": "oce-ai-3", "source": "topup-v3"}
 {"chunk_id": "oce-ai-investment:0049", "grade": 1, "judge": "gemini-3.8-flash", "need": "oce-ai-3", "source": "pool"}
 {"chunk_id": "oce-ai-investment:0050", "grade": 1, "judge": "gemini-3.8-flash", "need": "oce-ai-3", "source": "pool"}
 {"chunk_id": "oce-ai-investment:0051", "grade": 0, "judge": "gemini-3.8-flash", "need": "oce-ai-3", "source": "pool"}
@@ -8734,7 +8922,9 @@
 {"chunk_id": "oce-ai-investment:0001", "grade": 3, "judge": "gemini-3.8-flash", "need": "oce-ai-4", "source": "pool"}
 {"chunk_id": "oce-ai-investment:0007", "grade": 1, "judge": "gemini-3.8-flash", "need": "oce-ai-4", "source": "pool"}
 {"chunk_id": "oce-ai-investment:0009", "grade": 0, "judge": "gemini-3.8-flash", "need": "oce-ai-4", "source": "pool"}
+{"chunk_id": "oce-ai-investment:0016", "grade": 1, "judge": "gemini-3.8-flash", "need": "oce-ai-4", "source": "topup-v3"}
 {"chunk_id": "oce-ai-investment:0018", "grade": 3, "judge": "gemini-3.8-flash", "need": "oce-ai-4", "source": "pool"}
+{"chunk_id": "oce-ai-investment:0020", "grade": 3, "judge": "gemini-3.8-flash", "need": "oce-ai-4", "source": "topup-v3"}
 {"chunk_id": "oce-ai-investment:0021", "grade": 3, "judge": "gemini-3.8-flash", "need": "oce-ai-4", "source": "pool"}
 {"chunk_id": "oce-ai-investment:0022", "grade": 2, "judge": "gemini-3.8-flash", "need": "oce-ai-4", "source": "pool"}
 {"chunk_id": "oce-ai-investment:0025", "grade": 2, "judge": "gemini-3.8-flash", "need": "oce-ai-4", "source": "pool"}
@@ -8752,9 +8942,14 @@
 {"chunk_id": "oce-ai-investment:0041", "grade": 1, "judge": "gemini-3.8-flash", "need": "oce-ai-4", "source": "pool"}
 {"chunk_id": "oce-ai-investment:0042", "grade": 0, "judge": "gemini-3.8-flash", "need": "oce-ai-4", "source": "pool"}
 {"chunk_id": "oce-ai-investment:0044", "grade": 0, "judge": "gemini-3.8-flash", "need": "oce-ai-4", "source": "pool"}
+{"chunk_id": "oce-ai-investment:0049", "grade": 1, "judge": "gemini-3.8-flash", "need": "oce-ai-4", "source": "topup-v3"}
 {"chunk_id": "oce-ai-investment:0050", "grade": 0, "judge": "gemini-3.8-flash", "need": "oce-ai-4", "source": "pool"}
 {"chunk_id": "oce-ai-investment:0051", "grade": 0, "judge": "gemini-3.8-flash", "need": "oce-ai-4", "source": "pool"}
+{"chunk_id": "oce-ai-investment:0053", "grade": 0, "judge": "gemini-3.8-flash", "need": "oce-ai-4", "source": "topup-v3"}
 {"chunk_id": "oce-ai-investment:0055", "grade": 0, "judge": "gemini-3.8-flash", "need": "oce-ai-4", "source": "pool"}
+{"chunk_id": "oce-ai-investment:0056", "grade": 1, "judge": "gemini-3.8-flash", "need": "oce-ai-4", "source": "topup-v3"}
+{"chunk_id": "oce-ai-investment:0057", "grade": 1, "judge": "gemini-3.8-flash", "need": "oce-ai-4", "source": "topup-v3"}
+{"chunk_id": "oce-ai-investment:0059", "grade": 0, "judge": "gemini-3.8-flash", "need": "oce-ai-4", "source": "topup-v3"}
 {"chunk_id": "oce-ai-investment:0062", "grade": 0, "judge": "gemini-3.8-flash", "need": "oce-ai-4", "source": "pool"}
 {"chunk_id": "oce-ai-investment:0063", "grade": 0, "judge": "gemini-3.8-flash", "need": "oce-ai-4", "source": "pool"}
 {"chunk_id": "oce-ai-investment:0067", "grade": 0, "judge": "gemini-3.8-flash", "need": "oce-ai-4", "source": "pool"}
@@ -8820,6 +9015,7 @@
 {"chunk_id": "erp14-raising-the-bar:0064", "grade": 3, "judge": "gemini-3.8-flash", "need": "owner-1", "source": "pool"}
 {"chunk_id": "erp14-raising-the-bar:0069", "grade": 1, "judge": "gemini-3.8-flash", "need": "owner-1", "source": "topup"}
 {"chunk_id": "erp15-patenting-firms:0003", "grade": 3, "judge": "gemini-3.8-flash", "need": "owner-1", "source": "pool"}
+{"chunk_id": "erp15-patenting-firms:0020", "grade": 3, "judge": "gemini-3.8-flash", "need": "owner-1", "source": "topup-v3"}
 {"chunk_id": "erp15-patenting-firms:0023", "grade": 1, "judge": "gemini-3.8-flash", "need": "owner-1", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0024", "grade": 2, "judge": "gemini-3.8-flash", "need": "owner-1", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0030", "grade": 2, "judge": "gemini-3.8-flash", "need": "owner-1", "source": "pool"}
@@ -8869,6 +9065,7 @@
 {"chunk_id": "ipr-2026:0121", "grade": 0, "judge": "gemini-3.8-flash", "need": "owner-1", "source": "pool"}
 {"chunk_id": "note-patenting-structural-change:0012", "grade": 0, "judge": "gemini-3.8-flash", "need": "owner-1", "source": "pool"}
 {"chunk_id": "note-tm-leading-indicator:0020", "grade": 0, "judge": "gemini-3.8-flash", "need": "owner-1", "source": "pool"}
+{"chunk_id": "oce-ai-investment:0049", "grade": 1, "judge": "gemini-3.8-flash", "need": "owner-1", "source": "topup-v3"}
 {"chunk_id": "oce-ai-investment:0052", "grade": 0, "judge": "gemini-3.8-flash", "need": "owner-1", "source": "pool"}
 {"chunk_id": "oce-ai-investment:0059", "grade": 0, "judge": "gemini-3.8-flash", "need": "owner-1", "source": "pool"}
 {"chunk_id": "erp03-market-for-design:0009", "grade": 2, "judge": "gemini-3.8-flash", "need": "owner-2", "source": "pilot"}
@@ -9007,6 +9204,7 @@
 {"chunk_id": "erp10-ip-profitability-competition:0099", "grade": 0, "judge": "gemini-3.8-flash", "need": "owner-3", "source": "pool"}
 {"chunk_id": "ipr-2015:0002", "grade": 1, "judge": "gemini-3.8-flash", "need": "owner-3", "source": "pool"}
 {"chunk_id": "ipr-2015:0023", "grade": 1, "judge": "gemini-3.8-flash", "need": "owner-3", "source": "pool"}
+{"chunk_id": "ipr-2015:0027", "grade": 2, "judge": "gemini-3.8-flash", "need": "owner-3", "source": "topup-v3"}
 {"chunk_id": "ipr-2016:0003", "grade": 1, "judge": "gemini-3.8-flash", "need": "owner-3", "source": "pool"}
 {"chunk_id": "ipr-2016:0015", "grade": 2, "judge": "gemini-3.8-flash", "need": "owner-3", "source": "topup"}
 {"chunk_id": "ipr-2017:0005", "grade": 0, "judge": "gemini-3.8-flash", "need": "owner-3", "source": "pool"}
@@ -9059,11 +9257,14 @@
 {"chunk_id": "erp15-patenting-firms:0007", "grade": 1, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0013", "grade": 0, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0050", "grade": 2, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "pool"}
+{"chunk_id": "erp15-patenting-firms:0052", "grade": 1, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "topup-v3"}
 {"chunk_id": "erp15-patenting-firms:0054", "grade": 1, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0059", "grade": 0, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0062", "grade": 0, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "topup"}
+{"chunk_id": "erp15-patenting-firms:0067", "grade": 0, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "topup-v3"}
 {"chunk_id": "erp15-patenting-firms:0078", "grade": 1, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0079", "grade": 0, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "pool"}
+{"chunk_id": "erp16-cii-patent-trends:0033", "grade": 2, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "topup-v3"}
 {"chunk_id": "erp16-cii-patent-trends:0035", "grade": 0, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "pool"}
 {"chunk_id": "erp16-cii-patent-trends:0058", "grade": 0, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "topup"}
 {"chunk_id": "erp16-cii-patent-trends:0107", "grade": 0, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "pool"}
@@ -9093,13 +9294,18 @@
 {"chunk_id": "ipr-2017:0026", "grade": 2, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "topup"}
 {"chunk_id": "ipr-2017:0027", "grade": 2, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "pool"}
 {"chunk_id": "ipr-2017:0028", "grade": 2, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "pool"}
+{"chunk_id": "ipr-2017:0029", "grade": 1, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "topup-v3"}
 {"chunk_id": "ipr-2017:0031", "grade": 0, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "pool"}
 {"chunk_id": "ipr-2017:0042", "grade": 0, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "pool"}
 {"chunk_id": "ipr-2017:0043", "grade": 2, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "pool"}
 {"chunk_id": "ipr-2018:0001", "grade": 1, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "pool"}
+{"chunk_id": "ipr-2018:0005", "grade": 1, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "topup-v3"}
 {"chunk_id": "ipr-2018:0008", "grade": 0, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "pool"}
+{"chunk_id": "ipr-2018:0009", "grade": 2, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "topup-v3"}
 {"chunk_id": "ipr-2018:0011", "grade": 2, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "pool"}
 {"chunk_id": "ipr-2018:0024", "grade": 1, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "pool"}
+{"chunk_id": "ipr-2018:0025", "grade": 1, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "topup-v3"}
+{"chunk_id": "ipr-2018:0029", "grade": 1, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "topup-v3"}
 {"chunk_id": "ipr-2018:0037", "grade": 0, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "pool"}
 {"chunk_id": "ipr-2019:0002", "grade": 1, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "pool"}
 {"chunk_id": "ipr-2019:0008", "grade": 1, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "pool"}
@@ -9113,6 +9319,7 @@
 {"chunk_id": "ipr-2020:0070", "grade": 1, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "pool"}
 {"chunk_id": "ipr-2021:0000", "grade": 1, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "pool"}
 {"chunk_id": "ipr-2021:0005", "grade": 2, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "topup"}
+{"chunk_id": "ipr-2021:0015", "grade": 1, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "topup-v3"}
 {"chunk_id": "ipr-2021:0017", "grade": 2, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "topup"}
 {"chunk_id": "ipr-2022:0004", "grade": 1, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "pool"}
 {"chunk_id": "ipr-2022:0008", "grade": 2, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "pool"}
@@ -9141,6 +9348,8 @@
 {"chunk_id": "ipr-2024:0002", "grade": 2, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "pool"}
 {"chunk_id": "ipr-2024:0009", "grade": 0, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "pool"}
 {"chunk_id": "ipr-2024:0014", "grade": 2, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "pool"}
+{"chunk_id": "ipr-2024:0016", "grade": 1, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "topup-v3"}
+{"chunk_id": "ipr-2024:0017", "grade": 1, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "topup-v3"}
 {"chunk_id": "ipr-2024:0018", "grade": 0, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "pool"}
 {"chunk_id": "ipr-2024:0019", "grade": 1, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "pool"}
 {"chunk_id": "ipr-2024:0020", "grade": 0, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "pool"}
@@ -9258,14 +9467,17 @@
 {"chunk_id": "ipr-2024:0004", "grade": 1, "judge": "gemini-3.8-flash", "need": "owner-5", "source": "pool"}
 {"chunk_id": "ipr-2024:0006", "grade": 1, "judge": "gemini-3.8-flash", "need": "owner-5", "source": "pool"}
 {"chunk_id": "ipr-2024:0008", "grade": 1, "judge": "gemini-3.8-flash", "need": "owner-5", "source": "pool"}
+{"chunk_id": "ipr-2024:0009", "grade": 0, "judge": "gemini-3.8-flash", "need": "owner-5", "source": "topup-v3"}
 {"chunk_id": "ipr-2024:0014", "grade": 2, "judge": "gemini-3.8-flash", "need": "owner-5", "source": "pool"}
 {"chunk_id": "ipr-2024:0018", "grade": 1, "judge": "gemini-3.8-flash", "need": "owner-5", "source": "pool"}
 {"chunk_id": "ipr-2024:0029", "grade": 2, "judge": "gemini-3.8-flash", "need": "owner-5", "source": "pool"}
 {"chunk_id": "ipr-2024:0038", "grade": 2, "judge": "gemini-3.8-flash", "need": "owner-5", "source": "pool"}
+{"chunk_id": "ipr-2024:0039", "grade": 2, "judge": "gemini-3.8-flash", "need": "owner-5", "source": "topup-v3"}
 {"chunk_id": "ipr-2024:0046", "grade": 1, "judge": "gemini-3.8-flash", "need": "owner-5", "source": "topup"}
 {"chunk_id": "ipr-2024:0060", "grade": 0, "judge": "gemini-3.8-flash", "need": "owner-5", "source": "pool"}
 {"chunk_id": "ipr-2024:0103", "grade": 2, "judge": "gemini-3.8-flash", "need": "owner-5", "source": "pool"}
 {"chunk_id": "ipr-2024:0122", "grade": 3, "judge": "gemini-3.8-flash", "need": "owner-5", "source": "pool"}
+{"chunk_id": "ipr-2024:0124", "grade": 2, "judge": "gemini-3.8-flash", "need": "owner-5", "source": "topup-v3"}
 {"chunk_id": "ipr-2024:0125", "grade": 2, "judge": "gemini-3.8-flash", "need": "owner-5", "source": "pool"}
 {"chunk_id": "ipr-2024:0126", "grade": 3, "judge": "gemini-3.8-flash", "need": "owner-5", "source": "pool"}
 {"chunk_id": "ipr-2025:0001", "grade": 1, "judge": "gemini-3.8-flash", "need": "owner-5", "source": "pool"}
@@ -9286,6 +9498,7 @@
 {"chunk_id": "ipr-2026:0012", "grade": 1, "judge": "gemini-3.8-flash", "need": "owner-5", "source": "pool"}
 {"chunk_id": "ipr-2026:0016", "grade": 0, "judge": "gemini-3.8-flash", "need": "owner-5", "source": "pool"}
 {"chunk_id": "ipr-2026:0033", "grade": 2, "judge": "gemini-3.8-flash", "need": "owner-5", "source": "pool"}
+{"chunk_id": "ipr-2026:0044", "grade": 2, "judge": "gemini-3.8-flash", "need": "owner-5", "source": "topup-v3"}
 {"chunk_id": "ipr-2026:0046", "grade": 2, "judge": "gemini-3.8-flash", "need": "owner-5", "source": "pool"}
 {"chunk_id": "ipr-2026:0052", "grade": 2, "judge": "gemini-3.8-flash", "need": "owner-5", "source": "topup"}
 {"chunk_id": "ipr-2026:0083", "grade": 1, "judge": "gemini-3.8-flash", "need": "owner-5", "source": "pool"}

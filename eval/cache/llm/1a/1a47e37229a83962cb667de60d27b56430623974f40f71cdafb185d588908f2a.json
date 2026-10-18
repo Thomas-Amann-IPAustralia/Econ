@@ -1,0 +1,25 @@
+{
+ "cost_usd": 5.5e-05,
+ "data": {
+  "queries": [
+   "design registrations product categories lockdown COVID-19",
+   "Lockdowns changed the product categories represented in design registrations by X, with registrations increasing for some product types and decreasing for others."
+  ],
+  "standalone_question": "Did lockdowns change the types of products for which people registered designs?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr22-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000109,
+  "input": 762,
+  "model": "gpt-6-luna",
+  "output": 65,
+  "reasoning": 0,
+  "seconds": 1.49
+ }
+}

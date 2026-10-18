@@ -1,0 +1,26 @@
+{
+ "cost_usd": 5.6e-05,
+ "data": {
+  "queries": [
+   "transport technology patent filing growth vehicle electrification autonomous driving",
+   "transport-related filings by technology field and applicant origin",
+   "Growth in transport-related IP filings was driven by X, including increased filings for Y and Z."
+  ],
+  "standalone_question": "What has driven recent growth in transport-related intellectual property filings?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr25-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000111,
+  "input": 760,
+  "model": "gpt-6-luna",
+  "output": 69,
+  "reasoning": 0,
+  "seconds": 1.35
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "cost_usd": 5.5e-05,
+ "data": {
+  "queries": [
+   "IP rights portfolio size business profitability",
+   "firm profitability number of patents trade marks designs",
+   "Firms holding more IP rights have X profitability, controlling for firm characteristics and competition."
+  ],
+  "standalone_question": "Does holding a larger portfolio of intellectual property rights make a firm more profitable?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp10-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000109,
+  "input": 763,
+  "model": "gpt-6-luna",
+  "output": 65,
+  "reasoning": 0,
+  "seconds": 1.52
+ }
+}

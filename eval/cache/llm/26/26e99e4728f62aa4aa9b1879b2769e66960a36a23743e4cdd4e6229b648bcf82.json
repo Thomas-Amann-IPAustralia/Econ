@@ -1,0 +1,24 @@
+{
+ "cost_usd": 7.6e-05,
+ "data": {
+  "queries": [
+   "The Raising the Bar reforms narrowed Australian patent scope by X, as measured by changes in patent claim breadth."
+  ],
+  "standalone_question": "How much did the Raising the Bar reforms narrow the scope of Australian patents?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "multi-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000151,
+  "input": 764,
+  "model": "gpt-6-luna",
+  "output": 150,
+  "reasoning": 95,
+  "seconds": 1.98
+ }
+}

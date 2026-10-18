@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.000104,
+ "data": {
+  "queries": [
+   "Applicants must request examination within X months of a direction or the patent application lapses; directions are issued in X cases per year."
+  ],
+  "standalone_question": "What happens when IP Australia directs a patent applicant to request examination, and how often does it issue such directions?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp01-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000208,
+  "input": 770,
+  "model": "gpt-6-luna",
+  "output": 261,
+  "reasoning": 194,
+  "seconds": 4.09
+ }
+}

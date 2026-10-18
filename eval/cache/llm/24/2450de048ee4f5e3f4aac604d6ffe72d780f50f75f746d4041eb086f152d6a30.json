@@ -1,0 +1,24 @@
+{
+ "cost_usd": 8.9e-05,
+ "data": {
+  "queries": [
+   "New plant variety rights are concentrated in X plant groups, with X accounting for the largest share of new protected varieties."
+  ],
+  "standalone_question": "Which types of plants account for the largest number of newly protected plant varieties?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr17-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000179,
+  "input": 760,
+  "model": "gpt-6-luna",
+  "output": 206,
+  "reasoning": 149,
+  "seconds": 2.94
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "cost_usd": 8.7e-05,
+ "data": {
+  "queries": [
+   "designs law reforms changes rationale",
+   "design registration system policy objectives design protection",
+   "Changes to design law introduced X to address Y and improve protection for innovative designs."
+  ],
+  "standalone_question": "What changes have been made to the Australian designs system, and why?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-policy-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000175,
+  "input": 762,
+  "model": "gpt-6-luna",
+  "output": 197,
+  "reasoning": 133,
+  "seconds": 2.49
+ }
+}

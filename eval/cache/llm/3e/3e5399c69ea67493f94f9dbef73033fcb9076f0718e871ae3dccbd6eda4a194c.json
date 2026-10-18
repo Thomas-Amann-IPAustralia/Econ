@@ -1,0 +1,24 @@
+{
+ "cost_usd": 8.9e-05,
+ "data": {
+  "queries": [
+   "Australia’s website blocking scheme reduced online copyright infringement and increased access to legal content by X per cent."
+  ],
+  "standalone_question": "Is Australia’s website-blocking scheme for copyright infringement effective?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-policy-5",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000178,
+  "input": 759,
+  "model": "gpt-6-luna",
+  "output": 205,
+  "reasoning": 154,
+  "seconds": 3.36
+ }
+}

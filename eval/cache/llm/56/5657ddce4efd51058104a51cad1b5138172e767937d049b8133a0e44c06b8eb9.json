@@ -1,0 +1,24 @@
+{
+ "cost_usd": 7.1e-05,
+ "data": {
+  "queries": [
+   "Australian residents filed X more or fewer patent applications overseas over time"
+  ],
+  "standalone_question": "Are Australians filing more or fewer patents overseas?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-trend-8",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000142,
+  "input": 758,
+  "model": "gpt-6-luna",
+  "output": 133,
+  "reasoning": 93,
+  "seconds": 2.0
+ }
+}

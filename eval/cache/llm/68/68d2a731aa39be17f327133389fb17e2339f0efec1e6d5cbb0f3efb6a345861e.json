@@ -1,0 +1,25 @@
+{
+ "cost_usd": 5.2e-05,
+ "data": {
+  "queries": [
+   "design intensity compared with peer countries",
+   "Peer countries had higher design intensity than Australia, with the leading countries recording X designs per unit of economic output."
+  ],
+  "standalone_question": "Which of Australia’s peer countries lead on design intensity?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp08-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000104,
+  "input": 759,
+  "model": "gpt-6-luna",
+  "output": 57,
+  "reasoning": 0,
+  "seconds": 1.4
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "cost_usd": 8.4e-05,
+ "data": {
+  "queries": [
+   "GMM estimation controls for endogeneity and unobserved firm heterogeneity in the relationship between intellectual property rights and business profitability."
+  ],
+  "standalone_question": "Why did the study of intellectual property and business profitability use GMM estimation?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp10-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000169,
+  "input": 763,
+  "model": "gpt-6-luna",
+  "output": 186,
+  "reasoning": 127,
+  "seconds": 2.39
+ }
+}

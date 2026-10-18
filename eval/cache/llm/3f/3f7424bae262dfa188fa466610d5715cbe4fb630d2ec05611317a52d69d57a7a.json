@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.000101,
+ "data": {
+  "queries": [
+   "A small share of applicants account for X per cent of filings across patents, trade marks and designs, indicating concentrated demand for IP rights."
+  ],
+  "standalone_question": "Do a small number of heavy users account for much of the demand for IP rights?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr16-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000201,
+  "input": 766,
+  "model": "gpt-6-luna",
+  "output": 248,
+  "reasoning": 185,
+  "seconds": 2.54
+ }
+}

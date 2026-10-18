@@ -33,6 +33,10 @@ def setting_name(s: systems.System) -> str:
         base += f"/cap{s.cap}"
     if s.rr_depth != 50 and s.reranker:
         base += f"/rr{s.rr_depth}"
+    if s.alpha != 0.7:
+        base += f"/a{s.alpha:g}"
+    if s.rr_input != "text" and s.reranker:
+        base += "/noted"
     return base
 
 
@@ -74,14 +78,15 @@ def complexity(s: systems.System) -> int:
 _rr: dict[str, systems.RerankCache] = {}
 
 
-def rr_cache(name: str) -> systems.RerankCache:
-    if name not in _rr:
-        _rr[name] = systems.RerankCache(systems.cache_key(name, "text", "bf16"))
-    return _rr[name]
+def rr_cache(name: str, rr_input: str = "text") -> systems.RerankCache:
+    key = systems.cache_key(name, rr_input.split(":")[0], "bf16")
+    if key not in _rr:
+        _rr[key] = systems.RerankCache(key)
+    return _rr[key]
 
 
 def context_rows(s: systems.System, need: Need) -> list[int]:
-    rows = systems.rank(s, need, rr_cache(s.reranker) if s.reranker else None)
+    rows = systems.rank(s, need, rr_cache(s.reranker, s.rr_input) if s.reranker else None)
     return systems.context(s, rows)
 
 
@@ -366,6 +371,10 @@ def named(name: str) -> systems.System:
             kw["cap"] = int(extra[3:])
         elif extra.startswith("rr"):
             kw["rr_depth"] = int(extra[2:])
+        elif extra.startswith("a"):
+            kw["alpha"] = float(extra[1:])
+        elif extra == "noted":
+            kw["rr_input"] = "noted:" + ENRICHED.split(":", 1)[1]
     return make(q, PLAIN if t == "plain" else ENRICHED, None if rr == "none" else rr, **kw)
 
 
@@ -485,4 +494,75 @@ def run_final(needs: list[Need], judgments: str) -> dict:
         "dev": {chosen: mean_of(b, "ndcg@20", split="dev"), base: mean_of(a, "ndcg@20", split="dev")},
     }
     save_choice("final", choice)
+    return {"choice": choice, "report": "\n".join(lines) + "\n"}
+
+
+# --- grid v3: variants of the adopted setting -----------------------------------------------------
+
+
+def spec_v3() -> dict:
+    return yaml.safe_load(config.path("eval/grids/retrieval-v3.yaml").read_text())
+
+
+def v3_settings() -> list[str]:
+    sp = spec_v3()
+    base = sp["adopted"]
+    q, t, _ = base.split("/")
+    v = sp["variants"]
+    names = [f"{base}/a{a:g}" for a in v["fusion_weight"]["alpha"]]
+    names += [f"{q}/{t}/{rr}/noted" for rr in v["reranker_reads_notes"]["rerankers"]]
+    names += [f"{v['answer_shaped_query']['query']}/{t}/none"]
+    return names
+
+
+def run_v3(needs: list[Need], judgments: str, latency: dict[str, float]) -> dict:
+    sp = spec_v3()
+    base = sp["adopted"]
+    grades = grades_by_need(judgments)
+    rows = {n: evaluate(named(n), needs, grades) for n in [base, *v3_settings()]}
+    for n, r in rows.items():
+        save_rows("v3", n, r)
+    dev = {n: mean_of(r, "ndcg@10", split="dev") for n, r in rows.items()}
+    ok = []
+    for n in v3_settings():
+        rr = named(n).reranker
+        fast = rr is None or latency.get(rr, float("inf")) <= 2.5
+        if fast and dev[n] > dev[base] + 0.02:
+            ok.append(n)
+    chosen = max(ok, key=dev.get) if ok else base
+    lines = [
+        "# Retrieval grid v3: variants of the adopted setting",
+        "",
+        f"Grid `retrieval-v3` (eval/grids/retrieval-v3.yaml, committed before any number). Adopted setting `{base}`. "
+        f"Judgments `{judgments}`, topped up so every variant's top 10 is judged. Rule: {sp['rule']}",
+        "",
+        f"**Outcome: `{chosen}`**"
+        + (" (the adopted setting stays)." if chosen == base else " replaces the adopted setting."),
+        "",
+        "| Setting | Latency (50 passages) | Dev ndcg@10 | Test ndcg@10 | Test vs adopted [95% CI] | judged@10 | rel_recall@20 (test) |",
+        "|---|---|---|---|---|---|---|",
+    ]
+    for n in [base, *v3_settings()]:
+        rr = named(n).reranker
+        lt = f"{latency[rr]:.1f} s" if rr and rr in latency else ""
+        t = mean_of(rows[n], "ndcg@10", split="test")
+        if n == base:
+            cmp = "adopted"
+        else:
+            a, b = paired(rows[base], rows[n], "ndcg@10", split="test")
+            c = metrics.compare(a, b)
+            cmp = f"{c['diff']:+.3f} [{c['ci'][0]:+.3f}, {c['ci'][1]:+.3f}]"
+        lines.append(
+            f"| `{n}` | {lt} | {_fmt(dev[n])} | {_fmt(t)} | {cmp} | {_fmt(mean_of(rows[n], 'judged@10'))} | "
+            f"{_fmt(mean_of(rows[n], 'rel_recall@20', split='test'))} |"
+        )
+    choice = {
+        "stage": "v3",
+        "primary": "ndcg@10",
+        "chosen": chosen,
+        "adopted": base,
+        "dev": dev,
+        "qualified": ok,
+    }
+    save_choice("v3", choice)
     return {"choice": choice, "report": "\n".join(lines) + "\n"}

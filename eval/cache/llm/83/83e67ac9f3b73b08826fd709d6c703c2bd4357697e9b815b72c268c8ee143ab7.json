@@ -1,0 +1,24 @@
+{
+ "cost_usd": 9.9e-05,
+ "data": {
+  "queries": [
+   "Around 2014, Australian applicants most frequently sought overseas trade mark protection in [countries], with [country] receiving the most applications."
+  ],
+  "standalone_question": "Which countries did Australian applicants most often seek trade mark protection in overseas around 2014?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr16-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000198,
+  "input": 766,
+  "model": "gpt-6-luna",
+  "output": 243,
+  "reasoning": 179,
+  "seconds": 2.86
+ }
+}

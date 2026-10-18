@@ -1,0 +1,25 @@
+{
+ "cost_usd": 8.7e-05,
+ "data": {
+  "queries": [
+   "IP rights business profitability and competition",
+   "The effects of patents and other IP rights on competition varied by X, with stronger effects in X markets."
+  ],
+  "standalone_question": "What does the research say about whether patents and other intellectual property rights reduce competition?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-evidence-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000175,
+  "input": 764,
+  "model": "gpt-6-luna",
+  "output": 197,
+  "reasoning": 134,
+  "seconds": 2.39
+ }
+}

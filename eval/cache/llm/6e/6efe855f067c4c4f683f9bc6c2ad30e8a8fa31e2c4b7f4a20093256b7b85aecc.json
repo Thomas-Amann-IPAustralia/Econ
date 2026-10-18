@@ -1,0 +1,24 @@
+{
+ "cost_usd": 7.8e-05,
+ "data": {
+  "queries": [
+   "Foreign plant breeder’s rights registrants in 2015 came mainly from [countries], accounting for [shares] of overseas applications."
+  ],
+  "standalone_question": "Which countries of origin accounted for foreign plant breeder’s rights registrants in 2015?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr16-5",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000156,
+  "input": 765,
+  "model": "gpt-6-luna",
+  "output": 159,
+  "reasoning": 96,
+  "seconds": 2.11
+ }
+}

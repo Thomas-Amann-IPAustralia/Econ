@@ -1,0 +1,25 @@
+{
+ "cost_usd": 5.5e-05,
+ "data": {
+  "queries": [
+   "Australian resident share of patent applications trend by year",
+   "The share of patent applications filed by Australian residents changed from X per cent in YEAR to Y per cent in YEAR."
+  ],
+  "standalone_question": "How has the share of patent applications filed by Australian residents changed over time?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-trend-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000109,
+  "input": 764,
+  "model": "gpt-6-luna",
+  "output": 65,
+  "reasoning": 0,
+  "seconds": 1.44
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "cost_usd": 5.3e-05,
+ "data": {
+  "queries": [
+   "trade mark filings COVID-19 pandemic recovery trends",
+   "Australian trade mark applications filings pandemic post-pandemic levels increased declined"
+  ],
+  "standalone_question": "What happened to trade mark filings in Australia during and after the COVID-19 pandemic?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "multi-5",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000105,
+  "input": 766,
+  "model": "gpt-6-luna",
+  "output": 56,
+  "reasoning": 0,
+  "seconds": 1.31
+ }
+}

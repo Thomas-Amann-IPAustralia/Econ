@@ -1,0 +1,24 @@
+{
+ "cost_usd": 8.7e-05,
+ "data": {
+  "queries": [
+   "Molonglo Group uses intellectual property to support its property development business and create commercial value"
+  ],
+  "standalone_question": "How important is intellectual property to the Canberra-based property developer Molonglo Group?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp03-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000174,
+  "input": 763,
+  "model": "gpt-6-luna",
+  "output": 195,
+  "reasoning": 143,
+  "seconds": 2.91
+ }
+}

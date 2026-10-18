@@ -1,0 +1,26 @@
+{
+ "cost_usd": 5.6e-05,
+ "data": {
+  "queries": [
+   "small firms share of patent applications over time",
+   "SME patenting trends invention growth",
+   "Smaller businesses accounted for an increasing share of patent applications, rising from X per cent to Y per cent over time."
+  ],
+  "standalone_question": "Are smaller businesses becoming more important for invention in Australia?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "note-sc-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000111,
+  "input": 760,
+  "model": "gpt-6-luna",
+  "output": 69,
+  "reasoning": 0,
+  "seconds": 1.61
+ }
+}

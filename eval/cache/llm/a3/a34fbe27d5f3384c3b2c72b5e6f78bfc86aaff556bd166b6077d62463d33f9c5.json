@@ -1,0 +1,26 @@
+{
+ "cost_usd": 5.3e-05,
+ "data": {
+  "queries": [
+   "Australian residents overseas trade mark applications trends by year",
+   "Australian applicants Madrid System trade mark filings destinations",
+   "Australian residents overseas trade mark filings increased decreased by X over time"
+  ],
+  "standalone_question": "How have Australians' overseas trade mark filings changed over time?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "multi-6",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000106,
+  "input": 759,
+  "model": "gpt-6-luna",
+  "output": 60,
+  "reasoning": 0,
+  "seconds": 1.88
+ }
+}

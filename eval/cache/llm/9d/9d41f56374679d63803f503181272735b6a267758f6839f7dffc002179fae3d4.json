@@ -1,0 +1,24 @@
+{
+ "cost_usd": 9.8e-05,
+ "data": {
+  "queries": [
+   "In 2019, the leading applicants for original patent applications in Australia were [applicants]."
+  ],
+  "standalone_question": "Who were the leading applicants for original patent applications in Australia around 2019?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr20-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000197,
+  "input": 764,
+  "model": "gpt-6-luna",
+  "output": 241,
+  "reasoning": 186,
+  "seconds": 2.73
+ }
+}

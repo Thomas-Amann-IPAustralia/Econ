@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000131,
+ "data": {
+  "queries": [
+   "difference-in-differences patent reform causal impact",
+   "instrumental variables firm profitability productivity estimates",
+   "Economists estimate causal effects using [methods] to identify impacts of intellectual property rights, policy reforms, and business shocks on firm outcomes."
+  ],
+  "standalone_question": "What statistical methods have economists used to estimate causal effects?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "multi-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000261,
+  "input": 762,
+  "model": "gpt-6-luna",
+  "output": 369,
+  "reasoning": 294,
+  "seconds": 4.2
+ }
+}

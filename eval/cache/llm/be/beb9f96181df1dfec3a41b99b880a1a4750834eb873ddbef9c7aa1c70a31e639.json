@@ -1,0 +1,26 @@
+{
+ "cost_usd": 5.9e-05,
+ "data": {
+  "queries": [
+   "filing trends patents trade marks designs plant breeder rights",
+   "structural change in patenting behaviour business cycle trade mark applications",
+   "Demand for IP Australia services remained strong or declined, as applications for patents, trade marks and designs changed by X per cent."
+  ],
+  "standalone_question": "Based on the evidence, should IP Australia be worried about falling demand for its services?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-strategy-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000118,
+  "input": 766,
+  "model": "gpt-6-luna",
+  "output": 83,
+  "reasoning": 0,
+  "seconds": 1.59
+ }
+}

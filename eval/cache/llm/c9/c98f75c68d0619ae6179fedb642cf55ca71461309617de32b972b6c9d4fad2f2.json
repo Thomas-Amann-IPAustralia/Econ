@@ -1,0 +1,25 @@
+{
+ "cost_usd": 5.6e-05,
+ "data": {
+  "queries": [
+   "Raising the Bar reforms patent scope broader overseas equivalents likelihood",
+   "Raising the Bar reduced likelihood Australian patents broader than overseas equivalents by X per cent."
+  ],
+  "standalone_question": "By how much did the Raising the Bar reforms reduce the likelihood that Australian patents were broader than their overseas equivalents?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr24-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000111,
+  "input": 770,
+  "model": "gpt-6-luna",
+  "output": 68,
+  "reasoning": 0,
+  "seconds": 1.49
+ }
+}

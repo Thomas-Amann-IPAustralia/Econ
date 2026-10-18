@@ -1,0 +1,24 @@
+{
+ "cost_usd": 9.2e-05,
+ "data": {
+  "queries": [
+   "The smallest businesses were more likely than slightly larger businesses to collaborate with overseas partners, at rates of X per cent and Y per cent, respectively."
+  ],
+  "standalone_question": "Do the smallest businesses collaborate with overseas partners more than slightly larger businesses?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp15-5",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000185,
+  "input": 764,
+  "model": "gpt-6-luna",
+  "output": 217,
+  "reasoning": 155,
+  "seconds": 2.87
+ }
+}

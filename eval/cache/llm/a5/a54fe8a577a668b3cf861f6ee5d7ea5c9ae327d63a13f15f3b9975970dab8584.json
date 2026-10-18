@@ -1,0 +1,25 @@
+{
+ "cost_usd": 8.5e-05,
+ "data": {
+  "queries": [
+   "private investment in intellectual property annual growth",
+   "Private investment in intellectual property grew by X per cent annually over the period studied."
+  ],
+  "standalone_question": "How quickly has private investment in intellectual property been growing in Australia?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr15-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00017,
+  "input": 762,
+  "model": "gpt-6-luna",
+  "output": 188,
+  "reasoning": 132,
+  "seconds": 2.53
+ }
+}

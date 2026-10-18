@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.0001,
+ "data": {
+  "queries": [
+   "Plant breeder's rights applications fluctuated over time, with annual application numbers and leading applicant countries varying across reporting years."
+  ],
+  "standalone_question": "What are the trends in plant breeder's rights applications?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-trend-6",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000199,
+  "input": 760,
+  "model": "gpt-6-luna",
+  "output": 247,
+  "reasoning": 194,
+  "seconds": 2.6
+ }
+}

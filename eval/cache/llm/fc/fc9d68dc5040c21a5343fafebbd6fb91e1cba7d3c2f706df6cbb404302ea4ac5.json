@@ -1,0 +1,26 @@
+{
+ "cost_usd": 6e-05,
+ "data": {
+  "queries": [
+   "emerging technology patenting trends AI clean energy collaboration",
+   "trade mark exports SME growth productivity regional filing trends",
+   "The data reveal underexplored opportunities in [area], where [trend] suggests scope for targeted IP support and further research."
+  ],
+  "standalone_question": "Based on trends and data across the publications, what underexplored opportunity areas should IP Australia pursue?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "owner-5",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000119,
+  "input": 777,
+  "model": "gpt-6-luna",
+  "output": 83,
+  "reasoning": 0,
+  "seconds": 1.86
+ }
+}

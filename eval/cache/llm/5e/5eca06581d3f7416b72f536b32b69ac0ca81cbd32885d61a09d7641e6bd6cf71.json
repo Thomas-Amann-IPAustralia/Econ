@@ -1,0 +1,24 @@
+{
+ "cost_usd": 7.7e-05,
+ "data": {
+  "queries": [
+   "The Raising the Bar reforms changed examination requirements for patent applications from X onwards, subject to transitional arrangements."
+  ],
+  "standalone_question": "In which years did the Raising the Bar reforms take effect for examination requests?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp14-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000153,
+  "input": 764,
+  "model": "gpt-6-luna",
+  "output": 153,
+  "reasoning": 99,
+  "seconds": 1.95
+ }
+}

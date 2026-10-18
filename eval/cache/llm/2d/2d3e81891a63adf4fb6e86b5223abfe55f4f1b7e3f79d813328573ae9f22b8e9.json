@@ -1,0 +1,25 @@
+{
+ "cost_usd": 8.5e-05,
+ "data": {
+  "queries": [
+   "university industry collaboration patenting firms business collaboration evidence",
+   "University–industry collaboration was [level] among patenting firms, measured by [indicator], with differences across sectors and firm characteristics."
+  ],
+  "standalone_question": "Is university–industry collaboration in Australia as weak as people say?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-evidence-6",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00017,
+  "input": 763,
+  "model": "gpt-6-luna",
+  "output": 188,
+  "reasoning": 119,
+  "seconds": 2.55
+ }
+}

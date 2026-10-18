@@ -1,0 +1,26 @@
+{
+ "cost_usd": 8.1e-05,
+ "data": {
+  "queries": [
+   "study limitations data coverage and measurement constraints",
+   "methodological limitations sample selection and causal interpretation",
+   "The studies acknowledge limitations arising from data coverage, measurement, sample selection and the ability to draw causal conclusions."
+  ],
+  "standalone_question": "What limitations do the researchers acknowledge in their studies?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-evidence-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000162,
+  "input": 760,
+  "model": "gpt-6-luna",
+  "output": 173,
+  "reasoning": 106,
+  "seconds": 2.19
+ }
+}

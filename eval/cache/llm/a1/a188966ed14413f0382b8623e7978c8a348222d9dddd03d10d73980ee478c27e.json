@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000115,
+ "data": {
+  "queries": [
+   "Raising the Bar Act patentability disclosure requirements",
+   "measured changes in patent scope after 2013 reforms",
+   "The reforms changed patent scope by X, with effects varying across technology fields and types of patent claims."
+  ],
+  "standalone_question": "What were the Raising the Bar reforms, and what effect did they have?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-policy-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000229,
+  "input": 763,
+  "model": "gpt-6-luna",
+  "output": 305,
+  "reasoning": 229,
+  "seconds": 3.84
+ }
+}

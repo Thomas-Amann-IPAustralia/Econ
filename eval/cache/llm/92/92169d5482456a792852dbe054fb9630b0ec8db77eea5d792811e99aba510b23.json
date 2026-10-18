@@ -1,0 +1,25 @@
+{
+ "cost_usd": 4.9e-05,
+ "data": {
+  "queries": [
+   "design registration requirements new distinctive visual appearance",
+   "product design eligibility new and distinctive overall appearance"
+  ],
+  "standalone_question": "What makes a product’s appearance eligible for design protection?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr26-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 9.8e-05,
+  "input": 760,
+  "model": "gpt-6-luna",
+  "output": 44,
+  "reasoning": 0,
+  "seconds": 1.42
+ }
+}

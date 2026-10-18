@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000131,
+ "data": {
+  "queries": [
+   "policy support for small businesses using IP",
+   "Small firms using IP rights achieve X business outcomes, suggesting targeted advice and support can help them commercialise innovation and grow."
+  ],
+  "standalone_question": "What policy implications does the research draw for supporting small businesses with intellectual property?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-strategy-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000263,
+  "input": 763,
+  "model": "gpt-6-luna",
+  "output": 374,
+  "reasoning": 308,
+  "seconds": 4.0
+ }
+}

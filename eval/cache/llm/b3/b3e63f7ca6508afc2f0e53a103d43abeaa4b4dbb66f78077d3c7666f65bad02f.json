@@ -1,0 +1,24 @@
+{
+ "cost_usd": 7.8e-05,
+ "data": {
+  "queries": [
+   "Overseas applicants account for X per cent of design applications filed in Australia."
+  ],
+  "standalone_question": "What share of design applications in Australia are filed by overseas applicants?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr23-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000156,
+  "input": 761,
+  "model": "gpt-6-luna",
+  "output": 160,
+  "reasoning": 112,
+  "seconds": 2.55
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "cost_usd": 5.6e-05,
+ "data": {
+  "queries": [
+   "Chinese applicants Australian patent trade mark design filings trends",
+   "China country of origin filing shares by IP right over time",
+   "Chinese-origin filings grew by X in Australian patents, trade marks and designs, changing China's share of applications over time."
+  ],
+  "standalone_question": "How has China's role in Australian intellectual property filings changed over time?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-trend-12",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000113,
+  "input": 759,
+  "model": "gpt-6-luna",
+  "output": 75,
+  "reasoning": 0,
+  "seconds": 1.87
+ }
+}

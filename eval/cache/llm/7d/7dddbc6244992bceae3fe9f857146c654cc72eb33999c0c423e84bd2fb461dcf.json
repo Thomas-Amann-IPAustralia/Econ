@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000121,
+ "data": {
+  "queries": [
+   "IPGOD datasets and research data tools",
+   "IP Australia provides researchers and businesses with data products and tools including [datasets], [analytics] and [services]."
+  ],
+  "standalone_question": "What data products and tools has IP Australia developed for researchers and businesses?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-synthesis-14",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000242,
+  "input": 763,
+  "model": "gpt-6-luna",
+  "output": 332,
+  "reasoning": 268,
+  "seconds": 3.95
+ }
+}

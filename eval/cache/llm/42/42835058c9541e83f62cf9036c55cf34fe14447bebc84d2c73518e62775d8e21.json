@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000111,
+ "data": {
+  "queries": [
+   "design intensity and designs law compared internationally",
+   "computer-implemented invention patenting at IP Australia EPO USPTO",
+   "Australian businesses lag peers in using IP rights to commercialise innovation, protect designs and support productivity, with differences across measures and international benchmarks."
+  ],
+  "standalone_question": "According to the reports, in which areas is Australia falling behind its peers in how it uses intellectual property?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-strategy-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000223,
+  "input": 767,
+  "model": "gpt-6-luna",
+  "output": 292,
+  "reasoning": 203,
+  "seconds": 3.46
+ }
+}

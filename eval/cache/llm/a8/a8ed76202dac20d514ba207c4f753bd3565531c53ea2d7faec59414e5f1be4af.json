@@ -1,0 +1,24 @@
+{
+ "cost_usd": 9.5e-05,
+ "data": {
+  "queries": [
+   "The study estimated the causal effect of legal-standard changes by comparing computer-implemented invention patent outcomes across offices before and after the changes."
+  ],
+  "standalone_question": "How did the study of computer-implemented inventions estimate the causal effect of changes in legal standards?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp16-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000189,
+  "input": 767,
+  "model": "gpt-6-luna",
+  "output": 225,
+  "reasoning": 161,
+  "seconds": 2.57
+ }
+}

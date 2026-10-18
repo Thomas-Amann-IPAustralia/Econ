@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000111,
+ "data": {
+  "queries": [
+   "copyright excluded from IP rights filing statistics automatic protection",
+   "copyright administration responsibility Attorney-General's Department",
+   "Copyright does not require registration and is administered by the Attorney-General's Department."
+  ],
+  "standalone_question": "Why does the Australian IP Report not cover copyright, and which agency administers copyright in Australia?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr18-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000222,
+  "input": 763,
+  "model": "gpt-6-luna",
+  "output": 291,
+  "reasoning": 220,
+  "seconds": 3.44
+ }
+}

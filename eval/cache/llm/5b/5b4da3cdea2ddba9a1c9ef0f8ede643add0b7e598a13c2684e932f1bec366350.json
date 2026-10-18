@@ -1,0 +1,24 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "queries": [
+   "Provisional patent application filings changed by X per cent between [year] and [year], with changes in the number and share of patent applicants filing provisionally."
+  ],
+  "standalone_question": "How has the use of provisional patent applications changed over time?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-trend-5",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000159,
+  "input": 759,
+  "model": "gpt-6-luna",
+  "output": 166,
+  "reasoning": 103,
+  "seconds": 2.62
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.000101,
+ "data": {
+  "queries": [
+   "Mining innovation extends beyond the official mining industry classification, with METS firms classified in other industries contributing to mining-related innovation."
+  ],
+  "standalone_question": "Does the official industry classification for mining capture all innovation related to mining?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp04-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000202,
+  "input": 763,
+  "model": "gpt-6-luna",
+  "output": 252,
+  "reasoning": 195,
+  "seconds": 3.2
+ }
+}

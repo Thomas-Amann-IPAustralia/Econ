@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000134,
+ "data": {
+  "queries": [
+   "female inventor representation in patent filings",
+   "diversity in innovation teams and inventive outcomes",
+   "Women account for X per cent of named inventors, while greater diversity in research teams is associated with broader inventive activity and economic outcomes."
+  ],
+  "standalone_question": "What do the reports say about the gender gap in patenting and diversity in innovation?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-synthesis-6",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000269,
+  "input": 766,
+  "model": "gpt-6-luna",
+  "output": 384,
+  "reasoning": 304,
+  "seconds": 4.17
+ }
+}

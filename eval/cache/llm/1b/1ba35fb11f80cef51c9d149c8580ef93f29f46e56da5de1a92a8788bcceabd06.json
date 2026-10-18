@@ -1,0 +1,25 @@
+{
+ "cost_usd": 5.2e-05,
+ "data": {
+  "queries": [
+   "design market interviews client referrals word of mouth designer hiring",
+   "Past clients’ word-of-mouth referrals help designers find work and secure new projects."
+  ],
+  "standalone_question": "Does word of mouth from past clients help designers get hired?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp03-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000104,
+  "input": 761,
+  "model": "gpt-6-luna",
+  "output": 56,
+  "reasoning": 0,
+  "seconds": 2.46
+ }
+}

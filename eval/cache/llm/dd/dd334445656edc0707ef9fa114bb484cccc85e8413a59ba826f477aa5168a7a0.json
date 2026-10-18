@@ -1,0 +1,24 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "queries": [
+   "The Patent Analytics Hub enables users to analyse patent data and identify trends, technologies, and areas of innovation."
+  ],
+  "standalone_question": "What is the Patent Analytics Hub intended to do?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr16-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000159,
+  "input": 759,
+  "model": "gpt-6-luna",
+  "output": 166,
+  "reasoning": 116,
+  "seconds": 2.27
+ }
+}

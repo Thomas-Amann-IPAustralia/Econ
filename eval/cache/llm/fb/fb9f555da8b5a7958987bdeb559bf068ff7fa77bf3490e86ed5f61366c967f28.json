@@ -1,0 +1,24 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "queries": [
+   "The relationship between intellectual property rights and business profitability differs for loss-making firms, whose profitability is below zero."
+  ],
+  "standalone_question": "Do the findings on intellectual property rights and business profitability apply to businesses that make a loss?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr20-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000159,
+  "input": 765,
+  "model": "gpt-6-luna",
+  "output": 164,
+  "reasoning": 106,
+  "seconds": 2.27
+ }
+}

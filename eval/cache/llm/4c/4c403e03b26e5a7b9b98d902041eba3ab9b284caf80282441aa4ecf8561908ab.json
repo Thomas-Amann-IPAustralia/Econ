@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000102,
+ "data": {
+  "queries": [
+   "economic contribution of copyright patents trade marks and designs",
+   "value added and employment by intellectual property right",
+   "Copyright, patents, trade marks and designs contribute different shares of Australian value added and employment, with each right accounting for X per cent of economic activity."
+  ],
+  "standalone_question": "How do different intellectual property rights compare in their contribution to the Australian economy?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-compare-5",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000205,
+  "input": 764,
+  "model": "gpt-6-luna",
+  "output": 257,
+  "reasoning": 174,
+  "seconds": 3.27
+ }
+}

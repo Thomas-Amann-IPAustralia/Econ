@@ -1,0 +1,25 @@
+{
+ "cost_usd": 5.3e-05,
+ "data": {
+  "queries": [
+   "trade mark applications leading indicator business cycle consumer confidence",
+   "Trade mark applications predict economic activity better than consumer confidence by X months."
+  ],
+  "standalone_question": "Are new trade mark registrations a better leading indicator of the business cycle than consumer confidence?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "note-tm-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000105,
+  "input": 764,
+  "model": "gpt-6-luna",
+  "output": 58,
+  "reasoning": 0,
+  "seconds": 1.41
+ }
+}

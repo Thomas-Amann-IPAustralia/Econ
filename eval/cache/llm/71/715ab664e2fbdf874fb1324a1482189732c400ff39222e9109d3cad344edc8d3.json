@@ -1,0 +1,32 @@
+{
+ "cost_usd": 0.000674,
+ "data": [
+  {
+   "grade": 3,
+   "id": "p1"
+  },
+  {
+   "grade": 2,
+   "id": "p2"
+  },
+  {
+   "grade": 2,
+   "id": "p3"
+  }
+ ],
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "judge:judge-v1:gemini-3.8-flash",
+ "schema_name": "grades",
+ "tag": "explore-policy-2",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001347,
+  "input": 1556,
+  "model": "gemini-3.8-flash",
+  "output": 48,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

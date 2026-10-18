@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.000104,
+ "data": {
+  "queries": [
+   "Innovation patent applications rose in 2020, driven by X applicants from X country or applicant group."
+  ],
+  "standalone_question": "What happened to innovation patent applications in 2020, and who drove the change?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr21-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000208,
+  "input": 765,
+  "model": "gpt-6-luna",
+  "output": 262,
+  "reasoning": 206,
+  "seconds": 2.88
+ }
+}
