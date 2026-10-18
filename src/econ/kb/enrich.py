@@ -41,7 +41,7 @@ def outline(doc_id: str, limit_chars: int = 1600) -> str:
 
 
 def prompt_text() -> str:
-    return (config.ROOT / "prompts" / f"{PROMPT}.md").read_text(encoding="utf-8")
+    return (config.ROOT / "prompts" / "eval" / f"{PROMPT}.md").read_text(encoding="utf-8")
 
 
 def calls(chunks: list[dict], *, model: str, effort: str | None) -> list[llmcall.Call]:

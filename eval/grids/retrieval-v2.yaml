@@ -1,0 +1,44 @@
+# Retrieval grid v2, on the judged test set (silver-v1 + explore-v1 = 178 needs; 86 dev, 92 test).
+# Committed before any judgment exists (SOP §12). Judgments: eval/judgments/judged-v1.jsonl, graded 0-3 by
+# gemini-3.8-flash (prompts/judge-v1.md) over a pool of every system below.
+grid: retrieval-v2
+testset: [eval/testset/silver-v1.yaml, eval/testset/explore-v1.yaml]
+judgments: judged-v1
+
+# Headline metric: nDCG@20 of the context the answer model sees (its 20 passages, in order, after the
+# per-document cap), with gains 2^grade - 1 and the ideal ranking built from every judged passage of the
+# need. Unjudged passages count as 0, so judged@20 is reported beside it.
+primary: ndcg@20
+secondary: [ndcg@10, rel_recall@20, p@20, gold_recall@20, gold_recall@4k_tok, judged@20]
+
+# Stage 1, retrieval: a factorial over query form x index text x reranker (rr_depth 50, the first-stage
+# candidates the service already computes). The baseline is the service as configured today with the
+# OpenAI provider: plan:luna-plan-v1, plain text, no reranker.
+stage1:
+  baseline: plan:luna-plan-v1/plain/none
+  query: [raw, plan:luna-plan-v1, plan:flashlite-plan-v1, plan:luna-plan-v2, plan+q:luna-plan-v2, plan:flashlite-plan-v2]
+  text: [plain, enriched:S384-noprefix-nocite.luna-enrich-v1]
+  reranker: [none, ettin-17m, ettin-32m, minilm-l6, ettin-68m]
+  # Rerankers of 150M parameters (gte-mb, ettin-150m, granite-r2) are scored on three first stages only
+  # and reported as a reference ceiling; they are too slow to serve on the embedder's CPUs (3.6 pairs a
+  # second on 4 vCPU in float32, so about 14 s for 50 passages).
+  reference_rerankers: [gte-mb, ettin-150m, granite-r2]
+  # Rule: rank settings by complexity (components added to the baseline's service: a reranker, then the
+  # enrichment, then a change of plan prompt or model), and choose the least complex setting within 0.02
+  # of the best dev score. Ties in complexity go to the higher dev score. A reranker is adoptable only if
+  # it reranks 50 passages within 2.5 s on this machine's 4 vCPU in float32.
+  margin: 0.02
+  latency_budget_s: 2.5
+  # Guard: the choice must not trail the baseline on silver gold_recall@4k_tok (dev) by more than 0.02.
+  guard: {metric: gold_recall@4k_tok, family: silver, max_drop: 0.02}
+
+# Stage 2, context assembly, on stage 1's choice: the per-document cap. The context stays at 20 passages
+# (per-question tokens unchanged).
+stage2:
+  cap: [8, 5, 3]
+  margin: 0.01
+  rule: keep cap 8 unless another cap beats it by more than the margin on dev.
+
+# Reporting: the choice against the baseline on test, with paired bootstrap 95% intervals and Holm-adjusted
+# paired randomisation p-values; by family (silver, explore) and by kind; judged@20 for every setting. Before
+# the final report, any unjudged passage in the chosen setting's test contexts is judged (a top-up).
