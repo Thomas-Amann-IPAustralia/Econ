@@ -1,0 +1,17 @@
+{
+  "built_from": "20261018T010921Z",
+  "chunks": 1969,
+  "dim": 768,
+  "embedder": "arctic-m-v1.5",
+  "files": {
+    "bm25.npz": "83fdebcfd640fbff",
+    "bm25.vocab.json": "17d513794755ed59",
+    "chunks.jsonl": "46c2ca330c10a61c",
+    "docs.json": "3e25a69b6a97f580",
+    "vectors.f16.npy": "2c11c553657414ef"
+  },
+  "hf_id": "Snowflake/snowflake-arctic-embed-m-v1.5",
+  "onnx_sha256": "bc6f7662487a0796e6f86229c8e5c3ab2f7059e08e0bb2f524125273f72171c4",
+  "revision": "e58a8f756156a1293d763f17e3aae643474e9b8a",
+  "strategy": "S384-noprefix"
+}
