@@ -136,11 +136,18 @@ def _gen_config(call: llmcall.Call) -> dict:
     return gen
 
 
+def batch_reserve(calls: list[llmcall.Call], expected_output: int = 600) -> float:
+    """A batch's reserve at the Batch price: its input (about 3.5 characters a token) and an expected
+    output per request, plus 20%. The pilot's replies averaged about 250 output tokens."""
+    p_in, _, p_out = config.service().llm.prices_per_mtok[calls[0].model]
+    toks = sum((len(c.system) + len(c.user)) / 3.5 for c in calls)
+    return 1.2 * 0.5 * (toks * p_in + len(calls) * expected_output * p_out) / 1e6
+
+
 def submit_batch(calls: list[llmcall.Call], name: str) -> str:
     model = calls[0].model
     assert all(c.model == model for c in calls)
-    reserve = sum(llmcall.estimate(c) for c in calls) * 0.5
-    spend.guard("gemini", reserve)
+    spend.guard("gemini", batch_reserve(calls))
     body = {
         "batch": {
             "display_name": name,

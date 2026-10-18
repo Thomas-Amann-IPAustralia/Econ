@@ -35,16 +35,22 @@ from econ.retrieval.search import fuse
 
 STRATEGY = "S384-noprefix-nocite"
 
+# Repository and the revision the measurement loaded (the main branch on 2026-10-18).
 RERANKERS = {
     "minilm-l6": "cross-encoder/ms-marco-MiniLM-L6-v2",
     "ettin-17m": "cross-encoder/ettin-reranker-17m-v1",
     "ettin-32m": "cross-encoder/ettin-reranker-32m-v1",
     "ettin-68m": "cross-encoder/ettin-reranker-68m-v1",
     "ettin-150m": "cross-encoder/ettin-reranker-150m-v1",
-    "ettin-400m": "cross-encoder/ettin-reranker-400m-v1",
     "gte-mb": "Alibaba-NLP/gte-reranker-modernbert-base",
-    "granite-r2": "ibm-granite/granite-embedding-reranker-english-r2",
-    "bge-m3": "BAAI/bge-reranker-v2-m3",
+}
+REVISIONS = {
+    "minilm-l6": "233902d25c440f23af6f7d6e94d2946bac0bee0a",
+    "ettin-17m": "9e4aa35321a6dd1a43ca313f500c4b4f7cfb5cc6",
+    "ettin-32m": "b33e5ceb5110773ea9cf5e00c9bedc83a8c2afdd",
+    "ettin-68m": "d166fa88ddde3c42bc3ee92f7df476d941c8204a",
+    "ettin-150m": "025501c4e0f9bbeb4c5b198318e0089ff061cc14",
+    "gte-mb": "f7481e6055501a30fb19d090657df9ec1f79ab2c",
 }
 
 
@@ -195,7 +201,12 @@ def _cross_encoder(name: str, dtype: str):
     torch.set_num_threads(4)
     kw = {"torch_dtype": torch.bfloat16} if dtype == "bf16" else {}
     return CrossEncoder(
-        RERANKERS[name], device="cpu", max_length=512, trust_remote_code=False, model_kwargs=kw
+        RERANKERS[name],
+        revision=REVISIONS[name],
+        device="cpu",
+        max_length=512,
+        trust_remote_code=False,
+        model_kwargs=kw,
     )
 
 

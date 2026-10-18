@@ -206,4 +206,13 @@ reranking:
       params_m: 32.8
       licence: apache-2.0
       onnx_sha256: 31061d9f54e8303f5d95cf3433dcf99f50d5f6de283c3b8357452be8c824142f
+    ettin-68m:
+      hf_id: cross-encoder/ettin-reranker-68m-v1
+      revision: d166fa88ddde3c42bc3ee92f7df476d941c8204a
+      params_m: 68.6
+      licence: apache-2.0
+  # Measured in the grid but not servable as configured: ms-marco-MiniLM-L6-v2 (cross-encoder/,
+  # 233902d2, a BERT classifier export), and the 150M ceiling models ettin-reranker-150m-v1 (025501c4)
+  # and gte-reranker-modernbert-base (f7481e60). The measurement loaded them at those revisions
+  # (the main branch on 2026-10-18).
   adopted: null

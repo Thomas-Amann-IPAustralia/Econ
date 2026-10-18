@@ -87,3 +87,16 @@ pavlova. gpt-6.1-sol was more concise and added a caveat; Gemini quoted more.
 - **Grid amendment 1** (before any pool judgment): Flash can't afford depth-20 judging of every system,
   so the pool is every system's top 10, stage 1 chooses on ndcg@10, and a top-up judges ranks 11-20 of
   the chosen setting and the baseline.
+
+## 2026-10-18 — Serving path for a reranker (built, off until the grid decides)
+- `econ.reranker.OnnxReranker`: the Ettin rerankers' repository ONNX exports hold only the transformer
+  (`last_hidden_state`), so the score head (CLS pooling, dense + GELU, LayerNorm, dense to one logit) is
+  read from the repository's safetensors (parsed without the library) and applied in numpy. Parity with
+  sentence-transformers in float32: max absolute difference 3e-6 on 50 real pairs, for 17m and 32m.
+- The Cloud Run service gains `POST /rerank` (same token, same limits: 64 passages, 4,000 characters
+  each); the image fetches the adopted reranker at a pinned revision with hash checks, or none.
+- The pipeline reranks the first stage's top `reranking.depth` (50) against the question as asked (plus
+  pasted headings), keeps the first-stage rank on the record, and if the reranker fails keeps the
+  first-stage order with a visible status, as search does when the embedder fails.
+- Tests: `tests/test_rerank.py` (7). Revisions pinned in `config/pipeline.yaml` and `econ.evalr.systems`.
+- The answer-eval runner (`econ.evalr.answers`) mirrors the service's answer step on any setting.
