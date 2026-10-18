@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.7e-05,
+ "data": {
+  "context": "In the Discussion of *Computer Implemented Inventions: Patent Trends at IP Australia, EPO and USPTO* (2024), this passage explains how the study grouped computer-implemented invention (CII) applications to evaluate the effects of the 2014 Alice and Research Affiliates court decisions on Australian patenting. It also describes comparing grant likelihood across IP Australia, the EPO and USPTO using equivalent applications in “triplet patent families” to account for differences in patent examination procedures."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp16-cii-patent-trends:0084",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000174,
+  "input": 1182,
+  "model": "gpt-6-luna",
+  "output": 111,
+  "reasoning": 0,
+  "seconds": 2.08
+ }
+}

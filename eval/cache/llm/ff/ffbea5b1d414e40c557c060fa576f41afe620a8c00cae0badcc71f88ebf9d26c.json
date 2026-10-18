@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.8e-05,
+ "data": {
+  "context": "In *The market for design: insights from interviews with Australian firms* (2014), the “Design as a capability” section reviews research on design’s effects on economic performance and firms, noting limited Australian firm-level research and asking how firms capture value from building and selling design capabilities."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp03-market-for-design:0011",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000156,
+  "input": 1215,
+  "model": "gpt-6-luna",
+  "output": 69,
+  "reasoning": 0,
+  "seconds": 1.5
+ }
+}

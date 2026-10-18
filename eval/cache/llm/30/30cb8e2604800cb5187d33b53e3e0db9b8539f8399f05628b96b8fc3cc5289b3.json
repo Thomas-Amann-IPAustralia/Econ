@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000217,
+ "data": {
+  "queries": [
+   "machine learning computer-implemented inventions classification features",
+   "machine learning models CII patent applications"
+  ],
+  "standalone_question": "What information did the machine learning models use to classify computer-implemented invention applications?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "erp16-3",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000217,
+  "input": 241,
+  "model": "gemini-3.5-flash-lite",
+  "output": 58,
+  "reasoning": 0,
+  "seconds": 0.93
+ }
+}

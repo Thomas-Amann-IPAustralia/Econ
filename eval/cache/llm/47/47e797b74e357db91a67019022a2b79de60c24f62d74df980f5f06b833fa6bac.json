@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.4e-05,
+ "data": {
+  "context": "In the Australian IP Report 2021, the “Leading product classes” section discusses how COVID-19 affected Australian design right applications in 2019–20; Figure D2 compares changes in application shares across five key Locarno classes, selected for the greatest changes in application levels."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2021:0037",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000149,
+  "input": 844,
+  "model": "gpt-6-luna",
+  "output": 130,
+  "reasoning": 58,
+  "seconds": 2.32
+ }
+}

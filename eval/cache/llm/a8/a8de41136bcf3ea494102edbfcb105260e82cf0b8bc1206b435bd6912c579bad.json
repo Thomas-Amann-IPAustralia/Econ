@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.7e-05,
+ "data": {
+  "context": "In the 2020 IP Australia Economic Research Paper 10, *Intellectual property rights, business profitability and competition in the Australian economy*, Appendix B describes the data used. It explains that the study combines core ATO business data with BLADE’s IPLORD dataset, which tracks registrable IP rights held by Australian businesses from 1997–98 onward; ABS survey data were unavailable when the project began."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp10-ip-profitability-competition:0074",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000174,
+  "input": 1265,
+  "model": "gpt-6-luna",
+  "output": 95,
+  "reasoning": 0,
+  "seconds": 1.54
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.9e-05,
+ "data": {
+  "queries": [
+   "Australian IP rights economic contribution patents trade marks designs plant breeder's rights GDP employment wages value added"
+  ],
+  "standalone_question": "How do patents, trade marks, designs, plant breeder’s rights and other IP rights compare in their contribution to the Australian economy?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-compare-5",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 5.9e-05,
+  "input": 286,
+  "model": "gpt-6-luna",
+  "output": 61,
+  "reasoning": 0,
+  "seconds": 1.34
+ }
+}

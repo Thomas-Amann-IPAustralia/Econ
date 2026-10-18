@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "context": "In *The Market for Design* (2014), in the section on co-creation under the theme of weak intellectual property’s impact on the design market, this passage describes how buyers’ participation and design knowledge help them work with Australian design firms. It contrasts collaborative clients with buyers who expect a quick, one-way commission."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp03-market-for-design:0065",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000159,
+  "input": 1209,
+  "model": "gpt-6-luna",
+  "output": 77,
+  "reasoning": 0,
+  "seconds": 1.73
+ }
+}

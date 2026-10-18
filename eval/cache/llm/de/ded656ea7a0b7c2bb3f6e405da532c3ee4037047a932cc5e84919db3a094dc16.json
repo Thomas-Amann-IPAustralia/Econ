@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.6e-05,
+ "data": {
+  "context": "In the Australian IP Report 2026, this section examines EU regulatory demand and Australia’s strategic fit in battery and critical-minerals value chains. It describes how EU sustainability and traceability rules and Australia–EU cooperation create demand and commercial incentives for Australian minerals, recycling and resource-recovery firms, and a reason to protect relevant IP in European markets."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0048",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000131,
+  "input": 894,
+  "model": "gpt-6-luna",
+  "output": 83,
+  "reasoning": 0,
+  "seconds": 2.34
+ }
+}

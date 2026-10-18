@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.1e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2021, Chapter 7’s “Trade marks owners benefit more when tariffs drop” section discusses how trade marks relate to Australian exporters’ revenue and market entry when tariffs fall, using firm-product-market-year analysis of long-term exporters in the US, Canada, the UK and eight Eurozone countries. Figure E2 compares the reported effects for firms with and without trade marks."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2021:0063",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000161,
+  "input": 1139,
+  "model": "gpt-6-luna",
+  "output": 95,
+  "reasoning": 0,
+  "seconds": 2.38
+ }
+}

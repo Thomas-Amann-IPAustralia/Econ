@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.8e-05,
+ "data": {
+  "context": "In the 2020 IP Australia Economic Research Paper 10, *Intellectual property rights, business profitability and competition in the Australian economy*, Appendix B describes the BLADE and IPLORD data used in the study. It explains the Type of Activity Unit as the observation unit, how duplicate IPLORD records arise and are handled, and notes that the available data covered fiscal years 2001–02 to 2015–16."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp10-ip-profitability-competition:0075",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000177,
+  "input": 1271,
+  "model": "gpt-6-luna",
+  "output": 99,
+  "reasoning": 0,
+  "seconds": 1.94
+ }
+}

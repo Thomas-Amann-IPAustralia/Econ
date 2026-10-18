@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.3e-05,
+ "data": {
+  "context": "In *Computer implemented inventions: patent trends at IP Australia, EPO and USPTO* (2024), in the section on propensity to file CII patent applications at IP Australia, Table 7 reports the average share of US patent applications later filed at IP Australia by filing year and CII status, using patent family IDs to identify the same application."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp16-cii-patent-trends:0054",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000186,
+  "input": 1446,
+  "model": "gpt-6-luna",
+  "output": 83,
+  "reasoning": 0,
+  "seconds": 1.36
+ }
+}

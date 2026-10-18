@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000102,
+ "data": {
+  "context": "In the Australian IP Report 2023, this figure discusses employment transitions into patent-holding businesses from 2012 to 2019. It compares overall job switching with transitions into these firms and describes how workers’ digital technology experience, age, gender and migrant status relate to joining them."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2023:0117",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000205,
+  "input": 1034,
+  "model": "gpt-6-luna",
+  "output": 204,
+  "reasoning": 132,
+  "seconds": 2.74
+ }
+}

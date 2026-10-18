@@ -1,0 +1,24 @@
+{
+ "cost_usd": 4.4e-05,
+ "data": {
+  "queries": [
+   "designers hired through client referrals and word of mouth"
+  ],
+  "standalone_question": "Does word of mouth from past clients help designers get hired?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp03-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 8.7e-05,
+  "input": 672,
+  "model": "gpt-6-luna",
+  "output": 39,
+  "reasoning": 0,
+  "seconds": 2.51
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.9e-05,
+ "data": {
+  "context": "In *The business environment of patenting firms in Australia* (2024), Table 4 reports pooled, random-effects and fixed-effects regressions on retired patent numbers; the following text introduces Tables 5–7 on firms’ likelihood of filing, being granted or retiring a patent. The regressions use Australian firm data from BLADE."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp15-patenting-firms:0030",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000178,
+  "input": 1372,
+  "model": "gpt-6-luna",
+  "output": 81,
+  "reasoning": 0,
+  "seconds": 1.43
+ }
+}

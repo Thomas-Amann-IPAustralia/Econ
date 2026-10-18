@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.9e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2018, the section on food and beverage products examines Australian trade marks using location names, including non-resident filings in the Wine, Spirits and Liqueurs class from selected countries during 1990–2013. It identifies France as filing the most, followed by the United States and the United Kingdom."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2018:0033",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000139,
+  "input": 989,
+  "model": "gpt-6-luna",
+  "output": 81,
+  "reasoning": 0,
+  "seconds": 1.49
+ }
+}

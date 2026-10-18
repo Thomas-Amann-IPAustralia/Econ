@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.5e-05,
+ "data": {
+  "context": "In the 2014 Report on patent backlogs, inventories and pendency, the Pendency section defines two ways to measure patent application pendency: time to disposal for applications ending in the same month (exit pendency) and for applications filed in the same month (entry pendency). The report estimates both, but not the unobservable expected pendency discussed in the cited joint report."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp01-patent-backlogs:0007",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00015,
+  "input": 1051,
+  "model": "gpt-6-luna",
+  "output": 90,
+  "reasoning": 0,
+  "seconds": 2.87
+ }
+}

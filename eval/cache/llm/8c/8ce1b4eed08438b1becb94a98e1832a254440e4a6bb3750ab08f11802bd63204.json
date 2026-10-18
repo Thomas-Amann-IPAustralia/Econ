@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000101,
+ "data": {
+  "context": "In the trade mark endnotes of the Australian IP Report 2023, these references cover research on product performance, branding, trade marks and exports, international filing data, and the method for assigning an application to a country of origin. They also cite Australian living-cost information."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2023:0049",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000202,
+  "input": 1179,
+  "model": "gpt-6-luna",
+  "output": 169,
+  "reasoning": 100,
+  "seconds": 2.56
+ }
+}

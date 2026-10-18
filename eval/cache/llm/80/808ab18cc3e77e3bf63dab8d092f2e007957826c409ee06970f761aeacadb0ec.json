@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000339,
+ "data": {
+  "queries": [
+   "Indigenous Knowledge and traditional cultural expression protection",
+   "First Nations and Indigenous Knowledge intellectual property initiatives"
+  ],
+  "standalone_question": "What is IP Australia doing about Indigenous Knowledge in the IP system?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-policy-8",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000339,
+  "input": 663,
+  "model": "gemini-3.5-flash-lite",
+  "output": 56,
+  "reasoning": 0,
+  "seconds": 0.88
+ }
+}

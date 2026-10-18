@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6e-05,
+ "data": {
+  "context": "In the Australian IP Report 2026, this passage covers leading overseas destinations for Australian trade mark filings. It describes destination patterns in 2024, including changes in application and class counts across markets such as the United States, New Zealand, China, the Philippines and Thailand."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0083",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000119,
+  "input": 858,
+  "model": "gpt-6-luna",
+  "output": 67,
+  "reasoning": 0,
+  "seconds": 1.57
+ }
+}

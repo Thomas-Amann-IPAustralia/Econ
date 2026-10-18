@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000162,
+ "data": {
+  "queries": [
+   "design intensity definition",
+   "measuring design intensity registered designs"
+  ],
+  "standalone_question": "How is design intensity defined and measured in the research on registered designs?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-methods-5",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000162,
+  "input": 239,
+  "model": "gemini-3.5-flash-lite",
+  "output": 36,
+  "reasoning": 0,
+  "seconds": 0.97
+ }
+}

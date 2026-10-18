@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.000304,
+ "data": {
+  "queries": [
+   "copyright economic contribution website blocking infringement"
+  ],
+  "standalone_question": "Is Australia's website blocking scheme for copyright infringement effective?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-policy-5",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000304,
+  "input": 662,
+  "model": "gemini-3.5-flash-lite",
+  "output": 42,
+  "reasoning": 0,
+  "seconds": 0.84
+ }
+}

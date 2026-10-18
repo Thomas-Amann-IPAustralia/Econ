@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.5e-05,
+ "data": {
+  "context": "In the Australian IP Report 2023’s “IP in a slowing economy” insights section, this passage previews research on how macroeconomic conditions and monetary policy shape intellectual property and innovation in Australia, referring to the effects of the 2008 Global Financial Crisis and the COVID-19 shock."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2023:0085",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000189,
+  "input": 927,
+  "model": "gpt-6-luna",
+  "output": 193,
+  "reasoning": 121,
+  "seconds": 2.54
+ }
+}

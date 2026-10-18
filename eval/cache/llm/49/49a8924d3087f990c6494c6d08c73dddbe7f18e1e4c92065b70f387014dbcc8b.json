@@ -1,0 +1,24 @@
+{
+ "cost_usd": 4.4e-05,
+ "data": {
+  "queries": [
+   "Raising the Bar reforms examination request effective date"
+  ],
+  "standalone_question": "In which years did the Raising the Bar reforms take effect for examination requests?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp14-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 8.8e-05,
+  "input": 675,
+  "model": "gpt-6-luna",
+  "output": 41,
+  "reasoning": 0,
+  "seconds": 1.47
+ }
+}

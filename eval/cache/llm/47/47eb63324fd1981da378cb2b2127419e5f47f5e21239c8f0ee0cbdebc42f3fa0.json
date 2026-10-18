@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.7e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2017, section 6, “University-Industry Collaboration, Not a Crisis,” this passage compares OECD survey evidence on collaboration with an approach using IPGOD and expert analysis of jointly filed IP applications to examine collaboration between Australian universities and businesses."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2017:0022",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000133,
+  "input": 993,
+  "model": "gpt-6-luna",
+  "output": 68,
+  "reasoning": 0,
+  "seconds": 1.32
+ }
+}

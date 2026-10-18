@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000334,
+ "data": {
+  "queries": [
+   "machine learning classifier patent scope accuracy",
+   "predicting patent scope machine learning performance metrics"
+  ],
+  "standalone_question": "How accurate was the best machine learning classifier of patent scope?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "erp14-2",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000334,
+  "input": 662,
+  "model": "gemini-3.5-flash-lite",
+  "output": 54,
+  "reasoning": 0,
+  "seconds": 0.91
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In the 2021 report *Exporter responses to shocks: The role of trade marks*, this table in the export-revenue robustness section compares results across alternative firm samples, including restricted country markets and dropping the largest or smallest export values. It reports estimated relationships between tariffs, the real exchange rate, demand, trade mark activity and export revenue."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp11-exporters-trade-marks:0094",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000164,
+  "input": 1239,
+  "model": "gpt-6-luna",
+  "output": 80,
+  "reasoning": 0,
+  "seconds": 1.66
+ }
+}

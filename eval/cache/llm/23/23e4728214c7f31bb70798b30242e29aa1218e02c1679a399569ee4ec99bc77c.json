@@ -1,0 +1,24 @@
+{
+ "cost_usd": 7.1e-05,
+ "data": {
+  "queries": [
+   "share of IP applications filed by top applicants"
+  ],
+  "standalone_question": "Do a small number of heavy users account for much of the demand for intellectual property rights?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr16-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000141,
+  "input": 677,
+  "model": "gpt-6-luna",
+  "output": 146,
+  "reasoning": 101,
+  "seconds": 2.9
+ }
+}

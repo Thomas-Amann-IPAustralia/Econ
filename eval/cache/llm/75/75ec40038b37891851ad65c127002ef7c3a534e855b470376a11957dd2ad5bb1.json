@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.8e-05,
+ "data": {
+  "context": "In the Australian IP Report 2026 section “Emerging Australia-EU industrial linkages,” this passage describes growing Australia–Europe financing, supply and IP connections in battery value chains, with examples involving critical minerals, graphite processing and lithium-ion battery recycling."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0050",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000156,
+  "input": 908,
+  "model": "gpt-6-luna",
+  "output": 131,
+  "reasoning": 66,
+  "seconds": 2.31
+ }
+}

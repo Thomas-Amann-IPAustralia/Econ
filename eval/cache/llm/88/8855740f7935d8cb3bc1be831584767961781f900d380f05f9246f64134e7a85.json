@@ -1,0 +1,24 @@
+{
+ "cost_usd": 4.9e-05,
+ "data": {
+  "queries": [
+   "innovation patent applications 2020 change applicant origin"
+  ],
+  "standalone_question": "What happened to innovation patent applications in Australia in 2020, and which applicants drove the change?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr21-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 9.9e-05,
+  "input": 287,
+  "model": "gpt-6-luna",
+  "output": 141,
+  "reasoning": 93,
+  "seconds": 2.01
+ }
+}

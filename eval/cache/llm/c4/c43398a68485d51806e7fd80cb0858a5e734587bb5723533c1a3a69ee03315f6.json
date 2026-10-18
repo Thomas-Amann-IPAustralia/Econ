@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.5e-05,
+ "data": {
+  "context": "In the 2023 *Drivers of AI investment* report, Appendix 1B lists mappings from LinkedIn industry names to ANZIC06 divisions. This excerpt maps capital markets, investment banking, hospital and health care, and individual and family services."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "oce-ai-investment:0077",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00013,
+  "input": 986,
+  "model": "gpt-6-luna",
+  "output": 63,
+  "reasoning": 0,
+  "seconds": 1.7
+ }
+}

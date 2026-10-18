@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.7e-05,
+ "data": {
+  "context": "In the Australian IP Report 2026 section “Monitoring trends and maintaining system integrity,” this passage discusses global changes in trade mark filing linked to industrial upgrading, cross-border ecommerce and platform governance, and IP Australia’s monitoring of registry trends and market effects."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0079",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000173,
+  "input": 936,
+  "model": "gpt-6-luna",
+  "output": 159,
+  "reasoning": 95,
+  "seconds": 2.34
+ }
+}

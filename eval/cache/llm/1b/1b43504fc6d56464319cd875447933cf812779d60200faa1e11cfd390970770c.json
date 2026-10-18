@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.5e-05,
+ "data": {
+  "queries": [
+   "design firms value capture ideas clients intellectual property appropriation"
+  ],
+  "standalone_question": "Why is it difficult for design firms to capture the value of their ideas from clients?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp03-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 5.1e-05,
+  "input": 288,
+  "model": "gpt-6-luna",
+  "output": 44,
+  "reasoning": 0,
+  "seconds": 2.48
+ }
+}

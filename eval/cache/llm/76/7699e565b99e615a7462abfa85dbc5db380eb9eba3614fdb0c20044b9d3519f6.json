@@ -1,0 +1,21 @@
+{
+ "cost_usd": 4.6e-05,
+ "data": {
+  "context": "In the front matter of the Australian Intellectual Property Report 2018, this passage lists the report’s publication identifiers and copyright information, including the Commonwealth Coat of Arms and IP Australia’s logo."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2018:0000",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 9.1e-05,
+  "input": 655,
+  "model": "gpt-6-luna",
+  "output": 50,
+  "reasoning": 0,
+  "seconds": 1.17
+ }
+}

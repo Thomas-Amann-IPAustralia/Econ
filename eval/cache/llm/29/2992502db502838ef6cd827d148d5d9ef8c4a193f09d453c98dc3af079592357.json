@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000222,
+ "data": {
+  "queries": [
+   "trade mark filings GDP growth",
+   "economic forecasting trade marks",
+   "leading indicators GDP trade marks"
+  ],
+  "standalone_question": "How much does a rise in trade mark filings predict about GDP growth?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "note-tm-1",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000222,
+  "input": 239,
+  "model": "gemini-3.5-flash-lite",
+  "output": 60,
+  "reasoning": 0,
+  "seconds": 0.77
+ }
+}

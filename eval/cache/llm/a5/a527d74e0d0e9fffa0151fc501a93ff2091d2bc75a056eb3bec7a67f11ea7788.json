@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.7e-05,
+ "data": {
+  "context": "In the 2024 report *Computer Implemented Inventions: Patent Trends at IP Australia, EPO and USPTO*, this section examines CII patent application trends from 2001 to 2020. It describes Figure 4’s shares of CII applications and machine-learning-predicted CII applications likely to face patentable subject matter objections at IP Australia, the EPO and the USPTO."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp16-cii-patent-trends:0027",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000175,
+  "input": 1276,
+  "model": "gpt-6-luna",
+  "output": 94,
+  "reasoning": 0,
+  "seconds": 1.49
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5.8e-05,
+ "data": {
+  "context": "This is the title page of IP Australia Economic Research Paper 16 (2024), *Computer implemented inventions: patent trends at IP Australia, EPO and USPTO*, by Michael Falk, Sarah Hegarty, Trevor Kollmann, Alfons Palangkaraya and Elizabeth Webster, published in November 2024."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp16-cii-patent-trends:0000",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000116,
+  "input": 773,
+  "model": "gpt-6-luna",
+  "output": 78,
+  "reasoning": 0,
+  "seconds": 1.7
+ }
+}

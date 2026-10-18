@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.00035,
+ "data": {
+  "queries": [
+   "trade mark filing statistics trends COVID-19 pandemic",
+   "trade mark applications post pandemic recovery"
+  ],
+  "standalone_question": "What happened to trade mark filings during the COVID-19 pandemic and after?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "multi-5",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00035,
+  "input": 668,
+  "model": "gemini-3.5-flash-lite",
+  "output": 60,
+  "reasoning": 0,
+  "seconds": 0.93
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.4e-05,
+ "data": {
+  "context": "In the Australian IP Report 2026 section “Domestic reform and international spillovers,” this passage describes research on Australia’s Raising the Bar patent reforms, which narrowed patent protection, and their effects on technological competition and innovation in Australia and beyond. The study was conducted by Motu Economic and Public Policy Research and EPFL; effects varied across technology areas."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0025",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000128,
+  "input": 874,
+  "model": "gpt-6-luna",
+  "output": 82,
+  "reasoning": 0,
+  "seconds": 1.68
+ }
+}

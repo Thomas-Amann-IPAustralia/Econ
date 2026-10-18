@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.4e-05,
+ "data": {
+  "context": "In the 2014 report *The Market for Design*, in the section on Henry Wilson under the theme that formal IP protection plays a limited role, this passage describes his view that pursuing patents and design registration is not worth the time because Australian protections seem ineffective; he instead protects his name and brand with a trademark."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp03-market-for-design:0021",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000148,
+  "input": 1104,
+  "model": "gpt-6-luna",
+  "output": 75,
+  "reasoning": 0,
+  "seconds": 1.36
+ }
+}

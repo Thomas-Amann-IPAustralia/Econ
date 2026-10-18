@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.7e-05,
+ "data": {
+  "context": "In the Australian IP Report 2026, the IPAVentures section describes the team’s innovation work and its 2025 pilot, IP First Response, to help Australian SMEs understand options when facing potential IP disputes. It also covers work on using digital technologies to make authoritative IP information easier to access and discover."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0132",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000133,
+  "input": 952,
+  "model": "gpt-6-luna",
+  "output": 75,
+  "reasoning": 0,
+  "seconds": 1.76
+ }
+}

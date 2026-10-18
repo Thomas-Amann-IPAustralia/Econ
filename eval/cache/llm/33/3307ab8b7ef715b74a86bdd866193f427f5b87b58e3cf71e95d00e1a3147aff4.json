@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.9e-05,
+ "data": {
+  "context": "In the Australian IP Report 2026, the section “Taking IP global: the PCT system” explains how applicants use the Patent Cooperation Treaty or direct filings to seek Australian patent protection. It compares these routes in 2024 and 2025 and links the shift toward direct filings partly to changing applicant-country composition."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0041",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000139,
+  "input": 1010,
+  "model": "gpt-6-luna",
+  "output": 76,
+  "reasoning": 0,
+  "seconds": 1.24
+ }
+}

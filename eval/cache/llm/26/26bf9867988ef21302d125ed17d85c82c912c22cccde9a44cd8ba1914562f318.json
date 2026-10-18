@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.6e-05,
+ "data": {
+  "queries": [
+   "patenting firms collaboration innovation partners"
+  ],
+  "standalone_question": "Are firms that patent more likely to collaborate on innovation, and which types of organisations or partners do they collaborate with?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-compare-6",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 5.2e-05,
+  "input": 287,
+  "model": "gpt-6-luna",
+  "output": 46,
+  "reasoning": 0,
+  "seconds": 1.15
+ }
+}

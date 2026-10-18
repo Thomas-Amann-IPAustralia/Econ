@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.4e-05,
+ "data": {
+  "context": "In *Intellectual property rights, business profitability and competition in the Australian economy* (2020), section 2.3 compares IPR ownership among large Australian businesses and SMEs using the ABS BLADE 2016–17 frame. The table shows ownership rates and the combinations of patents, trade marks and designs held by IPR owners."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp10-ip-profitability-competition:0014",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000169,
+  "input": 1287,
+  "model": "gpt-6-luna",
+  "output": 81,
+  "reasoning": 0,
+  "seconds": 1.46
+ }
+}

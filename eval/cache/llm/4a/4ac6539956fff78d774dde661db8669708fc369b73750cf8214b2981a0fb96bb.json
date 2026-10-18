@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.7e-05,
+ "data": {
+  "context": "In *Intellectual Property Rights, Business Profitability and Competition in the Australian Economy* (2020), Section 4.1.1 explains the econometric modelling of industry market concentration and IPR intensity. It describes Model 2.1, which uses patent-, trade mark- and design-intensive industry indicators, and GMM estimation on Australian industry-subdivision data from 2001–02 to 2015–16."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp10-ip-profitability-competition:0057",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000173,
+  "input": 1239,
+  "model": "gpt-6-luna",
+  "output": 98,
+  "reasoning": 0,
+  "seconds": 2.35
+ }
+}

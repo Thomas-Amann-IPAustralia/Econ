@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.4e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2020, the section “IP Australia: leading the way in digital technology for IP” describes IP Australia’s digital tools and data initiatives. This passage focuses on TM-Link, a dataset for analysing trade marks across international IP offices, and the IP Data Platform for accessing, analysing and sharing data."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2020:0047",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000128,
+  "input": 893,
+  "model": "gpt-6-luna",
+  "output": 78,
+  "reasoning": 0,
+  "seconds": 2.29
+ }
+}

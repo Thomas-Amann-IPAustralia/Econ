@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.3e-05,
+ "data": {
+  "context": "In the welcome to the Australian IP Report 2026, Minister Tim Ayres discusses Australia’s emerging role in AI-driven products and services, including 2025 growth in trade mark applications for scientific and technological services, and how IP supports collaboration, investment and economic resilience."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0001",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000127,
+  "input": 935,
+  "model": "gpt-6-luna",
+  "output": 66,
+  "reasoning": 0,
+  "seconds": 2.43
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.7e-05,
+ "data": {
+  "queries": [
+   "Australian businesses ownership registered IP rights share trend over time"
+  ],
+  "standalone_question": "What proportion of Australian businesses own at least one registered IP right, and how has that proportion changed over time?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp10-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 5.3e-05,
+  "input": 288,
+  "model": "gpt-6-luna",
+  "output": 49,
+  "reasoning": 0,
+  "seconds": 1.73
+ }
+}

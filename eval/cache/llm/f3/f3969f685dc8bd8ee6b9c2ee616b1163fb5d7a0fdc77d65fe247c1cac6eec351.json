@@ -1,0 +1,24 @@
+{
+ "cost_usd": 4.4e-05,
+ "data": {
+  "queries": [
+   "IP rights portfolio business profitability firm profits"
+  ],
+  "standalone_question": "Does holding a larger portfolio of intellectual property rights make a firm more profitable?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp10-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 8.7e-05,
+  "input": 674,
+  "model": "gpt-6-luna",
+  "output": 39,
+  "reasoning": 0,
+  "seconds": 1.48
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.4e-05,
+ "data": {
+  "context": "In the Australian IP Report 2023, the Patent Analytics Hub section describes its 2022 support for the Office of the Chief Scientist and the DISR Critical Technologies Hub. It covers an interactive analysis of patent, bibliometric, investment and social impact data across 63 critical technology areas for assessing future impacts of Australia’s critical technology policies."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2023:0130",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000128,
+  "input": 875,
+  "model": "gpt-6-luna",
+  "output": 80,
+  "reasoning": 0,
+  "seconds": 2.44
+ }
+}

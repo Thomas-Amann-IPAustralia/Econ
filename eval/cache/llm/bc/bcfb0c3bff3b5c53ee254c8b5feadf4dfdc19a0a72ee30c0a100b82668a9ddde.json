@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.7e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2020, the Research Program section describes the Office of the Chief Economist’s work and priorities. It covers policy research, the 2019 integration of IP data with the ABS BLADE dataset and related EDAN projects, research on design-right reform, and engagement with the IP community."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2020:0057",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000155,
+  "input": 1161,
+  "model": "gpt-6-luna",
+  "output": 77,
+  "reasoning": 0,
+  "seconds": 1.51
+ }
+}

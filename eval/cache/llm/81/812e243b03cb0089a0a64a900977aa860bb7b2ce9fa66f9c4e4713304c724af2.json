@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.8e-05,
+ "data": {
+  "context": "In *Computer implemented inventions: patent trends at IP Australia, EPO and USPTO* (2024), in “Number of CII patent applications,” this passage introduces comparisons of patent application trends at IP Australia, the EPO and the USPTO from 2001 to 2020, then describes Figures 3A–C, which classify applications as computer implemented inventions (CIIs) or not and distinguish CII applications by similarity to those receiving an IPA PSM objection."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp16-cii-patent-trends:0024",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000176,
+  "input": 1216,
+  "model": "gpt-6-luna",
+  "output": 109,
+  "reasoning": 0,
+  "seconds": 1.62
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5.8e-05,
+ "data": {
+  "context": "In the Australian IP Report 2025, under “IP data for decision makers,” this passage introduces the IP Rights Overview, launched in 2025 as a user-friendly tool for accessing IP Australia’s open IP RAPID dataset, with weekly self-serve updates and insights."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2025:0100",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000115,
+  "input": 813,
+  "model": "gpt-6-luna",
+  "output": 67,
+  "reasoning": 0,
+  "seconds": 1.17
+ }
+}

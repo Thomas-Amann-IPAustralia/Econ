@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.6e-05,
+ "data": {
+  "context": "In *The business environment of patenting firms in Australia* (2024), Table 9 in the trends and empirical results section reports random-effects regression estimates for firms’ probability of turnover-based high growth, including prior patent filing, grant and retirement measures and firm and industry characteristics."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp15-patenting-firms:0045",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000171,
+  "input": 1364,
+  "model": "gpt-6-luna",
+  "output": 70,
+  "reasoning": 0,
+  "seconds": 1.69
+ }
+}

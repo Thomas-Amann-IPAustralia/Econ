@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5.8e-05,
+ "data": {
+  "context": "In the Australian IP Report 2025, the patents section’s “Overseas locations of origin” topic presents Figure 2.3, comparing leading origins of standard patent applications in Australia in 2024 with high-volume locations showing the greatest relative growth or decline."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2025:0030",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000115,
+  "input": 824,
+  "model": "gpt-6-luna",
+  "output": 66,
+  "reasoning": 0,
+  "seconds": 1.33
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 4.8e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2016, the Research Program section describes IP Australia’s goal of assessing the economic impact of parts of the IP system to inform evidence-based policy, alongside how it announces research projects and procurement plans."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2016:0032",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 9.5e-05,
+  "input": 650,
+  "model": "gpt-6-luna",
+  "output": 60,
+  "reasoning": 0,
+  "seconds": 1.45
+ }
+}

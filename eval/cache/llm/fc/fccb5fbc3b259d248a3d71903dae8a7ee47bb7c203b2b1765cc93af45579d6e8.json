@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.1e-05,
+ "data": {
+  "context": "In the 2023 report *Drivers of AI Investment*, Appendix 1C presents the International Patent Classification framework used in the report. This table describes the sub-classes in IPC categories F, G and H: mechanical engineering and related fields, physics, and electricity."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "oce-ai-investment:0081",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000161,
+  "input": 1279,
+  "model": "gpt-6-luna",
+  "output": 66,
+  "reasoning": 0,
+  "seconds": 1.74
+ }
+}

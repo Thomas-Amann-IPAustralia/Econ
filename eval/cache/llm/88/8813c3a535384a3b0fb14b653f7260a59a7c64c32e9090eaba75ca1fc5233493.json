@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5.5e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2015, the appendix “The four IP rights” introduces the Australian IP system. It explains IP Australia’s role, notes that copyright is administered separately, and summarizes the purpose and country-specific scope of patents, trade marks, designs and plant breeders’ rights."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2015:0023",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00011,
+  "input": 730,
+  "model": "gpt-6-luna",
+  "output": 73,
+  "reasoning": 0,
+  "seconds": 1.38
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6e-05,
+ "data": {
+  "context": "In the Outlook section of the Australian IP Report 2023, this passage summarises recent global IP trends: patent applications reached a record in 2021 and remained near that level in 2022, while plant breeder’s rights (PBR) applications grew in 2022."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2023:0004",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000119,
+  "input": 849,
+  "model": "gpt-6-luna",
+  "output": 69,
+  "reasoning": 0,
+  "seconds": 1.63
+ }
+}

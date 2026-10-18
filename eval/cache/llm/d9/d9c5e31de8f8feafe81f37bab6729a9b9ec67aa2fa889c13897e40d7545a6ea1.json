@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6e-05,
+ "data": {
+  "context": "In the welcome to the Australian IP Report 2023, Minister Ed Husic highlights how Australian IP-holding businesses rely on workforce diversity—including young people, skilled migrants, tech workers and women leaders—and create opportunities across occupations, linking know-how to business growth and jobs."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2023:0002",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00012,
+  "input": 873,
+  "model": "gpt-6-luna",
+  "output": 66,
+  "reasoning": 0,
+  "seconds": 1.64
+ }
+}

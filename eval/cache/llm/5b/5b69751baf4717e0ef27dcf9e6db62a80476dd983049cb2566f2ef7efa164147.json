@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.7e-05,
+ "data": {
+  "queries": [
+   "IP Australia patent examination timing request examination defer expedite examination"
+  ],
+  "standalone_question": "How long does patent examination take at IP Australia, and what options do applicants have to change the timing?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-policy-6",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 5.3e-05,
+  "input": 292,
+  "model": "gpt-6-luna",
+  "output": 48,
+  "reasoning": 0,
+  "seconds": 1.2
+ }
+}

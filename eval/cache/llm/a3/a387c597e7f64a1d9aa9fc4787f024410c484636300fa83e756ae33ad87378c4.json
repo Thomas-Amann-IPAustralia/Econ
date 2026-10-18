@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.6e-05,
+ "data": {
+  "context": "In the 2024 IP Australia Economic Research Paper 16, *Computer implemented inventions: patent trends at IP Australia, EPO and USPTO*, Appendix Table A6 reports EPO patent application counts by WIPO technology field and CII group for 2001–20, distinguishing likely-clear and likely-adverse CII applications from non-CII applications."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp16-cii-patent-trends:0112",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000171,
+  "input": 1295,
+  "model": "gpt-6-luna",
+  "output": 84,
+  "reasoning": 0,
+  "seconds": 2.24
+ }
+}

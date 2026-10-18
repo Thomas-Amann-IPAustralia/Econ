@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000412,
+ "data": {
+  "queries": [
+   "plant breeder's rights application filing trends 2018 to 2022",
+   "reasons for decline in plant breeder's rights applications"
+  ],
+  "standalone_question": "Why did Australian plant breeders file fewer plant breeder's rights applications between 2018 and 2022?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr25-5",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000412,
+  "input": 673,
+  "model": "gemini-3.5-flash-lite",
+  "output": 84,
+  "reasoning": 0,
+  "seconds": 1.15
+ }
+}

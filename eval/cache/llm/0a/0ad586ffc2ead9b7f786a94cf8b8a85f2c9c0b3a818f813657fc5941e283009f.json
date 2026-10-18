@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "context": "In the introduction of *Drivers of AI Investment* (2023), this passage outlines the report’s analysis of AI technology transfer to and adoption across Australian industries, and the role of intellectual property in AI innovation. It previews the report’s data preparation, descriptive analysis and regression methods, which examine drivers and challenges of AI development and adoption."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "oce-ai-investment:0009",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000159,
+  "input": 1194,
+  "model": "gpt-6-luna",
+  "output": 79,
+  "reasoning": 0,
+  "seconds": 1.66
+ }
+}

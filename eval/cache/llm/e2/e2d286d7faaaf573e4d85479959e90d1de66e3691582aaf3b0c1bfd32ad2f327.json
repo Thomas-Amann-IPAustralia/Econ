@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.8e-05,
+ "data": {
+  "context": "In the 2024 report *Raising the Bar reforms: Measuring the impact on relative patent scope*, this endnote explains that the analysis focuses on Australian patents classified as broader than their European or US equivalents, while the machine-learning model also distinguishes similar and narrower scope; it points to Appendices B and E for modelling details and multinomial results."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp14-raising-the-bar:0075",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000157,
+  "input": 1158,
+  "model": "gpt-6-luna",
+  "output": 82,
+  "reasoning": 0,
+  "seconds": 1.46
+ }
+}

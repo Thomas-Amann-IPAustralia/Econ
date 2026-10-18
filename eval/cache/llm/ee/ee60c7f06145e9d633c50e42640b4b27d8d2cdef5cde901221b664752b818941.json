@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.5e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2021, the “Leading applicants” section compares the top domestic and international applicants for Australian standard patent applications in 2020. It identifies leading international applicants from smartphone and telecommunications industries and leading Australian applicants, including changes in rankings and filing totals."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2021:0009",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00015,
+  "input": 1164,
+  "model": "gpt-6-luna",
+  "output": 68,
+  "reasoning": 0,
+  "seconds": 1.32
+ }
+}

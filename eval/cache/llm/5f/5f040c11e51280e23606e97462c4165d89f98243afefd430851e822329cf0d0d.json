@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.1e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2020, the patents section identifies a granted standard patent titled “Method and system for providing information from print,” then discusses Australian standard patent applications, including 2019 filing trends and direct versus Patent Cooperation Treaty filings."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2020:0005",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000121,
+  "input": 905,
+  "model": "gpt-6-luna",
+  "output": 62,
+  "reasoning": 0,
+  "seconds": 1.51
+ }
+}

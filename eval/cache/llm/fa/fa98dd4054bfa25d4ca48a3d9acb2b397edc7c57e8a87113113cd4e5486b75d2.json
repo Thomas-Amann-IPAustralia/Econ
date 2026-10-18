@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.3e-05,
+ "data": {
+  "context": "In the end notes of the Australian Intellectual Property Report 2016, note 30 explains how a US administrative reporting change affected WIPO’s 2013 counts of Australian trade mark applications filed in the United States and revised the reported growth in Australian applications abroad for 2014."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2016:0036",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000125,
+  "input": 907,
+  "model": "gpt-6-luna",
+  "output": 68,
+  "reasoning": 0,
+  "seconds": 1.22
+ }
+}

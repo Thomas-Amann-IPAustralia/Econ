@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000325,
+ "data": {
+  "queries": [
+   "time to request examination patent applicants",
+   "voluntary examination request pendency"
+  ],
+  "standalone_question": "How soon after filing do patent applicants voluntarily request examination?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "erp01-3",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000325,
+  "input": 667,
+  "model": "gemini-3.5-flash-lite",
+  "output": 50,
+  "reasoning": 0,
+  "seconds": 1.77
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.3e-05,
+ "data": {
+  "context": "In the Australian IP Report 2023, under Trade marks’ “States and territories” topic, this passage compares state and territory trade mark applications in 2022, including changes from 2021 and applications per 1,000 businesses."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2023:0042",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000147,
+  "input": 867,
+  "model": "gpt-6-luna",
+  "output": 120,
+  "reasoning": 57,
+  "seconds": 2.08
+ }
+}

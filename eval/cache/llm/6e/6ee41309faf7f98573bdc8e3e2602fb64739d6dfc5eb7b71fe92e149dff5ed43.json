@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.3e-05,
+ "data": {
+  "context": "In the 2024 report *Computer Implemented Inventions: Patent Trends at IP Australia, EPO and USPTO*, this passage discusses econometric results on EPO applicants’ subsequent filing of the same patent application at IP Australia. It compares Chinese assignees’ filing propensity across Non-CII and CII applications, including CII-PSM-likely-adverse and CII-PSM-likely-clear applications."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp16-cii-patent-trends:0065",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000146,
+  "input": 961,
+  "model": "gpt-6-luna",
+  "output": 100,
+  "reasoning": 0,
+  "seconds": 1.86
+ }
+}

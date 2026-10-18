@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.2e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2016, under “Who uses IP rights in Australia?”, this passage compares applicants’ filing intensity and the share of applications made by the top five per cent across patents, plant breeder’s rights, trade marks and designs, and notes that leading filers change between five-year periods."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2016:0024",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000124,
+  "input": 852,
+  "model": "gpt-6-luna",
+  "output": 77,
+  "reasoning": 0,
+  "seconds": 1.63
+ }
+}

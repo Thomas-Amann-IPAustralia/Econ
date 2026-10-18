@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In the 2023 report *Drivers of AI Investment*, Section 4.6.1 on drivers of AI adoption presents OLS regression results for firms’ AI hiring, including company location, size, existing AI staff and industry. The table follows discussion of patent ownership and patent-class diversity as factors associated with AI hiring."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "oce-ai-investment:0051",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000165,
+  "input": 1256,
+  "model": "gpt-6-luna",
+  "output": 79,
+  "reasoning": 0,
+  "seconds": 1.74
+ }
+}

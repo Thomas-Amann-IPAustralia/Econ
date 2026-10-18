@@ -1,0 +1,24 @@
+{
+ "cost_usd": 4.3e-05,
+ "data": {
+  "queries": [
+   "AI-related patent applications filing trends technology fields"
+  ],
+  "standalone_question": "How are AI-related inventions showing up in patent filings?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-trend-11",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 8.5e-05,
+  "input": 671,
+  "model": "gpt-6-luna",
+  "output": 36,
+  "reasoning": 0,
+  "seconds": 1.34
+ }
+}

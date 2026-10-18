@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000336,
+ "data": {
+  "queries": [
+   "private investment in intellectual property growth rates",
+   "business expenditure on intangible assets and IP"
+  ],
+  "standalone_question": "How quickly has private investment in intellectual property been growing in Australia?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr15-3",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000336,
+  "input": 663,
+  "model": "gemini-3.5-flash-lite",
+  "output": 55,
+  "reasoning": 0,
+  "seconds": 0.85
+ }
+}

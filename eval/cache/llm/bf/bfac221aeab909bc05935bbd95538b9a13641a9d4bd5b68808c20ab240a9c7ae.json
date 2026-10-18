@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.3e-05,
+ "data": {
+  "context": "In the Australian IP Report 2023, the Trade marks section’s “Leading applicants” topic compares leading domestic and international trade mark filers in Australia in 2022, including Glaxo Group, Amazon Technologies, Endeavour Group and Aristocrat Technologies."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2023:0045",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000127,
+  "input": 954,
+  "model": "gpt-6-luna",
+  "output": 63,
+  "reasoning": 0,
+  "seconds": 2.03
+ }
+}

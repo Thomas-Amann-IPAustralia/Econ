@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000224,
+ "data": {
+  "queries": [
+   "patent activity by state territory",
+   "trade mark filings by state",
+   "geographical distribution IP Australia"
+  ],
+  "standalone_question": "How do Australian states and territories differ in patent and trade mark activity?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-compare-7",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000224,
+  "input": 239,
+  "model": "gemini-3.5-flash-lite",
+  "output": 61,
+  "reasoning": 0,
+  "seconds": 0.91
+ }
+}

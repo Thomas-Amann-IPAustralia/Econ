@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "context": "In *The market for design* (2014), this section examines curation as a way buyers signal sophistication and genuine interest in design, influencing sellers’ choices in design transactions. It describes Molonglo Group’s acquisition of a ceramic collection for Hotel Hotel and how its past work and collaborators helped persuade the artist’s family to sell."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp03-market-for-design:0067",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000159,
+  "input": 1198,
+  "model": "gpt-6-luna",
+  "output": 79,
+  "reasoning": 0,
+  "seconds": 1.72
+ }
+}

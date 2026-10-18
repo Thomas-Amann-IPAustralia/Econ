@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2019, Chapter 7’s notes for the design-rights analysis define industries used in international comparisons: ISIC Rev. 4 code 26 is computer, electronic and optical product manufacturing; codes 63 and 86 are information services and human health activities."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2019:0056",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00014,
+  "input": 1037,
+  "model": "gpt-6-luna",
+  "output": 72,
+  "reasoning": 0,
+  "seconds": 2.11
+ }
+}

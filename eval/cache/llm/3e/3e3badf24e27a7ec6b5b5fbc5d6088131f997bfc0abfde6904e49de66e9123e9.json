@@ -1,0 +1,24 @@
+{
+ "cost_usd": 3.9e-05,
+ "data": {
+  "queries": [
+   "research study limitations acknowledged by authors"
+  ],
+  "standalone_question": "What limitations do researchers acknowledge in their studies published by IP Australia’s Office of the Chief Economist?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-evidence-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 7.8e-05,
+  "input": 282,
+  "model": "gpt-6-luna",
+  "output": 100,
+  "reasoning": 56,
+  "seconds": 1.97
+ }
+}

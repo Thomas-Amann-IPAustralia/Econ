@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.8e-05,
+ "data": {
+  "context": "In the 2025 analytic note *Evaluating Trade Marks as a Leading Economic Indicator of the Australian Business Cycle*, this section describes Australian trade mark filing trends and legislative changes affecting filings, including quarterly application patterns from 1970 to 2023 and an adjustment to filing data from 1996."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "note-tm-leading-indicator:0006",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000136,
+  "input": 1000,
+  "model": "gpt-6-luna",
+  "output": 72,
+  "reasoning": 0,
+  "seconds": 1.64
+ }
+}

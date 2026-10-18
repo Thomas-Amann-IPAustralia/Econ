@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.7e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2020, under “Trade mark applications and registrations,” this source note cites ABS Australian Demographic Statistics for the population data used with Figure 13 on state and territory trade mark applications in 2018–19."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2020:0020",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000174,
+  "input": 967,
+  "model": "gpt-6-luna",
+  "output": 154,
+  "reasoning": 90,
+  "seconds": 3.68
+ }
+}

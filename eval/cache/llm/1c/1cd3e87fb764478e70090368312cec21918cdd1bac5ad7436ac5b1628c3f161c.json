@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7e-05,
+ "data": {
+  "context": "In the Australian IP Report 2025, the patents chapter’s “Filing routes” section compares standard patent applications filed in Australia through the Patent Cooperation Treaty (PCT) and directly with IP Australia, reporting 2024 figures and trends from 2015 to 2024. It also explains the typical delay before PCT applications enter Australia’s national phase."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2025:0041",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00014,
+  "input": 974,
+  "model": "gpt-6-luna",
+  "output": 85,
+  "reasoning": 0,
+  "seconds": 1.49
+ }
+}

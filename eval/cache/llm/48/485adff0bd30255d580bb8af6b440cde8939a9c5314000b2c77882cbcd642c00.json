@@ -1,0 +1,27 @@
+{
+ "cost_usd": 0.00015,
+ "data": {
+  "queries": [
+   "difference-in-differences estimates of policy reform effects",
+   "instrumental variables estimation of intellectual property effects",
+   "propensity score matching firm performance effects",
+   "causal identification methods and robustness checks"
+  ],
+  "standalone_question": "What statistical methods have IP Australia's economists used to estimate causal effects?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "multi-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000301,
+  "input": 673,
+  "model": "gpt-6-luna",
+  "output": 468,
+  "reasoning": 401,
+  "seconds": 5.98
+ }
+}

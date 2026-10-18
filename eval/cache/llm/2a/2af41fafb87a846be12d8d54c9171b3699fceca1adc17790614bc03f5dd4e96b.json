@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.4e-05,
+ "data": {
+  "queries": [
+   "Locarno Classification purpose industrial designs"
+  ],
+  "standalone_question": "What is the Locarno Classification used for in the context of industrial designs?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp08-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 4.8e-05,
+  "input": 281,
+  "model": "gpt-6-luna",
+  "output": 40,
+  "reasoning": 0,
+  "seconds": 1.24
+ }
+}

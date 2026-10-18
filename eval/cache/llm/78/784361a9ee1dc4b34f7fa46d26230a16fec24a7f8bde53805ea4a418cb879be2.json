@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8e-05,
+ "data": {
+  "context": "In the 2014 Report on patent backlogs, inventories and pendency, the “Entry Pendency” section examines how long IP Australia applications take to reach grant, by filing cohort. It discusses trends among applications filed from 1995 onward, including a rise around June 2002 and possible links to examiner numbers."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp01-patent-backlogs:0019",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00016,
+  "input": 1219,
+  "model": "gpt-6-luna",
+  "output": 77,
+  "reasoning": 0,
+  "seconds": 1.78
+ }
+}

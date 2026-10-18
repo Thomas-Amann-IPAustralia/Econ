@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.4e-05,
+ "data": {
+  "context": "In the 2024 report *Raising the Bar reforms: Measuring the impact on relative patent scope*, this table presents baseline estimates of the reforms’ association with the probability that Australian patents had broader claims than their European and US equivalents, using manual assessments and machine-learning estimates for 2010–2016."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp14-raising-the-bar:0037",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000168,
+  "input": 1313,
+  "model": "gpt-6-luna",
+  "output": 74,
+  "reasoning": 0,
+  "seconds": 1.5
+ }
+}

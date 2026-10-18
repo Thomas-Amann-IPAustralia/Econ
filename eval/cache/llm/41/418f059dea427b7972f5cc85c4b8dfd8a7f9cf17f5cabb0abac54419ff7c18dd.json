@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.5e-05,
+ "data": {
+  "context": "In the *Australian IP Report 2017*, the “Australian network of collaboration” section maps collaboration by Australian universities from 2000 to 2015 through patent, trade mark, design and plant breeder’s rights (PBR) applications. Figures 15 and 16 show trade mark collaboration and design and PBR collaboration, respectively; the passage also describes links among universities, government entities and private firms."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2017:0026",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00017,
+  "input": 970,
+  "model": "gpt-6-luna",
+  "output": 147,
+  "reasoning": 51,
+  "seconds": 2.18
+ }
+}

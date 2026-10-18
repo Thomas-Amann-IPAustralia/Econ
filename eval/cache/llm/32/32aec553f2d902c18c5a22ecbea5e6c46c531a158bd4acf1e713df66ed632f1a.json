@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.4e-05,
+ "data": {
+  "queries": [
+   "exporting versus non-exporting firms size employment revenue"
+  ],
+  "standalone_question": "How much larger are exporting firms than non-exporting firms?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp11-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 4.8e-05,
+  "input": 283,
+  "model": "gpt-6-luna",
+  "output": 39,
+  "reasoning": 0,
+  "seconds": 1.32
+ }
+}

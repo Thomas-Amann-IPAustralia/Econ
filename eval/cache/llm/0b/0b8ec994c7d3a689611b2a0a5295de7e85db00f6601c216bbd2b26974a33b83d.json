@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5.6e-05,
+ "data": {
+  "context": "In *The market for design* (2014), in the findings on how weak formal IP protection affects the market for design, this passage describes sellers’ difficulty capturing value when buyers may take their design ideas and execute them without buying the design service."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp03-market-for-design:0028",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000112,
+  "input": 809,
+  "model": "gpt-6-luna",
+  "output": 62,
+  "reasoning": 0,
+  "seconds": 1.42
+ }
+}

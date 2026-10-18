@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000347,
+ "data": {
+  "queries": [
+   "IP rights business profitability and competition economic research",
+   "productivity wages and intellectual property economic findings"
+  ],
+  "standalone_question": "How sure can we be that the intellectual property system is actually beneficial for innovation?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "owner-2",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000347,
+  "input": 665,
+  "model": "gemini-3.5-flash-lite",
+  "output": 59,
+  "reasoning": 0,
+  "seconds": 0.9
+ }
+}

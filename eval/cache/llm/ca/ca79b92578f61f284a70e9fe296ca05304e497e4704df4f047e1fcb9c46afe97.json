@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8e-05,
+ "data": {
+  "context": "In the 2015 report *The Australian Mining Industry: More than Just Shovels and Being the Lucky Country*, this appendix section describes the patent search strategy for subsea mining. It searched patent titles and abstracts across multiple authorities for relevant technologies and applicants, covering publications dated 1994 to 2014."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp04-mining-innovation:0059",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00016,
+  "input": 1230,
+  "model": "gpt-6-luna",
+  "output": 75,
+  "reasoning": 0,
+  "seconds": 1.39
+ }
+}

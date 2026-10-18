@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.3e-05,
+ "data": {
+  "context": "In the 2021 *Exporter responses to shocks: The role of trade marks*, in the export diversification section, this passage concerns whether rejected or cancelled trade mark applications affect firms’ export-diversity responses to tariff changes or real exchange rate movements."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp11-exporters-trade-marks:0118",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000186,
+  "input": 1049,
+  "model": "gpt-6-luna",
+  "output": 163,
+  "reasoning": 97,
+  "seconds": 2.85
+ }
+}

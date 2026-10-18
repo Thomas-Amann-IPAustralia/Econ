@@ -1,0 +1,24 @@
+{
+ "cost_usd": 4.3e-05,
+ "data": {
+  "queries": [
+   "design intensity measurement country industry designs law international comparison"
+  ],
+  "standalone_question": "How can design intensity be measured for a country or industry?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp08-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 8.6e-05,
+  "input": 673,
+  "model": "gpt-6-luna",
+  "output": 38,
+  "reasoning": 0,
+  "seconds": 1.85
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.1e-05,
+ "data": {
+  "context": "In Appendix B: Data of *Intellectual property rights, business profitability and competition in the Australian economy* (2020), this passage describes BLADE, its Australian business data sources and fiscal-year coverage from 2001–02 onward, and the information reported through BAS, PAYG and Business Income Tax forms."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp10-ip-profitability-competition:0073",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000162,
+  "input": 1241,
+  "model": "gpt-6-luna",
+  "output": 76,
+  "reasoning": 0,
+  "seconds": 1.36
+ }
+}

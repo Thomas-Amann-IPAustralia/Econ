@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.3e-05,
+ "data": {
+  "context": "In the *Australian Intellectual Property Report 2016*, under “Who Uses IP Rights in Australia?”, this passage describes changes from 2006 to 2015 in resident firms’ shares of patent, plant breeder’s rights (PBR), design and trade mark applications by firm type, and how firm age relates to IP filing."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2016:0021",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000126,
+  "input": 871,
+  "model": "gpt-6-luna",
+  "output": 78,
+  "reasoning": 0,
+  "seconds": 1.79
+ }
+}

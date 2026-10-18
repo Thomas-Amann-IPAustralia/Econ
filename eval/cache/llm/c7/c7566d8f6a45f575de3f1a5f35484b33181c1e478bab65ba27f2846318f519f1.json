@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.8e-05,
+ "data": {
+  "context": "In *Exporter responses to shocks: The role of trade marks* (2021), the “Analytical approach to econometric challenges” section describes robustness tests for estimates of how firms’ trade mark activity relates to export outcomes amid tariff and exchange-rate changes. Tests include rejected or cancelled applications, depreciated trade mark stocks, a restricted 2011–2017 period, and two-year lags."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp11-exporters-trade-marks:0050",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000156,
+  "input": 1101,
+  "model": "gpt-6-luna",
+  "output": 92,
+  "reasoning": 0,
+  "seconds": 1.61
+ }
+}

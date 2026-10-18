@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000253,
+ "data": {
+  "queries": [
+   "patent breadth trends 2013 reforms",
+   "broad patents Australia pre 2013",
+   "patent claim scope economic research"
+  ],
+  "standalone_question": "Were broad Australian patents becoming less common before the 2013 IP reforms?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "erp14-4",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000253,
+  "input": 242,
+  "model": "gemini-3.5-flash-lite",
+  "output": 72,
+  "reasoning": 0,
+  "seconds": 1.09
+ }
+}

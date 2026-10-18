@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2021, the section on resident and non-resident trade mark filings compares Australian and overseas applicants’ registrations in Australia. It reports that in 2020, registrations increased for both groups, with residents the leading source."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2021:0022",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000119,
+  "input": 874,
+  "model": "gpt-6-luna",
+  "output": 63,
+  "reasoning": 0,
+  "seconds": 1.4
+ }
+}

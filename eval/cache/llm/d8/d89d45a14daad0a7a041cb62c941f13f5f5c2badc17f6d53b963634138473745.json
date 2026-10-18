@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.3e-05,
+ "data": {
+  "queries": [
+   "registered design intensity definition measurement"
+  ],
+  "standalone_question": "How is design intensity defined and measured in research on registered designs?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-methods-5",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 4.6e-05,
+  "input": 285,
+  "model": "gpt-6-luna",
+  "output": 35,
+  "reasoning": 0,
+  "seconds": 1.2
+ }
+}

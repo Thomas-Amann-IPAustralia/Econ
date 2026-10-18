@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.5e-05,
+ "data": {
+  "context": "In the 2020 paper *Intellectual Property Rights, Business Profitability and Competition in the Australian Economy*, this notes passage accompanies Appendix F regression results on Australian businesses’ profitability and IPR ownership. It explains significance markers and notes that industry and year dummy variables were included as controls but omitted from the table for readability."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp10-ip-profitability-competition:0113",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00015,
+  "input": 1123,
+  "model": "gpt-6-luna",
+  "output": 76,
+  "reasoning": 0,
+  "seconds": 2.68
+ }
+}

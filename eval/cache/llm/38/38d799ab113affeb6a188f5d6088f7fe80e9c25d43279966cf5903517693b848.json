@@ -1,0 +1,24 @@
+{
+ "cost_usd": 6.8e-05,
+ "data": {
+  "queries": [
+   "2014 court decisions computer-implemented invention patent applications"
+  ],
+  "standalone_question": "What effect did the 2014 court decisions have on software patent applications in Australia?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-policy-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000135,
+  "input": 677,
+  "model": "gpt-6-luna",
+  "output": 135,
+  "reasoning": 89,
+  "seconds": 2.21
+ }
+}

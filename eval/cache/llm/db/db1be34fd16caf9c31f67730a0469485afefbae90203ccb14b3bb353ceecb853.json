@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.6e-05,
+ "data": {
+  "context": "In the 2025 analytic note *Evaluating trade marks as a leading economic indicator of the Australian business cycle*, the Turning point analysis section compares Australian trade mark filings with conventional leading economic indicators (LEIs) for predicting quarterly GDP downturns. It describes the QPS and BSS evaluation and the indicators’ rankings, using Australian recession periods identified by the Melbourne Institute."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "note-tm-leading-indicator:0008",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000132,
+  "input": 893,
+  "model": "gpt-6-luna",
+  "output": 86,
+  "reasoning": 0,
+  "seconds": 1.93
+ }
+}

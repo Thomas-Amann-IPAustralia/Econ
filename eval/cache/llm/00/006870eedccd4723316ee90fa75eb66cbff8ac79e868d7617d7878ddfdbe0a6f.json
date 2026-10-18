@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.5e-05,
+ "data": {
+  "context": "In *Drivers of AI investment* (2023), the Lens analysis in Section 3.2 explains how the study examines firms’ patenting and AI adoption. It compares AI-hiring with general-hiring companies, analysing patent-class diversity and IPC classes by industry, then uses regressions and robustness checks to examine which company characteristics are associated with hiring AI staff."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "oce-ai-investment:0025",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00017,
+  "input": 1278,
+  "model": "gpt-6-luna",
+  "output": 85,
+  "reasoning": 0,
+  "seconds": 1.97
+ }
+}

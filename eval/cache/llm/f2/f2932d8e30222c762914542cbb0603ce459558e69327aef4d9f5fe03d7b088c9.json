@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.4e-05,
+ "data": {
+  "context": "In the 2024 IP Australia Economic Research Paper *Raising the Bar reforms: Measuring the impact on relative patent scope*, Appendix B describes machine-learning methods for classifying the relative scope of Australian patent claims. It outlines the algorithms tested on 500 manually assessed patent-family triplets, their use on 2000–2019 triplets, and the report’s choice of a three-way scope target, later grouped as broader versus not broader."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp14-raising-the-bar:0055",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000169,
+  "input": 1188,
+  "model": "gpt-6-luna",
+  "output": 101,
+  "reasoning": 0,
+  "seconds": 2.12
+ }
+}

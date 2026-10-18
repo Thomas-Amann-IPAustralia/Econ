@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5.6e-05,
+ "data": {
+  "context": "In the acknowledgements of *Computer implemented inventions: patent trends at IP Australia, EPO and USPTO* (2024), the authors thank contributors to the labelled data, people who provided comments and suggestions, and IP Australia for funding the research."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp16-cii-patent-trends:0001",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000112,
+  "input": 810,
+  "model": "gpt-6-luna",
+  "output": 62,
+  "reasoning": 0,
+  "seconds": 1.68
+ }
+}

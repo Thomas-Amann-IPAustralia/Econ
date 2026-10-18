@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.3e-05,
+ "data": {
+  "context": "In the Australian IP Report 2026, the “International leaders” section examines leading international design filers in Australia. It describes changes from previous years, including major US consumer-goods companies entering the list, and names other leading applicants such as Australian-origin Miss Amara and Beijing Roborock Technology."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0093",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000126,
+  "input": 891,
+  "model": "gpt-6-luna",
+  "output": 73,
+  "reasoning": 0,
+  "seconds": 1.73
+ }
+}

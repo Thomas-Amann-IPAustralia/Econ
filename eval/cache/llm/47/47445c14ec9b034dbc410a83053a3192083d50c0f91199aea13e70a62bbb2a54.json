@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9e-05,
+ "data": {
+  "context": "In the 2020 IP Australia Economic Research Paper 10, *Intellectual property rights, business profitability and competition in the Australian economy*, section 4.1.2 examines whether industry stocks of patents, trade marks and designs relate to market concentration in Australia. It describes the stocks, measured per employee in ANZSIC industry subdivisions, and the Difference and System GMM regressions used to test their effects."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp10-ip-profitability-competition:0060",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00018,
+  "input": 1325,
+  "model": "gpt-6-luna",
+  "output": 95,
+  "reasoning": 0,
+  "seconds": 1.84
+ }
+}

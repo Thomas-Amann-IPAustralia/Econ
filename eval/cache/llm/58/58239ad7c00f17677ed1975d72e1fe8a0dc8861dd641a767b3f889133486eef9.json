@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000102,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2022 section “The economic contribution of PBR users in Australia,” this passage describes estimated economic activity among Australian businesses that applied for plant breeder’s rights (PBR), and notes that PBR’s economic impact also includes the value of protected cultivars in downstream sectors."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2022:0064",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000204,
+  "input": 1018,
+  "model": "gpt-6-luna",
+  "output": 205,
+  "reasoning": 130,
+  "seconds": 2.31
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 4.8e-05,
+ "data": {
+  "context": "In the front matter of the Australian Intellectual Property Report 2020, this passage lists the report’s publication identifiers and copyright notice."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2020:0000",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 9.6e-05,
+  "input": 765,
+  "model": "gpt-6-luna",
+  "output": 38,
+  "reasoning": 0,
+  "seconds": 1.07
+ }
+}

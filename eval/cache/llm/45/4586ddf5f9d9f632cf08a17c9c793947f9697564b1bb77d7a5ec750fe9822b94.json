@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.8e-05,
+ "data": {
+  "context": "In the introduction to the Australian Intellectual Property Report 2021, this passage describes the report’s coverage of Australian IP applications, grants and registrations, and the five IP rights it examines: patents, trade marks, designs, plant breeder’s rights and copyright. It also notes that the report’s time-series data were drawn from IP Australia’s publicly available IP Government Open Data product."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2021:0001",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000156,
+  "input": 1120,
+  "model": "gpt-6-luna",
+  "output": 87,
+  "reasoning": 0,
+  "seconds": 1.76
+ }
+}

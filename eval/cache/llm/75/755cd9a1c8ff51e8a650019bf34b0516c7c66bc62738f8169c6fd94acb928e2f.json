@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.3e-05,
+ "data": {
+  "context": "In the Australian IP Report 2026, the section “IP and competition in consumer goods markets” compares design and trade mark filing growth from 2022 to 2025 across consumer goods classes. It describes rising US-origin design filings and Chinese-origin trade mark filings, alongside increased Chinese product and brand activity."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0096",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000147,
+  "input": 1104,
+  "model": "gpt-6-luna",
+  "output": 74,
+  "reasoning": 0,
+  "seconds": 1.55
+ }
+}

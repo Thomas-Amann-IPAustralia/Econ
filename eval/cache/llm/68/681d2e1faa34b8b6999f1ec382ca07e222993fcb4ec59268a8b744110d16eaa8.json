@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.002395,
+ "data": {
+  "queries": [
+   "Global Innovation Index rankings and innovation performance",
+   "top innovation clusters Sydney Melbourne"
+  ],
+  "standalone_question": "Does any information in the knowledge base agree or disagree with the WIPO Global Innovation Index findings on Australia's innovation performance and clusters?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "owner-4",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002395,
+  "input": 7426,
+  "model": "gemini-3.5-flash-lite",
+  "output": 67,
+  "reasoning": 0,
+  "seconds": 1.06
+ }
+}

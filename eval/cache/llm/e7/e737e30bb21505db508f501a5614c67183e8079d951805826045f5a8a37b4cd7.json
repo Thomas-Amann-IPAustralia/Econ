@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000106,
+ "data": {
+  "context": "In the 2024 report *Raising the Bar reforms: Measuring the impact on relative patent scope*, this passage in “Inferring relative scope from word count difference” describes Figure 6’s comparison of claim word-count differences with manual scope assessments for 1,000 Australian–European and Australian–US patent pairs. It covers differences based on first claims and all claims, with colours indicating whether the Australian patent was assessed as broader, narrower or similar in scope."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp14-raising-the-bar:0024",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000211,
+  "input": 1206,
+  "model": "gpt-6-luna",
+  "output": 181,
+  "reasoning": 74,
+  "seconds": 2.26
+ }
+}

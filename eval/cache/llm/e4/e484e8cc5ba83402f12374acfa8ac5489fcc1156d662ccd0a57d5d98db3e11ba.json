@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.6e-05,
+ "data": {
+  "context": "In the Australian IP Report 2023, this passage is in the design section’s “Taking IP global: The Hague Agreement” topic. It explains how the Hague Agreement enables a single international application for design registration in multiple countries, its membership and Australia’s commitment to consider joining under the Australia–UK free trade agreement."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2023:0062",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000132,
+  "input": 943,
+  "model": "gpt-6-luna",
+  "output": 76,
+  "reasoning": 0,
+  "seconds": 2.27
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2019, the patents section presents an example of a granted standard patent: its invention title is “System and method for drafting garment patterns from photographs and style drawings.” The surrounding text explains Australian patent types and eligibility criteria, then discusses standard patent applications filed from 2009 to 2018."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2019:0005",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00016,
+  "input": 1212,
+  "model": "gpt-6-luna",
+  "output": 78,
+  "reasoning": 0,
+  "seconds": 1.5
+ }
+}

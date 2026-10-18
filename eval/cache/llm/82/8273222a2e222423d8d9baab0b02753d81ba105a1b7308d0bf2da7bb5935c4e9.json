@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000328,
+ "data": {
+  "queries": [
+   "Riyadh Design Law Treaty purpose objectives",
+   "international design law treaty harmonization"
+  ],
+  "standalone_question": "What is the Riyadh Design Law Treaty meant to do?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr25-2",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000328,
+  "input": 661,
+  "model": "gemini-3.5-flash-lite",
+  "output": 52,
+  "reasoning": 0,
+  "seconds": 1.05
+ }
+}

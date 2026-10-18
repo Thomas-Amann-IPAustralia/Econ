@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In *Computer Implemented Inventions: Patent Trends at IP Australia, EPO and USPTO* (2024), the econometrics analysis reports baseline regression estimates for whether EPO applicants subsequently file the same patent application at IP Australia, across CII and non-CII subsamples. The preceding text discusses how prior filing, divisional status and assignee country relate to that filing propensity."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp16-cii-patent-trends:0062",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000163,
+  "input": 1179,
+  "model": "gpt-6-luna",
+  "output": 90,
+  "reasoning": 0,
+  "seconds": 1.61
+ }
+}

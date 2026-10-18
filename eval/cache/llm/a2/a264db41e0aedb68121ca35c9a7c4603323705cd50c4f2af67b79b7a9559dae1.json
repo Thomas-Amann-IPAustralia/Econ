@@ -1,0 +1,24 @@
+{
+ "cost_usd": 4.2e-05,
+ "data": {
+  "queries": [
+   "economic contribution of copyright industries value added GDP"
+  ],
+  "standalone_question": "How much is copyright worth to the Australian economy?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-synthesis-11",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 8.4e-05,
+  "input": 670,
+  "model": "gpt-6-luna",
+  "output": 35,
+  "reasoning": 0,
+  "seconds": 1.2
+ }
+}

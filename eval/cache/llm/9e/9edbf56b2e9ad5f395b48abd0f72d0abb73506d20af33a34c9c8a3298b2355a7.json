@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8e-05,
+ "data": {
+  "context": "In the Australian IP Report 2023 section “Economic characteristics of trade mark-holding businesses,” the passage describes Australian businesses holding trade marks: their number in 2019–20 and their average shares of GDP, workforce, R&D spending and exports from 2010–11 to 2019–20."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2023:0038",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00016,
+  "input": 947,
+  "model": "gpt-6-luna",
+  "output": 130,
+  "reasoning": 53,
+  "seconds": 2.46
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.9e-05,
+ "data": {
+  "context": "In Australian IP Report 2023, the “Leading applicants” section covers leading domestic and international applicants for design rights in Australia in 2022. Figure 3.7 compares these applicants and their design application counts."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2023:0060",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000198,
+  "input": 1156,
+  "model": "gpt-6-luna",
+  "output": 164,
+  "reasoning": 106,
+  "seconds": 2.13
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "context": "In the introduction of *Raising the Bar Reforms: Measuring the Impact on Relative Patent Scope* (2024), this passage explains patent claim scope and the study’s aim: to compare the scope of Australian patents with equivalent patents granted by the EPO and USPTO, track changes over time, and assess the effects of Australia’s 2013 Raising the Bar reforms."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp14-raising-the-bar:0006",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000159,
+  "input": 1158,
+  "model": "gpt-6-luna",
+  "output": 87,
+  "reasoning": 0,
+  "seconds": 1.96
+ }
+}

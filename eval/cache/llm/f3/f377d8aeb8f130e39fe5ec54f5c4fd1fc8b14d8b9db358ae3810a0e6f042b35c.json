@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5.6e-05,
+ "data": {
+  "context": "In the Australian IP Report 2026, the “Copyright infringement and enforcement” section describes enforcement options under Australian copyright law, including legal action against circumvention of technological protection measures and the need for clarity about permitted uses of copyright material."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0116",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000112,
+  "input": 826,
+  "model": "gpt-6-luna",
+  "output": 59,
+  "reasoning": 0,
+  "seconds": 1.67
+ }
+}

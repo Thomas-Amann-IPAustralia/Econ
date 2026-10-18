@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.6e-05,
+ "data": {
+  "context": "In the 2024 IP Australia Economic Research Paper 16, “Computer implemented inventions: patent trends at IP Australia, EPO and USPTO,” this passage discusses trends in the propensity of US applicants to file computer-implemented invention patent applications at IP Australia, including possible effects of the 2014 court decisions and limits from recent-year truncation."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp16-cii-patent-trends:0055",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000152,
+  "input": 1107,
+  "model": "gpt-6-luna",
+  "output": 82,
+  "reasoning": 0,
+  "seconds": 1.94
+ }
+}

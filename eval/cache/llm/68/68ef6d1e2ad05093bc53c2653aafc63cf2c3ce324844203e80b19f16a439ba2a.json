@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.4e-05,
+ "data": {
+  "context": "In the 2024 IP Australia Economic Research Paper *Raising the Bar reforms: Measuring the impact on relative patent scope*, the “Patent systems and patent scope” section explains patent scope—the breadth of rights granted by a patent—and illustrates it with a fencing analogy, including why overly broad or vague claims matter for policy and economic welfare."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp14-raising-the-bar:0010",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000148,
+  "input": 1082,
+  "model": "gpt-6-luna",
+  "output": 79,
+  "reasoning": 0,
+  "seconds": 1.93
+ }
+}

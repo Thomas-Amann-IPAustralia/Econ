@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000239,
+ "data": {
+  "queries": [
+   "brand registrations early economic indicator",
+   "trade marks consumer confidence",
+   "leading economic indicators trade marks"
+  ],
+  "standalone_question": "Are new brand registrations a better early warning indicator of the economy than consumer confidence according to IP Australia research?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "note-tm-3",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000239,
+  "input": 240,
+  "model": "gemini-3.5-flash-lite",
+  "output": 67,
+  "reasoning": 0,
+  "seconds": 0.95
+ }
+}

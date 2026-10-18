@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.1e-05,
+ "data": {
+  "context": "In the Australian IP Report 2026 section “Navigating uncertainty and shocks in global markets,” this passage summarizes research on how patents and trade marks relate to firms’ resilience and responses to shocks, including COVID-19, uncertainty, and export-market tariff and exchange-rate changes. It notes that the findings draw on cited studies and Australian IP Report analyses using ABS BLADE and PLIDA data."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0011",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000141,
+  "input": 953,
+  "model": "gpt-6-luna",
+  "output": 91,
+  "reasoning": 0,
+  "seconds": 1.87
+ }
+}

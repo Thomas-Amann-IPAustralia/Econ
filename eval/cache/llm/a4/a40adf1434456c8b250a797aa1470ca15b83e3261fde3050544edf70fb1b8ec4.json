@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5.9e-05,
+ "data": {
+  "context": "In the Australian IP Report 2024, the “Invention, collaboration and commercialisation” section discusses Australian startups, SMEs and other firms, describing links between PhD hires, patenting, patent grants, collaboration and commercialisation resources."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2024:0012",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000118,
+  "input": 881,
+  "model": "gpt-6-luna",
+  "output": 60,
+  "reasoning": 0,
+  "seconds": 1.61
+ }
+}

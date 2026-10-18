@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.7e-05,
+ "data": {
+  "context": "In the 2024 IP Australia Economic Research Paper 16, *Computer implemented inventions: patent trends at IP Australia, EPO and USPTO*, the appendix section on IP Australia describes the data sources used to build the patent dataset. It explains how missing abstracts for about 60,000 Patent Cooperation Treaty filings were supplemented from equivalent USPTO or EPO family applications."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp16-cii-patent-trends:0092",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000133,
+  "input": 896,
+  "model": "gpt-6-luna",
+  "output": 86,
+  "reasoning": 0,
+  "seconds": 1.65
+ }
+}

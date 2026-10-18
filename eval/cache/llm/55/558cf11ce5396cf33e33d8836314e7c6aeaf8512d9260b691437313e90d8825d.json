@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5.8e-05,
+ "data": {
+  "context": "In the contents of *Exporter responses to shocks: The role of trade marks* (2021), this passage lists the report’s opening sections and their page numbers. The preceding text summarizes the report’s findings on Australian exporters’ responses to tariffs and exchange rates in relation to trade mark activity."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp11-exporters-trade-marks:0006",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000115,
+  "input": 797,
+  "model": "gpt-6-luna",
+  "output": 70,
+  "reasoning": 0,
+  "seconds": 2.12
+ }
+}

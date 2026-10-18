@@ -1,0 +1,25 @@
+{
+ "cost_usd": 4.5e-05,
+ "data": {
+  "queries": [
+   "patents productivity wages economic growth historical evidence",
+   "patent activity structural change in patenting behaviour"
+  ],
+  "standalone_question": "Is there historical evidence that patents helped Australia's economy grow?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr25-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 9e-05,
+  "input": 671,
+  "model": "gpt-6-luna",
+  "output": 46,
+  "reasoning": 0,
+  "seconds": 1.57
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "context": "In the “Research Program” section of the *Australian Intellectual Property Report 2018*, this passage describes plans to semi-automate production of IPGOD 2018 using machine-learning algorithms and notes potential automation of patent attorney tables."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2018:0036",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000159,
+  "input": 808,
+  "model": "gpt-6-luna",
+  "output": 156,
+  "reasoning": 94,
+  "seconds": 2.15
+ }
+}

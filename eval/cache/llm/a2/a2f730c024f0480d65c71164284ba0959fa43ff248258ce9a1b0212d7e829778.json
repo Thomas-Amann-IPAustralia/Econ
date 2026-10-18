@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000354,
+ "data": {
+  "queries": [
+   "size comparison between exporters and non-exporters",
+   "employment and turnover differences of exporting businesses"
+  ],
+  "standalone_question": "How much larger are exporting firms compared to non-exporting firms in terms of size?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "erp11-2",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000354,
+  "input": 664,
+  "model": "gemini-3.5-flash-lite",
+  "output": 62,
+  "reasoning": 0,
+  "seconds": 1.14
+ }
+}

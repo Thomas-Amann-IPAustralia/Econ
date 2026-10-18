@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.5e-05,
+ "data": {
+  "context": "In *The Market for Design* (2014), in the section on referrals under the theme of weak intellectual property protection, this passage explains how recommendations from clients or associates can help Australian design firms build trust with buyers, while not always resolving information gaps. It gives examples involving Broached Commissions and an architect’s work for a Chinese buyer."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp03-market-for-design:0057",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000189,
+  "input": 1148,
+  "model": "gpt-6-luna",
+  "output": 149,
+  "reasoning": 66,
+  "seconds": 2.14
+ }
+}

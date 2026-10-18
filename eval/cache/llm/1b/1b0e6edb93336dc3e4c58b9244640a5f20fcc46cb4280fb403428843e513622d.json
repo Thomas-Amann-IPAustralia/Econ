@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.1e-05,
+ "data": {
+  "context": "In the 2015 report *The Australian Mining Industry: More than Just Shovels and Being the Lucky Country*, this passage in the autonomous vehicles case study identifies patent collaborations in mining-related autonomous vehicles. It describes four relevant PCT applications and the systems developed by the collaborating organisations, including mine navigation, drilling control and underground personnel monitoring."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp04-mining-innovation:0044",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000162,
+  "input": 1225,
+  "model": "gpt-6-luna",
+  "output": 80,
+  "reasoning": 0,
+  "seconds": 1.51
+ }
+}

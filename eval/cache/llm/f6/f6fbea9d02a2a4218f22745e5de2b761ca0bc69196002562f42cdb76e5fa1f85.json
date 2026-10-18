@@ -1,0 +1,24 @@
+{
+ "cost_usd": 3.3e-05,
+ "data": {
+  "queries": [
+   "Henry Wilson furniture designer trade marks design registration reasons"
+  ],
+  "standalone_question": "Why did furniture designer Henry Wilson rely on trade marks instead of registering his designs?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp03-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 6.6e-05,
+  "input": 287,
+  "model": "gpt-6-luna",
+  "output": 74,
+  "reasoning": 30,
+  "seconds": 2.46
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "cost_usd": 3.7e-05,
+ "data": {
+  "queries": [
+   "designs law and practice study policy development"
+  ],
+  "standalone_question": "What policy work was the designs law and practice study intended to inform?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp08-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 7.5e-05,
+  "input": 286,
+  "model": "gpt-6-luna",
+  "output": 93,
+  "reasoning": 52,
+  "seconds": 1.6
+ }
+}

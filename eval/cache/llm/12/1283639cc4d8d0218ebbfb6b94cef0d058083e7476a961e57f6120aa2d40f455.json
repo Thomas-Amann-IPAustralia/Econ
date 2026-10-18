@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.8e-05,
+ "data": {
+  "queries": [
+   "Productivity Commission 2016 inquiry intellectual property arrangements recommendations government response implementation"
+  ],
+  "standalone_question": "What recommendations did the Productivity Commission’s inquiry into Australia’s intellectual property arrangements make, and what happened as a result?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-policy-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 5.6e-05,
+  "input": 287,
+  "model": "gpt-6-luna",
+  "output": 54,
+  "reasoning": 0,
+  "seconds": 1.44
+ }
+}

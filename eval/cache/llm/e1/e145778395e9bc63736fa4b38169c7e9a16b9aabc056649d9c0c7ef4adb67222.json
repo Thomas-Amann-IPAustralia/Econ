@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.2e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2017, the Research section of the Research Program describes the OCE’s work over the past year and planned studies. It covers research on patent expiry and pharmaceutical use and spending, patent grace periods and innovation, patent examination, university collaborative grants and patent productivity, and trade mark forecasting."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2017:0036",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000123,
+  "input": 852,
+  "model": "gpt-6-luna",
+  "output": 76,
+  "reasoning": 0,
+  "seconds": 1.77
+ }
+}

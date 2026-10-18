@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5e-05,
+ "data": {
+  "context": "In *Designs Law and Practice* (2019), under “Design labour intensity,” this passage defines a measure of the share of a country’s industrial-sector employment in design-related occupations and cites its data sources."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp08-designs-law-practice:0011",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.0001,
+  "input": 722,
+  "model": "gpt-6-luna",
+  "output": 55,
+  "reasoning": 0,
+  "seconds": 1.25
+ }
+}

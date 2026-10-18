@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000443,
+ "data": {
+  "queries": [
+   "resident and overseas standard patent application filing proportions",
+   "small business intellectual property registration and firm growth",
+   "intellectual property rights effect on market competition"
+  ],
+  "standalone_question": "Does IP Australia's research support the claims that residents file a minority of patent applications, small businesses registering IP grow faster, and IP rights have no effect on competition?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-context-1",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000443,
+  "input": 725,
+  "model": "gemini-3.5-flash-lite",
+  "output": 90,
+  "reasoning": 0,
+  "seconds": 0.87
+ }
+}

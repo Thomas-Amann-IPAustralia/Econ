@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.7e-05,
+ "data": {
+  "context": "In *Computer implemented inventions: patent trends at IP Australia, EPO and USPTO* (2024), Appendix Table A8 compares the shares of computer-implemented invention patent applications by WIPO technology field at IP Australia, the EPO and the USPTO, 2001–2020. It distinguishes applications classified as likely adverse or likely clear on patentable subject matter, and non-CII applications."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp16-cii-patent-trends:0118",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000175,
+  "input": 1277,
+  "model": "gpt-6-luna",
+  "output": 94,
+  "reasoning": 0,
+  "seconds": 1.54
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.8e-05,
+ "data": {
+  "context": "In the 2024 report *Raising the Bar reforms: Measuring the impact on relative patent scope*, the section on machine-learning predictions examines how the share of relatively broader Australian patents varies across IP Australia examination sections. Figure 11 shows predictions by examination request year for 2000–2019, with 2013–2014 marking when the Raising the Bar reforms took effect."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp14-raising-the-bar:0031",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000157,
+  "input": 1119,
+  "model": "gpt-6-luna",
+  "output": 91,
+  "reasoning": 0,
+  "seconds": 1.43
+ }
+}

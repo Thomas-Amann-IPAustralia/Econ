@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.8e-05,
+ "data": {
+  "context": "In the Australian IP Report 2025 section “China driving growth in IP activity for electric vehicles and transport,” this passage discusses how Chinese firms’ expansion and technology spillovers relate to patenting, alongside 2024 Australian trade mark and design filings in transport and factors attracting Chinese EV exports to Australia."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2025:0036",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000156,
+  "input": 1197,
+  "model": "gpt-6-luna",
+  "output": 72,
+  "reasoning": 0,
+  "seconds": 1.36
+ }
+}

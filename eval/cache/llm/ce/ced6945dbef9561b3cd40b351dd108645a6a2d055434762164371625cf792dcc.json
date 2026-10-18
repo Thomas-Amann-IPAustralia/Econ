@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.3e-05,
+ "data": {
+  "context": "In Intellectual Property Rights, Business Profitability and Competition in the Australian Economy (2020), section 3.1.2 explains the explanatory variables used to model Australian business profitability. It describes including lagged profitability to account for past outcomes and using dynamic panel estimation and GMM to address omitted-variable and endogeneity concerns."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp10-ip-profitability-competition:0029",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000166,
+  "input": 1284,
+  "model": "gpt-6-luna",
+  "output": 76,
+  "reasoning": 0,
+  "seconds": 1.67
+ }
+}

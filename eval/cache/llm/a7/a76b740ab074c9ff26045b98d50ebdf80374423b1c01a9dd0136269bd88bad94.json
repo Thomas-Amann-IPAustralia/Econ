@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "context": "In the Australian IP Report 2023 section “The contribution of copyright to Australia,” this passage compares estimates of copyright-related and cultural and creative activity in Australia: a WIPO-method study of copyright-reliant industries in 2018 and a later estimate for cultural and creative activity in 2019–20, including its leading industries and Figure 5.1."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2023:0078",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000159,
+  "input": 1155,
+  "model": "gpt-6-luna",
+  "output": 86,
+  "reasoning": 0,
+  "seconds": 1.45
+ }
+}

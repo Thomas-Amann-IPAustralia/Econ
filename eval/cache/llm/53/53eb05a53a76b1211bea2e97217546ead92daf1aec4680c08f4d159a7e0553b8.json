@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.2e-05,
+ "data": {
+  "context": "In the 2015 report *The Australian Mining Industry: More than Just Shovels and Being the Lucky Country*, Appendix A’s “Operating Miners” section gives SQL used to identify mining patent applications associated with operating miners, using applicant names and filing dates after 1 January 1994."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp04-mining-innovation:0053",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000143,
+  "input": 1066,
+  "model": "gpt-6-luna",
+  "output": 72,
+  "reasoning": 0,
+  "seconds": 1.33
+ }
+}

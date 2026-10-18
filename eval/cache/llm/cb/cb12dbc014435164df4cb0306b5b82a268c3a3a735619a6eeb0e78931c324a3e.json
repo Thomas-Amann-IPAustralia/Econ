@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000363,
+ "data": {
+  "queries": [
+   "trade marks leading indicator business cycle GDP spurious",
+   "economic econometric tests trade mark leading indicator robustness"
+  ],
+  "standalone_question": "How did the study on trade marks as a leading indicator check that its link with GDP is not spurious?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "note-tm-2",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000363,
+  "input": 667,
+  "model": "gemini-3.5-flash-lite",
+  "output": 65,
+  "reasoning": 0,
+  "seconds": 1.0
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.7e-05,
+ "data": {
+  "queries": [
+   "Raising the Bar reforms patent law changes effects innovation patent applications patent quality"
+  ],
+  "standalone_question": "What were Australia’s Raising the Bar reforms to intellectual property law, and what effect did they have?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-policy-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 5.4e-05,
+  "input": 285,
+  "model": "gpt-6-luna",
+  "output": 51,
+  "reasoning": 0,
+  "seconds": 1.22
+ }
+}

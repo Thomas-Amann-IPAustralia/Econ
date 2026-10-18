@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.000329,
+ "data": {
+  "queries": [
+   "small firms engineering services growth trends"
+  ],
+  "standalone_question": "How has the number of small firms in engineering services changed since the early 2000s?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "note-sc-2",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000329,
+  "input": 671,
+  "model": "gemini-3.5-flash-lite",
+  "output": 51,
+  "reasoning": 0,
+  "seconds": 0.97
+ }
+}

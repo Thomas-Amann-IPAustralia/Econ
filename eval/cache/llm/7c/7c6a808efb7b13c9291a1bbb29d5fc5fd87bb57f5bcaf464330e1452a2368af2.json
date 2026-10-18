@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.1e-05,
+ "data": {
+  "context": "In the 2023 report *Drivers of AI Investment*, section 3.1, “Data description,” describes the linked dataset used to study AI development and diffusion across Australian companies and industries: a 2022 snapshot of company demographics, LinkedIn job advertisements and employee skills profiles, matched by company name to applicants in Australian and international Lens patent records."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "oce-ai-investment:0020",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000141,
+  "input": 989,
+  "model": "gpt-6-luna",
+  "output": 85,
+  "reasoning": 0,
+  "seconds": 1.49
+ }
+}

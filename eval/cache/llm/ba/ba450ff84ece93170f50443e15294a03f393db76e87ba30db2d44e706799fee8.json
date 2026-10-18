@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000191,
+ "data": {
+  "queries": [
+   "Copyright Agency distribution rights-holders",
+   "Copyright Agency payments"
+  ],
+  "standalone_question": "How much did Copyright Agency distribute to rights-holders?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr24-4",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000191,
+  "input": 236,
+  "model": "gemini-3.5-flash-lite",
+  "output": 48,
+  "reasoning": 0,
+  "seconds": 0.99
+ }
+}

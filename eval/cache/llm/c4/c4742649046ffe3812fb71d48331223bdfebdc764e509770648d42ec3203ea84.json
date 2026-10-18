@@ -1,0 +1,21 @@
+{
+ "cost_usd": 4.9e-05,
+ "data": {
+  "context": "In the 2021 Economic Research Paper *Exporter responses to shocks: The role of trade marks*, this contents passage lists the report’s sections on background and hypotheses, data and empirical strategy, and export entry."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp11-exporters-trade-marks:0007",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 9.8e-05,
+  "input": 715,
+  "model": "gpt-6-luna",
+  "output": 54,
+  "reasoning": 0,
+  "seconds": 1.73
+ }
+}

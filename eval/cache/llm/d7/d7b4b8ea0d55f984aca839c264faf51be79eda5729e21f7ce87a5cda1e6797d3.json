@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In *Raising the Bar reforms: Measuring the impact on relative patent scope* (2024), Appendix B describes the features used by machine-learning models to predict relative scope for pairs of Australian and international patents. The features include examination year, patent and technology characteristics, claim-text similarities and word differences, and claim counts."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp14-raising-the-bar:0056",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000163,
+  "input": 1248,
+  "model": "gpt-6-luna",
+  "output": 76,
+  "reasoning": 0,
+  "seconds": 1.45
+ }
+}

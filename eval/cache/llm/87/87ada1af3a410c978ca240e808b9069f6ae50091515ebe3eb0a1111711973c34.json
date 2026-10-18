@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000194,
+ "data": {
+  "queries": [
+   "geographical indications trade marks",
+   "place names trade marks"
+  ],
+  "standalone_question": "How do place names and geographical indications appear in trade marks?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-synthesis-12",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000194,
+  "input": 238,
+  "model": "gemini-3.5-flash-lite",
+  "output": 49,
+  "reasoning": 0,
+  "seconds": 1.02
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.2e-05,
+ "data": {
+  "context": "In the “Who uses IP rights in Australia?” section of the Australian Intellectual Property Report 2016, Table 5 lists the top three applicants for patents, trade marks, designs and plant breeder’s rights in Australia across the five-year periods 2001–2005, 2006–2010 and 2011–2015."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2016:0025",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000123,
+  "input": 823,
+  "model": "gpt-6-luna",
+  "output": 81,
+  "reasoning": 0,
+  "seconds": 2.1
+ }
+}

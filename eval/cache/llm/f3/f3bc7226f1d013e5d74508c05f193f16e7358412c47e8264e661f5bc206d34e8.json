@@ -1,0 +1,21 @@
+{
+ "cost_usd": 4.8e-05,
+ "data": {
+  "context": "In the 2019 report *Designs Law and Practice*, this contents passage lists the sections on factors that may affect design registrations, the conclusion, datasets and data-related issues, and references."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp08-designs-law-practice:0003",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 9.6e-05,
+  "input": 691,
+  "model": "gpt-6-luna",
+  "output": 53,
+  "reasoning": 0,
+  "seconds": 1.39
+ }
+}

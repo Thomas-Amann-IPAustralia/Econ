@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.00034,
+ "data": {
+  "queries": [
+   "impact of patents on startup valuations",
+   "trade marks and investor valuation of startups"
+  ],
+  "standalone_question": "How much can patents and trade marks raise investors' valuations of a startup?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr26-1",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00034,
+  "input": 665,
+  "model": "gemini-3.5-flash-lite",
+  "output": 56,
+  "reasoning": 0,
+  "seconds": 0.98
+ }
+}

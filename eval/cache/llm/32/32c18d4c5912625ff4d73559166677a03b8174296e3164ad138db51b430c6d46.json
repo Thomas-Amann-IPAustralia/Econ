@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.00023,
+ "data": {
+  "queries": [
+   "AI hiring data source",
+   "artificial intelligence employment methodology",
+   "AI job postings data"
+  ],
+  "standalone_question": "Where did the data on artificial intelligence (AI) hiring come from in IP Australia's publications?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "oce-ai-4",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00023,
+  "input": 235,
+  "model": "gemini-3.5-flash-lite",
+  "output": 64,
+  "reasoning": 0,
+  "seconds": 0.88
+ }
+}

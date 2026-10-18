@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000345,
+ "data": {
+  "queries": [
+   "Raising the Bar reforms patent scope impact",
+   "changes to patent scope following Raising the Bar"
+  ],
+  "standalone_question": "How much did the Raising the Bar reforms narrow the scope of Australian patents?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "multi-3",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000345,
+  "input": 665,
+  "model": "gemini-3.5-flash-lite",
+  "output": 58,
+  "reasoning": 0,
+  "seconds": 0.93
+ }
+}

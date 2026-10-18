@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.3e-05,
+ "data": {
+  "queries": [
+   "data sources used in IP Australia economic research"
+  ],
+  "standalone_question": "What data sources does IP Australia's economic research rely on?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-methods-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 4.6e-05,
+  "input": 282,
+  "model": "gpt-6-luna",
+  "output": 36,
+  "reasoning": 0,
+  "seconds": 1.31
+ }
+}

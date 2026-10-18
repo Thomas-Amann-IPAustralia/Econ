@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5.4e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2015, Appendix D, “Trade marks,” this passage explains what Australian trade marks can be, the requirements for registration, the holder’s exclusive rights, and application fees, duration and renewal."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2015:0029",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000108,
+  "input": 793,
+  "model": "gpt-6-luna",
+  "output": 58,
+  "reasoning": 0,
+  "seconds": 1.33
+ }
+}

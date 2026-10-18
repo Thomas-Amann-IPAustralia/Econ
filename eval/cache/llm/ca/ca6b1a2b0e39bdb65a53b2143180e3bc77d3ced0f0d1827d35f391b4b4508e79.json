@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.1e-05,
+ "data": {
+  "context": "In the endnotes of the Australian Intellectual Property Report 2022, this passage cites research on why firms register trade marks and on Australian household income and local-company trade mark filings, and notes that improvements to IPGOD changed time-series data published in earlier IP reports."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2022:0006",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000122,
+  "input": 891,
+  "model": "gpt-6-luna",
+  "output": 66,
+  "reasoning": 0,
+  "seconds": 1.6
+ }
+}

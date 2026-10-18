@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000206,
+ "data": {
+  "queries": [
+   "plant breeder rights plant types varieties",
+   "protected plant varieties top species crops"
+  ],
+  "standalone_question": "What types of plants make up the majority of new protected plant varieties?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr17-3",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000206,
+  "input": 236,
+  "model": "gemini-3.5-flash-lite",
+  "output": 54,
+  "reasoning": 0,
+  "seconds": 0.98
+ }
+}

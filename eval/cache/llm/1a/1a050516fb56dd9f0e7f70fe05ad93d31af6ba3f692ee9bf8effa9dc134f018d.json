@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.7e-05,
+ "data": {
+  "context": "In the 2024 report *Computer implemented inventions: patent trends at IP Australia, EPO and USPTO*, Appendix Table A3 reports EPO patent application counts by CII group and filing year from 2001 to 2020. The groups distinguish applications predicted by the machine-learning model as likely clear or adverse on patentable subject matter, and non-CII applications."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp16-cii-patent-trends:0103",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000193,
+  "input": 1487,
+  "model": "gpt-6-luna",
+  "output": 88,
+  "reasoning": 0,
+  "seconds": 1.89
+ }
+}

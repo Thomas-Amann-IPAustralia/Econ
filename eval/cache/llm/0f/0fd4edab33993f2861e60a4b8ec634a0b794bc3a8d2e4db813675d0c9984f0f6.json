@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "context": "In *The Australian Mining Industry: More than Just Shovels and Being the Lucky Country* (2015), section 4.4 examines Australian firms that identify themselves as mining companies under ANZSIC Division B. It describes their inclusion in the patent analysis and introduces Table 2, which groups their patents by primary IPC subclass and state."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp04-mining-innovation:0036",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000159,
+  "input": 1184,
+  "model": "gpt-6-luna",
+  "output": 81,
+  "reasoning": 0,
+  "seconds": 1.32
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.8e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2022, the trade mark classes section describes how Australian trade mark applications were distributed across Nice classes, including 2021 totals and growth. It also discusses the strongest growth among higher-volume classes and the rise in Class 21 household and kitchen goods applications in 2021."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2022:0037",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000156,
+  "input": 1193,
+  "model": "gpt-6-luna",
+  "output": 74,
+  "reasoning": 0,
+  "seconds": 1.66
+ }
+}

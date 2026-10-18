@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.3e-05,
+ "data": {
+  "context": "In the 2024 IP Australia Economic Research Paper 16, *Computer implemented inventions: patent trends at IP Australia, EPO and USPTO*, this section explains how the study assesses the 2014 Australian and US court rulings’ effects on computer-implemented invention patent grant and filing probabilities, using difference-in-differences comparisons of CII and non-CII applications."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp16-cii-patent-trends:0023",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000166,
+  "input": 1220,
+  "model": "gpt-6-luna",
+  "output": 88,
+  "reasoning": 0,
+  "seconds": 1.37
+ }
+}

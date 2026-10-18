@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.4e-05,
+ "data": {
+  "context": "In the Australian IP Report 2026, the section “The role of the Madrid system” explains how Australian trade mark applicants use the system to seek protection in multiple jurisdictions through one international application. It notes the system’s expanded country coverage and the rising share of Australian trade mark classes filed abroad through it from 2019 to 2024."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0084",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000129,
+  "input": 888,
+  "model": "gpt-6-luna",
+  "output": 81,
+  "reasoning": 0,
+  "seconds": 1.82
+ }
+}

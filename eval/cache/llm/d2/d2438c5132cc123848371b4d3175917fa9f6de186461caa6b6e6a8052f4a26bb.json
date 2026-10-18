@@ -1,0 +1,25 @@
+{
+ "cost_usd": 5.2e-05,
+ "data": {
+  "queries": [
+   "innovation patent applications grants trends annual Australian IP Reports",
+   "innovation patent system phase-out abolition 2021"
+  ],
+  "standalone_question": "How has the Australian innovation patent changed over time, including trends in applications and grants and the phase-out of the system?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-trend-10",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000104,
+  "input": 282,
+  "model": "gpt-6-luna",
+  "output": 151,
+  "reasoning": 89,
+  "seconds": 2.11
+ }
+}

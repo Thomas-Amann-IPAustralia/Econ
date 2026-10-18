@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6e-05,
+ "data": {
+  "context": "In the front matter of the Australian IP Report 2016, this passage lists the report’s print and online ISSN and ISBN identifiers and mentions items such as the Commonwealth Coat of Arms, IP Australia’s logo, and staff and premises photographs."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2016:0000",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000119,
+  "input": 497,
+  "model": "gpt-6-luna",
+  "output": 139,
+  "reasoning": 76,
+  "seconds": 2.61
+ }
+}

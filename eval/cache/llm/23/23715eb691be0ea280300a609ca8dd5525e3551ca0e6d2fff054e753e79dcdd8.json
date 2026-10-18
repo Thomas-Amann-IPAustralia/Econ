@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000355,
+ "data": {
+  "queries": [
+   "top patent applicants filing origin 2019",
+   "leading domestic and foreign patent filers"
+  ],
+  "standalone_question": "Who were the leading applicants for original patents in Australia around 2019?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr20-1",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000355,
+  "input": 667,
+  "model": "gemini-3.5-flash-lite",
+  "output": 62,
+  "reasoning": 0,
+  "seconds": 0.84
+ }
+}

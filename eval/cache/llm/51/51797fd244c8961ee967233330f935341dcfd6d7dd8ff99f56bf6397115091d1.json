@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2022, the patents section discusses women’s participation in Australian patenting, including trends in inventor representation from 1980 to 2016 and in PCT applications through 2021. It highlights differences across technology fields and the rise in PCT applications listing at least one female inventor, largely through mixed-gender teams."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2022:0029",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000159,
+  "input": 1168,
+  "model": "gpt-6-luna",
+  "output": 84,
+  "reasoning": 0,
+  "seconds": 2.35
+ }
+}

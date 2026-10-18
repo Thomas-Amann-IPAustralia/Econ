@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5.5e-05,
+ "data": {
+  "context": "In the Australian IP Report 2026, this passage is in the section “The value of licensing through collecting societies.” It explains how copyright contributes to the economy through direct licensing and collecting societies, which collect and distribute licensing fees, and how educational institutions, governments and businesses use collective licensing to access copyright material."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0114",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00011,
+  "input": 727,
+  "model": "gpt-6-luna",
+  "output": 74,
+  "reasoning": 0,
+  "seconds": 1.3
+ }
+}

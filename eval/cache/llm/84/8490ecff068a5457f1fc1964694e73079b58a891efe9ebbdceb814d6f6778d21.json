@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000219,
+ "data": {
+  "queries": [
+   "patent lapse firm growth",
+   "abandoned patents firm performance",
+   "patent renewal firm productivity"
+  ],
+  "standalone_question": "Are firms that let their patents lapse less likely to experience subsequent growth?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "erp15-2",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000219,
+  "input": 238,
+  "model": "gemini-3.5-flash-lite",
+  "output": 59,
+  "reasoning": 0,
+  "seconds": 0.89
+ }
+}

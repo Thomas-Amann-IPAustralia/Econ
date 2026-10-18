@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "context": "In the Australian IP Report 2025, this passage describes IPAVentures and its innovation work. It focuses on the 2025 launch of IP First Response, a pilot tool to help small businesses holding IP rights understand options for addressing infringement and enforcing those rights."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2025:0104",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000159,
+  "input": 928,
+  "model": "gpt-6-luna",
+  "output": 133,
+  "reasoning": 65,
+  "seconds": 1.85
+ }
+}

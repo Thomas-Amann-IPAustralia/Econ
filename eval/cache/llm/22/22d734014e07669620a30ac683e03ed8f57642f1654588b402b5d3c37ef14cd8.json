@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.3e-05,
+ "data": {
+  "context": "In *The business environment of patenting firms in Australia* (2024), Table 11b in the collaboration landscape section examines whether Australian firms’ patenting activity five years earlier is associated with their propensity to collaborate on innovation. The logistic regressions distinguish filed, granted and retired patents and include firm and industry characteristics."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp15-patenting-firms:0060",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000166,
+  "input": 1270,
+  "model": "gpt-6-luna",
+  "output": 78,
+  "reasoning": 0,
+  "seconds": 1.53
+ }
+}

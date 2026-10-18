@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5.6e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2015, the Research program section outlines projects due to begin in 2015–2016. The passage lists planned research on IP activity and the economy, changes to the IP system and innovation, IP-rights trading, and productivity, to inform evidence-based policy."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2015:0022",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000113,
+  "input": 767,
+  "model": "gpt-6-luna",
+  "output": 73,
+  "reasoning": 0,
+  "seconds": 1.3
+ }
+}

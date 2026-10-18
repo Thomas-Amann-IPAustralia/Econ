@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.1e-05,
+ "data": {
+  "context": "In the Australian IP Report 2025, the International applicants section discusses Australian trade mark filings by goods and services classes in 2024. It describes declines in technology-intensive classes and growth in household, furniture, personal-care and pharmaceutical classes, including the role of international filings and the United States and United Kingdom as leading origins."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2025:0056",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000142,
+  "input": 1038,
+  "model": "gpt-6-luna",
+  "output": 77,
+  "reasoning": 0,
+  "seconds": 1.52
+ }
+}

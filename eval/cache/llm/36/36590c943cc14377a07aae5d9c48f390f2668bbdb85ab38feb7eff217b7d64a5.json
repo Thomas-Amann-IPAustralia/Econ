@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.1e-05,
+ "data": {
+  "context": "In *Intellectual property rights, business profitability and competition in the Australian economy* (2020), section 2.4 compares the business-age distributions of Australian IPR owners and non-owners. Table 2.3 breaks owners down by patents, trade marks and designs, alone and in combination, across age groups from 1–5 years to over 20 years."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp10-ip-profitability-competition:0017",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000182,
+  "input": 1376,
+  "model": "gpt-6-luna",
+  "output": 88,
+  "reasoning": 0,
+  "seconds": 1.96
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "cost_usd": 0.000377,
+ "data": {
+  "queries": [
+   "Australian patent filing trends and international patent applications",
+   "Australian firms innovation productivity growth and wages",
+   "university industry research collaboration and patenting firms",
+   "Australian clean energy innovation patents and technology fields"
+  ],
+  "standalone_question": "Does any information in the knowledge base agree or disagree with the findings in the WIPO Global Innovation Index 2026 material I pasted?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "owner-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000754,
+  "input": 6452,
+  "model": "gpt-6-luna",
+  "output": 217,
+  "reasoning": 136,
+  "seconds": 3.59
+ }
+}

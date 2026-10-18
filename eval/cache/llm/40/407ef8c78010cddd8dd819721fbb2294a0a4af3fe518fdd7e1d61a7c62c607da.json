@@ -1,0 +1,24 @@
+{
+ "cost_usd": 4.4e-05,
+ "data": {
+  "queries": [
+   "AI investment drivers small businesses AI specialists hiring"
+  ],
+  "standalone_question": "Do small businesses that already employ AI specialists continue hiring more AI specialists?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "oce-ai-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 8.7e-05,
+  "input": 674,
+  "model": "gpt-6-luna",
+  "output": 39,
+  "reasoning": 0,
+  "seconds": 1.49
+ }
+}

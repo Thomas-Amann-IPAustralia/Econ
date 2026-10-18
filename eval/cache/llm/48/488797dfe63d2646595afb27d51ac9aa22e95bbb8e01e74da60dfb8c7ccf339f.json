@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000113,
+ "data": {
+  "context": "In *The business environment of patenting firms in Australia* (2024), the Data section’s footnotes explain that BCS innovation questions are asked retrospectively every two years, so survey-year responses cover that year and the previous financial year. They also define a high-growth firm and clarify other data and estimation details."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp15-patenting-firms:0080",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000227,
+  "input": 1064,
+  "model": "gpt-6-luna",
+  "output": 241,
+  "reasoning": 163,
+  "seconds": 3.02
+ }
+}

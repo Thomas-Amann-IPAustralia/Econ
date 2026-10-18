@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In *Intellectual property rights, business profitability and competition in the Australian economy* (2020), Section 4 explains how the study measures market competition using the Herfindahl-Hirschman Index (HHI), then calculates it for Australian industry subdivisions from 2001–02 to 2015–16 using businesses’ market shares from BLADE."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp10-ip-profitability-competition:0052",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000165,
+  "input": 1223,
+  "model": "gpt-6-luna",
+  "output": 85,
+  "reasoning": 0,
+  "seconds": 1.59
+ }
+}

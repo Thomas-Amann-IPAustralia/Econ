@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.6e-05,
+ "data": {
+  "context": "In the 2025 analytic note *Evaluating Trade Marks as a Leading Economic Indicator of the Australian Business Cycle*, Appendix Table A1 compares benchmark indicators’ ability to predict Australian recession phases using the QPS Probit model. It ranks trade mark applications alongside other economic indicators, with predictions based on real GDP in the following quarter."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "note-tm-leading-indicator:0017",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000132,
+  "input": 934,
+  "model": "gpt-6-luna",
+  "output": 78,
+  "reasoning": 0,
+  "seconds": 1.55
+ }
+}

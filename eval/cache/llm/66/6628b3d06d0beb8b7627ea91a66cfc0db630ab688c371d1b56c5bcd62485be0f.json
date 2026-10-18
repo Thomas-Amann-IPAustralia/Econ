@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000212,
+ "data": {
+  "queries": [
+   "patent grant lag commercialisation small firms",
+   "patent examination delay small and medium enterprises"
+  ],
+  "standalone_question": "Does slowing down the patent grant help small firms commercialise their inventions?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr24-1",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000212,
+  "input": 239,
+  "model": "gemini-3.5-flash-lite",
+  "output": 56,
+  "reasoning": 0,
+  "seconds": 0.83
+ }
+}

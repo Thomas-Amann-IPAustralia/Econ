@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.1e-05,
+ "data": {
+  "context": "In the Australian IP Report 2025 section “Taking the first step: provisional patents,” this passage explains how Australian provisional patent applications work: they provide a 12-month decision period and establish a priority date, but are not examined and provide no enforceable protection."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2025:0043",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000122,
+  "input": 897,
+  "model": "gpt-6-luna",
+  "output": 65,
+  "reasoning": 0,
+  "seconds": 1.45
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.7e-05,
+ "data": {
+  "context": "In the Australian IP Report 2025, this passage in “IP Australia’s examination deferral system” explains how Australian patent applicants can defer or request substantive examination, including the time limits and how often early requests are used."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2025:0013",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000173,
+  "input": 923,
+  "model": "gpt-6-luna",
+  "output": 162,
+  "reasoning": 103,
+  "seconds": 2.33
+ }
+}

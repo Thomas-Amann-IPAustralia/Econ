@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.1e-05,
+ "data": {
+  "context": "In *Designs Law and Practice* (2019), the “Tertiary industries” section compares registered-design product-class focus across Australia, Canada, Denmark, France, Germany, Japan, Norway, Sweden and the US. The passage is a table of values for tertiary industries, including transport, information services, finance and architectural and engineering activities."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp08-designs-law-practice:0041",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000182,
+  "input": 1408,
+  "model": "gpt-6-luna",
+  "output": 82,
+  "reasoning": 0,
+  "seconds": 1.67
+ }
+}

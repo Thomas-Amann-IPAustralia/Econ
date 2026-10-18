@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5.6e-05,
+ "data": {
+  "context": "In the Australian IP Report 2024, this passage is in the section on plant breeder’s rights applications and registrations. It reports changes in Australian PBR applications from 2022 to 2023, including resident and non-resident filings."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2024:0099",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000113,
+  "input": 822,
+  "model": "gpt-6-luna",
+  "output": 61,
+  "reasoning": 0,
+  "seconds": 1.37
+ }
+}

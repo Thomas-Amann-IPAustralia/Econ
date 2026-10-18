@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.7e-05,
+ "data": {
+  "queries": [
+   "2014 court rulings software patents foreign applicants Australian patent filings"
+  ],
+  "standalone_question": "Did the 2014 Australian court rulings deter foreign applicants from filing software patent applications in Australia?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp16-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 5.3e-05,
+  "input": 289,
+  "model": "gpt-6-luna",
+  "output": 49,
+  "reasoning": 0,
+  "seconds": 1.13
+ }
+}

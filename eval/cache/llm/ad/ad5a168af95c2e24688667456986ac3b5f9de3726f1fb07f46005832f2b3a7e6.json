@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9e-05,
+ "data": {
+  "context": "In *Intellectual property rights, business profitability and competition in the Australian economy* (2020), section 4.1.1 examines whether IPR-intensive industries affect Australian industry market concentration, measured by the Herfindahl–Hirschman Index (HHI). It reports Difference GMM and System GMM results using ABS BLADE data for the 2016–17 frame."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp10-ip-profitability-competition:0059",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00018,
+  "input": 1343,
+  "model": "gpt-6-luna",
+  "output": 92,
+  "reasoning": 0,
+  "seconds": 2.04
+ }
+}

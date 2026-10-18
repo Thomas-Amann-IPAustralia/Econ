@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2016, the Trade Marks section discusses Australians’ overseas trade mark filings, including the Madrid route and destination countries. It reports on filings in 2014 and Madrid applications in 2015, noting China as the leading destination and India’s rise to sixth place."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2016:0014",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000119,
+  "input": 830,
+  "model": "gpt-6-luna",
+  "output": 72,
+  "reasoning": 0,
+  "seconds": 1.61
+ }
+}

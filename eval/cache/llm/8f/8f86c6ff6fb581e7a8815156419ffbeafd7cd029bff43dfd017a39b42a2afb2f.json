@@ -1,0 +1,26 @@
+{
+ "cost_usd": 5.1e-05,
+ "data": {
+  "queries": [
+   "China country of origin Australian patent applications trends",
+   "China country of origin Australian trade mark applications trends",
+   "China country of origin Australian design applications trends"
+  ],
+  "standalone_question": "How has China's role as a country of origin in Australian IP filings changed over time?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-trend-12",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000103,
+  "input": 281,
+  "model": "gpt-6-luna",
+  "output": 150,
+  "reasoning": 87,
+  "seconds": 2.41
+ }
+}

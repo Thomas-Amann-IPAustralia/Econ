@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9e-05,
+ "data": {
+  "context": "In the 2024 report *Computer implemented inventions: patent trends at IP Australia, EPO and USPTO*, this discussion interprets Table 9’s regression results on the propensity of EPO and USPTO applicants to subsequently file computer-implemented invention patent applications at IP Australia. It compares results across CII and non-CII subsamples, including applications classified as likely adverse or likely clear."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp16-cii-patent-trends:0058",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00018,
+  "input": 1344,
+  "model": "gpt-6-luna",
+  "output": 91,
+  "reasoning": 0,
+  "seconds": 1.7
+ }
+}

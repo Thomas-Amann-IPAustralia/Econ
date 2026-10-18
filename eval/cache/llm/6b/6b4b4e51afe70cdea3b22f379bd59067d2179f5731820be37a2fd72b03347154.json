@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.8e-05,
+ "data": {
+  "context": "In the 2024 report *Computer implemented inventions: patent trends at IP Australia, EPO and USPTO*, this section explains how the researchers labelled computer-implemented invention (CII) patent applications for machine-learning classification. Using IP Australia examiner objections under the manner of manufacture test, it distinguishes applications likely to face a patentable subject matter objection from those likely to be clear, to study differences across jurisdictions and before and after the 2014 court cases in Australia and the US."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp16-cii-patent-trends:0014",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000177,
+  "input": 1221,
+  "model": "gpt-6-luna",
+  "output": 109,
+  "reasoning": 0,
+  "seconds": 1.78
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.5e-05,
+ "data": {
+  "context": "In the introduction to the Australian Intellectual Property Report 2016, this passage outlines growth in Australian patent, trade mark, design and plant breeder’s right applications in 2015, the IP system review by the Productivity Commission, and IP Australia’s role; it notes that copyright is administered separately and not covered in the report."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2016:0003",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00013,
+  "input": 914,
+  "model": "gpt-6-luna",
+  "output": 77,
+  "reasoning": 0,
+  "seconds": 1.58
+ }
+}

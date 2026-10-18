@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000102,
+ "data": {
+  "context": "In the conclusion of IP Australia’s 2015 report *The Australian Mining Industry: More than Just Shovels and Being the Lucky Country*, this passage summarizes Australian mining patent filings in the report’s dataset, including PCT applications by METS firms, operating miners and publicly funded entities. The 1.2 per cent figure refers to the share of METS inventors who were Australian, based only on PCT applications."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp04-mining-innovation:0048",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000204,
+  "input": 1125,
+  "model": "gpt-6-luna",
+  "output": 182,
+  "reasoning": 82,
+  "seconds": 2.31
+ }
+}

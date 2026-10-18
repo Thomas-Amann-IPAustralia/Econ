@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.8e-05,
+ "data": {
+  "context": "In the Australian IP Report 2025, the “An adaptable IP system” section describes two international treaties concluded in 2024: the WIPO Treaty on genetic resources and associated traditional knowledge in patent applications, and the Riyadh Design Law Treaty, which aims to simplify access to design protection in international markets."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2025:0005",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000136,
+  "input": 994,
+  "model": "gpt-6-luna",
+  "output": 74,
+  "reasoning": 0,
+  "seconds": 1.41
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.3e-05,
+ "data": {
+  "context": "In the 2023 report *Drivers of AI investment*, section 3 discusses how firms’ AI capacity building relates to patenting. Among firms engaged in patenting, the passage reports no statistically significant difference in AI capacity building between firms with broad or narrow technological focus, measured by diversity or concentration across patent classes."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "oce-ai-investment:0004",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000147,
+  "input": 1096,
+  "model": "gpt-6-luna",
+  "output": 75,
+  "reasoning": 0,
+  "seconds": 2.01
+ }
+}

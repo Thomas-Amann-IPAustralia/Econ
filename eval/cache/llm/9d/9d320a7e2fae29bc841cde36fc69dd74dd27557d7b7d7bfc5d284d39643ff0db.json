@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.7e-05,
+ "data": {
+  "context": "In the *Australian Intellectual Property Report 2022*, the “Copyright Infringement” section discusses Australian online copyright infringement, including piracy-site traffic and unlawful consumption of film, television and music, and the website-blocking scheme. It reports survey findings on 2021 consumption and changes in infringement over time."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2022:0074",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000154,
+  "input": 1165,
+  "model": "gpt-6-luna",
+  "output": 75,
+  "reasoning": 0,
+  "seconds": 1.63
+ }
+}

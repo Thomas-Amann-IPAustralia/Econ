@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000236,
+ "data": {
+  "queries": [
+   "Australian resident patent applications 2016",
+   "total patent filings 2016"
+  ],
+  "standalone_question": "Did Australian residents file more patent applications in 2016 even though total patent filings fell?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr17-1",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000236,
+  "input": 244,
+  "model": "gemini-3.5-flash-lite",
+  "output": 65,
+  "reasoning": 0,
+  "seconds": 0.91
+ }
+}

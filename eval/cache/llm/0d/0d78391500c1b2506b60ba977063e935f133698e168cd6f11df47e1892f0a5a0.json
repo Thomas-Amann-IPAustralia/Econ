@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5.9e-05,
+ "data": {
+  "context": "In the Australian IP Report 2023, this passage is in the section on international plant breeder’s rights (PBR) activity in Australia. It explains how PBRs support the entry of foreign-sourced germplasm and investment to adapt plant varieties to Australian conditions, following figures on resident and non-resident registrations in 2022."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2023:0067",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000118,
+  "input": 777,
+  "model": "gpt-6-luna",
+  "output": 81,
+  "reasoning": 0,
+  "seconds": 1.79
+ }
+}

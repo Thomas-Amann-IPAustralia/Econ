@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.8e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2020, the chapter on IP rights, business profitability and market competition introduces an Australian microdata study. It examines how firms’ use of patents, trade marks and designs relates to business markups and profitability, and how IP rights may affect market competition, using linked IPLORD and BLADE data."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2020:0048",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000157,
+  "input": 1170,
+  "model": "gpt-6-luna",
+  "output": 80,
+  "reasoning": 0,
+  "seconds": 1.68
+ }
+}

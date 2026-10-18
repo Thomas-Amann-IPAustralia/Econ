@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In the 2023 report *Drivers of AI investment*, Appendix 1 describes the data sources and linking used for the analysis. This passage explains how LinkedIn job, company and people/skills data were collected for Australian job searches using artificial intelligence or machine-learning keywords, while identifying Lens patent-record counts as the other primary source."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "oce-ai-investment:0072",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000164,
+  "input": 1250,
+  "model": "gpt-6-luna",
+  "output": 78,
+  "reasoning": 0,
+  "seconds": 1.44
+ }
+}

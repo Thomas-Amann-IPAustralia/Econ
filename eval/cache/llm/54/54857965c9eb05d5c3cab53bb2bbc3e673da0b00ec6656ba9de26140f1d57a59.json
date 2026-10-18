@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.5e-05,
+ "data": {
+  "queries": [
+   "plant breeder's rights variety distinct uniform stable requirements"
+  ],
+  "standalone_question": "What characteristics must a plant variety demonstrate to qualify for plant breeder’s rights in Australia?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr24-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 5e-05,
+  "input": 285,
+  "model": "gpt-6-luna",
+  "output": 43,
+  "reasoning": 0,
+  "seconds": 1.4
+ }
+}

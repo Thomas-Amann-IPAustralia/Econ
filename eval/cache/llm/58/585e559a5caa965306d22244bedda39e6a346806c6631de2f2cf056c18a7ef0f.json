@@ -1,0 +1,24 @@
+{
+ "cost_usd": 4.5e-05,
+ "data": {
+  "queries": [
+   "linking IP filings to business performance data methodology"
+  ],
+  "standalone_question": "How does the Office of the Chief Economist link intellectual property filing data to data on business performance?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-methods-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 9e-05,
+  "input": 678,
+  "model": "gpt-6-luna",
+  "output": 45,
+  "reasoning": 0,
+  "seconds": 1.62
+ }
+}

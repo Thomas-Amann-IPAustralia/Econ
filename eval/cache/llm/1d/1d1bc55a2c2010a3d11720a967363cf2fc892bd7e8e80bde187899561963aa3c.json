@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.8e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2018, this passage covers plant breeder’s rights (PBR) registrations and plant varieties. It describes Australian and non-resident PBR registrations in 2017, their origins, and the plant groups represented."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2018:0023",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000196,
+  "input": 1094,
+  "model": "gpt-6-luna",
+  "output": 173,
+  "reasoning": 109,
+  "seconds": 2.7
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5.6e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2017, the section “University-industry collaboration, not a crisis” discusses policy interest in industry–research collaboration and the evidence linking collaboration with business productivity and performance. The preceding text describes an IPGOD-based analysis of jointly filed IP applications to assess how often Australian universities collaborate."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2017:0023",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000111,
+  "input": 727,
+  "model": "gpt-6-luna",
+  "output": 76,
+  "reasoning": 0,
+  "seconds": 1.59
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "cost_usd": 6.3e-05,
+ "data": {
+  "queries": [
+   "new plant variety rights applications by plant type"
+  ],
+  "standalone_question": "Which sorts of plants account for most newly protected plant varieties?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr17-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000125,
+  "input": 671,
+  "model": "gpt-6-luna",
+  "output": 116,
+  "reasoning": 77,
+  "seconds": 1.79
+ }
+}

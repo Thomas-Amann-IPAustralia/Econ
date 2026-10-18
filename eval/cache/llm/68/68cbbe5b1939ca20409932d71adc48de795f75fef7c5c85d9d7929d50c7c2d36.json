@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.1e-05,
+ "data": {
+  "context": "In the Australian IP Report 2026, the section “Overseas patenting moderates further in 2024” discusses Australian applicants’ patent filings abroad. WIPO data show overseas applications declined for a second consecutive year in 2024 after a post-pandemic surge."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0060",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000122,
+  "input": 879,
+  "model": "gpt-6-luna",
+  "output": 68,
+  "reasoning": 0,
+  "seconds": 1.98
+ }
+}

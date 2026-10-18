@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.4e-05,
+ "data": {
+  "queries": [
+   "patent-holding firms artificial intelligence investment"
+  ],
+  "standalone_question": "Are Australian companies that hold patents more likely to invest in artificial intelligence?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "oce-ai-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 4.8e-05,
+  "input": 284,
+  "model": "gpt-6-luna",
+  "output": 39,
+  "reasoning": 0,
+  "seconds": 1.28
+ }
+}

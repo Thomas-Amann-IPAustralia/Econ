@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000331,
+ "data": {
+  "queries": [
+   "transport technology patent filing trends",
+   "growth drivers for transport related IP applications"
+  ],
+  "standalone_question": "What has driven growth in transport-related intellectual property filings recently?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr25-1",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000331,
+  "input": 662,
+  "model": "gemini-3.5-flash-lite",
+  "output": 53,
+  "reasoning": 0,
+  "seconds": 0.91
+ }
+}

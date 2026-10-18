@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.8e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2021, the patent filings section compares resident and non-resident Australian patent applications in 2020. It explains the table’s counts of single-party and multi-party applications, including common-origin and mixed-origin applications."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2021:0007",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000135,
+  "input": 856,
+  "model": "gpt-6-luna",
+  "output": 98,
+  "reasoning": 34,
+  "seconds": 1.76
+ }
+}

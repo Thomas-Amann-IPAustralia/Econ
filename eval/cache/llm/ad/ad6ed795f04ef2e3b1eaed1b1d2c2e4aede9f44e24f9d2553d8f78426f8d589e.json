@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.6e-05,
+ "data": {
+  "context": "In the “Countries of origin” section of the Australian IP Report 2023, this passage describes countries of origin for plant breeder’s rights (PBR) applications in Australia, focusing on changes in 2022 and leading origins since 2013."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2023:0069",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000151,
+  "input": 915,
+  "model": "gpt-6-luna",
+  "output": 119,
+  "reasoning": 54,
+  "seconds": 6.21
+ }
+}

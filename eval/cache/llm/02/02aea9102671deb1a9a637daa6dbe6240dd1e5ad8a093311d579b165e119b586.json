@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000358,
+ "data": {
+  "queries": [
+   "linking intellectual property filings to business longitudinal data",
+   "matching patent and trade mark data with firm performance"
+  ],
+  "standalone_question": "How does the Office of the Chief Economist link intellectual property filings to data on business performance?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-methods-1",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000358,
+  "input": 668,
+  "model": "gemini-3.5-flash-lite",
+  "output": 63,
+  "reasoning": 0,
+  "seconds": 1.03
+ }
+}

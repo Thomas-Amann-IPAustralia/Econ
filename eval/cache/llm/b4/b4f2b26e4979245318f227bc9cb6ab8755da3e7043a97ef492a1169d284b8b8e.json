@@ -1,0 +1,24 @@
+{
+ "cost_usd": 4.4e-05,
+ "data": {
+  "queries": [
+   "Raising the Bar reforms effect on patent scope Australia"
+  ],
+  "standalone_question": "How much did the Raising the Bar reforms narrow the scope of Australian patents?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "multi-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 8.8e-05,
+  "input": 675,
+  "model": "gpt-6-luna",
+  "output": 42,
+  "reasoning": 0,
+  "seconds": 1.08
+ }
+}

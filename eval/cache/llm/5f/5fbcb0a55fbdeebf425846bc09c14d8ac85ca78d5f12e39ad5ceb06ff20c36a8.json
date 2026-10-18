@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.7e-05,
+ "data": {
+  "context": "In the Australian IP Report 2020’s Patents section, these notes define priority date and cite the 2020 Intellectual Property Laws Amendment Act and an IP Australia study on the economic impact of innovation patents."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2020:0064",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000194,
+  "input": 969,
+  "model": "gpt-6-luna",
+  "output": 194,
+  "reasoning": 138,
+  "seconds": 2.47
+ }
+}

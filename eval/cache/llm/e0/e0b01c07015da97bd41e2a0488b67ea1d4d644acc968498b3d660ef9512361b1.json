@@ -1,0 +1,21 @@
+{
+ "cost_usd": 4.8e-05,
+ "data": {
+  "context": "This is the opening title page of *Designs Law and Practice* (2019), an IP Australia and IPRIA research paper. It introduces the study of design in Australia and how Australia compares with international peers."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp08-designs-law-practice:0000",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 9.6e-05,
+  "input": 681,
+  "model": "gpt-6-luna",
+  "output": 56,
+  "reasoning": 0,
+  "seconds": 1.56
+ }
+}

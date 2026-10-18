@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In the 2024 report *Computer Implemented Inventions: Patent Trends at IP Australia, EPO and USPTO*, the econometrics analysis presents regression estimates for patent grant probability across all patent families, separately for IP Australia (IPA), the EPO and the USPTO. The table reports coefficients for CII status and other application and assignee characteristics, alongside sample sizes and adjusted R-squared values."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp16-cii-patent-trends:0043",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000165,
+  "input": 1176,
+  "model": "gpt-6-luna",
+  "output": 94,
+  "reasoning": 0,
+  "seconds": 2.01
+ }
+}

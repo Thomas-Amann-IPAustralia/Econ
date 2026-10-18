@@ -1,0 +1,27 @@
+{
+ "cost_usd": 9.5e-05,
+ "data": {
+  "queries": [
+   "AI investment drivers and artificial intelligence patenting trends",
+   "SME growth productivity wages and intellectual property use",
+   "clean energy patenting trends and technology opportunities",
+   "collaboration among patenting firms and business environment"
+  ],
+  "standalone_question": "Based on trends and data across the documents, what underexplored opportunity areas could IP Australia pursue?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "owner-5",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000189,
+  "input": 688,
+  "model": "gpt-6-luna",
+  "output": 240,
+  "reasoning": 163,
+  "seconds": 3.29
+ }
+}

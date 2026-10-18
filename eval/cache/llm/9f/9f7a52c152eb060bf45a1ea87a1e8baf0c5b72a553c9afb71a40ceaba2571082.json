@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.9e-05,
+ "data": {
+  "context": "In the “Patents” section of the Australian Intellectual Property Report 2016, this passage discusses Australian patent applications filed abroad in 2014, including the surge in applications to New Zealand before its 2013 Patents Act took effect and the use of PCT versus direct filing routes from 2005 to 2014."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2016:0009",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000138,
+  "input": 983,
+  "model": "gpt-6-luna",
+  "output": 79,
+  "reasoning": 0,
+  "seconds": 1.36
+ }
+}

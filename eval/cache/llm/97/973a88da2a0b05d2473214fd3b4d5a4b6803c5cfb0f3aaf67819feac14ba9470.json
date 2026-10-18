@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.6e-05,
+ "data": {
+  "context": "In *Drivers of AI investment* (2023), section 4.5, “Patenting behaviour,” the passage explains how the study measures Australian firms’ patent-class diversity using WIPO IPC classifications and Shannon entropy, then reports whether diversity differs with firms’ current AI capacity building."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "oce-ai-investment:0040",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000152,
+  "input": 1175,
+  "model": "gpt-6-luna",
+  "output": 69,
+  "reasoning": 0,
+  "seconds": 2.2
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.5e-05,
+ "data": {
+  "context": "In *Intellectual Property Rights, Business Profitability and Competition in the Australian Economy* (2020), Appendix F reports regression results on business profitability by type and combination of IP rights. Table F.4 compares system GMM, OLS and fixed-effects estimates for log profit per employee, including Australian businesses with patents, trade marks and designs."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp10-ip-profitability-competition:0108",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00017,
+  "input": 1300,
+  "model": "gpt-6-luna",
+  "output": 81,
+  "reasoning": 0,
+  "seconds": 1.54
+ }
+}

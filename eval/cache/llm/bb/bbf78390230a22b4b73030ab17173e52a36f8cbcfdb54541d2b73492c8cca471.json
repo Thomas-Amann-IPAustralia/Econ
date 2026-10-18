@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6e-05,
+ "data": {
+  "context": "In the 2014 *Report on patent backlogs, inventories and pendency*, Appendix 1’s section on International PCT Filing explains that applicants can file a complete patent application under the Patent Cooperation Treaty, designating its member jurisdictions, including Australia, and securing an international priority date."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp01-patent-backlogs:0040",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000119,
+  "input": 840,
+  "model": "gpt-6-luna",
+  "output": 70,
+  "reasoning": 0,
+  "seconds": 1.28
+ }
+}

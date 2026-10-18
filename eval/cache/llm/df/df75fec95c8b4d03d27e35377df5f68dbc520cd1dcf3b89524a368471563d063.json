@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.4e-05,
+ "data": {
+  "context": "In the Australian IP Report 2023, the “IP, diversity and innovation” key findings cover Australian patent-holding businesses and their workforce. They summarise associations between patenting and wages, worker retention, and employment of a diverse workforce, including an 11% wage premium in SMEs."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2023:0108",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000169,
+  "input": 861,
+  "model": "gpt-6-luna",
+  "output": 165,
+  "reasoning": 92,
+  "seconds": 2.18
+ }
+}

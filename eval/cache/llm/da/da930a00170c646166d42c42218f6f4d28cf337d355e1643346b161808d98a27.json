@@ -1,0 +1,25 @@
+{
+ "cost_usd": 3.4e-05,
+ "data": {
+  "queries": [
+   "intellectual property rights causal impact on innovation evidence",
+   "IP rights innovation incentives empirical evidence limitations"
+  ],
+  "standalone_question": "How strong is the evidence that the intellectual property system benefits innovation?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "owner-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 6.9e-05,
+  "input": 286,
+  "model": "gpt-6-luna",
+  "output": 81,
+  "reasoning": 32,
+  "seconds": 1.75
+ }
+}

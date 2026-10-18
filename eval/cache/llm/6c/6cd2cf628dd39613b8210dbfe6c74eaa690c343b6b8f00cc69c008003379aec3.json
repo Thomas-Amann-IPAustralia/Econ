@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.6e-05,
+ "data": {
+  "context": "In the introduction to the Australian Intellectual Property Report 2019, this passage previews Chapter 6’s analysis of trade mark cluttering in Australia and Chapter 7’s joint IP Australia–University of Melbourne study of design rights and Australia’s international comparisons, then notes the report’s new interactive digital format."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2019:0003",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000152,
+  "input": 1156,
+  "model": "gpt-6-luna",
+  "output": 72,
+  "reasoning": 0,
+  "seconds": 1.71
+ }
+}

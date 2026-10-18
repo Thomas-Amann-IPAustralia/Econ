@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.5e-05,
+ "data": {
+  "context": "In *Intellectual Property Rights, Business Profitability and Competition in the Australian Economy* (2020), section 2.5.1 examines the industry distribution of Australian businesses with registrable IP rights in force from 2001–02 to 2015–16, using ANZSIC 2006 industry classifications. It identifies the industries with the most IP-owning businesses and the highest proportions of IP owners."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp10-ip-profitability-competition:0018",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00019,
+  "input": 1422,
+  "model": "gpt-6-luna",
+  "output": 96,
+  "reasoning": 0,
+  "seconds": 1.56
+ }
+}

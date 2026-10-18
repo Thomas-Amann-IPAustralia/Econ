@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.3e-05,
+ "data": {
+  "context": "In *The business environment of patenting firms in Australia* (2024), Table 6 in the regression analysis examines firms’ probability of being granted patents. The table reports pooled, random-effects and fixed-effects estimates for firm characteristics, industries and locations; the preceding note describes the dependent variable as whether a firm filed at least one patent."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp15-patenting-firms:0034",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000167,
+  "input": 1266,
+  "model": "gpt-6-luna",
+  "output": 80,
+  "reasoning": 0,
+  "seconds": 1.61
+ }
+}

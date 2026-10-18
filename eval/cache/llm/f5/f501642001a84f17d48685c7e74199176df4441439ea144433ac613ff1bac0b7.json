@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.8e-05,
+ "data": {
+  "context": "Australian IP Report 2025, Overview: explains how IP rights support productivity, innovation, business growth and resilience, and reports 2024 increases in Australian trade mark and design filings."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2025:0001",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000137,
+  "input": 1121,
+  "model": "gpt-6-luna",
+  "output": 49,
+  "reasoning": 0,
+  "seconds": 1.31
+ }
+}

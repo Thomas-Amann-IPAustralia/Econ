@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.1e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2021, the section on Australian filings overseas discusses Australian design right filings abroad in 2019, using WIPO data, including changes in filings at the EUIPO, United States and other destinations. The data were not yet available for 2020, so the passage cannot show the pandemic’s effects."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2021:0041",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000141,
+  "input": 1012,
+  "model": "gpt-6-luna",
+  "output": 80,
+  "reasoning": 0,
+  "seconds": 1.6
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.5e-05,
+ "data": {
+  "context": "In *The market for design: insights from interviews with Australian firms* (2014), in the findings section on design as a capability, this passage cites Molonglo Group’s view that design expertise is embedded in people, their shared working practices and collaboration with clients, rather than in an individual designer. The note gives the source for Molonglo Group’s history."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp03-market-for-design:0026",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00013,
+  "input": 865,
+  "model": "gpt-6-luna",
+  "output": 86,
+  "reasoning": 0,
+  "seconds": 1.79
+ }
+}

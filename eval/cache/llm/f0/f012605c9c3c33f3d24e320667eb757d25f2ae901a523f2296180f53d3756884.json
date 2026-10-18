@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000115,
+ "data": {
+  "context": "In *Exporter responses to shocks: The role of trade marks* (2021), the export revenue robustness analysis examines whether rejected or cancelled trade mark applications affect Australian exporters’ revenue responses to tariff and real exchange rate shocks, comparing firms with long and short export histories."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp11-exporters-trade-marks:0085",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00023,
+  "input": 1962,
+  "model": "gpt-6-luna",
+  "output": 67,
+  "reasoning": 0,
+  "seconds": 1.5
+ }
+}

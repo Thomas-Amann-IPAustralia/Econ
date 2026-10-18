@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.1e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2021, the “Trade mark classes” section describes Australian trade mark applications by Nice product and service class, including 2020 filing patterns and changes from 2019. Figure T2 tracks changes in the application share of five key classes, selected for their growth or decline in 2019–20."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2021:0023",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000141,
+  "input": 1009,
+  "model": "gpt-6-luna",
+  "output": 81,
+  "reasoning": 0,
+  "seconds": 1.77
+ }
+}

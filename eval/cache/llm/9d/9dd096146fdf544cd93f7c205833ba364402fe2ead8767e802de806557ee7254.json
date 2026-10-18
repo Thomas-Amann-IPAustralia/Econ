@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.002265,
+ "data": {
+  "queries": [
+   "Global Innovation Index Australia",
+   "innovation performance Australia ranking",
+   "Australian IP Report innovation indicators"
+  ],
+  "standalone_question": "Does information in the knowledge base agree or disagree with WIPO's Global Innovation Index findings for Australia?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "owner-4",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002265,
+  "input": 7001,
+  "model": "gemini-3.5-flash-lite",
+  "output": 66,
+  "reasoning": 0,
+  "seconds": 1.01
+ }
+}

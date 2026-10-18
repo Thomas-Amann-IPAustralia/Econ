@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.1e-05,
+ "data": {
+  "context": "In the 2024 IP Australia Economic Research Paper *Raising the Bar reforms: Measuring the impact on relative patent scope*, Table 12 in the quantitative analysis reports estimated effects of the Raising the Bar reforms on whether Australian patents were narrower, similar, or broader, using manual assessments and machine-learning classifications of first claims, all claims, or both."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp14-raising-the-bar:0070",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000162,
+  "input": 1204,
+  "model": "gpt-6-luna",
+  "output": 84,
+  "reasoning": 0,
+  "seconds": 1.52
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.8e-05,
+ "data": {
+  "queries": [
+   "causal inference econometric methods impact evaluation Office of the Chief Economist"
+  ],
+  "standalone_question": "What statistical methods does IP Australia’s Office of the Chief Economist use to establish causal relationships in its economic research?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "owner-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 5.5e-05,
+  "input": 286,
+  "model": "gpt-6-luna",
+  "output": 52,
+  "reasoning": 0,
+  "seconds": 1.49
+ }
+}

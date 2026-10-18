@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.6e-05,
+ "data": {
+  "context": "In *Designs Law and Practice* (2019), the “Product class focus” section compares design filings across countries and Locarno product classes, including applicants’ shares of filings in 2016. Figure 6 also compares design labour intensity across ISIC industries and national contexts in 2016."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp08-designs-law-practice:0039",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000151,
+  "input": 1142,
+  "model": "gpt-6-luna",
+  "output": 74,
+  "reasoning": 0,
+  "seconds": 1.3
+ }
+}

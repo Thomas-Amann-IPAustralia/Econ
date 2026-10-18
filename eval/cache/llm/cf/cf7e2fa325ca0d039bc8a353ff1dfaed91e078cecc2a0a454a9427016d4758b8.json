@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.5e-05,
+ "data": {
+  "context": "In the Australian IP Report 2026, this section examines cross-border collaboration in Australian standard complete patent applications in 2025, including changes in international co-applicant filings and Australia-linked collaboration. It also describes direct national or regional patent filing and the alternative international route through the Patent Cooperation Treaty."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0040",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00013,
+  "input": 947,
+  "model": "gpt-6-luna",
+  "output": 71,
+  "reasoning": 0,
+  "seconds": 1.38
+ }
+}

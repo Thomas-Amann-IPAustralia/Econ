@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.4e-05,
+ "data": {
+  "context": "In the 2023 report *Drivers of AI investment*, the Methodology section’s LinkedIn discussion notes limitations of the LinkedIn data: it is a one-time snapshot and a relatively small sample of Australian job postings, companies and people, and suggests longitudinal data could help examine company and employee behaviour over time."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "oce-ai-investment:0023",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000149,
+  "input": 1112,
+  "model": "gpt-6-luna",
+  "output": 76,
+  "reasoning": 0,
+  "seconds": 1.95
+ }
+}

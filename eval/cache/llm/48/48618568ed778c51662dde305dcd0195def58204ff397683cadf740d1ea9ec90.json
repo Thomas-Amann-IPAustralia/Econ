@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.9e-05,
+ "data": {
+  "context": "In *Exporter responses to shocks: The role of trade marks* (2021), the export-entry section presents Table 4, which estimates how tariffs, the real exchange rate and trade mark activity relate to firms’ likelihood of entering export product-country markets. It also reports interactions between prior trade mark activity and tariff or exchange-rate changes."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp11-exporters-trade-marks:0053",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000179,
+  "input": 1396,
+  "model": "gpt-6-luna",
+  "output": 79,
+  "reasoning": 0,
+  "seconds": 1.92
+ }
+}

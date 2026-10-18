@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.3e-05,
+ "data": {
+  "queries": [
+   "Australian patent filings technology fields fastest growth"
+  ],
+  "standalone_question": "Which technology fields are growing fastest in Australian patent filings?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-trend-9",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 4.6e-05,
+  "input": 282,
+  "model": "gpt-6-luna",
+  "output": 35,
+  "reasoning": 0,
+  "seconds": 1.77
+ }
+}

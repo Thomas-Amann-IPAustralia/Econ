@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000102,
+ "data": {
+  "context": "In the 2021 report *Exporter responses to shocks: The role of trade marks*, this passage is in the export diversification section and discusses how resource technology and medical product producers respond to exchange rate appreciations after filing trade marks in a market. The interaction is significant for resource technology producers, but not for medical product producers."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp11-exporters-trade-marks:0145",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000203,
+  "input": 868,
+  "model": "gpt-6-luna",
+  "output": 232,
+  "reasoning": 151,
+  "seconds": 2.81
+ }
+}

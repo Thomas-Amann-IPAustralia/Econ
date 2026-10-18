@@ -1,0 +1,21 @@
+{
+ "cost_usd": 4.9e-05,
+ "data": {
+  "context": "In the Australian IP Report 2023, this copyright notice identifies material protected by copyright, including the Commonwealth Coat of Arms, IP Australia’s corporate logo, and photographs of staff and premises; it states the copyright year as 2023."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2023:0000",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 9.8e-05,
+  "input": 679,
+  "model": "gpt-6-luna",
+  "output": 60,
+  "reasoning": 0,
+  "seconds": 1.56
+ }
+}

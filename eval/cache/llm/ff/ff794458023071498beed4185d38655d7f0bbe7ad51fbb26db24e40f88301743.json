@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.6e-05,
+ "data": {
+  "queries": [
+   "Australia university industry collaboration evidence business university research collaboration"
+  ],
+  "standalone_question": "How strong is university–industry collaboration in Australia, according to evidence on collaboration between Australian universities and businesses?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-evidence-6",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 5.2e-05,
+  "input": 285,
+  "model": "gpt-6-luna",
+  "output": 47,
+  "reasoning": 0,
+  "seconds": 1.24
+ }
+}

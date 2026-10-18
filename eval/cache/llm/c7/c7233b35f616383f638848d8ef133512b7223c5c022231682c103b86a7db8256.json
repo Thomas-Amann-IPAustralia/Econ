@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "context": "In *The market for design* (2014), this passage is in the section on how buyers assess design sellers and concerns “rigour” as a signal of effort and quality in Australian design services. It describes Broached Commissions’ gallery exhibitions and Crowd Productions’ use of strategic design to demonstrate rigour and encourage early involvement."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp03-market-for-design:0039",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000159,
+  "input": 1192,
+  "model": "gpt-6-luna",
+  "output": 79,
+  "reasoning": 0,
+  "seconds": 1.63
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.3e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2021, Chapter 7, “Trade Marks and Exports,” this passage summarises the Office of the Chief Economist’s 2020 analysis of Australian customs and firm microdata. It examines how trade mark activity relates to export entry, performance and exporters’ responses to exchange-rate changes and tariff reductions."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2021:0058",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000145,
+  "input": 1050,
+  "model": "gpt-6-luna",
+  "output": 80,
+  "reasoning": 0,
+  "seconds": 1.41
+ }
+}

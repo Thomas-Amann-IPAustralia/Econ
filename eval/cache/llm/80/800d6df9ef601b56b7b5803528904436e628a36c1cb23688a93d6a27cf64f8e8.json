@@ -1,0 +1,24 @@
+{
+ "cost_usd": 4.4e-05,
+ "data": {
+  "queries": [
+   "plant breeder's rights annual filing fluctuations small numbers"
+  ],
+  "standalone_question": "Why should year-to-year swings in plant breeder's rights numbers be interpreted with caution?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr26-5",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 8.9e-05,
+  "input": 677,
+  "model": "gpt-6-luna",
+  "output": 43,
+  "reasoning": 0,
+  "seconds": 1.53
+ }
+}

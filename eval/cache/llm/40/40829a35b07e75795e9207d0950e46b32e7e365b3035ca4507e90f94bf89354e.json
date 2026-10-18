@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.7e-05,
+ "data": {
+  "context": "In The market for design (2014), the section on “Rhetoric” examines how Australian design sellers share their expertise and design philosophy to signal quality and engage buyers early, despite risks from weak or absent IP protection. It discusses Crowd Productions’ design narrative and the value of revealing some design knowledge while respecting its proprietary value."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp03-market-for-design:0045",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000155,
+  "input": 1156,
+  "model": "gpt-6-luna",
+  "output": 78,
+  "reasoning": 0,
+  "seconds": 1.41
+ }
+}

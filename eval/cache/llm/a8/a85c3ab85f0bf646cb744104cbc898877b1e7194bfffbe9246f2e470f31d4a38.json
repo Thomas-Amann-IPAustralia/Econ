@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In *Drivers of AI Investment* (2023), section 4.2 on company size, the passage compares SMEs (fewer than 200 staff) and large enterprises (200 or more) in AI and general hiring, using company counts and job-ad postings. It describes differences in average ad counts and relates them to firms’ resources and ability to recruit."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "oce-ai-investment:0032",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000165,
+  "input": 1218,
+  "model": "gpt-6-luna",
+  "output": 87,
+  "reasoning": 0,
+  "seconds": 1.93
+ }
+}

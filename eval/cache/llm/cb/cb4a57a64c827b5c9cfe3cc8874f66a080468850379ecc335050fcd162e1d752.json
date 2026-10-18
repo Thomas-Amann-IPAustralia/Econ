@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.2e-05,
+ "data": {
+  "queries": [
+   "AI hiring data source"
+  ],
+  "standalone_question": "What was the source of the data on AI hiring?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "oce-ai-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 4.4e-05,
+  "input": 281,
+  "model": "gpt-6-luna",
+  "output": 32,
+  "reasoning": 0,
+  "seconds": 1.17
+ }
+}

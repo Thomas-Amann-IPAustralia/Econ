@@ -1,0 +1,24 @@
+{
+ "cost_usd": 4.1e-05,
+ "data": {
+  "queries": [
+   "Australian patent breadth trends before 2013 Raising the Bar reforms"
+  ],
+  "standalone_question": "Were broad Australian patents becoming less common before the 2013 Raising the Bar reforms?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp14-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 8.1e-05,
+  "input": 286,
+  "model": "gpt-6-luna",
+  "output": 104,
+  "reasoning": 56,
+  "seconds": 1.68
+ }
+}

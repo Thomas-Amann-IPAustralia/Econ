@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.1e-05,
+ "data": {
+  "context": "In the 2024 IP Australia Economic Research Paper 14, *Raising the Bar reforms: Measuring the impact on relative patent scope*, this section uses word-count differences for Australian patent claims compared with European and US patents to examine trends in relative scope before and after the RTB reforms, across examination request years 2000–2019. Figure 7 compares first claims and all claims; the following analysis estimates the share of Australian patents classified as relatively broader."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp14-raising-the-bar:0026",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000161,
+  "input": 1088,
+  "model": "gpt-6-luna",
+  "output": 105,
+  "reasoning": 0,
+  "seconds": 1.75
+ }
+}

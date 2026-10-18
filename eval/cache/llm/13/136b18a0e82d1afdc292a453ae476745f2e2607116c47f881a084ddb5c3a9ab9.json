@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.1e-05,
+ "data": {
+  "context": "In the “Taking IP Global: The PCT System” section of the Australian IP Report 2024, this passage explains the Patent Cooperation Treaty route for filing patent applications in Australia and reports 2023 PCT filing trends, noting that they largely reflect innovation activity from 2022 and earlier because of the filing delay."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2024:0046",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000182,
+  "input": 1125,
+  "model": "gpt-6-luna",
+  "output": 139,
+  "reasoning": 60,
+  "seconds": 2.68
+ }
+}

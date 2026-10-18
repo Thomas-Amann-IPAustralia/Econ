@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.8e-05,
+ "data": {
+  "context": "In *The structural change in patenting behaviour in Australia* (2024), the “At a glance” section summarises changes in Australian patenting from fiscal years 2002 to 2022: patent-holding SMEs grew faster than SMEs without patents, while the rate at which patent-holding firms scaled from SMEs to large firms more than halved."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "note-patenting-structural-change:0001",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000135,
+  "input": 694,
+  "model": "gpt-6-luna",
+  "output": 131,
+  "reasoning": 45,
+  "seconds": 1.83
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In the 2014 Report on patent backlogs, inventories and pendency, section 4 examines how IP Australia’s examiner numbers and patent application filings relate to inventory levels. It discusses Figure 11 and trends in applications and stock per examiner, including changes from 2000 to 2012."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp01-patent-backlogs:0014",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000164,
+  "input": 1277,
+  "model": "gpt-6-luna",
+  "output": 72,
+  "reasoning": 0,
+  "seconds": 3.45
+ }
+}

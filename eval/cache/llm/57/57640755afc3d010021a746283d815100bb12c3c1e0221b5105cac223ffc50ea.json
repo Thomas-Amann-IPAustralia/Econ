@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000318,
+ "data": {
+  "queries": [
+   "copyright economic contribution GDP value added",
+   "copyright industry output and employment"
+  ],
+  "standalone_question": "How much does copyright contribute economically to Australia?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-synthesis-11",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000318,
+  "input": 660,
+  "model": "gemini-3.5-flash-lite",
+  "output": 48,
+  "reasoning": 0,
+  "seconds": 0.91
+ }
+}

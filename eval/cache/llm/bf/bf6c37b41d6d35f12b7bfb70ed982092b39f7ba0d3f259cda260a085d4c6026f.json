@@ -1,0 +1,24 @@
+{
+ "cost_usd": 7.1e-05,
+ "data": {
+  "queries": [
+   "patent grant delays small firms commercialisation"
+  ],
+  "standalone_question": "Does slowing down the patent grant help small firms commercialise their inventions?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr24-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000141,
+  "input": 674,
+  "model": "gpt-6-luna",
+  "output": 147,
+  "reasoning": 106,
+  "seconds": 2.48
+ }
+}

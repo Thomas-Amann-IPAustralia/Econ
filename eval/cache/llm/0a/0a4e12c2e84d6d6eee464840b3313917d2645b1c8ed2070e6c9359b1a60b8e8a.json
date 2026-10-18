@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000337,
+ "data": {
+  "queries": [
+   "SME collaboration with overseas partners firm size",
+   "business size international partner collaboration micro small"
+  ],
+  "standalone_question": "Do micro businesses collaborate with overseas partners more than small businesses?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "erp15-5",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000337,
+  "input": 665,
+  "model": "gemini-3.5-flash-lite",
+  "output": 55,
+  "reasoning": 0,
+  "seconds": 0.89
+ }
+}

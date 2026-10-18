@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.000322,
+ "data": {
+  "queries": [
+   "plant breeder rights eligibility criteria distinctness uniformity stability"
+  ],
+  "standalone_question": "What criteria must a plant variety meet to qualify for plant breeder's rights?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr24-3",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000322,
+  "input": 665,
+  "model": "gemini-3.5-flash-lite",
+  "output": 49,
+  "reasoning": 0,
+  "seconds": 1.04
+ }
+}

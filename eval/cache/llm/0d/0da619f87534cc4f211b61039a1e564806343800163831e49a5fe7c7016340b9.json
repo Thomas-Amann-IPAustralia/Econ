@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.8e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2022, the section “The contribution of copyright to Australia” compares estimates of copyright-related and cultural and creative activity in Australia, including their economic contribution in 2018 and 2018–19. It explains that the PWC study used a WIPO methodology and that Figure C1 presents cultural and creative activity by value and share of GDP."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2022:0067",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000157,
+  "input": 1123,
+  "model": "gpt-6-luna",
+  "output": 89,
+  "reasoning": 0,
+  "seconds": 1.82
+ }
+}

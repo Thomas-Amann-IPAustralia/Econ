@@ -1,0 +1,24 @@
+{
+ "cost_usd": 4.3e-05,
+ "data": {
+  "queries": [
+   "patent filing likelihood by firm size"
+  ],
+  "standalone_question": "Which sizes of firm are most and least likely to file patents?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp15-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 8.6e-05,
+  "input": 673,
+  "model": "gpt-6-luna",
+  "output": 37,
+  "reasoning": 0,
+  "seconds": 1.25
+ }
+}

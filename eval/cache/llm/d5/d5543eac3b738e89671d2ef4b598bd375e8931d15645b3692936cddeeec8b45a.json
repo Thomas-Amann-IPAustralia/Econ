@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In *The Australian Mining Industry: More than Just Shovels and Being the Lucky Country* (2015), section 3.1, “Summary Data Set,” this passage describes mining patent families identified from applications with priority dates between 1 January 1994 and 31 October 2011. It explains how the dataset was assembled and compares inventions and patents per applicant across operating miners, METS firms and publicly funded entities."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp04-mining-innovation:0019",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000163,
+  "input": 1136,
+  "model": "gpt-6-luna",
+  "output": 99,
+  "reasoning": 0,
+  "seconds": 1.63
+ }
+}

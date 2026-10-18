@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In the Australian IP Report 2023 section “IP, diversity and innovation,” this passage discusses how workforce diversity relates to innovation in Australia. It previews Chapter 8’s analysis of women’s and migrants’ participation in IP-active businesses and Chapter 7’s analysis of how patenting businesses share innovation returns among workers of different occupations and backgrounds."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2023:0008",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000163,
+  "input": 922,
+  "model": "gpt-6-luna",
+  "output": 142,
+  "reasoning": 60,
+  "seconds": 2.38
+ }
+}

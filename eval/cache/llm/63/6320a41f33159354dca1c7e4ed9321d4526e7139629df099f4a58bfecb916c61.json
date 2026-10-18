@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.3e-05,
+ "data": {
+  "queries": [
+   "driverless trucks mining controversy automation employment safety"
+  ],
+  "standalone_question": "Why are driverless trucks at mine sites controversial?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp04-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 4.6e-05,
+  "input": 281,
+  "model": "gpt-6-luna",
+  "output": 35,
+  "reasoning": 0,
+  "seconds": 1.63
+ }
+}

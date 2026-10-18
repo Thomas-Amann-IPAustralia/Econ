@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.7e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2019, the Plant Breeder’s Rights section explains PBR protection and reports Australian application and registration trends over the decade to 2018. It notes that applications rose 12 per cent in 2018 while registrations fell around nine per cent, and introduces Lompet1, application 2014/167."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2019:0022",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000153,
+  "input": 1122,
+  "model": "gpt-6-luna",
+  "output": 82,
+  "reasoning": 0,
+  "seconds": 1.96
+ }
+}

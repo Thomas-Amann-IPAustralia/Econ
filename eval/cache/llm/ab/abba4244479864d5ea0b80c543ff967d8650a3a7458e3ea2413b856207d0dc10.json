@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.9e-05,
+ "data": {
+  "context": "In the Australian IP Report 2025’s design chapter, this passage discusses design filings by product and service class, focusing on 2024 growth in the high-volume “machines not elsewhere specified” class, mostly home appliances, and the increased share of filings originating from China. High-volume classes are those with applications above the 2023 mean."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2025:0070",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000138,
+  "input": 971,
+  "model": "gpt-6-luna",
+  "output": 81,
+  "reasoning": 0,
+  "seconds": 2.47
+ }
+}

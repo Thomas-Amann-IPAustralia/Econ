@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.000323,
+ "data": {
+  "queries": [
+   "leading overseas applicants design rights origin countries"
+  ],
+  "standalone_question": "Who were the leading overseas applicants for design rights in Australia in 2020?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr21-2",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000323,
+  "input": 668,
+  "model": "gemini-3.5-flash-lite",
+  "output": 49,
+  "reasoning": 0,
+  "seconds": 0.78
+ }
+}

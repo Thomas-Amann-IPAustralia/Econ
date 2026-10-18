@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7e-05,
+ "data": {
+  "context": "In the 2014 report *Report on patent backlogs, inventories and pendency*, this section explains IP Australia’s patent application process and its deferred examination system, including examination requests, opposition and grant. The preceding text distinguishes observable pendency measures from expected pendency, which the report does not produce."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp01-patent-backlogs:0008",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00014,
+  "input": 1039,
+  "model": "gpt-6-luna",
+  "output": 73,
+  "reasoning": 0,
+  "seconds": 2.6
+ }
+}

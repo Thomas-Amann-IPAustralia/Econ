@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.000345,
+ "data": {
+  "queries": [
+   "trade marks as a leading indicator of the business cycle"
+  ],
+  "standalone_question": "How does the claim that trade mark applications lead GDP turning points compare with IP Australia's analysis?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-context-2",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000345,
+  "input": 699,
+  "model": "gemini-3.5-flash-lite",
+  "output": 54,
+  "reasoning": 0,
+  "seconds": 0.81
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.4e-05,
+ "data": {
+  "context": "In the 2015 report *The Australian Mining Industry: More than Just Shovels and Being the Lucky Country*, section 3.5, “Geographic filing breadth,” this passage explains how the countries where applicants seek protection for Australian mining patent families can indicate invention value and market or competition concerns; it also cites an earlier IP Australia report on Australian inventors’ overseas filings."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp04-mining-innovation:0026",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000148,
+  "input": 1035,
+  "model": "gpt-6-luna",
+  "output": 89,
+  "reasoning": 0,
+  "seconds": 1.6
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000251,
+ "data": {
+  "queries": [
+   "standard patent applications 2013 2014 decrease",
+   "patent filings decline 2014"
+  ],
+  "standalone_question": "Why were there fewer standard patent applications in 2014 than in 2013?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr15-1",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000251,
+  "input": 246,
+  "model": "gemini-3.5-flash-lite",
+  "output": 71,
+  "reasoning": 0,
+  "seconds": 1.15
+ }
+}

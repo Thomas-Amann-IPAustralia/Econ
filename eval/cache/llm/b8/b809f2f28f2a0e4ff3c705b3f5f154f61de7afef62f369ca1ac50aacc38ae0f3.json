@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.8e-05,
+ "data": {
+  "context": "In the Australian IP Report 2023, the “Innovation wage premium” section examines how employment by patent-holding businesses relates to workers’ wages, by business size and duration of patent holding. Figure 8.2 reports estimated wage premiums for workers at patent-holding SMEs, based on comparisons with workers at non-patent-holding businesses of the same size."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2023:0110",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000157,
+  "input": 1136,
+  "model": "gpt-6-luna",
+  "output": 86,
+  "reasoning": 0,
+  "seconds": 1.76
+ }
+}

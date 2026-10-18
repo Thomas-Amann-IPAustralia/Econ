@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.000312,
+ "data": {
+  "queries": [
+   "patent landscape reports international type search"
+  ],
+  "standalone_question": "Are patent landscape reports still part of IP Australia's international type search?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr20-5",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000312,
+  "input": 665,
+  "model": "gemini-3.5-flash-lite",
+  "output": 45,
+  "reasoning": 0,
+  "seconds": 1.22
+ }
+}

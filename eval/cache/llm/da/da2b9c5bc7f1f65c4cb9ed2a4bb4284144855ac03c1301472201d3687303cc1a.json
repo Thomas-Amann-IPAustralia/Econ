@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.5e-05,
+ "data": {
+  "context": "In *Intellectual property rights, business profitability and competition in the Australian economy* (2020), Section 4.1 explains the econometric method for analysing Australian market competition. It describes dynamic panel regressions testing whether patent-, trade mark- or design-intensive industries, and industry stocks of those rights per thousand FTE employees, are associated with market concentration measured by the Herfindahl-Hirschman Index."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp10-ip-profitability-competition:0055",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00017,
+  "input": 1225,
+  "model": "gpt-6-luna",
+  "output": 95,
+  "reasoning": 0,
+  "seconds": 1.57
+ }
+}

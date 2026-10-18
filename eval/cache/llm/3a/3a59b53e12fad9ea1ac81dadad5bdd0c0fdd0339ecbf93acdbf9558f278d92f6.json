@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000247,
+ "data": {
+  "queries": [
+   "IP rights profitability loss-making firms",
+   "intellectual property and firm performance loss",
+   "trade marks patents profitability businesses"
+  ],
+  "standalone_question": "Do the findings on intellectual property rights and business profitability apply to businesses that operate at a loss?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr20-4",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000247,
+  "input": 241,
+  "model": "gemini-3.5-flash-lite",
+  "output": 70,
+  "reasoning": 0,
+  "seconds": 0.95
+ }
+}

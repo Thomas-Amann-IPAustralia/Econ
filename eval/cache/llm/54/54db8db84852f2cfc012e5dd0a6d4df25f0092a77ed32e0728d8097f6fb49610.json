@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.7e-05,
+ "data": {
+  "queries": [
+   "Australian resident patent applications 2016 total patent filings decline"
+  ],
+  "standalone_question": "Did Australian residents file more patent applications in 2016, despite a decline in total patent applications filed?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr17-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 5.3e-05,
+  "input": 288,
+  "model": "gpt-6-luna",
+  "output": 49,
+  "reasoning": 0,
+  "seconds": 1.22
+ }
+}

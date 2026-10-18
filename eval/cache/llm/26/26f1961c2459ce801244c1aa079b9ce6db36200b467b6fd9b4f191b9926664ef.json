@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5.8e-05,
+ "data": {
+  "context": "In the Australian IP Report 2025, in the Research program section, this passage describes the role of IP Australia’s Office of the Chief Economist (OCE) in producing evidence and advice on IP policy, the economic role and impact of the IP system, and IP rights administration."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2025:0095",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000117,
+  "input": 820,
+  "model": "gpt-6-luna",
+  "output": 71,
+  "reasoning": 0,
+  "seconds": 1.37
+ }
+}

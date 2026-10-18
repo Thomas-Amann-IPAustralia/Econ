@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000347,
+ "data": {
+  "queries": [
+   "productivity and wages feature chapter Australian IP Report",
+   "intellectual property rights firm productivity and wages"
+  ],
+  "standalone_question": "Is there a link between intellectual property and productivity or wages in Australian firms?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-synthesis-2",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000347,
+  "input": 664,
+  "model": "gemini-3.5-flash-lite",
+  "output": 59,
+  "reasoning": 0,
+  "seconds": 0.91
+ }
+}

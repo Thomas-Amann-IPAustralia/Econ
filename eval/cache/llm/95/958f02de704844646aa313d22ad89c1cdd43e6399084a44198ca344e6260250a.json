@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.2e-05,
+ "data": {
+  "context": "In the 2024 paper *Raising the Bar reforms: Measuring the impact on relative patent scope*, this passage in “Evaluating relative patent scope using machine learning models” explains how the authors selected a model to classify Australian patents as broader or narrower than their international pairs. They ranked models by F1 score and selected a multilayer perceptron classifier for analyses of first claims and all claims."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp14-raising-the-bar:0020",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000143,
+  "input": 970,
+  "model": "gpt-6-luna",
+  "output": 92,
+  "reasoning": 0,
+  "seconds": 1.57
+ }
+}

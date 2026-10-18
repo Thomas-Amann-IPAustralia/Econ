@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000232,
+ "data": {
+  "queries": [
+   "correlation causation IP Australia research",
+   "econometric analysis limitations causality economic paper",
+   "firm performance innovation causal relationship"
+  ],
+  "standalone_question": "Which IP Australia studies state that their findings show correlations rather than causal effects?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "multi-2",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000232,
+  "input": 239,
+  "model": "gemini-3.5-flash-lite",
+  "output": 64,
+  "reasoning": 0,
+  "seconds": 1.2
+ }
+}

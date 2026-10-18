@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.6e-05,
+ "data": {
+  "context": "In the Australian IP Report 2023, under “Use of the PCT,” this passage explains the Patent Cooperation Treaty route for filing standard patent applications in Australia, particularly by non-residents. It reports Australian PCT filings in 2022 and notes that, because applicants have 31 months to enter the national phase, growth largely reflects inventive activity from 2020 or earlier."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2023:0014",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000131,
+  "input": 853,
+  "model": "gpt-6-luna",
+  "output": 91,
+  "reasoning": 0,
+  "seconds": 1.54
+ }
+}

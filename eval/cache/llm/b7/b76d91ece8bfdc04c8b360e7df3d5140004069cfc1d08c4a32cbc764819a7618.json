@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In the Australian IP Report 2024, the “Trends in the relative scope of Australian patents” section examines machine-learning estimates of Australian patent scope relative to equivalent US and European patents, using patents with examination requested from 2000 to 2019. It describes changes after the 2012 Raising the Bar reforms took effect in 2013, including trends in broader, similar and narrower Australian patents."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2024:0033",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000165,
+  "input": 1177,
+  "model": "gpt-6-luna",
+  "output": 94,
+  "reasoning": 0,
+  "seconds": 2.58
+ }
+}

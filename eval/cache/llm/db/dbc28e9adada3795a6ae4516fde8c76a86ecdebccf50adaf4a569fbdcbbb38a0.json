@@ -1,0 +1,24 @@
+{
+ "cost_usd": 4.5e-05,
+ "data": {
+  "queries": [
+   "innovation patent applications 2020 applicant origin increase decline"
+  ],
+  "standalone_question": "What happened to innovation patent applications in 2020, and who drove the change?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr21-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 9e-05,
+  "input": 676,
+  "model": "gpt-6-luna",
+  "output": 44,
+  "reasoning": 0,
+  "seconds": 1.27
+ }
+}

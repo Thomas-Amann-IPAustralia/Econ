@@ -1,0 +1,24 @@
+{
+ "cost_usd": 4.1e-05,
+ "data": {
+  "queries": [
+   "trade marks GDP spurious relationship robustness econometric test"
+  ],
+  "standalone_question": "How did the trade mark study test whether the relationship it found between trade mark activity and GDP was spurious?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "note-tm-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 8.2e-05,
+  "input": 287,
+  "model": "gpt-6-luna",
+  "output": 107,
+  "reasoning": 56,
+  "seconds": 1.79
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2022, this section on the value of licensing through collecting societies explains how collective copyright licences reduce the costs of negotiating individual permissions and reports distributions to Australian rights holders in 2020–21. It also introduces Screenrights’ data on the use of screen programs in Australian educational institutions from 2018/19 to 2020/21."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2022:0070",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00016,
+  "input": 1158,
+  "model": "gpt-6-luna",
+  "output": 88,
+  "reasoning": 0,
+  "seconds": 1.62
+ }
+}

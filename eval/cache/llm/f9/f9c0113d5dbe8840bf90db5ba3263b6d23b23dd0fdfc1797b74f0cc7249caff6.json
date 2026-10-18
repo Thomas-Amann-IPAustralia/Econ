@@ -1,0 +1,21 @@
+{
+ "cost_usd": 4.6e-05,
+ "data": {
+  "context": "In the 2024 analytical note *The structural change in patenting behaviour in Australia*, this reference cites an IP Australia economics research paper on measuring the effect of the Raising the Bar reforms on relative patent scope."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "note-patenting-structural-change:0010",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 9.2e-05,
+  "input": 636,
+  "model": "gpt-6-luna",
+  "output": 56,
+  "reasoning": 0,
+  "seconds": 1.47
+ }
+}

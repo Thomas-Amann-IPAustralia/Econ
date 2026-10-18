@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In the Australian IP Report 2024, the section on design rights presents the domestic applicants in Figure 5.5, which compares leading domestic and international applicants for Australian design rights in 2023."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2024:0093",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000164,
+  "input": 884,
+  "model": "gpt-6-luna",
+  "output": 152,
+  "reasoning": 97,
+  "seconds": 3.55
+ }
+}

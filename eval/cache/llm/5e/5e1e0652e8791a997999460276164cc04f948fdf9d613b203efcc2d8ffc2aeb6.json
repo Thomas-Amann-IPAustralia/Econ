@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.1e-05,
+ "data": {
+  "context": "In the Australian IP Report 2026, the technology feature on Australia and the EU building battery value chains introduces an EPO Technology Insight report and case study on Australia’s shift toward circular, low-carbon battery value chains and related patent activity, including battery circularity and critical metals refinement."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0046",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000122,
+  "input": 879,
+  "model": "gpt-6-luna",
+  "output": 69,
+  "reasoning": 0,
+  "seconds": 1.9
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.7e-05,
+ "data": {
+  "context": "In the 2024 IP Australia Economic Research Paper 16, *Computer implemented inventions: patent trends at IP Australia, EPO and USPTO*, this section compares patent application counts by computer-implemented invention (CII) group at IP Australia, the EPO and the USPTO in 2001–20. It explains the CII-PSM-likely-adverse and CII-PSM-likely-clear classifications as machine-learning predictions of whether IP Australia examiners would object for lack of patentable subject matter."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp16-cii-patent-trends:0025",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000175,
+  "input": 1149,
+  "model": "gpt-6-luna",
+  "output": 120,
+  "reasoning": 0,
+  "seconds": 1.75
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.8e-05,
+ "data": {
+  "context": "In *Exporter responses to shocks: The role of trade marks* (2021), this export-revenue section presents baseline estimates for exporters with long and short export histories, relating revenue to trade mark activity, tariffs, exchange rates and demand. The table reports estimates separately by export-history length, with the analysis focusing on long-history exporters."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp11-exporters-trade-marks:0072",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000196,
+  "input": 1559,
+  "model": "gpt-6-luna",
+  "output": 81,
+  "reasoning": 0,
+  "seconds": 1.74
+ }
+}

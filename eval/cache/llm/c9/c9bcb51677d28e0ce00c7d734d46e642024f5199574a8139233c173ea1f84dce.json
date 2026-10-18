@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.4e-05,
+ "data": {
+  "context": "In the 2023 report *Drivers of AI investment*, the Limitations section explains caveats in using Australian LinkedIn job advertisements to compare AI capacity building among Australian and overseas-headquartered SMEs, including gaps in coverage of overseas hiring, outsourced AI work, and industries less represented on LinkedIn."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "oce-ai-investment:0007",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000149,
+  "input": 1132,
+  "model": "gpt-6-luna",
+  "output": 71,
+  "reasoning": 0,
+  "seconds": 2.33
+ }
+}

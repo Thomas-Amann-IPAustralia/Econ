@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.3e-05,
+ "data": {
+  "context": "In the “IP, diversity and innovation” part of the Australian IP Report 2023, this passage explains why understanding who accesses and benefits from IP tools matters for broadening participation in Australia’s innovation system and retaining potential innovators."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2023:0124",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000125,
+  "input": 785,
+  "model": "gpt-6-luna",
+  "output": 94,
+  "reasoning": 34,
+  "seconds": 3.2
+ }
+}

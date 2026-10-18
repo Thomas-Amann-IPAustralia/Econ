@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.7e-05,
+ "data": {
+  "context": "In IP Australia’s 2019 report *Designs Law and Practice*, the “Tertiary industries” section compares product-class focus across countries. This table lists values for tertiary industries, including professional, scientific and technical activities and business services, for Australia, Canada, Denmark, France, Germany, Japan, Norway, Sweden and the US."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp08-designs-law-practice:0042",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000175,
+  "input": 1344,
+  "model": "gpt-6-luna",
+  "output": 81,
+  "reasoning": 0,
+  "seconds": 2.48
+ }
+}

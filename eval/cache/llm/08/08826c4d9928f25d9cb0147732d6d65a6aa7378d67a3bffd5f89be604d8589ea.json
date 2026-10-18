@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In *The business environment of patenting firms in Australia* (2024), Table 15 examines how businesses’ shares of R&D funding from their own funds and government relate to numbers of filed, granted and retired patents. The analysis covers businesses observed in IPLORD and surveyed in BERD in selected years from 2011 to 2020."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp15-patenting-firms:0073",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000163,
+  "input": 1223,
+  "model": "gpt-6-luna",
+  "output": 82,
+  "reasoning": 0,
+  "seconds": 1.47
+ }
+}

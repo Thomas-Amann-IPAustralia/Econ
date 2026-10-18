@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000368,
+ "data": {
+  "queries": [
+   "plant breeder's rights top plant varieties species applications",
+   "common plant taxa protected by plant breeder's rights"
+  ],
+  "standalone_question": "What types of plants represent the majority of new protected plant varieties in Plant Breeder's Rights statistics?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr17-3",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000368,
+  "input": 661,
+  "model": "gemini-3.5-flash-lite",
+  "output": 68,
+  "reasoning": 0,
+  "seconds": 0.95
+ }
+}

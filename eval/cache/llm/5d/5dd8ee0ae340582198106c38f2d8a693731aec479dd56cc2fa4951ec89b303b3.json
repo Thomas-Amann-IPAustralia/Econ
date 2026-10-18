@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7e-05,
+ "data": {
+  "context": "In the Australian IP Report 2024, the Plant varieties section compares the five leading plant variety classes by Australian plant breeder’s rights (PBR) application volume in 2023, their share of applications, and changes from 2022. It highlights growth and decline across ornamentals, fruit crops, field crops and vegetable crops."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2024:0102",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00014,
+  "input": 1007,
+  "model": "gpt-6-luna",
+  "output": 79,
+  "reasoning": 0,
+  "seconds": 1.98
+ }
+}

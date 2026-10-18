@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.3e-05,
+ "data": {
+  "context": "In the Australian IP Report 2026, the section “A well-calibrated system in an interconnected world” discusses how IP settings shape cross-border innovation, competition and coordination. It highlights new IP Australia research on how patent policy can influence technological competition beyond Australia, and how an internationally aligned IP system supports investment and participation in global markets."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0007",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000127,
+  "input": 867,
+  "model": "gpt-6-luna",
+  "output": 80,
+  "reasoning": 0,
+  "seconds": 1.67
+ }
+}

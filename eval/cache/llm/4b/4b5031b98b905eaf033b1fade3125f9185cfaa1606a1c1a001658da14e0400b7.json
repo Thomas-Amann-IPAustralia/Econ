@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2020, the digital economy section compares ICT-related patent applications filed at IP Australia by countries of origin in 2005–08 and 2015–18. The table shows application numbers and ICT patenting intensity, meaning each country’s ICT-related patents as a percentage of its total applications."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2020:0037",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000164,
+  "input": 1254,
+  "model": "gpt-6-luna",
+  "output": 78,
+  "reasoning": 0,
+  "seconds": 1.65
+ }
+}

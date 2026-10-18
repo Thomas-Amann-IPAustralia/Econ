@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.1e-05,
+ "data": {
+  "context": "In the 2021 Economic Research Paper *Exporter Responses to Shocks: The Role of Trade Marks*, this export revenue section examines how firms’ recent destination-country trade mark filings shape responses to home exchange rate appreciations. It reports that revenue responses shift from decreases before filing to increases after filing, based on estimates in Table 8 and Figure 5."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp11-exporters-trade-marks:0077",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000161,
+  "input": 1193,
+  "model": "gpt-6-luna",
+  "output": 83,
+  "reasoning": 0,
+  "seconds": 1.75
+ }
+}

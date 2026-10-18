@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.3e-05,
+ "data": {
+  "context": "In the 2024 report *Computer Implemented Inventions: Patent Trends at IP Australia, EPO and USPTO*, this passage describes the analysis of whether past IP Australia computer-implemented invention patent applicants later file more applications of the same type. It compares 2001–2020 and 2010–2019 periods, examining CII applications and applications classified as likely adverse under PSM."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp16-cii-patent-trends:0074",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000147,
+  "input": 1004,
+  "model": "gpt-6-luna",
+  "output": 93,
+  "reasoning": 0,
+  "seconds": 1.44
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In the 2023 report *Drivers of AI investment*, the executive summary describes an analysis of AI adoption and technology transfer in Australian industries and the relationship with IP and innovation. It uses LinkedIn hiring data to compare firms hiring for AI-related roles with general-hiring firms, and Lens patent records to examine links with past patenting."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "oce-ai-investment:0001",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000163,
+  "input": 1235,
+  "model": "gpt-6-luna",
+  "output": 79,
+  "reasoning": 0,
+  "seconds": 2.0
+ }
+}

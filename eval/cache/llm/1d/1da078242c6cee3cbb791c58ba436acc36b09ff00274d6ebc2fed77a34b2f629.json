@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.7e-05,
+ "data": {
+  "context": "In the “Defining Stocks” section of IP Australia’s 2014 Report on patent backlogs, inventories and pendency, this passage recommends recording inbound and outbound correspondence to distinguish applications awaiting action by the office from those awaiting action by applicants. It notes that existing administrative data do not show when applications are sent between them."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp01-patent-backlogs:0006",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000133,
+  "input": 943,
+  "model": "gpt-6-luna",
+  "output": 77,
+  "reasoning": 0,
+  "seconds": 2.98
+ }
+}

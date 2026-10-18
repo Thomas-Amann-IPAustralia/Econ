@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2022, the plant breeder’s rights (PBR) applications and registrations section reports that registrations fell in 2021 for both Australian residents and non-residents, following a discussion of possible COVID-19 and bushfire-related factors."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2022:0056",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00012,
+  "input": 872,
+  "model": "gpt-6-luna",
+  "output": 66,
+  "reasoning": 0,
+  "seconds": 1.4
+ }
+}

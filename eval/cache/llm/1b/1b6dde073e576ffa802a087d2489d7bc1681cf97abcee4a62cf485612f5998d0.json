@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.000338,
+ "data": {
+  "queries": [
+   "plant breeder rights foreign applicants origin countries 2015"
+  ],
+  "standalone_question": "Where did foreign plant breeder's rights registrants come from in 2015?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr16-5",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000338,
+  "input": 669,
+  "model": "gemini-3.5-flash-lite",
+  "output": 55,
+  "reasoning": 0,
+  "seconds": 1.09
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000213,
+ "data": {
+  "queries": [
+   "innovation patent statistics filings",
+   "innovation patent phasing out review",
+   "Australian IP report innovation patents"
+  ],
+  "standalone_question": "What has happened to the innovation patent over the years?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-trend-10",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000213,
+  "input": 234,
+  "model": "gemini-3.5-flash-lite",
+  "output": 57,
+  "reasoning": 0,
+  "seconds": 1.0
+ }
+}

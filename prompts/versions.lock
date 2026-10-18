@@ -8,5 +8,10 @@
     "schema": "plan",
     "schema_sha256": "ab394bace1984c1e",
     "sha256": "33e99566ddb80c3d"
+  },
+  "plan-v2": {
+    "schema": "plan",
+    "schema_sha256": "ab394bace1984c1e",
+    "sha256": "50ae3b3a64aaa983"
   }
 }

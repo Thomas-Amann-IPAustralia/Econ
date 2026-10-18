@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5.3e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2017, the trade marks section identifies where Australian applicants sought overseas trade mark protection in 2015, by number of classes claimed: the United States, China, New Zealand, the EU and Singapore."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2017:0016",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000107,
+  "input": 775,
+  "model": "gpt-6-luna",
+  "output": 60,
+  "reasoning": 0,
+  "seconds": 1.39
+ }
+}

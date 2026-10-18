@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.8e-05,
+ "data": {
+  "context": "In the 2021 report *Exporter responses to shocks: The role of trade marks*, this passage presents descriptive statistics on Australian firms’ export participation, entry and exit by trade mark filing status, firm size and destination market. It compares annual averages from 2005 to 2017 for exports to the US, Canada, UK and Germany."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp11-exporters-trade-marks:0038",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000157,
+  "input": 1164,
+  "model": "gpt-6-luna",
+  "output": 81,
+  "reasoning": 0,
+  "seconds": 1.57
+ }
+}

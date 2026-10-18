@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.5e-05,
+ "data": {
+  "context": "In the 2025 analytic note *Evaluating Trade Marks as a Leading Economic Indicator of the Australian Business Cycle*, the section on filing trends and recessions describes Australian trade mark application fluctuations during the early 1990s recession, the 2008 Global Financial Crisis and the Covid-19 pandemic, including the 2020–2021 filing boom. Figure 1 shows quarterly application volumes from Q1 1970 to Q2 2023."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "note-tm-leading-indicator:0007",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00013,
+  "input": 774,
+  "model": "gpt-6-luna",
+  "output": 105,
+  "reasoning": 0,
+  "seconds": 2.01
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.5e-05,
+ "data": {
+  "context": "In the “Domestic leaders” section of the Australian IP Report 2026, this passage describes domestic lead filers’ design applications in 2025, which were concentrated in clothing, furnishings and other household goods amid above-average household spending growth in clothing and household furnishings in 2024 and 2025."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0094",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00017,
+  "input": 900,
+  "model": "gpt-6-luna",
+  "output": 161,
+  "reasoning": 85,
+  "seconds": 2.01
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "cost_usd": 4.9e-05,
+ "data": {
+  "queries": [
+   "Australian resident PBR applications decline 2018 2022 causes",
+   "plant breeder's rights applications Australian applicants trends 2018 2022",
+   "Australian IP Report PBR applications COVID-19 agricultural varieties"
+  ],
+  "standalone_question": "What factors explain the decline in plant breeder’s rights (PBR) applications filed by Australian applicants between 2018 and 2022?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr25-5",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 9.8e-05,
+  "input": 290,
+  "model": "gpt-6-luna",
+  "output": 138,
+  "reasoning": 51,
+  "seconds": 1.83
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000103,
+ "data": {
+  "context": "In the 2021 paper *Exporter responses to shocks: The role of trade marks*, this section presents Table 15, comparing how tariffs and exchange rates relate to export diversification among Australian SMEs and large firms, with results also separated by export history and trade mark activity."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp11-exporters-trade-marks:0112",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000206,
+  "input": 1717,
+  "model": "gpt-6-luna",
+  "output": 68,
+  "reasoning": 0,
+  "seconds": 1.49
+ }
+}

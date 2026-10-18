@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5.3e-05,
+ "data": {
+  "context": "In the Australian IP Report 2026 section on patent-related productivity, this passage compares effects across industries. It says patent-associated gains in total factor productivity and labour productivity are most pronounced in different sectors."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0021",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000106,
+  "input": 800,
+  "model": "gpt-6-luna",
+  "output": 52,
+  "reasoning": 0,
+  "seconds": 1.28
+ }
+}

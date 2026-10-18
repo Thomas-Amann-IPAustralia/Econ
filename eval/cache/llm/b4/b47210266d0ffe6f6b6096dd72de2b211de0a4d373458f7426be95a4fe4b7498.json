@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000355,
+ "data": {
+  "queries": [
+   "concentration of intellectual property filings by top applicants",
+   "heavy users and portfolio size distribution across rights"
+  ],
+  "standalone_question": "Do a small number of heavy users account for much of the demand for intellectual property rights?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr16-3",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000355,
+  "input": 667,
+  "model": "gemini-3.5-flash-lite",
+  "output": 62,
+  "reasoning": 0,
+  "seconds": 0.97
+ }
+}

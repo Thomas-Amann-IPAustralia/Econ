@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9e-05,
+ "data": {
+  "context": "In the 2024 analytic note *The structural change in patenting behaviour in Australia*, under “Why did the scale-up rate fall?”, this passage discusses possible influences on the declining rate at which Australian patent-holding SMEs become large firms, including economic conditions, venture capital and patent policy, with reference to US studies."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "note-patenting-structural-change:0007",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00018,
+  "input": 975,
+  "model": "gpt-6-luna",
+  "output": 165,
+  "reasoning": 87,
+  "seconds": 2.07
+ }
+}

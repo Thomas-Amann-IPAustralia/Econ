@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.00012,
+ "data": {
+  "context": "In the 2020 report *Intellectual Property Rights, Business Profitability and Competition in the Australian Economy*, Appendix E’s descriptive statistics table summarizes business profitability and IP-rights ownership and stocks, including patents, trade marks and designs, in a dataset covering 2001–02 to 2015–16."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp10-ip-profitability-competition:0092",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00024,
+  "input": 1553,
+  "model": "gpt-6-luna",
+  "output": 169,
+  "reasoning": 92,
+  "seconds": 3.2
+ }
+}

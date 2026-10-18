@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000368,
+ "data": {
+  "queries": [
+   "computer-implemented invention patents foreign applicants filing trends",
+   "software patent applications following 2014 court decisions"
+  ],
+  "standalone_question": "Did the 2014 court rulings put foreign applicants off filing software patents in Australia?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "erp16-2",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000368,
+  "input": 669,
+  "model": "gemini-3.5-flash-lite",
+  "output": 67,
+  "reasoning": 0,
+  "seconds": 1.09
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9e-05,
+ "data": {
+  "context": "In the 2024 IP Australia Economic Research Paper 16, *Computer implemented inventions: patent trends at IP Australia, EPO and USPTO*, this passage in “Number of CII patent applications” discusses Figure 9’s 2010–17 grant proportions for computer-implemented invention patent applications across IPA, EPO and USPTO, including trends around the 2014 court decision and differences between likely-adverse, likely-clear and non-CII groups."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp16-cii-patent-trends:0038",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00018,
+  "input": 1274,
+  "model": "gpt-6-luna",
+  "output": 105,
+  "reasoning": 0,
+  "seconds": 1.47
+ }
+}

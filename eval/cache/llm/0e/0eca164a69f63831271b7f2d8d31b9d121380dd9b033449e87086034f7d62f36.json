@@ -1,0 +1,25 @@
+{
+ "cost_usd": 4e-05,
+ "data": {
+  "queries": [
+   "computer-implemented inventions patent application outcomes Australia Europe United States",
+   "computer-implemented invention patent grant rates examination outcomes IP Australia EPO USPTO"
+  ],
+  "standalone_question": "How do the outcomes for computer-implemented invention patent applications at IP Australia compare with those in Europe and the United States?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-compare-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 8e-05,
+  "input": 291,
+  "model": "gpt-6-luna",
+  "output": 101,
+  "reasoning": 31,
+  "seconds": 1.78
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 4.9e-05,
+ "data": {
+  "context": "In the introduction to the Australian Intellectual Property Report 2021, this passage gives the Office of the Chief Economist’s email and Twitter contact details."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2021:0003",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 9.9e-05,
+  "input": 782,
+  "model": "gpt-6-luna",
+  "output": 41,
+  "reasoning": 0,
+  "seconds": 1.23
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.8e-05,
+ "data": {
+  "context": "In the Australian IP Report 2026 section “Trade and filings trends reveal value chain upgrading,” this passage compares growth in Chinese exports to Australia with Chinese-origin Australian trade mark filings from 2017 to 2024, including filing intensity and trends in the US and Japan."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0075",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000156,
+  "input": 857,
+  "model": "gpt-6-luna",
+  "output": 141,
+  "reasoning": 72,
+  "seconds": 1.78
+ }
+}

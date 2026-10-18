@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.8e-05,
+ "data": {
+  "context": "In the Australian IP Report 2020, Chapter 7 on IP rights, business profitability and market competition, these notes define the patent scope, firm-level BLADE data and IP-rights ownership used in the analysis of Australian businesses from 2001–02 to 2015–16."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2020:0071",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000176,
+  "input": 1037,
+  "model": "gpt-6-luna",
+  "output": 144,
+  "reasoning": 70,
+  "seconds": 2.37
+ }
+}

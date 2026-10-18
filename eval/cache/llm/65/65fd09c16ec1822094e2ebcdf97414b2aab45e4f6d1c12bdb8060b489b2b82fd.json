@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.000143,
+ "data": {
+  "queries": [
+   "Patent Analytics Hub role function purpose"
+  ],
+  "standalone_question": "What is the function and purpose of the Patent Analytics Hub?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr16-4",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000143,
+  "input": 235,
+  "model": "gemini-3.5-flash-lite",
+  "output": 29,
+  "reasoning": 0,
+  "seconds": 0.84
+ }
+}

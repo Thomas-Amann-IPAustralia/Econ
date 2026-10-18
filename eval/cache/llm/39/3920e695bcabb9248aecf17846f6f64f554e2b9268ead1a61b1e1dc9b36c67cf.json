@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.7e-05,
+ "data": {
+  "context": "In the “Australian IP Report 2024,” the “At a glance” section of the chapter on collaboration, commercialisation and patenting in Australia summarises findings on SMEs, young firms, patents and innovation. It covers Australian firms’ patenting, R&D and commercialisation, including links between patent grants, collaboration and startup connections with universities."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2024:0017",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000134,
+  "input": 932,
+  "model": "gpt-6-luna",
+  "output": 82,
+  "reasoning": 0,
+  "seconds": 1.71
+ }
+}

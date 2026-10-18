@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.3e-05,
+ "data": {
+  "context": "In the conclusion of *Designs Law and Practice* (2019), this passage summarises the joint IPRIA–IP Australia study of design activity in Australia and its international peers, produced as input to IP Australia’s Designs Review Project. Figure 8 compares countries by whether their design systems use substantive or non-substantive examination."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp08-designs-law-practice:0049",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000127,
+  "input": 866,
+  "model": "gpt-6-luna",
+  "output": 80,
+  "reasoning": 0,
+  "seconds": 1.7
+ }
+}

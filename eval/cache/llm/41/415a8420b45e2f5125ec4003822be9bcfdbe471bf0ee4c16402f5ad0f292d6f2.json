@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.6e-05,
+ "data": {
+  "context": "In the Australian IP Report 2026, the PerkyPod case study discusses managing business risk and planning for growth. Australian innovator Louise Burr describes making self-draining pots in Australia and securing IP rights for their design to support future partnerships and investment."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0026",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000191,
+  "input": 827,
+  "model": "gpt-6-luna",
+  "output": 216,
+  "reasoning": 151,
+  "seconds": 3.04
+ }
+}

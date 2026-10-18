@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.4e-05,
+ "data": {
+  "context": "In the 2014 Report on patent backlogs, inventories and pendency, this section examines patent application inventories by International Patent Classification, focusing on class B (Performing Operations; Transporting). It describes changes in the class B stocks from 2005 onward, including how increases in Stock 1 relate to later increases in Stocks 2 and 3."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp01-patent-backlogs:0028",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000149,
+  "input": 1069,
+  "model": "gpt-6-luna",
+  "output": 84,
+  "reasoning": 0,
+  "seconds": 1.95
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6e-05,
+ "data": {
+  "context": "In the 2024 *The structural change in patenting behaviour in Australia* analytic note, the About the study section describes the data and definitions used to examine patenting behaviour. The study uses Australian BLADE and IPLORD data for active businesses from fiscal years 2002–2022, defining SMEs as firms with 1–199 FTE employees and large firms as those with 200 or more."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "note-patenting-structural-change:0002",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000119,
+  "input": 696,
+  "model": "gpt-6-luna",
+  "output": 98,
+  "reasoning": 0,
+  "seconds": 1.67
+ }
+}

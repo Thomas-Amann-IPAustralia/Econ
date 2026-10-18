@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In the 2023 report *Drivers of AI Investment*, Appendix 1B presents the mapping used to group LinkedIn industry names into Australian and New Zealand Standard Industrial Classification 2006 (ANZSIC06) divisions. Table S2 lists the LinkedIn-to-ANZSIC06 matches."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "oce-ai-investment:0076",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000163,
+  "input": 1269,
+  "model": "gpt-6-luna",
+  "output": 72,
+  "reasoning": 0,
+  "seconds": 2.3
+ }
+}

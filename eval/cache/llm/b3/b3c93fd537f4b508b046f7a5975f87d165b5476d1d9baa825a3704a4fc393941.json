@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.4e-05,
+ "data": {
+  "queries": [
+   "ICT-related design applications in Australia by country of applicant"
+  ],
+  "standalone_question": "Which country files the most ICT-related design applications in Australia?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr20-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 4.8e-05,
+  "input": 283,
+  "model": "gpt-6-luna",
+  "output": 39,
+  "reasoning": 0,
+  "seconds": 1.16
+ }
+}

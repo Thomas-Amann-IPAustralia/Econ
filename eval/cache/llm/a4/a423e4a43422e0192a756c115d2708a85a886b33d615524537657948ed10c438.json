@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.7e-05,
+ "data": {
+  "context": "In the 2024 report *Computer Implemented Inventions: Patent Trends at IP Australia, EPO and USPTO*, Appendix Table A2 reports annual IP Australia (IPA) patent application counts for 2001–2020 by computer-implemented invention (CII) group: machine-learning-classified likely-clear and likely-adverse applications, non-CII applications, and totals."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp16-cii-patent-trends:0101",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000193,
+  "input": 1485,
+  "model": "gpt-6-luna",
+  "output": 89,
+  "reasoning": 0,
+  "seconds": 1.41
+ }
+}

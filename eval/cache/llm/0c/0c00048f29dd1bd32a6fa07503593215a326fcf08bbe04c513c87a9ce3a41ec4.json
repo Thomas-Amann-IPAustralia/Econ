@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.00022,
+ "data": {
+  "queries": [
+   "global financial crisis design filings",
+   "designs tech gadgets 2008 economic downturn"
+  ],
+  "standalone_question": "Did the 2008 financial crisis impact design filings for technology gadgets?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr20-2",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00022,
+  "input": 241,
+  "model": "gemini-3.5-flash-lite",
+  "output": 59,
+  "reasoning": 0,
+  "seconds": 0.9
+ }
+}

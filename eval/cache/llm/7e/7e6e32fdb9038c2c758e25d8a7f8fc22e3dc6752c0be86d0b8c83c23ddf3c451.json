@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "context": "In *Raising the Bar reforms: Measuring the impact on relative patent scope* (2024), this table reports machine-learning classifier F1 scores for predicting patent scope on data held out by examination request year, IP Australia exam section, or IPC code. It summarises 30 random repetitions and discusses how well the model predicts beyond its training data."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp14-raising-the-bar:0060",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000159,
+  "input": 1184,
+  "model": "gpt-6-luna",
+  "output": 82,
+  "reasoning": 0,
+  "seconds": 1.84
+ }
+}

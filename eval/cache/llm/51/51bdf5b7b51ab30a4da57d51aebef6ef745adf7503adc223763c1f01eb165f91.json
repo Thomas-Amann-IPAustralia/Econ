@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000346,
+ "data": {
+  "queries": [
+   "patent filing rates by small medium and large enterprises",
+   "propensity of SMEs versus large firms to patent"
+  ],
+  "standalone_question": "Which sizes of firm are most and least likely to file patents?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "erp15-3",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000346,
+  "input": 663,
+  "model": "gemini-3.5-flash-lite",
+  "output": 59,
+  "reasoning": 0,
+  "seconds": 0.99
+ }
+}

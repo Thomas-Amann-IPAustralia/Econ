@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.000322,
+ "data": {
+  "queries": [
+   "top design applicants filing statistics 2018"
+  ],
+  "standalone_question": "Who filed the most design applications in Australia in 2018?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr19-3",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000322,
+  "input": 665,
+  "model": "gemini-3.5-flash-lite",
+  "output": 49,
+  "reasoning": 0,
+  "seconds": 0.73
+ }
+}

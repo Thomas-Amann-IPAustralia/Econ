@@ -1,0 +1,21 @@
+{
+ "cost_usd": 4.6e-05,
+ "data": {
+  "context": "In the 2025 analytical note *Evaluating Trade Marks as a Leading Economic Indicator of the Australian Business Cycle*, this opening section introduces the study of whether Australian trade mark activity can help predict changes in the country’s business cycle."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "note-tm-leading-indicator:0000",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 9.2e-05,
+  "input": 632,
+  "model": "gpt-6-luna",
+  "output": 58,
+  "reasoning": 0,
+  "seconds": 9.44
+ }
+}

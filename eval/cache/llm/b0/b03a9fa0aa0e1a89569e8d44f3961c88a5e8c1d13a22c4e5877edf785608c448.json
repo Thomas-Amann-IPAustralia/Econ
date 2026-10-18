@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8e-05,
+ "data": {
+  "context": "In the Australian IP Report 2025 section on design rights, this passage describes lead domestic design filers in Australia in 2024. It notes that Schneider Electric Australia, Phoenix Industries and Systems IP had previously ranked among the top two domestic filers in 2022 or 2023."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2025:0072",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00016,
+  "input": 862,
+  "model": "gpt-6-luna",
+  "output": 148,
+  "reasoning": 75,
+  "seconds": 2.35
+ }
+}

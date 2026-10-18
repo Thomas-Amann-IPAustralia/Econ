@@ -1,0 +1,24 @@
+{
+ "cost_usd": 3.4e-05,
+ "data": {
+  "queries": [
+   "Australian provisional patent applications trend over time"
+  ],
+  "standalone_question": "How has the use of provisional patent applications in Australia changed over time?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-trend-5",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 6.9e-05,
+  "input": 281,
+  "model": "gpt-6-luna",
+  "output": 82,
+  "reasoning": 42,
+  "seconds": 1.61
+ }
+}

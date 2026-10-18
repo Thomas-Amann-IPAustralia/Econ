@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.1e-05,
+ "data": {
+  "context": "In the Australian IP Report 2023, the copyright section’s “Consumption of online copyright content” topic describes Australians’ online consumption of music, films, TV, video games and live sport, using the annual Consumer Survey on Online Copyright Infringement. It reports the 2022 findings and trends from 2015 to 2022, counting both lawful and unlawful consumption."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2023:0081",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000141,
+  "input": 967,
+  "model": "gpt-6-luna",
+  "output": 89,
+  "reasoning": 0,
+  "seconds": 1.78
+ }
+}

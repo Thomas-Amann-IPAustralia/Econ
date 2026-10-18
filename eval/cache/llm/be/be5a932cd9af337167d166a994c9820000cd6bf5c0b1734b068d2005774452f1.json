@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.6e-05,
+ "data": {
+  "queries": [
+   "Australian IP Report scope excludes copyright who administers copyright Australia"
+  ],
+  "standalone_question": "Why does the Australian IP Report not cover copyright, and which agency administers copyright in Australia?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr18-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 5.2e-05,
+  "input": 285,
+  "model": "gpt-6-luna",
+  "output": 47,
+  "reasoning": 0,
+  "seconds": 1.19
+ }
+}

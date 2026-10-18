@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.5e-05,
+ "data": {
+  "context": "In *The business environment of patenting firms in Australia* (2024), Table 12 in the collaboration landscape reports OLS regression estimates relating firms’ number of collaboration partners and business characteristics to counts of filed, granted and retired patents. The analysis covers businesses in IPLORD and surveyed in BCS since 2011; the preceding text says it finds no statistically significant relationship between collaborator number or type and patent-system engagement."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp15-patenting-firms:0064",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00017,
+  "input": 1211,
+  "model": "gpt-6-luna",
+  "output": 97,
+  "reasoning": 0,
+  "seconds": 1.8
+ }
+}

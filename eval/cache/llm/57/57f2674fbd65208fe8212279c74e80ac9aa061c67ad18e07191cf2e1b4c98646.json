@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000204,
+ "data": {
+  "queries": [
+   "economic shocks uncertainty intellectual property firms",
+   "IP resilience economic downturn crisis firms"
+  ],
+  "standalone_question": "How does intellectual property help firms deal with economic shocks and uncertainty?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-synthesis-7",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000204,
+  "input": 237,
+  "model": "gemini-3.5-flash-lite",
+  "output": 53,
+  "reasoning": 0,
+  "seconds": 0.95
+ }
+}

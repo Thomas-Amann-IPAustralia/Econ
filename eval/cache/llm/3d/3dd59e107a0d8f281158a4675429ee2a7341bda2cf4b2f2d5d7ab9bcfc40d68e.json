@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.4e-05,
+ "data": {
+  "queries": [
+   "design protection eligibility new and distinctive visual appearance product"
+  ],
+  "standalone_question": "What characteristics must a product’s appearance have to qualify for design protection in Australia?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr26-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 4.9e-05,
+  "input": 282,
+  "model": "gpt-6-luna",
+  "output": 42,
+  "reasoning": 0,
+  "seconds": 1.35
+ }
+}

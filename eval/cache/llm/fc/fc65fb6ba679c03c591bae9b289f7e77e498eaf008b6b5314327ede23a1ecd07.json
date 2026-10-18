@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000118,
+ "data": {
+  "queries": [
+   "standard patent filings applicants country of origin resident share",
+   "SME registration subsequent firm growth employment productivity",
+   "rights profitability competition effects market power empirical"
+  ],
+  "standalone_question": "Does IP Australia’s research support the briefing’s claims that Australian residents file only a small minority of standard patent applications, small businesses grow faster after registering IP, and IP rights have no measurable effect on market competition?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-context-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000236,
+  "input": 727,
+  "model": "gpt-6-luna",
+  "output": 327,
+  "reasoning": 240,
+  "seconds": 3.44
+ }
+}

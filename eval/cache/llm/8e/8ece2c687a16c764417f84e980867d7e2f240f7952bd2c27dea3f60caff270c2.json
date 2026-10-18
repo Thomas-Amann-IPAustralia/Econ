@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.1e-05,
+ "data": {
+  "context": "In the Australian IP Report 2026, the IP RAPID section describes IP Australia’s open-data services for Australian IP filings. It explains that IP RAPID is refreshed weekly and lets users explore more than 100 years of IP rights data, including classifications, links between Australian and international rights, and transfers between parties."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0129",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000121,
+  "input": 833,
+  "model": "gpt-6-luna",
+  "output": 76,
+  "reasoning": 0,
+  "seconds": 1.49
+ }
+}

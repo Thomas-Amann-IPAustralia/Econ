@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6e-05,
+ "data": {
+  "context": "In the conclusion of the Australian Intellectual Property Report 2018, this passage summarises two related studies of collaborative research grants and patent productivity. It describes how grant magnitude and public funding availability relate to patent applications and commercialisation by Australian research organisations and collaborating businesses, alongside the importance of recipients’ prior patenting experience."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2018:0029",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00012,
+  "input": 829,
+  "model": "gpt-6-luna",
+  "output": 75,
+  "reasoning": 0,
+  "seconds": 1.9
+ }
+}

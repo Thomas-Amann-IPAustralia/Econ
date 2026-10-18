@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.9e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2020, the digital economy section compares countries’ ICT-related patent filings in Australia. It explains patent ICT-intensity—the share of each country’s Australian patent filings that were ICT-related—and discusses the Republic of Korea’s, the US’s, China’s and Australia’s rankings for 2015–18, with an earlier comparison to 2005–08."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2020:0038",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000178,
+  "input": 1321,
+  "model": "gpt-6-luna",
+  "output": 91,
+  "reasoning": 0,
+  "seconds": 1.94
+ }
+}

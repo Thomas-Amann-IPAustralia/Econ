@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000351,
+ "data": {
+  "queries": [
+   "directed examination patent applicant consequences",
+   "frequency of examiner directed patent examination"
+  ],
+  "standalone_question": "What happens when IP Australia directs a patent applicant to request examination, and how often does it do so?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "erp01-2",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000351,
+  "input": 671,
+  "model": "gemini-3.5-flash-lite",
+  "output": 60,
+  "reasoning": 0,
+  "seconds": 1.82
+ }
+}

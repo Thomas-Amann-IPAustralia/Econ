@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.00032,
+ "data": {
+  "queries": [
+   "gender gap in patenting female inventors"
+  ],
+  "standalone_question": "What do the reports say about the gender gap in patenting and diversity in innovation?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-synthesis-6",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00032,
+  "input": 667,
+  "model": "gemini-3.5-flash-lite",
+  "output": 48,
+  "reasoning": 0,
+  "seconds": 0.81
+ }
+}

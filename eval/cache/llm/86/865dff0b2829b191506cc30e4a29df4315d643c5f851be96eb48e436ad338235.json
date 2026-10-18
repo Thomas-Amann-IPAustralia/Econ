@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In the 2024 IP Australia Economic Research Paper *Raising the Bar reforms: Measuring the impact on relative patent scope*, this table tests whether estimated effects of the Raising the Bar reforms on the likelihood that an Australian patent is broader than its comparator vary across 2000–19, 2005–19 and 2010–19 time windows. The estimates use machine-learning predictions of claim scope for Australian–European and Australian–US patent pairs."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp14-raising-the-bar:0067",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000163,
+  "input": 1120,
+  "model": "gpt-6-luna",
+  "output": 103,
+  "reasoning": 0,
+  "seconds": 1.74
+ }
+}

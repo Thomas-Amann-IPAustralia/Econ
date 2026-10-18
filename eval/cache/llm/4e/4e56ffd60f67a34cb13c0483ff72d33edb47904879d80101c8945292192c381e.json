@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000209,
+ "data": {
+  "queries": [
+   "Raising the Bar reforms patent scope",
+   "Australian patents broader than overseas equivalents",
+   "Raising the Bar patent breadth impact"
+  ],
+  "standalone_question": "By how much did the Raising the Bar reforms reduce the chance of Australian patents being broader than overseas equivalents?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr24-2",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000209,
+  "input": 246,
+  "model": "gemini-3.5-flash-lite",
+  "output": 54,
+  "reasoning": 0,
+  "seconds": 0.87
+ }
+}

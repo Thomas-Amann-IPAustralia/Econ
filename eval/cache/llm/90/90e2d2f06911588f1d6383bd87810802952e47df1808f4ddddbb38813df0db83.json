@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.2e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2017, Box 3 in the Research Program section introduces IP NOVA, IP Australia’s free online tool for exploring patent, trade mark and plant breeder’s right registries, which are updated weekly. It describes searches by location, applicant, terms and technology class, plus trend statistics and downloads."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2017:0038",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000124,
+  "input": 831,
+  "model": "gpt-6-luna",
+  "output": 82,
+  "reasoning": 0,
+  "seconds": 1.56
+ }
+}

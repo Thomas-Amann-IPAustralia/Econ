@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5.6e-05,
+ "data": {
+  "context": "In the IP and innovation policy section of the Australian Intellectual Property Report 2016, this passage describes IPGOLD, a weekly automated update of IP Australia's IP data, and contrasts it with IPGOD 2016 as an annual snapshot. It notes that both datasets were updated and made available on data.gov.au."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2016:0029",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000111,
+  "input": 725,
+  "model": "gpt-6-luna",
+  "output": 78,
+  "reasoning": 0,
+  "seconds": 1.63
+ }
+}

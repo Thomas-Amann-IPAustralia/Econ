@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000184,
+ "data": {
+  "queries": [
+   "patent holding small firms firm growth",
+   "small firms scaling up patents",
+   "firm size dynamics innovation IP Australia"
+  ],
+  "standalone_question": "Why are fewer patent-holding small firms growing into large firms?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-synthesis-3",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000184,
+  "input": 238,
+  "model": "gemini-3.5-flash-lite",
+  "output": 45,
+  "reasoning": 0,
+  "seconds": 0.91
+ }
+}

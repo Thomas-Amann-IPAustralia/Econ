@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.8e-05,
+ "data": {
+  "context": "In the “Retaining quality workers” section of the *Australian IP Report 2023*, this passage reports economic modelling of worker retention in Australian patent-holding businesses: workers employed in 2018 were more likely to remain in their primary job with the same business in 2019, particularly those in the lowest-skill occupations."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2023:0115",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000137,
+  "input": 977,
+  "model": "gpt-6-luna",
+  "output": 79,
+  "reasoning": 0,
+  "seconds": 1.45
+ }
+}

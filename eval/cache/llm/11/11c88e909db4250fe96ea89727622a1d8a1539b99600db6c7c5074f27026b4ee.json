@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000104,
+ "data": {
+  "context": "In the Australian IP Report 2024’s Office of the Chief Economist section, this passage outlines the OCE’s research program and 2024 priorities: measuring patent scope and quality, studying the economic effects of patent timing, and comparing computer-implemented patent outcomes across jurisdictions."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2024:0122",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000208,
+  "input": 1201,
+  "model": "gpt-6-luna",
+  "output": 175,
+  "reasoning": 106,
+  "seconds": 2.1
+ }
+}

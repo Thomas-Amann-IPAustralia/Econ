@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.3e-05,
+ "data": {
+  "context": "In *The market for design* (2014), in the section on contests as a way for buyers to induce sellers to reveal information, this passage describes Denton Corker Marshall’s view that winning design competitions matters to the firm’s success and that it has developed skills for designing quickly and efficiently to win them."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp03-market-for-design:0062",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000126,
+  "input": 888,
+  "model": "gpt-6-luna",
+  "output": 75,
+  "reasoning": 0,
+  "seconds": 1.65
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000111,
+ "data": {
+  "context": "In *The business environment of patenting firms in Australia* (2024), section 4.1.2 on regression analysis, Table 5 reports pooled, random-effects and fixed-effects estimates of firms’ probability of filing patents, including results by firm size, industry and Australian state."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp15-patenting-firms:0032",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000221,
+  "input": 1349,
+  "model": "gpt-6-luna",
+  "output": 173,
+  "reasoning": 101,
+  "seconds": 2.22
+ }
+}

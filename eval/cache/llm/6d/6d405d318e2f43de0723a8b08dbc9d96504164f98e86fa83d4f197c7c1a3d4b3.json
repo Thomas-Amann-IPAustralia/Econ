@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In the 2024 report *Computer implemented inventions: patent trends at IP Australia, EPO and USPTO*, this table in the econometrics analysis compares regression estimates of grant probability for CII patent families filed in 2010–2017 at IP Australia, the EPO and the USPTO. It distinguishes all families from triplet families filed simultaneously at all three offices and compares applications classified as likely adverse or likely clear."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp16-cii-patent-trends:0046",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000163,
+  "input": 1139,
+  "model": "gpt-6-luna",
+  "output": 98,
+  "reasoning": 0,
+  "seconds": 1.84
+ }
+}

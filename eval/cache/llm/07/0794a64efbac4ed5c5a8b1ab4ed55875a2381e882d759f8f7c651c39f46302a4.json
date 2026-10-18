@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.6e-05,
+ "data": {
+  "context": "In *Exporter responses to shocks: The role of trade marks* (2021), the “Robustness to varying the estimation sample” section tests whether estimated export-revenue responses to tariff and real-exchange-rate shocks, and their relationship with trade mark activity, hold across alternative samples of Australian exporters."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp11-exporters-trade-marks:0093",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000152,
+  "input": 1156,
+  "model": "gpt-6-luna",
+  "output": 73,
+  "reasoning": 0,
+  "seconds": 1.45
+ }
+}

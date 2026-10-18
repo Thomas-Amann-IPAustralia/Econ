@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.000303,
+ "data": {
+  "queries": [
+   "fastest growing technology fields patent filings"
+  ],
+  "standalone_question": "Which technology fields are growing fastest in Australian patent filings?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-trend-9",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000303,
+  "input": 661,
+  "model": "gemini-3.5-flash-lite",
+  "output": 42,
+  "reasoning": 0,
+  "seconds": 1.06
+ }
+}

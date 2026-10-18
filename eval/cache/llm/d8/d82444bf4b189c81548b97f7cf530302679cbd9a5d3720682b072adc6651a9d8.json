@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000341,
+ "data": {
+  "queries": [
+   "international comparison of design intensity across peer countries",
+   "designs law and design intensity compared with other countries"
+  ],
+  "standalone_question": "Which of Australia's peer countries lead on design intensity?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "erp08-2",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000341,
+  "input": 662,
+  "model": "gemini-3.5-flash-lite",
+  "output": 57,
+  "reasoning": 0,
+  "seconds": 1.7
+ }
+}

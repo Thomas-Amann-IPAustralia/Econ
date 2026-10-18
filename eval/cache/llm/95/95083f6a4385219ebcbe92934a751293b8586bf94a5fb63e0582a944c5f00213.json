@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000206,
+ "data": {
+  "queries": [
+   "intellectual property rights and market competition",
+   "IP rights competition Australian industries"
+  ],
+  "standalone_question": "Is there evidence that intellectual property rights are hurting competition across Australian industries?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "erp10-5",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000206,
+  "input": 238,
+  "model": "gemini-3.5-flash-lite",
+  "output": 54,
+  "reasoning": 0,
+  "seconds": 0.98
+ }
+}

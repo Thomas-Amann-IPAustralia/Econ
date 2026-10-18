@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.2e-05,
+ "data": {
+  "context": "In *Drivers of AI Investment* (2023), in the Lens data analysis, the passage defines patent-count and classification-diversity measures: “all” counts unique patent records per company, and diversity is a crude proxy based on combinations of patent classifications. It also defines AUS HQ as Australian headquarters and Exist AI-staff as having at least one AI-skilled employee."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "oce-ai-investment:0026",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000144,
+  "input": 1013,
+  "model": "gpt-6-luna",
+  "output": 86,
+  "reasoning": 0,
+  "seconds": 1.73
+ }
+}

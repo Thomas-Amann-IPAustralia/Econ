@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.6e-05,
+ "data": {
+  "context": "In the Australian IP Report 2024, the “Technology trends in patenting” section compares standard patent filing volumes across technology fields in 2023. It reports declines in pharmaceuticals, medical technology, biotechnology, organic fine chemistry and computer technology, alongside growth in other consumer goods and strategic fields such as semiconductors."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2024:0044",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000152,
+  "input": 1144,
+  "model": "gpt-6-luna",
+  "output": 76,
+  "reasoning": 0,
+  "seconds": 1.34
+ }
+}

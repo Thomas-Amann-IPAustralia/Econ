@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.4e-05,
+ "data": {
+  "context": "In the Australian IP Report 2025, the IP RAPID section describes Data and Analytics’ data services and the public dataset of Australian IP rights applications, refreshed weekly and covering more than 100 years of records. It explains that IP RAPID replaced IPGOD and supports research into IP classifications, links between Australian and international rights, and transfers between parties."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2025:0101",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000129,
+  "input": 858,
+  "model": "gpt-6-luna",
+  "output": 87,
+  "reasoning": 0,
+  "seconds": 1.48
+ }
+}

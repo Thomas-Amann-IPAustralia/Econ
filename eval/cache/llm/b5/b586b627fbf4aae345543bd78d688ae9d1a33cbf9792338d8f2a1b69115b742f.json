@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.2e-05,
+ "data": {
+  "context": "In the Appendix of *The structural change in patenting behaviour in Australia* (2024), Figure 4 compares changes in SME and large-firm numbers in Australia’s scientific and research services and engineering services with broader trends for patent-holding and non-patent-holding firms, including trends from 2002 to 2022."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "note-patenting-structural-change:0009",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000185,
+  "input": 720,
+  "model": "gpt-6-luna",
+  "output": 225,
+  "reasoning": 141,
+  "seconds": 3.02
+ }
+}

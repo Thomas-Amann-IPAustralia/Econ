@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5.1e-05,
+ "data": {
+  "context": "In the 2025 analytic note *Evaluating trade marks as a leading economic indicator of the Australian business cycle*, the “At a glance” section summarises how Australian trade mark filings predict business-cycle turning points and near-term real GDP, including their comparison with 24 leading economic indicators."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "note-tm-leading-indicator:0001",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000103,
+  "input": 679,
+  "model": "gpt-6-luna",
+  "output": 70,
+  "reasoning": 0,
+  "seconds": 1.58
+ }
+}

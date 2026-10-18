@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In the 2023 report *Drivers of AI investment*, section 4.2.1 examines whether AI-hiring firms with existing AI capacity are more likely to hire additional AI staff, comparing large companies with SMEs. It discusses the findings and the limitation that a sample of up to about 1,000 staff records per company may undercount existing AI skills, especially in larger firms."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "oce-ai-investment:0034",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000163,
+  "input": 1182,
+  "model": "gpt-6-luna",
+  "output": 90,
+  "reasoning": 0,
+  "seconds": 1.75
+ }
+}

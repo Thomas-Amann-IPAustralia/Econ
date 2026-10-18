@@ -1,0 +1,25 @@
+{
+ "cost_usd": 4.7e-05,
+ "data": {
+  "queries": [
+   "drivers of business investment in artificial intelligence capability",
+   "AI investment and patenting by Australian firms"
+  ],
+  "standalone_question": "What drives Australian companies to invest in AI capability, and is that investment related to patenting?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-synthesis-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 9.4e-05,
+  "input": 678,
+  "model": "gpt-6-luna",
+  "output": 53,
+  "reasoning": 0,
+  "seconds": 1.52
+ }
+}

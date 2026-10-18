@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000222,
+ "data": {
+  "queries": [
+   "IP Australia data products",
+   "IP Australia tools for researchers",
+   "IP Australia business data tools"
+  ],
+  "standalone_question": "What data products and tools has IP Australia built for researchers and businesses?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-synthesis-14",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000222,
+  "input": 239,
+  "model": "gemini-3.5-flash-lite",
+  "output": 60,
+  "reasoning": 0,
+  "seconds": 0.81
+ }
+}

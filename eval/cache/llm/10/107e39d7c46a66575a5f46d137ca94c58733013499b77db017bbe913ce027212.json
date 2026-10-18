@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000164,
+ "data": {
+  "queries": [
+   "pharmaceutical patents extension of term",
+   "patent term extension medicines"
+  ],
+  "standalone_question": "Can patents on medicines last longer than 20 years in Australia?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr22-2",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000164,
+  "input": 237,
+  "model": "gemini-3.5-flash-lite",
+  "output": 37,
+  "reasoning": 0,
+  "seconds": 1.04
+ }
+}

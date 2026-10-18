@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.4e-05,
+ "data": {
+  "context": "In *The market for design: insights from interviews with Australian firms* (2014), section 4.2, “Broader Implications,” this passage discusses how Australian firms build design capability and reputation, identifying four enablers and indicators relevant to policy: nurturing talent, communicating design processes, gaining recognition, and attracting high-quality clients."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp03-market-for-design:0078",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000148,
+  "input": 1076,
+  "model": "gpt-6-luna",
+  "output": 81,
+  "reasoning": 0,
+  "seconds": 1.64
+ }
+}

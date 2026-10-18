@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000383,
+ "data": {
+  "queries": [
+   "limitations of empirical research design and data constraints",
+   "methodological caveats and econometric estimation issues",
+   "robustness checks and potential sources of bias in analysis"
+  ],
+  "standalone_question": "What limitations and caveats do researchers acknowledge in their economic research studies on intellectual property?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-evidence-1",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000383,
+  "input": 661,
+  "model": "gemini-3.5-flash-lite",
+  "output": 74,
+  "reasoning": 0,
+  "seconds": 0.85
+ }
+}

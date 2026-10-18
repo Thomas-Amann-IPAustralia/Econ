@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000116,
+ "data": {
+  "context": "In IP Australia’s 2020 report *Intellectual property rights, business profitability and competition in the Australian economy*, this table presents regression results on IPR ownership and business profitability, measured as log profit per employee, using System GMM, OLS and fixed-effects methods. Industry and year dummy variables are included as controls but omitted from the table."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp10-ip-profitability-competition:0103",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000233,
+  "input": 1130,
+  "model": "gpt-6-luna",
+  "output": 240,
+  "reasoning": 156,
+  "seconds": 2.61
+ }
+}

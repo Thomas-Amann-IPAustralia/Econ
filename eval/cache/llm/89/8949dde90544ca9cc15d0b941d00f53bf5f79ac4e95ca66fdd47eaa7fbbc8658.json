@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.3e-05,
+ "data": {
+  "context": "In *The business environment of patenting firms in Australia* (2024), the literature review section on innovation and collaboration introduces the report’s analysis of how firms’ collaboration networks relate to innovation. It notes that the report examines Australian and overseas partners and measures innovation indirectly through firms’ interaction with the IP system and their R&D expenditures and funding."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp15-patenting-firms:0007",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000147,
+  "input": 1061,
+  "model": "gpt-6-luna",
+  "output": 81,
+  "reasoning": 0,
+  "seconds": 2.67
+ }
+}

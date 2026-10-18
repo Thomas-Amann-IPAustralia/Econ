@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5.8e-05,
+ "data": {
+  "context": "In *The market for design: insights from interviews with Australian firms* (2014), under Theme 2, “The impact of weak intellectual property on the market for design,” this passage explains how limited design-rights protection complicates cooperative trade in design ideas between firms, before products or services are made or delivered."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp03-market-for-design:0027",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000116,
+  "input": 785,
+  "model": "gpt-6-luna",
+  "output": 76,
+  "reasoning": 0,
+  "seconds": 1.6
+ }
+}

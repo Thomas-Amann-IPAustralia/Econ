@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.00019,
+ "data": {
+  "queries": [
+   "copyright economic contribution Australia",
+   "copyright value Australian economy GDP"
+  ],
+  "standalone_question": "How much is copyright worth to the Australian economy?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-synthesis-11",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00019,
+  "input": 235,
+  "model": "gemini-3.5-flash-lite",
+  "output": 48,
+  "reasoning": 0,
+  "seconds": 1.0
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5.3e-05,
+ "data": {
+  "context": "In the Australian IP Report 2026, this passage lists leading applicants for Australian standard patent applications in 2025, spanning multinational corporations, technology firms, manufacturers and Australian innovators. It names the applicants shown in Figure 2.5."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0054",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000106,
+  "input": 755,
+  "model": "gpt-6-luna",
+  "output": 60,
+  "reasoning": 0,
+  "seconds": 1.54
+ }
+}

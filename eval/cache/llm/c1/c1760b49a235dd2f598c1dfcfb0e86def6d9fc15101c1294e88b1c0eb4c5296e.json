@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.4e-05,
+ "data": {
+  "queries": [
+   "2020 leading overseas design applicants Australia"
+  ],
+  "standalone_question": "Which overseas applicants were the leading applicants for design rights in Australia in 2020?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr21-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 4.9e-05,
+  "input": 287,
+  "model": "gpt-6-luna",
+  "output": 41,
+  "reasoning": 0,
+  "seconds": 1.37
+ }
+}

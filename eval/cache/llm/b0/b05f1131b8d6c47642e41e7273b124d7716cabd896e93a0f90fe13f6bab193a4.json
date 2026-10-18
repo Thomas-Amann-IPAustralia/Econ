@@ -1,0 +1,21 @@
+{
+ "cost_usd": 2.9e-05,
+ "data": {
+  "context": "In *The Australian Mining Industry: More than Just Shovels and Being the Lucky Country* (2015), section 4.1, “Who Owns and Invents the Shovels,” the passage explains how PCT patent application addresses are used to compare where mining technologies are invented and owned, by entity type, and notes that the data are indicative because non-PCT address information is incomplete."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp04-mining-innovation:0031",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 1129,
+  "cost_usd": 5.9e-05,
+  "input": 3,
+  "model": "gpt-6-luna",
+  "output": 94,
+  "reasoning": 0,
+  "seconds": 3.91
+ }
+}

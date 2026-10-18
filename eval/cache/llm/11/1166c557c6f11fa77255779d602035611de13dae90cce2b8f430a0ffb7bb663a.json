@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000227,
+ "data": {
+  "queries": [
+   "mining innovation industry classification",
+   "measuring innovation mining sector",
+   "ANZSIC mining innovation gaps"
+  ],
+  "standalone_question": "Does the official industry classification for mining capture all of mining's innovation?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "erp04-4",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000227,
+  "input": 240,
+  "model": "gemini-3.5-flash-lite",
+  "output": 62,
+  "reasoning": 0,
+  "seconds": 1.0
+ }
+}

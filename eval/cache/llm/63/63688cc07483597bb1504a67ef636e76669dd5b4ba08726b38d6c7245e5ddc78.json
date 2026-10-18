@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.7e-05,
+ "data": {
+  "context": "In the 2024 report *Computer Implemented Inventions: Patent Trends at IP Australia, EPO and USPTO*, Appendix 5, Table A9 compares average patent pendency for computer-implemented invention applications filed in 2001–2020 at IP Australia (IPA), the European Patent Office (EPO) and the United States Patent and Trademark Office (USPTO). Pendency is the time in years from filing to grant."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp16-cii-patent-trends:0127",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000174,
+  "input": 1238,
+  "model": "gpt-6-luna",
+  "output": 101,
+  "reasoning": 0,
+  "seconds": 1.65
+ }
+}

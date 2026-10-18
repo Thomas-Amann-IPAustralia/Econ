@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000266,
+ "data": {
+  "queries": [
+   "emerging technologies opportunity spaces",
+   "unexplored IP trends innovation data",
+   "future IP Australia research areas"
+  ],
+  "standalone_question": "What opportunity spaces should IP Australia take advantage of based on trends and data in economic research and IP reports that may not yet be fully explored?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "owner-5",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000266,
+  "input": 253,
+  "model": "gemini-3.5-flash-lite",
+  "output": 76,
+  "reasoning": 0,
+  "seconds": 1.24
+ }
+}

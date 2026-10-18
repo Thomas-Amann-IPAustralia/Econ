@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000329,
+ "data": {
+  "queries": [
+   "pharmaceutical patent term extensions",
+   "extension of regulatory term for medicinal patents"
+  ],
+  "standalone_question": "Can patents on medicines last longer than 20 years?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr22-2",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000329,
+  "input": 662,
+  "model": "gemini-3.5-flash-lite",
+  "output": 52,
+  "reasoning": 0,
+  "seconds": 0.98
+ }
+}

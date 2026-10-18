@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.6e-05,
+ "data": {
+  "context": "In *The Australian Mining Industry: More than Just Shovels and Being the Lucky Country* (2015), section 3.3, “Top Technology Areas by Each Entity type,” this passage describes patent technology areas by applicant type—METS firms, operating miners and publicly funded entities—using primary IPC subclasses, including their differing roles in equipment and ore processing."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp04-mining-innovation:0021",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000172,
+  "input": 1292,
+  "model": "gpt-6-luna",
+  "output": 86,
+  "reasoning": 0,
+  "seconds": 2.46
+ }
+}

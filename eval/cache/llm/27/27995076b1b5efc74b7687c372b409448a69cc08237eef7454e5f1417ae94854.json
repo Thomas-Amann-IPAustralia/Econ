@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.8e-05,
+ "data": {
+  "queries": [
+   "artificial intelligence firms innovation automation existing activities breakthrough inventions"
+  ],
+  "standalone_question": "According to IP Australia’s economic research, are firms using artificial intelligence mainly to develop breakthrough inventions or to automate and improve existing activities?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr23-5",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 5.5e-05,
+  "input": 288,
+  "model": "gpt-6-luna",
+  "output": 53,
+  "reasoning": 0,
+  "seconds": 1.32
+ }
+}

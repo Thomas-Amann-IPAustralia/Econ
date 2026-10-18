@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000342,
+ "data": {
+  "queries": [
+   "machine learning methods in economic research papers",
+   "natural language processing patent analysis methodology"
+  ],
+  "standalone_question": "What machine learning approaches has IP Australia's economics team used in its research?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-methods-2",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000342,
+  "input": 666,
+  "model": "gemini-3.5-flash-lite",
+  "output": 57,
+  "reasoning": 0,
+  "seconds": 0.89
+ }
+}

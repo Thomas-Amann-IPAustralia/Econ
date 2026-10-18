@@ -1,0 +1,24 @@
+{
+ "cost_usd": 5.1e-05,
+ "data": {
+  "queries": [
+   "Raising the Bar reforms patent examination requests commencement 2013"
+  ],
+  "standalone_question": "In which year did the Raising the Bar reforms take effect for patent examination requests in Australia?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp14-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000101,
+  "input": 286,
+  "model": "gpt-6-luna",
+  "output": 144,
+  "reasoning": 95,
+  "seconds": 2.23
+ }
+}

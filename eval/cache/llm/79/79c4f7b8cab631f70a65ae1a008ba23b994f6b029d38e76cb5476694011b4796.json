@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.4e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2020, the section on ICT-related design rights compares overseas economies’ ICT design applications filed at IP Australia in 2005–08 and 2015–18. The table reports application counts, changes and the ICT share of each country’s total applications, highlighting Finland’s steep decline."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2020:0043",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000168,
+  "input": 1290,
+  "model": "gpt-6-luna",
+  "output": 77,
+  "reasoning": 0,
+  "seconds": 1.58
+ }
+}

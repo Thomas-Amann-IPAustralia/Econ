@@ -1,0 +1,24 @@
+{
+ "cost_usd": 4.3e-05,
+ "data": {
+  "queries": [
+   "business profitability combinations of IP rights"
+  ],
+  "standalone_question": "Which combinations of intellectual property rights are associated with the most profitable businesses?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp10-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 8.6e-05,
+  "input": 672,
+  "model": "gpt-6-luna",
+  "output": 37,
+  "reasoning": 0,
+  "seconds": 1.48
+ }
+}

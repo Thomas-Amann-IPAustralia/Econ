@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000244,
+ "data": {
+  "queries": [
+   "trade marks business cycle methodology",
+   "forecasting business cycle trade mark applications",
+   "econometric methods trade marks economy"
+  ],
+  "standalone_question": "What econometric methods were used to test whether trade marks predict the business cycle in IP Australia research?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-methods-6",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000244,
+  "input": 239,
+  "model": "gemini-3.5-flash-lite",
+  "output": 69,
+  "reasoning": 0,
+  "seconds": 0.98
+ }
+}

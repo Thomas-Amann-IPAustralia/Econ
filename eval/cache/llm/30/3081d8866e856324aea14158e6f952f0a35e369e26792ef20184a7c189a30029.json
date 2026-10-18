@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5.3e-05,
+ "data": {
+  "context": "In the introduction to the Australian Intellectual Property Report 2016, this passage describes the report’s aim of promoting awareness of IP rights and presenting recent IP statistics, alongside the release of IP Government Open Data (IPGOD) and the availability of weekly updates through IPGOLD."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2016:0004",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000107,
+  "input": 727,
+  "model": "gpt-6-luna",
+  "output": 68,
+  "reasoning": 0,
+  "seconds": 1.4
+ }
+}

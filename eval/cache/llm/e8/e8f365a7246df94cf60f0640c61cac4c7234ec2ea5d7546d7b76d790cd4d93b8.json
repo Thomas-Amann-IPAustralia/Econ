@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.00032,
+ "data": {
+  "queries": [
+   "industry use of registered designs",
+   "design intensity across Australian industry sectors"
+  ],
+  "standalone_question": "Which Australian industry relies most heavily on registered designs?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr19-4",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00032,
+  "input": 660,
+  "model": "gemini-3.5-flash-lite",
+  "output": 49,
+  "reasoning": 0,
+  "seconds": 0.76
+ }
+}

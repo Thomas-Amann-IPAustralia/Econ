@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.7e-05,
+ "data": {
+  "context": "In the 2014 Report on patent backlogs, inventories and pendency, the Recommendations section proposes data and workflow improvements for managing IP Australia’s patent examination inventories and pendency. It recommends tracking inside and outside inventories, application complexity, fast-tracked applications, exam-group allocations in PAMS, and examiner capacity."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp01-patent-backlogs:0037",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000155,
+  "input": 1175,
+  "model": "gpt-6-luna",
+  "output": 75,
+  "reasoning": 0,
+  "seconds": 1.38
+ }
+}

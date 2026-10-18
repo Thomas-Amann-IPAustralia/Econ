@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5.8e-05,
+ "data": {
+  "context": "In the 2019 report *Designs Law and Practice*, this passage defines design IP intensity, a measure used to compare Australia and international peers in 2016. It divides residents’ registered design applications (including nationals’ EUIPO applications for EU countries) by the value added of each country’s industrial sector."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp08-designs-law-practice:0010",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000116,
+  "input": 780,
+  "model": "gpt-6-luna",
+  "output": 75,
+  "reasoning": 0,
+  "seconds": 1.5
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "cost_usd": 4.6e-05,
+ "data": {
+  "queries": [
+   "screen and audio content consumption during COVID-19 lockdowns"
+  ],
+  "standalone_question": "Did people use more copyright content, such as screen and audio content, during COVID-19 lockdowns?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr21-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 9.2e-05,
+  "input": 676,
+  "model": "gpt-6-luna",
+  "output": 49,
+  "reasoning": 0,
+  "seconds": 1.48
+ }
+}

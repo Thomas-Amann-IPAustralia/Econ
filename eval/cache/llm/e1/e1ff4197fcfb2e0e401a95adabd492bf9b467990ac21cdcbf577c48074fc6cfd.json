@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.8e-05,
+ "data": {
+  "context": "In *Exporter responses to shocks: The role of trade marks* (2021), the “Tariff data” section describes WTO tariff data for Australian firms’ product-country markets over 2004–2017 and how tariff codes were aligned with export data. It explains the restrictions and averaging methods used to prepare tariffs for the export-entry and export-revenue analyses."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp11-exporters-trade-marks:0030",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000157,
+  "input": 1144,
+  "model": "gpt-6-luna",
+  "output": 85,
+  "reasoning": 0,
+  "seconds": 1.74
+ }
+}

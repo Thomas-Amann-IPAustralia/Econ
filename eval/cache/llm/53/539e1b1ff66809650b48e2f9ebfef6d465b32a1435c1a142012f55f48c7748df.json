@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.3e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2020, the “Trade marks in the digital economy” section discusses Australian-origin trade mark filings overseas, particularly in China, from 2009 to 2018. It explains that China’s 2014 multiple-class reform enabled Australians to cover more classes with fewer applications, with growth largely in alcoholic beverages and advertising."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2020:0023",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000145,
+  "input": 1034,
+  "model": "gpt-6-luna",
+  "output": 83,
+  "reasoning": 0,
+  "seconds": 2.2
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.3e-05,
+ "data": {
+  "context": "In the 2023 report *Drivers of AI investment*, the Lens subsection of the methodology explains how company names from LinkedIn datasets were matched to Lens patent records. It describes measuring firms’ patent activity by technology category, legal status and jurisdiction, focusing on active and pending patents and deriving patent-diversity measures."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "oce-ai-investment:0024",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000146,
+  "input": 1088,
+  "model": "gpt-6-luna",
+  "output": 75,
+  "reasoning": 0,
+  "seconds": 1.64
+ }
+}

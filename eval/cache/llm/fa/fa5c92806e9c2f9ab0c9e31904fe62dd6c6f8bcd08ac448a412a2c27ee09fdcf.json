@@ -1,0 +1,24 @@
+{
+ "cost_usd": 5.6e-05,
+ "data": {
+  "queries": [
+   "2021 growth in Australian IP applications by applicant country of origin"
+  ],
+  "standalone_question": "Among the countries that file the most IP applications in Australia, which country’s filings grew fastest in 2021?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr22-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000112,
+  "input": 287,
+  "model": "gpt-6-luna",
+  "output": 167,
+  "reasoning": 113,
+  "seconds": 2.15
+ }
+}

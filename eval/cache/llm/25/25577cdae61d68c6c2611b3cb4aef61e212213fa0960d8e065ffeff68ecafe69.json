@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.4e-05,
+ "data": {
+  "queries": [
+   "Australian plant breeder's rights applications trends"
+  ],
+  "standalone_question": "What trends are reported in plant breeder’s rights (PBR) applications in Australia?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-trend-6",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 4.9e-05,
+  "input": 282,
+  "model": "gpt-6-luna",
+  "output": 41,
+  "reasoning": 0,
+  "seconds": 1.24
+ }
+}

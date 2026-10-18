@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.4e-05,
+ "data": {
+  "context": "In *The market for design* (2014), section 4, “Demand-serving as an informed client and shaping buyer preferences,” this passage discusses how government can support Australian designers by buying high-quality design and shaping buyer demand, alongside the scarcity of Australian clients able to commission high-design work."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp03-market-for-design:0082",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000168,
+  "input": 989,
+  "model": "gpt-6-luna",
+  "output": 139,
+  "reasoning": 66,
+  "seconds": 2.01
+ }
+}

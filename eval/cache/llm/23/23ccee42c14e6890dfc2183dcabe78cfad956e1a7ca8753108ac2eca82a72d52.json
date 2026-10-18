@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000224,
+ "data": {
+  "queries": [
+   "IP rights small business growth",
+   "trade marks patents firm performance SMEs",
+   "innovation firm growth Australia"
+  ],
+  "standalone_question": "Is there evidence that filing for intellectual property rights helps small businesses grow?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "multi-4",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000224,
+  "input": 238,
+  "model": "gemini-3.5-flash-lite",
+  "output": 61,
+  "reasoning": 0,
+  "seconds": 1.0
+ }
+}

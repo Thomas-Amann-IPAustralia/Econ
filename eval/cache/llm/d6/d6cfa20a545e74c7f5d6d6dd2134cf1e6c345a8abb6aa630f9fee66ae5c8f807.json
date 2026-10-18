@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In the 2020 report *Intellectual Property Rights, Business Profitability and Competition in the Australian Economy*, section 3.2.2 examines how different types and combinations of patents, trade marks and designs relate to business profitability. It describes System GMM regressions comparing profit per invested capital and profit per employee, including estimates for profitable patent-only owners versus non-owners of IPRs."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp10-ip-profitability-competition:0040",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000163,
+  "input": 1172,
+  "model": "gpt-6-luna",
+  "output": 92,
+  "reasoning": 0,
+  "seconds": 1.4
+ }
+}

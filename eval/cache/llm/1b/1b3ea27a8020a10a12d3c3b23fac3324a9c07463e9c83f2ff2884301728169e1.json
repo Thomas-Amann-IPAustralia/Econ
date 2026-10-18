@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000362,
+ "data": {
+  "queries": [
+   "GMM estimation method business profitability intellectual property rights",
+   "dynamic panel data generalized method of moments competition study"
+  ],
+  "standalone_question": "Why did the study on intellectual property rights, business profitability, and competition use GMM estimation?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "erp10-2",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000362,
+  "input": 664,
+  "model": "gemini-3.5-flash-lite",
+  "output": 65,
+  "reasoning": 0,
+  "seconds": 0.96
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "cost_usd": 4.4e-05,
+ "data": {
+  "queries": [
+   "geographical names in trade mark applications",
+   "geographical indications and trade mark registrations"
+  ],
+  "standalone_question": "How do place names and geographical indications appear in trade marks?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-synthesis-12",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 8.9e-05,
+  "input": 673,
+  "model": "gpt-6-luna",
+  "output": 44,
+  "reasoning": 0,
+  "seconds": 1.37
+ }
+}

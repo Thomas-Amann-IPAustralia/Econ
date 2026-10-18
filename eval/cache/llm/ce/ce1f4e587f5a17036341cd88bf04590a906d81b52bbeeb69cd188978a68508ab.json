@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.4e-05,
+ "data": {
+  "context": "In *The business environment of patenting firms in Australia* (2024), section 3.2, “Business survey data,” Table 1 shows the financial years covered by BLADE administrative records and the BERD, BCS and BCS-IM surveys, distinguishing data-collection years from years with relevant project information. The text introduces these surveys as sources for measures of collaboration, R&D expenditure and R&D funding."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp15-patenting-firms:0014",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000169,
+  "input": 1196,
+  "model": "gpt-6-luna",
+  "output": 99,
+  "reasoning": 0,
+  "seconds": 1.99
+ }
+}

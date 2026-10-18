@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.4e-05,
+ "data": {
+  "context": "In the Australian IP Report 2026 section on a well-calibrated IP system and global innovation, this passage explains why narrowing patent scope has smaller effects on follow-on innovation in complex, interdependent technologies such as mobile communications and smartphones than in modular fields such as pharmaceuticals."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0028",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000169,
+  "input": 834,
+  "model": "gpt-6-luna",
+  "output": 171,
+  "reasoning": 102,
+  "seconds": 2.33
+ }
+}

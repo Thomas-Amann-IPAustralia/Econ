@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000216,
+ "data": {
+  "queries": [
+   "innovation patent SMEs",
+   "innovation patent review economic impact",
+   "small medium enterprises innovation patent effectiveness"
+  ],
+  "standalone_question": "Was the innovation patent achieving its goal of helping SMEs innovate?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr18-2",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000216,
+  "input": 237,
+  "model": "gemini-3.5-flash-lite",
+  "output": 58,
+  "reasoning": 0,
+  "seconds": 0.99
+ }
+}

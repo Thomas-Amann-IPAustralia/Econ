@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000353,
+ "data": {
+  "queries": [
+   "market for design interviews capturing value from clients",
+   "design firms appropriation of returns and client relationships"
+  ],
+  "standalone_question": "Why is it hard for design firms to capture the value of their ideas from clients?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "erp03-2",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000353,
+  "input": 667,
+  "model": "gemini-3.5-flash-lite",
+  "output": 61,
+  "reasoning": 0,
+  "seconds": 1.73
+ }
+}

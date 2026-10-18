@@ -1,0 +1,24 @@
+{
+ "cost_usd": 4.4e-05,
+ "data": {
+  "queries": [
+   "patent scope trends before Raising the Bar reforms 2013"
+  ],
+  "standalone_question": "Were broad Australian patents already becoming less common before the 2013 reforms?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp14-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 8.9e-05,
+  "input": 675,
+  "model": "gpt-6-luna",
+  "output": 44,
+  "reasoning": 0,
+  "seconds": 1.31
+ }
+}

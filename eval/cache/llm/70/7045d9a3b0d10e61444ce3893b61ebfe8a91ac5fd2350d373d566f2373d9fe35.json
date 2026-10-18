@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.3e-05,
+ "data": {
+  "queries": [
+   "patent filings by state Australia geographic distribution concentration"
+  ],
+  "standalone_question": "Are patent filings in Australia concentrated in particular states?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp15-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 4.6e-05,
+  "input": 279,
+  "model": "gpt-6-luna",
+  "output": 36,
+  "reasoning": 0,
+  "seconds": 1.1
+ }
+}

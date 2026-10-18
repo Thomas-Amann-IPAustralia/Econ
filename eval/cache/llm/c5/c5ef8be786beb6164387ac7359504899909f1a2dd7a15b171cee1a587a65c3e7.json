@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.5e-05,
+ "data": {
+  "context": "In the 2015 report *The Australian Mining Industry: More than Just Shovels and Being the Lucky Country*, section 4.3 examines potential export markets for Australian mining inventions using countries designated for protection in Australian PCT applications. It identifies Australia and the United States as the main markets, alongside other destinations shown in Figure 14."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp04-mining-innovation:0035",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00015,
+  "input": 1099,
+  "model": "gpt-6-luna",
+  "output": 81,
+  "reasoning": 0,
+  "seconds": 1.43
+ }
+}

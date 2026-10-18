@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000224,
+ "data": {
+  "queries": [
+   "Australian exporters export dynamics overseas markets",
+   "exporter churn destination markets",
+   "trade destination entry exit Australian firms"
+  ],
+  "standalone_question": "In which overseas market do Australian exporters come and go the most?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "erp11-4",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000224,
+  "input": 238,
+  "model": "gemini-3.5-flash-lite",
+  "output": 61,
+  "reasoning": 0,
+  "seconds": 0.92
+ }
+}

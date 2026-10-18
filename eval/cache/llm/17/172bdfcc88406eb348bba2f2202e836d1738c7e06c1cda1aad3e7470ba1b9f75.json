@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.3e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2021, Chapter 6’s “Copyright and COVID-19” section describes changes in Australians’ screen-viewing habits after COVID-19 restrictions, including reported increases in online content use by service type and respondent group; Figure C2 reports survey responses from 4,096 people."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2021:0053",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000146,
+  "input": 1065,
+  "model": "gpt-6-luna",
+  "output": 78,
+  "reasoning": 0,
+  "seconds": 1.73
+ }
+}

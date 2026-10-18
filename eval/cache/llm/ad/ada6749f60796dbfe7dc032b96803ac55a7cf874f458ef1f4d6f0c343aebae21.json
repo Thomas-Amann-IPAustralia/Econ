@@ -1,0 +1,25 @@
+{
+ "cost_usd": 4.7e-05,
+ "data": {
+  "queries": [
+   "Productivity Commission inquiry intellectual property arrangements recommendations",
+   "government response implementation IP reforms Raising the Bar patent scope"
+  ],
+  "standalone_question": "What did the Productivity Commission's inquiry into intellectual property arrangements recommend, and what followed?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-policy-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 9.4e-05,
+  "input": 676,
+  "model": "gpt-6-luna",
+  "output": 53,
+  "reasoning": 0,
+  "seconds": 1.3
+ }
+}

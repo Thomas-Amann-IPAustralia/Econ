@@ -1,0 +1,27 @@
+{
+ "cost_usd": 0.000108,
+ "data": {
+  "queries": [
+   "economic contribution of copyright industries",
+   "patent intensive industries contribution to GDP and employment",
+   "trade mark intensive industries economic contribution",
+   "design intensive industries contribution to economic activity"
+  ],
+  "standalone_question": "How do patents, trade marks, designs and copyright compare in their contribution to the Australian economy?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-compare-5",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000217,
+  "input": 675,
+  "model": "gpt-6-luna",
+  "output": 299,
+  "reasoning": 231,
+  "seconds": 3.4
+ }
+}

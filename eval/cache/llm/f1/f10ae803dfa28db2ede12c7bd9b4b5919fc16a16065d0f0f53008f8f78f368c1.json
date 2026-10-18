@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.1e-05,
+ "data": {
+  "context": "In the 2019 report *Designs Law and Practice*, this passage in “Comparisons of Industries within Australia” examines Australian industries’ registered-design intensity and design labour, using filing data from 2005–2016 and 2016 Census data. It identifies industries prominent in design registrations and employment, and discusses how design registrations are concentrated in particular product classes."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp08-designs-law-practice:0031",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000142,
+  "input": 987,
+  "model": "gpt-6-luna",
+  "output": 86,
+  "reasoning": 0,
+  "seconds": 1.37
+ }
+}

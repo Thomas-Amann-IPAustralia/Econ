@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000217,
+ "data": {
+  "queries": [
+   "causal inference methods",
+   "econometric techniques",
+   "statistical methods impact evaluation"
+  ],
+  "standalone_question": "What statistical methods have IP Australia's economists used to estimate causal effects?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "multi-1",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000217,
+  "input": 240,
+  "model": "gemini-3.5-flash-lite",
+  "output": 58,
+  "reasoning": 0,
+  "seconds": 0.93
+ }
+}

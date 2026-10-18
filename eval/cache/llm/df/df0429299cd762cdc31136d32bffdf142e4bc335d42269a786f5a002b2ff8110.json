@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000354,
+ "data": {
+  "queries": [
+   "trade marks as a leading indicator of the business cycle econometric methods",
+   "empirical model methodology trade mark applications macroeconomic forecasting"
+  ],
+  "standalone_question": "What methods were used to test whether trade marks predict the business cycle?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-methods-6",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000354,
+  "input": 664,
+  "model": "gemini-3.5-flash-lite",
+  "output": 62,
+  "reasoning": 0,
+  "seconds": 0.89
+ }
+}

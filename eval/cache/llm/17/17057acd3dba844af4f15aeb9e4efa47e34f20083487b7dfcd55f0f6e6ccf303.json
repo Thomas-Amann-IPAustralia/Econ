@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000215,
+ "data": {
+  "queries": [
+   "copyright Australian IP Report coverage",
+   "administration of copyright Australia"
+  ],
+  "standalone_question": "Why doesn't the Australian IP Report cover copyright, and which government body administers copyright in Australia?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr18-1",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000215,
+  "input": 240,
+  "model": "gemini-3.5-flash-lite",
+  "output": 57,
+  "reasoning": 0,
+  "seconds": 0.9
+ }
+}

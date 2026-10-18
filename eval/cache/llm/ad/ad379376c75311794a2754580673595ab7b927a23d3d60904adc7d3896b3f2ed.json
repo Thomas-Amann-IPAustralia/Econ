@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000102,
+ "data": {
+  "context": "In the 2021 report *Exporter responses to shocks: The role of trade marks*, this section presents Table 14 on export-diversity responses to tariffs, exchange rates and trade marks, comparing firms with long and short export histories. It relates to the preceding discussion that, after firms file trade marks, tariff reductions may shift their response from concentrating to diversifying their export product range."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp11-exporters-trade-marks:0107",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000203,
+  "input": 1576,
+  "model": "gpt-6-luna",
+  "output": 90,
+  "reasoning": 0,
+  "seconds": 1.61
+ }
+}

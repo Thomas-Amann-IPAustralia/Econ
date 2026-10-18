@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In *The business environment of patenting firms in Australia* (2024), Table 5 in the empirical results section compares pooled, random-effects and fixed-effects estimates of firms’ probability of filing at least one patent, using Australian business data. The table reports how business age, industry, firm size, state and year relate to patent filing."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp15-patenting-firms:0033",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000164,
+  "input": 1232,
+  "model": "gpt-6-luna",
+  "output": 81,
+  "reasoning": 0,
+  "seconds": 2.29
+ }
+}

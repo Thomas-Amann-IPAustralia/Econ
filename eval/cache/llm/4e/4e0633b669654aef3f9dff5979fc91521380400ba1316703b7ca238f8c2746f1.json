@@ -1,0 +1,25 @@
+{
+ "cost_usd": 7.1e-05,
+ "data": {
+  "queries": [
+   "patent examination pendency time to acceptance",
+   "accelerated or deferred patent examination applicant options"
+  ],
+  "standalone_question": "How long does patent examination take at IP Australia, and what options do applicants have to change the timing?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-policy-6",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000141,
+  "input": 681,
+  "model": "gpt-6-luna",
+  "output": 146,
+  "reasoning": 89,
+  "seconds": 2.86
+ }
+}

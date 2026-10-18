@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000359,
+ "data": {
+  "queries": [
+   "university industry collaboration rates and statistics",
+   "business research institution collaboration patenting",
+   "drivers of collaboration between firms and universities"
+  ],
+  "standalone_question": "Is university-industry collaboration in Australia as weak as commonly perceived?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-evidence-6",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000359,
+  "input": 664,
+  "model": "gemini-3.5-flash-lite",
+  "output": 64,
+  "reasoning": 0,
+  "seconds": 0.98
+ }
+}

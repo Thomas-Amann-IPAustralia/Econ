@@ -1,0 +1,24 @@
+{
+ "cost_usd": 3.2e-05,
+ "data": {
+  "queries": [
+   "top design applicants Australia 2018"
+  ],
+  "standalone_question": "Which applicant filed the most design applications in Australia in 2018?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr19-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 6.5e-05,
+  "input": 284,
+  "model": "gpt-6-luna",
+  "output": 74,
+  "reasoning": 34,
+  "seconds": 1.6
+ }
+}

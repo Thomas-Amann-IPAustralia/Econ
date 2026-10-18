@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5.9e-05,
+ "data": {
+  "context": "In *Exporter responses to shocks: The role of trade marks* (2021), the Background and Hypotheses section reviews why firms may respond differently to tariff and real-exchange-rate shocks, and introduces the study’s hypotheses about trade mark activity in export markets."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp11-exporters-trade-marks:0016",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000118,
+  "input": 854,
+  "model": "gpt-6-luna",
+  "output": 65,
+  "reasoning": 0,
+  "seconds": 1.28
+ }
+}

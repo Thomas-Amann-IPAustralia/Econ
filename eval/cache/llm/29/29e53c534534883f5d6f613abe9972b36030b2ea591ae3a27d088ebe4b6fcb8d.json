@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000337,
+ "data": {
+  "queries": [
+   "definition of design intensity in economic research",
+   "measurement methodology for design rights intensity"
+  ],
+  "standalone_question": "How is design intensity defined and measured in the research on registered designs?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-methods-5",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000337,
+  "input": 664,
+  "model": "gemini-3.5-flash-lite",
+  "output": 55,
+  "reasoning": 0,
+  "seconds": 1.0
+ }
+}

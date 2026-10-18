@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.1e-05,
+ "data": {
+  "context": "In *Drivers of AI investment* (2023), the “Diversity” subsection of the patenting behaviour findings compares patent-class diversity among AI-hiring and General-hiring companies. It describes the number and spread of IPC classes in company patent portfolios worldwide and reports that the observed differences are not statistically significant."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "oce-ai-investment:0043",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000161,
+  "input": 1240,
+  "model": "gpt-6-luna",
+  "output": 74,
+  "reasoning": 0,
+  "seconds": 1.56
+ }
+}

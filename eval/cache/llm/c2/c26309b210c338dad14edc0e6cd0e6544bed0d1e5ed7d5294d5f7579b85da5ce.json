@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.6e-05,
+ "data": {
+  "context": "In the 2020 IP Australia Economic Research Paper 10, *Intellectual Property Rights, Business Profitability and Competition in the Australian Economy*, Appendix E presents descriptive statistics for variables used in the regression analysis. Table E.1 reports profitability measures and ownership of patents, trade marks, designs and other IPRs across Australian businesses."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp10-ip-profitability-competition:0091",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000171,
+  "input": 1312,
+  "model": "gpt-6-luna",
+  "output": 79,
+  "reasoning": 0,
+  "seconds": 1.99
+ }
+}

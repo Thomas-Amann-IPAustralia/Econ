@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000361,
+ "data": {
+  "queries": [
+   "computer-implemented invention patent applications court decisions effect",
+   "software patent applications trend patent office practice"
+  ],
+  "standalone_question": "What effect did the 2014 court decisions have on computer-implemented invention patent applications?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-policy-4",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000361,
+  "input": 669,
+  "model": "gemini-3.5-flash-lite",
+  "output": 64,
+  "reasoning": 0,
+  "seconds": 0.94
+ }
+}

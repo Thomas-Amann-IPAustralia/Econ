@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.9e-05,
+ "data": {
+  "context": "In the *Australian IP Report 2024*, this section describes IP Australia’s 2023 pilot of TM Checker, an AI-powered tool that helps novice users, including SMEs, check trade mark similarity and navigate applications. It also reports checks and TM Headstart applications in the second half of 2023 and describes the tool’s public education role and business partnerships."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2024:0073",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000138,
+  "input": 956,
+  "model": "gpt-6-luna",
+  "output": 85,
+  "reasoning": 0,
+  "seconds": 1.85
+ }
+}

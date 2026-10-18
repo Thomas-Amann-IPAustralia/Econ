@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.1e-05,
+ "data": {
+  "context": "In *The business environment of patenting firms in Australia* (2024), the trends and empirical results section reports Table 3’s regressions of granted patent counts for Australian businesses observed since 2011, using pooled OLS, random-effects and fixed-effects models. The passage compares the geographic distribution of granted patents with filed patent applications and briefly introduces results on retired patents."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp15-patenting-firms:0027",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000181,
+  "input": 1371,
+  "model": "gpt-6-luna",
+  "output": 87,
+  "reasoning": 0,
+  "seconds": 2.36
+ }
+}

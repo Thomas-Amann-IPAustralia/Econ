@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.9e-05,
+ "data": {
+  "context": "In *Computer Implemented Inventions: Patent Trends at IP Australia, EPO and USPTO* (2024), the “Identifying CII patent applications” section explains how the study identifies computer-implemented invention patent applications in IP Australia, EPO and USPTO records. It combines Xie and Miyazaki’s keywords with IPC-code exclusions to reduce misclassification and address the keywords’ low recall."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp16-cii-patent-trends:0012",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000179,
+  "input": 1321,
+  "model": "gpt-6-luna",
+  "output": 94,
+  "reasoning": 0,
+  "seconds": 1.36
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In *The structural change in patenting behaviour in Australia* (2024), the section on declining scale-up rates estimates how the fall in the rate at which patent-holding SMEs become large firms affected Australia’s large patent-holding firms from 2010 to 2021. It compares observed counts with a hypothetical scenario using the pre-2009 scale-up rate, accounting for annual variation, through 2022."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "note-patenting-structural-change:0006",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000164,
+  "input": 771,
+  "model": "gpt-6-luna",
+  "output": 174,
+  "reasoning": 76,
+  "seconds": 1.93
+ }
+}

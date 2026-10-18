@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.3e-05,
+ "data": {
+  "context": "In the Australian IP Report 2023, this passage is from the section on how macroeconomic conditions and monetary policy affect innovation in Australia. It explains how researchers use surprise monetary-policy and interest-rate shocks to isolate effects on innovation, adoption and productivity, following the reported findings on patenting, R&D, trade mark filings and innovative firms."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2023:0087",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000147,
+  "input": 1066,
+  "model": "gpt-6-luna",
+  "output": 80,
+  "reasoning": 0,
+  "seconds": 2.12
+ }
+}

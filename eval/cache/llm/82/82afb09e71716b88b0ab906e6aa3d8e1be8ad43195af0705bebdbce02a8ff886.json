@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9e-05,
+ "data": {
+  "context": "In the Discussion of *Raising the Bar reforms: Measuring the impact on relative patent scope* (2024), this passage summarises estimates of how Australia’s Raising the Bar reforms affected Australian patent-claim scope relative to European and US equivalents, including differences by examination section and technology area."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp14-raising-the-bar:0046",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00018,
+  "input": 1123,
+  "model": "gpt-6-luna",
+  "output": 136,
+  "reasoning": 64,
+  "seconds": 2.23
+ }
+}

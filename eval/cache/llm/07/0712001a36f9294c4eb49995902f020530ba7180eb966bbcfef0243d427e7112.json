@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000208,
+ "data": {
+  "queries": [
+   "research limitations methodology data constraints",
+   "economic research paper caveats limitations"
+  ],
+  "standalone_question": "What limitations do the researchers acknowledge in their own studies across IP Australia economic research publications?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-evidence-1",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000208,
+  "input": 236,
+  "model": "gemini-3.5-flash-lite",
+  "output": 55,
+  "reasoning": 0,
+  "seconds": 0.95
+ }
+}

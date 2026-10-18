@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.4e-05,
+ "data": {
+  "context": "In the introduction to the Australian Intellectual Property Report 2020, these notes cite the ABS’s September 2019 national accounts and the IMF’s January 2020 World Economic Outlook."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2020:0062",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000129,
+  "input": 809,
+  "model": "gpt-6-luna",
+  "output": 96,
+  "reasoning": 45,
+  "seconds": 1.61
+ }
+}

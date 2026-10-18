@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.6e-05,
+ "data": {
+  "context": "In the 2019 Australian Intellectual Property Report, the designs section compares resident and non-resident applicants’ product-class focus across countries. It describes Australia’s focus on clothing among resident applicants and on recording, telecommunications or data-processing equipment among non-residents, with comparisons to Germany, Italy, the UK, Canada and the US."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2019:0042",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000152,
+  "input": 1131,
+  "model": "gpt-6-luna",
+  "output": 78,
+  "reasoning": 0,
+  "seconds": 1.61
+ }
+}

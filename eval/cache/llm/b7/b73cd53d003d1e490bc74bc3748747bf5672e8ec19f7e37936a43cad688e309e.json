@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.4e-05,
+ "data": {
+  "context": "In the “IP for a skilled, diverse and productive economy” section of the Australian IP Report 2023, this passage explains how IP rights can encourage innovation, spread technical knowledge and support trade in intangible assets. It also describes the report’s focus on how skills, diversity and innovation can contribute to productivity."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2023:0003",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000148,
+  "input": 1107,
+  "model": "gpt-6-luna",
+  "output": 74,
+  "reasoning": 0,
+  "seconds": 1.56
+ }
+}

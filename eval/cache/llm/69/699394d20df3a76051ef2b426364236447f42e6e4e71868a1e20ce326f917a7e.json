@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000219,
+ "data": {
+  "queries": [
+   "economic contribution of IP rights Australia",
+   "patents trade marks designs plant breeders rights economic impact"
+  ],
+  "standalone_question": "How do the different intellectual property rights compare in their economic contribution to Australia?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-compare-5",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000219,
+  "input": 240,
+  "model": "gemini-3.5-flash-lite",
+  "output": 59,
+  "reasoning": 0,
+  "seconds": 1.1
+ }
+}

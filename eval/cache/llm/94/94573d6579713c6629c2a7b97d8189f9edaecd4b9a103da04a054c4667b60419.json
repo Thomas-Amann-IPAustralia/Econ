@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.7e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2019, this passage in the patents section discusses where Australian-origin patent applications were filed overseas in 2017 and how applicants used direct foreign filings versus the PCT route. It then profiles Australian inventor Lucy Carol Davis and her patent for a customised facial-mask apparatus."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2019:0010",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000155,
+  "input": 1191,
+  "model": "gpt-6-luna",
+  "output": 72,
+  "reasoning": 0,
+  "seconds": 1.87
+ }
+}

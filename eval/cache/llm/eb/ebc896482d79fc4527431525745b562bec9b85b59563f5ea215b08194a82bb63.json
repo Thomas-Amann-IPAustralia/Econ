@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000192,
+ "data": {
+  "queries": [
+   "GMM estimation IP profitability",
+   "econometric methodology GMM patents firm performance"
+  ],
+  "standalone_question": "Why did the study on intellectual property and business profitability use Generalized Method of Moments (GMM) estimation?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "erp10-2",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000192,
+  "input": 239,
+  "model": "gemini-3.5-flash-lite",
+  "output": 48,
+  "reasoning": 0,
+  "seconds": 0.9
+ }
+}

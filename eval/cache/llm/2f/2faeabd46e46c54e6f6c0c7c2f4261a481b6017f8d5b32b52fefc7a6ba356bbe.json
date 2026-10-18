@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.5e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2019 section on potential sources of trade mark cluttering, this passage discusses Australian trade mark renewals and possible non-use marks. It describes declining first-renewal rates and growth in registrations, suggesting that potential non-use marks remaining on the register during their first ten years may contribute to cluttering."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2019:0030",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00015,
+  "input": 1102,
+  "model": "gpt-6-luna",
+  "output": 79,
+  "reasoning": 0,
+  "seconds": 1.43
+ }
+}

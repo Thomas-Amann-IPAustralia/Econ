@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.1e-05,
+ "data": {
+  "context": "In *The market for design* (2014), section 4.1, “Considerations for the Review of the Designs System,” the passage discusses how Australian design-market participants’ behaviour and views on design rights may inform the 2014 ACIP review, including the system’s duration, grace period, harmonisation and overlap with other IP rights."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp03-market-for-design:0076",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000161,
+  "input": 1193,
+  "model": "gpt-6-luna",
+  "output": 83,
+  "reasoning": 0,
+  "seconds": 1.7
+ }
+}

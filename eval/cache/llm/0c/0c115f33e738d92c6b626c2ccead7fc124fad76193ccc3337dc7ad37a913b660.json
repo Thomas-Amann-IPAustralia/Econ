@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.5e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2018 section “Collaborative Research Grants Lead to Better IP Outcomes,” this passage introduces studies of Australian publicly funded research organisations and businesses, linking research grants to patent applications using data from 2001 to 2014. It reports that public research funding is associated with increased patent production, with a stronger impact for collaborative grants."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2018:0025",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00015,
+  "input": 1078,
+  "model": "gpt-6-luna",
+  "output": 84,
+  "reasoning": 0,
+  "seconds": 1.54
+ }
+}

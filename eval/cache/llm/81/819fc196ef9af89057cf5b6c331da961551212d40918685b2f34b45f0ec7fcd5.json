@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.5e-05,
+ "data": {
+  "context": "In the Australian IP Report 2023’s “Moving between employers” section, this passage uses Australian microdata to describe job switching from 2012 to 2019 and workers’ transitions into patent-holding businesses. It reports that about one in five employer changes were into such businesses and gives the likelihood of joining one without accounting for personal attributes."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2023:0116",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00013,
+  "input": 888,
+  "model": "gpt-6-luna",
+  "output": 82,
+  "reasoning": 0,
+  "seconds": 1.73
+ }
+}

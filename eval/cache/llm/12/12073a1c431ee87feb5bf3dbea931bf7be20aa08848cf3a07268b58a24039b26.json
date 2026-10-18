@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000336,
+ "data": {
+  "queries": [
+   "country of origin ICT design applications",
+   "top foreign applicants information and communication technology designs"
+  ],
+  "standalone_question": "Which country files the most ICT-related design applications in Australia?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr20-3",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000336,
+  "input": 663,
+  "model": "gemini-3.5-flash-lite",
+  "output": 55,
+  "reasoning": 0,
+  "seconds": 0.98
+ }
+}

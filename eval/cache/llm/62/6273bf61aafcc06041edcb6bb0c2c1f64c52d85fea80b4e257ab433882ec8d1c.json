@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.8e-05,
+ "data": {
+  "queries": [
+   "trade mark rights identical brand names unrelated businesses confusion goods services Australia"
+  ],
+  "standalone_question": "Can two unrelated companies use the same brand name, and what factors determine whether they may do so under Australian trade mark law?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr15-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 5.5e-05,
+  "input": 281,
+  "model": "gpt-6-luna",
+  "output": 54,
+  "reasoning": 0,
+  "seconds": 1.35
+ }
+}

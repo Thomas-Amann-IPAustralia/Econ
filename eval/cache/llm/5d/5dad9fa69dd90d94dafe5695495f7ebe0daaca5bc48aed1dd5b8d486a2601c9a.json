@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.7e-05,
+ "data": {
+  "context": "In the Australian IP Report 2026, this passage discusses proposed amendments to section 28 of the Copyright Act, clarifying its application to online, hybrid and classroom lessons and who may support or provide educational instruction, without intending to affect existing licensing arrangements."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0119",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000154,
+  "input": 896,
+  "model": "gpt-6-luna",
+  "output": 128,
+  "reasoning": 63,
+  "seconds": 1.89
+ }
+}

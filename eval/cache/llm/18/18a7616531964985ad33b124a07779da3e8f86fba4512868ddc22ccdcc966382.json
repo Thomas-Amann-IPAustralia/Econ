@@ -1,0 +1,24 @@
+{
+ "cost_usd": 3.7e-05,
+ "data": {
+  "queries": [
+   "trade marks predict business cycle methods forecasting predictive power"
+  ],
+  "standalone_question": "What methods did the researchers use to test whether trade mark activity predicts the business cycle?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-methods-6",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 7.5e-05,
+  "input": 286,
+  "model": "gpt-6-luna",
+  "output": 92,
+  "reasoning": 47,
+  "seconds": 1.61
+ }
+}

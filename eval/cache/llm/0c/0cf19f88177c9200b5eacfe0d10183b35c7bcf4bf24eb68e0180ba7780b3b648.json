@@ -1,0 +1,24 @@
+{
+ "cost_usd": 4.4e-05,
+ "data": {
+  "queries": [
+   "mining innovation METS firms innovation outside mining industry classification"
+  ],
+  "standalone_question": "Does the official industry classification for mining capture all of mining's innovation?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp04-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 8.8e-05,
+  "input": 674,
+  "model": "gpt-6-luna",
+  "output": 42,
+  "reasoning": 0,
+  "seconds": 1.46
+ }
+}

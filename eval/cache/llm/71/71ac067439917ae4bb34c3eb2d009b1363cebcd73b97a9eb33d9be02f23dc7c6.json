@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.4e-05,
+ "data": {
+  "context": "In the “New publications” section of the Australian IP Report 2025, this passage summarises research reports published in 2024–25 on computer-implemented patents, patent scope and the Raising the Bar reforms, patenting firms’ business environment and behaviour, and trade marks as indicators of Australia’s business cycle."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2025:0097",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000129,
+  "input": 914,
+  "model": "gpt-6-luna",
+  "output": 76,
+  "reasoning": 0,
+  "seconds": 1.58
+ }
+}

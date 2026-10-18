@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.6e-05,
+ "data": {
+  "context": "In *Drivers of AI investment* (2023), the executive summary’s key findings describe how company size, location, age, industry and patent holdings relate to firms’ AI adoption and AI capacity building, based on analysis of Australian firms and patent records. The passage also outlines possible policy responses, including targeted support and measures concerning the patent system."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "oce-ai-investment:0002",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000151,
+  "input": 1105,
+  "model": "gpt-6-luna",
+  "output": 81,
+  "reasoning": 0,
+  "seconds": 2.61
+ }
+}

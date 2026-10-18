@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.8e-05,
+ "data": {
+  "context": "In *Intellectual Property Rights, Business Profitability and Competition in the Australian Economy* (2020), section 2.5.1 describes the industry distribution of Australian businesses owning IPRs. Table 2.4 reports average annual numbers and percentage changes over 15 years by ANZSIC industry, highlighting Manufacturing and Wholesale Trade."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp10-ip-profitability-competition:0019",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000177,
+  "input": 1374,
+  "model": "gpt-6-luna",
+  "output": 80,
+  "reasoning": 0,
+  "seconds": 1.62
+ }
+}

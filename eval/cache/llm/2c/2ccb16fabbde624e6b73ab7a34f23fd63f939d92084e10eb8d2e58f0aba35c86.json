@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.6e-05,
+ "data": {
+  "context": "In the Australian IP Report 2026, this passage highlights three trends in Australian trade mark filings in 2025: growth across resident and non-resident applicants, stronger direct engagement with Australia relative to the Madrid system, and growth in filings from China."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0064",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000151,
+  "input": 828,
+  "model": "gpt-6-luna",
+  "output": 137,
+  "reasoning": 70,
+  "seconds": 1.69
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.3e-05,
+ "data": {
+  "context": "In the Research section of the Australian Intellectual Property Report 2018, the OCE describes research on trade mark cluttering and location names in Australian trade marks, and plans to use linked firm-level data to study how IP rights relate to business performance, competition and innovation in 2018–19."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2018:0037",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000187,
+  "input": 916,
+  "model": "gpt-6-luna",
+  "output": 190,
+  "reasoning": 116,
+  "seconds": 2.24
+ }
+}

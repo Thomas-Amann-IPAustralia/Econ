@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.2e-05,
+ "data": {
+  "context": "In the introduction of *Exporter responses to shocks: The role of trade marks* (2021), this passage outlines the study’s questions and findings on how trade marks relate to Australian manufacturing firms’ export entry, revenue and diversification under tariff, demand and real exchange-rate changes, using firm-level data from 2005 to 2017."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp11-exporters-trade-marks:0010",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000144,
+  "input": 1037,
+  "model": "gpt-6-luna",
+  "output": 80,
+  "reasoning": 0,
+  "seconds": 1.61
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "context": "In the 2021 paper *Exporter responses to shocks: The role of trade marks*, this passage in “Analytical approach to econometric challenges” discusses possible omitted-variable bias and reverse causality when estimating how trade marks relate to firms’ export revenue and diversification responses to tariffs and exchange rates. It describes the study’s use of within-firm, across-market time-series variation and notes remaining data limitations."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp11-exporters-trade-marks:0049",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000159,
+  "input": 1120,
+  "model": "gpt-6-luna",
+  "output": 93,
+  "reasoning": 0,
+  "seconds": 1.57
+ }
+}

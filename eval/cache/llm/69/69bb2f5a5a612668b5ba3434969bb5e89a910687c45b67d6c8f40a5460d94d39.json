@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.2e-05,
+ "data": {
+  "context": "In the 2018 Australian Intellectual Property Report, Chapter 6’s notes explain the data and methods for analysing how Australian Research Council grants relate to patenting by research organisations and collaborating businesses. The analysis links grants from 2001 to 2014 with patent applications and uses a fixed-effect Poisson model."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2018:0045",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000144,
+  "input": 1074,
+  "model": "gpt-6-luna",
+  "output": 74,
+  "reasoning": 0,
+  "seconds": 1.79
+ }
+}

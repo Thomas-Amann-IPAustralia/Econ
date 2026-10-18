@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000342,
+ "data": {
+  "queries": [
+   "Molonglo Group intellectual property importance",
+   "Molonglo Group design and brand protection"
+  ],
+  "standalone_question": "How important is intellectual property to the Canberra developer Molonglo Group?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "erp03-4",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000342,
+  "input": 664,
+  "model": "gemini-3.5-flash-lite",
+  "output": 57,
+  "reasoning": 0,
+  "seconds": 1.74
+ }
+}

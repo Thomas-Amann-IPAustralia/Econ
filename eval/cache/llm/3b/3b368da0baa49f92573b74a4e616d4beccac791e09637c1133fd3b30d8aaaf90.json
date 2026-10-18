@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.6e-05,
+ "data": {
+  "queries": [
+   "Raising the Bar reforms patent scope Australia inventive step sufficiency support claims"
+  ],
+  "standalone_question": "How much did the Raising the Bar reforms narrow the scope of Australian patents?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "multi-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 5.2e-05,
+  "input": 286,
+  "model": "gpt-6-luna",
+  "output": 46,
+  "reasoning": 0,
+  "seconds": 1.43
+ }
+}

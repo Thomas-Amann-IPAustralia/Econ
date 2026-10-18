@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6e-05,
+ "data": {
+  "context": "In the Australian IP Report 2026, this passage covers Indigenous Knowledge and participation in the IP system. It describes OCE research on the Treaty on Genetic Resources and Associated Traditional Knowledge, and on the commercial value of trade marks for Indigenous businesses and trade marks containing Indigenous Knowledge."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0126",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00012,
+  "input": 860,
+  "model": "gpt-6-luna",
+  "output": 67,
+  "reasoning": 0,
+  "seconds": 2.01
+ }
+}

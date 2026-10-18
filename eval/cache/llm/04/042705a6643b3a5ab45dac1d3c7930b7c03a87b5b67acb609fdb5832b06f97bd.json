@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.6e-05,
+ "data": {
+  "context": "In *The Australian Mining Industry: More than Just Shovels and Being the Lucky Country* (2015), the methodology section explains how publicly funded entities and mining-industry applicants were identified for the patent analysis. It describes the selected Australian universities, CRCs and CSIRO, and the use of IPGOD records for ANZSIC Division B subdivisions B06, B08 and B10, classifying applicants as METS firms, operating miners or publicly funded entities."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp04-mining-innovation:0014",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000171,
+  "input": 1178,
+  "model": "gpt-6-luna",
+  "output": 107,
+  "reasoning": 0,
+  "seconds": 1.96
+ }
+}

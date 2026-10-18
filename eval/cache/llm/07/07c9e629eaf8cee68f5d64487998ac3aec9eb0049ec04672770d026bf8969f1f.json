@@ -1,0 +1,24 @@
+{
+ "cost_usd": 4.4e-05,
+ "data": {
+  "queries": [
+   "trade marks as a leading indicator of the business cycle"
+  ],
+  "standalone_question": "Can trade mark filings be used to predict recessions in Australia?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-evidence-5",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 8.7e-05,
+  "input": 673,
+  "model": "gpt-6-luna",
+  "output": 40,
+  "reasoning": 0,
+  "seconds": 1.23
+ }
+}

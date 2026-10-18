@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000349,
+ "data": {
+  "queries": [
+   "mining innovation and METS firms",
+   "mining sector intellectual property rights"
+  ],
+  "standalone_question": "What role does intellectual property play in Australia's mining sector and mining equipment, technology and services firms?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-synthesis-5",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000349,
+  "input": 662,
+  "model": "gemini-3.5-flash-lite",
+  "output": 60,
+  "reasoning": 0,
+  "seconds": 0.91
+ }
+}

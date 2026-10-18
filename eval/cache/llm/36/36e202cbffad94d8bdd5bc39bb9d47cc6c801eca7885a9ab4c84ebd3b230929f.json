@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5.5e-05,
+ "data": {
+  "context": "In the Australian IP Report 2026, the “Patents and emerging technologies” section discusses forthcoming OCE research on how patenting behaviour and examination practices affect competition and technology development in computer-implemented inventions and software-related technologies."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0124",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00011,
+  "input": 814,
+  "model": "gpt-6-luna",
+  "output": 58,
+  "reasoning": 0,
+  "seconds": 1.84
+ }
+}

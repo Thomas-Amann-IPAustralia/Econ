@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.5e-05,
+ "data": {
+  "context": "In IP Australia Economic Research Paper 10 (2020), Appendix E’s “Explanatory variables” section defines the IPR ownership and IPR stock measures, and the business age, fiscal-year and industry controls used in the profitability analysis. The measures distinguish Australian patents, trade marks and design rights, alone or in combination, and stock per employee."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp10-ip-profitability-competition:0089",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00017,
+  "input": 1289,
+  "model": "gpt-6-luna",
+  "output": 83,
+  "reasoning": 0,
+  "seconds": 1.59
+ }
+}

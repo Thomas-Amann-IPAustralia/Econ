@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000346,
+ "data": {
+  "queries": [
+   "SMEs and growth intellectual property rights",
+   "business performance profitability patenting firms small business"
+  ],
+  "standalone_question": "Is there evidence that filing for intellectual property rights helps small and medium enterprises grow?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "multi-4",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000346,
+  "input": 663,
+  "model": "gemini-3.5-flash-lite",
+  "output": 59,
+  "reasoning": 0,
+  "seconds": 1.16
+ }
+}

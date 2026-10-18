@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.7e-05,
+ "data": {
+  "context": "In the 2021 IP Australia Economic Research Paper *Exporter responses to shocks: The role of trade marks*, this table presents robustness checks for export-diversity responses to tariffs, using two-year lags and changes in variables. It reports results separately for firms with long and short export histories and includes interactions with earlier trade mark activity."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp11-exporters-trade-marks:0120",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000175,
+  "input": 1356,
+  "model": "gpt-6-luna",
+  "output": 79,
+  "reasoning": 0,
+  "seconds": 1.32
+ }
+}

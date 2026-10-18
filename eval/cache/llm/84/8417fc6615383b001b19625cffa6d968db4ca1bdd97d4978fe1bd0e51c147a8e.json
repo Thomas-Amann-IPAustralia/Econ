@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.3e-05,
+ "data": {
+  "queries": [
+   "most common place name in Australian trade marks"
+  ],
+  "standalone_question": "Which place name appears most often in Australian trade marks?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr18-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 4.6e-05,
+  "input": 282,
+  "model": "gpt-6-luna",
+  "output": 36,
+  "reasoning": 0,
+  "seconds": 1.07
+ }
+}

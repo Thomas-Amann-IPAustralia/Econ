@@ -1,0 +1,27 @@
+{
+ "cost_usd": 6.2e-05,
+ "data": {
+  "queries": [
+   "underused intellectual property rights and support gaps among Australian businesses",
+   "IP use and innovation trends by firm size, industry and region",
+   "patent trade mark design and plant breeder's rights uptake trends and barriers",
+   "intellectual property, productivity, exports and firm growth opportunities"
+  ],
+  "standalone_question": "Based on trends and data in IP Australia’s Australian IP Reports and economic research papers, what underexplored opportunity areas could IP Australia pursue?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "owner-5",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000124,
+  "input": 299,
+  "model": "gpt-6-luna",
+  "output": 188,
+  "reasoning": 90,
+  "seconds": 2.63
+ }
+}

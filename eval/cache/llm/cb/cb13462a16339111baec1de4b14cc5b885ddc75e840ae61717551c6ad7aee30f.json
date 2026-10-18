@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000339,
+ "data": {
+  "queries": [
+   "Chinese patent applications origin trends",
+   "trade mark filings by country of origin China"
+  ],
+  "standalone_question": "How has China's role in Australian intellectual property filings changed over time?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-trend-12",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000339,
+  "input": 662,
+  "model": "gemini-3.5-flash-lite",
+  "output": 56,
+  "reasoning": 0,
+  "seconds": 0.98
+ }
+}

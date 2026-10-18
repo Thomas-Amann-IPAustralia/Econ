@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7e-05,
+ "data": {
+  "context": "In the Australian IP Report 2024, the Trade marks section describes Australian filing trends in 2023. It reports growth in overall and resident filings alongside changes in technology-intensive services filings and filings from the United States and China, and relates trade mark filings to business entry."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2024:0061",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00014,
+  "input": 838,
+  "model": "gpt-6-luna",
+  "output": 112,
+  "reasoning": 43,
+  "seconds": 3.36
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.5e-05,
+ "data": {
+  "context": "In the introduction to the Australian Intellectual Property Report 2020, this passage gives IP Australia’s Twitter handle and a patent record showing its number, standard application type, granted status and paid-to date."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2020:0004",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00017,
+  "input": 846,
+  "model": "gpt-6-luna",
+  "output": 170,
+  "reasoning": 114,
+  "seconds": 4.09
+ }
+}

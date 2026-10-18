@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.6e-05,
+ "data": {
+  "queries": [
+   "Australian trade mark applicants overseas applications by destination country 2014"
+  ],
+  "standalone_question": "Around 2014, in which overseas countries did Australians most often seek trade mark protection?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr16-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 5.2e-05,
+  "input": 288,
+  "model": "gpt-6-luna",
+  "output": 47,
+  "reasoning": 0,
+  "seconds": 1.32
+ }
+}

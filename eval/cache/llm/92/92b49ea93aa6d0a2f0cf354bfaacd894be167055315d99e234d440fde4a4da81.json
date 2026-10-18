@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.7e-05,
+ "data": {
+  "context": "In the 2024 report *Raising the Bar reforms: Measuring the impact on relative patent scope*, the Introduction describes a two-stage study of Australian patent claim scope compared with equivalent EPO and USPTO patents. It explains the manual review of 500 patent triplets and the machine-learning analysis of more than 80,000 triplets with examination request years from 2000 to 2019, used to assess the impact of Australia’s 2013 Raising the Bar reforms."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp14-raising-the-bar:0007",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000173,
+  "input": 1187,
+  "model": "gpt-6-luna",
+  "output": 109,
+  "reasoning": 0,
+  "seconds": 2.15
+ }
+}

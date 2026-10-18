@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.5e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2015, the Research program section describes IP Australia’s research and data initiatives. It covers the 2014 release of IPGOD, a dataset of more than 100 years of administrative data on patents, trade marks, designs and plant breeder’s rights, and completed studies of design markets and Australia’s medical devices industry."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2015:0020",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00013,
+  "input": 880,
+  "model": "gpt-6-luna",
+  "output": 84,
+  "reasoning": 0,
+  "seconds": 2.08
+ }
+}

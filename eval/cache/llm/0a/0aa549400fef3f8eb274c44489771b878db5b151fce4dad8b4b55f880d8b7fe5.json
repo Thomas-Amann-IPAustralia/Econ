@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000204,
+ "data": {
+  "queries": [
+   "patents economic growth Australia historical evidence",
+   "economic impact of patents Australia"
+  ],
+  "standalone_question": "Is there historical evidence that patents helped Australia's economy grow?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr25-3",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000204,
+  "input": 238,
+  "model": "gemini-3.5-flash-lite",
+  "output": 53,
+  "reasoning": 0,
+  "seconds": 0.87
+ }
+}

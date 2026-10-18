@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.3e-05,
+ "data": {
+  "context": "In the 2021 Economic Research Paper *Exporter responses to shocks: The role of trade marks*, this section reports robustness checks for export entry, revenue and diversification using alternative estimation samples, including samples that drop the largest or smallest exporters. The accompanying table gives model specifications and sample statistics for these checks."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp11-exporters-trade-marks:0129",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000147,
+  "input": 1108,
+  "model": "gpt-6-luna",
+  "output": 72,
+  "reasoning": 0,
+  "seconds": 1.59
+ }
+}

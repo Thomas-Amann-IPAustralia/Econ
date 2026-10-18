@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000108,
+ "data": {
+  "context": "In the Australian IP Report 2023, under “Representation in top management and STEM roles” in the IP, diversity and innovation discussion, this study’s analysis compares women’s and overseas-born workers’ representation in Australian business leadership and STEM roles in 2019. It also describes the regional origins of overseas-born STEM workers and changes in their representation since 2015."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2023:0096",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000217,
+  "input": 1135,
+  "model": "gpt-6-luna",
+  "output": 206,
+  "reasoning": 118,
+  "seconds": 2.65
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "cost_usd": 7.7e-05,
+ "data": {
+  "queries": [
+   "exporters trade marks economic shocks firm performance",
+   "intellectual property rights business profitability competition uncertainty"
+  ],
+  "standalone_question": "How do intellectual property rights help firms cope with economic shocks and uncertainty?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-synthesis-7",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000155,
+  "input": 672,
+  "model": "gpt-6-luna",
+  "output": 176,
+  "reasoning": 126,
+  "seconds": 2.23
+ }
+}

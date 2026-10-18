@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5.9e-05,
+ "data": {
+  "context": "In the Australian IP Report 2025 section “Applicant behaviours and outcomes,” this passage compares domestic Australian and foreign businesses’ timing of patent examination requests and their subsequent follow-on patenting. It says domestic businesses tend to wait longer and more often reference the original patent in later applications."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2025:0021",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000118,
+  "input": 837,
+  "model": "gpt-6-luna",
+  "output": 68,
+  "reasoning": 0,
+  "seconds": 1.42
+ }
+}

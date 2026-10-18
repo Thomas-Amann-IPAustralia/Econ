@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2020, the Patents section’s “Patents in the digital economy” topic describes ICT-related standard patent applications in Australia from 2000 to 2018, including their recovery after a decline. It also covers 2019 provisional patent filings and the enacted phase-out of innovation patents, following consultation and research on their support for SMEs."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2020:0013",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000163,
+  "input": 1188,
+  "model": "gpt-6-luna",
+  "output": 88,
+  "reasoning": 0,
+  "seconds": 1.56
+ }
+}

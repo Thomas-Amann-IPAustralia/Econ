@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000355,
+ "data": {
+  "queries": [
+   "patent filing trends small and medium enterprises 2021",
+   "SME patent applicants statistics"
+  ],
+  "standalone_question": "How did patent filings by small and medium businesses change in 2021?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr22-1",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000355,
+  "input": 667,
+  "model": "gemini-3.5-flash-lite",
+  "output": 62,
+  "reasoning": 0,
+  "seconds": 1.04
+ }
+}

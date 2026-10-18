@@ -1,0 +1,21 @@
+{
+ "cost_usd": 4.4e-05,
+ "data": {
+  "context": "In the contents of the Australian Intellectual Property Report 2017, this passage lists the report’s sections and their starting pages, including designs, plant breeder’s rights, university–industry collaboration, the Productivity Commission’s IP inquiry, and the research program."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2017:0003",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 8.9e-05,
+  "input": 580,
+  "model": "gpt-6-luna",
+  "output": 62,
+  "reasoning": 0,
+  "seconds": 1.58
+ }
+}

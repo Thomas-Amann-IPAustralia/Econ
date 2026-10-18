@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000371,
+ "data": {
+  "queries": [
+   "patent holding SMEs firm growth dynamics",
+   "structural change in patenting behaviour small firms",
+   "business environment of patenting firms and growth"
+  ],
+  "standalone_question": "Why are fewer patent-holding small and medium enterprises growing into large firms?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-synthesis-3",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000371,
+  "input": 663,
+  "model": "gemini-3.5-flash-lite",
+  "output": 69,
+  "reasoning": 0,
+  "seconds": 0.91
+ }
+}

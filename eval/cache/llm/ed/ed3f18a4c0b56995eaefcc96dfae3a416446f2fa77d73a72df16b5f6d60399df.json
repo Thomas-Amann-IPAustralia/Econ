@@ -1,0 +1,25 @@
+{
+ "cost_usd": 2.9e-05,
+ "data": {
+  "queries": [
+   "trade mark applications economic cycles GDP business cycle",
+   "trade mark filings COVID-19 pandemic Australia"
+  ],
+  "standalone_question": "Do Australian trade mark filings typically move with the economy, and how did they change during the COVID-19 pandemic?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr23-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 5.8e-05,
+  "input": 290,
+  "model": "gpt-6-luna",
+  "output": 57,
+  "reasoning": 0,
+  "seconds": 1.33
+ }
+}

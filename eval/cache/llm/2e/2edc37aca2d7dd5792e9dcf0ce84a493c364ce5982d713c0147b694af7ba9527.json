@@ -1,0 +1,24 @@
+{
+ "cost_usd": 3.9e-05,
+ "data": {
+  "queries": [
+   "Australian designs system reforms changes rationale design rights legislation"
+  ],
+  "standalone_question": "What changes have been made to Australia’s designs system, and what were the reasons for those changes?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-policy-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 7.7e-05,
+  "input": 284,
+  "model": "gpt-6-luna",
+  "output": 97,
+  "reasoning": 49,
+  "seconds": 1.67
+ }
+}

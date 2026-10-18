@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.3e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2019, the plant breeder’s rights section compares overseas sources of PBR applications. It explains that Chinese applicants led worldwide filings in 2017 but filed almost exclusively in China, unlike applicants from the Netherlands and the US, who filed most applications overseas."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2019:0024",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000126,
+  "input": 910,
+  "model": "gpt-6-luna",
+  "output": 70,
+  "reasoning": 0,
+  "seconds": 1.39
+ }
+}

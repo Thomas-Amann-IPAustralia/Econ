@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.8e-05,
+ "data": {
+  "context": "Australian Intellectual Property Report 2015, section “IP applications in Australia”: this passage compares Australian filings for patents, designs, trade marks and plant breeder’s rights in 2014 with 2013, including filer origins and the decline in standard patent applications, which the report links to the Raising the Bar Act’s implementation in 2013."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2015:0004",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000136,
+  "input": 952,
+  "model": "gpt-6-luna",
+  "output": 81,
+  "reasoning": 0,
+  "seconds": 1.76
+ }
+}

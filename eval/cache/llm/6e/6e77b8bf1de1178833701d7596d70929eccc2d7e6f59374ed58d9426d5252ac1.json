@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In the Australian IP Report 2026’s discussion of patent filing trends, this passage summarises four patterns in 2025 data: stronger resident patenting, growth in provisional patents and direct filings, changes in cross-border and Australia-linked collaboration, and shifts in the technology areas represented in US, Chinese and Australian filings."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0033",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000163,
+  "input": 827,
+  "model": "gpt-6-luna",
+  "output": 161,
+  "reasoning": 83,
+  "seconds": 2.31
+ }
+}

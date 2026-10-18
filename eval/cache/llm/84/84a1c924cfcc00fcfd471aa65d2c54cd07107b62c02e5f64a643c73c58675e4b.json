@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000107,
+ "data": {
+  "context": "In the Australian IP Report 2023, this passage is part of “Diversity and innovation in Australia” and contains endnotes on gender diversity in science, business leadership and start-up funding, including an estimate linking women’s share of managers to businesses’ IP holdings."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2023:0105",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000214,
+  "input": 1234,
+  "model": "gpt-6-luna",
+  "output": 182,
+  "reasoning": 114,
+  "seconds": 2.4
+ }
+}

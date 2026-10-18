@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000331,
+ "data": {
+  "queries": [
+   "designs law requirements and registrability criteria",
+   "what constitutes a registrable design"
+  ],
+  "standalone_question": "What makes a product's look eligible for design protection?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr26-4",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000331,
+  "input": 662,
+  "model": "gemini-3.5-flash-lite",
+  "output": 53,
+  "reasoning": 0,
+  "seconds": 0.93
+ }
+}
