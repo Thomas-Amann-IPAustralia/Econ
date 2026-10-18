@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001053,
+ "data": {
+  "reason": "Answer B provides more comprehensive coverage by including the work surrounding the Riyadh Design Law Treaty in relation to Indigenous Knowledge and design applications, which Answer A leaves out. Both answers accurately represent their supporting quotations, but Answer B's structure and completeness make it a better answer.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-policy-8:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002105,
+  "input": 2492,
+  "model": "gemini-3.8-flash",
+  "output": 63,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

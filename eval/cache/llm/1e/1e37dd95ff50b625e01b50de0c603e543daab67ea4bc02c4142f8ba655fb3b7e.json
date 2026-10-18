@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000929,
+ "data": {
+  "reason": "Answer A provides a more comprehensive answer to the second part of the question ('who do they collaborate with?') by utilizing available report evidence on co-filings with universities, government bodies like CSIRO, and private industry partners. Answer B prematurely admits a gap regarding partner types and named entities that Answer A successfully documents from the sources.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-compare-6:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001858,
+  "input": 2098,
+  "model": "gemini-3.8-flash",
+  "output": 76,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000548,
+ "data": {
+  "reason": "Both answers accurately convey the figures and caveats from the source publication. Answer B is slightly better as it includes the explicit quote defining the tariff cut scenario (from 10 per cent to zero), preventing potential ambiguity between a 10 percentage point cut versus a 10% relative reduction.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "erp11-1:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001096,
+  "input": 1116,
+  "model": "gemini-3.8-flash",
+  "output": 69,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

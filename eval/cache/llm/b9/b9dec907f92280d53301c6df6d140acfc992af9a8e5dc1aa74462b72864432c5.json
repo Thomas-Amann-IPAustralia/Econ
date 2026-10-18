@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001241,
+ "data": {
+  "reason": "Answer A is more comprehensive and covers key elements explicitly noted in the narrative, such as the Riyadh Design Law Treaty. It also provides a stronger explanation of the underlying research rationale for changing the system (e.g., addressing business-model fit and market friction).",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-policy-3:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002482,
+  "input": 2995,
+  "model": "gemini-3.8-flash",
+  "output": 63,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000367,
+ "data": {
+  "reason": "Both answers directly answer the question using the exact same quote from the 2023 Australian IP Report. They are virtually identical in content, accuracy, and conciseness, making them tied.",
+  "winner": "tie"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "ipr22-2:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000734,
+  "input": 729,
+  "model": "gemini-3.8-flash",
+  "output": 50,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

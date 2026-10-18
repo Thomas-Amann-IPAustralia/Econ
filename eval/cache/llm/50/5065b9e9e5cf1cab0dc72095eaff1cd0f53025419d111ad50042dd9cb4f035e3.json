@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000436,
+ "data": {
+  "reason": "Both answers are virtually identical in their prose, structure, and supporting evidence. They accurately, fully, and concisely answer the question using the provided quotes, making this a clear tie.",
+  "winner": "tie"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "ipr26-4:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000873,
+  "input": 934,
+  "model": "gemini-3.8-flash",
+  "output": 46,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

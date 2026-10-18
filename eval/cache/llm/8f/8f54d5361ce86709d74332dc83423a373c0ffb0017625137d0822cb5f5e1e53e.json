@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.00106,
+ "data": {
+  "reason": "Answer A is more comprehensive, as it includes the relevant work on designs under the Riyadh Design Law Treaty and Australia's role in concluding the treaties, which Answer B omits. Both answers adhere strictly to their sources, but A provides a fuller picture of IP Australia's activities.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-policy-8:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00212,
+  "input": 2492,
+  "model": "gemini-3.8-flash",
+  "output": 67,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

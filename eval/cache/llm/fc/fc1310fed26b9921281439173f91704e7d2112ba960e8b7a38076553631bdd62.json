@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001319,
+ "data": {
+  "reason": "Both answers are exceptionally well supported by their cited evidence and cover overall numbers, resident vs non-resident shares, and plant type breakdowns. Answer A is slightly better because it includes the leading countries of origin (such as the US, the Netherlands, and France), which directly answers one of the specific dimensions highlighted in the narrative.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-trend-6:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002639,
+  "input": 3144,
+  "model": "gemini-3.8-flash",
+  "output": 75,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

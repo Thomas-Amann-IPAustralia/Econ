@@ -740,3 +740,61 @@ replies for those needs are cached, so the cost is the answers (about $0.70 at F
 
 **Spend:** OpenAI $0.103 (filter calls at Flex, $0.089, and the standard-tier latency probe). Totals: OpenAI
 $2.25, Gemini $2.16 of $2.50 each.
+
+---
+
+## D-019 — End to end, the filter's 20 passages give better answers than the adopted 20 (Claude; a recommendation, the owner decides)
+
+**Context.** D-018 found that a relevance filter (gpt-6-luna rates the 60-passage context, the 20 rated highest go
+to the answer model) reaches much more of the evidence, and recommended an answer comparison before adoption. The
+owner approved $1 more OpenAI budget for it (`config/eval.yaml`, openai 3.50). Grid `eval/grids/answers-v2.yaml`,
+committed at `5c75c92` before any answer: the answers-v1 needs, B = the adopted 20 (answers-v1's B answers,
+reused after checking their evidence is unchanged), C = the filter's 20; same answer model (gpt-6.1-sol, medium),
+prompt (answer-v1), tier (Flex) and check. Report `reports/answers-v2.md`; runs `eval/runs/answers/answers-v2.*`.
+
+**Disclosed.**
+- The OpenAI account ran out of credit during C's answers (HTTP 429 `credit_balance_exhausted`, with HTTP 502s and
+  "Flex processing is temporarily unavailable" before it), at $2.88 of metered OpenAI spend: the account balance,
+  not the approved budget, was the limit. Failed calls are not cached, so the answer step was re-run twice; two
+  answers came on the second run and one on the third. Three needs never got a C answer (explore-evidence-1,
+  explore-compare-7, explore-strategy-2); one attempt at them was made at the standard tier, which also failed.
+  The owner chose to finish on the other 57 (amendment 1, committed at `2d9d0c2` before any judging): a need either
+  setting failed to answer is left out of both. 30 exploratory and 27 silver needs remain.
+- Claude's blind verdicts were committed (`fc44ada`) before the key was read and before Gemini's preferences
+  were requested.
+
+**Results** (57 needs).
+
+| | B (adopted 20) | C (filter's 20) |
+|---|---|---|
+| Passed the check | 57/57 | 57/57 (all first time) |
+| Gemini, both orders agreeing: preferred, all needs | 8 | **28** (p 0.001; 6 ties, 15 split) |
+| Gemini, exploratory (30) | 4 | **18** (p 0.004; 8 split) |
+| Gemini, silver (27) | 4 | 10 (p 0.18; 6 ties, 7 split) |
+| Claude, blind, exploratory (30) | 4 | **17** (p 0.007; 9 ties) |
+| Distinct relevant passages cited, all | 3.70 | 4.09 (+0.39 [+0.07, +0.70]) |
+| Distinct documents among them, exploratory | 2.90 | 3.13 (+0.23 [-0.07, +0.57]) |
+| Claims per answer, exploratory | 5.73 | 6.17 (+0.43 [+0.07, +0.80]) |
+| Silver answers citing the gold passage | 0.78 | 0.70 (-0.07 [-0.22, +0.07]) |
+| Cost per answer (Flex) | $0.0120 | $0.0111 |
+
+Where both judges stated a preference (19 exploratory pairs), they agreed on all 19. Against the rule fixed in
+advance (C preferred at p < 0.05 on all or exploratory needs; silver not favouring B; pass rate within 5 points):
+**met**.
+
+**Reading.** The preference gain is larger than the grounding gain: answers cite only about 0.4 more relevant
+passages, but with better evidence to choose from they answer more directly (both judges' reasons cite coverage
+of the question's parts and more current figures). Answer-v1's brevity still caps how much of the evidence an
+answer uses (D-018). The silver gold-passage rate fell (not significantly): the filter sometimes displaces the
+passage a lookup was written from with another relevant one; worth watching after adoption.
+
+**Recommendation (the owner decides: it adds a model call to every question).** Adopt the relevance filter in
+the service. Building it means: a filter step in `econ.answer.pipeline` between search (now 60 passages) and the
+answer, the prompt moved to `prompts/` and locked as filter-v1, a config switch (`answer.filter`), the
+first-stage order kept when the filter call fails (as search does without the embedder), its cost under the daily
+spend cap, and `econ verify-search` extended to the filtered context. Measured cost and delay: about $0.002 a
+question at the standard tier and 4.4 s median (D-018). Separately, the OpenAI account needs credit before the
+service can answer at all.
+
+**Spend:** OpenAI $0.63 (C's answers, including billed retries), Gemini $0.10 (the pairwise judge, Batch). Totals:
+OpenAI $2.88 of $3.50, Gemini $2.26 of $2.50.

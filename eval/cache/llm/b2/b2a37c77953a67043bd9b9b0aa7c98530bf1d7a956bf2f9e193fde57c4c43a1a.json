@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000861,
+ "data": {
+  "reason": "Answer B is more complete because it explicitly defines copyright and what it protects alongside trade marks and design rights, which Answer A omitted from its initial definitions. Answer B also integrates more evidence on how these rights complement each other commercially.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "owner-3:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001721,
+  "input": 2020,
+  "model": "gemini-3.8-flash",
+  "output": 55,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001331,
+ "data": {
+  "reason": "Both answers are very well-researched, carefully cited, and adhere strictly to their sources. Answer B is slightly better as it gives specific, concrete examples of AI patent applications (Atlassian, CSIRO, medical and agricultural applications) and includes exact figures regarding provisional applicant trends.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-trend-11:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002662,
+  "input": 3209,
+  "model": "gemini-3.8-flash",
+  "output": 68,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

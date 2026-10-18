@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000949,
+ "data": {
+  "reason": "Both answers define cluttering and discuss whether it is a problem in Australia using the 2019 and 2026 reports. Answer A is slightly more informative as it includes the specific evidence regarding declining first-term renewal rates that served as an indicator of potential cluttering.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-synthesis-10:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001897,
+  "input": 2154,
+  "model": "gemini-3.8-flash",
+  "output": 75,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

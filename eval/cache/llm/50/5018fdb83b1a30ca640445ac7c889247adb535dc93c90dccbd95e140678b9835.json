@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000983,
+ "data": {
+  "reason": "Both answers accurately cover the relevant evidence regarding first-time filings, first-year filings, and first grants, while appropriately noting causal caveats and distinguishing first filings from general filings. Answer B is slightly better structured by leading immediately with the specific first-time filing evidence (first trade mark filing) before broadening to general SME outcomes.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-synthesis-1:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001966,
+  "input": 2247,
+  "model": "gemini-3.8-flash",
+  "output": 75,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

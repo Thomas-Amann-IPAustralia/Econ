@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000865,
+ "data": {
+  "reason": "Both answers address the prompt accurately and draw on identical core explanations. Answer A is slightly better because it includes an additional relevant administrative caution regarding year-to-year swings: publication delays in the journals and revisions to registration counts between report years.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "ipr26-5:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001729,
+  "input": 2016,
+  "model": "gemini-3.8-flash",
+  "output": 58,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

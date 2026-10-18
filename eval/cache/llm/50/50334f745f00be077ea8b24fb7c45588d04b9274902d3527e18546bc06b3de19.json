@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000584,
+ "data": {
+  "reason": "Both answers cite the same study and capture the core findings, caveats, and controls equally well. Answer A is slightly better because it explicitly notes the terminology gap between the question's 'let their patents lapse' and the study's 'retiring patents', demonstrating greater accuracy and honesty regarding the evidence.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "erp15-2:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001168,
+  "input": 1202,
+  "model": "gemini-3.8-flash",
+  "output": 71,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

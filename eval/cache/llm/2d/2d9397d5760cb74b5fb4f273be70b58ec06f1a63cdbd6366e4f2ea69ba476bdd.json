@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000558,
+ "data": {
+  "reason": "Both answers provide the exact same facts, figures, and definitions from the sources, clearly noting the distinction between F1 score and accuracy. Answer A is slightly preferred for spelling out what the MLP acronym stands for upon first mention.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "erp14-2:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001115,
+  "input": 1211,
+  "model": "gemini-3.8-flash",
+  "output": 55,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

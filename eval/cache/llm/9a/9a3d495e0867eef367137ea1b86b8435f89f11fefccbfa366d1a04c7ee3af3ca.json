@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000879,
+ "data": {
+  "reason": "Answer A is more complete because it explicitly defines all three rights asked about in the prompt (including copyright), whereas Answer B fails to provide a dedicated definition or explanation of what copyright protects. Answer A also clearly and accurately addresses the jurisdictional and commercial intersection points supported by its evidence.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "owner-3:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001759,
+  "input": 2020,
+  "model": "gemini-3.8-flash",
+  "output": 65,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

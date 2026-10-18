@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000382,
+ "data": {
+  "reason": "Both answers are virtually identical in prose, meaning, and cited evidence. Both directly answer the question with full support from their quotes.",
+  "winner": "tie"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "erp14-3:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000764,
+  "input": 839,
+  "model": "gemini-3.8-flash",
+  "output": 36,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

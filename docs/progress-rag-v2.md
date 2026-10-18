@@ -160,3 +160,10 @@ rates the 60-passage context and the answer model gets the best 20. Exploratory 
 lookups 0.765 to 0.833, ndcg@10 0.672 to 0.846, same context size; filter step 4.4 s median, about $0.002 a
 question. Recommended to the owner, pending an end-to-end answer comparison (needs about $0.60 more OpenAI
 budget). Spend: OpenAI $2.25 of $2.50, Gemini $2.16 of $2.50.
+
+## 2026-10-18 — End-to-end check of the filter (D-019): better answers
+The filter's 20 against the adopted 20 on the answers-v1 needs, answer model and prompt unchanged. The OpenAI
+account ran out of credit with 3 needs unanswered; on the other 57 (the owner's choice), Gemini prefers the filtered
+answers 28 to 8 (exploratory 18 to 4) and Claude, blind, 17 to 4; all 57 pass the check. Recommended to the owner:
+adopt the filter in the service (a design is in D-019). Spend: OpenAI $2.88 of $3.50 (account credit exhausted),
+Gemini $2.26 of $2.50.

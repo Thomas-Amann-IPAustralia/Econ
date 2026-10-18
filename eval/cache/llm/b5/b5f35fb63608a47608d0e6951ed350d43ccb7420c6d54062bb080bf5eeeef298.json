@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000774,
+ "data": {
+  "reason": "Answer B provides a more comprehensive answer by including absolute filing numbers alongside percentages, relevant context explaining why there are no figures for the Hague Agreement (Australia had only agreed in principle to join), and a helpful data caveat regarding revisions between reports.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-policy-7:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001548,
+  "input": 1779,
+  "model": "gemini-3.8-flash",
+  "output": 57,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

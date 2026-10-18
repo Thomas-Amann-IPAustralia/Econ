@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001103,
+ "data": {
+  "reason": "Answer A provides a more direct and thorough explanation of the linking process, specifically detailing how applicants are identified and matched using cleaned names, ABNs, and machine-learning algorithms in IPGOD before integration with BLADE. Answer B is good, but includes access and confidentiality restrictions that are less central to the linking mechanism asked about in the prompt.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-methods-1:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002206,
+  "input": 2546,
+  "model": "gemini-3.8-flash",
+  "output": 79,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000767,
+ "data": {
+  "reason": "Both answers accurately explain how the benchmark was created using a manual assessment by IP Australia patent examiners on 500 patent triplets. Answer A is slightly better because it explicitly notes how the benchmark measured relative scope (categorising scope as 'broader' versus 'narrower' or 'similar'), which directly informs how the benchmark was defined for the model.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "erp14-1:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001534,
+  "input": 1640,
+  "model": "gemini-3.8-flash",
+  "output": 81,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000718,
+ "data": {
+  "reason": "Both answers cite the exact same figures, study details, and causal caveats from the relevant IP Australia reports. They are exceptionally well-matched in factual content, precision, and clarity, resulting in an effective tie.",
+  "winner": "tie"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "multi-4:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001437,
+  "input": 1656,
+  "model": "gemini-3.8-flash",
+  "output": 52,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000999,
+ "data": {
+  "reason": "Both answers draw on the exact same core studies and appropriately distinguish general filings and grants from first-time filings. Answer A is slightly better because its caveat about causality is directly supported by its citation from the 2026 report, whereas Answer B makes an unsupported inferential leap in claim 1 asserting that regression modeling means the findings cannot be read as causal.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-synthesis-1:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001997,
+  "input": 2247,
+  "model": "gemini-3.8-flash",
+  "output": 83,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

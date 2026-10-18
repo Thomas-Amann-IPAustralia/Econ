@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000771,
+ "data": {
+  "reason": "Both answers accurately address the question using identical source evidence and report the minor discrepancy between reporting years. Answer A is slightly better because it includes the growth figures for non-residents, China, and India (tripling, 4.4 times, and 52-fold increase) directly showing the scale of the drive, whereas Answer B leaves out those relative growth figures.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "ipr21-1:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001541,
+  "input": 1630,
+  "model": "gemini-3.8-flash",
+  "output": 85,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

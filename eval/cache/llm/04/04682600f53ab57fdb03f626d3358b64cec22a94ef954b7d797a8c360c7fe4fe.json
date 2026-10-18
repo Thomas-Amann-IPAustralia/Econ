@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000493,
+ "data": {
+  "reason": "Both answers accurately identify large firms as most likely and small firms as least likely to file patents based on the 2024 study. Answer A is superior because it provides important econometric nuance and caveats, noting that the finding regarding small firms is model-dependent.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "erp15-3:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000986,
+  "input": 1000,
+  "model": "gemini-3.8-flash",
+  "output": 63,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

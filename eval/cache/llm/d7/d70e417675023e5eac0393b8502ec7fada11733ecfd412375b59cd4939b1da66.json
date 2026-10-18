@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001435,
+ "data": {
+  "reason": "Both answers provide high-quality coverage of the machine learning techniques used in the patent scope and CII research projects. Answer A is slightly better because it includes an additional major use case documented in the sources (using machine learning for entity and applicant matching in IPGOD research data).",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-methods-2:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002871,
+  "input": 3503,
+  "model": "gemini-3.8-flash",
+  "output": 65,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

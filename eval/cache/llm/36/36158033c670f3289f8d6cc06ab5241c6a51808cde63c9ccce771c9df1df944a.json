@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000392,
+ "data": {
+  "reason": "Both answers accurately extract the reasons from the source quote. Answer A is slightly better because it includes the full scope of job redundancy mentioned in the quote (haulage truck and train drivers) resulting from the adoption of these autonomous vehicles, whereas Answer B leaves out train drivers.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "erp04-3:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000784,
+  "input": 725,
+  "model": "gemini-3.8-flash",
+  "output": 64,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

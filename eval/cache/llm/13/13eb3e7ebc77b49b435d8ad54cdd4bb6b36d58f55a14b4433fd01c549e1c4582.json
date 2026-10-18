@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001009,
+ "data": {
+  "reason": "Answer B provides a more comprehensive and continuous timeline of the resident share over time, including data points for 2019, 2020, and 2022 (correctly calculated from non-resident shares). It also adds valuable context by distinguishing standard patents from provisional and innovation patents, where resident shares are substantially different.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-trend-3:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002018,
+  "input": 2291,
+  "model": "gemini-3.8-flash",
+  "output": 80,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

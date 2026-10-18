@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000827,
+ "data": {
+  "reason": "Answer A is more comprehensive and informative by including more recent data from the 2025 IP Report (noting trade mark ownership trends among SMEs up to 2024), while clearly caveats that it applies to a narrower subset than all businesses and rights. Answer B provides useful definitions, but Answer A better answers how the figures have changed over time with the most up-to-date available evidence.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "erp10-1:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001654,
+  "input": 1740,
+  "model": "gemini-3.8-flash",
+  "output": 93,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

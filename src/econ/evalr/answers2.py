@@ -344,7 +344,7 @@ def step_report() -> dict:
         "- Only the evidence differs: same needs, answer model, effort, prompt and check.",
         "- The judges see the answers and their verified quotes, not the corpus: they judge how well an answer uses "
         "and reports what it found.",
-        "- One answer model at one effort; 60 needs.",
+        f"- One answer model at one effort; {len(ns)} needs.",
     ]
     out = config.path("reports/answers-v2.md")
     write_text_atomic(out, "\n".join(lines) + "\n")

@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000666,
+ "data": {
+  "reason": "Both answers accurately explain that the drop was caused by applicants bringing forward filings into 2013 prior to the Raising the Bar reforms. Answer B is slightly more comprehensive, as it incorporates the specific quote showing that the 2013 peak drew directly from applications expected in 2014, and notes the subsequent 2015 rebound to substantiate the timing explanation.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "ipr15-1:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001332,
+  "input": 1336,
+  "model": "gemini-3.8-flash",
+  "output": 88,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

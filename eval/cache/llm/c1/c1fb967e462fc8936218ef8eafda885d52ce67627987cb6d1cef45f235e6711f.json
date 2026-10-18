@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001061,
+ "data": {
+  "reason": "Both answers accurately capture the findings and limitations from the 2020 report, specifically that IP ownership is linked to roughly 2.5 times higher profit even after controlling for past profitability, but only among firms profitable for at least six years. Answer A is superior because it incorporates newer evidence explicitly addressing timing, selection, and reverse causality (pre-grant trends vs. post-grant shifts), directly fulfilling the narrative's request.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-evidence-2:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002123,
+  "input": 2341,
+  "model": "gemini-3.8-flash",
+  "output": 98,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

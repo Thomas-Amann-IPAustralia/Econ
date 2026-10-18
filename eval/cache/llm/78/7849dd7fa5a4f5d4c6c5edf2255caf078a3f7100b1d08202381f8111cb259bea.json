@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001731,
+ "data": {
+  "reason": "Both answers are exceptionally well-sourced and directly address the prompt. Answer B is slightly better as it names key international databases (such as PATSTAT, OECD REGPAT, and USPTO PatentsView) that Answer A omits, and accurately explains what IP RAPID is, providing a slightly more comprehensive picture of the data sources used.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-methods-4:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.003463,
+  "input": 4227,
+  "model": "gemini-3.8-flash",
+  "output": 78,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

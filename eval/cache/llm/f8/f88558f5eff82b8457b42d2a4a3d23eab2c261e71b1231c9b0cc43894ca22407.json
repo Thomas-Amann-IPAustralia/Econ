@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000648,
+ "data": {
+  "reason": "Both answers provide the exact same core facts and insights, drawing upon identical data points regarding concentration in NSW, Victoria, and Queensland, as well as the distinction between volume and patent intensity in the ACT. Answer B is slightly better structured with bullet points and specifies the application type ('resident standard complete applications') accurately per the source quotes.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "erp15-4:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001297,
+  "input": 1349,
+  "model": "gemini-3.8-flash",
+  "output": 76,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

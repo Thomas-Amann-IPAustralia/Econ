@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001014,
+ "data": {
+  "reason": "Both answers accurately extract the core findings from the 2024 IP Australia working paper. Answer A is slightly better because it includes the important nuance regarding unconditional filing trends and potential underestimation bias directly from the focal study, whereas Answer B introduces a generic aggregate filing trend from the 2015 IP Report that is less directly relevant to the specific court decisions on software patent applications.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-policy-4:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002028,
+  "input": 2264,
+  "model": "gemini-3.8-flash",
+  "output": 88,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

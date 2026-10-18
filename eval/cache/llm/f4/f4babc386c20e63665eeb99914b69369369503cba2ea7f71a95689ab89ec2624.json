@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001432,
+ "data": {
+  "reason": "Both answers accurately cover the two major 2024 patent machine learning projects (patent scope and computer-implemented inventions). Answer B is better because it includes an additional relevant ML application found in the evidence: entity and applicant matching across IP rights for IPGOD.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-methods-2:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002864,
+  "input": 3503,
+  "model": "gemini-3.8-flash",
+  "output": 63,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

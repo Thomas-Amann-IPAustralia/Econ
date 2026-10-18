@@ -93,6 +93,10 @@ decision log) and the latest `docs/handover-*.md` before acting.
 - Measured on the judged set (D-013, 92 test needs, fully judged to depth 20): ndcg@10 0.597 to 0.682
   against the previous service; relevant-passage recall in the 20-passage context 0.623 to 0.715. `econ verify-search` shows the
   served search matches the measured one (top-10 overlap 0.996, same judged ndcg@10).
+- **Relevance filter** (D-018, D-019): gpt-6-luna rates the 60-passage context and the answer model gets the
+  20 rated highest (prompt `prompts/eval/filter-v1.md`). Measured: ndcg@10 0.672 to 0.846, broad questions'
+  evidence reached 0.491 to 0.635, answers preferred 28 to 8 (Gemini) and 17 to 4 (Claude, blind). Recommended
+  to the owner; not built into the service.
 - If the embedder fails, search runs on BM25 alone and says so. Tokenising is per thread (the shared
   stemmer corrupted stems under concurrency, D-013).
 

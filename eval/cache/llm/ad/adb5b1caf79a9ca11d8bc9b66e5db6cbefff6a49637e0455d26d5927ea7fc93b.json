@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000561,
+ "data": {
+  "reason": "Both answers provide the exact same facts, figures, and caveats regarding the F1 scores of the patent scope classifiers. Answer B is slightly better as it spells out what MLP stands for (multilayer perceptron) directly supported by its citation.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "erp14-2:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001122,
+  "input": 1211,
+  "model": "gemini-3.8-flash",
+  "output": 57,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

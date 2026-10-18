@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001105,
+ "data": {
+  "reason": "Both answers address the prompt well, but Answer B provides more comprehensive coverage by including dispute resolution and enforcement support (IP First Response pilot), directly addressing support programs and costs for SMEs. Answer B also integrates the empirical evidence and caveats more naturally into each policy implication point.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-strategy-3:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002211,
+  "input": 2633,
+  "model": "gemini-3.8-flash",
+  "output": 63,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001376,
+ "data": {
+  "reason": "Both answers provide high-quality overviews of the statistical methods used by IP Australia's economists to estimate causal effects. Answer A is slightly better as it includes an additional difference-in-differences study (the 2024 computer-implemented inventions study) and notes lagged-variable robustness checks used specifically to address reverse causality.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "multi-1:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002753,
+  "input": 3280,
+  "model": "gemini-3.8-flash",
+  "output": 78,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

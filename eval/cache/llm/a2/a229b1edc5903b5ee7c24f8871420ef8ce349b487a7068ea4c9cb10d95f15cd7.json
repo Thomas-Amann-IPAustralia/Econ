@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000476,
+ "data": {
+  "reason": "Both answers provide the exact same facts, figures, context, and caveats from the source material. Answer A's formatting with bullet points is slightly clearer and more readable for identifying the most and least frequent entities.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "erp04-2:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000953,
+  "input": 1010,
+  "model": "gemini-3.8-flash",
+  "output": 52,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

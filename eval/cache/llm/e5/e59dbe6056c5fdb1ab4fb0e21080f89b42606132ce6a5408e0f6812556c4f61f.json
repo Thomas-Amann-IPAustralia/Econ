@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000571,
+ "data": {
+  "reason": "Both answers accurately provide the exact figures from the IP Australia publication, comparing the 71 per cent export revenue gain to the 32 per cent gain. They also both properly note the statistical caveat regarding the 10 per cent significance level. Because both answers are exceptionally clear, concise, and fully supported, there is no meaningful distinction between them.",
+  "winner": "tie"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "erp11-1:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001141,
+  "input": 1116,
+  "model": "gemini-3.8-flash",
+  "output": 81,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}
