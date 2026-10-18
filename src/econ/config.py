@@ -151,6 +151,9 @@ class RetrievalCfg(Strict):
     rrf_k: int = 60
     context_chunks: int = 20
     per_doc_cap: int = 8
+    # Context notes (library/enrich/<name>.jsonl) put in front of each chunk's text for BM25 and the dense
+    # lane; search-only, never evidence (D-013). None indexes the chunk text alone.
+    enrichment: str | None = None
 
 
 class Pipeline(Strict):
@@ -204,6 +207,9 @@ class AnswerCfg(Strict):
     prompt: str
     plan_prompt: str
     max_queries: int = 4
+    # Search the standalone question as well as the plan's queries (D-013), so a plan that misses can't
+    # take the question's own words out of the search.
+    plan_keeps_question: bool = False
     min_quote_words: int = 5
     quote_claim_ratio: float = 0.5
     max_quote_words: int = 80

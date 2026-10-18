@@ -3,7 +3,8 @@
 Files, written by `econ index` and committed:
 - chunks.jsonl: the adopted strategy's chunks (text, section, pages, boxes, spans);
 - vectors.f16.npy: their embeddings from the adopted model's ONNX path, float16, row-aligned;
-- bm25.npz and bm25.vocab.json: the keyword index over each chunk's embed_text;
+- bm25.npz and bm25.vocab.json: the keyword index over each chunk's embed_text, with its context note in
+  front when `retrieval.enrichment` is set (D-013; the vectors likewise);
 - docs.json: the catalogue (title, year, series, licence, page sizes, chunk counts);
 - index.json: the build identity (strategy, model, revision, ONNX hash, file hashes).
 

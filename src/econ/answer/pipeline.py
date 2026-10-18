@@ -26,6 +26,7 @@ from econ.answer import prompts
 from econ.answer.check import check
 from econ.answer.providers import Model, ProviderError, Usage
 from econ.answer.schema import Answer, Plan, strict_schema
+from econ.kb.bm25 import tokenize
 from econ.retrieval.index import EmbedderClient, Index
 
 _TAG = re.compile(r"<\s*(/?)\s*(evidence|context|conversation|question|errors|system|instructions?)\b", re.I)
@@ -116,7 +117,10 @@ def evidence_block(n: int, chunk: dict, doc: dict) -> str:
 def evidence_view(svc: Services, sel, n: int, queries: list[str]) -> dict:
     c = svc.index.chunks[sel.row]
     d = svc.index.docs[c["doc_id"]]
-    terms = sorted({t for q in queries for t in svc.index.bm25.matched_terms(q, sel.row)})
+    # Matched terms highlight the passage, so only terms in its own text count (a context note, D-013, can
+    # match terms the passage doesn't contain).
+    own = set(tokenize(c["text"]))
+    terms = sorted({t for q in queries for t in svc.index.bm25.matched_terms(q, sel.row) if t in own})
     return {
         "n": n,
         "chunk_id": c["chunk_id"],
@@ -192,7 +196,12 @@ def run(req: Request, svc: Services) -> Iterator[dict]:
             usages.append(rep.usage)
             qs = [q.strip() for q in plan.queries if q.strip()][: scfg.answer.max_queries]
             if qs and not any(textcheck.high(textcheck.scan(q)) for q in qs):
-                queries, standalone = qs, plan.standalone_question.strip() or question
+                standalone = plan.standalone_question.strip() or question
+                queries = (
+                    [standalone, *[q for q in qs if q != standalone]]
+                    if scfg.answer.plan_keeps_question
+                    else qs
+                )
                 planned = True
             yield {
                 "event": "plan",

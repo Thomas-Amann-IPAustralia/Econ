@@ -199,11 +199,29 @@ def index(
             fetch_model(key, mdir)
         emb = OnnxEmbedder(key, mdir, threads=4)
         chunks = load_chunks(strategy)
-        vecs = emb.encode([c["embed_text"] for c in chunks], kind="doc")
+        texts = [c["embed_text"] for c in chunks]
+        enrichment = cfg.retrieval.enrichment
+        notes_sha = None
+        if enrichment:
+            # D-013: each chunk's context note goes in front of its text, for both lanes; it is stored
+            # beside the chunk as `context_note` and never shown as evidence.
+            from econ.kb import enrich
+
+            notes = enrich.load(enrichment)
+            missing = [c["chunk_id"] for c in chunks if c["chunk_id"] not in notes]
+            if missing:
+                raise StageError(
+                    f"{len(missing)} chunk(s) have no context note in {enrichment}", item=missing[0]
+                )
+            for c in chunks:
+                c["context_note"] = notes[c["chunk_id"]]
+            texts = [(c["context_note"] + "\n\n" + c["embed_text"]).strip() for c in chunks]
+            notes_sha = sha256_file(config.path("library/enrich") / f"{enrichment}.jsonl")[:16]
+        vecs = emb.encode(texts, kind="doc")
         out = config.path(out)
         out.mkdir(parents=True, exist_ok=True)
         np.save(out / "vectors.f16.npy", vecs.astype(np.float16))
-        bm = BM25.build([c["embed_text"] for c in chunks])
+        bm = BM25.build(texts)
         bm.save(out / "bm25.npz")
         write_text_atomic(
             out / "chunks.jsonl",
@@ -242,6 +260,8 @@ def index(
             "onnx_sha256": emb.meta["onnx_sha256"],
             "dim": int(vecs.shape[1]),
             "chunks": len(chunks),
+            "enrichment": enrichment,
+            "enrichment_sha256": notes_sha,
             "built_from": r.upstream["chunk"],
             "files": {f: sha256_file(out / f)[:16] for f in files},
         }
