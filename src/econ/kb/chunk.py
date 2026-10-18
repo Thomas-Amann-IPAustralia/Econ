@@ -323,6 +323,7 @@ _CITE_SIGNAL = re.compile(
 
 
 _REF_HEADING = re.compile(r"\b(references?|bibliography|end ?notes|sources|works cited)\b", re.I)
+_BIBLIOGRAPHY = re.compile(r"\b(references|bibliography|works cited)\b", re.I)
 _YEAR = re.compile(r"\b(19|20)\d{2}[a-z]?\b")
 _PUBLICATION = re.compile(
     r"(Retrieved|Accessed|Available|https?://|www\.|doi|Journal|Review|Press|Working Paper|Discussion Paper"
@@ -341,7 +342,12 @@ def is_citation(e: Element, heading: str = "") -> bool:
     """A bibliography entry or citation-only endnote. Anywhere: a short element that starts like a
     reference and carries a publication signal. Under a References, Bibliography or Endnotes heading,
     also any element with a year and a publication marker (D-008). Never when it says something."""
-    if e.label not in ("text", "list_item", "footnote", "reference") or has_substance(e.text):
+    if e.label not in ("text", "list_item", "footnote", "reference"):
+        return False
+    if _BIBLIOGRAPHY.search(heading):
+        # A reference list holds nothing but references; long titles would otherwise pass the guard (D-009).
+        return bool(_YEAR.search(e.text))
+    if has_substance(e.text):
         return False
     if len(e.text) < 600 and _CITE_START.match(e.text) and _CITE_SIGNAL.search(e.text):
         return True

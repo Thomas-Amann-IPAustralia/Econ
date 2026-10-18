@@ -176,3 +176,18 @@ def test_under_a_references_heading_looser_citations_go_but_substantive_notes_st
     ]
     flags = [e.cite for e in mark_citations(els(*rows))][1:]
     assert flags == [True, True, False, False]
+
+
+def test_everything_dated_in_a_reference_list_is_a_citation():
+    from econ.kb.chunk import mark_citations
+
+    rows = [
+        ("section_header", "Appendix G: References", 1),
+        (
+            "text",
+            "Sample, M., and Example, S. 1991. Some tests of specification for placeholder panel data with many words in the title.",
+            None,
+        ),
+        ("text", "This page has been intentionally left blank.", None),
+    ]
+    assert [e.cite for e in mark_citations(els(*rows))][1:] == [True, False]
