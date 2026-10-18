@@ -40,6 +40,11 @@ chunking:
       kind: structure
       max_tokens: 384
       prefix: none
+    S384-noprefix-nocite:   # D-007: without bibliography entries and citation-only endnotes
+      kind: structure
+      max_tokens: 384
+      prefix: none
+      drop_citations: true
   adopted: S384-noprefix   # D-005
 
 embedding:

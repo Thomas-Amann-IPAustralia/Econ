@@ -15,6 +15,7 @@ from econ.evalr.retrieval import Cell, grid_spec, run_dir, save, summarise, vec_
 from econ.manifest import Run, StageError, write_json_atomic, write_text_atomic
 
 SECONDARY = ["ndcg@10", "mrr@10", "recall@10", "recall@2k_tok", "recall@4k_tok", "recall@8k_tok", "doc_hit@5"]
+OPTIONAL = ["cite_share@10"]  # reported when every run has it
 
 
 def choose(names: list[str], dev: dict[str, float], margin: float) -> str:
@@ -88,7 +89,7 @@ def run_stage(run: Run, grid: str, stage: str) -> dict:
         avg = []
         for i, r in enumerate(per_emb[0]):
             row = dict(r)
-            for m in SECONDARY + [primary]:
+            for m in SECONDARY + [primary] + [o for o in OPTIONAL if o in r]:
                 row[m] = metrics.mean([pe[i][m] for pe in per_emb])
             avg.append(row)
         results[s["name"]] = avg
@@ -107,7 +108,8 @@ def run_stage(run: Run, grid: str, stage: str) -> dict:
     }
     write_json_atomic(run_dir(grid, stage) / "choice.json", choice)
     report = render(grid, stage, spec, st, settings, results, dev, chosen, extra, needs)
-    out = config.path(config.pipeline().paths.reports) / f"retrieval-{stage}.md"
+    name = f"retrieval-{stage}.md" if grid == "retrieval-v1" else f"{grid}-{stage}.md"
+    out = config.path(config.pipeline().paths.reports) / name
     write_text_atomic(out, report)
     run.add_output(out)
     run.counts["settings"] = len(settings)
@@ -160,15 +162,16 @@ def render(grid, stage, spec, st, settings, results, dev, chosen, extra, needs) 
                 f"| `{n}`{mark} | {_fmt(dev[n])} | {_fmt(t)} | {c['diff']:+.3f} | "
                 f"[{c['ci'][0]:+.3f}, {c['ci'][1]:+.3f}] | {adj[n]:.3f} |"
             )
+    shown = SECONDARY + [o for o in OPTIONAL if all(o in results[n][0] for n in names)]
     lines += [
         "",
         "## All metrics on test",
         "",
-        "| Setting | " + " | ".join(SECONDARY) + " |",
-        "|---|" + "---|" * len(SECONDARY),
+        "| Setting | " + " | ".join(shown) + " |",
+        "|---|" + "---|" * len(shown),
     ]
     for n in names:
-        vals = [metrics.mean([r[m] for r in test_rows[n]]) for m in SECONDARY]
+        vals = [metrics.mean([r[m] for r in test_rows[n]]) for m in shown]
         lines.append(f"| `{n}` | " + " | ".join(_fmt(v) for v in vals) + " |")
     kinds = sorted({r["kind"] for r in results[names[0]]})
     lines += [

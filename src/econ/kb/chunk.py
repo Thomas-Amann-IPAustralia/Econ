@@ -297,10 +297,36 @@ def records(doc: Document, chunks: list[Chunk], st: ChunkStrategy) -> list[dict]
                 "spans": spans,
                 "elements": [c.pieces[0].el.seq, c.pieces[-1].el.seq],
                 "labels": sorted({p.el.label for p in c.pieces}),
+                "pieces": len(c.pieces),
+                "citation_pieces": sum(is_citation(p.el) for p in c.pieces),
                 "tokens": tokens.count(pfx + text),
             }
         )
     return out
+
+
+# A bibliography entry or a citation-only endnote: "Surname, I. (2020). Title. Journal." or
+# "Organisation (2021), Title". Matched on the start of the element plus a publication signal, and only
+# for short elements, so a substantive endnote that cites a source keeps its place (D-007).
+_CITE_START = re.compile(
+    r"""^\s*(\d{1,3}\s*[\x07\s]*)?
+    (?:[A-Z][A-Za-z'’\-]+(?:\s[A-Z][A-Za-z'’\-]+)?,\s*(?:[A-Z]\.\s*){1,3}(?:,|&|and|\(|\d)
+      |[A-Z][A-Za-z&'’\-\s]{2,60}\s\((19|20)\d{2}[a-z]?\)[,.]?
+    )""",
+    re.X,
+)
+_CITE_SIGNAL = re.compile(
+    r"(\(?(19|20)\d{2}[a-z]?\)?[.,]|Retrieved|Available (at|from)|https?://|doi|Journal|Working Paper|Press|Review|Report|Accessed)"
+)
+
+
+def is_citation(e: Element) -> bool:
+    return (
+        e.label in ("text", "list_item", "footnote", "reference")
+        and len(e.text) < 600
+        and bool(_CITE_START.match(e.text))
+        and bool(_CITE_SIGNAL.search(e.text))
+    )
 
 
 def _key(text: str) -> str:
@@ -336,5 +362,7 @@ def chunk_document(
     text (so gold offsets don't move) but enter no chunk."""
     els = els if els is not None else load_elements(doc.doc_id)
     kept = [e for e in els if not (skip and not is_heading(e) and _key(e.text) in skip)]
+    if st.drop_citations:
+        kept = [e for e in kept if not is_citation(e)]
     chunks = structure_chunks(doc, kept, st) if st.kind == "structure" else fixed_chunks(doc, kept, st, els)
     return records(doc, chunks, st)

@@ -1,0 +1,20 @@
+# Retrieval grid v1b: a follow-up to retrieval-v1, committed before any of its numbers (D-007).
+# Question: does leaving bibliography entries and citation-only endnotes out of the chunks cost any
+# retrieval quality? Its benefit (less noise in broad questions' results) is what the gold-span metrics
+# don't see, so the rule is non-inferiority; cite_share@10 is reported alongside.
+version: retrieval-v1b
+testset: eval/testset/silver-v1.yaml
+cover: 0.5
+
+stages:
+  chunking:
+    strategies: [S384-noprefix-nocite, S384-noprefix]
+    embedders: [arctic-m-v1.5]
+    lane: hybrid
+    primary: recall@4k_tok
+    margin: 0.01
+    baseline: S384-noprefix
+    rule: >-
+      Adopt S384-noprefix-nocite unless its dev recall@4k_tok (arctic-m-v1.5, hybrid lane) is more than
+      0.01 below S384-noprefix's. Checked beforehand: no gold passage, or verbatim copy of one, lies in an
+      element the filter drops.

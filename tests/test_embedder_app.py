@@ -51,3 +51,28 @@ def test_limits(client):
     )
     assert client.post("/embed", json={"texts": [], "kind": "query"}, headers=auth).status_code == 422
     assert client.post("/embed", json={"texts": ["x"], "kind": "other"}, headers=auth).status_code == 422
+
+
+def test_concurrent_cold_requests_load_the_model_once(tmp_path, monkeypatch):
+    import threading
+    import time
+
+    loads = []
+
+    class SlowFake(FakeOnnx):
+        def __init__(self, *a, **kw):
+            loads.append(1)
+            time.sleep(0.2)
+            super().__init__(*a, **kw)
+
+    (tmp_path / "model.json").write_text(json.dumps({"key": "bge-small"}))
+    monkeypatch.setenv("ECON_EMBEDDER_DIR", str(tmp_path))
+    monkeypatch.delenv("EMBEDDER_TOKEN", raising=False)
+    monkeypatch.setattr(embedder, "OnnxEmbedder", SlowFake)
+    client = TestClient(embedder.create_app())
+    threads = [threading.Thread(target=lambda: client.get("/health")) for _ in range(4)]
+    for t in threads:
+        t.start()
+    for t in threads:
+        t.join()
+    assert len(loads) == 1

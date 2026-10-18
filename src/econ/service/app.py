@@ -108,7 +108,7 @@ def create_app() -> FastAPI:
     }
 
     def warm_embedder():
-        if embedder.configured and not embedder.warm:
+        if embedder.configured and not embedder.warm and not embedder.pinging:
             threading.Thread(target=embedder.ping, daemon=True).start()
 
     warm_embedder()  # Render wakes first; wake Cloud Run alongside it

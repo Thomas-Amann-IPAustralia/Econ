@@ -20,6 +20,7 @@ import hmac
 import json
 import os
 import sys
+import threading
 import time
 from pathlib import Path
 
@@ -57,7 +58,10 @@ class OnnxEmbedder:
         so = ort.SessionOptions()
         if threads:
             so.intra_op_num_threads = threads
-        so.graph_optimization_level = ort.GraphOptimizationLevel.ORT_ENABLE_ALL
+        # Basic optimisation and no memory arena: measured on arctic-m-v1.5, loading took 0.4 s instead of
+        # 1.2 s and about 50 MB less memory, at the same speed per query. It matters on a cold start.
+        so.graph_optimization_level = ort.GraphOptimizationLevel.ORT_ENABLE_BASIC
+        so.enable_cpu_mem_arena = False
         self.sess = ort.InferenceSession(
             str(model_dir / "model.onnx"), so, providers=["CPUExecutionProvider"]
         )
@@ -154,12 +158,16 @@ def create_app():
     )
     state: dict = {}
     token = os.environ.get("EMBEDDER_TOKEN", "")
+    lock = threading.Lock()
 
     def model() -> OnnxEmbedder:
-        if "m" not in state:
-            t = time.time()
-            state["m"] = OnnxEmbedder(key, model_dir)
-            state["load_seconds"] = round(time.time() - t, 2)
+        # One load, however many requests arrive while the instance is cold: without the lock, two
+        # concurrent warm-up calls each loaded a copy (1.6 GB instead of about 0.6 GB).
+        with lock:
+            if "m" not in state:
+                t = time.time()
+                state["m"] = OnnxEmbedder(key, model_dir)
+                state["load_seconds"] = round(time.time() - t, 2)
         return state["m"]
 
     api = FastAPI(title="econ embedder", docs_url=None, redoc_url=None)

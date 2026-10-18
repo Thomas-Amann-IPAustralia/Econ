@@ -61,6 +61,10 @@ def per_need(ranked: Sequence[dict], golds, budgets=(1000, 2000, 4000, 8000)) ->
                 break
             cov |= h
         out[f"recall@{t // 1000}k_tok"] = len(cov) / n
+    top10 = list(ranked[:10])
+    if top10 and "pieces" in top10[0]:
+        # Share of the top 10 that is mostly citations: noise the gold-span metrics don't see (D-007).
+        out["cite_share@10"] = sum(c["citation_pieces"] * 2 >= c["pieces"] for c in top10) / len(top10)
     gold_docs = {g.doc_id for item in golds for g in (item if isinstance(item, tuple) else (item,))}
     out["doc_hit@5"] = 1.0 if any(c["doc_id"] in gold_docs for c in ranked[:5]) else 0.0
     return out

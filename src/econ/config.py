@@ -80,6 +80,7 @@ class ChunkStrategy(Strict):
     overlap_tokens: int = 0
     min_tokens: int = 48
     prefix: Literal["none", "title", "title+section"] = "title+section"
+    drop_citations: bool = False  # leave bibliography entries and citation-only endnotes out (D-007)
 
 
 class ChunkingCfg(Strict):

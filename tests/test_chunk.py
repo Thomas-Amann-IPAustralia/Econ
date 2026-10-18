@@ -115,3 +115,34 @@ def test_definitions_restated_in_body_text_are_not_boilerplate():
         docs[f"d{i}"] = els(*rows)
     skip = boilerplate(docs)
     assert len(skip) == 1 and "placeholderlicence" in next(iter(skip))
+
+
+def test_citation_only_elements_are_recognised_but_substantive_notes_are_not():
+    from econ.kb.chunk import is_citation
+
+    def el(text, label="text"):
+        return Element(0, label, text, 1, [], None)
+
+    assert is_citation(el("Placeholder, A. B. (2019). A title about widgets. Journal of Widgets, 4(2), 1-9."))
+    assert is_citation(el("12 Sample, C. & Example, D. (2021), Another title. Working Paper.", "list_item"))
+    assert is_citation(
+        el("Widget Statistics Office (2020). Widget accounts. Retrieved from https://example.org")
+    )
+    assert not is_citation(
+        el("Placeholder firms that file are 9% more likely to grow (Sample, 2021), which matters for policy.")
+    )
+    assert not is_citation(el("Placeholder, A. B. (2019). A title.", "section_header"))
+
+
+def test_a_sentence_that_mentions_a_year_is_not_a_citation():
+    from econ.kb.chunk import is_citation
+
+    e = Element(
+        0,
+        "text",
+        "Despite the overall decline in widgets in 2016, filings by residents rose 15 per cent.",
+        1,
+        [],
+        None,
+    )
+    assert not is_citation(e)

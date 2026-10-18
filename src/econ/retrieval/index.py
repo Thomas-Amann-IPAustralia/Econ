@@ -142,6 +142,7 @@ class EmbedderClient:
         self.cfg = cfg
         self.last_ok = 0.0
         self.health: dict | None = None
+        self.pinging = False
 
     # Cloud Run scales to zero after some idle minutes, so warmth expires: after a quiet spell the next
     # call gets the cold-start timeout instead of failing over to keywords.
@@ -165,8 +166,9 @@ class EmbedderClient:
 
         import httpx
 
-        if not self.url:
-            return None
+        if not self.url or self.pinging:
+            return self.health
+        self.pinging = True
         try:
             r = httpx.get(
                 f"{self.url}/health", headers=self._headers(), timeout=self.cfg.cold_timeout_seconds
@@ -176,6 +178,8 @@ class EmbedderClient:
             self.last_ok = time.time()
         except httpx.HTTPError as e:
             self.health = {"status": "unavailable", "error": type(e).__name__}
+        finally:
+            self.pinging = False
         return self.health
 
     def embed(self, texts: list[str], expect_model: str, expect_dim: int) -> np.ndarray:
