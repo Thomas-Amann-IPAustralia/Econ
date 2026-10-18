@@ -458,11 +458,30 @@ def run_final(needs: list[Need], judgments: str) -> dict:
         lines.append(
             f"| {fam} | {m} | {n} | {ma:.3f} | {mb:.3f} | {c['diff']:+.3f} | [{c['ci'][0]:+.3f}, {c['ci'][1]:+.3f}] | {adj[f'{fam}:{m}']:.3f} |"
         )
+    # Robustness: the stage-1 rule again, on every judgment including the top-up (which raised each need's
+    # ideal ranking). The recorded choice stands either way; this shows whether it depended on the pool.
+    st = sp["stage1"]
+    settings = stage1_settings(include_reference=False)
+    dev_all = {x.name: mean_of(evaluate(x, needs, grades), "ndcg@10", split="dev") for x in settings}
+    again = choose(settings, dev_all, st["margin"], st["latency_budget_s"])
+    top = sorted(dev_all.items(), key=lambda kv: -kv[1])[:5]
+    same = again == _choice_of("stage1")["chosen"]
+    lines += [
+        "",
+        "## Robustness: the stage-1 rule on every judgment",
+        "",
+        f"Re-run on all judgments (pool and top-up), the rule chooses `{again}`"
+        + (" (the same setting)." if same else " (a different setting; see the decision log).")
+        + " Best five on dev by ndcg@10: "
+        + "; ".join(f"`{k}` {v:.3f}" for k, v in top)
+        + ".",
+    ]
     choice = {
         "stage": "final",
         "primary": "ndcg@20",
         "chosen": chosen,
         "baseline": base,
+        "rule_again": again,
         "dev": {chosen: mean_of(b, "ndcg@20", split="dev"), base: mean_of(a, "ndcg@20", split="dev")},
     }
     save_choice("final", choice)

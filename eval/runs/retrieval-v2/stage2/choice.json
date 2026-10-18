@@ -1,0 +1,11 @@
+{
+  "chosen": "plan+q:luna-plan-v2/enriched/none",
+  "dev": {
+    "plan+q:luna-plan-v2/enriched/none": 0.727083211285353,
+    "plan+q:luna-plan-v2/enriched/none/cap3": 0.6689101298541462,
+    "plan+q:luna-plan-v2/enriched/none/cap5": 0.7069017936931886
+  },
+  "judgments": "judged-v1",
+  "primary": "ndcg@10",
+  "stage": "stage2"
+}
