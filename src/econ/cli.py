@@ -134,7 +134,7 @@ def eval_retrieval(
 @app.command("eval-retrieval-v2")
 @loud
 def eval_retrieval_v2(
-    stage: str = typer.Option("stage1", help="stage1 | stage2 | final"),
+    stage: str = typer.Option("stage1", help="stage1 | stage2 | final | depth"),
     judgments: str = typer.Option("judged-v1", help="Judgments file under eval/judgments/."),
 ) -> None:
     """Grid retrieval-v2 on the judged test set (no API calls; reads cached plans, notes and reranker scores)."""
@@ -151,16 +151,21 @@ def eval_retrieval_v2(
             r.add_output(out)
             ch = res["choice"]
             r.counts.update(settings=len(res["settings"]), chosen=ch["chosen"])
-        elif stage in ("stage2", "final"):
-            res = (
-                grid2.run_stage2(needs, judgments) if stage == "stage2" else grid2.run_final(needs, judgments)
+        elif stage in ("stage2", "final", "depth"):
+            res = {"stage2": grid2.run_stage2, "final": grid2.run_final, "depth": grid2.run_depth}[stage](
+                needs, judgments
             )
-            out = config.path(f"reports/retrieval-v2-{stage}.md")
+            out = config.path(
+                "reports/retrieval-depth.md" if stage == "depth" else f"reports/retrieval-v2-{stage}.md"
+            )
             write_text_atomic(out, res["report"])
             r.add_output(out)
             ch = res["choice"]
         else:
             raise StageError(f"unknown stage {stage}")
+    if stage == "depth":
+        typer.echo(f"depth: {ch['needs']} needs at depths {ch['depths']}; report {out}")
+        return
     typer.echo(f"{stage}: chosen {ch['chosen']} ({ch['primary']} dev {ch['dev'][ch['chosen']]:.3f})")
 
 

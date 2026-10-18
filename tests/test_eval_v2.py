@@ -89,6 +89,25 @@ def test_graded_metrics(monkeypatch):
     assert grid2.per_need([0], need, {"c0": 0})["ndcg@10"] is None  # nothing relevant: no ideal
 
 
+def test_depth_metrics_and_breadth_rules(monkeypatch):
+    cs = [{"chunk_id": f"c{i}", "doc_id": "d", "spans": [], "tokens": 10} for i in range(4)]
+    monkeypatch.setattr(systems, "chunks", lambda: cs)
+    monkeypatch.setattr(grid2, "spec_depth", lambda: {"depths": [2, 4]})
+    grades = {"c0": 3, "c1": 0, "c2": 2, "c3": 3, "c9": 2}  # c9 relevant but never ranked
+    m2 = grid2.per_need_depth([0, 1, 2, 3], 2, grades)
+    m4 = grid2.per_need_depth([0, 1, 2, 3], 4, grades)
+    assert m2["rel_recall@2"] == 0.25 and m4["rel_recall@4"] == 0.75
+    assert m2["rel3_recall@2"] == 0.5 and m4["rel3_recall@4"] == 1.0
+    assert m4["p@4"] == 0.75 and m4["tokens@4"] == 40 and m4["judged@4"] == 1.0
+    short = grid2.per_need_depth([0, 1], 4, grades)  # the cap stopped the context at 2
+    assert short["passages@4"] == 2 and short["rel_recall@4"] == m2["rel_recall@2"]
+    broad = Need("b", "explore", "trend", "q", "narr", "test")
+    narrow = Need("n", "silver", "lookup", "q", "narr", "test")
+    assert grid2.breadth_rule("oracle", broad, {}) == 4 and grid2.breadth_rule("oracle", narrow, {}) == 2
+    assert grid2.breadth_rule("plan_queries", narrow, {"queries": ["a", "b"]}) == 4
+    assert grid2.breadth_rule("plan_queries", broad, {"queries": ["a"]}) == 2
+
+
 def test_the_reranker_sees_pasted_headings_for_context_questions():
     n = Need(
         "n",
