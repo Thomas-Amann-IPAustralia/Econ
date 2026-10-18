@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.3e-05,
+ "data": {
+  "context": "In the *Australian IP Report 2024*, the International comparisons section discusses how US monetary policy shocks and US filings relate to Australian IP filings in 2023, alongside domestic patenting and small-business entry trends. It notes declines in Australian trade mark and design filings from the US, while patent growth continued in strategically contested technologies and clean energy."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2024:0007",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000145,
+  "input": 1045,
+  "model": "gpt-6-luna",
+  "output": 81,
+  "reasoning": 0,
+  "seconds": 1.61
+ }
+}

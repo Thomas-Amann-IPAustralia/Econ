@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8e-05,
+ "data": {
+  "context": "In the 2023 report *Drivers of AI investment*, section 5.3, “Explore area-level differences,” recommends examining where Australian AI-related job postings occur and how regional factors shape industries’ responses to AI. It highlights state- and city-level clustering, job mobility, and possible links with local regulation, standards, and socioeconomic conditions."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "oce-ai-investment:0070",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00016,
+  "input": 1181,
+  "model": "gpt-6-luna",
+  "output": 83,
+  "reasoning": 0,
+  "seconds": 1.77
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.6e-05,
+ "data": {
+  "context": "In the Australian IP Report 2024, under “Why patent scope is important,” this passage explains how patent breadth can affect investment, competition and innovation, using Edison’s electric-light patent as an example. It introduces IP Australia and CTI’s 2023 study comparing the scope of Australian patents with equivalent patents overseas and assessing past legislative reforms."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2024:0031",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000152,
+  "input": 1119,
+  "model": "gpt-6-luna",
+  "output": 81,
+  "reasoning": 0,
+  "seconds": 1.5
+ }
+}

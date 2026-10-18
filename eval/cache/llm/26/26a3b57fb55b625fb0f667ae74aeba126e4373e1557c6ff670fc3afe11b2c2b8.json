@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.3e-05,
+ "data": {
+  "queries": [
+   "Australian universities international ranking collaborative international patent filings"
+  ],
+  "standalone_question": "How do Australian universities rank internationally in collaborative international patent filings?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr17-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 4.7e-05,
+  "input": 283,
+  "model": "gpt-6-luna",
+  "output": 37,
+  "reasoning": 0,
+  "seconds": 1.42
+ }
+}

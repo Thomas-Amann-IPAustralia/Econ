@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.9e-05,
+ "data": {
+  "context": "In the welcome to the Australian IP Report 2024, Minister Ed Husic describes Australia’s opportunities in frontier technologies, the role of collaboration and IP rights in innovation and commercialisation, and the importance of developing STEM talent. The passage also notes that Australian startups employing PhD graduates are nine times more likely than the average new business to receive a patent."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2024:0001",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000138,
+  "input": 965,
+  "model": "gpt-6-luna",
+  "output": 83,
+  "reasoning": 0,
+  "seconds": 1.46
+ }
+}

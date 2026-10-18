@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000772,
+ "data": {
+  "reason": "Answer A directly addresses the core of the question and narrative by explaining how designers protect their work, the limited role of formal IP, and alternative mechanisms (such as trade marks and copyright). Answer B focuses largely on macro-level business filing counts without capturing the qualitative insights into designer practices and alternative protection strategies.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-synthesis-9:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001543,
+  "input": 1703,
+  "model": "gemini-3.8-flash",
+  "output": 71,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

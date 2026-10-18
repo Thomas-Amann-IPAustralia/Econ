@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5.8e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2015, the “Australians filing overseas” section describes Australian trade mark applications filed abroad in 2013. It identifies the US, China and New Zealand as the top three destinations and notes that the US became the leading destination, replacing China."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2015:0013",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000116,
+  "input": 792,
+  "model": "gpt-6-luna",
+  "output": 73,
+  "reasoning": 0,
+  "seconds": 1.9
+ }
+}

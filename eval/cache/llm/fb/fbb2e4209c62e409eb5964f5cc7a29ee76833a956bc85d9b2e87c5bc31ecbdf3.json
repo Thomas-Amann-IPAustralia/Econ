@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5.1e-05,
+ "data": {
+  "context": "In the Australian IP Report 2026, this passage discusses how patent scope affects follow-on innovation in modular technologies. It uses pharmaceuticals as an example, where discrete inventions can generate value independently."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0027",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000103,
+  "input": 785,
+  "model": "gpt-6-luna",
+  "output": 50,
+  "reasoning": 0,
+  "seconds": 1.21
+ }
+}

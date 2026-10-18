@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.2e-05,
+ "data": {
+  "context": "In the Australian IP Report 2025, in the section “Applicant behaviours and outcomes,” this passage summarises the Motu/EPFL study of Australian patent examination timing and post-grant outcomes. It compares large and small businesses’ examination delays, renewals, commercialisation and follow-on innovation."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2025:0020",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000144,
+  "input": 1083,
+  "model": "gpt-6-luna",
+  "output": 72,
+  "reasoning": 0,
+  "seconds": 1.46
+ }
+}

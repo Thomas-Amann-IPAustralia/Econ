@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000112,
+ "data": {
+  "context": "In *The business environment of patenting firms in Australia* (2024), section 4.1.2, this table reports pooled OLS, random-effects and fixed-effects regressions of granted patent counts by firm age, size and industry."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp15-patenting-firms:0025",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000225,
+  "input": 1179,
+  "model": "gpt-6-luna",
+  "output": 214,
+  "reasoning": 150,
+  "seconds": 2.46
+ }
+}

@@ -1,0 +1,40 @@
+{
+ "cost_usd": 0.000796,
+ "data": [
+  {
+   "grade": 2,
+   "id": "p1"
+  },
+  {
+   "grade": 1,
+   "id": "p2"
+  },
+  {
+   "grade": 1,
+   "id": "p3"
+  },
+  {
+   "grade": 2,
+   "id": "p4"
+  },
+  {
+   "grade": 3,
+   "id": "p5"
+  }
+ ],
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "judge:judge-v1:gemini-3.8-flash",
+ "schema_name": "grades",
+ "tag": "ipr24-5",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001592,
+  "input": 1732,
+  "model": "gemini-3.8-flash",
+  "output": 78,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.9e-05,
+ "data": {
+  "context": "In the Australian IP Report 2025’s key findings on patent examination timing, this passage summarizes the Motu/EPFL study of how applicant choices to speed up or delay Australian patent examination relate to patent outcomes and follow-on innovation, including differences for small innovators and large foreign firms. The timing statistic uses the latest complete data, from 2020."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2025:0011",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000138,
+  "input": 968,
+  "model": "gpt-6-luna",
+  "output": 83,
+  "reasoning": 0,
+  "seconds": 1.43
+ }
+}

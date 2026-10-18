@@ -1,0 +1,25 @@
+{
+ "cost_usd": 4.4e-05,
+ "data": {
+  "queries": [
+   "AI investment drivers automation existing activities",
+   "AI patents breakthrough inventions novelty"
+  ],
+  "standalone_question": "Are firms using AI mostly for breakthrough inventions or to automate existing activities?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr23-5",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 8.9e-05,
+  "input": 677,
+  "model": "gpt-6-luna",
+  "output": 43,
+  "reasoning": 0,
+  "seconds": 1.41
+ }
+}

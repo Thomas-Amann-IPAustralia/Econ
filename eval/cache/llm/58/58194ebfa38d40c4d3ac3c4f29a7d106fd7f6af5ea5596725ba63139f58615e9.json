@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001086,
+ "data": {
+  "reason": "Both answers address the prompt well and draw on the same key evidence regarding real options, brand goodwill, and the 2021 export study. Answer A is superior because it provides a more comprehensive answer, including additional evidence explicitly requested by the narrative regarding pandemics (specifically citing the COVID-19 shock data on firm exit and patent intensity) and including relevant caveats on causality.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-synthesis-7:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002171,
+  "input": 2464,
+  "model": "gemini-3.8-flash",
+  "output": 86,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

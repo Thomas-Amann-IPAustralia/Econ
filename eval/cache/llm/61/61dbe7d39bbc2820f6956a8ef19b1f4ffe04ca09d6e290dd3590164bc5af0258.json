@@ -1,0 +1,25 @@
+{
+ "cost_usd": 8.5e-05,
+ "data": {
+  "queries": [
+   "innovation patent filings decline phase-out",
+   "Innovation patent applications fell by X after the system was phased out, following concerns about its use and effectiveness."
+  ],
+  "standalone_question": "What happened to the Australian innovation patent, and why?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "multi-8",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00017,
+  "input": 759,
+  "model": "gpt-6-luna",
+  "output": 188,
+  "reasoning": 130,
+  "seconds": 2.62
+ }
+}

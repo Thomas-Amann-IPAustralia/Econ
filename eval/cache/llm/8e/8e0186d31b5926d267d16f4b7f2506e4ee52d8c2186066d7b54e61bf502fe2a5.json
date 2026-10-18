@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.3e-05,
+ "data": {
+  "context": "In the Australian IP Report 2023, the section “Improving IP protections for Australian designers” describes design rights reforms that took effect in March 2022, including a 12-month grace period, and IP Australia’s consideration of further reforms for virtual products and changing designs. It also notes that the reforms build on a 12-month review of Australia’s design economy and design rights."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2023:0058",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000146,
+  "input": 1007,
+  "model": "gpt-6-luna",
+  "output": 90,
+  "reasoning": 0,
+  "seconds": 1.76
+ }
+}

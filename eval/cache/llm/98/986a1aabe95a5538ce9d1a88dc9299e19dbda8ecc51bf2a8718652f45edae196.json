@@ -1,0 +1,24 @@
+{
+ "cost_usd": 4.3e-05,
+ "data": {
+  "queries": [
+   "Swinburne collaborative research grants patenting study methodology"
+  ],
+  "standalone_question": "How did the Swinburne study test whether collaborative research grants lead to increased patenting?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr18-5",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 8.5e-05,
+  "input": 290,
+  "model": "gpt-6-luna",
+  "output": 112,
+  "reasoning": 63,
+  "seconds": 1.75
+ }
+}

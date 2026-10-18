@@ -1,0 +1,24 @@
+{
+ "cost_usd": 3.6e-05,
+ "data": {
+  "queries": [
+   "Riyadh Design Law Treaty purpose design registration procedures"
+  ],
+  "standalone_question": "What is the Riyadh Design Law Treaty intended to do?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr25-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 7.1e-05,
+  "input": 283,
+  "model": "gpt-6-luna",
+  "output": 86,
+  "reasoning": 45,
+  "seconds": 1.77
+ }
+}

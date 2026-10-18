@@ -1,0 +1,24 @@
+{
+ "cost_usd": 4.3e-05,
+ "data": {
+  "queries": [
+   "patent applicants timing of voluntary requests for examination after filing"
+  ],
+  "standalone_question": "When patent applicants are not compelled to do so, how soon after filing do they request examination?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp01-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 8.5e-05,
+  "input": 288,
+  "model": "gpt-6-luna",
+  "output": 113,
+  "reasoning": 64,
+  "seconds": 2.77
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.1e-05,
+ "data": {
+  "context": "In the 2014 Report on patent backlogs, inventories and pendency, Section 3, “Patent Application Inventories,” describes IP Australia’s patent application inventory from 2000 to 2013 and compares total inventory with the US and UK. It explains the growth and decline in total and unexamined applications and identifies stock 1 as applications not yet ready for examination."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp01-patent-backlogs:0011",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000162,
+  "input": 1178,
+  "model": "gpt-6-luna",
+  "output": 89,
+  "reasoning": 0,
+  "seconds": 2.69
+ }
+}

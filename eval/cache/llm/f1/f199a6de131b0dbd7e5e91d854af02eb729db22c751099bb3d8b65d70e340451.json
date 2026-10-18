@@ -1,0 +1,47 @@
+{
+ "cost_usd": 0.010502,
+ "data": {
+  "answer": "The fall largely reflected a **bring-forward of applications into 2013** ahead of the Raising the Bar reforms, implemented in April 2013. The reforms raised the standard required for an invention to receive a patent, prompting a rush of applications before implementation and a subsequent drop that carried into 2014.[1]\nIP Australia received **25,947 standard patent applications in 2014, down 13 per cent from 2013**. The 2015 report qualified its explanation, saying the decrease “may be attributed” to the reforms rather than establishing them as the sole cause.[2]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "In April 2013 The IP Laws Amendment (Raising the Bar) Act 2012 was implemented. The new law raised the standard required for an invention to be granted a patent. This led to a rush of applications and examination requests in the weeks leading up to the implementation dates, and a resulting drop in applications for the remainder of 2013 which carried over into 2014."
+     }
+    ],
+    "text": "The reforms implemented in April 2013 raised patent standards, prompting applicants to bring filings forward into 2013 and contributing to the subsequent fall into 2014."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "IP Australia received 25 947 standard patent applications in 2014, a decrease of 13 per cent relative to 2013."
+     },
+     {
+      "evidence": 2,
+      "quote": "The decrease in filings may be attributed to the effects of the IP Laws Amendment (Raising the Bar) Act 2012 that took force in 2013."
+     }
+    ],
+    "text": "Standard patent applications fell 13 per cent to 25,947 in 2014; the 2015 report qualified its attribution of the decrease to the reforms."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "ipr15-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.021004,
+  "input": 8557,
+  "model": "gpt-6.1-sol",
+  "output": 389,
+  "reasoning": 0,
+  "seconds": 7.21
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "cost_usd": 4.6e-05,
+ "data": {
+  "queries": [
+   "Chinese-origin patent applications annual trends",
+   "Chinese applicants trade mark filings growth",
+   "Chinese design and plant breeder rights applications"
+  ],
+  "standalone_question": "How has China's role in Australian IP filings changed over time?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-trend-12",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 9.2e-05,
+  "input": 670,
+  "model": "gpt-6-luna",
+  "output": 50,
+  "reasoning": 0,
+  "seconds": 1.23
+ }
+}

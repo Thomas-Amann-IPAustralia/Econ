@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001216,
+ "data": {
+  "reason": "Both answers accurately address the question and narrative using well-supported claims. Answer A is slightly better because it includes the explicit verification from the 2024 report that the Hague 15-year term extension had not yet been implemented (design rights still lasted up to 10 years), and Answer A's coverage of the 2014 research directly explains the business-fit rationale for streamlining the system.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-policy-3:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002432,
+  "input": 2757,
+  "model": "gemini-3.8-flash",
+  "output": 97,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

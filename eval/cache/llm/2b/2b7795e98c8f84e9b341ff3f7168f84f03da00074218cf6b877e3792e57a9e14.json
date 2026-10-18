@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.7e-05,
+ "data": {
+  "context": "In *The Market for Design* (2014), Section 1.1, “Background and Motivation,” this passage discusses design’s growing importance and employment in Australia, and compares Australian design application levels and growth with patents, including Figure 1’s 2008–13 applications."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp03-market-for-design:0004",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000173,
+  "input": 1110,
+  "model": "gpt-6-luna",
+  "output": 124,
+  "reasoning": 53,
+  "seconds": 1.87
+ }
+}

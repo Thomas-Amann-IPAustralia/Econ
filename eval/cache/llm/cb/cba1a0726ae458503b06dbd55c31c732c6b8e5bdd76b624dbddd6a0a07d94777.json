@@ -1,0 +1,40 @@
+{
+ "cost_usd": 0.001126,
+ "data": {
+  "p1": 3,
+  "p10": 1,
+  "p11": 0,
+  "p12": 1,
+  "p13": 2,
+  "p14": 0,
+  "p15": 2,
+  "p16": 0,
+  "p17": 0,
+  "p18": 0,
+  "p19": 0,
+  "p2": 2,
+  "p20": 0,
+  "p3": 1,
+  "p4": 0,
+  "p5": 1,
+  "p6": 1,
+  "p7": 0,
+  "p8": 0,
+  "p9": 1
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "judge:judge-v1:gemini-3.5-flash-lite",
+ "schema_name": "grades",
+ "tag": "erp14-1",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002252,
+  "input": 5899,
+  "model": "gemini-3.5-flash-lite",
+  "output": 193,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

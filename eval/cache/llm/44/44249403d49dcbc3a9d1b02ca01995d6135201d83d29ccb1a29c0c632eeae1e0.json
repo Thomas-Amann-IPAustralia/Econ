@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000354,
+ "data": {
+  "queries": [
+   "trade marks as a leading indicator of the business cycle",
+   "trade mark filings and consumer confidence macroeconomic forecasting"
+  ],
+  "standalone_question": "Are new brand registrations a better early warning indicator of the economy than consumer confidence?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "note-tm-3",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000354,
+  "input": 665,
+  "model": "gemini-3.5-flash-lite",
+  "output": 62,
+  "reasoning": 0,
+  "seconds": 1.05
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000348,
+ "data": {
+  "queries": [
+   "Raising the Bar reforms patent scope methodology",
+   "measuring patent breadth changes after legislative reform"
+  ],
+  "standalone_question": "How did researchers determine whether Australian patents became narrower following the Raising the Bar reforms?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-methods-3",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000348,
+  "input": 667,
+  "model": "gemini-3.5-flash-lite",
+  "output": 59,
+  "reasoning": 0,
+  "seconds": 1.08
+ }
+}

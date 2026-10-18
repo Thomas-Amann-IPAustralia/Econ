@@ -1,0 +1,25 @@
+{
+ "cost_usd": 4.6e-05,
+ "data": {
+  "queries": [
+   "small and large firms use of patents trade marks designs",
+   "SME intellectual property rights filing rates business size"
+  ],
+  "standalone_question": "How do small and large businesses differ in their use of intellectual property rights?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-compare-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 9.3e-05,
+  "input": 674,
+  "model": "gpt-6-luna",
+  "output": 52,
+  "reasoning": 0,
+  "seconds": 1.57
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000193,
+ "data": {
+  "queries": [
+   "geographic trade marks place names",
+   "origin trade marks geographical indications"
+  ],
+  "standalone_question": "Which place name appears most frequently in Australian trade marks?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr18-4",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000193,
+  "input": 236,
+  "model": "gemini-3.5-flash-lite",
+  "output": 49,
+  "reasoning": 0,
+  "seconds": 1.11
+ }
+}

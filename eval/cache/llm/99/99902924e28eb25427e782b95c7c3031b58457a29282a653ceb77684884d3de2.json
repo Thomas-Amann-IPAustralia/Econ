@@ -1,0 +1,102 @@
+{
+ "cost_usd": 0.012505,
+ "data": {
+  "answer": "**IP Australia’s research has not found a statistically significant overall reduction in competition from IP rights at the industry level.** Its 2020 study, using Australian business data from 2002–2016, found no overall significant effect on industry-subdivision concentration.[1] However, this is not conclusive evidence that IP rights never restrict competition: concentration was used as a proxy, and industry-level concentration does not always reflect concentration in individual markets.[2]\n\nThe research highlights three considerations:\n\n- **Exclusive rights can create market power, but do not necessarily create monopolies.** Rapid technological change and substitute technologies can erode that power, while limits on the protection, scope and duration of rights can constrain it.[3]\n- **Specific patent-system mechanisms can hinder competition and innovation.** The 2025 report found that uncertainty caused by patent grant delays can deter rivals’ investment, R&D and market entry. The cited study found that delays tend to slow and narrow rivals’ follow-on innovation; an equivalent overseas grant partially mitigates this effect by reducing uncertainty about the right’s eventual scope.[4]\n- **More recent evidence also points towards competitive dynamism.** The 2026 report says IP participation appears associated with firm entry and growth, rather than simply reduced contestability. However, it explicitly does not claim pure causality and acknowledges that firms already on stronger growth paths may be more likely to invest in IP.[5]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "Using Australian data for all businesses between 2002 and 2016"
+     },
+     {
+      "evidence": 6,
+      "quote": "The econometric analysis in this study does not find any overall significant impact of IPRs on market competition as measured by concentration at an industry subdivision level."
+     }
+    ],
+    "text": "The 2020 study used Australian business data from 2002–2016 and found no overall statistically significant effect of IP rights on industry-subdivision concentration."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "This study uses the Herfindahl-Hirschman Index (HHI), a widely used measure of market concentration, as a proxy to determine market competitiveness."
+     },
+     {
+      "evidence": 6,
+      "quote": "Measures of concentration at the industry level are not always reflective of concentration at the market level"
+     }
+    ],
+    "text": "The finding is qualified because concentration is a proxy for competition and industry-level concentration need not reflect individual markets."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "However, not all IPRs can cause a monopoly or even reduce market competition significantly."
+     },
+     {
+      "evidence": 1,
+      "quote": "current technologies develop rapidly and rival technologies can quickly emerge as substitutes, eroding market power for the IPR owner"
+     },
+     {
+      "evidence": 1,
+      "quote": "Moreover, the protection, scope and term for new inventions that are regulated by intellectual property laws may also limit market power."
+     }
+    ],
+    "text": "Exclusive IP rights can create market power without necessarily creating monopolies; technological substitutes and legal limits can constrain that power."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 15,
+      "quote": "This uncertainty can deter third parties from investing in certain technologies, undertaking R&D, or entering specific markets."
+     },
+     {
+      "evidence": 15,
+      "quote": "The Motu/EPFL study found that patent grant delays tend to slow and narrow follow-on innovation by the applicant's rivals, as reflected in their future patenting activity."
+     },
+     {
+      "evidence": 15,
+      "quote": "the impact of delays is partially mitigated when an equivalent to the Australian patent (a patent for the same or similar invention) is granted overseas. The foreign grant likely reduces uncertainty about the eventual scope of the right"
+     }
+    ],
+    "text": "The 2025 report identifies patent grant delays as a potential impediment to rivals’ investment, entry and follow-on innovation, partly mitigated by equivalent overseas grants."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 10,
+      "quote": "Competition: IP participation appears associated with firm entry and growth, rather than simply reduced contestability."
+     },
+     {
+      "evidence": 10,
+      "quote": "Selection effects are likely present: firms on stronger growth paths may be more likely to invest in IP."
+     },
+     {
+      "evidence": 10,
+      "quote": "The analysis does not claim pure causality."
+     }
+    ],
+    "text": "The 2026 report associates IP participation with firm entry and growth rather than simply reduced contestability, but acknowledges selection effects and does not claim pure causality."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "explore-evidence-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.02501,
+  "input": 6495,
+  "model": "gpt-6.1-sol",
+  "output": 1202,
+  "reasoning": 201,
+  "seconds": 16.27
+ }
+}

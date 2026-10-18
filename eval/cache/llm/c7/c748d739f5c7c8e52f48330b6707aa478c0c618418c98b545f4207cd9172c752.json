@@ -1,0 +1,25 @@
+{
+ "cost_usd": 6.1e-05,
+ "data": {
+  "queries": [
+   "trade mark ownership and Australian export performance",
+   "exporters trade marks shocks causal evidence methodology"
+  ],
+  "standalone_question": "Do trade marks help Australian exporters, and how strong is the evidence?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-evidence-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000122,
+  "input": 675,
+  "model": "gpt-6-luna",
+  "output": 109,
+  "reasoning": 60,
+  "seconds": 1.6
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.4e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2018, Chapter 2, these notes accompany discussion of patent applications and international patent filing. They cite the Productivity Commission’s IP review and WIPO statistics, and explain the 2016 rise and 2017 reversal in Chinese applications and the Patent Cooperation Treaty."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2018:0041",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000188,
+  "input": 979,
+  "model": "gpt-6-luna",
+  "output": 180,
+  "reasoning": 106,
+  "seconds": 2.56
+ }
+}

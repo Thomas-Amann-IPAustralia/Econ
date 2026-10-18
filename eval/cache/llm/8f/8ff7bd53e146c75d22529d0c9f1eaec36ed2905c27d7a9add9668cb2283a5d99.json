@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000334,
+ "data": {
+  "queries": [
+   "economic research data sources methodology administrative records",
+   "linked dataset business longitudinal analysis database"
+  ],
+  "standalone_question": "What data sources does IP Australia's economic research rely on?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-methods-4",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000334,
+  "input": 663,
+  "model": "gemini-3.5-flash-lite",
+  "output": 54,
+  "reasoning": 0,
+  "seconds": 0.91
+ }
+}

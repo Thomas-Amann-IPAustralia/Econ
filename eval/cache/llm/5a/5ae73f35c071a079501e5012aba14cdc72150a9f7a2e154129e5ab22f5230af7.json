@@ -1,0 +1,24 @@
+{
+ "cost_usd": 3.4e-05,
+ "data": {
+  "queries": [
+   "pharmaceutical patent term extensions Australia beyond 20 years"
+  ],
+  "standalone_question": "Can patents on medicines in Australia last longer than the standard 20-year patent term?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr22-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 6.9e-05,
+  "input": 282,
+  "model": "gpt-6-luna",
+  "output": 81,
+  "reasoning": 35,
+  "seconds": 1.65
+ }
+}

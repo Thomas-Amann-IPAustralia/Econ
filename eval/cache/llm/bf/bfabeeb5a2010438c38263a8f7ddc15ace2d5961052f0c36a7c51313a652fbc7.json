@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.8e-05,
+ "data": {
+  "context": "In the Australian IP Report 2025’s discussion of copyright and the economy, this passage describes cultural and creative industries’ economic output and copyright’s role, noting the 2024 measurement-method update and Australian games-industry revenue and employment in 2021–22."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2025:0088",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000177,
+  "input": 1052,
+  "model": "gpt-6-luna",
+  "output": 143,
+  "reasoning": 75,
+  "seconds": 2.02
+ }
+}

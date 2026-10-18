@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000334,
+ "data": {
+  "queries": [
+   "exporters trade marks and shocks",
+   "IP rights business profitability and competition"
+  ],
+  "standalone_question": "How do intellectual property rights help firms deal with economic shocks and uncertainty?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-synthesis-7",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000334,
+  "input": 662,
+  "model": "gemini-3.5-flash-lite",
+  "output": 54,
+  "reasoning": 0,
+  "seconds": 0.78
+ }
+}

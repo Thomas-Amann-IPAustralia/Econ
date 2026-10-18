@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.4e-05,
+ "data": {
+  "queries": [
+   "small businesses IP policy implications support"
+  ],
+  "standalone_question": "What policy implications does the research draw for supporting small businesses with intellectual property (IP)?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-strategy-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 4.8e-05,
+  "input": 285,
+  "model": "gpt-6-luna",
+  "output": 40,
+  "reasoning": 0,
+  "seconds": 1.21
+ }
+}

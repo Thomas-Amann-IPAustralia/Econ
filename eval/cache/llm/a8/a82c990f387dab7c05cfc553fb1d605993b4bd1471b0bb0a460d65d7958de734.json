@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.3e-05,
+ "data": {
+  "queries": [
+   "Australian applicants overseas trade mark filings trend"
+  ],
+  "standalone_question": "How have Australian applicants’ trade mark filings overseas changed over time?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "multi-6",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 4.7e-05,
+  "input": 281,
+  "model": "gpt-6-luna",
+  "output": 37,
+  "reasoning": 0,
+  "seconds": 1.18
+ }
+}

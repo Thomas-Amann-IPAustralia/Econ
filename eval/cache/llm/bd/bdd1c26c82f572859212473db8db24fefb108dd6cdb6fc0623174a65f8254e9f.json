@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.4e-05,
+ "data": {
+  "context": "In the “IP data for policy and decision making” section of the Australian IP Report 2023, this passage explains the data behind the report: IP Australia’s IPGOD records and ABS-linked MADIP and BLADE data on Australian workers, employers and business IP activity, including worker observations from 2011 to 2019."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2023:0009",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000149,
+  "input": 1088,
+  "model": "gpt-6-luna",
+  "output": 81,
+  "reasoning": 0,
+  "seconds": 1.6
+ }
+}

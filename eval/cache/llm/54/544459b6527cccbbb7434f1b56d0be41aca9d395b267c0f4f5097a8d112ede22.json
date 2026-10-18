@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000109,
+ "data": {
+  "queries": [
+   "innovation patent applications annual filing trends",
+   "Innovation patent filings changed from X in [year] to Y before the system stopped accepting applications in 2021."
+  ],
+  "standalone_question": "What has happened to innovation patents over the years?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-trend-10",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000218,
+  "input": 760,
+  "model": "gpt-6-luna",
+  "output": 285,
+  "reasoning": 226,
+  "seconds": 3.84
+ }
+}

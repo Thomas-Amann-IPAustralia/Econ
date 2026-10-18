@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000391,
+ "data": {
+  "queries": [
+   "computer-implemented invention patents IP Australia EPO USPTO comparison",
+   "grant rates examination outcomes computer-implemented inventions international comparison"
+  ],
+  "standalone_question": "How do outcomes for computer-implemented invention patents at IP Australia compare with the European Patent Office and the United States Patent and Trademark Office?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-compare-3",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000391,
+  "input": 670,
+  "model": "gemini-3.5-flash-lite",
+  "output": 76,
+  "reasoning": 0,
+  "seconds": 0.99
+ }
+}

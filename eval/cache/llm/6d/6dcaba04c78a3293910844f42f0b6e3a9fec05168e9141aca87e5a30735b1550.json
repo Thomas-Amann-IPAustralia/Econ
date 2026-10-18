@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.1e-05,
+ "data": {
+  "context": "In the Australian IP Report 2024, this at-a-glance passage summarises research on the relative scope of Australian patents in the 2010s compared with equivalents for the same inventions in Europe and the United States. It reports estimates of the Raising the Bar reforms’ effect, including in ICT/software, and the 2019 shares of patents assessed as similar, broader or narrower in scope."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2024:0030",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000141,
+  "input": 951,
+  "model": "gpt-6-luna",
+  "output": 92,
+  "reasoning": 0,
+  "seconds": 1.94
+ }
+}

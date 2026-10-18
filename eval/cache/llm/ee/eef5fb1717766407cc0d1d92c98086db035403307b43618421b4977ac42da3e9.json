@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.7e-05,
+ "data": {
+  "context": "In the Australian IP Report 2026, this passage is part of the plant variety rights discussion and Figure 5.4 on PBR applications. It shows leading plant variety classes by 2025 filing volume and classes with the strongest changes from 2024 to 2025; the preceding text notes that non-residents filed 69.7% of fruit-crop applications."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0105",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000195,
+  "input": 896,
+  "model": "gpt-6-luna",
+  "output": 210,
+  "reasoning": 119,
+  "seconds": 2.71
+ }
+}

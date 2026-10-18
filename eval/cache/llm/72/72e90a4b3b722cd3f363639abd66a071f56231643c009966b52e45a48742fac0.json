@@ -1,0 +1,26 @@
+{
+ "cost_usd": 5.6e-05,
+ "data": {
+  "queries": [
+   "patent grant effect on firm size",
+   "causal impact of patent grants on employment and firm growth",
+   "International research finds patent grants affect firm size by X, measured through changes in employment or business growth."
+  ],
+  "standalone_question": "What does overseas research say about the effect of a patent grant on firm size?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr22-5",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000113,
+  "input": 763,
+  "model": "gpt-6-luna",
+  "output": 73,
+  "reasoning": 0,
+  "seconds": 1.52
+ }
+}

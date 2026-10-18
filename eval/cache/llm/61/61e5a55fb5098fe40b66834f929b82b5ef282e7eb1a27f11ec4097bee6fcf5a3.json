@@ -1,0 +1,25 @@
+{
+ "cost_usd": 4.6e-05,
+ "data": {
+  "queries": [
+   "trade marks leading indicator business cycle",
+   "trade mark filings COVID-19 pandemic"
+  ],
+  "standalone_question": "Do trade mark filings usually rise and fall with the economy, and what happened during the pandemic?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr23-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 9.3e-05,
+  "input": 679,
+  "model": "gpt-6-luna",
+  "output": 50,
+  "reasoning": 0,
+  "seconds": 1.45
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000225,
+ "data": {
+  "queries": [
+   "Henry Wilson furniture designer",
+   "trade marks vs design registration",
+   "protecting furniture designs IP"
+  ],
+  "standalone_question": "Why did furniture designer Henry Wilson rely on trade marks rather than design registration?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "erp03-1",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000225,
+  "input": 241,
+  "model": "gemini-3.5-flash-lite",
+  "output": 61,
+  "reasoning": 0,
+  "seconds": 1.59
+ }
+}

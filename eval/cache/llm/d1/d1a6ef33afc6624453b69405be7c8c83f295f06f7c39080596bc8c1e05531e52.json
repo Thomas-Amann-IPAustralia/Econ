@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.00112,
+ "data": {
+  "reason": "Both answers are very well-constructed, accurate, and completely grounded in the provided quotes. Answer B is slightly better because its discussion of recent shifts focuses on the most recent consecutive years (2023 to 2025) across several top countries including Japan, the UK, Germany, and Switzerland, whereas Answer A relies heavily on older 2021 data for the broader country breakdown.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-trend-4:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002239,
+  "input": 2525,
+  "model": "gemini-3.8-flash",
+  "output": 92,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

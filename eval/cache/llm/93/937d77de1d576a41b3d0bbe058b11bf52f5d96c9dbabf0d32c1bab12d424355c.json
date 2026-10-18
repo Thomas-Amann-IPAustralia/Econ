@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5.7e-05,
+ "data": {
+  "context": "In the Australian IP Report 2023, under “International trade mark activity in Australia,” this passage explains how overseas trade mark registrations help Australian businesses differentiate products, build familiar brands and enter export markets, and notes that overseas filings indicate future export entry and performance."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2023:0033",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000114,
+  "input": 822,
+  "model": "gpt-6-luna",
+  "output": 64,
+  "reasoning": 0,
+  "seconds": 1.62
+ }
+}

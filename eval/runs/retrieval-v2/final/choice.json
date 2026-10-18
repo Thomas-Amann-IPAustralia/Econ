@@ -1,0 +1,11 @@
+{
+  "baseline": "plan:luna-plan-v1/plain/none",
+  "chosen": "plan+q:luna-plan-v2/enriched/none",
+  "dev": {
+    "plan+q:luna-plan-v2/enriched/none": 0.7332642620328444,
+    "plan:luna-plan-v1/plain/none": 0.6740225198574566
+  },
+  "primary": "ndcg@20",
+  "rule_again": "plan+q:luna-plan-v2/enriched/none",
+  "stage": "final"
+}

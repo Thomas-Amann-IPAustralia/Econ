@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.2e-05,
+ "data": {
+  "context": "In the Australian IP Report 2023, the “IP, productivity and wages” discussion examines the innovation wage premium associated with patent-holding businesses. This passage says employee wages rise on average with an employer’s total number of patents and notes that complementary patents can increase a portfolio’s value."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2023:0111",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000143,
+  "input": 843,
+  "model": "gpt-6-luna",
+  "output": 118,
+  "reasoning": 46,
+  "seconds": 1.72
+ }
+}

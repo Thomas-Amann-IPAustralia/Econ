@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.2e-05,
+ "data": {
+  "context": "In *Drivers of AI Investment* (2023), the Overview discusses patent ownership among Australian companies, comparing firms hiring for AI capacity with general-hiring firms. It reports that just over half of patent-owning companies have at least one Australian patent and relates this to Australia’s role in international AI patenting."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "oce-ai-investment:0042",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000143,
+  "input": 1058,
+  "model": "gpt-6-luna",
+  "output": 74,
+  "reasoning": 0,
+  "seconds": 1.49
+ }
+}

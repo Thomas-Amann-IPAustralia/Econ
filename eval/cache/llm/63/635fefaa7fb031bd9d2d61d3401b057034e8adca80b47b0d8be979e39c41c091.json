@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001097,
+ "data": {
+  "reason": "Both answers are very well structured and thoroughly supported by quotes. Answer B is slightly better because it includes a very concrete policy implication on procedural timing (preserving flexibility/delays rather than assuming faster examination is always better for SMEs), adds specific technology-sector policy recommendations (AI knowledge-transfer programs), and includes a more explicit quote directly addressing selection effects/causality.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-strategy-3:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002194,
+  "input": 2506,
+  "model": "gemini-3.8-flash",
+  "output": 84,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5.5e-05,
+ "data": {
+  "context": "Australian Intellectual Property Report 2022, in the Trade marks section, explains what trade marks do and the rights and benefits provided by registration."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2022:0033",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000109,
+  "input": 888,
+  "model": "gpt-6-luna",
+  "output": 40,
+  "reasoning": 0,
+  "seconds": 1.63
+ }
+}

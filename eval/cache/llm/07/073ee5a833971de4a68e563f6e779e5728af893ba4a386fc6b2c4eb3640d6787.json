@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.8e-05,
+ "data": {
+  "context": "In the Australian IP Report 2025, the Trade marks section summarises trends in Australian trade mark filings in 2024, including changes in resident and non-resident filings, industry patterns, and the share of active SMEs holding trade marks."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2025:0047",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000136,
+  "input": 835,
+  "model": "gpt-6-luna",
+  "output": 105,
+  "reasoning": 42,
+  "seconds": 1.77
+ }
+}

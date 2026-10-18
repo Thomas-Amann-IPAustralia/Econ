@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.7e-05,
+ "data": {
+  "context": "In the 2024 Australian IP Report section “IP and competition: How broad are Australian patents?”, this passage explains patent scope and how broad or narrow protection can affect follow-on investment and innovation. It also introduces a 2022–23 IP Australia and Swinburne CTI study using machine learning to compare Australian patents with grants for the same inventions in the United States and European Patent Office."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2024:0029",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000134,
+  "input": 882,
+  "model": "gpt-6-luna",
+  "output": 92,
+  "reasoning": 0,
+  "seconds": 1.6
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.4e-05,
+ "data": {
+  "queries": [
+   "patent-holding small firms growth into large firms firm growth"
+  ],
+  "standalone_question": "Why are fewer small firms that hold patents growing into large firms?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-synthesis-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 4.9e-05,
+  "input": 284,
+  "model": "gpt-6-luna",
+  "output": 42,
+  "reasoning": 0,
+  "seconds": 1.33
+ }
+}

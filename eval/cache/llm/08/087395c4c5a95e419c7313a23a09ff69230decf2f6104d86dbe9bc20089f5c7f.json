@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000341,
+ "data": {
+  "queries": [
+   "IP rights business profitability and competition",
+   "intellectual property impact on market competition industry concentration"
+  ],
+  "standalone_question": "Is there evidence that intellectual property rights negatively impact competition across Australian industries?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "erp10-5",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000341,
+  "input": 663,
+  "model": "gemini-3.5-flash-lite",
+  "output": 57,
+  "reasoning": 0,
+  "seconds": 0.97
+ }
+}

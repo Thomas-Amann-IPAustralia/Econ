@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.6e-05,
+ "data": {
+  "queries": [
+   "patent workload per examiner Australia UK US comparison"
+  ],
+  "standalone_question": "How did IP Australia's patent workload per examiner compare with the workloads at the UK and US patent offices?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp01-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 5.2e-05,
+  "input": 287,
+  "model": "gpt-6-luna",
+  "output": 46,
+  "reasoning": 0,
+  "seconds": 1.93
+ }
+}

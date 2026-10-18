@@ -1,0 +1,25 @@
+{
+ "cost_usd": 2.5e-05,
+ "data": {
+  "queries": [
+   "patent applications by state and territory",
+   "trade mark applications by state and territory"
+  ],
+  "standalone_question": "How do Australian states and territories differ in patent and trade mark activity?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-compare-7",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 5.1e-05,
+  "input": 285,
+  "model": "gpt-6-luna",
+  "output": 46,
+  "reasoning": 0,
+  "seconds": 1.95
+ }
+}

@@ -1,0 +1,104 @@
+{
+ "cost_usd": 0.013781,
+ "data": {
+  "answer": "The central implication is to **help small businesses use IP strategically, rather than simply increase the number of rights they hold**. The research favours attention to IP quality, the underlying innovation and how businesses exploit their rights.[1]\n\n- **Embed IP consideration early.** The 2022 report explicitly links the evidence to helping businesses consider IP early in their life and obtain the information needed to make informed protection decisions.[2]\n- **Reduce barriers to navigating the system.** Practical support described in the 2022 report includes dedicated SME case management, faster patent examination and accessible fact sheets, case studies, education, tools and checklists.[3]\n- **Support commercialisation, not just registration.** The 2024 report identifies licensing and selling ideas as routes to commercialisation. Protection from imitation can also give small businesses time to obtain finance and resources or build their own commercialisation capability.[4]\n- **Help small innovators use procedural flexibility.** The 2025 report highlights benefits from engaging with IP early and strategically influencing application timeframes, including more commercialised products and greater lifetime value from IP assets.[5]\n- **Consider wider financing and economic constraints.** An implication of the research is that IP support should be considered alongside conditions affecting innovation: access to capital is vital for innovative firms’ growth, while downturns can constrain SMEs’ adoption and commercialisation of technology.[6]\n\n**Evidence caveat:** the Australian SME growth findings identify higher growth probabilities among IP filers and describe IP use as an indicator of future growth potential; they should not be read as proof that registration alone causes growth.[7]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 20,
+      "quote": "A potential implication is that IP policy should aim not at increasing the number of IP rights alone but should rather focus more on the quality of IP rights, the underlying innovations they are protecting and how businesses exploit IP rights in the marketplace."
+     }
+    ],
+    "text": "Policy should emphasise IP quality, underlying innovation and commercial use rather than increasing rights counts alone."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "Based on the available evidence, IP Australia is working to embed consideration of IP early in a company's life, to ensure that small businesses have the information they need to make informed decisions about IP protection."
+     }
+    ],
+    "text": "The 2022 report supports embedding informed consideration of IP early in a business's life."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "Our SME Case Management service connects potential applicants with a dedicated subject matter expert to help guide them through the application and examination process."
+     },
+     {
+      "evidence": 3,
+      "quote": "SMEs are also eligible to fast track their patent applications to progress through examination faster. Fact sheets, case studies, online education, tools and checklists are available"
+     }
+    ],
+    "text": "The 2022 report describes SME case management, faster patent examination and practical information resources as support mechanisms."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 12,
+      "quote": "IP rights facilitate technology transfer, enabling innovators to license or sell their ideas to others. By reducing the threat of imitation, IP rights provide businesses the time needed to build commercialisation capability."
+     },
+     {
+      "evidence": 6,
+      "quote": "By protecting innovators from copying, patents can also provide small firms the time necessary to obtain resources and financing."
+     }
+    ],
+    "text": "Supporting commercialisation includes enabling licensing or sale and helping businesses obtain resources, financing and commercialisation capability."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 13,
+      "quote": "Within limits, businesses can influence application timeframes when seeking protection. As this report shows, small innovators benefit from this flexibility when they engage with IP early in their development, resulting in more innovations, more commercialised products and greater lifetime value to their IP assets."
+     }
+    ],
+    "text": "The 2025 report supports early engagement and strategic use of application timeframes to improve commercialisation and IP asset value."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 14,
+      "quote": "For entrepreneurial firms oriented to innovation, access to capital is vital to realise their high growth potential."
+     },
+     {
+      "evidence": 18,
+      "quote": "much of the impact appears to be on the adoption and commercialisation of existing technology rather than development of new technologies. This suggests that downturns have the potential to have long-lasting economic impacts by limiting innovation, particularly for SMEs."
+     }
+    ],
+    "text": "The research implies that support should consider capital access and economic conditions that constrain SMEs' innovation and commercialisation."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 8,
+      "quote": "Regression model estimates suggest that SMEs filing for at least one IP right in a year are 16% more likely to achieve high employment growth than non filers."
+     },
+     {
+      "evidence": 2,
+      "quote": "for Australian SMEs, the use of IP rights is a strong indicator of their future growth potential."
+     }
+    ],
+    "text": "Australian SME findings describe growth probabilities and predictive indicators, not proof that registration alone causes growth."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "explore-strategy-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.027562,
+  "input": 6476,
+  "model": "gpt-6.1-sol",
+  "output": 1461,
+  "reasoning": 278,
+  "seconds": 19.93
+ }
+}

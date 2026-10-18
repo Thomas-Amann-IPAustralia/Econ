@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000231,
+ "data": {
+  "queries": [
+   "Indigenous Knowledge IP system",
+   "Traditional Knowledge Indigenous Australian IP Australia",
+   "Indigenous Knowledge protection IP Australia"
+  ],
+  "standalone_question": "What initiatives or actions is IP Australia undertaking regarding Indigenous Knowledge within the intellectual property system?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-policy-8",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000231,
+  "input": 238,
+  "model": "gemini-3.5-flash-lite",
+  "output": 64,
+  "reasoning": 0,
+  "seconds": 1.39
+ }
+}

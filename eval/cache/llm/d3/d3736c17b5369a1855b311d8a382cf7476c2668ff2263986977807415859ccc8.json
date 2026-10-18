@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000766,
+ "data": {
+  "reason": "Answer B directly addresses the core question and narrative by examining how designers actually protect their work, noting the weak role of formal IP, alternative strategies (trade marks, copyright), and service co-creation. Answer A provides higher-level statistics about business filings without addressing the qualitative strategies designers use.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-synthesis-9:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001532,
+  "input": 1703,
+  "model": "gemini-3.8-flash",
+  "output": 68,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

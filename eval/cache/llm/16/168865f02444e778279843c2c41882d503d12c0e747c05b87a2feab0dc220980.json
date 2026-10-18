@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.7e-05,
+ "data": {
+  "context": "In the IP Rights Overview section of the Australian IP Report 2026, this passage describes the IP Rights Overview tool, which provides access to IP Australia’s open IP RAPID dataset and weekly self-serve updates and insights for stakeholders."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0128",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000134,
+  "input": 791,
+  "model": "gpt-6-luna",
+  "output": 109,
+  "reasoning": 48,
+  "seconds": 1.6
+ }
+}

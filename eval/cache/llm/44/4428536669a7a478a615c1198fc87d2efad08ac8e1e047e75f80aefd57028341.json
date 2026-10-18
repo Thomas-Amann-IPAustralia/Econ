@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5.9e-05,
+ "data": {
+  "context": "In *The structural change in patenting behaviour in Australia* (2024), this section examines how the share of Australian employing firms holding patents changed over the two decades to 2023, using BLADE and IPLORD data. It also describes growth trends among patenting SMEs and large firms, including a slowdown around 2017–19."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "note-patenting-structural-change:0003",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000118,
+  "input": 774,
+  "model": "gpt-6-luna",
+  "output": 82,
+  "reasoning": 0,
+  "seconds": 1.79
+ }
+}

@@ -1,0 +1,38 @@
+{
+ "cost_usd": 0.00855,
+ "data": {
+  "answer": "In 2021, patent filings by small and medium-sized enterprises (SMEs) grew by 27% compared with 2020. SMEs’ share of organisational patent applicants with Australian operations reached a decadal high, increasing by 7 percentage points over 2020 and 2021.[1]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "In 2021, SME patent filings grew 27% from 2020"
+     },
+     {
+      "evidence": 2,
+      "quote": "Focusing only on organisational applicants with Australian operations, 68% are small and medium enterprise (SMEs) and 23% are large entities. In 2021, SME filings grew 27% and the SME share of organisational applicants has reached a decadal high, rising 7 percentage points over 2020 and 2021."
+     }
+    ],
+    "text": "In 2021, SME patent filings grew by 27% compared with 2020, and their share of organisational patent applicants with Australian operations reached a decadal high after rising 7 percentage points over 2020 and 2021."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "ipr22-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.0171,
+  "input": 7145,
+  "model": "gpt-6.1-sol",
+  "output": 281,
+  "reasoning": 0,
+  "seconds": 4.18
+ }
+}

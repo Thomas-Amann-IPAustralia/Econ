@@ -1,0 +1,27 @@
+{
+ "cost_usd": 4.9e-05,
+ "data": {
+  "queries": [
+   "SME growth productivity wages correlation causal effect",
+   "trade marks exports shocks correlation causal inference",
+   "IP rights profitability competition correlation causality",
+   "patenting firms collaboration correlation causal effect"
+  ],
+  "standalone_question": "Which IP Australia studies describe their findings as correlations rather than causal effects?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "multi-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 9.9e-05,
+  "input": 674,
+  "model": "gpt-6-luna",
+  "output": 63,
+  "reasoning": 0,
+  "seconds": 1.38
+ }
+}

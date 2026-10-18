@@ -1,0 +1,40 @@
+{
+ "cost_usd": 0.001269,
+ "data": {
+  "p1": 0,
+  "p10": 3,
+  "p11": 0,
+  "p12": 3,
+  "p13": 3,
+  "p14": 0,
+  "p15": 0,
+  "p16": 3,
+  "p17": 0,
+  "p18": 2,
+  "p19": 0,
+  "p2": 0,
+  "p20": 0,
+  "p3": 2,
+  "p4": 0,
+  "p5": 0,
+  "p6": 2,
+  "p7": 0,
+  "p8": 3,
+  "p9": 2
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "judge:judge-v1:gemini-3.5-flash-lite",
+ "schema_name": "grades",
+ "tag": "explore-context-1",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002537,
+  "input": 7525,
+  "model": "gemini-3.5-flash-lite",
+  "output": 112,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

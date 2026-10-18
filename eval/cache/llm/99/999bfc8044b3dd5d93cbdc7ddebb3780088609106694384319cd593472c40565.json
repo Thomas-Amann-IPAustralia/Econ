@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.5e-05,
+ "data": {
+  "queries": [
+   "innovation patent SMEs innovation goal effectiveness"
+  ],
+  "standalone_question": "Was Australia’s innovation patent system achieving its goal of helping small and medium-sized enterprises (SMEs) innovate?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr18-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 5.1e-05,
+  "input": 283,
+  "model": "gpt-6-luna",
+  "output": 45,
+  "reasoning": 0,
+  "seconds": 1.38
+ }
+}

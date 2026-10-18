@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.4e-05,
+ "data": {
+  "context": "In the 2014 report *Report on patent backlogs, inventories and pendency*, the “Directed vs. Voluntary Examination Requests” section compares acceptance rates for Australian patent applications directed to examination and those requested voluntarily. It describes changes from 2000 to 2008 and notes that grants on voluntary requests remained relatively stable."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp01-patent-backlogs:0023",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000169,
+  "input": 947,
+  "model": "gpt-6-luna",
+  "output": 149,
+  "reasoning": 69,
+  "seconds": 2.7
+ }
+}

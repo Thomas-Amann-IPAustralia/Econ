@@ -1,0 +1,21 @@
+{
+ "cost_usd": 4.4e-05,
+ "data": {
+  "context": "Australian Intellectual Property Report 2017, Contents: this passage lists the report’s opening sections and their page numbers, including the welcome, introduction, patents and trade marks."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2017:0002",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 8.8e-05,
+  "input": 653,
+  "model": "gpt-6-luna",
+  "output": 46,
+  "reasoning": 0,
+  "seconds": 1.69
+ }
+}

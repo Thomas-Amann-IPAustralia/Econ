@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000334,
+ "data": {
+  "queries": [
+   "innovation patent performance SMEs review impact",
+   "abolition of innovation patent small medium enterprises"
+  ],
+  "standalone_question": "Was the innovation patent achieving its goal of helping SMEs innovate?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr18-2",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000334,
+  "input": 662,
+  "model": "gemini-3.5-flash-lite",
+  "output": 54,
+  "reasoning": 0,
+  "seconds": 1.12
+ }
+}

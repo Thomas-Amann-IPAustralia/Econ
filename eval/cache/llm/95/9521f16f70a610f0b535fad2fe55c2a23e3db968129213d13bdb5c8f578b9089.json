@@ -1,0 +1,24 @@
+{
+ "cost_usd": 5.6e-05,
+ "data": {
+  "queries": [
+   "computer-implemented inventions legal standards causal effect empirical identification difference-in-differences"
+  ],
+  "standalone_question": "How did the computer-implemented inventions study identify and estimate the causal effect of changes in legal standards?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp16-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000112,
+  "input": 289,
+  "model": "gpt-6-luna",
+  "output": 167,
+  "reasoning": 113,
+  "seconds": 2.29
+ }
+}

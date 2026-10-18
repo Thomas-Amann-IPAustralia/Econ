@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5.2e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2015, Appendix A on patents explains the requirements for an Australian patent, the exclusive rights it provides, and its application costs, duration and renewal."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2015:0024",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000104,
+  "input": 789,
+  "model": "gpt-6-luna",
+  "output": 51,
+  "reasoning": 0,
+  "seconds": 1.18
+ }
+}

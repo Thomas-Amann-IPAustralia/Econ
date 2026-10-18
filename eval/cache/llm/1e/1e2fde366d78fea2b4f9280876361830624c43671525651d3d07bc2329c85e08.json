@@ -1,0 +1,80 @@
+{
+ "cost_usd": 0.013191,
+ "data": {
+  "answer": "**There is evidence that IP ownership is associated with higher profitability after accounting for other firm characteristics—but it does not settle which way causation runs.** The 2020 study found a strong positive association between ownership of patents, trade marks or designs and profitability.[1]\n\n- **The relationship survives statistical controls.** The study reports approximately “2.5 times higher profit” for IP owners, controlling for past profitability and certain business, industry and time characteristics.[2]\n- **There is an important sample restriction.** That estimate covers only businesses that had been profitable for at least the preceding six years; observations with zero or negative profits were excluded. It therefore does not establish that acquiring IP makes an unprofitable firm profitable.[3]\n- **Selection into IP ownership is also relevant.** Owners tend to be larger and older. The report notes that these businesses have greater financial, knowledge and organisational resources to obtain and use IP rights—resources that may also increase their profits.[4]\n- **Owning IP and owning more IP are different propositions.** The study found no significant association between the number of rights held and profitability. Its suggested policy implication was to focus on IP quality, the underlying innovations and their commercial exploitation, rather than counts alone.[5]\n\nThe safest interpretation is therefore a positive, conditional association—not definitive proof that IP ownership causes higher profitability, nor that more profitable firms simply file more IP.[1][2][3][4][5]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Ownership of IP rights, specifically patents, trade marks and designs, is strongly and positively associated with firm profitability."
+     }
+    ],
+    "text": "The 2020 study found a strong positive association between IP ownership and profitability, which should not by itself be interpreted as settling causation."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 8,
+      "quote": "IPR ownership does contribute significantly to businesses' average profit per invested capital and profit per employee after controlling for their past profitability and certain other business, industry and time characteristics."
+     },
+     {
+      "evidence": 8,
+      "quote": "The estimated coefficient of the IP ownership dummy variable indicates that IPR owners have approximately 2.5 times higher profit than non-owners on average, all else being equal."
+     }
+    ],
+    "text": "The study reports approximately 2.5 times higher profit for IP owners after controlling for past profitability and certain business, industry and time characteristics."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 8,
+      "quote": "only businesses that have been making a profit in the past six years at least have been used in this estimation due to the log transformation of the probability indicator. Any negative or no profit observations are necessarily dropped from the analysis."
+     }
+    ],
+    "text": "The estimate applies only to businesses profitable for at least the preceding six years, excluding zero or negative profit observations, so it does not establish that IP makes unprofitable firms profitable."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "On average, firms that own IPRs are larger (in terms of number of employees), older and more profitable than those without IPRs"
+     },
+     {
+      "evidence": 6,
+      "quote": "Older or larger businesses tend to have greater resources, including financial, knowledge and organisational capital, to equip them to apply for and use IP rights. This in turn may also increase the average profit of such businesses."
+     }
+    ],
+    "text": "IP owners tend to be larger and older, and their greater resources may support both IP ownership and profitability, making selection relevant to interpretation."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "However, the number of IP rights that a firm owns does not appear to be significantly associated with business profitability. A potential implication is that IP policy should aim not at increasing the number of IP rights alone but should rather focus more on the quality of IP rights, the underlying innovations they are protecting and how businesses exploit IP rights in the marketplace."
+     }
+    ],
+    "text": "The number of rights held was not significantly associated with profitability; the study suggested focusing policy on quality, underlying innovation and commercial exploitation rather than counts alone."
+   }
+  ],
+  "coverage": "partial",
+  "gaps": [
+   "The passages do not conclusively separate the causal effect of IP ownership on profitability from the possibility that more profitable firms are more likely to acquire IP, or establish whether both mechanisms operate."
+  ]
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "explore-evidence-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.026382,
+  "input": 7136,
+  "model": "gpt-6.1-sol",
+  "output": 1211,
+  "reasoning": 335,
+  "seconds": 19.7
+ }
+}

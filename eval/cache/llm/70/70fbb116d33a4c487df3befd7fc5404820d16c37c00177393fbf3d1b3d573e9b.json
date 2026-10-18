@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000928,
+ "data": {
+  "reason": "Answer A directly provides the actual comparative grant rates for computer-implemented inventions at the three offices (54% at IP Australia, 27% at EPO, 70% at USPTO), whereas Answer B presents the relative reduction against non-CII baselines. Answer A is much more direct in answering how outcomes compare across the offices and accurately contextualises the finding using triplet patent families.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-compare-3:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001855,
+  "input": 2018,
+  "model": "gemini-3.8-flash",
+  "output": 91,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

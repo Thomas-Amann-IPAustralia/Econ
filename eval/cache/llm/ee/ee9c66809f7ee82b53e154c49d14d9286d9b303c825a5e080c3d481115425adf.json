@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000359,
+ "data": {
+  "queries": [
+   "trade marks as a leading indicator of the business cycle",
+   "trade mark filing trends predicting economic downturns"
+  ],
+  "standalone_question": "Can trade mark filings be used as a leading indicator of the business cycle and recessions?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-evidence-5",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000359,
+  "input": 663,
+  "model": "gemini-3.5-flash-lite",
+  "output": 64,
+  "reasoning": 0,
+  "seconds": 0.81
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "cost_usd": 9.6e-05,
+ "data": {
+  "queries": [
+   "venture capital funding concentrated among high-growth innovative firms"
+  ],
+  "standalone_question": "Why might growth in venture capital not have helped all innovative firms scale up?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "note-sc-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000191,
+  "input": 675,
+  "model": "gpt-6-luna",
+  "output": 248,
+  "reasoning": 205,
+  "seconds": 4.32
+ }
+}

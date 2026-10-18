@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000345,
+ "data": {
+  "queries": [
+   "innovation patent phase out abolition reasons",
+   "review of innovation patent system findings"
+  ],
+  "standalone_question": "What happened to the innovation patent system in Australia, and what were the reasons for its removal?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "multi-8",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000345,
+  "input": 660,
+  "model": "gemini-3.5-flash-lite",
+  "output": 59,
+  "reasoning": 0,
+  "seconds": 0.92
+ }
+}

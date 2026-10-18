@@ -1,0 +1,29 @@
+{
+ "cost_usd": 0.00062,
+ "data": {
+  "p1": 3,
+  "p2": 3,
+  "p3": 1,
+  "p4": 2,
+  "p5": 1,
+  "p6": 3,
+  "p7": 0,
+  "p8": 3,
+  "p9": 2
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "judge:judge-v1:gemini-3.5-flash-lite",
+ "schema_name": "grades",
+ "tag": "explore-trend-9",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001239,
+  "input": 3605,
+  "model": "gemini-3.5-flash-lite",
+  "output": 63,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

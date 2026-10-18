@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5e-05,
+ "data": {
+  "context": "In the contents of *Designs Law and Practice: Design within Australia and how Australia compares to its international peers* (2019), this passage lists the opening sections and their page numbers: the executive summary, introduction and the designs system."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp08-designs-law-practice:0001",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.0001,
+  "input": 700,
+  "model": "gpt-6-luna",
+  "output": 60,
+  "reasoning": 0,
+  "seconds": 1.5
+ }
+}

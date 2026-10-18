@@ -1,0 +1,27 @@
+{
+ "cost_usd": 0.000411,
+ "data": {
+  "queries": [
+   "Australian patent filings international patent filing trends R&D investment",
+   "university industry collaboration research commercialisation innovation clusters",
+   "labour productivity growth business innovation and patenting firms",
+   "Australian innovation outputs and productivity show mixed results, with strong research collaboration and patenting but weaker productivity growth and commercialisation compared with international benchmarks."
+  ],
+  "standalone_question": "Do publications by IP Australia’s Office of the Chief Economist corroborate or contradict WIPO’s 2026 Global Innovation Index profile of Australia, including its ranking, patenting and R&D trends, productivity, university-industry collaboration, and innovation clusters?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "owner-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000821,
+  "input": 6541,
+  "model": "gpt-6-luna",
+  "output": 334,
+  "reasoning": 205,
+  "seconds": 3.55
+ }
+}

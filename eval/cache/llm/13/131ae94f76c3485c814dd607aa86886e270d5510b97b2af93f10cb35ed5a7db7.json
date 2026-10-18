@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.000292,
+ "data": {
+  "queries": [
+   "trade mark renewal period duration expiry"
+  ],
+  "standalone_question": "Does a registered trade mark ever expire?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr19-1",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000292,
+  "input": 658,
+  "model": "gemini-3.5-flash-lite",
+  "output": 38,
+  "reasoning": 0,
+  "seconds": 1.0
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "queries": [
+   "IP Australia's economics team used machine learning approaches including X to analyse Y."
+  ],
+  "standalone_question": "What machine learning approaches has IP Australia's economics team used in its research?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-methods-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000165,
+  "input": 763,
+  "model": "gpt-6-luna",
+  "output": 178,
+  "reasoning": 131,
+  "seconds": 2.47
+ }
+}

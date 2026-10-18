@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000215,
+ "data": {
+  "queries": [
+   "exporters trade mark tariff cut gains",
+   "tariff reductions trade marks export performance"
+  ],
+  "standalone_question": "How much more do exporters with a recent trade mark gain from a tariff cut?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "erp11-1",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000215,
+  "input": 241,
+  "model": "gemini-3.5-flash-lite",
+  "output": 57,
+  "reasoning": 0,
+  "seconds": 0.99
+ }
+}

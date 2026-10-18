@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.5e-05,
+ "data": {
+  "queries": [
+   "intellectual property rights patents competition market power competition effects"
+  ],
+  "standalone_question": "What does IP Australia's research say about whether patents and other intellectual property rights reduce competition?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-evidence-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 5.1e-05,
+  "input": 286,
+  "model": "gpt-6-luna",
+  "output": 44,
+  "reasoning": 0,
+  "seconds": 1.4
+ }
+}

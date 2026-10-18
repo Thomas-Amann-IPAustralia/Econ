@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000358,
+ "data": {
+  "queries": [
+   "design applications growth rate 2018",
+   "historical growth trend of design applications past decade"
+  ],
+  "standalone_question": "How did growth in design applications in 2018 compare with the previous decade?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr19-2",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000358,
+  "input": 668,
+  "model": "gemini-3.5-flash-lite",
+  "output": 63,
+  "reasoning": 0,
+  "seconds": 0.94
+ }
+}

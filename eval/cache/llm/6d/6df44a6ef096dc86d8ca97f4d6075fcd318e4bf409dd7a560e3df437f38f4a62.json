@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.4e-05,
+ "data": {
+  "context": "In the Australian IP Report 2026 section “Lead filers: domestic capability and global scale,” this passage describes the range of applicants for Australian standard patent applications in 2025; Figure 2.5 presents those leading applicants."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0053",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000149,
+  "input": 787,
+  "model": "gpt-6-luna",
+  "output": 140,
+  "reasoning": 79,
+  "seconds": 1.86
+ }
+}

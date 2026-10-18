@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000364,
+ "data": {
+  "queries": [
+   "overseas share of design applications origin countries",
+   "design rights filing statistics foreign residents decade trends"
+  ],
+  "standalone_question": "How has the overseas share of design applications in Australia changed over the decade to 2020?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr21-4",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000364,
+  "input": 671,
+  "model": "gemini-3.5-flash-lite",
+  "output": 65,
+  "reasoning": 0,
+  "seconds": 0.98
+ }
+}

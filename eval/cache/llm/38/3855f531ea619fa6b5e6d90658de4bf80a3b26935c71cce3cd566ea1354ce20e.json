@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000345,
+ "data": {
+  "queries": [
+   "drivers of AI investment capability",
+   "artificial intelligence patenting behavior and filing trends"
+  ],
+  "standalone_question": "What drives companies to invest in artificial intelligence capability and is it related to patenting?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-synthesis-4",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000345,
+  "input": 668,
+  "model": "gemini-3.5-flash-lite",
+  "output": 58,
+  "reasoning": 0,
+  "seconds": 1.01
+ }
+}

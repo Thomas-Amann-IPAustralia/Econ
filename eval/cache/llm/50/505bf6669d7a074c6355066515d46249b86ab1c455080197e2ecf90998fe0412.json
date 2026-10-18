@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.3e-05,
+ "data": {
+  "context": "In the 2024 *Computer Implemented Inventions: Patent Trends at IP Australia, EPO and USPTO* (IP Australia Economic Research Paper 16), this appendix section explains the machine-learning objective function used to classify computer-implemented invention (CII) patents. It describes the training loss and regularisation term and introduces the supervised learning algorithms tested to refine the raw CII patent application database."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp16-cii-patent-trends:0095",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000167,
+  "input": 1201,
+  "model": "gpt-6-luna",
+  "output": 93,
+  "reasoning": 0,
+  "seconds": 1.58
+ }
+}

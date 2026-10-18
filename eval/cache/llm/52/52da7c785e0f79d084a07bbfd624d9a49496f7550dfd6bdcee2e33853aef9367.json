@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000102,
+ "data": {
+  "context": "In the 2024 report *Computer Implemented Inventions: Patent Trends at IP Australia, EPO and USPTO*, Appendix Table A4 reports USPTO patent application counts by filing year for 2001–2020, grouped as CII-PSM-likely-clear, CII-PSM-likely-adverse, and non-CII. The categories use machine-learning predictions about whether IP Australia examiners would object to computer implemented inventions on patentable-subject-matter grounds."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp16-cii-patent-trends:0105",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000203,
+  "input": 1466,
+  "model": "gpt-6-luna",
+  "output": 113,
+  "reasoning": 0,
+  "seconds": 1.61
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.9e-05,
+ "data": {
+  "context": "In the Australian IP Report 2026 section on copyright law and artificial intelligence, this passage describes Australian government engagement through the Copyright and Artificial Intelligence Reference Group, including feedback sought from October to December 2025 on licensing, copyright treatment of AI-generated material and enforcement."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0120",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000178,
+  "input": 1077,
+  "model": "gpt-6-luna",
+  "output": 141,
+  "reasoning": 74,
+  "seconds": 3.34
+ }
+}

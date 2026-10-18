@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.000122,
+ "data": {
+  "queries": [
+   "The study used Granger causality and time-series tests to determine whether trade mark applications predict GDP rather than merely sharing a common trend."
+  ],
+  "standalone_question": "How did the trade mark study test whether its link with GDP was spurious?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "note-tm-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000245,
+  "input": 765,
+  "model": "gpt-6-luna",
+  "output": 337,
+  "reasoning": 275,
+  "seconds": 4.07
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.2e-05,
+ "data": {
+  "context": "Australian Intellectual Property Report 2022, in the patents chapter’s section on leading Australian applicants using AI: describes Australian applicants’ AI patent families filed in 2015–19 and examples of companies and public research organisations applying AI in productivity, healthcare, energy and agriculture."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2022:0022",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000144,
+  "input": 1110,
+  "model": "gpt-6-luna",
+  "output": 66,
+  "reasoning": 0,
+  "seconds": 1.44
+ }
+}

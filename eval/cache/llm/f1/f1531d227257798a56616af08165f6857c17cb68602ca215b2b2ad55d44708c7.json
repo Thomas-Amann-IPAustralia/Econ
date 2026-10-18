@@ -1,0 +1,43 @@
+{
+ "cost_usd": 0.007668,
+ "data": {
+  "answer": "To qualify for design protection in Australia, a product’s visual appearance—such as its shape, configuration, pattern or ornamentation—must be **new and distinctive**, meaning dissimilar in overall impression to designs that constitute prior art.[1] Protection covers appearance, not the product’s feel, what it is made from or how it works.[2]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "Design rights protect the unique visual features of a product that give it a unique appearance such as its shape, pattern, configuration or ornamentation. To be eligible for protection, a design must be new and distinctive - dissimilar in overall impression to designs that constitute prior art."
+     }
+    ],
+    "text": "A product’s visual features, including shape, configuration, pattern or ornamentation, must be new and distinctive—dissimilar in overall impression to prior-art designs—to qualify for design protection."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 10,
+      "quote": "The protection covers the shape, configuration or pattern that gives a product its unique visual appearance but excludes the feel of the product, what it's made from or how it works."
+     }
+    ],
+    "text": "Design protection covers appearance, not the product’s feel, materials or how it works."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "ipr26-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.015336,
+  "input": 6093,
+  "model": "gpt-6.1-sol",
+  "output": 315,
+  "reasoning": 0,
+  "seconds": 4.72
+ }
+}

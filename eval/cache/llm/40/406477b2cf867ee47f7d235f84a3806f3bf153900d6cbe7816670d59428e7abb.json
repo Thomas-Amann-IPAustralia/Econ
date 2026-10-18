@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.000105,
+ "data": {
+  "queries": [
+   "Growth in venture capital did not help all innovative firms scale up because funding was concentrated among firms with particular characteristics or growth potential."
+  ],
+  "standalone_question": "Why might growth in venture capital not have helped all innovative firms scale up?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "note-sc-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000209,
+  "input": 764,
+  "model": "gpt-6-luna",
+  "output": 266,
+  "reasoning": 207,
+  "seconds": 3.35
+ }
+}

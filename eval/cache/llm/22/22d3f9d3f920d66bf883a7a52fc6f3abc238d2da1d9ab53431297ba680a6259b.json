@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000196,
+ "data": {
+  "queries": [
+   "patents artificial intelligence investment",
+   "AI adoption patent holders"
+  ],
+  "standalone_question": "Are companies that hold patents more likely to invest in artificial intelligence?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "oce-ai-1",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000196,
+  "input": 238,
+  "model": "gemini-3.5-flash-lite",
+  "output": 50,
+  "reasoning": 0,
+  "seconds": 1.0
+ }
+}

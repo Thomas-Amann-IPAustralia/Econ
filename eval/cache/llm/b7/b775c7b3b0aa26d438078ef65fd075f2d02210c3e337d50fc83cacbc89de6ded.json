@@ -1,0 +1,64 @@
+{
+ "cost_usd": 0.001857,
+ "data": [
+  {
+   "id": "p1",
+   "score": 1
+  },
+  {
+   "id": "p2",
+   "score": 3
+  },
+  {
+   "id": "p3",
+   "score": 1
+  },
+  {
+   "id": "p4",
+   "score": 3
+  },
+  {
+   "id": "p5",
+   "score": 2
+  },
+  {
+   "id": "p6",
+   "score": 1
+  },
+  {
+   "id": "p7",
+   "score": 2
+  },
+  {
+   "id": "p8",
+   "score": 1
+  },
+  {
+   "id": "p9",
+   "score": 1
+  },
+  {
+   "id": "p10",
+   "score": 2
+  },
+  {
+   "id": "p11",
+   "score": 3
+  }
+ ],
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "judge:judge-v1:gemini-3.8-flash",
+ "schema_name": "grades",
+ "tag": "explore-synthesis-2",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.003713,
+  "input": 4100,
+  "model": "gemini-3.8-flash",
+  "output": 170,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

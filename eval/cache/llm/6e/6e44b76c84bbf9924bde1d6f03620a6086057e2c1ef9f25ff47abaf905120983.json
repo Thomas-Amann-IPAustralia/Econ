@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.5e-05,
+ "data": {
+  "context": "In IP Australia Economic Research Paper 10 (2020), “Intellectual property rights, business profitability and competition in the Australian economy,” Section 4 examines market concentration and IPR intensity in Australian industries from 2001–02 to 2015–16. Table 4.1 lists industries with the highest average HHI and identifies Internet Publishing and Broadcasting as the only one highly concentrated and intensive in all three types of IPRs."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp10-ip-profitability-competition:0053",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00017,
+  "input": 1194,
+  "model": "gpt-6-luna",
+  "output": 101,
+  "reasoning": 0,
+  "seconds": 1.66
+ }
+}

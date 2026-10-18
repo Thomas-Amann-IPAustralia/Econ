@@ -1,0 +1,58 @@
+{
+ "cost_usd": 0.010446,
+ "data": {
+  "answer": "The evidence points that way: a 2024 study found that firms **retiring patents** were less likely to achieve high turnover growth afterwards. The negative association was consistent across the models examined.[1]\n\nThe study assessed patent retirement three years before the growth outcome. “High growth” meant annualised turnover growth of at least 20 per cent over three consecutive financial years, with models accounting for firm age, size, industry, state and year.[2]\n\nThis is a **correlation, not a demonstrated causal effect**: the study says the mechanisms behind the relationship need further investigation.[3] The supplied passages use “retiring patents” without specifying whether this means allowing them to lapse.",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Interestingly, we observe a consistent pattern where firms retiring patents is negatively associated with future turnover growth."
+     }
+    ],
+    "text": "The 2024 study found a consistent negative association between patent retirement and subsequent high turnover growth."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "The dependent variable is a dichotomous variable that takes value 1 if a firm achieved an annualised growth in turnover of at least 20% over three consecutive financial years and 0 otherwise."
+     },
+     {
+      "evidence": 6,
+      "quote": "Covariates include a dummy indicating whether any patent was filed/granted/retired three years before turnover-based growth is assessed, business age, firm size, industry (reference category Administration and support services), state and year fixed effects."
+     }
+    ],
+    "text": "The models assessed patent retirement three years before the outcome, defined high growth as at least 20 per cent annualised turnover growth over three consecutive financial years, and controlled for firm and business-environment characteristics."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "This relationship is worth investigating to better understand the mechanisms producing this consistent negative correlation."
+     }
+    ],
+    "text": "The finding is a correlation rather than a demonstrated causal effect, and its underlying mechanisms require further investigation."
+   }
+  ],
+  "coverage": "partial",
+  "gaps": [
+   "The passages do not define patent retirement or specify whether it corresponds exactly to allowing patents to lapse."
+  ]
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "erp15-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.020892,
+  "input": 6626,
+  "model": "gpt-6.1-sol",
+  "output": 764,
+  "reasoning": 241,
+  "seconds": 13.03
+ }
+}

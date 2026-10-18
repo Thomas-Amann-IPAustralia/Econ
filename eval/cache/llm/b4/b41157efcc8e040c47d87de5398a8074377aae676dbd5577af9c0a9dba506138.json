@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000106,
+ "data": {
+  "context": "In *Exporter responses to shocks: The role of trade marks* (2021), the export revenue section presents Table 8, a baseline analysis of how trade mark activity, tariffs and the real exchange rate relate to exporter revenue. It also quantifies how tariff and exchange-rate effects change as trade mark numbers increase, for firms with long export histories."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp11-exporters-trade-marks:0073",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000211,
+  "input": 1704,
+  "model": "gpt-6-luna",
+  "output": 82,
+  "reasoning": 0,
+  "seconds": 2.29
+ }
+}

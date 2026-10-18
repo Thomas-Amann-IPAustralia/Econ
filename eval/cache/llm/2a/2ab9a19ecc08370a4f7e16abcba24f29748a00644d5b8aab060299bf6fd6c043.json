@@ -1,0 +1,26 @@
+{
+ "cost_usd": 5.7e-05,
+ "data": {
+  "queries": [
+   "first-time IP rights filing small business growth outcomes",
+   "SMEs first IP application survival employment productivity sales after filing",
+   "Small businesses filing IP rights for the first time experience X changes in growth and performance over time."
+  ],
+  "standalone_question": "What happens to small businesses after they file for intellectual property rights for the first time?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-synthesis-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000114,
+  "input": 765,
+  "model": "gpt-6-luna",
+  "output": 75,
+  "reasoning": 0,
+  "seconds": 1.41
+ }
+}

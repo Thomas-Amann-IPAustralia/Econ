@@ -1,0 +1,25 @@
+{
+ "cost_usd": 9.2e-05,
+ "data": {
+  "queries": [
+   "trade mark applications business cycle leading indicator",
+   "GDP turning points recession forecast lead quarters"
+  ],
+  "standalone_question": "How does the claim that trade mark applications reliably warn of recessions and lead GDP turning points by about two quarters compare with IP Australia’s own analysis?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-context-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000183,
+  "input": 702,
+  "model": "gpt-6-luna",
+  "output": 225,
+  "reasoning": 161,
+  "seconds": 2.67
+ }
+}

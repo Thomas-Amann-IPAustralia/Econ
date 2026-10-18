@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000229,
+ "data": {
+  "queries": [
+   "IP rights combinations firm profitability",
+   "bundles of IP rights high growth firms",
+   "multiple IP rights business performance"
+  ],
+  "standalone_question": "Which combinations of intellectual property rights are associated with the most profitable businesses?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "erp10-3",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000229,
+  "input": 237,
+  "model": "gemini-3.5-flash-lite",
+  "output": 63,
+  "reasoning": 0,
+  "seconds": 1.0
+ }
+}

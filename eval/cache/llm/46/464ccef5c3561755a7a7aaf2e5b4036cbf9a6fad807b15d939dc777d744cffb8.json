@@ -1,0 +1,81 @@
+{
+ "cost_usd": 0.014511,
+ "data": {
+  "answer": "The evidence suggests the 2014 decisions discouraged some computer-implemented invention (CII) patent applications in Australia, but the filing effect is less clear-cut than the effect on grants.[1][2]\n\n- **Filing behaviour:** The 2024 study found a negative effect for Australian applicants that appeared more consistent with reduced CII innovative activity. For Japanese applicants, both lower innovative output and substitution away from CII patents appeared important. These interpretations are tentative: the filing model cannot definitively distinguish reduced innovation from a reduced propensity to seek patents.[1]\n- **Grant prospects:** The study estimated an **11.6–12.0 percentage point reduction** in the probability of grant at IP Australia for CII applications classified as likely to face adverse patentable-subject-matter findings—not for all software applications.[2]\n- **Which decisions?** The study examined *Research Affiliates* in Australia and *Alice* in the United States together. Because both occurred in 2014, it could not separate their individual effects.[3]\n- **Not an explanation for the entire 2014 filing decline:** The 2015 IP Report instead linked the overall patent filing decline to the Raising the Bar reforms and applications brought forward into 2013. That aggregate decline should not be treated as a measure of the court decisions’ effect on software filings.[4]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "Also, for Australian applicants, the negative impact appears to be more likely to be associated with a reduction in CII innovative activities."
+     },
+     {
+      "evidence": 3,
+      "quote": "In contrast, for Japanese applicants, substitution away from CII patents seems to be as important as the lower CII innovation output associated with a decreased propensity to apply for CII patents at IPA."
+     },
+     {
+      "evidence": 4,
+      "quote": "Strictly speaking, the setup in equation (5) cannot identify the above three possible interpretations."
+     }
+    ],
+    "text": "The study suggests negative effects on CII filing by Australian and Japanese applicants, but cannot definitively distinguish reduced innovation from reduced patent-seeking."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "There is an 11.6 to 12.0 percentage points reduction (depending on if we only look at triplet samples or the full sample) in the probability of grant of CII-PSM-likely-adverse applications at the patent office of Australia."
+     }
+    ],
+    "text": "The 2024 study estimated an 11.6–12.0 percentage point reduction in grant probability at IP Australia for CII-PSM-likely-adverse applications, rather than all software applications."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "The Full Federal Court of Australia's appeal ruling on the Research Affiliates LLC v Commissioner of Patents in Australia on 18 November 2014, and\n\nThe US Supreme Court's ruling on Alice Corp v CLS Bank International in the United States on 19 June 2014."
+     },
+     {
+      "evidence": 8,
+      "quote": "Due to their occurring in the same year, the impact of the 2 court rulings will be investigated simultaneously using the difference-in-differences (DID) method"
+     },
+     {
+      "evidence": 1,
+      "quote": "Given that our analysis is conducted at the year level, it is not possible to distinguish the effect of the 2014 Australian High Court decision separately from the effect of the 2014 US Supreme Court decision."
+     }
+    ],
+    "text": "The study analysed Research Affiliates and Alice jointly and could not separate their effects because both decisions occurred in 2014."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 9,
+      "quote": "The decrease in filings may be attributed to the effects of the IP Laws Amendment (Raising the Bar) Act 2012 that took force in 2013."
+     },
+     {
+      "evidence": 11,
+      "quote": "It can reasonably be assumed that the historically high number of applications in 2013 was caused by the early filing of applications which otherwise would have been filed in 2014."
+     }
+    ],
+    "text": "The overall 2014 patent filing decline is not a measure of the software-specific court effects: the 2015 report linked it to Raising the Bar and early filing in 2013."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "explore-policy-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.029022,
+  "input": 8226,
+  "model": "gpt-6.1-sol",
+  "output": 1257,
+  "reasoning": 380,
+  "seconds": 20.31
+ }
+}

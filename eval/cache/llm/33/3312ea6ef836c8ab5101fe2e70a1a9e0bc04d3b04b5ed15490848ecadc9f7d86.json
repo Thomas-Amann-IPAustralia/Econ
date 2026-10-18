@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000907,
+ "data": {
+  "reason": "Both answers address the prompt accurately and include appropriate caveats. Answer B is better because it includes specific evidence directly addressing first-time filers (the descriptive comparison of first-time trade mark filers versus matched non-filers), which directly answers the prompt's focus on filing 'for the first time'.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-synthesis-1:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001815,
+  "input": 2055,
+  "model": "gemini-3.8-flash",
+  "output": 73,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

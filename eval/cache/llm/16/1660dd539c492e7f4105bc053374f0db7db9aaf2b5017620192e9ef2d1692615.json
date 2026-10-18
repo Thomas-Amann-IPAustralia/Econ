@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5.7e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2018, under “Patent productivity of research organisations,” this passage reports estimated effects of Australian Research Council funding on patent applications, distinguishing collaborative from non-collaborative grants and provisional from PCT applications."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2018:0027",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000114,
+  "input": 838,
+  "model": "gpt-6-luna",
+  "output": 60,
+  "reasoning": 0,
+  "seconds": 1.96
+ }
+}

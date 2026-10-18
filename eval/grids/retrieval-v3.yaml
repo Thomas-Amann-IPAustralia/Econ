@@ -1,0 +1,20 @@
+# Retrieval grid v3: three ideas left open by v2, each tried on the adopted setting. Committed before any
+# number on them (the plans, reranker scores and judgments for these variants don't exist yet).
+grid: retrieval-v3
+testset: [eval/testset/silver-v1.yaml, eval/testset/explore-v1.yaml]
+judgments: judged-v1   # plus a top-up: every variant's unjudged top-10 passages, on all needs, before scoring
+adopted: plan+q:luna-plan-v2/enriched/none   # D-013, alpha 0.7
+primary: ndcg@10
+variants:
+  fusion_weight:        # the dense lane's weight was tuned on the plain index (D-006)
+    alpha: [0.5, 0.6, 0.8, 0.9]
+  reranker_reads_notes: # rerankers saw only the passage in v2 (D-012); here, the note then the passage
+    rerankers: [ettin-17m, ettin-32m, ettin-68m]
+    rr_depth: 50
+  answer_shaped_query:  # prompts/plan-v3.md: plan-v2 plus one sentence shaped like an answer (HyDE-style)
+    query: plan+q:luna-plan-v3
+rule: >-
+  A variant replaces the adopted setting only if its dev ndcg@10 exceeds the adopted setting's by more than
+  0.02 and, for a reranker, it reranks 50 passages within 2.5 s (ONNX float32, 4 vCPU, the latency method of
+  v2, re-measured with the notes). If several qualify, the highest on dev. Test is reported for every
+  variant with a paired bootstrap interval against the adopted setting.

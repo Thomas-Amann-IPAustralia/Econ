@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.8e-05,
+ "data": {
+  "queries": [
+   "IP and business profitability GMM estimation rationale"
+  ],
+  "standalone_question": "Why did the study examining the relationship between intellectual property (IP) and business profitability use Generalised Method of Moments (GMM) estimation?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp10-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 5.5e-05,
+  "input": 285,
+  "model": "gpt-6-luna",
+  "output": 53,
+  "reasoning": 0,
+  "seconds": 1.25
+ }
+}

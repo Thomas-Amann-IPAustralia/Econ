@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.3e-05,
+ "data": {
+  "queries": [
+   "mining innovation study patent applications identified"
+  ],
+  "standalone_question": "How many patent applications did the study of mining innovation identify?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp04-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 4.6e-05,
+  "input": 283,
+  "model": "gpt-6-luna",
+  "output": 36,
+  "reasoning": 0,
+  "seconds": 2.01
+ }
+}

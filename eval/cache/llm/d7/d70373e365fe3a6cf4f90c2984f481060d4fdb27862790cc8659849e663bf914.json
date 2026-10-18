@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.6e-05,
+ "data": {
+  "context": "In the Australian IP Report 2024’s Australian IP outlook, Figure 0.1 summarises 2023 statistics on filings and grants or registrations across patents, trade marks, designs and Plant Breeders’ Rights, including Australian and overseas applicants. The passage also introduces the report’s copyright chapter and notes the economic role of collaboration and licensing in creative and cultural industries."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2024:0006",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000171,
+  "input": 1282,
+  "model": "gpt-6-luna",
+  "output": 86,
+  "reasoning": 0,
+  "seconds": 1.68
+ }
+}

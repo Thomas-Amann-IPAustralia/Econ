@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.7e-05,
+ "data": {
+  "context": "In the conclusion of the Australian Intellectual Property Report 2020, this passage assesses Australia’s position in digital-economy IP using the intensity of ICT-related patent, trade mark and design applications, comparing domestic-market analysis with OECD results for international markets. It concludes that resident applicants’ industrial IP filings appear more focused on other sectors."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2020:0045",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000133,
+  "input": 940,
+  "model": "gpt-6-luna",
+  "output": 78,
+  "reasoning": 0,
+  "seconds": 1.72
+ }
+}

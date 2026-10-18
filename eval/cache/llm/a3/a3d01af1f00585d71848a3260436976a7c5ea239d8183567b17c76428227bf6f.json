@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.4e-05,
+ "data": {
+  "context": "In the Australian IP Report 2023, the Patent Analytics Hub section describes how global and Australian patent data inform decisions about innovation, competition and commercial opportunities. It covers 2022 visualisations of low-emissions technologies, Japanese–Australian patent trends, and analytics provided on other technologies."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2023:0129",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000168,
+  "input": 1074,
+  "model": "gpt-6-luna",
+  "output": 122,
+  "reasoning": 51,
+  "seconds": 1.83
+ }
+}

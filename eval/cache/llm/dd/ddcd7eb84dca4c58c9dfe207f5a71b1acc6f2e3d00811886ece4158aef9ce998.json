@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001365,
+ "data": {
+  "reason": "Answer B is based on more recent data up to 2025, and covers more facets explicitly requested by the narrative, such as leading overseas countries, resident versus non-resident breakdowns, and shifts in plant crop types, while also including registration figures.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-trend-6:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002729,
+  "input": 3329,
+  "model": "gemini-3.8-flash",
+  "output": 62,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

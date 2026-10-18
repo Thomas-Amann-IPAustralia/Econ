@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000199,
+ "data": {
+  "queries": [
+   "IP rights firm profitability",
+   "firm performance intellectual property causality",
+   "profitable firms patent filing behavior"
+  ],
+  "standalone_question": "Is there evidence that owning IP rights makes firms more profitable, or do profitable firms just file more IP?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-evidence-2",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000199,
+  "input": 246,
+  "model": "gemini-3.5-flash-lite",
+  "output": 50,
+  "reasoning": 0,
+  "seconds": 0.94
+ }
+}

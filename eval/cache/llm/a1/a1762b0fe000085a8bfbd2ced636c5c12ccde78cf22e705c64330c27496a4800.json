@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.8e-05,
+ "data": {
+  "context": "In the Australian IP Report 2026 section “Evaluating major reforms to the IP system,” this passage describes research on the economic effects of Australia’s Raising the Bar Act 2012, which narrowed patent protection, and future work on possible changes to patent legal tests and practices. It says the research examines how stronger patentability standards affected innovation and competition in some technology fields."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0123",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000156,
+  "input": 845,
+  "model": "gpt-6-luna",
+  "output": 143,
+  "reasoning": 54,
+  "seconds": 2.29
+ }
+}

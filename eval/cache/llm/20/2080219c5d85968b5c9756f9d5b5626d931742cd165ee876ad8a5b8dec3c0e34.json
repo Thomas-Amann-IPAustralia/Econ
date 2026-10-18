@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.2e-05,
+ "data": {
+  "context": "In the Australian IP Report 2024, the IPAVentures section describes its 2024 exploration of how open-source and open-innovation trends may affect the IP rights system, following earlier work on generative AI and social priorities. The passage then gives the report’s disclaimer on the use and confidentiality of ABS, ABR and ATO data."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2024:0127",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000143,
+  "input": 1013,
+  "model": "gpt-6-luna",
+  "output": 83,
+  "reasoning": 0,
+  "seconds": 1.61
+ }
+}

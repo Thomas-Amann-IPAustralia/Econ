@@ -1,0 +1,25 @@
+{
+ "cost_usd": 5.3e-05,
+ "data": {
+  "queries": [
+   "exporter entry exit overseas markets trade marks",
+   "Australian exporters enter and exit most frequently in [market], with the highest rates of market entry and exit."
+  ],
+  "standalone_question": "In which overseas market do Australian exporters enter and exit most frequently?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp11-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000106,
+  "input": 762,
+  "model": "gpt-6-luna",
+  "output": 60,
+  "reasoning": 0,
+  "seconds": 1.25
+ }
+}

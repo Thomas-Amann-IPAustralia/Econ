@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.2e-05,
+ "data": {
+  "context": "In the “IP, diversity and innovation” section of the Australian IP Report 2023, these key findings summarise research on gender and cultural diversity in Australian businesses’ leadership and STEM workforces, using linked employer–employee data for 2010–2019 and international patent data. They describe how diversity relates to patenting, registered IP and firms’ research and development."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2023:0091",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000185,
+  "input": 903,
+  "model": "gpt-6-luna",
+  "output": 190,
+  "reasoning": 100,
+  "seconds": 2.82
+ }
+}

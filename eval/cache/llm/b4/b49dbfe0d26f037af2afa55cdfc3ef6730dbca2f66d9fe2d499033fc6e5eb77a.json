@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5.6e-05,
+ "data": {
+  "context": "In the 2025 analytic note *Evaluating Trade Marks as a Leading Economic Indicator of the Australian Business Cycle*, the Time series analysis section tests the relationship between Australian trade mark applications and real GDP. It reports cointegration and regression estimates of how quarterly changes in applications predict GDP in the following quarters."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "note-tm-leading-indicator:0009",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000112,
+  "input": 747,
+  "model": "gpt-6-luna",
+  "output": 74,
+  "reasoning": 0,
+  "seconds": 2.2
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000228,
+ "data": {
+  "queries": [
+   "patent workload per examiner IP Australia",
+   "patent examiner workload UKIPO USPTO international comparison"
+  ],
+  "standalone_question": "How did IP Australia's patent workload per examiner compare with the UKIPO and USPTO?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "erp01-1",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000228,
+  "input": 243,
+  "model": "gemini-3.5-flash-lite",
+  "output": 62,
+  "reasoning": 0,
+  "seconds": 1.25
+ }
+}

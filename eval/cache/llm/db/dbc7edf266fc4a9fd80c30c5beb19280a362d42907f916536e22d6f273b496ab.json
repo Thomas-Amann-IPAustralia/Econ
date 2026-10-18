@@ -1,0 +1,25 @@
+{
+ "cost_usd": 5.2e-05,
+ "data": {
+  "queries": [
+   "intellectual property rights firm productivity wages profitability",
+   "IP rights business productivity wages Australian firms increased productivity and wages by X per cent"
+  ],
+  "standalone_question": "Is there a link between intellectual property and productivity or wages in Australian firms?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-synthesis-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000104,
+  "input": 763,
+  "model": "gpt-6-luna",
+  "output": 56,
+  "reasoning": 0,
+  "seconds": 1.47
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.3e-05,
+ "data": {
+  "context": "In *Drivers of AI investment* (2023), section 4.5.1 on patenting by AI-hiring versus general-hiring firms, this passage compares patent-class diversity among companies with and without AI staff, including firms with at least one Australian patent. It reports no statistically significant differences in the number of IPC classes or Shannon’s entropy."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "oce-ai-investment:0044",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000166,
+  "input": 1236,
+  "model": "gpt-6-luna",
+  "output": 85,
+  "reasoning": 0,
+  "seconds": 1.89
+ }
+}

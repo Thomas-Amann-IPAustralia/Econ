@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000243,
+ "data": {
+  "queries": [
+   "share of businesses owning registered IP",
+   "Australian businesses IP ownership rate",
+   "change in IP ownership by firms"
+  ],
+  "standalone_question": "What share of Australian businesses own a registered IP right, and how has that changed over time?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "erp10-1",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000243,
+  "input": 242,
+  "model": "gemini-3.5-flash-lite",
+  "output": 68,
+  "reasoning": 0,
+  "seconds": 0.84
+ }
+}

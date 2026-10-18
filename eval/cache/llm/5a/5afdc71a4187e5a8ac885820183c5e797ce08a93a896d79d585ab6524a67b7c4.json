@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2022, in the section on copyright’s contribution to Australia, this passage shows the economic value and share of GDP for copyright-related categories, including “Other,” using estimates for 2006–2018. “Other” covers museums, libraries and archives, performing arts, environmental heritage, music, visual arts and crafts, and related activities."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2022:0069",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000165,
+  "input": 891,
+  "model": "gpt-6-luna",
+  "output": 151,
+  "reasoning": 61,
+  "seconds": 2.13
+ }
+}

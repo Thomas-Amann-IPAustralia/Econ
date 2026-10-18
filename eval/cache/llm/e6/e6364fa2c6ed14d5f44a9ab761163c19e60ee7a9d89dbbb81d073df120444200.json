@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In the 2024 IP Australia Economic Research Paper 16, “Computer implemented inventions: patent trends at IP Australia, EPO and USPTO,” this section analyses CII patent application counts by technology field across IPA, EPO and USPTO, including trends over the study period and fields driving CII-PSM-likely-adverse filings."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp16-cii-patent-trends:0034",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000164,
+  "input": 1230,
+  "model": "gpt-6-luna",
+  "output": 83,
+  "reasoning": 0,
+  "seconds": 1.42
+ }
+}

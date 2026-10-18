@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.0001,
+ "data": {
+  "context": "In the 2020 report *Intellectual property rights, business profitability and competition in the Australian economy*, these notes accompany Appendix F regression tables on business profitability, including models of log profit per invested capital. They explain the significance markers and that industry and year indicators were included as controls but omitted from the table."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp10-ip-profitability-competition:0102",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000199,
+  "input": 1050,
+  "model": "gpt-6-luna",
+  "output": 189,
+  "reasoning": 113,
+  "seconds": 2.24
+ }
+}

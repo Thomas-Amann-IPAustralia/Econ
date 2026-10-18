@@ -1,0 +1,43 @@
+{
+ "cost_usd": 0.009968,
+ "data": {
+  "answer": "The 2024 research finds:\n\n- **Large firms are most likely to file patents**, standing out above smaller firms.[1]\n- **Small firms are least likely to file**: they are less likely than micro firms, while medium and large firms are more likely than micro firms.[2]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 7,
+      "quote": "medium and large firms exhibit a higher propensity for patent applications, with large firms standing out as the most active filers."
+     }
+    ],
+    "text": "The 2024 research finds that large firms have the highest propensity to file patents."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Additionally, small firms exhibit a lower likelihood of patent filing than micro firms, while medium and large firms are more inclined to file patent applications."
+     }
+    ],
+    "text": "Small firms are least likely to file patents: their likelihood is below micro firms, while medium and large firms have a higher likelihood than micro firms."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "erp15-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.019936,
+  "input": 7463,
+  "model": "gpt-6.1-sol",
+  "output": 501,
+  "reasoning": 286,
+  "seconds": 10.04
+ }
+}

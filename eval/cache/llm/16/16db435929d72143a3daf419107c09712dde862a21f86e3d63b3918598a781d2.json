@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000441,
+ "data": {
+  "reason": "Both answers accurately and fully answer the question using the exact same figures, study reference, and caveats. Answer A is slightly more concise and spells out what 'METS' stands for, but both provide an excellent, direct response.",
+  "winner": "tie"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "erp04-2:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000883,
+  "input": 898,
+  "model": "gemini-3.8-flash",
+  "output": 56,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

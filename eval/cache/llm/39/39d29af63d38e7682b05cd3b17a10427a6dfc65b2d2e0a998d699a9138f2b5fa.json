@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.3e-05,
+ "data": {
+  "context": "In the Australian IP Report 2025, in the section on China’s growth in IP activity for electric vehicles and transport, this footnote describes late-2024 tariffs on Chinese electric vehicles in the European Union, United States and Canada, and reports that trade barriers elsewhere led Chinese manufacturers to focus more on Australia."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2025:0037",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000146,
+  "input": 861,
+  "model": "gpt-6-luna",
+  "output": 119,
+  "reasoning": 42,
+  "seconds": 1.8
+ }
+}

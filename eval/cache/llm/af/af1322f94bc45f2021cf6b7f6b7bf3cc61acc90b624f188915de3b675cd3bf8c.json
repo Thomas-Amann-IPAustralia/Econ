@@ -1,0 +1,27 @@
+{
+ "cost_usd": 0.000197,
+ "data": {
+  "queries": [
+   "PCT filings Australians",
+   "Madrid system trade marks Australia",
+   "Hague system designs Australia",
+   "international IP filings Australia"
+  ],
+  "standalone_question": "How much do Australians use international filing systems like the PCT, Madrid and Hague?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-policy-7",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000197,
+  "input": 241,
+  "model": "gemini-3.5-flash-lite",
+  "output": 50,
+  "reasoning": 0,
+  "seconds": 0.97
+ }
+}

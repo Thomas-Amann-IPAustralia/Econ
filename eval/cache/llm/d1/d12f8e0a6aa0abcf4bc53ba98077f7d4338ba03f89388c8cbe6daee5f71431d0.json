@@ -1,0 +1,59 @@
+{
+ "cost_usd": 0.011523,
+ "data": {
+  "answer": "The fall mainly reflected applications being brought forward into 2013 ahead of the **Raising the Bar** reforms, rather than filed in 2014. The reforms raised the standard required for an invention to receive a patent, prompting a rush to file before their implementation in April 2013 and a subsequent drop in applications that carried into 2014.[1]\n\nIP Australia received **25,947 standard patent applications in 2014, down 13 per cent from 2013**. The 2015 report attributed the decrease to the reforms, while the 2016 report noted that applications returned to their previous trend in 2015.[2]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "The new law raised the standard required for an invention to be granted a patent. This led to a rush of applications and examination requests in the weeks leading up to the implementation dates, and a resulting drop in applications for the remainder of 2013 which carried over into 2014."
+     },
+     {
+      "evidence": 20,
+      "quote": "prior to the implementation of Raising the Bar in April 2013."
+     },
+     {
+      "evidence": 1,
+      "quote": "It can reasonably be assumed that the historically high number of applications in 2013 was caused by the early filing of applications which otherwise would have been filed in 2014."
+     }
+    ],
+    "text": "The reforms raised the patentability standard and prompted applications to be brought forward into 2013, contributing to fewer applications in 2014."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "IP Australia received 25 947 standard patent applications in 2014, a decrease of 13 per cent relative to 2013."
+     },
+     {
+      "evidence": 5,
+      "quote": "The decrease in filings may be attributed to the effects of the IP Laws Amendment (Raising the Bar) Act 2012 that took force in 2013."
+     },
+     {
+      "evidence": 4,
+      "quote": "The 2015 data shows that applications have returned to the trend observed since 2010."
+     }
+    ],
+    "text": "Standard patent applications totalled 25,947 in 2014, down 13 per cent; the 2015 report linked the fall to the reforms, and the 2016 report said applications returned to their previous trend in 2015."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "ipr15-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.023046,
+  "input": 8683,
+  "model": "gpt-6.1-sol",
+  "output": 568,
+  "reasoning": 0,
+  "seconds": 8.42
+ }
+}

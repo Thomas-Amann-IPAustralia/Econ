@@ -1,0 +1,60 @@
+{
+ "cost_usd": 0.001786,
+ "data": [
+  {
+   "grade": 1,
+   "id": "p1"
+  },
+  {
+   "grade": 1,
+   "id": "p2"
+  },
+  {
+   "grade": 0,
+   "id": "p3"
+  },
+  {
+   "grade": 0,
+   "id": "p4"
+  },
+  {
+   "grade": 2,
+   "id": "p5"
+  },
+  {
+   "grade": 1,
+   "id": "p6"
+  },
+  {
+   "grade": 0,
+   "id": "p7"
+  },
+  {
+   "grade": 3,
+   "id": "p8"
+  },
+  {
+   "grade": 1,
+   "id": "p9"
+  },
+  {
+   "grade": 0,
+   "id": "p10"
+  }
+ ],
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "judge:judge-v1:gemini-3.8-flash",
+ "schema_name": "grades",
+ "tag": "explore-trend-4",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.003572,
+  "input": 3993,
+  "model": "gemini-3.8-flash",
+  "output": 154,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

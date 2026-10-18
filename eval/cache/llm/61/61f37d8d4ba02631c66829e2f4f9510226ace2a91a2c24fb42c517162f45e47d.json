@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000274,
+ "data": {
+  "queries": [
+   "plant breeders rights applications 2018 to 2022",
+   "decline in PBR filings Australia"
+  ],
+  "standalone_question": "Why did Australian plant breeders file fewer Plant Breeder's Rights (PBR) applications between 2018 and 2022?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr25-5",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000274,
+  "input": 248,
+  "model": "gemini-3.5-flash-lite",
+  "output": 80,
+  "reasoning": 0,
+  "seconds": 0.83
+ }
+}

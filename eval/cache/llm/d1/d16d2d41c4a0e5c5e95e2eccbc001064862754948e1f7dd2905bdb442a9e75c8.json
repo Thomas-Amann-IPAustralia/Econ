@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8e-05,
+ "data": {
+  "context": "In the 2024 paper *Computer implemented inventions: patent trends at IP Australia, EPO and USPTO*, this passage in “Construction of CII patent application database” describes how labelled Australian computer-implemented invention applications were used to train machine-learning models to predict whether an examination would raise a patentable subject matter (PSM) objection, and how the models classified applications in the IPA, EPO and USPTO databases."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp16-cii-patent-trends:0008",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00016,
+  "input": 1114,
+  "model": "gpt-6-luna",
+  "output": 98,
+  "reasoning": 0,
+  "seconds": 2.6
+ }
+}

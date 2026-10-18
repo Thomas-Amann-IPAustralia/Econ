@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000469,
+ "data": {
+  "reason": "Both answers accurately report the 27% growth in SME patent filings in 2021. Answer A is slightly better because it includes the specific figure (68%) for the decadal-high share of organisational applicants, providing a more complete summary of the cited passage.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "ipr22-1:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000937,
+  "input": 914,
+  "model": "gemini-3.8-flash",
+  "output": 67,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

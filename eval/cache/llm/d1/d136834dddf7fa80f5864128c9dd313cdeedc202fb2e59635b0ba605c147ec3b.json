@@ -1,0 +1,73 @@
+{
+ "cost_usd": 0.013051,
+ "data": {
+  "answer": "The answer depends on what is measured:\n\n- **Latest cultural and creative activity estimate:** the **2026 Australian IP Report** reports a contribution of **$63.7 billion in 2022–23**, equivalent to **2.5 per cent of GDP**. Copyright generation is one of four criteria used to define the activity covered.[1]\n- **Copyright-industry estimate:** a PwC study reported that industries relying on copyright protection contributed **$124.1 billion in 2018**, equivalent to **6.8 per cent of GDP**. These industries also accounted for **8.3 per cent of employment** and **$4.8 billion in exports**.[2]\n\nThese measures should not be treated as interchangeable. Cultural and creative activity includes some sectors not directly underpinned by copyright, so it is not a measure specifically of copyright’s economic value.[3] Earlier reports put cultural and creative activity at **$122.3 billion, or 6.2 per cent of GDP, in 2019–20**; however, the methodology was updated in 2024, and the newer figures are **not comparable** with those in previous Australian IP Reports.[4]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 7,
+      "quote": "The generation of IP, such as copyright, is 1 of 4 criteria the Australian Government uses to identify what is in scope when measuring the economic contribution of cultural and creative activity."
+     },
+     {
+      "evidence": 7,
+      "quote": "In 2022-23, using this methodology, it was estimated 'cultural and creative activity' contributed $63.7 billion to the Australian economy and was equivalent to 2.5% of Australia's GDP."
+     }
+    ],
+    "text": "The 2026 report estimates cultural and creative activity contributed $63.7 billion in 2022–23, or 2.5 per cent of GDP, with IP generation one of four scope criteria."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "The research found that Australian industries relying on copyright protection in 2018 (including Press & Literature and Radio & Television) contributed $124.1 billion to the Australian economy, equivalent to 6.8 per cent of Australia's gross domestic product (Figure C1)."
+     },
+     {
+      "evidence": 3,
+      "quote": "The copyright industries also accounted for 8.3 per cent of total employment in Australia and generated $4.8 billion in exports."
+     }
+    ],
+    "text": "PwC estimated copyright-reliant industries contributed $124.1 billion in 2018, or 6.8 per cent of GDP, and accounted for 8.3 per cent of employment and $4.8 billion in exports."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "While this research does not specifically relate to the economic value of copyright - for example, it includes some smaller sectors such as zoological and botanical garden operations not directly underpinned by copyright - it illustrates the significant economic impact of copyright-related sectors."
+     }
+    ],
+    "text": "Cultural and creative activity is not specifically a measure of copyright's economic value because it includes sectors not directly underpinned by copyright."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "estimated that 'cultural and creative activity' contributed $122.3 billion to the Australian economy in 2019-20 (see Figure 5.1) 4 . This economic contribution was 27.1% higher than in 2010-11, and was equivalent to 6.2% of Australia's GDP."
+     },
+     {
+      "evidence": 8,
+      "quote": "In 2024, the methodology used to measure cultural and creative activity was updated, and the figures are not comparable with previous Australian IP reports."
+     }
+    ],
+    "text": "Earlier reports estimated cultural and creative activity at $122.3 billion and 6.2 per cent of GDP in 2019–20, but a 2024 methodology update means the newer figures are not comparable with previous reports."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "explore-synthesis-11",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.026102,
+  "input": 7111,
+  "model": "gpt-6.1-sol",
+  "output": 1188,
+  "reasoning": 247,
+  "seconds": 15.62
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "cost_usd": 4.2e-05,
+ "data": {
+  "queries": [
+   "design intensity Australia peer countries international comparison"
+  ],
+  "standalone_question": "Which of Australia’s peer countries lead on design intensity?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp08-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 8.4e-05,
+  "input": 670,
+  "model": "gpt-6-luna",
+  "output": 35,
+  "reasoning": 0,
+  "seconds": 1.4
+ }
+}

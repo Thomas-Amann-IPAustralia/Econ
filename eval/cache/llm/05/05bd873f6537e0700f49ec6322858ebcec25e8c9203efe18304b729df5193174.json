@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000334,
+ "data": {
+  "queries": [
+   "artificial intelligence patent filings trends technology fields",
+   "drivers of artificial intelligence investment patent applications"
+  ],
+  "standalone_question": "How are artificial intelligence related inventions showing up in patent filings?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-trend-11",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000334,
+  "input": 662,
+  "model": "gemini-3.5-flash-lite",
+  "output": 54,
+  "reasoning": 0,
+  "seconds": 0.96
+ }
+}

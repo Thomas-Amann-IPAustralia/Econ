@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000339,
+ "data": {
+  "queries": [
+   "standard patent applications filing trends over the past decade",
+   "patent application statistics by origin and technology field"
+  ],
+  "standalone_question": "How have standard patent applications changed over the past decade?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-trend-1",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000339,
+  "input": 663,
+  "model": "gemini-3.5-flash-lite",
+  "output": 56,
+  "reasoning": 0,
+  "seconds": 0.89
+ }
+}

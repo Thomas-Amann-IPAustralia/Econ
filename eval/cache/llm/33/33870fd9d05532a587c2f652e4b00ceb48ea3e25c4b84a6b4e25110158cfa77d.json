@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000425,
+ "data": {
+  "reason": "Both answers accurately address the question using the exact same quote from the 2015 report. Answer A focuses strictly on haulage truck drivers, which aligns slightly better with the specific question about driverless trucks, but Answer B is equally faithful to the broader source text mentioning train drivers; overall, both are clear, well-supported, and effectively equivalent.",
+  "winner": "tie"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "erp04-3:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000851,
+  "input": 725,
+  "model": "gemini-3.8-flash",
+  "output": 82,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000112,
+ "data": {
+  "queries": [
+   "correlation rather than causation empirical findings",
+   "association between intellectual property rights profitability competition causal interpretation",
+   "The studies report associations between intellectual property and business outcomes, but do not establish that intellectual property caused those outcomes."
+  ],
+  "standalone_question": "Which IP Australia studies describe their findings as correlations rather than causal effects?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "multi-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000224,
+  "input": 763,
+  "model": "gpt-6-luna",
+  "output": 296,
+  "reasoning": 222,
+  "seconds": 3.69
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.3e-05,
+ "data": {
+  "context": "In the Australian IP Report 2026 overview, this section describes changes in international patent, trade mark and design filing behaviour, including cross-border patent collaboration in 2025 and overseas origins of Australian trade mark applications in 2024 and 2025. It also discusses possible drivers of rising Chinese trade mark filings, including ecommerce platforms and changing trade relationships."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0006",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000145,
+  "input": 1037,
+  "model": "gpt-6-luna",
+  "output": 83,
+  "reasoning": 0,
+  "seconds": 1.65
+ }
+}

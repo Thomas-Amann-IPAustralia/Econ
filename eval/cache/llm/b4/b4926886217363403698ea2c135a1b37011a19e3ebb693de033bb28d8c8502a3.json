@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000101,
+ "data": {
+  "context": "In IP Australia’s 2021 paper *Exporter responses to shocks: The role of trade marks*, this table in the export diversification section reports estimates of how exchange-rate movements and earlier trade mark activity relate to Australian firms’ entry as diversifying or focused exporters. The estimates show a negative interaction between trade mark activity and real exchange rate appreciation for potential diversifying entrants."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp11-exporters-trade-marks:0132",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000201,
+  "input": 1590,
+  "model": "gpt-6-luna",
+  "output": 85,
+  "reasoning": 0,
+  "seconds": 1.4
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.7e-05,
+ "data": {
+  "context": "In the 2021 paper *Exporter responses to shocks: The role of trade marks*, this passage examines export-entry responses to real exchange rate appreciations and destination-market trade mark filings. It reports how the estimated relationship changes with recent trade mark activity, noting that marginal effects for firms with two or more filings are not statistically significant."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp11-exporters-trade-marks:0057",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000153,
+  "input": 1139,
+  "model": "gpt-6-luna",
+  "output": 78,
+  "reasoning": 0,
+  "seconds": 2.6
+ }
+}

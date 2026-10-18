@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000735,
+ "data": {
+  "reason": "Answer A provides a more comprehensive explanation, including details on administrative and procedural drivers of registration swings (such as growing trials, backlog clearing, and post-COVID recovery). Both answers are well supported, but Answer A addresses the nuances of the question more fully.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "ipr26-5:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001469,
+  "input": 1654,
+  "model": "gemini-3.8-flash",
+  "output": 61,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

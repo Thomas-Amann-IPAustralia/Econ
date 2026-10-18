@@ -1,0 +1,24 @@
+{
+ "cost_usd": 6.6e-05,
+ "data": {
+  "queries": [
+   "SME patent applications change 2021"
+  ],
+  "standalone_question": "How did patent filings by small and medium-sized businesses change in 2021?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr22-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000131,
+  "input": 675,
+  "model": "gpt-6-luna",
+  "output": 127,
+  "reasoning": 84,
+  "seconds": 1.79
+ }
+}

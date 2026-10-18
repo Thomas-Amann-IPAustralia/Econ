@@ -1,0 +1,47 @@
+{
+ "cost_usd": 0.008664,
+ "data": {
+  "answer": "In the 2015 mining study, **publicly funded entities** most often co-filed with other organisations (21 per cent), while **mining equipment, technology and services (METS) firms** did so least often (3.6 per cent).[1] These results cover PCT applications only, so they are not comprehensive.[2]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "METS firms collaborate the least (3.6 per cent) and publicly funded collaborate the most (21 per cent)."
+     },
+     {
+      "evidence": 1,
+      "quote": "collaboration was determined by looking at PCT applications with more than one applicant"
+     }
+    ],
+    "text": "The 2015 mining study found that publicly funded entities co-filed most often (21 per cent) and METS firms least often (3.6 per cent)."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "These results are based on the subset comprising PCT applications only so is not comprehensive"
+     }
+    ],
+    "text": "The results cover only PCT applications and are not comprehensive."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "erp04-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.017328,
+  "input": 7189,
+  "model": "gpt-6.1-sol",
+  "output": 295,
+  "reasoning": 0,
+  "seconds": 6.51
+ }
+}

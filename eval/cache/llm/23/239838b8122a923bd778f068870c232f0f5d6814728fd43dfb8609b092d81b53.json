@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2017, section 7, “The Productivity Commission’s Inquiry into IP,” this passage summarises the inquiry’s assessment of Australia’s IP system and its recommendations on copyright, patents, trade marks, plant breeder’s rights and broader IP policy. The framework mentioned is the set of four principles described immediately before the passage."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2017:0033",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00014,
+  "input": 986,
+  "model": "gpt-6-luna",
+  "output": 83,
+  "reasoning": 0,
+  "seconds": 1.31
+ }
+}

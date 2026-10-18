@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000237,
+ "data": {
+  "queries": [
+   "patent grant firm size overseas research",
+   "impact of patents on firm growth",
+   "international evidence patent grants firm scale"
+  ],
+  "standalone_question": "What does international economic literature indicate about the effect of patent grants on firm size?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr22-5",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000237,
+  "input": 239,
+  "model": "gemini-3.5-flash-lite",
+  "output": 66,
+  "reasoning": 0,
+  "seconds": 0.99
+ }
+}

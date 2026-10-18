@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5.1e-05,
+ "data": {
+  "context": "In the 2025 analytic note *Evaluating trade marks as a leading economic indicator of the Australian business cycle*, the Endnotes cite Zhang’s research on IP rights and enterprise growth and clarify that higher scores indicate greater predictive ability."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "note-tm-leading-indicator:0022",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000102,
+  "input": 718,
+  "model": "gpt-6-luna",
+  "output": 61,
+  "reasoning": 0,
+  "seconds": 2.02
+ }
+}

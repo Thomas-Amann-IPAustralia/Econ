@@ -1,0 +1,117 @@
+{
+ "cost_usd": 0.014346,
+ "data": {
+  "answer": "IP Australia’s economic research relies on **IP administrative records, linked ABS business and person-level data, and specialised research datasets**.[1][3][4][5]\n\n- **Open IP application data:** The 2025 report identifies **IP RAPID** as its open data source, covering more than 100 years of Australian IP applications and refreshed weekly. It also powers the IP Rights Overview visualisation tool.[1] Earlier research used **IPGOD**, which linked IP rights to firm identifiers, including Australian Business Numbers and Australian Company Numbers.[2]\n- **Linked business microdata:** IP Australia integrated its **Intellectual Property Longitudinal Research Data (IPLORD)** into the ABS’s **Business Longitudinal Analysis Data Environment (BLADE)** to study IP rights, business profitability and market competition.[3]\n- **Linked employer–employee data:** The 2023 report used **MADIP** person-level information linked to employers in BLADE and businesses’ IP activity.[4] The 2024 report identifies **BLADE and PLIDA** among its research datasets and describes employer–employee data covering more than 1.6 million businesses and 17.3 million employees over 2012–2021.[5]\n- **Specialised linked datasets:** **TM-Link**, integrated into BLADE, supports research on trade marks and access to export markets.[6] The 2024 research also used ABS R&D surveys to identify 34,592 R&D-active firms, and **IPRoduct**, which links patents to products using webpage-listed patent markings, to examine commercialisation outcomes.[7]\n- **Global patent data:** The patent analytics service uses global patent data to analyse innovation trends, markets, competition, collaboration and commercial opportunities in particular technologies.[8]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 19,
+      "quote": "Alongside the data in this report, the tool is powered by IP Australia's open data product, IP RAPID. 7 This provides detailed data on IP applications filed in Australia spanning more than 100 years. The data is refreshed weekly, in a format amenable to analysis and research."
+     }
+    ],
+    "text": "The 2025 report uses IP RAPID, covering over 100 years of Australian IP applications and refreshed weekly; it also powers IP Rights Overview."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 20,
+      "quote": "the IPGOD project was established, and using this resource the Office of the Chief Economist has published a series of targeted research projects."
+     },
+     {
+      "evidence": 3,
+      "quote": "the first complete database to be launched by a government agency linking all IP rights to firm identifiers including Australian Business Numbers (ABNs) and Source IP - access and licence publicly funded patents IPGOD 2016 adds attorney information and abstracts Australian Company Numbers (ACNs)."
+     }
+    ],
+    "text": "Earlier research used IPGOD, which linked IP rights to firm identifiers including ABNs and ACNs."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 10,
+      "quote": "the Office of the Chief Economist at IP Australia integrated its Intellectual Property Longitudinal Research Data (IPLORD) into the Business Longitudinal Analysis Data Environment (BLADE) that is managed by the Australian Bureau of Statistics (ABS)"
+     },
+     {
+      "evidence": 10,
+      "quote": "this report provides original evidence and sheds light on how IPRs affect business profitability and market competition in the Australian economy."
+     }
+    ],
+    "text": "IP Australia integrated IPLORD into ABS BLADE to research IP rights, business profitability and market competition."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 14,
+      "quote": "The Multi-Agency Data Integration Project (MADIP) combines administrative data from across government agencies at the person-level."
+     },
+     {
+      "evidence": 14,
+      "quote": "This person-level data is linked to comprehensive data on individuals' employers, contained in the ABS's Business Longitudinal Analysis Data Environment (BLADE). IP Australia has worked with the ABS to integrate information on the IP activity of Australian businesses into this linked employeremployee data."
+     }
+    ],
+    "text": "The 2023 research used MADIP person-level data linked to employers in BLADE and businesses' IP activity."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "These include the Business Longitudinal Analysis Data Environment (BLADE) and the Person Level Integrated Data Asset (PLIDA)."
+     },
+     {
+      "evidence": 5,
+      "quote": "Separately, IP Australia has used the ABS data linking information on employers and their employees. This covers more than 1.6 million businesses active in Australia and their 17.3 million employees from 2012 to 2021."
+     }
+    ],
+    "text": "The 2024 research used BLADE and PLIDA, and employer–employee data covering over 1.6 million businesses and 17.3 million employees during 2012–2021."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 16,
+      "quote": "IP Australia's TM-Link dataset was integrated into BLADE to enable analysis of trade marks' role in facilitating access to export markets."
+     }
+    ],
+    "text": "TM-Link was integrated into BLADE to research trade marks and access to export markets."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "IP Australia built on this study using data on 34,592 R&D-active firms identified in the ABS' R&D surveys."
+     },
+     {
+      "evidence": 5,
+      "quote": "It examines commercialisation outcomes using IPRoduct, a dataset linking patents to products based on the webpage-listed patent markings."
+     }
+    ],
+    "text": "The 2024 research used ABS R&D survey data on 34,592 R&D-active firms and IPRoduct patent-to-product links to examine commercialisation."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 15,
+      "quote": "The patent analytics service uses global patent data to derive insights and business intelligence on innovation trends, market profiles, areas of competition and collaboration, and commercial opportunities in specific technology areas."
+     }
+    ],
+    "text": "The patent analytics service uses global patent data to analyse innovation trends, markets, competition, collaboration and commercial opportunities."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "explore-methods-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.028692,
+  "input": 6191,
+  "model": "gpt-6.1-sol",
+  "output": 1631,
+  "reasoning": 182,
+  "seconds": 18.95
+ }
+}

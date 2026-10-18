@@ -1,0 +1,24 @@
+{
+ "cost_usd": 4.4e-05,
+ "data": {
+  "queries": [
+   "engineering services small firms number trend early 2000s"
+  ],
+  "standalone_question": "How has the number of small firms in engineering services in Australia changed since the early 2000s?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "note-sc-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 8.7e-05,
+  "input": 290,
+  "model": "gpt-6-luna",
+  "output": 117,
+  "reasoning": 66,
+  "seconds": 1.84
+ }
+}

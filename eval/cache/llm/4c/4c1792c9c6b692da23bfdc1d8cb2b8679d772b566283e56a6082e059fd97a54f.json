@@ -1,0 +1,25 @@
+{
+ "cost_usd": 4.4e-05,
+ "data": {
+  "queries": [
+   "IP Australia study correlation association not causation causal effects",
+   "IP rights firm performance innovation correlation causality IP Australia research paper"
+  ],
+  "standalone_question": "Which IP Australia studies explicitly state that their findings show correlations or associations rather than causal effects?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "multi-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 8.9e-05,
+  "input": 285,
+  "model": "gpt-6-luna",
+  "output": 121,
+  "reasoning": 61,
+  "seconds": 1.92
+ }
+}

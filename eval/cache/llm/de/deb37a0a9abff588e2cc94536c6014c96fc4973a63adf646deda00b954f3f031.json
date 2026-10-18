@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In the Introduction of IP Australia Economic Research Paper 16 (2024), this passage describes the study’s analysis of how variation in legal standards for computer-implemented invention (CII) patent eligibility affected patenting trends and outcomes in Australia and overseas, including the impact of relevant court cases."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp16-cii-patent-trends:0005",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000164,
+  "input": 895,
+  "model": "gpt-6-luna",
+  "output": 149,
+  "reasoning": 77,
+  "seconds": 2.57
+ }
+}

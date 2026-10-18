@@ -1,0 +1,100 @@
+{
+ "cost_usd": 0.002936,
+ "data": [
+  {
+   "id": "p1",
+   "score": 1
+  },
+  {
+   "id": "p2",
+   "score": 2
+  },
+  {
+   "id": "p3",
+   "score": 3
+  },
+  {
+   "id": "p4",
+   "score": 1
+  },
+  {
+   "id": "p5",
+   "score": 1
+  },
+  {
+   "id": "p6",
+   "score": 1
+  },
+  {
+   "id": "p7",
+   "score": 1
+  },
+  {
+   "id": "p8",
+   "score": 1
+  },
+  {
+   "id": "p9",
+   "score": 2
+  },
+  {
+   "id": "p10",
+   "score": 0
+  },
+  {
+   "id": "p11",
+   "score": 1
+  },
+  {
+   "id": "p12",
+   "score": 2
+  },
+  {
+   "id": "p13",
+   "score": 1
+  },
+  {
+   "id": "p14",
+   "score": 1
+  },
+  {
+   "id": "p15",
+   "score": 2
+  },
+  {
+   "id": "p16",
+   "score": 1
+  },
+  {
+   "id": "p17",
+   "score": 2
+  },
+  {
+   "id": "p18",
+   "score": 3
+  },
+  {
+   "id": "p19",
+   "score": 2
+  },
+  {
+   "id": "p20",
+   "score": 1
+  }
+ ],
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "judge:judge-v1:gemini-3.8-flash",
+ "schema_name": "grades",
+ "tag": "explore-compare-6",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.005873,
+  "input": 6260,
+  "model": "gemini-3.8-flash",
+  "output": 314,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

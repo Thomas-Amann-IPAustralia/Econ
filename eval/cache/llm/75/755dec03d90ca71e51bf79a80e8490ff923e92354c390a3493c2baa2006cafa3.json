@@ -1,0 +1,24 @@
+{
+ "cost_usd": 4.6e-05,
+ "data": {
+  "queries": [
+   "overseas share of design applications 2010 2020"
+  ],
+  "standalone_question": "How did the overseas share of design applications in Australia change over the decade to 2020?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr21-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 9.2e-05,
+  "input": 679,
+  "model": "gpt-6-luna",
+  "output": 49,
+  "reasoning": 0,
+  "seconds": 1.41
+ }
+}

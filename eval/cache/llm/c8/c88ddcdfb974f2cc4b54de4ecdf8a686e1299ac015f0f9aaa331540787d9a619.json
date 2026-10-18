@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000102,
+ "data": {
+  "context": "In *Drivers of AI investment* (2023), section 4.1.1 examines industry differences in firms’ existing AI capacity and hiring. The passage describes Figure 3’s comparison of firms with existing AI staff that advertise for AI skills versus general roles."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "oce-ai-investment:0031",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000203,
+  "input": 1331,
+  "model": "gpt-6-luna",
+  "output": 139,
+  "reasoning": 72,
+  "seconds": 1.99
+ }
+}

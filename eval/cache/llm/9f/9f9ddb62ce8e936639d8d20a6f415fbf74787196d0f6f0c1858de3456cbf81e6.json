@@ -1,0 +1,24 @@
+{
+ "cost_usd": 3.1e-05,
+ "data": {
+  "queries": [
+   "IP rights firm profitability causal effect reverse causality profitable firms IP applications"
+  ],
+  "standalone_question": "Does evidence in IP Australia’s economic research show that owning IP rights causes firms to become more profitable, or that more profitable firms are more likely to apply for or own IP rights?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-evidence-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 6.2e-05,
+  "input": 292,
+  "model": "gpt-6-luna",
+  "output": 66,
+  "reasoning": 0,
+  "seconds": 1.52
+ }
+}

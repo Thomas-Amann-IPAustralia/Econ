@@ -1,0 +1,96 @@
+{
+ "cost_usd": 0.012834,
+ "data": {
+  "answer": "## How long does examination take?\n\nThe **median time from requesting substantive examination to acceptance for grant was 1.3 years**, using 2020 data—the latest complete data cited in the 2025 Australian IP Report. Timeframes vary significantly, largely because of applicant behaviour and preferences. This measure starts at the examination request, not at filing.[1]\n\n## Options to change the timing\n\n- **Defer requesting examination:** Applicants have up to **5 years after filing** to request examination, or the application lapses.[2]\n- **Request examination early:** Applicants can voluntarily request examination without waiting for a direction from IP Australia.[3]\n- **Respond to a direction:** The Commissioner of Patents can direct an applicant to request examination within that five-year period. The applicant then has **2 months** to request examination or the application lapses.[4] Older material describes a six-month deadline, but the 2014 backlog report notes that this was reduced to two months in April 2013.[5]\n- **Seek fast-track examination:** The 2025 report lists options for green technology applications and applications from small and medium enterprises. Applicants can also request fast tracking for specific needs, such as commercial licensing pressures or infringement proceedings.[6]\n- **Use the Patent Prosecution Highway:** Applicants with a patent allowed in another eligible jurisdiction can have the corresponding Australian application examined more quickly.[7]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "The median time from when an applicant requests IP Australia to commence substantive examination of their patent to when the patent is accepted for grant is 1.3 years, as of 2020 (latest complete data). There is significant variation in patent application timeframes, driven largely by applicant behaviour and preferences."
+     }
+    ],
+    "text": "The 2025 report gives a median of 1.3 years from examination request to acceptance, based on 2020 data, with substantial variation driven largely by applicants."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "After filing for a patent in Australia, applicants have 5 years to submit an RFE or their application will lapse."
+     }
+    ],
+    "text": "Applicants have five years after filing to request examination or their application lapses."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Rather than waiting to be directed, applicants can voluntarily request examination early and unprompted."
+     }
+    ],
+    "text": "Applicants can voluntarily request examination early without waiting for a direction."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Within that period, Australia's Commissioner of Patents may direct an applicant to request examination. The applicant then has 2 months to submit an RFE or the application lapses."
+     }
+    ],
+    "text": "A direction from the Commissioner requires an examination request within two months or the application lapses."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 8,
+      "quote": "this direction requires the applicant to file a request for examination within six months."
+     },
+     {
+      "evidence": 9,
+      "quote": "As of April 2013 this has been reduced to two months with the Raising the Bar reform."
+     }
+    ],
+    "text": "The older six-month directed-request deadline was reduced to two months in April 2013."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 14,
+      "quote": "\"Fast track\" examination is available for applications related to green technology and for applications submitted by small and medium enterprise."
+     },
+     {
+      "evidence": 14,
+      "quote": "Applicants can request fast track examination on the basis of specific needs, such as pressures in commercial licensing or infringement proceedings."
+     }
+    ],
+    "text": "Fast tracking is available for green technology and SME applications, and can be requested for needs such as commercial licensing pressures or infringement proceedings."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 14,
+      "quote": "Applicants who hold a patent allowed in another eligible jurisdiction qualify to have a corresponding Australian patent application examined more quickly through the Patent Prosecution Highway."
+     }
+    ],
+    "text": "The Patent Prosecution Highway offers faster examination of a corresponding Australian application where a patent has been allowed in an eligible jurisdiction."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "explore-policy-6",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.025668,
+  "input": 6309,
+  "model": "gpt-6.1-sol",
+  "output": 1305,
+  "reasoning": 313,
+  "seconds": 17.55
+ }
+}

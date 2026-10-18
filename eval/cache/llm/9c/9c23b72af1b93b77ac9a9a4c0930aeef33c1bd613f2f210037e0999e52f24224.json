@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5.7e-05,
+ "data": {
+  "context": "In the 2025 analytic note *Evaluating Trade Marks as a Leading Economic Indicator of the Australian Business Cycle*, Table A4 reports a linear regression examining how Australian trade mark applications in the previous two quarters relate to GDP. The table gives the lagged application variables’ coefficients and model statistics."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "note-tm-leading-indicator:0020",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000114,
+  "input": 786,
+  "model": "gpt-6-luna",
+  "output": 71,
+  "reasoning": 0,
+  "seconds": 2.18
+ }
+}

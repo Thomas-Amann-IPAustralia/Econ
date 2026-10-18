@@ -1,0 +1,26 @@
+{
+ "cost_usd": 5.3e-05,
+ "data": {
+  "queries": [
+   "trade marks exporters resilience economic shocks uncertainty",
+   "IP rights business profitability competition economic uncertainty",
+   "Trade mark ownership helped exporting firms respond to economic shocks and uncertainty by X."
+  ],
+  "standalone_question": "How does intellectual property help firms deal with economic shocks and uncertainty?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-synthesis-7",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000107,
+  "input": 761,
+  "model": "gpt-6-luna",
+  "output": 61,
+  "reasoning": 0,
+  "seconds": 1.47
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "cost_usd": 6.2e-05,
+ "data": {
+  "queries": [
+   "patent grant causal effect firm size growth employment sales international evidence"
+  ],
+  "standalone_question": "What does international research find about the effect of being granted a patent on a firm’s size?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr22-5",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000124,
+  "input": 285,
+  "model": "gpt-6-luna",
+  "output": 192,
+  "reasoning": 142,
+  "seconds": 2.41
+ }
+}

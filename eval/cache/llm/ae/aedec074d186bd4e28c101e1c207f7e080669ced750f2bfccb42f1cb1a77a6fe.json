@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.3e-05,
+ "data": {
+  "context": "In the 2017 Australian Intellectual Property Report, the section on the Productivity Commission’s inquiry into IP describes the Commission’s framework for assessing Australia’s IP system. It sets out four principles—effectiveness, efficiency, adaptability and accountability—for balancing IP protection with community welfare."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2017:0032",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000127,
+  "input": 943,
+  "model": "gpt-6-luna",
+  "output": 66,
+  "reasoning": 0,
+  "seconds": 1.52
+ }
+}

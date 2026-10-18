@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.0003,
+ "data": [
+  {
+   "grade": 0,
+   "id": "p1"
+  }
+ ],
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "judge:judge-v1:gemini-3.8-flash",
+ "schema_name": "grades",
+ "tag": "multi-7",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000601,
+  "input": 676,
+  "model": "gemini-3.8-flash",
+  "output": 25,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

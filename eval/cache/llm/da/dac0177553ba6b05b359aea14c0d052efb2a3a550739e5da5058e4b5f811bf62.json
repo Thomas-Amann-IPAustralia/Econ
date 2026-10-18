@@ -1,0 +1,25 @@
+{
+ "cost_usd": 5.1e-05,
+ "data": {
+  "queries": [
+   "trade marks leading indicator business cycle recession",
+   "Trade mark applications predict economic downturns by X months in Australia."
+  ],
+  "standalone_question": "Can trade mark filings be used to predict recessions in Australia?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-evidence-5",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000102,
+  "input": 762,
+  "model": "gpt-6-luna",
+  "output": 51,
+  "reasoning": 0,
+  "seconds": 1.38
+ }
+}

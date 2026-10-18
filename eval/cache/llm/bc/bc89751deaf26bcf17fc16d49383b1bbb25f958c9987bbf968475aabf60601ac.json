@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.000102,
+ "data": {
+  "queries": [
+   "IP Australia is developing measures to protect Indigenous Knowledge and Indigenous Cultural and Intellectual Property in the intellectual property system."
+  ],
+  "standalone_question": "What measures is IP Australia taking to address Indigenous Knowledge in the intellectual property system?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-policy-8",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000204,
+  "input": 762,
+  "model": "gpt-6-luna",
+  "output": 256,
+  "reasoning": 200,
+  "seconds": 3.16
+ }
+}

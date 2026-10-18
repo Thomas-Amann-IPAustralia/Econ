@@ -1,0 +1,108 @@
+{
+ "cost_usd": 0.014128,
+ "data": {
+  "answer": "The main implemented changes identified in the evidence took effect in **March 2022**. Further reforms were still being explored in the 2023 report.[1][6]\n\n### Changes made and their reasons\n\n- **A 12-month grace period:** designers can register a design after inadvertently disclosing it. The change also aimed to make protection easier to coordinate across jurisdictions with similar grace periods, including the US, Japan and Europe.[1]\n- **A streamlined registration system:** the changes were intended to improve the system and give designers greater flexibility in how they protect their products.[2]\n\n### Research underpinning the reforms\n\nThe reforms built on a **12-month review** involving extensive research into Australia’s design economy, the drivers of design innovation and the impact of design rights.[3] Relevant findings included:\n\n- **Commercial value:** the 2023 report linked registered or certified designs to higher productivity in certain design-intensive industries, mostly manufacturing, and associated designs with higher R&D spending and exports. These are reported links, not proof that the reforms themselves improved business performance.[4]\n- **Usability and business fit:** interviews reported in 2014 found that some firms perceived a poor fit between the designs system and their business models. The research emphasised making the process seamless and easy to avoid costs and market friction.[5]\n\n### Further changes considered—not established as implemented\n\nIn 2023, IP Australia was considering protection for **non-physical or ‘virtual’ products and parts of products**, alongside greater flexibility to adapt protection as products change during development. The stated aim was a system that remained fit for purpose and supported the Australian economy.[6]\n\nSeparately, the 2022 report recorded Australia’s agreement to make all reasonable efforts to join the **Hague Agreement on Industrial Designs**. It described prospective benefits of easier overseas protection and extending Australian protection from 10 to 15 years. This was not reported as an implemented extension: the later 2024 report still described protection as lasting up to 10 years.[7]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "In March 2022, several improvements to the design rights system came into effect."
+     },
+     {
+      "evidence": 1,
+      "quote": "Most significantly, a 12-month grace period has been introduced to ensure designers can register their designs after inadvertently disclosing them. Designs law in many other jurisdictions, such as the US, Japan and Europe, provide a 12-month grace period. This change will make it easier to coordinate IP protection across jurisdictions."
+     }
+    ],
+    "text": "March 2022 changes introduced a 12-month grace period to address inadvertent disclosure and ease international coordination."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "The changes also streamline and improve the design registration system, giving designers more flexibility in protecting their products."
+     }
+    ],
+    "text": "The changes streamlined registration and gave designers greater flexibility in protecting products."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "The ongoing reforms build on a 12-month review that involved extensive research into Australia's design economy, the drivers of design innovation and the impact of design rights."
+     }
+    ],
+    "text": "The reforms built on a 12-month review of the design economy, innovation drivers and the impact of design rights."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "Previous research commissioned by Australia found that for Australian businesses in certain design-intensive industries (mostly concentrated in manufacturing), holding registered or certified designs is linked to higher productivity. Designs are also associated with higher R&D spend and exports."
+     }
+    ],
+    "text": "The 2023 report describes links between design rights and productivity in certain design-intensive industries, and associations with R&D and exports, rather than proving effects of the reforms."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 9,
+      "quote": "In order to engage market participants, it is important to make the process seamless and easy so as to avoid imposing costs and generating market friction."
+     },
+     {
+      "evidence": 9,
+      "quote": "However, due to a perceived lack of fit with their respective business models, they have made an informed decision not to engage strongly with the Designs System or its alternatives."
+     }
+    ],
+    "text": "The 2014 interview research identified perceived business-model mismatch and emphasised easy processes to reduce costs and friction."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "IP Australia is exploring a program of further reforms to ensure the Australian design rights system is fit for purpose and supports the Australian economy now and in the future."
+     },
+     {
+      "evidence": 1,
+      "quote": "We are considering how the design rights system could accommodate non-physical or 'virtual' products and parts of products; and how to give designers more flexibility in adapting their protection as their products change during development."
+     }
+    ],
+    "text": "In 2023, further reforms under consideration concerned virtual products, product parts and adapting protection during development, to keep the system fit for purpose and support the economy."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "Australia has agreed to make all reasonable efforts to join the Hague Agreement on Industrial Designs as part of that agreement."
+     },
+     {
+      "evidence": 2,
+      "quote": "Accession to the Hague Agreement will provide new benefits for Australian designers by allowing them to protect their original creations overseas more easily and extending the term of protection available for designs in Australia from 10 to 15 years."
+     },
+     {
+      "evidence": 7,
+      "quote": "Once certified, the design right confers to its owner an exclusive right to use, license and commercialise the design for up to 10 years."
+     }
+    ],
+    "text": "The 2022 report described a commitment to make reasonable efforts to join the Hague Agreement and prospective overseas-protection and term-extension benefits; the 2024 report still stated a maximum 10-year term."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "explore-policy-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.028256,
+  "input": 6413,
+  "model": "gpt-6.1-sol",
+  "output": 1543,
+  "reasoning": 258,
+  "seconds": 20.32
+ }
+}

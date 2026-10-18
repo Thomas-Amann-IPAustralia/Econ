@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.5e-05,
+ "data": {
+  "queries": [
+   "IP rights intensity by industry Australia patent trade mark design plant breeder's rights"
+  ],
+  "standalone_question": "Which industries in Australia are the most intensive users of intellectual property?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-compare-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 5e-05,
+  "input": 283,
+  "model": "gpt-6-luna",
+  "output": 44,
+  "reasoning": 0,
+  "seconds": 1.25
+ }
+}

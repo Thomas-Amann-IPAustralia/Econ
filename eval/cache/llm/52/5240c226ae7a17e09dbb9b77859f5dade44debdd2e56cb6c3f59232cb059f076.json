@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000124,
+ "data": {
+  "queries": [
+   "trade mark ownership and export performance",
+   "exporter shocks identification robustness causal evidence",
+   "Trade mark protection is associated with X per cent higher export participation, although evidence on whether it causes exporters’ success remains limited."
+  ],
+  "standalone_question": "Do trade marks help Australian exporters, and how strong is the evidence that they do?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-evidence-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000249,
+  "input": 764,
+  "model": "gpt-6-luna",
+  "output": 345,
+  "reasoning": 269,
+  "seconds": 4.44
+ }
+}

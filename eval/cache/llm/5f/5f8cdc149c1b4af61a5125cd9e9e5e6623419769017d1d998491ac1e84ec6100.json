@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.3e-05,
+ "data": {
+  "context": "In *Computer Implemented Inventions: Patent Trends at IP Australia, EPO and USPTO* (2024), this section examines whether USPTO and EPO applicants subsequently filed corresponding applications at IP Australia (IPA), using a difference-in-differences analysis of the association with the 2014 court decisions. It reports that the decisions were associated with an increase in the relative IPA filing probability for CII applications compared with Non-CII applications among USPTO applicants."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp16-cii-patent-trends:0066",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000166,
+  "input": 1132,
+  "model": "gpt-6-luna",
+  "output": 106,
+  "reasoning": 0,
+  "seconds": 1.46
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5.9e-05,
+ "data": {
+  "context": "In the IP and Innovation Policy section of the Australian Intellectual Property Report 2016, this passage describes IP Australia’s Patent Analytics Hub, including its 2012 pilot, 2015 expansion and use of global patent data to help Australian innovators understand technology areas, find collaborators and commercialise research."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2016:0026",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000118,
+  "input": 829,
+  "model": "gpt-6-luna",
+  "output": 71,
+  "reasoning": 0,
+  "seconds": 2.05
+ }
+}

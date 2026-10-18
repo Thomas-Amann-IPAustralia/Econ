@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.6e-05,
+ "data": {
+  "context": "In *The Australian Mining Industry* (2015), section 3.2, “An Investigation of the Major Players,” this passage compares patent technology areas among major Australian mining companies identified by market capitalisation. It notes that Newcrest Mining and Fortescue Metals filed no patents during the study period and describes the technology areas and patenting of BHP Billiton, Alcoa and Rio Tinto."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp04-mining-innovation:0020",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000192,
+  "input": 1233,
+  "model": "gpt-6-luna",
+  "output": 138,
+  "reasoning": 43,
+  "seconds": 2.3
+ }
+}

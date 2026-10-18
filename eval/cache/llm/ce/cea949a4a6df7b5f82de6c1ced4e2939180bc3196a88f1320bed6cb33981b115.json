@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.5e-05,
+ "data": {
+  "queries": [
+   "Australian resident share of patent applications over time"
+  ],
+  "standalone_question": "How has the share of patent applications filed by Australian residents changed over time in Australia?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-trend-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 5e-05,
+  "input": 286,
+  "model": "gpt-6-luna",
+  "output": 42,
+  "reasoning": 0,
+  "seconds": 1.25
+ }
+}

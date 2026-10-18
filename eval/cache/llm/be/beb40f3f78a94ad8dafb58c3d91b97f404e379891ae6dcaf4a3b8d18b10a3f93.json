@@ -1,0 +1,92 @@
+{
+ "cost_usd": 0.002759,
+ "data": [
+  {
+   "grade": 2,
+   "id": "p1"
+  },
+  {
+   "grade": 3,
+   "id": "p2"
+  },
+  {
+   "grade": 2,
+   "id": "p3"
+  },
+  {
+   "grade": 3,
+   "id": "p4"
+  },
+  {
+   "grade": 2,
+   "id": "p5"
+  },
+  {
+   "grade": 1,
+   "id": "p6"
+  },
+  {
+   "grade": 2,
+   "id": "p7"
+  },
+  {
+   "grade": 0,
+   "id": "p8"
+  },
+  {
+   "grade": 3,
+   "id": "p9"
+  },
+  {
+   "grade": 0,
+   "id": "p10"
+  },
+  {
+   "grade": 3,
+   "id": "p11"
+  },
+  {
+   "grade": 3,
+   "id": "p12"
+  },
+  {
+   "grade": 2,
+   "id": "p13"
+  },
+  {
+   "grade": 2,
+   "id": "p14"
+  },
+  {
+   "grade": 0,
+   "id": "p15"
+  },
+  {
+   "grade": 0,
+   "id": "p16"
+  },
+  {
+   "grade": 3,
+   "id": "p17"
+  },
+  {
+   "grade": 3,
+   "id": "p18"
+  }
+ ],
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "judge:judge-v1:gemini-3.8-flash",
+ "schema_name": "grades",
+ "tag": "explore-trend-6",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.005519,
+  "input": 5949,
+  "model": "gemini-3.8-flash",
+  "output": 282,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

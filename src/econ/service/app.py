@@ -158,7 +158,9 @@ def create_app() -> FastAPI:
             if i + 1 < len(index.chunks) and index.chunks[i + 1]["doc_id"] == c["doc_id"]
             else None
         )
-        return {**{k: v for k, v in c.items() if k != "embed_text"}, "prev": prev, "next": nxt}
+        # The search-only fields (the embedded text and the context note, D-013) are never shown.
+        hidden = ("embed_text", "context_note")
+        return {**{k: v for k, v in c.items() if k not in hidden}, "prev": prev, "next": nxt}
 
     def services() -> pipeline.Services:
         use_model = model if (model and meter.available()) else None

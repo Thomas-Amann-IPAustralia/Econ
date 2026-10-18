@@ -1,0 +1,26 @@
+{
+ "cost_usd": 6.1e-05,
+ "data": {
+  "queries": [
+   "Australian residents PBR applications decline 2018 2022 reasons",
+   "Australian plant breeders PBR filing trends applicant origin",
+   "Australian plant breeders filed X per cent fewer PBR applications between 2018 and 2022, reflecting [reported factors]."
+  ],
+  "standalone_question": "Why did Australian plant breeders file fewer plant breeder’s rights (PBR) applications between 2018 and 2022?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr25-5",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000122,
+  "input": 768,
+  "model": "gpt-6-luna",
+  "output": 91,
+  "reasoning": 0,
+  "seconds": 1.65
+ }
+}

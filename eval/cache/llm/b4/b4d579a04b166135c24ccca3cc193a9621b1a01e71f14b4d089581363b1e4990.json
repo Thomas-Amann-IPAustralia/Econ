@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000112,
+ "data": {
+  "queries": [
+   "patent applications geographic distribution across jurisdictions",
+   "trade mark filings by state and territory",
+   "Patent filings and trade mark applications varied across jurisdictions, with [state] recording the highest [measure] and [territory] the lowest."
+  ],
+  "standalone_question": "How do patent and trade mark activity differ across Australian states and territories?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-compare-7",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000225,
+  "input": 763,
+  "model": "gpt-6-luna",
+  "output": 298,
+  "reasoning": 221,
+  "seconds": 3.09
+ }
+}

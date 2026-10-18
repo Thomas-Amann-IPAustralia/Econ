@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5.1e-05,
+ "data": {
+  "context": "In the 2025 analytic note *Evaluating trade marks as a leading economic indicator of the Australian business cycle*, this section explains how to access IP Australia’s IP RAPID data on trade mark, patent, design and plant breeder’s rights applications, as well as its research and economics team."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "note-tm-leading-indicator:0011",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000101,
+  "input": 656,
+  "model": "gpt-6-luna",
+  "output": 71,
+  "reasoning": 0,
+  "seconds": 1.35
+ }
+}

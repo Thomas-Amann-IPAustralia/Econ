@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000352,
+ "data": {
+  "queries": [
+   "SMEs and growth policy implications intellectual property",
+   "business environment of patenting firms policy recommendations"
+  ],
+  "standalone_question": "What policy implications does the research draw for supporting small and medium enterprises with intellectual property?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-strategy-3",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000352,
+  "input": 664,
+  "model": "gemini-3.5-flash-lite",
+  "output": 61,
+  "reasoning": 0,
+  "seconds": 0.83
+ }
+}

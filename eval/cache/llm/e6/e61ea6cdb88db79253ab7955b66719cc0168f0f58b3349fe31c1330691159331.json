@@ -1,0 +1,26 @@
+{
+ "cost_usd": 5.1e-05,
+ "data": {
+  "queries": [
+   "areas for future research research limitations",
+   "research gaps future research recommendations",
+   "The researchers identify X as an area requiring further research."
+  ],
+  "standalone_question": "What areas do the researchers say need more research?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-strategy-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000101,
+  "input": 759,
+  "model": "gpt-6-luna",
+  "output": 51,
+  "reasoning": 0,
+  "seconds": 1.44
+ }
+}

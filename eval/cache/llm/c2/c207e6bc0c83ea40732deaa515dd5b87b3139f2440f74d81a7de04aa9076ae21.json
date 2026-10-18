@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In the Australian IP Report 2025, this passage summarises key outcomes of the Riyadh Design Law Treaty, concluded in November 2024, and their relevance to Australian designers. It describes proposed design-registration provisions, including grace periods, application requirements, renewals, deadline relief, multiple designs in one application and flexibility on Indigenous Knowledge disclosures."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2025:0075",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000164,
+  "input": 866,
+  "model": "gpt-6-luna",
+  "output": 154,
+  "reasoning": 71,
+  "seconds": 2.1
+ }
+}

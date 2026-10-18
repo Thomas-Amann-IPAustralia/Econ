@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.6e-05,
+ "data": {
+  "context": "Australian Intellectual Property Report 2021, Chapter 6’s “The value of copyright to Australia” section, describes copyright industries’ contribution to Australia’s economy in 2018, drawing on a PwC study using a WIPO-developed methodology, and gives examples of screen and publishing industries and collecting-society distributions in 2019–20."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2021:0051",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000151,
+  "input": 1101,
+  "model": "gpt-6-luna",
+  "output": 82,
+  "reasoning": 0,
+  "seconds": 1.42
+ }
+}

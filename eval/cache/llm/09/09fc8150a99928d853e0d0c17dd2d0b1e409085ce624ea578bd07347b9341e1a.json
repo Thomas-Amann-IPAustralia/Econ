@@ -1,0 +1,21 @@
+{
+ "cost_usd": 4.6e-05,
+ "data": {
+  "context": "In the introduction to the Australian Intellectual Property Report 2015, this passage directs readers to the online data, graphs and statistics used in the report and provides contact details for comments and queries."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2015:0003",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 9.3e-05,
+  "input": 680,
+  "model": "gpt-6-luna",
+  "output": 50,
+  "reasoning": 0,
+  "seconds": 1.46
+ }
+}

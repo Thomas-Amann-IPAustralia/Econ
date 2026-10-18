@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.3e-05,
+ "data": {
+  "queries": [
+   "historical patents contribution to Australian economic growth"
+  ],
+  "standalone_question": "What historical evidence is there that patents contributed to Australia's economic growth?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr25-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 4.7e-05,
+  "input": 282,
+  "model": "gpt-6-luna",
+  "output": 38,
+  "reasoning": 0,
+  "seconds": 1.31
+ }
+}

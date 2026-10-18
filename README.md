@@ -20,20 +20,29 @@ GitHub Pages (web/)  ──►  Render: the API (src/econ/service)  ──►  C
 Without a model key the service runs in **evidence-only mode**: search with full provenance, no generated
 answer. Deployment steps: [docs/deploy.md](docs/deploy.md).
 
+**How well it finds things (RAG v2, D-011 to D-015).** Measured on a judged test set of 178 questions
+(the original known-item questions plus exploratory ones like staff ask), graded by a Gemini judge whose
+grades agreed with Claude's blind grades of a sample at quadratic kappa 0.92. Search uses short context notes on every
+passage and searches the question alongside the plan's queries; against the first version, the share of
+relevant passages that reach the answer rose from 0.62 to 0.72, and on exploratory questions two judges
+preferred the new answers by about three to one. Plain-English summary:
+[docs/rag-v2-results-explained.md](docs/rag-v2-results-explained.md).
+
 ## Repository map
 
 | Path | What |
 |---|---|
 | `config/` | `sources.yaml` (the corpus registry), `pipeline.yaml` (parse, chunking, embedders, retrieval), `service.yaml` (the API) |
 | `src/econ/ingest/` | fetch from R2, the security sweep, Docling parsing with page and box provenance |
-| `src/econ/kb/` | chunking, BM25, embedding for measurement |
-| `src/econ/evalr/` | the retrieval test set, metrics and measurement stages |
+| `src/econ/kb/` | chunking, BM25, embedding for measurement, the context notes (`enrich.py`) |
+| `src/econ/evalr/` | test sets (silver, judged), metrics, measurement grids, the judge, answer and out-of-scope runs, the metered call layer |
+| `src/econ/reranker.py` | an ONNX cross-encoder for the Cloud Run service (measured, not adopted) |
 | `src/econ/retrieval/` | hybrid search and the serving index |
 | `src/econ/answer/` | prompts, the answer schema, the quote check, model adapters, the request pipeline |
 | `src/econ/service/` | the FastAPI service on Render |
 | `src/econ/embedder.py` | the Cloud Run embedding service |
 | `library/` | the knowledge base: elements, chunks and the serving index (committed) |
-| `eval/` | test sets, grids and per-need run outputs |
+| `eval/` | test sets, grids, judgments, per-need run outputs, the paid-reply cache and the spend ledger |
 | `reports/` | measurement reports |
 | `web/` | the front end |
 | `docs/` | decisions, deployment, handover, the SOP |
@@ -45,8 +54,9 @@ uv sync --extra build --group dev        # everything (torch, Docling) for build
 export R2_ACCOUNT_ID=... R2_ACCESS_KEY_ID=... R2_SECRET_ACCESS_KEY=...
 
 econ fetch && econ sweep && econ parse --workers 2 && econ chunk     # the knowledge base
-econ eval-retrieval --stage chunking                                  # then embedders, then fusion
-econ index && econ verify-embedder                                    # the serving index, checked
+econ eval-retrieval --stage chunking                                  # then embedders, then fusion (silver set)
+econ eval-retrieval-v2 --stage stage1                                 # then stage2, final (judged set, cached)
+econ index && econ verify-embedder && econ verify-search              # the serving index, checked
 econ ask "How did trade mark filings change during the pandemic?"     # one question, locally
 econ serve                                                            # the API on http://127.0.0.1:8787
 uv run pytest -q                                                      # tests: no network, no models

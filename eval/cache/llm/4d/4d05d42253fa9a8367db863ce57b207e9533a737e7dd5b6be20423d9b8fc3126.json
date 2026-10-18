@@ -1,0 +1,25 @@
+{
+ "cost_usd": 5.1e-05,
+ "data": {
+  "queries": [
+   "design intensity compared with other countries",
+   "Australia design IP intensity relative to other countries by design registrations and economic activity"
+  ],
+  "standalone_question": "How does Australia compare with other countries in design IP intensity?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-compare-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000101,
+  "input": 761,
+  "model": "gpt-6-luna",
+  "output": 50,
+  "reasoning": 0,
+  "seconds": 1.47
+ }
+}

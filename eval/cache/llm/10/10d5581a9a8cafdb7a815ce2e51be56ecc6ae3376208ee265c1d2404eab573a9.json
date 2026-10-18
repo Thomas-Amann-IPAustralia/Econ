@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.8e-05,
+ "data": {
+  "context": "In *The business environment of patenting firms in Australia* (2024), Table 8 in the pooled regression analysis examines whether patent activity three years before a firm’s turnover-based growth period is associated with high growth, accounting for firm and industry characteristics. It reports estimates for filed, granted and retired patents alongside controls including firm size, age and industry."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp15-patenting-firms:0041",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000156,
+  "input": 1142,
+  "model": "gpt-6-luna",
+  "output": 83,
+  "reasoning": 0,
+  "seconds": 1.48
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "cost_usd": 5.1e-05,
+ "data": {
+  "queries": [
+   "establishment of Office of the Chief Economist date",
+   "IP Australia's Office of the Chief Economist was established in [year]."
+  ],
+  "standalone_question": "When did IP Australia establish its Office of the Chief Economist?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr17-5",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000102,
+  "input": 761,
+  "model": "gpt-6-luna",
+  "output": 52,
+  "reasoning": 0,
+  "seconds": 1.44
+ }
+}

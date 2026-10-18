@@ -1,0 +1,24 @@
+{
+ "cost_usd": 4.4e-05,
+ "data": {
+  "queries": [
+   "pending patent applications backlog peak size year"
+  ],
+  "standalone_question": "How large did the backlog of pending patent applications get, and when did it peak?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp01-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 8.8e-05,
+  "input": 677,
+  "model": "gpt-6-luna",
+  "output": 41,
+  "reasoning": 0,
+  "seconds": 2.24
+ }
+}

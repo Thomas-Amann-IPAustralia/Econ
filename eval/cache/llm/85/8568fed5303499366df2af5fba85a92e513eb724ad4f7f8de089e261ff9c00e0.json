@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000105,
+ "data": {
+  "context": "In *Exporter responses to shocks: The role of trade marks* (2021), the export revenue section reports robustness checks on whether Australian exporters’ earlier trade mark activity is associated with stronger revenue responses to tariffs. Table 11 compares specifications using lagged independent variables and differenced variables, for firms with long or short export histories."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp11-exporters-trade-marks:0090",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00021,
+  "input": 1708,
+  "model": "gpt-6-luna",
+  "output": 78,
+  "reasoning": 0,
+  "seconds": 1.38
+ }
+}

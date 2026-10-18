@@ -1,0 +1,21 @@
+{
+ "cost_usd": 4.6e-05,
+ "data": {
+  "context": "In the 2025 analytic note *Evaluating trade marks as a leading economic indicator of the Australian business cycle*, the Disclaimer explains the purpose of the Analytical Note series and clarifies that the paper’s views are the authors’ own, not necessarily IP Australia’s."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "note-tm-leading-indicator:0013",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 9.3e-05,
+  "input": 609,
+  "model": "gpt-6-luna",
+  "output": 65,
+  "reasoning": 0,
+  "seconds": 1.43
+ }
+}

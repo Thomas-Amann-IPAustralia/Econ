@@ -54,3 +54,16 @@ def test_rrf_and_ties_are_stable():
 def test_chunks_without_query_terms_are_not_keyword_hits():
     bm = np.array([0.0, 2.0, 0.0], dtype=np.float32)
     assert [h.row for h in fuse(None, bm, k=3)] == [1]
+
+
+def test_tokenising_is_safe_across_threads():
+    # D-013: a shared Snowball stemmer corrupted stems under a thread pool.
+    from concurrent.futures import ThreadPoolExecutor
+
+    from econ.kb.bm25 import tokenize
+
+    text = "organisations organising generalisations of economically significant registrations " * 20
+    want = tokenize(text)
+    with ThreadPoolExecutor(max_workers=8) as ex:
+        got = list(ex.map(lambda _: tokenize(text), range(200)))
+    assert all(g == want for g in got)

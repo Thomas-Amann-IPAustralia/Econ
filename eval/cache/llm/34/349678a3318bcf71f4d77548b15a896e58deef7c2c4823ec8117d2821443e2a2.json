@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000106,
+ "data": {
+  "context": "In the 2021 paper *Exporter responses to shocks: The role of trade marks*, this export-diversification robustness analysis tests whether rejected or cancelled trade mark applications shape firms’ responses to tariffs and real exchange-rate changes; the reported interaction estimates show no discernible effect."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp11-exporters-trade-marks:0117",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000211,
+  "input": 1763,
+  "model": "gpt-6-luna",
+  "output": 69,
+  "reasoning": 0,
+  "seconds": 1.44
+ }
+}

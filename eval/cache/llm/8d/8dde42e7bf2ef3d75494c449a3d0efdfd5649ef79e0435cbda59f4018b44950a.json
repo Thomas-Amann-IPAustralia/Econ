@@ -1,0 +1,26 @@
+{
+ "cost_usd": 6.1e-05,
+ "data": {
+  "queries": [
+   "IP rights business profitability causal effects firm profitability reverse causality",
+   "IP ownership profitability selection profitable firms file more patents trade marks",
+   "Firms with IP rights had X profitability, while profitable firms were also more likely to acquire IP rights."
+  ],
+  "standalone_question": "Is there evidence that owning intellectual property rights makes firms more profitable, or do more profitable firms simply file for more IP rights?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-evidence-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000121,
+  "input": 770,
+  "model": "gpt-6-luna",
+  "output": 87,
+  "reasoning": 0,
+  "seconds": 1.99
+ }
+}

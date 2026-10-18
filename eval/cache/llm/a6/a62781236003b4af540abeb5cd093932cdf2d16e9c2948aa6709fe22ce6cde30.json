@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.8e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2016, under “Who uses IP rights in Australia?”, this passage describes a 2013–2014 pro-rata analysis of Australian firms’ patent, trade mark and other IP applications by firm age, using IPGOD applications and ABR firm counts. It reports that firms over 10 years old generally file more IP rights, and cites research on younger patent-filing firms."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2016:0022",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000135,
+  "input": 873,
+  "model": "gpt-6-luna",
+  "output": 96,
+  "reasoning": 0,
+  "seconds": 1.93
+ }
+}

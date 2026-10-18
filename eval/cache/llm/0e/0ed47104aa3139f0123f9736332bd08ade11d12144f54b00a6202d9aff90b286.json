@@ -1,0 +1,24 @@
+{
+ "cost_usd": 7.3e-05,
+ "data": {
+  "queries": [
+   "patent grants effect on firm growth and size"
+  ],
+  "standalone_question": "What does overseas research say about the effect of a patent grant on firm size?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr22-5",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000147,
+  "input": 674,
+  "model": "gpt-6-luna",
+  "output": 159,
+  "reasoning": 115,
+  "seconds": 2.85
+ }
+}

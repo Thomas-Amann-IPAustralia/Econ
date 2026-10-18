@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8e-05,
+ "data": {
+  "context": "In the Australian IP Report 2026, this passage discusses China’s rising trade mark filing intensity in Australia relative to exports from 2017 to 2024, compared with the US and Japan (Figure 3.7). It links the trend to Chinese firms increasingly promoting their own brands, alongside the growth of cross-border ecommerce and direct-to-consumer retail."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0076",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00016,
+  "input": 1180,
+  "model": "gpt-6-luna",
+  "output": 85,
+  "reasoning": 0,
+  "seconds": 1.34
+ }
+}

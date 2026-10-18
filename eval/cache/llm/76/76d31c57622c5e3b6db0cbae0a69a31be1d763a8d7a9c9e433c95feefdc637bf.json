@@ -1,0 +1,24 @@
+{
+ "cost_usd": 7.3e-05,
+ "data": {
+  "queries": [
+   "number of small engineering services firms over time"
+  ],
+  "standalone_question": "How has the number of small firms in engineering services changed since the early 2000s?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "note-sc-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000146,
+  "input": 679,
+  "model": "gpt-6-luna",
+  "output": 156,
+  "reasoning": 110,
+  "seconds": 2.63
+ }
+}

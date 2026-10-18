@@ -1,0 +1,25 @@
+{
+ "cost_usd": 7.4e-05,
+ "data": {
+  "queries": [
+   "designs law reforms changes and rationale",
+   "design registration system design intensity international comparison"
+  ],
+  "standalone_question": "What changes have been made to Australia’s designs system, and why?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-policy-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000149,
+  "input": 673,
+  "model": "gpt-6-luna",
+  "output": 163,
+  "reasoning": 115,
+  "seconds": 3.13
+ }
+}

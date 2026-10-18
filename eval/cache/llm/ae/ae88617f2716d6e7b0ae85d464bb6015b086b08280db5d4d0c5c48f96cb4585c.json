@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.3e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2017, the “The international comparison - Australia is above average” section examines university–industry collaboration across OECD countries using co-filed Patent Cooperation Treaty (PCT) applications from 2000 to 2015. It compares Australia’s share and rankings, noting the measure captures patent-related collaboration rather than all knowledge transfer."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2017:0027",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000145,
+  "input": 1026,
+  "model": "gpt-6-luna",
+  "output": 84,
+  "reasoning": 0,
+  "seconds": 1.72
+ }
+}

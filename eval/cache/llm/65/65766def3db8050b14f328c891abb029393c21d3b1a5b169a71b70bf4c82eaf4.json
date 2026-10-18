@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000355,
+ "data": {
+  "queries": [
+   "trade mark applications overseas applicants decline 2016",
+   "international trade mark filing statistics origin countries"
+  ],
+  "standalone_question": "Why did trade mark applications from overseas applicants fall in 2016?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr17-2",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000355,
+  "input": 666,
+  "model": "gemini-3.5-flash-lite",
+  "output": 62,
+  "reasoning": 0,
+  "seconds": 1.13
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.9e-05,
+ "data": {
+  "context": "In the 2014 Report on patent backlogs, inventories and pendency, the Appendix 1 section “Opposition and Hearing” describes how patent applications may be granted, amended or refused after public opposition and hearings. It also notes that the 2013 Patent Act changes reduced the relevant period to 12 months, which is excluded from the historical inventory analysis."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp01-patent-backlogs:0047",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000138,
+  "input": 952,
+  "model": "gpt-6-luna",
+  "output": 85,
+  "reasoning": 0,
+  "seconds": 1.77
+ }
+}

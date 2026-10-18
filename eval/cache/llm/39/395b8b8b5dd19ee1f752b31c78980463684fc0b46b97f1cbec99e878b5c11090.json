@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000102,
+ "data": {
+  "context": "In the export revenue analysis of *Exporter responses to shocks: The role of trade marks* (2021), this section examines whether rejected or cancelled trade mark applications shape exporters’ revenue responses to shocks; the preceding text describes log-linear OLS estimates for selected destination markets."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp11-exporters-trade-marks:0087",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000204,
+  "input": 972,
+  "model": "gpt-6-luna",
+  "output": 213,
+  "reasoning": 143,
+  "seconds": 2.59
+ }
+}

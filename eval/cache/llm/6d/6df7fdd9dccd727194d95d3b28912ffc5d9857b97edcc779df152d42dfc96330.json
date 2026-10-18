@@ -1,0 +1,24 @@
+{
+ "cost_usd": 4.2e-05,
+ "data": {
+  "queries": [
+   "AI job advertisements large companies SMEs"
+  ],
+  "standalone_question": "Do large companies or SMEs advertise relatively more AI jobs?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "oce-ai-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 8.4e-05,
+  "input": 671,
+  "model": "gpt-6-luna",
+  "output": 34,
+  "reasoning": 0,
+  "seconds": 1.37
+ }
+}

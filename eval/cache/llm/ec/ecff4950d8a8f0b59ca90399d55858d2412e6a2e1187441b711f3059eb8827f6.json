@@ -1,0 +1,26 @@
+{
+ "cost_usd": 5.6e-05,
+ "data": {
+  "queries": [
+   "patent-holding SMEs growth into large firms",
+   "patent-holding small firms transition to large firms",
+   "Fewer patent-holding small firms are growing into large firms because of X factors affecting firm growth."
+  ],
+  "standalone_question": "Why are fewer small firms that hold patents growing into large firms?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-synthesis-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000112,
+  "input": 762,
+  "model": "gpt-6-luna",
+  "output": 71,
+  "reasoning": 0,
+  "seconds": 1.53
+ }
+}

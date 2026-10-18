@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.1e-05,
+ "data": {
+  "context": "In the 2025 analytic note *Evaluating Trade Marks as a Leading Economic Indicator of the Australian Business Cycle*, the “About the study” section describes the study’s data and methods: quarterly Australian trade mark filings from Q1 1970 to Q2 2023, identified by earliest application date, were combined with 24 leading indicators and real GDP; business-cycle turning points came from the Melbourne Institute report using the Bry-Boschan Quarterly rule."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "note-tm-leading-indicator:0002",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000142,
+  "input": 688,
+  "model": "gpt-6-luna",
+  "output": 147,
+  "reasoning": 41,
+  "seconds": 2.03
+ }
+}

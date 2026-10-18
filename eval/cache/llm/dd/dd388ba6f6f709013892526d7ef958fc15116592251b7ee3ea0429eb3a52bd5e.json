@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.3e-05,
+ "data": {
+  "context": "In IP Australia Economic Research Paper 14, *Raising the Bar reforms: Measuring the impact on relative patent scope* (2024), the descriptive analysis examines annual granted patent counts by examination request year. Figure 5 breaks counts down by applicant origin and broad technology area, noting that counts in the Other technology area fell less in 2014 after examination requests were brought forward to 2013."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp14-raising-the-bar:0022",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000146,
+  "input": 993,
+  "model": "gpt-6-luna",
+  "output": 94,
+  "reasoning": 0,
+  "seconds": 1.68
+ }
+}

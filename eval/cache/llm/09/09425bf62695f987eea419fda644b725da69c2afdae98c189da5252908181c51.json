@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000355,
+ "data": {
+  "queries": [
+   "mining innovation and METS firms collaboration co-filing patterns",
+   "mining technology patent applicants collaboration rates"
+  ],
+  "standalone_question": "Which kinds of organisations co-file mining patents with others most and least often?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "erp04-2",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000355,
+  "input": 666,
+  "model": "gemini-3.5-flash-lite",
+  "output": 62,
+  "reasoning": 0,
+  "seconds": 1.26
+ }
+}

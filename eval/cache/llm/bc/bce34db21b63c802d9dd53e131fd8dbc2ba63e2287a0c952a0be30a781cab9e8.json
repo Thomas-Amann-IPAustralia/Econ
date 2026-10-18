@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.2e-05,
+ "data": {
+  "context": "In *The market for design* (2014), the section “Roster” examines how design firms use the quality and prestige of their clients to signal capability and work quality, including how early-stage and established designers approach client rosters."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp03-market-for-design:0054",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000185,
+  "input": 1212,
+  "model": "gpt-6-luna",
+  "output": 128,
+  "reasoning": 67,
+  "seconds": 2.02
+ }
+}

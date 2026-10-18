@@ -1,0 +1,108 @@
+{
+ "cost_usd": 0.013052,
+ "data": {
+  "answer": "Trade marks, design rights and copyright protect **different aspects of creative and commercial activity**: trade origin, product appearance and original expression, respectively.[1]\n\n- **Trade marks — identity and branding.** Names, logos and other branding can indicate the trade origin of goods or services. Registration provides exclusive rights to use and authorise use of the mark, although unregistered marks can also receive protection through passing off or Australian Consumer Law.[2]\n- **Design rights — product appearance.** These protect new and distinctive visual features such as shape, pattern, configuration or ornamentation. Designs can be registered without substantive examination, but certification through examination is required for enforcement. A certified design right provides exclusive rights to use, license and commercialise the design for up to 10 years.[3]\n- **Copyright — original expression.** This protects original expression, including artwork, books, software, films and sound recordings. In Australia, protection arises automatically when an original work is created; registration is not required.[4]\n\nTheir potential intersection is particularly apparent in **visual material**: the passages identify logos and packaging as trade mark subject matter, product visual features as design subject matter, and artwork as copyright material.[5] However, the supplied evidence does not explain when the *same* material qualifies for multiple rights, or the legal rules governing overlap between them.",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Their core function is to communicate information in the market, most centrally, trade origin"
+     },
+     {
+      "evidence": 15,
+      "quote": "Design rights protect the unique visual features of a product that give it a unique appearance"
+     },
+     {
+      "evidence": 17,
+      "quote": "It protects the original expression of an idea or information."
+     }
+    ],
+    "text": "Trade marks protect trade origin, design rights protect product appearance, and copyright protects original expression."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Trade marks are signs, such as names, logos or other aspects of branding, that indicate the trade origin of goods or services."
+     },
+     {
+      "evidence": 1,
+      "quote": "Unregistered trade marks can be protected at common law by the tort of passing off or under provisions of the Australian Consumer Law7."
+     },
+     {
+      "evidence": 1,
+      "quote": "Registration confers exclusive rights to use, and authorise the use of, trade marks and obtain relief from trade mark infringement"
+     }
+    ],
+    "text": "Trade marks include names, logos and branding indicating trade origin; registration confers exclusive use and authorisation rights, while unregistered marks can be protected through passing off or Australian Consumer Law."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 15,
+      "quote": "To be eligible for protection, a design must be new and distinctive - dissimilar in overall impression to designs that constitute prior art. Once certified, the design right confers to its owner an exclusive right to use, license and commercialise the design for up to 10 years."
+     },
+     {
+      "evidence": 19,
+      "quote": "In Australia, designs can be registered without substantive examination. However, to enforce their registered design rights, owners must have their designs certified through examination by IP Australia."
+     },
+     {
+      "evidence": 15,
+      "quote": "Design rights protect the unique visual features of a product that give it a unique appearance such as its shape, pattern, configuration or ornamentation."
+     }
+    ],
+    "text": "Design rights protect new and distinctive visual features; registration does not require substantive examination, but enforcement requires certification through examination, and certified rights provide exclusive use, licensing and commercialisation for up to 10 years."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 17,
+      "quote": "It protects the original expression of an idea or information. Copyright material generally includes items such as books, artwork, software, film and sound recordings."
+     },
+     {
+      "evidence": 17,
+      "quote": "In Australia, copyright is granted automatically from the time an original work is created and does not need to be registered."
+     }
+    ],
+    "text": "Copyright protects original expression, including artwork, books, software, films and sound recordings, and arises automatically in Australia when an original work is created without registration."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 10,
+      "quote": "It can be anything from a logo to alphanumeric characters, words or aspects of packaging."
+     },
+     {
+      "evidence": 15,
+      "quote": "Design rights protect the unique visual features of a product that give it a unique appearance such as its shape, pattern, configuration or ornamentation."
+     },
+     {
+      "evidence": 17,
+      "quote": "Copyright material generally includes items such as books, artwork, software, film and sound recordings."
+     }
+    ],
+    "text": "Visual material is a potential point of intersection: trade marks can include logos and packaging, design rights cover product visual features, and copyright includes artwork."
+   }
+  ],
+  "coverage": "partial",
+  "gaps": [
+   "The passages do not explain when the same material can qualify simultaneously for trade mark, design and copyright protection, or the legal rules and limitations governing overlap between those rights."
+  ]
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A.smoke3",
+ "schema_name": "answer",
+ "tag": "owner-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.026104,
+  "input": 6737,
+  "model": "gpt-6.1-sol",
+  "output": 1263,
+  "reasoning": 273,
+  "seconds": 18.91
+ }
+}

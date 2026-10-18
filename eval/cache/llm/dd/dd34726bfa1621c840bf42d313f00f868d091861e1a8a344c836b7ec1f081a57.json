@@ -1,0 +1,64 @@
+{
+ "cost_usd": 0.010778,
+ "data": {
+  "answer": "For **Australians seeking protection overseas**, the evidence shows substantial use of PCT and Madrid, but does not quantify Hague use.\n\n- **Patents — PCT:** The **2017 report** recorded that Australians used the PCT for **67 per cent of 8,562 overseas patent applications**, with 33 per cent filed directly. It described this split as similar to the preceding 10 years.[1]\n- **Trade marks — Madrid:** The **2026 report** provides more recent outbound figures: **56.6 per cent of Australian trade mark classes filed abroad in 2024** went through Madrid, up from 45.0 per cent in 2019. These are class counts, not application counts.[2]\n- **Designs — Hague:** No Australian usage share or volume is provided. The Hague system allows applicants to seek design registration in multiple countries through one international application. The **2024 report** said Australia had agreed to make all reasonable efforts to join under the Australia–UK free trade agreement; it did not report completed accession.[3]\n\nThe PCT and Madrid percentages are therefore **not directly comparable**: they refer to different periods and counting units.[1][2]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 14,
+      "quote": "Of the 8562 applications filed by Australians overseas, 33 per cent were directly filed with overseas patent offices while 67 per cent used the PCT route"
+     },
+     {
+      "evidence": 14,
+      "quote": "This level of usage of the PCT route is similar to that observed over the last 10 years."
+     }
+    ],
+    "text": "The 2017 report recorded PCT use for 67 per cent of Australians’ 8,562 overseas patent applications, versus 33 per cent direct, consistent with the preceding decade."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "the share of Australian classes filed abroad through the Madrid system has increased, from 45.0% in 2019 to 56.6% in 2024."
+     }
+    ],
+    "text": "The 2026 report states that Madrid accounted for 56.6 per cent of Australian trade mark classes filed abroad in 2024, up from 45.0 per cent in 2019; this measures classes rather than applications."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 15,
+      "quote": "The Hague Agreement on Industrial Designs allows design applicants to seek registration in multiple countries through a single international application."
+     },
+     {
+      "evidence": 15,
+      "quote": "In principle, Australia has agreed to make all reasonable efforts to join the Hague Agreement as part of a free trade agreement (FTA) between Australia and the UK."
+     }
+    ],
+    "text": "Hague provides a single international design application route; the 2024 report described Australia’s commitment to make reasonable efforts to join, rather than completed accession."
+   }
+  ],
+  "coverage": "partial",
+  "gaps": [
+   "No recent outbound PCT usage figures for Australians are supplied; the latest supplied outbound percentage is in the 2017 report.",
+   "No volume or share of Australians’ Hague filings is supplied, nor confirmation of Australia’s accession after the 2024 report.",
+   "The passages do not provide a same-year comparison across all three systems using a common counting unit."
+  ]
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "explore-policy-7",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.021556,
+  "input": 6153,
+  "model": "gpt-6.1-sol",
+  "output": 925,
+  "reasoning": 166,
+  "seconds": 13.29
+ }
+}

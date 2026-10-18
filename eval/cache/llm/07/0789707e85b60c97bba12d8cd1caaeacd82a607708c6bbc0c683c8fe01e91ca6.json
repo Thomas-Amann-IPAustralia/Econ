@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000112,
+ "data": {
+  "queries": [
+   "firm-level drivers of artificial intelligence investment",
+   "AI investment and patenting propensity",
+   "Australian businesses invest in AI capability because of X, and AI investment is associated with patenting propensity by Y."
+  ],
+  "standalone_question": "What drives Australian companies to invest in AI capability, and is that investment related to patenting?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-synthesis-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000224,
+  "input": 767,
+  "model": "gpt-6-luna",
+  "output": 294,
+  "reasoning": 219,
+  "seconds": 3.49
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "cost_usd": 6.7e-05,
+ "data": {
+  "queries": [
+   "small and medium enterprises IP rights growth policy support"
+  ],
+  "standalone_question": "What policy implications does the research draw for supporting small businesses with intellectual property?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-strategy-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000133,
+  "input": 674,
+  "model": "gpt-6-luna",
+  "output": 132,
+  "reasoning": 89,
+  "seconds": 2.43
+ }
+}

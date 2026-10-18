@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.5e-05,
+ "data": {
+  "context": "In the 2023 report *Drivers of AI investment*, this section compares AI-hiring and general-hiring firms and job postings across ANZSIC industries using LinkedIn data. It discusses industry differences in AI hiring, including the healthcare sector’s lower share, and cautions that low posting counts and LinkedIn’s coverage may affect the comparisons."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "oce-ai-investment:0028",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00017,
+  "input": 1296,
+  "model": "gpt-6-luna",
+  "output": 81,
+  "reasoning": 0,
+  "seconds": 1.73
+ }
+}

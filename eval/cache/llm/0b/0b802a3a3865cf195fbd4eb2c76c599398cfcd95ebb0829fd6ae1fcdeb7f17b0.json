@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "The 2024 report *The business environment of patenting firms in Australia*, Introduction, outlines its study of Australian firms’ patenting and R&D collaboration. It describes conditional correlations between firm characteristics and patent filings, grants and retirements, using integrated ABS BLADE microdata, and defines patent-system engagement as any of these actions in a given year."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp15-patenting-firms:0002",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000164,
+  "input": 1220,
+  "model": "gpt-6-luna",
+  "output": 84,
+  "reasoning": 0,
+  "seconds": 2.41
+ }
+}

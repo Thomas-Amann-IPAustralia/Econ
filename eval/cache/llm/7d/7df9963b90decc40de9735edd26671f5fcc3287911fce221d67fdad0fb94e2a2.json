@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000352,
+ "data": {
+  "queries": [
+   "patent backlogs and pendency small medium enterprises commercialisation",
+   "Raising the Bar reforms patent scope business outcomes"
+  ],
+  "standalone_question": "Does slowing down the patent grant help small firms commercialise their inventions?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr24-1",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000352,
+  "input": 664,
+  "model": "gemini-3.5-flash-lite",
+  "output": 61,
+  "reasoning": 0,
+  "seconds": 0.96
+ }
+}

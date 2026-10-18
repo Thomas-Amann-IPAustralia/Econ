@@ -1,0 +1,30 @@
+# End-to-end answers v1: does the retrieval chosen by grid retrieval-v2 give better answers than the
+# service as configured today? Committed before any answer is generated (SOP §12, §20.5).
+grid: answers-v1
+needs:
+  # Test split only. All 33 exploratory test needs (the owner's kind of question) and a seeded sample of 27
+  # of the 59 silver test needs (seed 20261018, sorted ids, random.Random(seed).sample).
+  explore: all-test
+  silver_sample: 27
+  seed: 20261018
+settings:
+  A: baseline   # plan:luna-plan-v1/plain/none, the service today with the OpenAI provider
+  B: chosen     # the retrieval-v2 choice (stage 1 and stage 2)
+answer:
+  model: gpt-6.1-sol
+  effort: medium
+  prompt: answer-v1
+  tier: flex    # half price, same model
+measures:
+  - check: passed first time, passed after the retry, flagged; coverage (complete, partial, not_in_kb)
+  - grounding: of the passages an answer cites, the share judged relevant (grade 2 or 3) and the number of
+      distinct relevant passages cited; for silver needs, whether a gold passage is cited. Unjudged cited
+      passages are judged in a top-up first.
+  - preference: a judge from another family (gemini-3.8-flash) compares A and B for each need in both
+      orders, blind to which is which, on the need's question and narrative and each answer's prose,
+      claims and quotes; a preference counts only when both orders agree. Claude reads every exploratory
+      pair blind as a second judge.
+rule: >-
+  B is confirmed if the pairwise preferences favour B or are tied (two-sided sign test on agreed
+  preferences, B not worse at p < 0.05) and B's check pass rate (after the retry) is not lower than A's by
+  more than 5 points. Otherwise the retrieval choice goes back for review.

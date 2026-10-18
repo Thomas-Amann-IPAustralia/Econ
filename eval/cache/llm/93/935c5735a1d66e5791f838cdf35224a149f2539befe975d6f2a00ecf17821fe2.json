@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.00032,
+ "data": {
+  "queries": [
+   "designs law and practice study policy review reforms"
+  ],
+  "standalone_question": "What policy work was the designs law and practice study meant to feed into?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "erp08-4",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00032,
+  "input": 665,
+  "model": "gemini-3.5-flash-lite",
+  "output": 48,
+  "reasoning": 0,
+  "seconds": 1.52
+ }
+}

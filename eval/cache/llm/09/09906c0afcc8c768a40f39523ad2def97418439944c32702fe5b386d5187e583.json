@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001585,
+ "data": {
+  "reason": "Answer A directly addresses electric vehicle patenting with specific statistics from a machine-learning analysis quoted in the source text. Answer B erroneously claims that the passages do not separately identify EV patenting, missing a substantial piece of evidence directly asked for by the prompt.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-synthesis-8:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00317,
+  "input": 3886,
+  "model": "gemini-3.8-flash",
+  "output": 68,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

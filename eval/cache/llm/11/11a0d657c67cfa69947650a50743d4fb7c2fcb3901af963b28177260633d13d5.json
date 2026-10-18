@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5.5e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2018, Chapter 3’s trade marks section, this passage explains that the Madrid system lets applicants file trade mark applications in multiple jurisdictions and cites WIPO data on global application totals."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2018:0042",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00011,
+  "input": 822,
+  "model": "gpt-6-luna",
+  "output": 56,
+  "reasoning": 0,
+  "seconds": 1.57
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7e-05,
+ "data": {
+  "context": "In the 2020 report *Intellectual property rights, business profitability and competition in the Australian economy*, Appendix C explains how the study identifies IP-intensive industries. It describes calculating industry-level patent counts and patents per employee, then comparing each industry's relative intensity with the employment-weighted average; the method also applies to trade marks and designs."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp10-ip-profitability-competition:0077",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00014,
+  "input": 1005,
+  "model": "gpt-6-luna",
+  "output": 79,
+  "reasoning": 0,
+  "seconds": 1.8
+ }
+}

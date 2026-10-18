@@ -1,0 +1,47 @@
+{
+ "cost_usd": 0.009406,
+ "data": {
+  "answer": "The 2021 study estimates that a tariff cut from 10 per cent to zero is associated with **about a 71 per cent increase in export revenue for an exporter with one recent trade mark filing, compared with 32 per cent without one**—more than double the gain, or roughly 39 percentage points more.[1]\n\nThese are model estimates: the trade mark–tariff interaction was statistically significant at the 10 per cent level, providing only partial support for the hypothesis.[2]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "For trade mark owners, the reduction in tariffs (from 10 per cent to zero) will induce an increase in export revenue by 71 per cent, more than double the 32 per cent increase for firms without trade marks"
+     },
+     {
+      "evidence": 2,
+      "quote": "As a firm switches from having no recent trade mark filings to having a single trade mark filing, its revenue responsiveness to tariffs doubles, from -3.2 to -7.1."
+     }
+    ],
+    "text": "The 2021 study estimates that cutting tariffs from 10 per cent to zero is associated with export revenue gains of about 71 per cent with one recent trade mark filing versus 32 per cent without one, a difference of roughly 39 percentage points and more than double the gain."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "The interaction term between tariffs and trade marks is negative and significant at the 10 per cent level, offering partial support for Hypothesis 1b."
+     }
+    ],
+    "text": "These are model estimates, and the trade mark–tariff interaction was significant at the 10 per cent level, offering only partial support for the hypothesis."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "erp11-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.018812,
+  "input": 6651,
+  "model": "gpt-6.1-sol",
+  "output": 551,
+  "reasoning": 154,
+  "seconds": 12.01
+ }
+}

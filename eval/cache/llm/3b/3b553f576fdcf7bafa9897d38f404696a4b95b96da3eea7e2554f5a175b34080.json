@@ -1,0 +1,68 @@
+{
+ "cost_usd": 0.011416,
+ "data": {
+  "answer": "Trade marks and design rights protect different aspects of a product, but can complement each other; copyright overlap depends on the jurisdiction.[1][2][3][4]\n\n- **Trade marks protect commercial identity:** they distinguish the trade origin of goods or services. Registration gives the owner exclusive rights to use the mark, authorise its use and seek relief for infringement.[1]\n- **Design rights protect product appearance:** they cover visual features such as shape, configuration, pattern and ornamentation. In Australia, eligibility requires a design to be new and distinctive—not similar in overall impression to prior art.[2]\n- **They can work together commercially:** the 2014 research suggests that design activity can involve several IP rights. For example, a product design may gain market value alongside the firm's ability to protect and build its trade marks around that design.[3]\n- **Copyright–design overlap varies internationally:** the 2019 research reports differences in whether copyright protects registrable or industrially applied designs, whether unregistered design rights exist, and whether protection extends to functional artefacts. In some jurisdictions, designs can also attract trade mark protection.[4]\n\nThe supplied passages do not explain the specific Australian copyright–design overlap rules, or establish when the same Australian product can receive all three forms of protection.",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 13,
+      "quote": "A trade mark is a type of IP right which distinguishes the trade origin of goods or services in the market. A registered trade mark confers its owner with the exclusive right to use the mark, or authorise others to use it, and seek relief if the trade mark is infringed."
+     }
+    ],
+    "text": "Trade marks distinguish commercial origin, and registration provides exclusive use, authorisation and infringement remedies."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "Design rights protect the visual features of products - shape, configuration, pattern and ornamentation - that differentiate goods in the marketplace. For a design to be eligible for protection, it must be new and distinctive - not similar in its overall impression to other designs that constitute prior art."
+     }
+    ],
+    "text": "Australian design rights protect product appearance and require designs to be new and distinctive relative to prior art."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 12,
+      "quote": "The activity of design is likely to be bundled with a variety of intellectual property rights (IPRs), not just design rights (Amara et al., 2004)."
+     },
+     {
+      "evidence": 12,
+      "quote": "may only translate into a market value when combined with the firm's ability to protect its trademarks and build them around that design."
+     }
+    ],
+    "text": "The 2014 research suggests design activity can bundle multiple IP rights, with trade mark protection complementing the commercial value of a product design."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 11,
+      "quote": "Countries differ in their positions regarding the grant of copyright in registrable or industrially applied designs, and whether unregistered design rights are available (in addition to or instead of registered designs). Countries vary also in whether designs and/ or copyright protections are extended to functional artefacts. Within some jurisdictions, designs can attract protection under unfair competition laws or as trade marks."
+     }
+    ],
+    "text": "The 2019 research identifies international variation in copyright–design overlap, unregistered rights and functional artefact protection; some jurisdictions also protect designs as trade marks."
+   }
+  ],
+  "coverage": "partial",
+  "gaps": [
+   "The specific Australian legal rules governing overlap between copyright and design rights.",
+   "The conditions under which the same Australian product or work can receive trade mark, design and copyright protection."
+  ]
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B.smoke3",
+ "schema_name": "answer",
+ "tag": "owner-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.022832,
+  "input": 6156,
+  "model": "gpt-6.1-sol",
+  "output": 1052,
+  "reasoning": 218,
+  "seconds": 16.02
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000101,
+ "data": {
+  "queries": [
+   "trade mark applications leading indicator business cycle",
+   "trade mark applications GDP turning points predictive performance",
+   "Trade mark applications led GDP turning points by X quarters, with predictive reliability varying across economic cycles and measures."
+  ],
+  "standalone_question": "How does the claim that trade mark applications reliably signal recessions early and lead GDP turning points by about two quarters compare with IP Australia’s analysis?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-context-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000201,
+  "input": 791,
+  "model": "gpt-6-luna",
+  "output": 243,
+  "reasoning": 157,
+  "seconds": 3.42
+ }
+}

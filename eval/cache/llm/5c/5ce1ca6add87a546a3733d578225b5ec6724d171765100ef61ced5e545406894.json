@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.3e-05,
+ "data": {
+  "context": "In the introduction of *Computer Implemented Inventions: Patent Trends at IP Australia, EPO and USPTO* (2024), this passage explains why differing patent-eligibility standards for computer implemented inventions (CIIs) matter and outlines the study’s objectives: building a cross-jurisdiction patent database, using machine learning to classify likely subject-matter objections, comparing application outcomes, and examining subsequent filing in Australia."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp16-cii-patent-trends:0004",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000167,
+  "input": 1185,
+  "model": "gpt-6-luna",
+  "output": 96,
+  "reasoning": 0,
+  "seconds": 1.87
+ }
+}

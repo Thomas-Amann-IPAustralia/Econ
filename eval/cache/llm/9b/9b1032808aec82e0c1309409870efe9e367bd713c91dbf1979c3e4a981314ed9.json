@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7e-05,
+ "data": {
+  "context": "In the 2020 paper *Intellectual property rights, business profitability and competition in the Australian economy*, Section 3 examines how Australian businesses’ profitability relates to IPR ownership and stocks. It describes econometric modelling that controls for business characteristics and other influences to estimate IPRs’ contribution to profitability."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp10-ip-profitability-competition:0026",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00014,
+  "input": 1030,
+  "model": "gpt-6-luna",
+  "output": 73,
+  "reasoning": 0,
+  "seconds": 1.34
+ }
+}

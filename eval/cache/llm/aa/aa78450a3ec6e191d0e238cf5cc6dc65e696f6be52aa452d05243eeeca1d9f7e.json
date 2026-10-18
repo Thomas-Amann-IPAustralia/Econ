@@ -1,0 +1,25 @@
+{
+ "cost_usd": 4.6e-05,
+ "data": {
+  "queries": [
+   "drivers of business investment in artificial intelligence",
+   "AI patents and innovation trends among Australian firms"
+  ],
+  "standalone_question": "What does the knowledge base say about artificial intelligence and innovation in Australian firms?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "multi-7",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 9.2e-05,
+  "input": 675,
+  "model": "gpt-6-luna",
+  "output": 48,
+  "reasoning": 0,
+  "seconds": 1.46
+ }
+}

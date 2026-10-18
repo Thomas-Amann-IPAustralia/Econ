@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9e-05,
+ "data": {
+  "context": "In *The business environment of patenting firms in Australia* (2024), this section presents Table 2’s pooled OLS, random-effects and fixed-effects regressions of firms’ filed patent counts, including zero, using Australian business data observed since 2011. The text summarizes how patent filing relates to industry and state, and introduces the following discussion of granted patents in Table 3."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp15-patenting-firms:0024",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00018,
+  "input": 1342,
+  "model": "gpt-6-luna",
+  "output": 91,
+  "reasoning": 0,
+  "seconds": 1.44
+ }
+}

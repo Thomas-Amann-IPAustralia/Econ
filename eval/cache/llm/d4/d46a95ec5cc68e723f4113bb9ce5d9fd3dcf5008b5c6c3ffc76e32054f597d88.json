@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.9e-05,
+ "data": {
+  "context": "In the 2020 IP Australia Economic Research Paper 10, *Intellectual property rights, business profitability and competition in the Australian economy*, Appendix E presents descriptive statistics and correlations for the study’s Australian business data. This passage gives the correlation matrix for businesses owning different types of IPRs, including the strong correlation between trade mark-only owners and all IPR owners."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp10-ip-profitability-competition:0098",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000178,
+  "input": 1349,
+  "model": "gpt-6-luna",
+  "output": 86,
+  "reasoning": 0,
+  "seconds": 1.81
+ }
+}

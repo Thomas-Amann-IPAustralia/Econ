@@ -1,0 +1,24 @@
+{
+ "cost_usd": 6.8e-05,
+ "data": {
+  "queries": [
+   "export response to tariff cuts for recent trade mark holders"
+  ],
+  "standalone_question": "How much more do exporters with a recent trade mark gain from a tariff cut?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp11-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000137,
+  "input": 676,
+  "model": "gpt-6-luna",
+  "output": 138,
+  "reasoning": 93,
+  "seconds": 2.56
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.6e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2021, the “Countries of origin” section covers the origins of Australian trade mark applicants and filing routes. It reports 2020 applications by applicants from major countries, international co-applicant partnerships and Madrid-system filings, including changes from 2019 and the possible effect of COVID-19 disruption."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2021:0028",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000151,
+  "input": 1113,
+  "model": "gpt-6-luna",
+  "output": 79,
+  "reasoning": 0,
+  "seconds": 1.5
+ }
+}

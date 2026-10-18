@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.8e-05,
+ "data": {
+  "context": "In the Australian IP Report 2025, the “International applicants” section discusses growth in Australian trade mark filings for household items in 2024, particularly filings from China, and possible links to e-commerce and online marketplaces. It also describes Chinese trade mark filing trends in the United States and IP Australia’s monitoring of random-letter marks and consumer education efforts."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2025:0057",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000156,
+  "input": 1149,
+  "model": "gpt-6-luna",
+  "output": 83,
+  "reasoning": 0,
+  "seconds": 1.75
+ }
+}

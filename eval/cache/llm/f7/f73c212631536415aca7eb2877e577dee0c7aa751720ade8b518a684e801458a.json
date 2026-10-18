@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000847,
+ "data": {
+  "reason": "Both answers accurately capture the findings regarding collaboration and patenting. Answer B is slightly better because it directly addresses the second part of the question ('who do they collaborate with?') using quotes that explicitly reference partner categories like supply chains, universities, and research institutions, whereas Answer A claims the evidence does not provide partner organisation categories.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-compare-6:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001693,
+  "input": 1887,
+  "model": "gemini-3.8-flash",
+  "output": 74,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

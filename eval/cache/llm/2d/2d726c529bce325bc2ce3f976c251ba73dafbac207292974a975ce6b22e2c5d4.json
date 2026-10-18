@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000193,
+ "data": {
+  "queries": [
+   "driverless trucks mine sites controversy",
+   "autonomous vehicles mining employment impact"
+  ],
+  "standalone_question": "Why are driverless trucks at mine sites controversial?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "erp04-3",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000193,
+  "input": 235,
+  "model": "gemini-3.5-flash-lite",
+  "output": 49,
+  "reasoning": 0,
+  "seconds": 0.82
+ }
+}

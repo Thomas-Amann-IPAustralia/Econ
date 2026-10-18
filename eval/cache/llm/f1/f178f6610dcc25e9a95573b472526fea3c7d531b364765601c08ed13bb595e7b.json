@@ -1,0 +1,24 @@
+{
+ "cost_usd": 4.6e-05,
+ "data": {
+  "queries": [
+   "Raising the Bar reforms Australian patent scope breadth measurement claims"
+  ],
+  "standalone_question": "How did researchers measure whether Australian patents became narrower after the Raising the Bar reforms?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-methods-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 9.3e-05,
+  "input": 288,
+  "model": "gpt-6-luna",
+  "output": 129,
+  "reasoning": 83,
+  "seconds": 2.25
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In the 2024 IP Australia Economic Research Paper 16, *Computer Implemented Inventions: Patent Trends at IP Australia, EPO and USPTO*, this passage discusses Figure 4’s trends in computer-implemented invention (CII) application shares at IP Australia, the EPO and the USPTO from 2001 to 2020, including applications predicted likely to face a patentable-subject-matter objection."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp16-cii-patent-trends:0026",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000164,
+  "input": 1154,
+  "model": "gpt-6-luna",
+  "output": 98,
+  "reasoning": 0,
+  "seconds": 1.51
+ }
+}

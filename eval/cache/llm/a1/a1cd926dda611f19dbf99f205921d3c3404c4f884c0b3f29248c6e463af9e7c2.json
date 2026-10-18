@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000349,
+ "data": {
+  "queries": [
+   "trade marks as a leading indicator of the business cycle",
+   "trade mark applications predicting gross domestic product growth"
+  ],
+  "standalone_question": "How much does a rise in trade mark filings predict about GDP growth?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "note-tm-1",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000349,
+  "input": 664,
+  "model": "gemini-3.5-flash-lite",
+  "output": 60,
+  "reasoning": 0,
+  "seconds": 0.87
+ }
+}

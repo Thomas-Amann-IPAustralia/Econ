@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.3e-05,
+ "data": {
+  "context": "In the 2024 *Computer Implemented Inventions* report, this section presents Table 12’s difference-in-differences estimates of past IP Australia CII applicants’ likelihood of filing subsequent CII applications, including likely-adverse applications, before and after 2014. It compares 2001–2020 and 2010–2019 samples with non-CII applicants."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp16-cii-patent-trends:0075",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000166,
+  "input": 1214,
+  "model": "gpt-6-luna",
+  "output": 90,
+  "reasoning": 0,
+  "seconds": 1.49
+ }
+}

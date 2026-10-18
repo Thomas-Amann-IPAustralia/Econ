@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001537,
+ "data": {
+  "reason": "Both answers are very well-structured and thoroughly supported by quotes. Answer A is slightly better because it includes notable specific details from the reports that Answer B omits, such as the variation in women's participation across specific technology fields (e.g. biotechnology, pharmaceuticals), suggested contributing factors to the gap, and findings regarding first contact versus repeat patenting.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-synthesis-6:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.003073,
+  "input": 3687,
+  "model": "gemini-3.8-flash",
+  "output": 82,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

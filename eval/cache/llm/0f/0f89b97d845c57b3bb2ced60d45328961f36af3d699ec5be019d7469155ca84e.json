@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.6e-05,
+ "data": {
+  "context": "In the 2018 Australian Intellectual Property Report section “Patent productivity of collaborative businesses,” this passage describes a work-in-progress Swinburne study using ARC Linkage and ABS business data to examine how public research funding relates to patenting by Australian business recipients of collaborative grants, including a lag before patent outputs."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2018:0028",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000131,
+  "input": 938,
+  "model": "gpt-6-luna",
+  "output": 74,
+  "reasoning": 0,
+  "seconds": 1.75
+ }
+}

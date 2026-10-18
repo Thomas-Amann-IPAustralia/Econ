@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.000128,
+ "data": {
+  "queries": [
+   "The decline in overseas trade mark applications in 2016 was driven by a fall in filings from X."
+  ],
+  "standalone_question": "Why did trade mark applications from overseas applicants fall in 2016?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr17-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000256,
+  "input": 763,
+  "model": "gpt-6-luna",
+  "output": 360,
+  "reasoning": 306,
+  "seconds": 3.04
+ }
+}

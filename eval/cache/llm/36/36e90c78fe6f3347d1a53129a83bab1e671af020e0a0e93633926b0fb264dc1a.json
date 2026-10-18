@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.2e-05,
+ "data": {
+  "context": "In the Australian IP Report 2026, this section examines China’s policy support for cross-border ecommerce and the spread of Chinese trade mark filings in Australia, including trends across provinces since 2021. It describes Comprehensive Pilot Zones for Cross-Border E-Commerce and concludes that rising Australian filings appear to reflect online trade expansion rather than province-specific initiatives."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0077",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000144,
+  "input": 1040,
+  "model": "gpt-6-luna",
+  "output": 81,
+  "reasoning": 0,
+  "seconds": 1.5
+ }
+}

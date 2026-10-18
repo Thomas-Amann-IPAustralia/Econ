@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8e-05,
+ "data": {
+  "context": "In the 2024 *Computer Implemented Inventions* paper, this table in the section on EPO and USPTO applicants’ later filings at IP Australia reports difference-in-differences estimates for their propensity to file subsequent patent applications at IP Australia, comparing CII with non-CII applications and examining the 2014 court decisions."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp16-cii-patent-trends:0067",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00016,
+  "input": 1204,
+  "model": "gpt-6-luna",
+  "output": 80,
+  "reasoning": 0,
+  "seconds": 1.77
+ }
+}

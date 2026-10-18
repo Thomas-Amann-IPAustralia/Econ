@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8e-05,
+ "data": {
+  "context": "In the Australian IP Report 2023, this passage appears in “Investigating the PBR economic and policy landscape,” within the plant breeder’s rights (PBR) discussion. It describes IP Australia’s research and policy initiatives on Australia’s PBR system, including economic research with Swinburne University’s Centre for Transformative Innovation and commissioned policy reports."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2023:0072",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00016,
+  "input": 1178,
+  "model": "gpt-6-luna",
+  "output": 84,
+  "reasoning": 0,
+  "seconds": 1.56
+ }
+}

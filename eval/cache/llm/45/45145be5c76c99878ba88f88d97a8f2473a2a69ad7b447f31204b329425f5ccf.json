@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000339,
+ "data": {
+  "queries": [
+   "data products and tools for researchers and businesses",
+   "IP Australia digital tools analytics platforms"
+  ],
+  "standalone_question": "What data products and tools has IP Australia built for researchers and businesses?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-synthesis-14",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000339,
+  "input": 664,
+  "model": "gemini-3.5-flash-lite",
+  "output": 56,
+  "reasoning": 0,
+  "seconds": 0.94
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001618,
+ "data": {
+  "reason": "Both answers are exceptionally well supported by their cited evidence and cover the key findings regarding AI capacity building, patenting associations, and policy implications. Answer B is superior because it incorporates specific patent statistics and specific firm innovation examples (such as Presagen's embryo selection and Photonic Detection Systems' weed detection) from the Australian patent data, providing a richer and more complete synthesis of what the publications say about Australian firms.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "multi-7:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.003236,
+  "input": 3850,
+  "model": "gemini-3.8-flash",
+  "output": 93,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

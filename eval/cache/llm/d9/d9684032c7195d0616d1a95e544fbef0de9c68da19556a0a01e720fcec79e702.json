@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000754,
+ "data": {
+  "reason": "Answer A provides much more up-to-date and directly comparable data for patent filings via the PCT, citing figures from 2024 rather than relying on outdated 2017 data as Answer B does. Both answers accurately address the Madrid system and note the lack of usage data for the Hague system.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-policy-7:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001509,
+  "input": 1642,
+  "model": "gemini-3.8-flash",
+  "output": 74,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

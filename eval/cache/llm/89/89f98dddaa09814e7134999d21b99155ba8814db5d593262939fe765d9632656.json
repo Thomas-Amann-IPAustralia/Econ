@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000337,
+ "data": {
+  "queries": [
+   "designs law and design intensity compared with other countries",
+   "market for design interviews"
+  ],
+  "standalone_question": "How can you measure how design-intensive a country or industry is?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "erp08-1",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000337,
+  "input": 664,
+  "model": "gemini-3.5-flash-lite",
+  "output": 55,
+  "reasoning": 0,
+  "seconds": 1.38
+ }
+}

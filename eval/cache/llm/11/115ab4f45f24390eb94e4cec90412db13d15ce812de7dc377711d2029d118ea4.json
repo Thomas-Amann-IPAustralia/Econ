@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.000305,
+ "data": {
+  "queries": [
+   "provisional patent applications filing statistics trends"
+  ],
+  "standalone_question": "How has the use of provisional patent applications changed over time?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-trend-5",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000305,
+  "input": 660,
+  "model": "gemini-3.5-flash-lite",
+  "output": 43,
+  "reasoning": 0,
+  "seconds": 0.79
+ }
+}

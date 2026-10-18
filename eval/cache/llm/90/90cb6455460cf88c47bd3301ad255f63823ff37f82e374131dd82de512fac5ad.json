@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.8e-05,
+ "data": {
+  "context": "In the Australian IP Report 2026, this passage highlights 2025 trends in Australian plant breeder’s rights (PBRs): applications and registrations, resident and non-resident filings, and activity in field and fruit crops."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0100",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000135,
+  "input": 794,
+  "model": "gpt-6-luna",
+  "output": 111,
+  "reasoning": 51,
+  "seconds": 1.79
+ }
+}

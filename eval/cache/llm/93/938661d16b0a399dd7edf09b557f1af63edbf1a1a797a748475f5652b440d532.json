@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000194,
+ "data": {
+  "queries": [
+   "design intensity peer countries",
+   "international design filings Australia peers"
+  ],
+  "standalone_question": "Which of Australia's peer countries lead on design intensity?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "erp08-2",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000194,
+  "input": 237,
+  "model": "gemini-3.5-flash-lite",
+  "output": 49,
+  "reasoning": 0,
+  "seconds": 1.14
+ }
+}

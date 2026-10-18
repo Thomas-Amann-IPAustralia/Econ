@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000225,
+ "data": {
+  "queries": [
+   "Swinburne study collaborative research grants patenting",
+   "collaborative research grants patent outcomes"
+  ],
+  "standalone_question": "How did the Swinburne study test whether collaborative research grants lead to more patenting?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr18-5",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000225,
+  "input": 243,
+  "model": "gemini-3.5-flash-lite",
+  "output": 61,
+  "reasoning": 0,
+  "seconds": 0.97
+ }
+}

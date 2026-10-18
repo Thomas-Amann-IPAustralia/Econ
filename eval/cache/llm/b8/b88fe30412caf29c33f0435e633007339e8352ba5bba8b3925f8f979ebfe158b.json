@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000121,
+ "data": {
+  "context": "In *Exporter responses to shocks: The role of trade marks* (2021), the “Export quantities and markup adjustment” section presents estimation equations for export prices and quantities by firm, product, destination market and fiscal year. It examines whether trade mark activity interacts with tariffs and real exchange rates in shaping Australian firms’ export quantities and prices."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp11-exporters-trade-marks:0104",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000241,
+  "input": 2006,
+  "model": "gpt-6-luna",
+  "output": 80,
+  "reasoning": 0,
+  "seconds": 1.6
+ }
+}

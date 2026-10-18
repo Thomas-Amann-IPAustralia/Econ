@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.4e-05,
+ "data": {
+  "context": "In the conclusion of *Intellectual property rights, business profitability and competition in the Australian economy* (2020), the study summarises Australian business IP rights activity from 2001–02 to 2015–16 and its findings on profitability and market concentration. It reports that IPR ownership is associated with better profitability, while IPR numbers are not significantly associated with profitability and IPRs are not found to significantly affect industry-level market concentration."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp10-ip-profitability-competition:0064",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000168,
+  "input": 1166,
+  "model": "gpt-6-luna",
+  "output": 102,
+  "reasoning": 0,
+  "seconds": 1.98
+ }
+}

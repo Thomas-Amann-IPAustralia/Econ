@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.000807,
+ "data": [
+  {
+   "grade": 3,
+   "id": "p1"
+  }
+ ],
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "judge:judge-v1:gemini-3.8-flash",
+ "schema_name": "grades",
+ "tag": "explore-trend-8",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001614,
+  "input": 767,
+  "model": "gemini-3.8-flash",
+  "output": 277,
+  "reasoning": 259,
+  "seconds": 0.0
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.000325,
+ "data": {
+  "queries": [
+   "intellectual property rights business profitability loss making firms"
+  ],
+  "standalone_question": "Do the findings on IP rights and business profitability apply to businesses that make a loss?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr20-4",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000325,
+  "input": 666,
+  "model": "gemini-3.5-flash-lite",
+  "output": 50,
+  "reasoning": 0,
+  "seconds": 0.92
+ }
+}

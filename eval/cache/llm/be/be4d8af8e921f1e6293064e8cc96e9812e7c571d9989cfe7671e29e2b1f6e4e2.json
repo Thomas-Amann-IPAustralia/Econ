@@ -1,0 +1,25 @@
+{
+ "cost_usd": 4.5e-05,
+ "data": {
+  "queries": [
+   "SME patenting share trends over time",
+   "small and medium businesses invention growth patent applications"
+  ],
+  "standalone_question": "Are smaller businesses becoming more important for invention in Australia?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "note-sc-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 9e-05,
+  "input": 671,
+  "model": "gpt-6-luna",
+  "output": 45,
+  "reasoning": 0,
+  "seconds": 1.27
+ }
+}

@@ -1,0 +1,56 @@
+{
+ "cost_usd": 0.010131,
+ "data": {
+  "answer": "**Switzerland was the standout leader** in the 2019 study’s comparison using 2011–2016 data: it scored more than one standard deviation above the sample mean on both design IP intensity and design labour intensity.[1]\n\n**Germany and the United Kingdom** were also above the sample mean on both measures.[2]\n\nFor **growth rather than existing intensity**, Denmark and Sweden were notable: although classified as followers with low intensity on both measures, they were growing rapidly on both.[3]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "Countries by design IP intensity (vertical axis) and design labour intensity (horizontal axis), 2011 and 2016"
+     },
+     {
+      "evidence": 3,
+      "quote": "Among Australia's international peers, Switzerland (CH) is a leader, scoring higher than one standard deviation above the mean on both intensity measures."
+     }
+    ],
+    "text": "In the 2019 study’s comparison using 2011–2016 data, Switzerland was a leader, scoring more than one standard deviation above the sample mean on both design IP intensity and design labour intensity."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "Germany (DE) and the United Kingdom (GB) are each above the sample mean on both measures."
+     }
+    ],
+    "text": "Germany and the United Kingdom were above the sample mean on both intensity measures."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "We identify, as well, several followers with strengthening design economies. Denmark and Sweden are examples of countries that are low in design IP intensity and low in design labour intensity also, but which are growing at a high rate on both measures."
+     }
+    ],
+    "text": "Denmark and Sweden were followers with low design IP and labour intensity but high growth on both measures."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "erp08-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.020262,
+  "input": 6991,
+  "model": "gpt-6.1-sol",
+  "output": 628,
+  "reasoning": 208,
+  "seconds": 12.25
+ }
+}

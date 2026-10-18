@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8e-05,
+ "data": {
+  "context": "In the 2014 Report on patent backlogs, inventories and pendency, section 3, this passage describes IP Australia’s patent application inventory from 2000 to 2012. It compares the proportions in stocks 1, 2 and 3, noting stock 1’s dominance, stock 2’s share in relation to examiner stock-out concerns, and a peak that coincided with fewer examiners."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp01-patent-backlogs:0013",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00016,
+  "input": 1121,
+  "model": "gpt-6-luna",
+  "output": 96,
+  "reasoning": 0,
+  "seconds": 3.03
+ }
+}

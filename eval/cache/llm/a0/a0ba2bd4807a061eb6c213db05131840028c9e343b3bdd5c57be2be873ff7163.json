@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.2e-05,
+ "data": {
+  "queries": [
+   "blockchain patent filings growth rate"
+  ],
+  "standalone_question": "How fast have blockchain patent filings been growing?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr19-5",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 4.4e-05,
+  "input": 280,
+  "model": "gpt-6-luna",
+  "output": 32,
+  "reasoning": 0,
+  "seconds": 1.06
+ }
+}

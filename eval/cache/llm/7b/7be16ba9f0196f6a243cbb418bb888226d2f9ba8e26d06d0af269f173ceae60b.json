@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.8e-05,
+ "data": {
+  "context": "In the 2021 Australian Intellectual Property Report, Chapter 7’s section on trade marks and Australian exporters examines how real exchange-rate appreciation relates to export entry and revenue for firms with trade marks. The accompanying figure notes describe estimates for long-term exporters across selected destination markets, using firm-product-market-year data and a log-linear OLS model."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2021:0062",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000137,
+  "input": 970,
+  "model": "gpt-6-luna",
+  "output": 80,
+  "reasoning": 0,
+  "seconds": 2.16
+ }
+}

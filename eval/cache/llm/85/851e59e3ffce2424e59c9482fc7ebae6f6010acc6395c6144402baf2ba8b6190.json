@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5e-05,
+ "data": {
+  "context": "In the 2024 analytic note *The structural change in patenting behaviour in Australia*, this passage closes the Significance and future research section. It describes IP Australia’s ongoing research into changes in Australian innovation and the drivers of R&D investment, focusing on the potential influence of intellectual property rights."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "note-patenting-structural-change:0008",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.0001,
+  "input": 645,
+  "model": "gpt-6-luna",
+  "output": 71,
+  "reasoning": 0,
+  "seconds": 1.44
+ }
+}

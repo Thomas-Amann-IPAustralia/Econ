@@ -1,0 +1,24 @@
+{
+ "cost_usd": 4e-05,
+ "data": {
+  "queries": [
+   "machine learning classification computer-implemented inventions application data features patent text"
+  ],
+  "standalone_question": "What information did the machine learning models use to classify applications for computer-implemented inventions?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp16-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 8e-05,
+  "input": 287,
+  "model": "gpt-6-luna",
+  "output": 103,
+  "reasoning": 55,
+  "seconds": 2.15
+ }
+}

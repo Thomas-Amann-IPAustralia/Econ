@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.6e-05,
+ "data": {
+  "context": "In the Australian IP Report 2019, Chapter 6’s endnotes support its discussion of trade mark cluttering in Australia, citing research, the Australian Government’s response to the Productivity Commission inquiry, non-use conditions for removing marks, and WIPO statistics."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2019:0054",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000192,
+  "input": 1083,
+  "model": "gpt-6-luna",
+  "output": 168,
+  "reasoning": 102,
+  "seconds": 2.0
+ }
+}

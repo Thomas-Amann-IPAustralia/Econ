@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.8e-05,
+ "data": {
+  "context": "In the *Australian IP Report 2024*, this passage in the trade mark applications and registrations section covers Australian trade mark filings and registrations in 2023, including resident and non-resident trends. It also describes quarterly application trends from 1970 to 2023 and an IP Australia study linking trade mark filings with real GDP."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2024:0063",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000156,
+  "input": 1166,
+  "model": "gpt-6-luna",
+  "output": 79,
+  "reasoning": 0,
+  "seconds": 1.48
+ }
+}

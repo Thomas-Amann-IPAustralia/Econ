@@ -1,0 +1,25 @@
+{
+ "cost_usd": 4.6e-05,
+ "data": {
+  "queries": [
+   "patenting firms collaboration likelihood business environment",
+   "types of collaboration partners patenting firms"
+  ],
+  "standalone_question": "Are firms that patent more likely to collaborate, and which organisations or partners do they collaborate with?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-compare-6",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 9.3e-05,
+  "input": 676,
+  "model": "gpt-6-luna",
+  "output": 51,
+  "reasoning": 0,
+  "seconds": 1.27
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "cost_usd": 5.3e-05,
+ "data": {
+  "queries": [
+   "trade mark filings leading indicator business cycle GDP growth",
+   "An increase in trade mark filings predicts GDP growth by X per cent over the following period."
+  ],
+  "standalone_question": "How much does an increase in trade mark filings predict GDP growth?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "note-tm-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000105,
+  "input": 763,
+  "model": "gpt-6-luna",
+  "output": 58,
+  "reasoning": 0,
+  "seconds": 1.36
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.7e-05,
+ "data": {
+  "queries": [
+   "plant breeder's rights year-to-year fluctuations applications grants volatility interpretation caution"
+  ],
+  "standalone_question": "Why should year-to-year changes in plant breeder’s rights (PBR) numbers be interpreted with caution?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr26-5",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 5.4e-05,
+  "input": 288,
+  "model": "gpt-6-luna",
+  "output": 51,
+  "reasoning": 0,
+  "seconds": 1.32
+ }
+}

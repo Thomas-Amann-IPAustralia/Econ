@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.9e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2015, section 3, “Australians filing overseas,” this passage covers Australian patent applications filed abroad in 2013, comparing use of the Patent Cooperation Treaty (PCT) with direct applications and noting 2013 changes to PCT procedures. It then discusses the 2012–2013 growth in Australian trade mark applications filed abroad."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2015:0012",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000138,
+  "input": 931,
+  "model": "gpt-6-luna",
+  "output": 90,
+  "reasoning": 0,
+  "seconds": 1.65
+ }
+}

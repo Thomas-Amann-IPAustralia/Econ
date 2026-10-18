@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.9e-05,
+ "data": {
+  "context": "In *Exporter responses to shocks: The role of trade marks* (2021), the export revenue section compares Australian SMEs’ and large firms’ revenue responses to tariffs and real exchange rates, including how trade mark activity relates to those responses. The passage presents Table 9’s marginal effects for firms with long and short export histories."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp11-exporters-trade-marks:0080",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000178,
+  "input": 1394,
+  "model": "gpt-6-luna",
+  "output": 78,
+  "reasoning": 0,
+  "seconds": 1.34
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000368,
+ "data": {
+  "queries": [
+   "country of origin filing statistics growth rate 2021",
+   "top foreign applicant countries patent trade mark filings"
+  ],
+  "standalone_question": "Which foreign countries filing IP heavily in Australia experienced the fastest growth in 2021?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr22-3",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000368,
+  "input": 668,
+  "model": "gemini-3.5-flash-lite",
+  "output": 67,
+  "reasoning": 0,
+  "seconds": 0.86
+ }
+}

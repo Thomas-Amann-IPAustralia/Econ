@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.00017,
+ "data": {
+  "queries": [
+   "venture capital innovative firms scale up",
+   "venture capital growth scaling constraints"
+  ],
+  "standalone_question": "Why might growth in venture capital not have helped all innovative firms scale up?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "note-sc-1",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00017,
+  "input": 240,
+  "model": "gemini-3.5-flash-lite",
+  "output": 39,
+  "reasoning": 0,
+  "seconds": 0.84
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000351,
+ "data": {
+  "queries": [
+   "design filings product categories COVID-19 pandemic lockdowns",
+   "registered designs classification changes during pandemic"
+  ],
+  "standalone_question": "Did COVID-19 lockdowns change the types of products for which people registered designs?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr22-4",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000351,
+  "input": 662,
+  "model": "gemini-3.5-flash-lite",
+  "output": 61,
+  "reasoning": 0,
+  "seconds": 1.0
+ }
+}

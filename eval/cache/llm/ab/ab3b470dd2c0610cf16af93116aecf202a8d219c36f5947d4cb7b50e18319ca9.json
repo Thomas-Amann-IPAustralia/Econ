@@ -1,0 +1,132 @@
+{
+ "cost_usd": 0.014912,
+ "data": {
+  "answer": "AI-related inventions are appearing in Australian patent filings both as **AI technologies themselves and as applications in other sectors**, including healthcare, productivity, energy and agriculture.[1]\n\n- **Rapid growth from a small base.** The 2022 report found that Australian filings in selected AI technologies were, on average, doubling each year. Its 2015–19 analysis covered AI algorithms and hardware accelerators, machine learning and natural language processing.[2] However, only 1,343 patent families had been filed in Australia—less than 2% of global filings in the analysis—making Australia a relatively minor destination for AI patent protection.[3]\n- **Australian-origin activity was predominantly commercial.** Australian applicants filed 156 AI patent families over 2015–19, with 86 filed in Australia. Companies accounted for 113 families, compared with 21 from universities.[4]\n- **Inventions address practical problems across sectors.** Examples reported in 2022 included Presagen’s AI for embryo selection, Seesure’s seizure detection and prediction, Photonic Detection Systems’ plant–weed discrimination to reduce herbicide use, and CSIRO’s cloud-motion prediction for solar power forecasting.[5]\n- **More recent filings show generative and image-related AI.** The 2025 report identified Canva as Australia’s second-largest domestic patent applicant, with 44 applications in 2024. Many of its new filings concerned training AI models and automatically generating and processing images; the 44 applications were not presented as an AI-only total.[6]\n\n**Interpret these figures as indicators, not a complete measure of AI innovation.** Patents are not the only protection available for AI inventions. The 2022 analysis also warned that some overseas-origin families with 2019 priority applications had not yet been filed in Australia, leaving that year’s Australian count incomplete at the time of analysis.[7]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 8,
+      "quote": "AI is not a single technology but rather encompasses a collection of interrelated technologies."
+     },
+     {
+      "evidence": 8,
+      "quote": "Australian patentees are applying key AI technologies to healthcare, productivity, energy and agriculture."
+     }
+    ],
+    "text": "AI-related patenting encompasses AI technologies themselves and their applications in healthcare, productivity, energy and agriculture."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 8,
+      "quote": "While Australian patent filings in key AI are growing from a low base they are growing at a fast rate, on average doubling each year."
+     },
+     {
+      "evidence": 8,
+      "quote": "These are (1) AI algorithms and hardware accelerators, (2) machine learning and (3) natural language processing."
+     },
+     {
+      "evidence": 1,
+      "quote": "strong growth in patent filings in Australia from 2015 to 2019."
+     }
+    ],
+    "text": "The 2022 report described Australian filings in selected AI technologies as doubling annually on average, analysing AI algorithms and hardware accelerators, machine learning and natural language processing over 2015–19."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "only 1,343 patent families have been filed in Australia, less than 2% of global filings. Based on these figures, Australia has been a relatively minor destination for AI patent protection"
+     }
+    ],
+    "text": "The analysis recorded 1,343 AI patent families filed in Australia, less than 2% of global filings, indicating a relatively minor destination for protection."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "Australian applicants filed a total of 156 patent families in AI technologies over the period 2015-19, with 86 (just over half) of these filed in Australia."
+     },
+     {
+      "evidence": 7,
+      "quote": "Companies account for 113 patent families, compared to only 21 filed by universities"
+     }
+    ],
+    "text": "Australian applicants filed 156 AI patent families in 2015–19, including 86 in Australia; companies accounted for 113 families and universities for 21."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "Presagen (3 patent families) is applying AI to advance women's medicine, including improving the selection of embryos that will lead to successful pregnancies."
+     },
+     {
+      "evidence": 6,
+      "quote": "Seesure (2 families) provides a mobile application that monitors the health of epilepsy patients and applies algorithms to detect and predict seizures."
+     },
+     {
+      "evidence": 6,
+      "quote": "Photonic Detection Systems (two families) has patented technology that mimics the human eye to distinguish plants from weeds and reduce herbicide application."
+     },
+     {
+      "evidence": 6,
+      "quote": "CSIRO has filed AI patents for machine vision algorithms to track and predict cloud motion for solar power forecasting."
+     }
+    ],
+    "text": "The 2022 examples included Presagen’s embryo selection, Seesure’s seizure prediction, Photonic Detection Systems’ weed discrimination and CSIRO’s solar forecasting."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 14,
+      "quote": "Australian design software company Canva has risen to second place, with 44 applications."
+     },
+     {
+      "evidence": 14,
+      "quote": "With a current focus on launching AI-based products, many of the company's new patent filings relate to systems and methods for training AI models and automatically generating and processing images."
+     },
+     {
+      "evidence": 14,
+      "quote": "The above rankings are based on the number of standard patent applications filed by applicants (including original and divisional applications)."
+     }
+    ],
+    "text": "The 2025 report ranked Canva second domestically with 44 applications in 2024; many new filings related to AI model training and image generation and processing, but the total was not an AI-only count."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 8,
+      "quote": "Analysing AI-related patents provides one indicator of AI's development and diffusion."
+     },
+     {
+      "evidence": 1,
+      "quote": "Patents are not the only way in which AI inventions can be protected"
+     },
+     {
+      "evidence": 1,
+      "quote": "As of the time of analysis, many patent families with a priority application filed in other jurisdictions will not yet have been filed in Australia and so these patent families are not yet reflected in Australia's value for 2019."
+     }
+    ],
+    "text": "Patent figures are an incomplete indicator of AI innovation: other protection methods exist, and the 2022 analysis warned that Australian counts for 2019 omitted some overseas-origin families not yet filed locally."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "explore-trend-11",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.029824,
+  "input": 6882,
+  "model": "gpt-6.1-sol",
+  "output": 1606,
+  "reasoning": 189,
+  "seconds": 19.86
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000347,
+ "data": {
+  "queries": [
+   "IP rights business profitability and competition",
+   "intellectual property effect on market competition and concentration"
+  ],
+  "standalone_question": "What does the research say about whether patents and other intellectual property rights reduce competition?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-evidence-4",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000347,
+  "input": 665,
+  "model": "gemini-3.5-flash-lite",
+  "output": 59,
+  "reasoning": 0,
+  "seconds": 0.88
+ }
+}

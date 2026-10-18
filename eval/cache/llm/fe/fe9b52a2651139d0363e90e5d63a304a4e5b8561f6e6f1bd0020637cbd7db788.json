@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.6e-05,
+ "data": {
+  "context": "In the 2020 IP Australia Economic Research Paper 10, *Intellectual property rights, business profitability and competition in the Australian economy*, Appendix E’s “Descriptive statistics of main variables” presents statistics for variables relating to Australian businesses’ IP rights, including IP stocks per employee and ownership of different IP rights. The data are from the ABS BLADE 2016–17 frame, with overall, between-business and within-business measures."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp10-ip-profitability-competition:0096",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000191,
+  "input": 1403,
+  "model": "gpt-6-luna",
+  "output": 101,
+  "reasoning": 0,
+  "seconds": 1.72
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In *Raising the Bar reforms: Measuring the impact on relative patent scope* (2024), this passage explains the manual assessment method used to compare the scope of Australian granted patent claims with equivalent EPO and USPTO claims. IP Australia examiners rated first claims and all claims on a five-point Likert scale for sampled patent families with Australian examination requests from 2010 to 2016."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp14-raising-the-bar:0016",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000164,
+  "input": 1184,
+  "model": "gpt-6-luna",
+  "output": 92,
+  "reasoning": 0,
+  "seconds": 1.7
+ }
+}

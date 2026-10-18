@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000103,
+ "data": {
+  "context": "In *The business environment of patenting firms in Australia* (2024), section 4.1.2 examines regression models of filed, granted and retired patent counts reported by Australian businesses in IPLORD since 2011. It describes the business characteristics considered and the pooled OLS, fixed-effects and random-effects methods used."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp15-patenting-firms:0020",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000207,
+  "input": 1204,
+  "model": "gpt-6-luna",
+  "output": 173,
+  "reasoning": 93,
+  "seconds": 3.61
+ }
+}

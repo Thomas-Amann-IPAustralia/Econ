@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000101,
+ "data": {
+  "context": "In the Australian IP Report 2023 section on women’s entry into the Australian inventor pool, this passage examines women’s participation in Australian PCT patent applications in the three years to 2022. It contrasts rising applications with at least one woman inventor with the stable share of women among Australian inventors, and discusses repeat patenting and the gender gap."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2023:0095",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000201,
+  "input": 1073,
+  "model": "gpt-6-luna",
+  "output": 187,
+  "reasoning": 102,
+  "seconds": 2.64
+ }
+}

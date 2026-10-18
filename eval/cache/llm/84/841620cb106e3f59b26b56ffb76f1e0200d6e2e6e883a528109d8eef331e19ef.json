@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.7e-05,
+ "data": {
+  "context": "In the Australian IP Report 2026 section “Livium: An Australian player in global battery innovation,” this passage introduces Melbourne-based Livium’s end-of-life lithium-ion battery recycling and a video in which CEO Simon Linge explains how the company protects its recycling methods and brand in Australia and overseas, amid EU circular-battery regulations."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0049",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000154,
+  "input": 833,
+  "model": "gpt-6-luna",
+  "output": 141,
+  "reasoning": 60,
+  "seconds": 3.47
+ }
+}

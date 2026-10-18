@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.1e-05,
+ "data": {
+  "context": "In the Australian IP Report 2026, the plant breeder’s rights (PBR) section discusses resident and non-resident application trends in Australia from 2016 to 2025. It reports that resident filings rose and non-resident filings fell in 2025, narrowing the gap, and describes the PBR system’s domestic breeding and international variety-transfer roles."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0102",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000142,
+  "input": 991,
+  "model": "gpt-6-luna",
+  "output": 86,
+  "reasoning": 0,
+  "seconds": 1.86
+ }
+}

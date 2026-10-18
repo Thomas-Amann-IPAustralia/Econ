@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.0001,
+ "data": {
+  "context": "In the Australian IP Report 2023 section “Diversity and innovation in Australia,” these notes cite research behind findings on gender and cultural diversity, foreign-born STEM workers, and women’s participation in Australian businesses’ research and patenting. They also define the primary job used in the study as the job earning at least half of a person’s annual income."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2023:0103",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.0002,
+  "input": 1100,
+  "model": "gpt-6-luna",
+  "output": 180,
+  "reasoning": 95,
+  "seconds": 3.6
+ }
+}

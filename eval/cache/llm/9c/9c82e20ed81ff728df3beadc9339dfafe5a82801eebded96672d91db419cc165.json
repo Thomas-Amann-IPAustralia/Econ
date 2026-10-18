@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000234,
+ "data": {
+  "queries": [
+   "design applications lockdown impact",
+   "registered designs product categories covid",
+   "Australian IP Report design filings"
+  ],
+  "standalone_question": "Did COVID-19 lockdowns change the types of products for which people registered designs in Australia?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr22-4",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000234,
+  "input": 237,
+  "model": "gemini-3.5-flash-lite",
+  "output": 65,
+  "reasoning": 0,
+  "seconds": 1.17
+ }
+}

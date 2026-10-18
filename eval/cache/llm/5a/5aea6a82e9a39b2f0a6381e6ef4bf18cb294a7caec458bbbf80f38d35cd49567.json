@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.1e-05,
+ "data": {
+  "context": "In the 2017 Australian Intellectual Property Report, the “Australian network of collaboration” section of the university-industry collaboration chapter describes Australian universities’ co-filed IP applications from 2000 to 2015. It explains how IPGOD data maps university partnerships across patents, trade marks, designs and plant breeder’s rights, and how Figure 13 depicts those collaborations."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2017:0024",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000141,
+  "input": 977,
+  "model": "gpt-6-luna",
+  "output": 87,
+  "reasoning": 0,
+  "seconds": 1.37
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000232,
+ "data": {
+  "queries": [
+   "small businesses artificial intelligence specialists",
+   "firm adoption AI hiring trends",
+   "SME artificial intelligence employment"
+  ],
+  "standalone_question": "Do small businesses that already employ AI specialists continue to increase their hiring of AI specialists?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "oce-ai-3",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000232,
+  "input": 239,
+  "model": "gemini-3.5-flash-lite",
+  "output": 64,
+  "reasoning": 0,
+  "seconds": 0.97
+ }
+}

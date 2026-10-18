@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.1e-05,
+ "data": {
+  "context": "In the 2014 Report on patent backlogs, inventories and pendency, the section on IPC Section F covers patent application inventory in mechanical engineering, lighting, heating, weapons and blasting. It describes inventory trends from 2000 to 2013, including a 2012–13 rise in stock 1 and its relation to new filings and examination requests."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp01-patent-backlogs:0032",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000142,
+  "input": 996,
+  "model": "gpt-6-luna",
+  "output": 85,
+  "reasoning": 0,
+  "seconds": 1.41
+ }
+}

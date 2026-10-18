@@ -122,6 +122,28 @@ class EmbeddingCfg(Strict):
         return self
 
 
+class Reranker(Strict):
+    hf_id: str
+    revision: str
+    params_m: float
+    licence: str
+    max_tokens: int = 512
+    onnx_file: str = "onnx/model.onnx"
+    onnx_sha256: str | None = None
+
+
+class RerankingCfg(Strict):
+    candidates: dict[str, Reranker] = {}
+    adopted: str | None = None  # None: no reranker; the first stage's order is the ranking
+    depth: int = 50  # first-stage candidates the reranker reorders
+
+    @model_validator(mode="after")
+    def _adopted_known(self) -> RerankingCfg:
+        if self.adopted is not None and self.adopted not in self.candidates:
+            raise ValueError(f"reranking.adopted {self.adopted!r} is not a candidate")
+        return self
+
+
 class RetrievalCfg(Strict):
     lane_depth: int = 100
     fusion: Literal["score", "rrf"] = "score"
@@ -129,6 +151,9 @@ class RetrievalCfg(Strict):
     rrf_k: int = 60
     context_chunks: int = 20
     per_doc_cap: int = 8
+    # Context notes (library/enrich/<name>.jsonl) put in front of each chunk's text for BM25 and the dense
+    # lane; search-only, never evidence (D-013). None indexes the chunk text alone.
+    enrichment: str | None = None
 
 
 class Pipeline(Strict):
@@ -137,6 +162,7 @@ class Pipeline(Strict):
     chunking: ChunkingCfg
     embedding: EmbeddingCfg
     retrieval: RetrievalCfg = RetrievalCfg()
+    reranking: RerankingCfg = RerankingCfg()
 
 
 # --- service -------------------------------------------------------------------------------------
@@ -163,7 +189,8 @@ class LlmCfg(Strict):
     providers: list[Provider]
     prices_per_mtok: dict[str, tuple[float, float, float]]
     daily_budget_usd: float
-    max_output_tokens: int = 3000
+    max_output_tokens: int = 3000  # includes reasoning (thinking) tokens on both providers
+    plan_max_output_tokens: int = 1500
     timeout_seconds: float = 90
     query_planning: bool = True
 
@@ -180,6 +207,9 @@ class AnswerCfg(Strict):
     prompt: str
     plan_prompt: str
     max_queries: int = 4
+    # Search the standalone question as well as the plan's queries (D-013), so a plan that misses can't
+    # take the question's own words out of the search.
+    plan_keeps_question: bool = False
     min_quote_words: int = 5
     quote_claim_ratio: float = 0.5
     max_quote_words: int = 80

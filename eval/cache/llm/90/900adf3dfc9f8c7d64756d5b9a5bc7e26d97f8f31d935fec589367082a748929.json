@@ -1,0 +1,24 @@
+{
+ "cost_usd": 8.6e-05,
+ "data": {
+  "queries": [
+   "Design applications grew by X per cent in 2018, compared with average annual growth of Y per cent over the previous decade."
+  ],
+  "standalone_question": "How did growth in design applications in 2018 compare with growth over the previous decade?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr19-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000171,
+  "input": 765,
+  "model": "gpt-6-luna",
+  "output": 190,
+  "reasoning": 127,
+  "seconds": 2.46
+ }
+}

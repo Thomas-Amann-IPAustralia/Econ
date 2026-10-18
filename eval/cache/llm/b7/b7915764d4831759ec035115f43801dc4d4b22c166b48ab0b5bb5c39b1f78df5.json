@@ -1,0 +1,21 @@
+{
+ "cost_usd": 4.7e-05,
+ "data": {
+  "context": "In the copyright section of the *Australian IP Report 2024*, this passage lists material protected by third-party copyright and states the Commonwealth of Australia’s copyright notice for 2024."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2024:0000",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 9.4e-05,
+  "input": 691,
+  "model": "gpt-6-luna",
+  "output": 49,
+  "reasoning": 0,
+  "seconds": 1.47
+ }
+}

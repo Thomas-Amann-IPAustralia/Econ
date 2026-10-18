@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.000105,
+ "data": {
+  "queries": [
+   "Following the 2014 court decisions, software patent applications in Australia [increased or decreased] by X per cent."
+  ],
+  "standalone_question": "What effect did the 2014 court decisions have on software patent applications in Australia?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-policy-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00021,
+  "input": 766,
+  "model": "gpt-6-luna",
+  "output": 267,
+  "reasoning": 207,
+  "seconds": 3.05
+ }
+}

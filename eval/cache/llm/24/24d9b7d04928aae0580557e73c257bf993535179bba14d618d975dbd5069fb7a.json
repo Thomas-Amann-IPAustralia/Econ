@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000563,
+ "data": {
+  "reason": "Answer A provides crucial context and caveats that Answer B omits, such as clarifying that the finding is based on job advertisements (recruitment activity) rather than confirmed hires, providing the relevant time frame, and contrasting the SME finding with large enterprises.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "oce-ai-3:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001126,
+  "input": 1206,
+  "model": "gemini-3.8-flash",
+  "output": 59,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

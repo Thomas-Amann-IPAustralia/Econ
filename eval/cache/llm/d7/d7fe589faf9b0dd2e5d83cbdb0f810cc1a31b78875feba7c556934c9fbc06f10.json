@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.4e-05,
+ "data": {
+  "context": "In *Exporter Responses to Shocks: The Role of Trade Marks* (2021), the export-entry robustness section examines whether rejected or cancelled trade mark applications affect firms’ entry responses to tariff and exchange-rate shocks. Table 6 compares these applications with accepted or registered applications and reports no significant interaction terms."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp11-exporters-trade-marks:0064",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000188,
+  "input": 1510,
+  "model": "gpt-6-luna",
+  "output": 73,
+  "reasoning": 0,
+  "seconds": 1.8
+ }
+}

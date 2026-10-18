@@ -1,0 +1,24 @@
+{
+ "cost_usd": 3e-05,
+ "data": {
+  "queries": [
+   "Patent Analytics Hub purpose role patent data analysis"
+  ],
+  "standalone_question": "What is the purpose of IP Australia's Patent Analytics Hub?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr16-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 6.1e-05,
+  "input": 281,
+  "model": "gpt-6-luna",
+  "output": 66,
+  "reasoning": 28,
+  "seconds": 1.41
+ }
+}

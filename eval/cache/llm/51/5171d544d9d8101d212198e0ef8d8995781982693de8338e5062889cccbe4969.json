@@ -1,0 +1,26 @@
+{
+ "cost_usd": 5.6e-05,
+ "data": {
+  "queries": [
+   "regional place names in trade marks brand strategy",
+   "trade marks regional identity consumer recognition exports",
+   "Businesses use regional place names in trade marks to signal origin and distinguish products, increasing consumer recognition and supporting sales."
+  ],
+  "standalone_question": "Why do businesses include place names, such as regions, in their brands?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr18-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000112,
+  "input": 761,
+  "model": "gpt-6-luna",
+  "output": 71,
+  "reasoning": 0,
+  "seconds": 1.37
+ }
+}

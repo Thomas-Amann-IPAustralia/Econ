@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "context": "In the Introduction of the Australian Intellectual Property Report 2022, this passage describes how the pandemic reshaped Australian work and social life and related changes in online content use, business digitisation, and 2021 patent and trade mark applications. It also previews the report’s analysis of AI, IP-system reforms, SME growth after filing IP rights, and IPGOD data."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2022:0004",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000158,
+  "input": 1147,
+  "model": "gpt-6-luna",
+  "output": 87,
+  "reasoning": 0,
+  "seconds": 2.48
+ }
+}

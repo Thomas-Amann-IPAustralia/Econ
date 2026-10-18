@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.7e-05,
+ "data": {
+  "context": "In *Drivers of AI investment* (2023), section 4.6, the passage describes regression analysis of company AI hiring: an OLS linear probability model predicts whether a company posted an AI-hiring ad, with probit results noted as qualitatively similar. It cautions that Australian headquarters, operating across multiple locations, and SME status are correlated."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "oce-ai-investment:0049",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000194,
+  "input": 1188,
+  "model": "gpt-6-luna",
+  "output": 150,
+  "reasoning": 64,
+  "seconds": 1.96
+ }
+}

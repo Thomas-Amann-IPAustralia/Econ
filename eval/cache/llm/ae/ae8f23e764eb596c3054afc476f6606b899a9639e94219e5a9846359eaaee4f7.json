@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.000325,
+ "data": {
+  "queries": [
+   "trade mark applications filing statistics 2015"
+  ],
+  "standalone_question": "How many trade mark applications did IP Australia receive in 2015?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr16-1",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000325,
+  "input": 666,
+  "model": "gemini-3.5-flash-lite",
+  "output": 50,
+  "reasoning": 0,
+  "seconds": 0.95
+ }
+}

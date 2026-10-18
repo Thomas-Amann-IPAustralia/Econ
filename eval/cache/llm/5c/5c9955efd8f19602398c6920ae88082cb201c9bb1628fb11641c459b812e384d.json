@@ -1,0 +1,24 @@
+{
+ "cost_usd": 6.8e-05,
+ "data": {
+  "queries": [
+   "The Locarno Classification groups industrial designs into classes and subclasses for filing and searching design registrations."
+  ],
+  "standalone_question": "What is the Locarno Classification used for?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp08-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000135,
+  "input": 759,
+  "model": "gpt-6-luna",
+  "output": 119,
+  "reasoning": 71,
+  "seconds": 1.93
+ }
+}

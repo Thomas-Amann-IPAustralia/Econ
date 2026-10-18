@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001187,
+ "data": {
+  "reason": "Answer B is much more informative and detailed regarding the specific machine learning approaches, algorithms, and techniques (such as multilayer perceptrons, word2vec embeddings, and specific tree-based classifiers) used across IP Australia's research projects. Answer A provides fewer details on the models themselves and includes an applicant matching application that is less focused on research models.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-methods-2:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002375,
+  "input": 2767,
+  "model": "gemini-3.8-flash",
+  "output": 80,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

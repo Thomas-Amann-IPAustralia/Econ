@@ -1,0 +1,26 @@
+{
+ "cost_usd": 5.3e-05,
+ "data": {
+  "queries": [
+   "data sources administrative records business survey patent data",
+   "IP rights business profitability competition data sources",
+   "IP Australia's economic research draws on X, including administrative records, business surveys and patent data."
+  ],
+  "standalone_question": "What data sources does IP Australia's economic research rely on?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-methods-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000107,
+  "input": 760,
+  "model": "gpt-6-luna",
+  "output": 63,
+  "reasoning": 0,
+  "seconds": 1.56
+ }
+}

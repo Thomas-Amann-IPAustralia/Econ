@@ -1,0 +1,73 @@
+{
+ "cost_usd": 0.010081,
+ "data": {
+  "answer": "Year-to-year swings in plant breeder’s rights (PBR) numbers can reflect small filing volumes and administrative timing, rather than changes in underlying breeding investment.[1][2]\n\n- **Small numbers amplify fluctuations.** PBR volumes are modest, so relatively small changes can produce large percentage movements. Filing totals are also strongly influenced by a small number of large breeding programs.[1]\n- **Applications and registrations operate on different timelines.** Registration typically takes around 2.5 years, including substantive examination and a comparative growing trial, so registrations in one year need not reflect applications made that year.[3]\n- **Processing conditions can shift registrations between years.** The 2024 report suggests the 2023 registration increase may partly reflect resumed field examinations after COVID-19 restrictions and changes encouraging overdue applications to progress.[4]\n\nFor example, the 2026 report records applications falling 6.4% to 264 in 2025 while registrations rose from 124 to 169. It attributes the registration rebound to examination timing and pipeline dynamics—not a structural shift in filing behaviour.[2]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Compared with patents and trade marks, total PBR volumes are modest. As a result, annual movements can appear pronounced even when underlying breeding investment remains steady. Interpretation therefore requires caution: year-to-year volatility often reflects the behaviour of a small number of large breeding programs."
+     }
+    ],
+    "text": "Small PBR volumes amplify percentage movements, and a small number of large breeding programs can strongly influence annual totals even when underlying breeding investment remains steady."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "In 2025, PBR applications fell by 6.4%, from 282 in 2024 to 264 (Figure 5.1). This marks the third consecutive annual decline."
+     },
+     {
+      "evidence": 1,
+      "quote": "Registrations increased from 124 in 2024 to 169 in 2025. The rise reflects examination timing and pipeline dynamics rather than a structural shift in filing behaviour."
+     }
+    ],
+    "text": "In 2025, applications fell 6.4% to 264 while registrations increased from 124 to 169; the 2026 report attributes the registration rise to examination timing and pipeline dynamics rather than a structural shift in filing behaviour."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "Though timeframes vary by plant type, the process of registering a PBR typically takes around 2.5 years. This is because the application must pass a substantive examination process and a comparative growing trial."
+     },
+     {
+      "evidence": 18,
+      "quote": "There is little correlation between filings in a year and registrations in the same year, since most applications take more than 12 months to register."
+     }
+    ],
+    "text": "Registration typically takes around 2.5 years and requires substantive examination and a comparative growing trial, so same-year applications and registrations need not correspond."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "The significant rise in registrations Year in 2023 may reflect the resumption of field examinations after the COVID-19 pandemic, when travel restrictions made growing trials harder to organise and attend."
+     },
+     {
+      "evidence": 2,
+      "quote": "In 2023 IP Australia introduced changes that have moved customers to progress their applications toward an outcome (e.g., grant or withdrawal) where the applicant was overdue in providing a detailed description of their plant variety. The change has likely contributed to the increase in registrations."
+     }
+    ],
+    "text": "The 2024 report suggests resumed field examinations after COVID-19 restrictions and changes progressing overdue applications may have contributed to increased registrations in 2023."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "ipr26-5",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.020162,
+  "input": 5996,
+  "model": "gpt-6.1-sol",
+  "output": 817,
+  "reasoning": 0,
+  "seconds": 9.6
+ }
+}

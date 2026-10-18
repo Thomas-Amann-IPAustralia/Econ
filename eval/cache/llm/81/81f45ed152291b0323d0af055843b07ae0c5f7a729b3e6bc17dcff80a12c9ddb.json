@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.7e-05,
+ "data": {
+  "context": "In *The market for design* (2014), Section 1.2, “Scope,” describes an interview study of Australian firms on how design relates to marketing, strategy, intellectual property protection and firm performance. It examines buyers’ and sellers’ perspectives and the ways they use reputation signals to address uncertainty in design transactions."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp03-market-for-design:0006",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000154,
+  "input": 1153,
+  "model": "gpt-6-luna",
+  "output": 77,
+  "reasoning": 0,
+  "seconds": 1.66
+ }
+}

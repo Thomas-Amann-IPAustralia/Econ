@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.4e-05,
+ "data": {
+  "context": "In the 2015 report *The Australian Mining Industry*, the autonomous vehicles case study describes the IPC subclasses used to identify related patent families and compares filings by entity type; Figure 16 shows the number of families in these subclasses."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp04-mining-innovation:0042",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000168,
+  "input": 1115,
+  "model": "gpt-6-luna",
+  "output": 113,
+  "reasoning": 53,
+  "seconds": 3.09
+ }
+}

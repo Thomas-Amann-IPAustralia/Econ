@@ -1,0 +1,25 @@
+{
+ "cost_usd": 5.1e-05,
+ "data": {
+  "queries": [
+   "patent scope machine learning classifier accuracy",
+   "The best machine-learning classifier predicted patent scope with an accuracy of X per cent."
+  ],
+  "standalone_question": "How accurate was the best machine-learning classifier of patent scope?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp14-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000103,
+  "input": 761,
+  "model": "gpt-6-luna",
+  "output": 53,
+  "reasoning": 0,
+  "seconds": 2.0
+ }
+}

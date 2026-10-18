@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.1e-05,
+ "data": {
+  "context": "In the Australian IP Report 2023 section “Diversity underpins innovation in Australia,” this passage summarises IP Australia’s study of gender and cultural diversity in Australian businesses, including migrant participation in leadership and STEM, research intensity, and women’s participation and conversion of R&D into patents."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2023:0102",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000161,
+  "input": 841,
+  "model": "gpt-6-luna",
+  "output": 154,
+  "reasoning": 82,
+  "seconds": 1.95
+ }
+}

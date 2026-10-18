@@ -1,0 +1,24 @@
+{
+ "cost_usd": 4.8e-05,
+ "data": {
+  "queries": [
+   "computer-implemented invention patent outcomes IP Australia EPO USPTO"
+  ],
+  "standalone_question": "How do outcomes for computer-implemented invention patents at IP Australia compare with those at the European Patent Office and the United States Patent and Trademark Office?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-compare-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 9.7e-05,
+  "input": 680,
+  "model": "gpt-6-luna",
+  "output": 58,
+  "reasoning": 0,
+  "seconds": 1.47
+ }
+}

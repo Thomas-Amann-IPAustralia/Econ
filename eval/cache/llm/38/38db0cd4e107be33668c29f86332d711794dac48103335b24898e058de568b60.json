@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000553,
+ "data": {
+  "reason": "Both answers accurately cite the primary historical study addressing the question. Answer B is slightly better as it directly begins with a clear 'Yes' and adds relevant context from recent reporting regarding causality caveats, while Answer A is also strong and concise.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "ipr25-3:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001105,
+  "input": 1189,
+  "model": "gemini-3.8-flash",
+  "output": 57,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "cost_usd": 4.8e-05,
+ "data": {
+  "queries": [
+   "economic review innovation patent examination scope outcomes"
+  ],
+  "standalone_question": "What did IP Australia’s economic review of the innovation patent examine?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr15-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 9.5e-05,
+  "input": 761,
+  "model": "gpt-6-luna",
+  "output": 37,
+  "reasoning": 0,
+  "seconds": 1.2
+ }
+}

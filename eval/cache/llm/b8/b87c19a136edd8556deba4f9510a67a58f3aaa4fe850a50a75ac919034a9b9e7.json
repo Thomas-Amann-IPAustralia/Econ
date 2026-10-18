@@ -1,0 +1,24 @@
+{
+ "cost_usd": 4.6e-05,
+ "data": {
+  "queries": [
+   "plant breeder's rights foreign registrants country of origin 2015"
+  ],
+  "standalone_question": "Which countries were the foreign plant breeder's rights registrants from in 2015?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr16-5",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 9.1e-05,
+  "input": 676,
+  "model": "gpt-6-luna",
+  "output": 47,
+  "reasoning": 0,
+  "seconds": 1.82
+ }
+}

@@ -1,0 +1,26 @@
+{
+ "cost_usd": 5.3e-05,
+ "data": {
+  "queries": [
+   "workforce diversity innovation business performance",
+   "diverse workforces innovation collaboration research findings",
+   "Workforce diversity is associated with X innovation outcomes among Australian businesses."
+  ],
+  "standalone_question": "How does workforce diversity relate to innovation in Australian businesses?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr23-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000105,
+  "input": 760,
+  "model": "gpt-6-luna",
+  "output": 57,
+  "reasoning": 0,
+  "seconds": 1.41
+ }
+}

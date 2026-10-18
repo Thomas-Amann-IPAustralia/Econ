@@ -1,0 +1,26 @@
+{
+ "cost_usd": 4.8e-05,
+ "data": {
+  "queries": [
+   "administrative patent trade mark design filing data sources",
+   "business survey linked firm-level tax and financial data",
+   "patent citation and international patent database sources"
+  ],
+  "standalone_question": "What data sources does IP Australia’s economic research rely on?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-methods-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 9.6e-05,
+  "input": 671,
+  "model": "gpt-6-luna",
+  "output": 57,
+  "reasoning": 0,
+  "seconds": 1.73
+ }
+}

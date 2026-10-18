@@ -1,0 +1,47 @@
+{
+ "cost_usd": 0.010078,
+ "data": {
+  "answer": "The strongest direct historical evidence is a study cited in the **2023 and 2025 Australian IP Reports**. It found that patents significantly contributed to Australia’s economic expansion between **1947 and 2010**, with a primary mechanism being the **causal effect of patents on inward foreign direct investment (FDI)**.[1]\n\nThe study used **over 150 years of Australian patenting data** drawn from IP Australia’s open data product, IPGOD.[2]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "a recent study found that patents significantly contributed to Australia's economic expansion between 1947 and 2010. A primary mechanism was the causal effect of patents on inward FDI"
+     },
+     {
+      "evidence": 5,
+      "quote": "a recent study found that patents significantly contributed to Australia's economic expansion between 1947 and 2010. A primary mechanism was the causal effect of patents on inward FDI."
+     }
+    ],
+    "text": "A study cited in the 2023 and 2025 Australian IP Reports found that patents significantly contributed to Australia’s economic expansion between 1947 and 2010, with their causal effect on inward FDI a primary mechanism."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "This study used over 150 years of data on patenting activity in Australia, taken from Australia's open data product, IPGOD."
+     }
+    ],
+    "text": "The study used over 150 years of Australian patenting data drawn from IP Australia’s open data product, IPGOD."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "ipr25-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.020156,
+  "input": 7353,
+  "model": "gpt-6.1-sol",
+  "output": 545,
+  "reasoning": 217,
+  "seconds": 8.92
+ }
+}

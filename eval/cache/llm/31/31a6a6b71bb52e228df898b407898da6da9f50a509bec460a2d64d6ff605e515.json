@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In the Discussion of IP Australia’s 2024 *Computer implemented inventions: patent trends at IP Australia, EPO and USPTO*, this passage summarises descriptive and econometric analyses of CII patenting and the impact of two 2014 court decisions. It covers patent applications filed at IP Australia, the EPO and USPTO from 2001–2020, including grant likelihood and applicants’ propensity to seek Australian protection."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp16-cii-patent-trends:0083",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000163,
+  "input": 1122,
+  "model": "gpt-6-luna",
+  "output": 101,
+  "reasoning": 0,
+  "seconds": 1.77
+ }
+}

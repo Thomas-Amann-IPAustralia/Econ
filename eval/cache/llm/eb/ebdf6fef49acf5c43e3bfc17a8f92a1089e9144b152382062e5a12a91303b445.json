@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "context": "In *The market for design* (2014), in the “Crowd Productions” example under Theme 2 on weak intellectual property and value capture, the passage describes a London- and Melbourne-based design practice and its effort to explain design’s cost and value to clients. It notes that the bespoke nature of commissions can make it difficult for design sellers to capture value from buyers."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp03-market-for-design:0030",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000159,
+  "input": 1154,
+  "model": "gpt-6-luna",
+  "output": 88,
+  "reasoning": 0,
+  "seconds": 1.75
+ }
+}

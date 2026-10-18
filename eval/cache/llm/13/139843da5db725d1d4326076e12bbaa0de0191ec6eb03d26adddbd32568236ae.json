@@ -1,0 +1,25 @@
+{
+ "cost_usd": 8.8e-05,
+ "data": {
+  "queries": [
+   "patents competition business profitability market power",
+   "trade marks designs competition profitability"
+  ],
+  "standalone_question": "What does the research say about whether patents and other intellectual property rights reduce competition?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-evidence-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000177,
+  "input": 675,
+  "model": "gpt-6-luna",
+  "output": 218,
+  "reasoning": 170,
+  "seconds": 2.71
+ }
+}

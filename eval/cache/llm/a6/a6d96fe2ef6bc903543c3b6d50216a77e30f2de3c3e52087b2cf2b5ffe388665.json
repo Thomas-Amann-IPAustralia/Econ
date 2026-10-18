@@ -1,0 +1,21 @@
+{
+ "cost_usd": 4.5e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2016, this passage is in the third-party copyright section. It gives the report’s copyright and Creative Commons licensing information and identifies material excluded from the licence, including the Commonwealth Coat of Arms, IP Australia’s logo, and staff and premises photographs."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2016:0001",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 9e-05,
+  "input": 557,
+  "model": "gpt-6-luna",
+  "output": 69,
+  "reasoning": 0,
+  "seconds": 1.58
+ }
+}

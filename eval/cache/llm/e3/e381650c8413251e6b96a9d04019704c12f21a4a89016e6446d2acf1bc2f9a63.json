@@ -1,0 +1,27 @@
+{
+ "cost_usd": 0.000372,
+ "data": {
+  "queries": [
+   "Australia innovation performance inputs outputs R&D productivity Australian IP Report",
+   "Australia patent applications filings trends international patents Australian IP Report",
+   "Australian firms innovation productivity IP rights economic research",
+   "Australia university industry collaboration research commercialisation innovation"
+  ],
+  "standalone_question": "Do IP Australia’s Office of the Chief Economist publications (Australian IP Reports 2015–2026 and related economic research papers) contain evidence that supports or contradicts the WIPO Global Innovation Index 2026 findings about Australia pasted above, including its ranking, innovation inputs and outputs, IP filings, productivity, and innovation strengths or weaknesses?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "owner-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000744,
+  "input": 6063,
+  "model": "gpt-6-luna",
+  "output": 276,
+  "reasoning": 149,
+  "seconds": 3.51
+ }
+}

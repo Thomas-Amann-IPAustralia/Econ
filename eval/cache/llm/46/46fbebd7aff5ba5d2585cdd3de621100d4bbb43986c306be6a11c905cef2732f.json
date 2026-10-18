@@ -1,0 +1,55 @@
+{
+ "cost_usd": 0.012852,
+ "data": {
+  "answer": "The clearest documented area where Australia was falling behind comparable countries is **design capability and design IP generation**, based on the 2019 evidence.[1]\n\nSpecifically:\n- **Design workforce size and growth:** the 2019 research paper found that Australia’s design workforce was small compared with competitor countries, and growing more slowly than those of global peers—although it was productive.[1]\n- **Growth in design registrations:** the 2019 Australian IP Report found that Australia lagged several peers in the growth of design registrations, despite its design workforce being reasonably productive in generating design rights.[2]\n\nThis should not be read as a general finding that Australia lagged in all forms of IP-related activity. For example, the 2017 report’s analysis of university–industry collaboration using IP data found Australia’s performance reasonably good internationally, in contrast to previous studies.[3]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 19,
+      "quote": "Australia's design workforce is small, compared to those of our competitor countries, though productive (Figure 1). However, Australia lags its global peers in the rate at which its design workforce is growing, and in its rate of growth in design intellectual property (IP) generation."
+     }
+    ],
+    "text": "The 2019 research identified design capability and design IP generation as areas of relative weakness: Australia had a small but productive design workforce, with slower workforce and design IP growth than global peers."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 12,
+      "quote": "Australia's design labour force is small, relative to Australia's size as an industrial economy, although reasonably productive in generating design rights. The analysis also shows that Australia lags several of its peers both in the rate at which its design force is growing and in its rate of growth in design registrations."
+     }
+    ],
+    "text": "The 2019 Australian IP Report found slower growth in design registrations than several peers, despite a reasonably productive design workforce."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "Using IP data we take a fresh look at the collaboration story in Australia and find that in contrast to previous studies, Australia's performance is reasonably good when compared to other countries."
+     }
+    ],
+    "text": "The findings do not imply a general lag: the 2017 report’s IP-data analysis found reasonably good international performance in university–industry collaboration, contrary to previous studies."
+   }
+  ],
+  "coverage": "partial",
+  "gaps": [
+   "The supplied passages do not establish whether the design-sector gaps identified in 2019 persist.",
+   "They do not identify comparable international shortfalls in Australia’s use of patents, trade marks or plant breeder’s rights."
+  ]
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "explore-strategy-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.025704,
+  "input": 7642,
+  "model": "gpt-6.1-sol",
+  "output": 1042,
+  "reasoning": 432,
+  "seconds": 17.2
+ }
+}

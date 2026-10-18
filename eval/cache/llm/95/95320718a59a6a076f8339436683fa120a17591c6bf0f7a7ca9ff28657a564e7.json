@@ -1,0 +1,125 @@
+{
+ "cost_usd": 0.014662,
+ "data": {
+  "answer": "**Plant breeder’s rights (PBR) applications have declined for three consecutive years, but annual movements are volatile.** The latest report records 264 applications in 2025, down 6.4 per cent from 282 in 2024.[1]\n\n- **Longer-term pattern:** applications grew from 359 in 2015 to 387 in 2016, before becoming more volatile; they fell to 281 in 2019. The reports caution that small application volumes and relatively few applicants can produce large percentage changes.[2]\n- **Residents recovered in 2025:** resident applications rose 17.0 per cent, from 100 to 117, while non-resident applications fell 19.2 per cent, from 182 to 147. Non-residents still accounted for the majority. The 2026 report interprets the narrowing gap as likely volatility rather than a structural change in international engagement.[3]\n- **Overseas sources remain important:** the US has been the leading overseas source for over a decade, except in 2021 when the Netherlands led. In 2025, applications from most major overseas sources fell; France was the exception, with five additional filings.[4]\n- **The crop mix is changing:** ornamentals have historically dominated, but by 2024 they ranked third, behind fruit crops and non-cereal field crops. In 2025, field crop activity strengthened—cereals recorded their strongest filings since 2018—partially offsetting easing fruit crop filings.[5][6]\n\n**Interpretation:** falling applications should not automatically be read as falling breeding investment: the 2026 report notes that pronounced annual movements can occur even when underlying investment remains steady.[7] Applications also differ from registrations: registrations increased from 124 in 2024 to 169 in 2025, reflecting examination timing and pipeline dynamics rather than a structural shift in filing behaviour.[8]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 8,
+      "quote": "In 2025, PBR applications fell by 6.4%, from 282 in 2024 to 264 (Figure 5.1). This marks the third consecutive annual decline."
+     }
+    ],
+    "text": "PBR applications fell for a third consecutive year in 2025, down 6.4 per cent from 282 to 264."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "The number of PBR applications received in Australia increased by eight per cent in 2016, from 359 to 387 applications."
+     },
+     {
+      "evidence": 4,
+      "quote": "In 2019, a total of 281 PBR applications were filed at IP Australia, down 103 applications, or 27 per cent from their level in 2018."
+     },
+     {
+      "evidence": 4,
+      "quote": "The low numbers of applications for PBRs generally mean small annual fluctuations result in large proportional rates of change. Further, application levels reflect the decision-making of a small number of applicants, so these changes are to be expected."
+     }
+    ],
+    "text": "Applications rose from 359 in 2015 to 387 in 2016, subsequently became volatile and fell to 281 in 2019; small volumes and few applicants amplify percentage changes."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 19,
+      "quote": "Resident filings increased 17.0% from 100 to 117."
+     },
+     {
+      "evidence": 19,
+      "quote": "Non-resident filings declined 19.2% from 182 to 147, following a sharp increase in 2024."
+     },
+     {
+      "evidence": 19,
+      "quote": "Non-resident applicants continue to account for the majority of filings, though the gap with residents has narrowed compared to recent years"
+     },
+     {
+      "evidence": 19,
+      "quote": "The narrowing gap between resident and non-resident filings in 2025 likely reflects volatility rather than a structural shift in international engagement."
+     }
+    ],
+    "text": "In 2025, resident filings rose 17.0 per cent from 100 to 117 and non-resident filings fell 19.2 per cent from 182 to 147; non-residents remained the majority, and the narrowing gap likely reflects volatility rather than structural change."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 14,
+      "quote": "The US has been the lead overseas source of filings for over a decade, with the exception of 2021 when the Netherlands led for PBR filings."
+     },
+     {
+      "evidence": 14,
+      "quote": "Applications from most major origin locations fell, including the United States, the Netherlands, New Zealand, the United Kingdom, and Germany. The only exception was France, which saw 5 additional filings."
+     }
+    ],
+    "text": "The US has led overseas filings for over a decade except in 2021; most major origins declined in 2025, while France added five filings."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 7,
+      "quote": "Most PBR applications in 2024 were for new varieties of fruit crops (32.4% of total filings), non-cereal field crops (20.2%) and ornamentals (17.4%)"
+     },
+     {
+      "evidence": 7,
+      "quote": "Ornamentals have historically been the dominant filing class for new PBRs."
+     }
+    ],
+    "text": "Historically dominant ornamentals ranked third in 2024, behind fruit crops and non-cereal field crops."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 10,
+      "quote": "Field crop activity strengthened - cereal crops recorded their strongest filings since 2018 - partially offsetting easing in fruit crop filings."
+     }
+    ],
+    "text": "In 2025, stronger field crop activity, including the strongest cereal filings since 2018, partially offset easing fruit crop filings."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 8,
+      "quote": "Compared with patents and trade marks, total PBR volumes are modest. As a result, annual movements can appear pronounced even when underlying breeding investment remains steady."
+     }
+    ],
+    "text": "Large annual movements in PBR applications need not indicate changes in underlying breeding investment."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 8,
+      "quote": "Registrations increased from 124 in 2024 to 169 in 2025. The rise reflects examination timing and pipeline dynamics rather than a structural shift in filing behaviour."
+     }
+    ],
+    "text": "Registrations rose from 124 in 2024 to 169 in 2025, reflecting examination timing and pipeline dynamics rather than a structural change in filing behaviour."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "explore-trend-6",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.029324,
+  "input": 6032,
+  "model": "gpt-6.1-sol",
+  "output": 1726,
+  "reasoning": 185,
+  "seconds": 20.34
+ }
+}

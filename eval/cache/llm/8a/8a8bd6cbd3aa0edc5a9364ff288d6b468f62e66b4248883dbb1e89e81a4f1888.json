@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.8e-05,
+ "data": {
+  "context": "In *The business environment of patenting firms in Australia* (2024), Table 8 in the trends and empirical results section reports pooled regressions on Australian firms’ probability of turnover-based high growth. It relates achieving at least 20% annualised turnover growth over three consecutive financial years to whether a firm filed, was granted, or retired a patent three years earlier, alongside other covariates."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp15-patenting-firms:0043",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000177,
+  "input": 1308,
+  "model": "gpt-6-luna",
+  "output": 93,
+  "reasoning": 0,
+  "seconds": 1.54
+ }
+}

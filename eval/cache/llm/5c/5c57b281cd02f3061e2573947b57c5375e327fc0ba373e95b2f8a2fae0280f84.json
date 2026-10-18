@@ -1,0 +1,24 @@
+{
+ "cost_usd": 5.8e-05,
+ "data": {
+  "queries": [
+   "design application growth in 2018 compared with previous decade"
+  ],
+  "standalone_question": "How did growth in design applications in 2018 compare with the previous decade?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr19-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000115,
+  "input": 676,
+  "model": "gpt-6-luna",
+  "output": 95,
+  "reasoning": 49,
+  "seconds": 1.87
+ }
+}

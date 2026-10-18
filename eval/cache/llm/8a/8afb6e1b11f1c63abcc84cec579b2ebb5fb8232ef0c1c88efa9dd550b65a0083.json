@@ -1,0 +1,43 @@
+{
+ "cost_usd": 0.008092,
+ "data": {
+  "answer": "Exporters with one recent trade mark filing gain **more than twice as much export revenue** from a tariff cut: the 2021 study estimates a **71 per cent revenue increase**, compared with **32 per cent** for firms with no recent trade mark activity, following a 10 per cent tariff reduction.[1]\n\nThese are model estimates: the revenue result offered only partial statistical support, with the trade mark–tariff interaction significant at the 10 per cent level.[2]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "after a firm has increased its recent trade marks in a destination market from zero to one, a 10% tariff reduction will induce a 71% increase in export revenue, more than double the 32% increase in revenue for the firm with no recent trade mark activity."
+     }
+    ],
+    "text": "The 2021 study estimates that a 10 per cent tariff reduction increases export revenue by 71 per cent after one recent destination-market trade mark filing, compared with 32 per cent without recent filings—more than twice the gain."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "The interaction term between tariffs and trade marks is negative and significant at the 10 per cent level, offering partial support for Hypothesis 1b."
+     }
+    ],
+    "text": "The model's revenue result offered partial statistical support, with the trade mark–tariff interaction significant at the 10 per cent level."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "erp11-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.016184,
+  "input": 5232,
+  "model": "gpt-6.1-sol",
+  "output": 572,
+  "reasoning": 233,
+  "seconds": 8.39
+ }
+}

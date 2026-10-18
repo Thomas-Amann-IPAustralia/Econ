@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.9e-05,
+ "data": {
+  "context": "In the Endnotes of *The structural change in patenting behaviour in Australia* (2024), this passage lists sources cited in the note and explains that growth in firms in two ANZIC industries is not reflected in the increase in large patent-holding firms; “Figure” refers to a figure in the note."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "note-patenting-structural-change:0011",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000179,
+  "input": 744,
+  "model": "gpt-6-luna",
+  "output": 210,
+  "reasoning": 130,
+  "seconds": 2.6
+ }
+}

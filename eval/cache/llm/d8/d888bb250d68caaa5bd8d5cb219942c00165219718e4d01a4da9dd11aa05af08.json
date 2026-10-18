@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.5e-05,
+ "data": {
+  "queries": [
+   "innovation patent phase-out abolition reasons second-tier patent system review"
+  ],
+  "standalone_question": "What happened to Australia’s innovation patent system, and why was it changed or abolished?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "multi-8",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 5.1e-05,
+  "input": 281,
+  "model": "gpt-6-luna",
+  "output": 45,
+  "reasoning": 0,
+  "seconds": 1.52
+ }
+}

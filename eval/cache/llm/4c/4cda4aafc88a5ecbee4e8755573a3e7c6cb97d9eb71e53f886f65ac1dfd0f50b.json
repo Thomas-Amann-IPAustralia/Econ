@@ -1,0 +1,21 @@
+{
+ "cost_usd": 3.7e-05,
+ "data": {
+  "context": "Front matter of the Australian Intellectual Property Report 2015, identifying the report and listing its publication identifiers and copyright information."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2015:0000",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 7.4e-05,
+  "input": 556,
+  "model": "gpt-6-luna",
+  "output": 36,
+  "reasoning": 0,
+  "seconds": 1.66
+ }
+}

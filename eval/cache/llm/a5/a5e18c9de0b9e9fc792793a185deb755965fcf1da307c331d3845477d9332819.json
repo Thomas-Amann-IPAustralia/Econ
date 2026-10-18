@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000102,
+ "data": {
+  "context": "In the footnotes of *The business environment of patenting firms in Australia* (2024), these notes clarify the study’s international patenting comparison, collaboration-partner breadth measure, financial-year naming convention, definition of retired patents, and Business Characteristics Survey sampling and data structure."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp15-patenting-firms:0079",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000203,
+  "input": 1205,
+  "model": "gpt-6-luna",
+  "output": 165,
+  "reasoning": 95,
+  "seconds": 2.08
+ }
+}

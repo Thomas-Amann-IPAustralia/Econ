@@ -55,7 +55,7 @@ def test_openai_request_is_pinned_and_strict(monkeypatch):
     assert set(sent["headers"]) == {"Authorization"}
     assert rep.data == {"a": 1}
     assert (rep.usage.input, rep.usage.cached_input, rep.usage.output) == (600, 400, 200)
-    assert rep.usage.cost_usd == pytest.approx((600 * 2 + 400 * 2 + 200 * 10) / 1e6)
+    assert rep.usage.cost_usd == pytest.approx((600 * 2 + 400 * 0.10 + 200 * 10) / 1e6)
 
 
 @pytest.mark.parametrize(
@@ -104,12 +104,28 @@ def test_gemini_skips_thought_parts_and_bills_thinking_as_output(monkeypatch):
     assert rep.data == {"b": 2} and rep.usage.output == 400 and rep.usage.reasoning == 300
 
 
-def test_gemini_non_stop_finish_raises(monkeypatch):
-    monkeypatch.setattr(
-        httpx, "post", Fake(200, {"candidates": [{"finishReason": "MAX_TOKENS", "content": {"parts": []}}]})
-    )
-    with pytest.raises(ProviderError, match="MAX_TOKENS"):
+def test_gemini_non_stop_finish_raises_with_the_billed_usage(monkeypatch):
+    # D-011: a truncated reply is still billed, so the error carries its usage for the meter.
+    body = {
+        "candidates": [{"finishReason": "MAX_TOKENS", "content": {"parts": []}}],
+        "usageMetadata": {"promptTokenCount": 8000, "candidatesTokenCount": 0, "thoughtsTokenCount": 3000},
+    }
+    monkeypatch.setattr(httpx, "post", Fake(200, body))
+    with pytest.raises(ProviderError, match="MAX_TOKENS") as e:
         GeminiModel(GEMINI, "k", 30).generate_json(model="gemini-3.8-flash", **ARGS)
+    assert e.value.usage.output == 3000 and e.value.usage.cost_usd > 0
+
+
+def test_openai_incomplete_reply_carries_its_usage(monkeypatch):
+    body = {
+        "status": "incomplete",
+        "incomplete_details": {"reason": "max_output_tokens"},
+        "usage": {"input_tokens": 5000, "output_tokens": 3000},
+    }
+    monkeypatch.setattr(httpx, "post", Fake(200, body))
+    with pytest.raises(ProviderError) as e:
+        OpenAIModel(OPENAI, "k", 30).generate_json(model="gpt-6.1-sol", **ARGS)
+    assert e.value.usage.output == 3000
 
 
 def test_http_errors_raise_without_leaking_the_key(monkeypatch):
@@ -126,3 +142,44 @@ def test_configured_picks_the_first_provider_with_a_key(monkeypatch):
     assert p.name == "gemini" and isinstance(m, GeminiModel)
     monkeypatch.delenv("GEMINI_API_KEY")
     assert providers.configured() is None
+
+
+class Sequence:
+    """Replies in turn: a transient failure first, then the real reply."""
+
+    def __init__(self, *replies):
+        self.replies, self.calls = list(replies), 0
+
+    def __call__(self, url, json=None, timeout=None, headers=None):
+        self.calls += 1
+        status, body = self.replies.pop(0)
+        return httpx.Response(status, json=body, request=httpx.Request("POST", url))
+
+
+OK_BODY = {
+    "status": "completed",
+    "output": [{"type": "message", "content": [{"type": "output_text", "text": '{"a": 1}'}]}],
+    "usage": {"input_tokens": 10, "output_tokens": 5},
+}
+
+
+def test_a_transient_failure_is_retried_once(monkeypatch):
+    # D-014: an answer call returned HTTP 502 and the user would have had no answer.
+    monkeypatch.setattr(providers, "RETRY_WAIT", 0)
+    seq = Sequence((502, {"error": "upstream request failed"}), (200, OK_BODY))
+    monkeypatch.setattr(httpx, "post", seq)
+    rep = OpenAIModel(OPENAI, "k", 30).generate_json(model="gpt-6.1-sol", **ARGS)
+    assert rep.data == {"a": 1} and seq.calls == 2
+
+
+def test_a_second_transient_failure_raises_and_a_client_error_is_not_retried(monkeypatch):
+    monkeypatch.setattr(providers, "RETRY_WAIT", 0)
+    seq = Sequence((503, {}), (503, {}))
+    monkeypatch.setattr(httpx, "post", seq)
+    with pytest.raises(ProviderError, match="503"):
+        OpenAIModel(OPENAI, "k", 30).generate_json(model="gpt-6.1-sol", **ARGS)
+    seq = Sequence((400, {"error": "bad request"}))
+    monkeypatch.setattr(httpx, "post", seq)
+    with pytest.raises(ProviderError, match="400"):
+        GeminiModel(GEMINI, "k", 30).generate_json(model="gemini-3.8-flash", **ARGS)
+    assert seq.calls == 1

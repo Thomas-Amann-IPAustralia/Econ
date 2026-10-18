@@ -1,0 +1,158 @@
+{
+ "cost_usd": 0.017973,
+ "data": {
+  "answer": "IP Australia’s economic research draws on **its own IP records, linked business and employee data, international IP databases and specialist research datasets**.[1][2][3][4][5][6][7][8][9]\n\n- **Australian IP administrative data:** The 2025 research identifies IP RAPID as the public source for over 100 years of application information covering patents, trade marks, designs and plant breeder’s rights.[1]\n- **Longitudinal applicant data:** IPLORD, built from IP Government Open Data (IPGOD), tracks applicants’ IP activity over time from 1997–98 onwards. Its BLADE version excludes private and international applicants without an Australian Business Number (ABN).[2]\n- **Business administrative records:** Research links IP records to the ABS’s Business Longitudinal Analysis Data Environment (BLADE). Sources include ATO business and financial records, Australian Business Registry information on location and industry, Business Activity Statements for turnover, and PAYG records for employment headcounts.[3]\n- **Surveys and employer–employee data:** ABS business, economic activity and R&D surveys supplement BLADE. Research reported in 2024 also used BLADE and the Person Level Integrated Data Asset (PLIDA), including linked employer–employee information.[4]\n- **International trade mark data:** TM-LINK consolidates trade mark applications at firm level. A 2021 exporter study used US, Canadian, EU and UK registry data, matching trade mark owners to BLADE firms through ABNs and linking them to export data.[5]\n- **Patent text and examination data:** A 2024 study used IP Australia’s IPRAPID, its claims-text API, Google Patents and Google BigQuery, alongside USPTO PatentsView and PatEx data. Missing Australian abstracts were supplemented from equivalent US or European patent-family applications.[6]\n- **International statistical databases:** Published reports also draw on WIPO IP statistics, PATSTAT and the OECD’s REGPAT database.[7]\n- **Specialist commercialisation data:** Research reported in 2024 used IPRoduct, which links patents to products using webpage-listed patent markings.[8]\n\n**Coverage and data quality vary by study.** One 2024 firm study matched up to 50 per cent of IPLORD firms to business characteristics across all its other sources. Another documented difficulties converting patent PDFs and errors in scraped claims text.[9]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 7,
+      "quote": "IP Australia data is publicly accessible on IP Refreshed Automated Product for Information and Data (IP RAPID). IP RAPID provides access to over 100 years of information on IP rights applications. The data covers the 4 forms of registrable IP rights: trade marks, patents, designs and plant breeder's rights."
+     }
+    ],
+    "text": "IP RAPID publicly provides over 100 years of application information across the four registrable IP rights."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 10,
+      "quote": "IPLORD is the annual snapshot of the stocks and flows of registrable intellectual property (IP) rights for Australian and international applicants since 1997-98 onwards. IPLORD was built from the Intellectual Property Government Open Data (IPGOD)"
+     },
+     {
+      "evidence": 10,
+      "quote": "IPLORD systematically transforms all the application information in IPGOD into derived variables to track each applicant's IP activity over time."
+     },
+     {
+      "evidence": 10,
+      "quote": "The BLADE version of IPLORD is a subset of this, but excludes private and international applicants that do not have an Australian business number (ABN)."
+     }
+    ],
+    "text": "IPLORD derives from IPGOD, tracks applicant IP activity from 1997–98 onwards, and its BLADE version excludes private and international applicants without ABNs."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 10,
+      "quote": "Linking the financial and IP information about businesses, the BLADE IPLORD dataset provides an evidence base of high granularity for IP related economic analysis"
+     },
+     {
+      "evidence": 20,
+      "quote": "BLADE includes administrative data from the Australian Taxation Office (ATO) including balance sheet information as well as data on business activity, entity type, industry and employment."
+     },
+     {
+      "evidence": 2,
+      "quote": "Indicative data items associated with a business ABN and compiled from the Australian Business Registry:\n\n» Geographical location: state and territory of main business operation.\n\n» Industry: ANZSIC 2006 industry divisions of main business activity.\n\nBusiness Activity Statement (BAS):\n\n» Firm's Turnover.\n\nPay As You Go (PAYG):\n\n» Firm's size: headcount figures."
+     }
+    ],
+    "text": "Research links IP data to BLADE and uses ATO financial records, business registry characteristics, BAS turnover and PAYG headcounts."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 10,
+      "quote": "a series of surveys conducted by the ABS in various years, such as the Business Characteristics Survey, the Economic Activity Survey, and the Survey of Research and Experimental Development, Businesses, are also available as supplements to the BLADE core."
+     },
+     {
+      "evidence": 17,
+      "quote": "using administrative micro-datasets hosted by the Australian Bureau of Statistics. These include the Business Longitudinal Analysis Data Environment (BLADE) and the Person Level Integrated Data Asset (PLIDA)."
+     },
+     {
+      "evidence": 17,
+      "quote": "Separately, IP Australia has used the ABS data linking information on employers and their employees."
+     }
+    ],
+    "text": "Research uses ABS surveys and linked administrative microdata, including BLADE, PLIDA and employer–employee information."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "We collaborated with the ABS to integrate into BLADE a large microdataset with information on firms' foreign trade mark filings and link this at the firm level to the exports data."
+     },
+     {
+      "evidence": 5,
+      "quote": "TM-LINK contains over 15 million trade mark applications consolidated at the firm level and identifies globally similar trade marks (Petrie et al., 2020). We used data from the trade mark registries of the United States Patent and Trademark Office (USPTO), Canadian Intellectual Property Office (CIPO), European Intellectual Property Office (EUIPO) and United Kingdom Intellectual Property Office (UKIPO)."
+     },
+     {
+      "evidence": 5,
+      "quote": "a concordance was constructed linking trade mark assignees in the TM-LINK database with the firms in BLADE, via their Australian Business Numbers (ABNs)."
+     }
+    ],
+    "text": "The 2021 exporter study linked firm-level TM-LINK trade mark data from US, Canadian, EU and UK registries to BLADE and export data using ABNs."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Data from IP Australia (IPA) are obtained from IPA's IPRAPID, Application Programming Interface (API) for accessing the claims text, Google Patents, and Google BigQuery's."
+     },
+     {
+      "evidence": 1,
+      "quote": "For those patents, we merged abstract data from the equivalent family application within the USPTO or EPO, with preference being given to the USPTO patent application."
+     },
+     {
+      "evidence": 8,
+      "quote": "PatentsView (https://patentsview.org/) which provide complete bibliographic and text data; USPTO (PatEx), which provides complete patent examination historical data; and Google patent databases, including Google Patents and Google BigQuery's Google Public Patent Database"
+     }
+    ],
+    "text": "A 2024 patent study combined Australian administrative and claims-text sources, Google patent databases and USPTO data, supplementing missing abstracts from equivalent foreign family applications."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "From WIPO IP Statistics Data Center (Dec. 2014 update): indicator 1 \"Total patent applications (direct and PCT national phase entry)\";"
+     },
+     {
+      "evidence": 4,
+      "quote": "Source: PATSTAT database, Autumn 2014; OECD, REGPAT database, February 2015; IP Australia calculations"
+     }
+    ],
+    "text": "Published reports use WIPO statistics, PATSTAT and OECD REGPAT."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 17,
+      "quote": "It examines commercialisation outcomes using IPRoduct, a dataset linking patents to products based on the webpage-listed patent markings."
+     }
+    ],
+    "text": "Research reported in 2024 used IPRoduct to link patents to products through webpage-listed patent markings."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "We were able to match up to 50% of firms observed in IPLORD with the business characteristics available across all the remaining data sources."
+     },
+     {
+      "evidence": 19,
+      "quote": "This means PDFs are not always convertible to TSV or Comma-Separated Values (CSV) format (formats required for machine learning)."
+     },
+     {
+      "evidence": 19,
+      "quote": "The process was far from ideal and results in claims text breaking down, instances where the text gets converted to non-English or non-sensical words, formulae and chemical structures break down into meaningless symbols and on occasion the text pulled belongs to a different patent application."
+     }
+    ],
+    "text": "Data limitations include incomplete firm matching and difficulties extracting usable patent claims text."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "explore-methods-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.035946,
+  "input": 6913,
+  "model": "gpt-6.1-sol",
+  "output": 2212,
+  "reasoning": 324,
+  "seconds": 29.68
+ }
+}

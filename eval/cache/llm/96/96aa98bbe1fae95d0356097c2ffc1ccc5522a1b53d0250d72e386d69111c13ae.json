@@ -1,0 +1,26 @@
+{
+ "cost_usd": 5.8e-05,
+ "data": {
+  "queries": [
+   "design firms difficulty capturing value from clients intellectual property",
+   "design market client relationships appropriation of design value",
+   "Design firms struggle to capture the value of their ideas because clients can use designs without paying for their full contribution."
+  ],
+  "standalone_question": "Why is it difficult for design firms to capture the value of their ideas from clients?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp03-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000115,
+  "input": 766,
+  "model": "gpt-6-luna",
+  "output": 76,
+  "reasoning": 0,
+  "seconds": 2.54
+ }
+}

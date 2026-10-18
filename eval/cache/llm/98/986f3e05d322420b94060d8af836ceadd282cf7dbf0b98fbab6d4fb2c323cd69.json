@@ -1,0 +1,24 @@
+{
+ "cost_usd": 3.1e-05,
+ "data": {
+  "queries": [
+   "2015 trade mark applications received"
+  ],
+  "standalone_question": "How many trade mark applications did IP Australia receive in 2015?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr16-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 6.2e-05,
+  "input": 285,
+  "model": "gpt-6-luna",
+  "output": 66,
+  "reasoning": 27,
+  "seconds": 1.41
+ }
+}

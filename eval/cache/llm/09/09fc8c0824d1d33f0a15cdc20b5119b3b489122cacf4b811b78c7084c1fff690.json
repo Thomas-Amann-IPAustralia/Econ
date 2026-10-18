@@ -1,0 +1,25 @@
+{
+ "cost_usd": 5.3e-05,
+ "data": {
+  "queries": [
+   "most frequently occurring place names in trade marks",
+   "The place name appearing most often in trade marks is [place name], based on the number of trade mark applications."
+  ],
+  "standalone_question": "Which place name appears most often in Australian trade marks?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr18-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000106,
+  "input": 760,
+  "model": "gpt-6-luna",
+  "output": 60,
+  "reasoning": 0,
+  "seconds": 1.52
+ }
+}

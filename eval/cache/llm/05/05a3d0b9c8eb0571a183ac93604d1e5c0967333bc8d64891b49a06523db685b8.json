@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.7e-05,
+ "data": {
+  "context": "In the “Patents” section of the Australian Intellectual Property Report 2020, this passage explains standard patent rights and protection in Australia, then describes application routes and trends and patent examinations and grants, particularly in 2019 and over 2010–19. The PCT refers to the Patent Cooperation Treaty, a route for filing in multiple countries."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2020:0006",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000153,
+  "input": 1115,
+  "model": "gpt-6-luna",
+  "output": 83,
+  "reasoning": 0,
+  "seconds": 1.62
+ }
+}

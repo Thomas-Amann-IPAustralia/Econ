@@ -1,0 +1,70 @@
+{
+ "cost_usd": 0.011818,
+ "data": {
+  "answer": "**Start-ups that file for at least one IP right in their first year are twice as likely to achieve high employment growth as peers with no rights in that year**, according to the 2022 report.[1]\n\nFor Australian SMEs more broadly, the 2025 report says that after filing for an IP right, they are **16 per cent more likely** to experience high employment growth than peers without recent filings. This finding concerns filing generally, rather than specifically the first filing.[2] The underlying SME study defined high growth as at least 20 per cent annual employment growth over three consecutive years.[3]\n\nThe latest evidence, in the 2026 report, also finds that a firm’s **first patent or trade mark grant** coincides with sustained increases in income and productivity, usually as it moves from experimentation to market activity. This finding concerns grants rather than filings, and firms generally rather than small businesses alone.[4]\n\nThese associations should not be read as a guarantee that obtaining IP causes growth. The 2026 analysis explicitly does not establish definitive causation: firms already expecting growth may be more inclined to invest in IP.[5]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Focusing just on startups, those that file for at least one IP right in their first year are twice as likely to achieve high growth than their peers with no rights in their first year."
+     }
+    ],
+    "text": "The 2022 report finds that start-ups filing at least one IP right in their first year are twice as likely to achieve high employment growth as peers with no rights in that year."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "After filing for an IP right, Australian SMEs are 16% more likely to experience high employment growth than their peers without recent filings (Zhang, 2021)."
+     }
+    ],
+    "text": "The 2025 report says Australian SMEs are 16 per cent more likely to experience high employment growth after filing, compared with peers without recent filings; this is not a first-filing-specific estimate."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "High-growth SMEs were identified as those that achieve at least 20% annual growth in employment over 3 consecutive years."
+     }
+    ],
+    "text": "The underlying SME study defined high growth as at least 20 per cent annual employment growth over three consecutive years."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 20,
+      "quote": "A firm's first patent or trade mark grant coincides with sustained increases in income and productivity, usually as the firm shifts from experimentation to market activity."
+     }
+    ],
+    "text": "The 2026 report associates firms’ first patent or trade mark grants with sustained income and productivity increases as they move towards market activity; this concerns grants and firms generally."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 17,
+      "quote": "Because firms make the decision whether or not to seek IP rights, the results suggest dynamic associations, not definitive causal effects. Firms expecting growth may have stronger incentives to invest in IP, as fixed costs can be spread across expanding sales."
+     }
+    ],
+    "text": "The 2026 analysis does not establish definitive causation, because firms expecting growth may be more likely to invest in IP."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "explore-synthesis-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.023636,
+  "input": 6483,
+  "model": "gpt-6.1-sol",
+  "output": 1067,
+  "reasoning": 297,
+  "seconds": 16.0
+ }
+}

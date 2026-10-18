@@ -1,0 +1,24 @@
+{
+ "cost_usd": 4.3e-05,
+ "data": {
+  "queries": [
+   "plant breeder's rights business economic contribution"
+  ],
+  "standalone_question": "What is the economic contribution of businesses that use plant breeder’s rights?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-synthesis-13",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 8.6e-05,
+  "input": 674,
+  "model": "gpt-6-luna",
+  "output": 38,
+  "reasoning": 0,
+  "seconds": 1.46
+ }
+}

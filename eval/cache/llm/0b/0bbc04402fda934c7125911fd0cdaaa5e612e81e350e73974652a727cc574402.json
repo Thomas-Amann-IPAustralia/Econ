@@ -1,0 +1,24 @@
+{
+ "cost_usd": 4.1e-05,
+ "data": {
+  "queries": [
+   "innovation patent applications decline abolition"
+  ],
+  "standalone_question": "What happened to the innovation patent, and why?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "multi-8",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 8.3e-05,
+  "input": 670,
+  "model": "gpt-6-luna",
+  "output": 32,
+  "reasoning": 0,
+  "seconds": 1.29
+ }
+}

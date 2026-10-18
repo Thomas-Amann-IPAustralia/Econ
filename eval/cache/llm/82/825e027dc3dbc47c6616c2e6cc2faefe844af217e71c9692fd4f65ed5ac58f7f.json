@@ -1,0 +1,25 @@
+{
+ "cost_usd": 5.8e-05,
+ "data": {
+  "queries": [
+   "women inventors gender gap patent applications",
+   "diversity in innovation inventors collaboration outcomes"
+  ],
+  "standalone_question": "What do the reports say about the gender gap in patenting and diversity in innovation?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-synthesis-6",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000117,
+  "input": 677,
+  "model": "gpt-6-luna",
+  "output": 98,
+  "reasoning": 45,
+  "seconds": 1.73
+ }
+}

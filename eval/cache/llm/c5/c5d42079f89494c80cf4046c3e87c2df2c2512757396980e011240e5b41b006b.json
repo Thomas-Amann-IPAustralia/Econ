@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.3e-05,
+ "data": {
+  "context": "In the introduction to the Australian Intellectual Property Report 2017, this passage explains IP Australia’s role in administering patents, trade marks, designs and plant breeder’s rights, and its purpose in publishing the report and releasing the 2017 IP Government Open Data. It notes that copyright is administered separately and is not covered."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2017:0006",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000126,
+  "input": 884,
+  "model": "gpt-6-luna",
+  "output": 76,
+  "reasoning": 0,
+  "seconds": 1.68
+ }
+}

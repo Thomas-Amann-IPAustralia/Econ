@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In the introduction to the Australian Intellectual Property Report 2018, this passage reviews Australian IP filings in 2017, including changes in patent, trade mark, design and plant breeder’s rights applications and the role of non-resident applicants. It also previews studies of collaborative research grants and patenting, and research on geographical names in trade marks."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2018:0003",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000165,
+  "input": 986,
+  "model": "gpt-6-luna",
+  "output": 132,
+  "reasoning": 49,
+  "seconds": 3.09
+ }
+}

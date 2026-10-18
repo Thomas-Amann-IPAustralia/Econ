@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000347,
+ "data": {
+  "queries": [
+   "exporters trade marks and shocks exchange rate sensitivity",
+   "trade mark holding export performance exchange rate shocks"
+  ],
+  "standalone_question": "Do trade marks make exporters more or less sensitive to exchange rate movements?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "erp11-3",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000347,
+  "input": 664,
+  "model": "gemini-3.5-flash-lite",
+  "output": 59,
+  "reasoning": 0,
+  "seconds": 0.86
+ }
+}

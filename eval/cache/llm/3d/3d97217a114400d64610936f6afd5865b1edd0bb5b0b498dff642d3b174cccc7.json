@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.001075,
+ "data": [
+  {
+   "grade": 0,
+   "id": "p1"
+  }
+ ],
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "judge:judge-v1:gemini-3.8-flash",
+ "schema_name": "grades",
+ "tag": "ipr19-2",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00215,
+  "input": 537,
+  "model": "gemini-3.8-flash",
+  "output": 466,
+  "reasoning": 441,
+  "seconds": 0.0
+ }
+}

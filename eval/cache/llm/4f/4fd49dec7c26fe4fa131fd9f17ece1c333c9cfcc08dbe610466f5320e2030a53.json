@@ -1,0 +1,21 @@
+{
+ "cost_usd": 3.9e-05,
+ "data": {
+  "context": "In the contents of the Australian Intellectual Property Report 2017, this passage lists the report’s main sections and their starting pages, from designs through end notes."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2017:0004",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 7.8e-05,
+  "input": 560,
+  "model": "gpt-6-luna",
+  "output": 44,
+  "reasoning": 0,
+  "seconds": 1.41
+ }
+}

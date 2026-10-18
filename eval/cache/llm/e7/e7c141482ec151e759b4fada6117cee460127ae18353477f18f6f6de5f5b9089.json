@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.1e-05,
+ "data": {
+  "context": "In the Australian IP Report 2025, in the International applicants section, this passage covers 2024 Australian trade mark filings for transport services and vehicles, including growth in Chinese vehicle applications, alongside growth in patent, trade mark and design applications for transport."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2025:0058",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000162,
+  "input": 830,
+  "model": "gpt-6-luna",
+  "output": 158,
+  "reasoning": 91,
+  "seconds": 2.35
+ }
+}

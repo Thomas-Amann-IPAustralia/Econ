@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.8e-05,
+ "data": {
+  "context": "In the introduction to the Australian Intellectual Property Report 2015, this passage explains the report’s purpose and scope, IP Australia’s role, and the role of IP rights in innovation and economic activity. It notes that the report presents recent Australian and international IP data and covers patents, trade marks, designs and plant breeder’s rights, but not copyright."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2015:0002",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000136,
+  "input": 953,
+  "model": "gpt-6-luna",
+  "output": 82,
+  "reasoning": 0,
+  "seconds": 1.36
+ }
+}

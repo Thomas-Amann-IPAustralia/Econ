@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.000314,
+ "data": {
+  "queries": [
+   "market for design interviews designer hiring channels word of mouth"
+  ],
+  "standalone_question": "Does word of mouth from past clients help designers get hired?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "erp03-3",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000314,
+  "input": 662,
+  "model": "gemini-3.5-flash-lite",
+  "output": 46,
+  "reasoning": 0,
+  "seconds": 1.4
+ }
+}

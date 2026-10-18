@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.7e-05,
+ "data": {
+  "context": "In the Australian IP Report 2023, the “Combining diverse skills for innovation” section examines pay differences associated with patents in Australia. It compares median annual pay and modelled wage premiums for workers at different occupation skill levels in patent-holding and non-patent-holding businesses, using 2022 MADIP and BLADE data."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2023:0113",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000154,
+  "input": 1127,
+  "model": "gpt-6-luna",
+  "output": 82,
+  "reasoning": 0,
+  "seconds": 1.47
+ }
+}

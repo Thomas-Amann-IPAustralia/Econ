@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001105,
+ "data": {
+  "reason": "Both answers are very well supported and address the question accurately. Answer A is slightly better because it includes the most recent data (comparing 2023, 2024, and 2025) to illustrate recent shifts in share and rankings among the top origins, rather than relying on figures from 2021 as Answer B does.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-trend-4:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002209,
+  "input": 2525,
+  "model": "gemini-3.8-flash",
+  "output": 84,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

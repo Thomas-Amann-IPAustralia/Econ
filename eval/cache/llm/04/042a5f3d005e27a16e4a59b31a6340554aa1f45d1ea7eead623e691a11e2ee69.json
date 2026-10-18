@@ -1,0 +1,87 @@
+{
+ "cost_usd": 0.009632,
+ "data": {
+  "answer": "**IP Australia’s grant rate sits between the USPTO’s and the EPO’s for computer-implemented inventions (CIIs) at the margins of patent eligibility.** The 2024 study reports grant rates for “CII-PSM-likely-adverse” applications of approximately:\n- **54 per cent at IP Australia**\n- **27 per cent at the EPO**\n- **70 per cent at the USPTO**.[1]\n\nThis category comprises applications highly similar to those that received Australian *manner of manufacture* objections; it does not represent all CII applications.[2] For CIIs classified as likely clear of these objections, and for non-CII applications, differences in grant rates between the offices were much less significant.[3]\n\nThe study therefore suggests substantial inter-office differences specifically in determining the patentability of CIIs with claims at the margins of patentable subject matter.[4]\n\n**Scope and comparability:** the analysis covers applications filed during **2001–2020**, rather than current grant outcomes.[5] Some cross-office grant comparisons were restricted to equivalent applications filed at all three offices (“triplet patent families”), to minimise differences attributable to the underlying inventions or applications.[6]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 8,
+      "quote": "CII-PSM-likely-adverse applications are most likely to be granted by the USPTO, with a grant rate of close to 70%."
+     },
+     {
+      "evidence": 8,
+      "quote": "Compared to USPTO, the grant rate of CII-PSM-likely-adverse applications at IPA is almost 23 per cent lower at 54%. The EPO grant rate of CII-PSM-adverse applications is less than 50 per cent of the USPTO grant rate at around 27%."
+     }
+    ],
+    "text": "The 2024 study reports grant rates for CII-PSM-likely-adverse applications of approximately 54 per cent at IP Australia, 27 per cent at the EPO and 70 per cent at the USPTO, placing Australia between the other offices."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 7,
+      "quote": "The first group consists of CII patent applications at each office which are highly similar to patent applications which received manner of manufacture objections from IPA patent examiners."
+     }
+    ],
+    "text": "The likely-adverse category is a subset of CII applications highly similar to applications that received manner of manufacture objections from Australian examiners."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 8,
+      "quote": "The inter-office difference in grant rates for CII-PSM-likely-clear and Non-CII is much less significant."
+     }
+    ],
+    "text": "Inter-office grant-rate differences were much less significant for CII-PSM-likely-clear and non-CII applications."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 8,
+      "quote": "This result suggests a relatively high degree of inter-office disharmony in determining the patentability of CII patent applications with claims that are on the margins of patentable subject matter."
+     }
+    ],
+    "text": "The results suggest substantial inter-office differences in determining patentability for CII claims at the margins of patentable subject matter."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "It contains a comprehensive set of patent applications filed at IP Australia (IPA), the European Patent Office (EPO), and the United States Patent and Trademark Office (USPTO) from 2001-2020."
+     }
+    ],
+    "text": "The analysis covers applications filed from 2001 to 2020, not current grant outcomes."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 7,
+      "quote": "in some of our comparative analysis, for example on the likelihood of grant across the 3 jurisdictions, we restricted the sample to \"triplet patent families\". These patent families consist of \"equivalent patent\" applications which were filed at IPA, EPO, and USPTO."
+     },
+     {
+      "evidence": 7,
+      "quote": "rather than underlying characteristics of the invention or patent application."
+     }
+    ],
+    "text": "Some grant comparisons used equivalent applications filed at all three offices to minimise differences in underlying inventions or applications."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "explore-compare-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.019264,
+  "input": 3492,
+  "model": "gpt-6.1-sol",
+  "output": 1228,
+  "reasoning": 296,
+  "seconds": 18.42
+ }
+}

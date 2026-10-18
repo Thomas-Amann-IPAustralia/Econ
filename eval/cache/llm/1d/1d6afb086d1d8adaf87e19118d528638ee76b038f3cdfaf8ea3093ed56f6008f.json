@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.00018,
+ "data": {
+  "queries": [
+   "trade mark GDP spurious correlation econometric tests",
+   "trade marks economic growth causality analysis"
+  ],
+  "standalone_question": "How did the trade mark study check that its link with GDP isn't spurious?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "note-tm-2",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00018,
+  "input": 242,
+  "model": "gemini-3.5-flash-lite",
+  "output": 43,
+  "reasoning": 0,
+  "seconds": 0.92
+ }
+}

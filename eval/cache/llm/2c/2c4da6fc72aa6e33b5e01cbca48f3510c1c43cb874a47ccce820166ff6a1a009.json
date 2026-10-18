@@ -1,0 +1,24 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "queries": [
+   "Mining patent co-filing rates by organisation type show [organisation type] co-file most often and [organisation type] least often."
+  ],
+  "standalone_question": "Which types of organisations co-file mining patents with other organisations most and least often?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp04-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000165,
+  "input": 764,
+  "model": "gpt-6-luna",
+  "output": 177,
+  "reasoning": 116,
+  "seconds": 2.32
+ }
+}

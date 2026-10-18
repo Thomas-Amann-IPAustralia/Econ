@@ -1,0 +1,91 @@
+{
+ "cost_usd": 0.011415,
+ "data": {
+  "answer": "The evidence points to **firm size, industry and an innovation/patenting focus** as factors associated with AI capability investment—not proven causal drivers. The 2023 *Drivers of AI investment* study measured investment through hiring AI-skilled employees, a proxy for AI capacity building and adoption, rather than expenditure.[1]\n\n- **Size and specialisation:** larger, established businesses were generally more focused on AI adoption than SMEs. However, the research also identified highly specialised technical start-ups focused on AI development in Australia.[2]\n- **Industry:** AI capacity existed across most Australian industries, but was more pronounced in technology-focused industries, including information and communication technologies and professional services.[3]\n- **Patenting and innovation:** holding a patent was a predictor of AI capability building. Businesses with a stronger innovation and patent focus adopted AI at a higher rate, with a particularly strong association for patenting in Physics, which encompasses computer technologies.[4]\n\n**The SME result needs qualification.** The detailed study found no significant evidence that the patent–AI relationship was stronger for SMEs or AI-specialised SMEs. It also reported no difference in current AI hiring between SMEs with and without patents in its sample.[5]\n\nOne possible commercial explanation is that businesses use patents to capture returns from developing AI systems. However, the research presents this as an interpretation: the observed association does **not establish that patent protection causes AI investment**.[6]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "We then correlate AI adoption with patent activity to explore the importance of IP to these firms. We use the hiring of AI-skilled employees as a proxy for AI capacity building such as inward technology transfer and AI adoption."
+     }
+    ],
+    "text": "The 2023 study assessed associations rather than causal drivers and used AI-skilled hiring as a proxy for AI capacity building and adoption, not expenditure."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "The study found that small and medium enterprise are generally less focused on AI adoption than larger established businesses. However, it identified the emergence of highly specialised, technical start-ups focused on AI development in Australia."
+     }
+    ],
+    "text": "Larger established businesses were generally more focused on AI adoption than SMEs, although specialised technical AI start-ups were emerging in Australia."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "AI capacity has been developed across most industries in Australia, but capacity is more pronounced in industries with a strong technology focus such as information and communication technologies and professional services."
+     }
+    ],
+    "text": "AI capacity existed across most Australian industries but was more pronounced in technology-focused industries, including ICT and professional services."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "having a patent was a good predictor of whether they were engaged in building AI capability: businesses with a stronger innovation and patent focus adopt AI at a higher rate. Adoption was strongly associated with patenting focused on the Physics field, which encompasses computer technologies."
+     }
+    ],
+    "text": "Patent ownership predicted AI capability building, and adoption was particularly associated with patenting in Physics, encompassing computer technologies."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 8,
+      "quote": "we do not find significance for the two-way and three-way interaction effects testing whether the link between AI adoption and patenting is greater for SMEs"
+     },
+     {
+      "evidence": 8,
+      "quote": "or for SMEs specialised in AI"
+     },
+     {
+      "evidence": 8,
+      "quote": "for SMEs there is no difference in the AIhiring of firms with and without patents."
+     }
+    ],
+    "text": "The detailed study found no significant stronger patent–AI relationship for SMEs or AI-specialised SMEs and reported no AI-hiring difference between SMEs with and without patents in its sample."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "This may indicate that businesses use patents to capture returns from developing AI systems."
+     },
+     {
+      "evidence": 2,
+      "quote": "We then correlate AI adoption with patent activity to explore the importance of IP to these firms."
+     }
+    ],
+    "text": "Using patents to capture returns from AI development is a possible interpretation, not an established causal effect of patent protection on AI investment."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "explore-synthesis-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.02283,
+  "input": 6520,
+  "model": "gpt-6.1-sol",
+  "output": 979,
+  "reasoning": 141,
+  "seconds": 13.64
+ }
+}

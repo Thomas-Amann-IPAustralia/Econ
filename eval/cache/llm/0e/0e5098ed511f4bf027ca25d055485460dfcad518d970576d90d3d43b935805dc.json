@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.000319,
+ "data": {
+  "queries": [
+   "mining innovation METS firms patent applications count"
+  ],
+  "standalone_question": "How many patent applications did the study of mining innovation and METS firms identify?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "erp04-1",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000319,
+  "input": 662,
+  "model": "gemini-3.5-flash-lite",
+  "output": 48,
+  "reasoning": 0,
+  "seconds": 0.89
+ }
+}

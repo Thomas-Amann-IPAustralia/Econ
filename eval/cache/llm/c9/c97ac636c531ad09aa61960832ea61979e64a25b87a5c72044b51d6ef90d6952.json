@@ -1,0 +1,142 @@
+{
+ "cost_usd": 0.015525,
+ "data": {
+  "answer": "The knowledge base points to **AI adoption spreading across Australian industries, with patent-holding firms more likely to build AI capability**. However, the evidence is principally about associations between firms’ characteristics, patenting and AI-related hiring—not proof that patents cause adoption.[1][2]\n\n### Adoption and innovation\n- **AI capability is widespread but uneven.** The 2023 *Drivers of AI investment* study found capability across most Australian industries, with greater concentration in technology-focused industries such as information and communication technologies and professional services.[1]\n- **The measure is a proxy.** The study linked LinkedIn firm, employee and job-advertisement data with international patent data, using AI-skilled hiring as a proxy for capacity building, technology transfer and adoption.[2]\n- **Patenting predicts AI capability building.** The 2023 IP Report found that patent-holding businesses adopted AI at a higher rate, particularly where patenting focused on Physics, which includes computer technologies. It cautiously suggested that firms may use patents to capture returns from developing AI systems.[3]\n- **Firm characteristics matter.** Large corporations, younger firms, patent holders and SMEs with existing AI capability had a higher tendency to adopt AI.[4] SMEs were generally less focused on AI capacity building, but those already employing AI staff were more likely to hire additional AI staff. Some may rely on trade secrets or proprietary algorithms rather than patents, so patent data alone can miss activity.[5]\n\n### What kind of innovation?\nThe evidence does **not establish that AI is producing broader, radical combinations of technologies**. The 2023 IP Report found no evidence that AI adopters patented across more diverse technical fields, and suggested that AI might currently be more important for automating operations than radical recombinant innovation.[6]\n\nThere are nevertheless concrete applications: the 2022 IP Report identified Australian AI patenting directed towards healthcare, agricultural practice and solar power forecasting.[7]\n\n### Implications for IP and policy\nPatents are only part of the picture. The 2024 IP Report describes their broader role in enabling technology trade, protecting innovators from copying and giving small firms time to secure resources and financing; this is not an AI-specific causal finding.[8]\n\nThe AI study recommends using linked capability and innovation mapping to identify investment needs and connect research strengths with firms seeking relevant technologies and skills. It proposes tailoring initiatives to industries, locations and different business types.[9]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "What we find is that AI capacity has been developed across most industries in Australia, but capacity is more pronounced in industries with a strong technology focus such as information and communication technologies and professional services."
+     }
+    ],
+    "text": "The 2023 AI study found capability across most Australian industries, concentrated more strongly in technology-focused industries."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "We then correlate AI adoption with patent activity to explore the importance of IP to these firms. We use the hiring of AI-skilled employees as a proxy for AI capacity building such as inward technology transfer and AI adoption."
+     },
+     {
+      "evidence": 1,
+      "quote": "For this report, we create a novel database that links international patent data from the Lens patent database with firm microdata constructed from LinkedIn's Jobs, Company, and People datasets."
+     }
+    ],
+    "text": "The study linked LinkedIn and patent data and used AI-skilled hiring as a proxy; its adoption findings are associations rather than demonstrated causal effects."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 8,
+      "quote": "having a patent was a good predictor of whether they were engaged in building AI capability: businesses with a stronger innovation and patent focus adopt AI at a higher rate. Adoption was strongly associated with patenting focused on the Physics field, which encompasses computer technologies."
+     },
+     {
+      "evidence": 8,
+      "quote": "This may indicate that businesses use patents to capture returns from developing AI systems."
+     }
+    ],
+    "text": "Patent ownership predicted AI capability building, particularly Physics-related patenting; the report suggested patents may help firms capture returns from AI development."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "We identified four groups of companies that have a higher tendency to adopt AI technology: (i) large corporations, (ii) small and medium size enterprises (SMEs) with existing AI capacity, (iii) patent-holding firms, and (iv) younger companies."
+     }
+    ],
+    "text": "Large corporations, younger firms, patent holders and SMEs with existing AI capacity had a higher tendency to adopt AI."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 10,
+      "quote": "Overall, SMEs are generally less focused on AI capacity building than general capacity building. However, unlike in the sample more generally, SMEs are more likely to hire additional AI staff if they already possess existing AI staff."
+     },
+     {
+      "evidence": 10,
+      "quote": "This observation suggests the emergence of highly specialized technical start-ups that concentrate on AI development, which may not be adequately captured by patent data alone."
+     },
+     {
+      "evidence": 10,
+      "quote": "Instead, some SMEs may opt for trade secrets or leverage the proprietary nature of AI algorithms to reduce time-to-market."
+     }
+    ],
+    "text": "SMEs generally focused less on AI capacity building, but existing AI staff predicted further hiring; non-patent strategies mean patent data can miss activity."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 12,
+      "quote": "To the extent that AI is being applied to innovate across domains, it might be expected that AI adopters will tend to patent across diverse technical fields. The QUT study found no evidence for this."
+     },
+     {
+      "evidence": 12,
+      "quote": "However, as currently applied, AI may be more important for automating operations than radical recombinant innovation."
+     }
+    ],
+    "text": "The 2023 IP Report found no evidence of more diverse patenting among AI adopters and cautiously suggested automation may matter more than radical recombinant innovation."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 19,
+      "quote": "Many other Australian companies that lead in AI patent filings\n\noperate in health care and medical devices."
+     },
+     {
+      "evidence": 19,
+      "quote": "Leading domestic filers are also applying AI to improve agricultural practice."
+     },
+     {
+      "evidence": 19,
+      "quote": "For example, CSIRO has filed AI patents for machine vision algorithms to track and predict cloud motion for solar power forecasting."
+     }
+    ],
+    "text": "The 2022 IP Report identified Australian AI patent applications in healthcare, agriculture and solar power forecasting."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 13,
+      "quote": "Patents facilitate technology trade, for example between small innovators and larger firms with established commercialisation resources. By protecting innovators from copying, patents can also provide small firms the time necessary to obtain resources and financing."
+     }
+    ],
+    "text": "The 2024 IP Report describes patents' general role in technology trade and in giving small innovators protection and time to secure resources, rather than establishing an AI-specific causal effect."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "Mapping AI capabilities and innovation can help to identify areas where investment and collaboration are needed to drive growth and competitiveness. The presented work provides information on where to focus such investments - with respect to industries as well as locations."
+     },
+     {
+      "evidence": 5,
+      "quote": "mapping emerging and established firm capabilities and formal innovative activity can be used to connect sites of R&D strength with firms actively demonstrating need for related technology and skills."
+     },
+     {
+      "evidence": 5,
+      "quote": "Strategic initiatives can be tailored for different industries, and designed for different types of businesses, including SMEs, large enterprises, national and multinational corporations."
+     }
+    ],
+    "text": "The AI study recommends capability mapping to target investment and connect research strengths with firms' needs, tailoring initiatives to industries, locations and business types."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "multi-7",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.03105,
+  "input": 6510,
+  "model": "gpt-6.1-sol",
+  "output": 1803,
+  "reasoning": 242,
+  "seconds": 23.12
+ }
+}

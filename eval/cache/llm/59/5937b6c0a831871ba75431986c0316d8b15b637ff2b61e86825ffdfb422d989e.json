@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000174,
+ "data": {
+  "queries": [
+   "firm size patent filing",
+   "SME patenting activity",
+   "large firms patenting"
+  ],
+  "standalone_question": "Which sizes of firm are most and least likely to file patents?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "erp15-3",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000174,
+  "input": 238,
+  "model": "gemini-3.5-flash-lite",
+  "output": 41,
+  "reasoning": 0,
+  "seconds": 0.86
+ }
+}

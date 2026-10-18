@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000123,
+ "data": {
+  "context": "In IP Australia Economic Research Paper 10, *Intellectual property rights, business profitability and competition in the Australian economy* (2020), this passage reports econometric results on business profitability and IPRs, using ABS BLADE data from the 2016–17 frame and GMM, OLS and fixed-effects models."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp10-ip-profitability-competition:0115",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000246,
+  "input": 1175,
+  "model": "gpt-6-luna",
+  "output": 256,
+  "reasoning": 175,
+  "seconds": 2.67
+ }
+}

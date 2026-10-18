@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5.5e-05,
+ "data": {
+  "context": "This is the title-page information for IP Australia Economic Research Paper 14 (2024), *Raising the Bar reforms: Measuring the impact on relative patent scope*. It identifies the authors and publication date; the paper examines the impact of the Raising the Bar reforms on relative patent scope."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp14-raising-the-bar:0000",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00011,
+  "input": 744,
+  "model": "gpt-6-luna",
+  "output": 71,
+  "reasoning": 0,
+  "seconds": 1.4
+ }
+}

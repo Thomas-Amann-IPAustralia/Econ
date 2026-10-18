@@ -1,0 +1,64 @@
+{
+ "cost_usd": 0.012377,
+ "data": {
+  "answer": "Yes—resident patent filings are heavily concentrated in **New South Wales, Victoria and Queensland**. The 2026 report shows these states accounted for just over 80 per cent of resident applications in 2025 and most of the national increase in resident filings.[1]\n\nTheir 2025 resident standard complete application counts were:\n- **New South Wales:** 1,152\n- **Victoria:** 638\n- **Queensland:** 511.[2]\n\nHowever, filing volume and patent intensity give different pictures. In 2024, the **ACT was the most patent-intensive jurisdiction**, with just over 2 applications per thousand businesses, despite NSW, Victoria and Queensland leading by volume.[3]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "Together, these 3 states accounted for just over 80% of resident applications in 2025, and most of the national increase in resident filings."
+     }
+    ],
+    "text": "NSW, Victoria and Queensland accounted for just over 80 per cent of resident patent applications in 2025 and most of the national increase."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "New South Wales recorded 1,152 resident standard complete applications in 2025"
+     },
+     {
+      "evidence": 4,
+      "quote": "Victoria increased from 600 to 638 applications (+6.3%)"
+     },
+     {
+      "evidence": 4,
+      "quote": "Queensland recorded one of the strongest increases, rising from 445 to 511 applications (+14.8%)"
+     }
+    ],
+    "text": "In 2025, NSW recorded 1,152 resident standard complete applications, Victoria 638 and Queensland 511."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "New South Wales (NSW) is the leading source for standard patent applications in Australia (38.9% of resident applications), followed by Victoria (23.3%) and Queensland (17.3%)."
+     },
+     {
+      "evidence": 5,
+      "quote": "However, the Australian Capital Territory (ACT) is the most patent-intensive, with just over 2 applications per thousand businesses in the territory"
+     }
+    ],
+    "text": "In 2024, NSW, Victoria and Queensland led by application volume, but the ACT was most patent-intensive, with just over 2 applications per thousand businesses."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "erp15-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.024754,
+  "input": 8252,
+  "model": "gpt-6.1-sol",
+  "output": 825,
+  "reasoning": 248,
+  "seconds": 12.72
+ }
+}

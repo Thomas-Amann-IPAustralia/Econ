@@ -8,8 +8,8 @@ from __future__ import annotations
 
 import json
 import re
+import threading
 import unicodedata
-from functools import lru_cache
 from pathlib import Path
 
 import numpy as np
@@ -28,11 +28,19 @@ STOP = frozenset(
 )
 
 
-@lru_cache
-def _stemmer():
-    import snowballstemmer
+_local = threading.local()
 
-    return snowballstemmer.stemmer("english")
+
+def _stemmer():
+    """One stemmer per thread: a Snowball stemmer keeps the word it is working on in its own state, so a
+    shared one corrupts stems (or raises IndexError) when the service's thread pool tokenises two queries
+    at once (found in the answer evaluation's thread pool, D-013)."""
+    st = getattr(_local, "stemmer", None)
+    if st is None:
+        import snowballstemmer
+
+        st = _local.stemmer = snowballstemmer.stemmer("english")
+    return st
 
 
 def tokenize(text: str) -> list[str]:

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.1e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2019, this passage appears in the patent section’s “Top 5 applications in Australia by country of origin” feature. It describes inventor Davis’s decision to seek Australian patent protection for a customised sleep apnoea mask, her market research and application process, and ends with a trade mark entry for PODICURE."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2019:0011",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000161,
+  "input": 1191,
+  "model": "gpt-6-luna",
+  "output": 83,
+  "reasoning": 0,
+  "seconds": 1.44
+ }
+}

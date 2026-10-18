@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000345,
+ "data": {
+  "queries": [
+   "patent backlogs and pendency peak volume",
+   "pending patent applications maximum backlog"
+  ],
+  "standalone_question": "How large did the backlog of pending patent applications get, and when did it peak?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "erp01-4",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000345,
+  "input": 667,
+  "model": "gemini-3.5-flash-lite",
+  "output": 58,
+  "reasoning": 0,
+  "seconds": 1.78
+ }
+}

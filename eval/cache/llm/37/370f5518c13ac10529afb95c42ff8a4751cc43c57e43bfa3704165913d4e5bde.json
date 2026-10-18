@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001118,
+ "data": {
+  "reason": "Both answers accurately explain the core mechanism of linking IPLORD into BLADE using ABNs. Answer A is more comprehensive and directly addresses what the linked data enables researchers to study, including export analysis via TM-LINK and workforce research via linked employer-employee data.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-methods-1:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002235,
+  "input": 2665,
+  "model": "gemini-3.8-flash",
+  "output": 63,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

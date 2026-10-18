@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000191,
+ "data": {
+  "queries": [
+   "design applications overseas share",
+   "foreign design filings Australia"
+  ],
+  "standalone_question": "What share of design applications in Australia come from overseas applicants?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr23-3",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000191,
+  "input": 237,
+  "model": "gemini-3.5-flash-lite",
+  "output": 48,
+  "reasoning": 0,
+  "seconds": 0.89
+ }
+}

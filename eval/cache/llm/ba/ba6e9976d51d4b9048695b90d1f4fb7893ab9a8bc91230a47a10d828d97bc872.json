@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.7e-05,
+ "data": {
+  "context": "In *Intellectual Property Rights, Business Profitability and Competition in the Australian Economy* (2020), Appendix D explains model selection for the study’s econometric analysis. This passage describes Bond’s rules for choosing between Difference GMM and System GMM, including interpreting the Difference GMM estimate relative to the fixed-effects estimate."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp10-ip-profitability-competition:0085",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000173,
+  "input": 1112,
+  "model": "gpt-6-luna",
+  "output": 123,
+  "reasoning": 44,
+  "seconds": 1.95
+ }
+}

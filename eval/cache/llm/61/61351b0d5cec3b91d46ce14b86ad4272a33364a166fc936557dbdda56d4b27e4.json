@@ -1,0 +1,25 @@
+{
+ "cost_usd": 2.9e-05,
+ "data": {
+  "queries": [
+   "gender gap in patenting women inventors",
+   "diversity in innovation gender patents economic research"
+  ],
+  "standalone_question": "What do the Australian IP Reports and related economic research papers say about the gender gap in patenting and diversity in innovation?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-synthesis-6",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 5.8e-05,
+  "input": 288,
+  "model": "gpt-6-luna",
+  "output": 59,
+  "reasoning": 0,
+  "seconds": 1.35
+ }
+}

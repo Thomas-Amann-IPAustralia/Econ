@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.6e-05,
+ "data": {
+  "context": "In the 2015 IP Australia Economic Research Paper *The Australian Mining Industry: More than Just Shovels and Being the Lucky Country*, this passage is from the contents and lists appendix topics on mining patent search strategy, including operating miners, Mining Equipment, Technology and Services (METS) firms, and publicly funded entities."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp04-mining-innovation:0001",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000131,
+  "input": 930,
+  "model": "gpt-6-luna",
+  "output": 77,
+  "reasoning": 0,
+  "seconds": 1.67
+ }
+}

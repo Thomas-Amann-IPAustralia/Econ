@@ -1,0 +1,24 @@
+{
+ "cost_usd": 4.3e-05,
+ "data": {
+  "queries": [
+   "global financial crisis design filings technology products"
+  ],
+  "standalone_question": "Did the 2008 financial crisis affect design filings for technology gadgets?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr20-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 8.6e-05,
+  "input": 674,
+  "model": "gpt-6-luna",
+  "output": 38,
+  "reasoning": 0,
+  "seconds": 1.28
+ }
+}

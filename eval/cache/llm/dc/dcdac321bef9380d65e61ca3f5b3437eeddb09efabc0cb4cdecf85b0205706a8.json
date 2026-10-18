@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.5e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2016’s IP and Innovation Policy section, this passage describes a Patent Analytics Hub study of PCT applications filed by Australian applicants or inventors, examining biologics and other pharmaceutical technologies, with a filing-trend figure for 2000–2012. It also describes Source IP, a marketplace for licensable patents from Australia’s public research sector."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2016:0027",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00013,
+  "input": 849,
+  "model": "gpt-6-luna",
+  "output": 90,
+  "reasoning": 0,
+  "seconds": 1.83
+ }
+}

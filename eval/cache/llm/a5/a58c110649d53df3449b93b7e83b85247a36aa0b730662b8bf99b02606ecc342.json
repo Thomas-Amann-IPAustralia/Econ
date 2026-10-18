@@ -1,0 +1,56 @@
+{
+ "cost_usd": 0.010979,
+ "data": {
+  "answer": "**Possibly, but the evidence is not conclusive.** The 2020 Australian IP Report says ICT-related design applications filed in Australia fell sharply in 2009, which “may reflect the impact of the global financial crisis”—a qualified explanation, not an established causal finding.[1]\n\nThis category covers technology gadgets such as mobile phones and laptop computers.[2] Applications recovered quickly after 2009, trebling to 746 in 2013. The report also notes recurring steep growth and large declines, especially after 2005, so the crisis-related fall occurred within an already volatile filing pattern.[3]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "The sharp fall of ICT-related designs in 2009 may reflect the impact of the global financial crisis."
+     }
+    ],
+    "text": "The 2020 report identifies a sharp fall in Australian ICT-related design applications in 2009 and suggests, without establishing causation, that it may reflect the global financial crisis."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Competing in global markets for digital products, such as mobile phones and laptop computers"
+     }
+    ],
+    "text": "The ICT-related design discussion covers technology gadgets such as mobile phones and laptop computers."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "After 2009, ICT-related applications recovered quickly and trebled to 746 in 2013"
+     },
+     {
+      "evidence": 1,
+      "quote": "However, they have shown a repeated pattern of steep growth followed by large declines, especially after 2005."
+     }
+    ],
+    "text": "Applications recovered quickly after 2009 and trebled to 746 in 2013, within a recurring pattern of steep growth and large declines particularly evident after 2005."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "ipr20-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.021958,
+  "input": 7124,
+  "model": "gpt-6.1-sol",
+  "output": 771,
+  "reasoning": 323,
+  "seconds": 14.65
+ }
+}

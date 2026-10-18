@@ -1,0 +1,24 @@
+{
+ "cost_usd": 9.3e-05,
+ "data": {
+  "queries": [
+   "Blockchain patent filings increased by X per cent annually, with growth accelerating over the period studied."
+  ],
+  "standalone_question": "How quickly have blockchain patent filings grown?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr19-5",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000187,
+  "input": 758,
+  "model": "gpt-6-luna",
+  "output": 222,
+  "reasoning": 177,
+  "seconds": 2.73
+ }
+}

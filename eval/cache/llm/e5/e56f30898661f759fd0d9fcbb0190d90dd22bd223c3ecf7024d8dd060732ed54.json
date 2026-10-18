@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000464,
+ "data": {
+  "reason": "Both answers provide the exact same core information supported by solid quotes from IP Australia publications. Answer B breaks down the components of the definition slightly more cleanly, but Answer A is also concise and accurate; overall, there is no substantive difference in quality or coverage.",
+  "winner": "tie"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "ipr26-4:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000928,
+  "input": 932,
+  "model": "gemini-3.8-flash",
+  "output": 61,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

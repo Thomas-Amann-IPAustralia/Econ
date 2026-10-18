@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000373,
+ "data": {
+  "queries": [
+   "trends in patent scope prior to 2013 reforms",
+   "historical changes in claim breadth before Raising the Bar"
+  ],
+  "standalone_question": "Were broad Australian patents already becoming less common before the 2013 Raising the Bar reforms?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "erp14-4",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000373,
+  "input": 667,
+  "model": "gemini-3.5-flash-lite",
+  "output": 69,
+  "reasoning": 0,
+  "seconds": 0.91
+ }
+}

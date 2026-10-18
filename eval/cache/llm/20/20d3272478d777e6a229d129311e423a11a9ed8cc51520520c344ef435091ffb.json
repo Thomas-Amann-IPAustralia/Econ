@@ -1,0 +1,25 @@
+{
+ "cost_usd": 5.1e-05,
+ "data": {
+  "queries": [
+   "economic contribution of copyright to GDP employment and wages",
+   "Copyright contributes $X billion to GDP and supports X jobs in Australia."
+  ],
+  "standalone_question": "How much does copyright contribute to the Australian economy?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-synthesis-11",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000101,
+  "input": 759,
+  "model": "gpt-6-luna",
+  "output": 51,
+  "reasoning": 0,
+  "seconds": 1.29
+ }
+}

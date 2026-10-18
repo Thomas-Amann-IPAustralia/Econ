@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "context": "In *The business environment of patenting firms in Australia* (2024), section 3, “Data,” this passage describes the BLADE administrative-record data used to study firms that interacted with Australia’s IP system. It covers firm-level records across financial years 2001–02 to 2020–21, the information available, and exclusions for missing location or industry."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp15-patenting-firms:0010",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000158,
+  "input": 1134,
+  "model": "gpt-6-luna",
+  "output": 89,
+  "reasoning": 0,
+  "seconds": 1.97
+ }
+}

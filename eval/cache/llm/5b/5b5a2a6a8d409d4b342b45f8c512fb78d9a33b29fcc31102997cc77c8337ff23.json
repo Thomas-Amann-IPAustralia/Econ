@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000478,
+ "data": {
+  "reason": "Both answers accurately provide the core statistic answering the question (a 27% increase in SME filings in 2021). Answer B is slightly more informative and helpful as it includes the specific figure (68%) for the decadal high share of organisational applicants.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "ipr22-1:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000955,
+  "input": 914,
+  "model": "gemini-3.8-flash",
+  "output": 72,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

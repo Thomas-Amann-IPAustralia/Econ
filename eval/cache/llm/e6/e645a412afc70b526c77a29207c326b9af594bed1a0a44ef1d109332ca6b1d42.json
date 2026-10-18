@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "context": "In the Australian IP Report 2026 section on international filing behaviour, this passage describes where Australian applicants filed patent applications abroad in 2024. It identifies the United States as the leading destination and compares filing trends across Europe, China and other destinations."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0061",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000158,
+  "input": 813,
+  "model": "gpt-6-luna",
+  "output": 154,
+  "reasoning": 90,
+  "seconds": 2.21
+ }
+}

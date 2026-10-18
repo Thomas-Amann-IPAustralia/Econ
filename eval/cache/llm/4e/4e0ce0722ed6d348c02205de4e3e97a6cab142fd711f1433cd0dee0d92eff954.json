@@ -1,0 +1,24 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "queries": [
+   "Australian applicants account for X per cent of patent families for refining critical metals used in batteries."
+  ],
+  "standalone_question": "What share of patent families for refining critical metals for batteries come from Australian applicants?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr26-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000164,
+  "input": 765,
+  "model": "gpt-6-luna",
+  "output": 176,
+  "reasoning": 123,
+  "seconds": 2.55
+ }
+}

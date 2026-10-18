@@ -1,0 +1,27 @@
+{
+ "cost_usd": 0.00016,
+ "data": {
+  "queries": [
+   "Australian resident share standard patent applications",
+   "small business IP ownership subsequent growth",
+   "IP rights business profitability competition effect",
+   "Research reports most standard patent filings originate overseas, registered rights precede faster small-firm growth, and ownership has no measurable association with competitive conditions."
+  ],
+  "standalone_question": "Does IP Australia's research support the briefing's claims that Australian residents file only a small minority of standard patent applications, small businesses grow faster after registering IP, and IP rights have no measurable effect on market competition?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-context-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000319,
+  "input": 816,
+  "model": "gpt-6-luna",
+  "output": 474,
+  "reasoning": 364,
+  "seconds": 5.09
+ }
+}

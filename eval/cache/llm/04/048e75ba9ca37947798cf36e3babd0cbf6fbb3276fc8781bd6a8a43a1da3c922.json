@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "context": "In the 2023 report *Drivers of AI investment*, the Key policy implications section explains how findings on firms building AI capacity inform policy on patents, tracking AI adoption beyond patents, and consulting AI-related SMEs and younger companies about AI and IP. It also points to targeted support for AI leaders and laggers, knowledge transfer, and examining geographical differences."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "oce-ai-investment:0008",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000158,
+  "input": 1166,
+  "model": "gpt-6-luna",
+  "output": 82,
+  "reasoning": 0,
+  "seconds": 1.8
+ }
+}

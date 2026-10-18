@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.00011,
+ "data": {
+  "queries": [
+   "trade mark cluttering definition",
+   "Australian application patterns indicate whether the accumulation of registered marks creates measurable barriers to entry or limits businesses’ access to necessary brand names."
+  ],
+  "standalone_question": "What is trade mark cluttering, and is it a problem in Australia?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-synthesis-10",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00022,
+  "input": 763,
+  "model": "gpt-6-luna",
+  "output": 288,
+  "reasoning": 223,
+  "seconds": 3.37
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000997,
+ "data": {
+  "reason": "Both answers accurately cover the relevant evidence across the reports, including the pilot panel, the Dilin Duwa collaboration, the WIPO treaty, and the ANU valuation study. Answer B is slightly better structured and more directly answers what Australia/IP Australia is doing by highlighting Australia's significant role in concluding the treaty, whereas Answer A focuses somewhat more on the procedural ratification hurdles.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-policy-8:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001994,
+  "input": 2229,
+  "model": "gemini-3.8-flash",
+  "output": 86,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

@@ -1,0 +1,72 @@
+{
+ "cost_usd": 0.012187,
+ "data": {
+  "answer": "**Yes—patenting firms are more likely to collaborate, but this is an association, not established causation.** The 2024 research finds a positive relationship between patenting and collaboration propensity, while explicitly warning that no causality can be inferred.[1] The 2026 Australian IP Report also describes patent grants as a significant forward indicator of Australian businesses forming joint R&D and commercialisation arrangements.[2]\n\n**Which partners and forms of collaboration?**\n- **Domestic and overseas partners:** the 2024 report describes collaboration across Australian R&D with both groups. Manufacturing and professional, scientific and technical services stand out for having the most overseas partners.[3]\n- **Joint R&D, commercialisation and IP suppliers:** among R&D-active firms, patent grants are positively linked to joint R&D and joint commercialisation. Firms acquiring technology licences, patents or other IP from partners are also granted more patents on average than their peers.[4]\n\n**More collaboration does not necessarily mean more patents.** The 2024 business-environment study found no statistical relationship between the number or types of collaborators and firms’ patent-system engagement. It cautions that this does not establish that partners have no impact on R&D outcomes.[5]\n\nThe supplied evidence does not provide a detailed breakdown of the organisations or named partners with which patenting firms collaborate.",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 9,
+      "quote": "The AIBE study finds that patenting is positively related to a firm's propensity to collaborate. The finding is based on conditional correlations and no causality can be inferred."
+     }
+    ],
+    "text": "The 2024 research finds a positive association between patenting and collaboration propensity, without establishing causality."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 13,
+      "quote": "Patent grants are a significant forward indicator of the likelihood that Australian businesses will form collaborations such as joint R&D and commercialisation arrangements"
+     }
+    ],
+    "text": "The 2026 report describes patent grants as a significant forward indicator of Australian businesses forming joint R&D and commercialisation arrangements."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 9,
+      "quote": "Collaboration is pervasive in Australian R&D, with various industries collaborating with overseas and domestic partners. Manufacturing firms and professional, scientific and technical services stand out as having the most overseas partners."
+     }
+    ],
+    "text": "The 2024 report describes domestic and overseas collaboration across Australian R&D, with manufacturing and professional, scientific and technical services having the most overseas partners."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 9,
+      "quote": "Building on the AIBE study, IP Australia found that for R&D-active firms patent grants are positively linked to both joint R&D and joint commercialisation arrangements. In addition, Australian firms that acquire intangible assets from partners, such as technology licenses, patents or other IP assets, are on average granted more patents than their peers."
+     }
+    ],
+    "text": "Among R&D-active firms, patent grants are positively linked to joint R&D and joint commercialisation; firms acquiring IP from partners receive more patents on average."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Our findings indicate no statistical relationship between the number of collaborators and their types and firms' engagement with the patent system. However, the absence of a statistical relationship doesn't imply that the number or types of collaborators have no impact on R&D outcomes, including those leading to patent filings."
+     }
+    ],
+    "text": "The 2024 study found no statistical relationship between collaborator numbers or types and patent-system engagement, but this does not establish that partners have no impact on R&D outcomes."
+   }
+  ],
+  "coverage": "partial",
+  "gaps": [
+   "The passages do not provide a detailed breakdown of partner organisation categories or named partners specifically for patenting firms."
+  ]
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "explore-compare-6",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.024374,
+  "input": 6567,
+  "model": "gpt-6.1-sol",
+  "output": 1124,
+  "reasoning": 260,
+  "seconds": 15.74
+ }
+}

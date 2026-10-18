@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.5e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2020, the section “Users of IP rights are concentrated in Manufacturing and Wholesale trade” describes Australian industries by their ownership of patents, trade marks and designs. It identifies industries intensive in all three IP rights using ANZSIC subdivisions and data from the ABS BLADE 2019 dataset."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2020:0053",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00015,
+  "input": 1113,
+  "model": "gpt-6-luna",
+  "output": 78,
+  "reasoning": 0,
+  "seconds": 1.57
+ }
+}

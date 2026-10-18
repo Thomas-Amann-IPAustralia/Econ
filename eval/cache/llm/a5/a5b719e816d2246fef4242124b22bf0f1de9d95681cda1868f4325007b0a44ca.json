@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.4e-05,
+ "data": {
+  "context": "In the Australian IP Report 2026 section on trade mark intensity across Australian states and territories, the table reports 2025 trade mark applications and applications per thousand businesses in Tasmania and the Northern Territory, including changes in applications from 2024 to 2025."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0081",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000149,
+  "input": 870,
+  "model": "gpt-6-luna",
+  "output": 123,
+  "reasoning": 56,
+  "seconds": 1.71
+ }
+}

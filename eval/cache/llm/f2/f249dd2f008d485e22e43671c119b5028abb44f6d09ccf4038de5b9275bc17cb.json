@@ -1,0 +1,49 @@
+{
+ "cost_usd": 0.009628,
+ "data": {
+  "answer": "The supplied passages **do not report a numerical accuracy or F1-score** for the best-performing patent-scope classifier. The 2024 study describes the supervised models as “relatively accurate”, without quantifying that description in these passages.[1]\n\nThe algorithms were compared using **500 manually assessed patent-triplet families** as training and test data, with model quality tested on data not used for training.[2]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "the labelled data provided by the manual validation exercise did enable the development of relatively accurate supervised Machine Learning (ML) models to predict relative patent scope"
+     }
+    ],
+    "text": "The 2024 study describes its supervised patent-scope models as relatively accurate."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "We compared the predictive performance of these algorithms in classifying the relative scope of Australian patent claims using the 500 manually assessed random triplet patent families as the train and test data."
+     },
+     {
+      "evidence": 4,
+      "quote": "We assess the quality of the modelling by testing the model parameters using data that was not used to train the model."
+     }
+    ],
+    "text": "The algorithms were compared using 500 manually assessed patent-triplet families as training and test data, and model quality was tested on data not used for training."
+   }
+  ],
+  "coverage": "partial",
+  "gaps": [
+   "The numerical test accuracy or F1-score achieved by the best-performing patent-scope classifier is not provided in the supplied passages."
+  ]
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "erp14-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.019256,
+  "input": 7378,
+  "model": "gpt-6.1-sol",
+  "output": 450,
+  "reasoning": 141,
+  "seconds": 10.16
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000852,
+ "data": {
+  "reason": "Answer A directly addresses the 'who do they collaborate with' portion of the prompt by citing evidence regarding supply chains, universities, and research institutions, whereas Answer B only notes domestic vs. overseas partners and then lists an unnecessary gap. Answer A also accurately explains that the research found no significant relationship between specific partner types and patenting engagement.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-compare-6:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001704,
+  "input": 1887,
+  "model": "gemini-3.8-flash",
+  "output": 77,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

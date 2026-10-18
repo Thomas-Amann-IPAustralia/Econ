@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.000674,
+ "data": [
+  {
+   "grade": 1,
+   "id": "p1"
+  }
+ ],
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "judge:judge-v1:gemini-3.8-flash",
+ "schema_name": "grades",
+ "tag": "erp14-1",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001349,
+  "input": 768,
+  "model": "gemini-3.8-flash",
+  "output": 206,
+  "reasoning": 181,
+  "seconds": 0.0
+ }
+}

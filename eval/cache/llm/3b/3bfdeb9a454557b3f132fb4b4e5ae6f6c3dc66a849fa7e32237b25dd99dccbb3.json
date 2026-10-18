@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.6e-05,
+ "data": {
+  "context": "In the Australian IP Report 2026, under “Use of copyright content,” this passage cites 2024 annual reports on payments to copyright rightsholders, including Screenrights’ $50.1 million distributable amount for the audio-visual sector."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0113",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000151,
+  "input": 795,
+  "model": "gpt-6-luna",
+  "output": 144,
+  "reasoning": 79,
+  "seconds": 2.9
+ }
+}

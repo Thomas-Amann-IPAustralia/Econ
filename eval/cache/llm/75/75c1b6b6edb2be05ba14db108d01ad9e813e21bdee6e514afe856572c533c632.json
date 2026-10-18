@@ -1,0 +1,26 @@
+{
+ "cost_usd": 3e-05,
+ "data": {
+  "queries": [
+   "clean energy green technology patenting",
+   "electric vehicle patents Australia",
+   "environmental technology patents innovation"
+  ],
+  "standalone_question": "What evidence do IP Australia’s economic research papers and Australian IP Reports provide on patenting related to clean energy, electric vehicles, or green technology?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-synthesis-8",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 6e-05,
+  "input": 287,
+  "model": "gpt-6-luna",
+  "output": 63,
+  "reasoning": 0,
+  "seconds": 1.44
+ }
+}

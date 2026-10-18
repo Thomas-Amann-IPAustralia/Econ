@@ -1,0 +1,24 @@
+{
+ "cost_usd": 4.5e-05,
+ "data": {
+  "queries": [
+   "2021 growth in Australian patent applications by applicant country"
+  ],
+  "standalone_question": "Among countries that file heavily in Australia, which had the fastest growth in 2021?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr22-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 9e-05,
+  "input": 676,
+  "model": "gpt-6-luna",
+  "output": 45,
+  "reasoning": 0,
+  "seconds": 1.5
+ }
+}

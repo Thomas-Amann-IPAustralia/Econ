@@ -1,0 +1,24 @@
+{
+ "cost_usd": 2.8e-05,
+ "data": {
+  "queries": [
+   "2015 Australian plant breeder's rights foreign registrants country of origin"
+  ],
+  "standalone_question": "Which countries or regions did foreign plant breeder's rights (PBR) registrants in Australia come from in 2015?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr16-5",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 5.6e-05,
+  "input": 287,
+  "model": "gpt-6-luna",
+  "output": 55,
+  "reasoning": 0,
+  "seconds": 1.94
+ }
+}

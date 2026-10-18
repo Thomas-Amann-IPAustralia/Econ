@@ -1,0 +1,78 @@
+{
+ "cost_usd": 0.013533,
+ "data": {
+  "answer": "**Growth in venture capital did not necessarily mean broader access to finance.** The 2024 research notes that VC expanded rapidly during the 2010s, but international evidence suggests investment became increasingly concentrated in a narrow band of technology, notably software and related businesses. This suggests innovative firms outside those areas may not have benefited equally.[1]\n\nOther potential barriers were:\n\n- **Limited financing alternatives.** Innovative entrepreneurial firms have historically struggled to obtain external debt because they lack tangible assets or stable cash flows. An expanding VC market therefore need not resolve their financing difficulties.[2]\n- **Unequal access among founders.** The 2023 Australian IP Report reported that, in 2022, 23 per cent of Australian VC deals included at least one female founder, but those deals received only 10 per cent of total capital. It also cautioned that more research was needed to establish whether funding difficulties contribute to the gender gap in patenting.[3]\n- **Commercialisation constraints beyond funding.** The 2024 report identifies distinct challenges for small innovative firms in acquiring or accessing commercialisation resources. It also explains that startups may develop technologies that larger firms subsequently acquire and commercialise—so successful innovation need not mean the startup itself becomes a large firm.[4]\n- **Wider economic conditions.** The 2024 research notes that the decline in Australia’s proportion of high-growth firms from 2004 to 2014 coincided with slower GDP growth. This is a possible additional explanation, not proof of causation.[5]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "The 2010s saw a rapid expansion of the venture capital (VC) market and the emergence of new forms of financing and support programs. At the same time, international data suggests VC investment is increasingly concentrated on a narrow band of technology, notably in software and related businesses."
+     }
+    ],
+    "text": "VC expanded rapidly in the 2010s, but international evidence suggests increasing concentration in software and related technologies, potentially limiting benefits elsewhere."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "For entrepreneurial firms oriented to innovation, access to capital is vital to realise their high growth potential. Historically, such firms have faced difficulty funding operations through external debt, in the absence of tangible assets or stable cash flows."
+     }
+    ],
+    "text": "Innovative entrepreneurial firms have historically faced debt-financing difficulties because they lack tangible assets or stable cash flows, so VC growth need not resolve their financing barriers."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "In 2022, 23% of Australian venture capital deals included at least one female founder, a record for the sector. However, only 10% of total capital was committed to these deals"
+     },
+     {
+      "evidence": 3,
+      "quote": "More work needs to be done to determine whether the perceived difficulty of obtaining funding to commercialise IP contributes to the gender gap in patenting"
+     }
+    ],
+    "text": "The 2023 report identified unequal Australian VC allocations in 2022 and cautioned that the relationship between funding difficulties and the patenting gender gap required further research."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 16,
+      "quote": "These results reflect the distinct challenges for innovative small firms to acquire or access commercialisation resources."
+     },
+     {
+      "evidence": 8,
+      "quote": "Startups often play a key role in developing aspects of a technology and identifying its commercial applications. Large firms will often scale up and commercialise innovative ideas that they acquire from startups or develop in collaboration with universities."
+     }
+    ],
+    "text": "Small innovative firms face commercialisation-resource constraints, and innovations developed by startups may be acquired and commercialised by larger firms rather than requiring startups themselves to grow large."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Researchers have highlighted the importance of macroeconomic conditions in determining firm growth rates. Majeed et al. (2018) observe that a decline in the HGF proportion in Australia from 2004 to 2014 coincided with a decline in the growth rate of Australia's gross domestic product (GDP)."
+     }
+    ],
+    "text": "The 2024 research identifies macroeconomic conditions as relevant and reports that declining high-growth-firm prevalence coincided with slower GDP growth, without establishing causation."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "note-sc-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.027066,
+  "input": 7043,
+  "model": "gpt-6.1-sol",
+  "output": 1298,
+  "reasoning": 358,
+  "seconds": 20.65
+ }
+}

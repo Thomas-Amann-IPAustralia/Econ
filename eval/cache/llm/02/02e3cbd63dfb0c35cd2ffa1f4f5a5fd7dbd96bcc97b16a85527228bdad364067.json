@@ -1,0 +1,24 @@
+{
+ "cost_usd": 3.7e-05,
+ "data": {
+  "queries": [
+   "2016 decline overseas trade mark applications Australia reasons"
+  ],
+  "standalone_question": "Why did trade mark applications from overseas applicants in Australia fall in 2016?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr17-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 7.5e-05,
+  "input": 285,
+  "model": "gpt-6-luna",
+  "output": 93,
+  "reasoning": 49,
+  "seconds": 1.66
+ }
+}

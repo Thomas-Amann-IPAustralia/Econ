@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000535,
+ "data": {
+  "reason": "Both answers accurately address the question using the same core findings from the 2020 report. Answer A is slightly better because it includes the additional context from the report noting that the 2009 drop occurred within an already volatile pattern of steep growth followed by large declines.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "ipr20-2:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001071,
+  "input": 1093,
+  "model": "gemini-3.8-flash",
+  "output": 67,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

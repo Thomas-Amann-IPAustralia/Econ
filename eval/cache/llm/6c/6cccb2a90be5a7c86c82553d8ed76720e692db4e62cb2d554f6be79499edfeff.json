@@ -1,0 +1,91 @@
+{
+ "cost_usd": 0.01257,
+ "data": {
+  "answer": "**Small businesses that file for IP rights are more likely to achieve high employment growth—but the evidence should not be read as proof that filing itself causes growth.** The SME estimates use regression modelling, while the first-trade-mark employment comparison is descriptive.[1]\n\n- **Higher likelihood of rapid growth:** the 2025 report reiterates that Australian SMEs are **16 per cent more likely** to experience high employment growth after filing than peers without recent filings. This estimate concerns filing generally, not exclusively a first filing.[2]\n- **A stronger association for start-ups filing early:** start-ups that file for at least one IP right in their first year are **twice as likely** to achieve high growth as peers without rights in their first year.[3]\n- **Employment rises after the first trade mark filing:** the 2022 report’s descriptive comparison found flat employment growth before filing, followed by continuous growth among first-time trade mark filers and much less growth among non-filers matched for age, size and industry.[4]\n\nHere, “high growth” means at least **20 per cent annual employment growth over three consecutive years**. The underlying SME study covered around 600,000 businesses active during 2002–2017.[5]\n\nMore recent evidence concerns **first grants rather than first filings**: the 2026 report links Australian start-ups’ first patent grant to a significant employee wage premium and workforce upgrading, likely for commercialisation.[6]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Regression model estimates suggest that SMEs filing for at least one IP right in a year are 16% more likely to achieve high employment growth than non filers."
+     },
+     {
+      "evidence": 8,
+      "quote": "Based on this descriptive data, employment growth is flat in the years before trademark filing both for the filers and non-filers."
+     }
+    ],
+    "text": "The SME growth estimates use regression modelling, and the first-trade-mark employment comparison is descriptive, so these findings should not be treated as proof that filing causes growth."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "After filing for an IP right, Australian SMEs are 16% more likely to experience high employment growth than their peers without recent filings (Zhang, 2021)."
+     },
+     {
+      "evidence": 1,
+      "quote": "SMEs filing for at least one IP right in a year are 16% more likely to achieve high employment growth than non filers."
+     }
+    ],
+    "text": "The 2025 report states that Australian SMEs are 16 per cent more likely to experience high employment growth after filing; the estimate is not restricted to first filings."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Focusing just on startups, those that file for at least one IP right in their first year are twice as likely to achieve high growth than their peers with no rights in their first year."
+     }
+    ],
+    "text": "Start-ups filing for at least one IP right in their first year are twice as likely to achieve high growth as peers without rights in their first year."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 8,
+      "quote": "a group of \"control\" companies that do not use trademarks but are matched to the treated companies for age, size and industry."
+     },
+     {
+      "evidence": 8,
+      "quote": "Based on this descriptive data, employment growth is flat in the years before trademark filing both for the filers and non-filers. After filing there is continuous growth in employment for the trademark filers but much less growth for the control group."
+     }
+    ],
+    "text": "The 2022 descriptive first-trade-mark comparison found flat employment growth before filing and continuous growth afterwards, with much less growth among matched non-filers."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "The present study focused on around 600,000 SMEs active over the period 2002 to 2017. High-growth SMEs were identified as those that achieve at least 20% annual growth in employment over 3 consecutive years."
+     }
+    ],
+    "text": "The SME study covered around 600,000 businesses active during 2002–2017 and defined high growth as at least 20 per cent annual employment growth over three consecutive years."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "For Australian startups, their first patent grant is linked to a significant wage premium for employees and workforce upgrading, likely for commercialisation (Dobson-Keeffe & Falk, 2025)."
+     }
+    ],
+    "text": "The 2026 report links Australian start-ups’ first patent grant, rather than filing, to a significant employee wage premium and workforce upgrading, likely for commercialisation."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "explore-synthesis-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.02514,
+  "input": 6790,
+  "model": "gpt-6.1-sol",
+  "output": 1156,
+  "reasoning": 201,
+  "seconds": 16.98
+ }
+}

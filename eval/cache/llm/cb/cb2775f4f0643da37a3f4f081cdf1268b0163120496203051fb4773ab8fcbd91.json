@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.3e-05,
+ "data": {
+  "context": "In the “Product class focus” section of *Designs Law and Practice* (2019), this passage compares resident and non-resident design filings across countries, including 2016 examples for clothing and telecommunications and computing equipment. It discusses whether geographic proximity may shape differences in product-class focus and calls for further research on geographic clustering."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp08-designs-law-practice:0038",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000146,
+  "input": 1064,
+  "model": "gpt-6-luna",
+  "output": 79,
+  "reasoning": 0,
+  "seconds": 1.44
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.5e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2018, Chapter 6’s analysis of collaborative research grants and businesses’ patent productivity explains how it isolates grant effects: comparing grant recipients with matched nonparticipants and using a fixed-effects panel data model of patent application counts."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2018:0046",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00015,
+  "input": 807,
+  "model": "gpt-6-luna",
+  "output": 139,
+  "reasoning": 74,
+  "seconds": 2.67
+ }
+}

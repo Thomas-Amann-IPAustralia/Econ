@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.8e-05,
+ "data": {
+  "context": "In *The Business Environment of Patenting Firms in Australia* (2024), section 3.2 on business survey data, this passage lists measures of firms’ R&D expenditure and funding sources, including the share funded by firms themselves and by government."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp15-patenting-firms:0016",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000157,
+  "input": 959,
+  "model": "gpt-6-luna",
+  "output": 122,
+  "reasoning": 57,
+  "seconds": 2.18
+ }
+}

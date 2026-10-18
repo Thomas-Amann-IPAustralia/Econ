@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.3e-05,
+ "data": {
+  "context": "In the 2015 Australian Intellectual Property Report, the “Creative wholesaling” section discusses Australian wholesalers’ standard patenting and role in international value chains. It describes Australian entities innovating and investing in IP while outsourcing production overseas, and relates this to Australia’s trade in value added, including exports to the United States in 2009."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2015:0019",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000127,
+  "input": 867,
+  "model": "gpt-6-luna",
+  "output": 80,
+  "reasoning": 0,
+  "seconds": 1.55
+ }
+}

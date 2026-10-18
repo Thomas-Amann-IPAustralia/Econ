@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.4e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2020, the section “Firms that are profitable are more likely to use IP rights” compares profitability among Australian businesses by IP ownership, using profit per invested capital and profit per employee. It discusses differences between non-owners, owners of particular IP rights, and firms holding combinations of patents, trade marks and designs."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2020:0052",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000169,
+  "input": 1279,
+  "model": "gpt-6-luna",
+  "output": 83,
+  "reasoning": 0,
+  "seconds": 2.26
+ }
+}

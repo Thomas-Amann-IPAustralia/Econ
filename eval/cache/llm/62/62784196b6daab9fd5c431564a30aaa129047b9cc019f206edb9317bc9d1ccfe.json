@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.3e-05,
+ "data": {
+  "context": "In *The Business Environment of Patenting Firms in Australia* (2024), Conclusion 5 summarises findings on Australian firms’ patenting and collaboration. It covers patent filing and grant trends over roughly two decades, industry and geographic patterns, and how firm age and size relate to filing and obtaining patents."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp15-patenting-firms:0076",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000166,
+  "input": 1299,
+  "model": "gpt-6-luna",
+  "output": 73,
+  "reasoning": 0,
+  "seconds": 2.08
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000215,
+ "data": {
+  "queries": [
+   "Raising the Bar patent scope methodology",
+   "patent claims narrowness economic research"
+  ],
+  "standalone_question": "How did researchers determine whether Australian patent scope became narrower following the Raising the Bar reforms?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-methods-3",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000215,
+  "input": 242,
+  "model": "gemini-3.5-flash-lite",
+  "output": 57,
+  "reasoning": 0,
+  "seconds": 0.81
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "cost_usd": 5.8e-05,
+ "data": {
+  "queries": [
+   "trade mark filings per business by state and territory"
+  ],
+  "standalone_question": "Which Australian state or territory files the most trade marks relative to its number of businesses?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr25-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000117,
+  "input": 676,
+  "model": "gpt-6-luna",
+  "output": 99,
+  "reasoning": 54,
+  "seconds": 1.57
+ }
+}

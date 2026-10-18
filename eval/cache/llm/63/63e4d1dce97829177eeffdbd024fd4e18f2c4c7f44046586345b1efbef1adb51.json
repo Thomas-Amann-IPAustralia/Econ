@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000228,
+ "data": {
+  "queries": [
+   "Productivity Commission inquiry IP recommendations",
+   "Productivity Commission intellectual property response"
+  ],
+  "standalone_question": "What did the Productivity Commission's inquiry into intellectual property arrangements recommend, and what subsequent actions or responses followed?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-policy-1",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000228,
+  "input": 242,
+  "model": "gemini-3.5-flash-lite",
+  "output": 62,
+  "reasoning": 0,
+  "seconds": 1.11
+ }
+}

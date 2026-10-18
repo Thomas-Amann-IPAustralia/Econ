@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000354,
+ "data": {
+  "queries": [
+   "effect of patent grants on firm size growth international research",
+   "impact of patents on employment and firm scale overseas studies"
+  ],
+  "standalone_question": "What does overseas research say about how a patent grant affects firm size?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr22-5",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000354,
+  "input": 664,
+  "model": "gemini-3.5-flash-lite",
+  "output": 62,
+  "reasoning": 0,
+  "seconds": 0.84
+ }
+}

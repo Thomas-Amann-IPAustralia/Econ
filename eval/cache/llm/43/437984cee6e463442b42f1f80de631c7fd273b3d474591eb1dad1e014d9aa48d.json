@@ -1,0 +1,99 @@
+{
+ "cost_usd": 0.013272,
+ "data": {
+  "answer": "IP Australia is building evidence to support Indigenous economic participation and protection of Indigenous Knowledge, alongside work on international patent transparency and Indigenous-informed decision-making.[1][3][4]\n\n- **Research priorities:** The 2026 report says the Office of the Chief Economist (OCE) is developing evidence to inform Australia’s consideration of the Treaty on Genetic Resources and Associated Traditional Knowledge.[1]\n- **Trade marks and Indigenous businesses:** The OCE is working with the University of Melbourne’s Dilin Duwa Centre for Indigenous Business Leadership to examine the commercial value of trade marks for Indigenous businesses and the potential economic role of trade marks containing Indigenous Knowledge.[2]\n- **Patent disclosure reform:** The 2025 report describes the treaty agreed in May 2024. It requires disclosure of genetic resources and associated traditional knowledge used in inventions, including identification of the Indigenous Peoples or local community supplying that knowledge. It aims to encourage recognition, collaboration and benefit sharing—not a demonstrated outcome yet.[3] The report states that entry into force requires 15 Member States to accede or ratify, and Australian ratification requires steps including parliamentary consideration.[4]\n- **Indigenous-informed decisions:** The 2025 report says IP Australia established a pilot Indigenous Knowledge Panel to better inform decision makers on Indigenous Knowledge and the IP system.[5]\n- **Valuing Indigenous Knowledge:** Earlier work, described in the 2020 report, included commissioning Australian National University research on methods for estimating its market value, to support adequate rewards and ensure owners or custodians are primary beneficiaries.[6]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "A further priority is improving understanding of how the IP system supports Indigenous economic participation and the protection of Indigenous Knowledge."
+     },
+     {
+      "evidence": 1,
+      "quote": "In collaboration with research partners, the OCE is developing evidence to inform Australia's consideration of the Treaty on Genetic Resources and Associated Traditional Knowledge"
+     }
+    ],
+    "text": "The 2026 report identifies Indigenous economic participation and Indigenous Knowledge protection as priorities, with the OCE developing evidence to inform Australia’s consideration of the treaty."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "In collaboration with The University of Melbourne's Dilin Duwa Centre for Indigenous Business Leadership, the OCE is examining the commercial value of trade marks for Indigenous businesses, and the potential economic role for trade marks containing Indigenous Knowledge."
+     }
+    ],
+    "text": "The OCE is collaborating with the University of Melbourne’s Dilin Duwa Centre to examine trade marks’ commercial value for Indigenous businesses and the potential economic role of trade marks containing Indigenous Knowledge."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "In May 2024 a landmark treaty was agreed among members of the World Intellectual Property Organization (WIPO)"
+     },
+     {
+      "evidence": 3,
+      "quote": "The new treaty creates a framework that requires patent applicants to disclose the source of GR and associated TK relied on in an invention."
+     },
+     {
+      "evidence": 2,
+      "quote": "Under the Treaty, when an invention is based on traditional knowledge linked to genetic resources, applicants must identify the Indigenous Peoples or local community that supplied this traditional knowledge."
+     },
+     {
+      "evidence": 3,
+      "quote": "the treaty may facilitate greater collaboration and benefit sharing between traditional custodians and other innovators."
+     }
+    ],
+    "text": "The 2025 report describes a treaty agreed in May 2024 requiring disclosure of genetic resources and associated traditional knowledge, including the supplying Indigenous Peoples or community; recognition, collaboration and benefit sharing are intended rather than demonstrated outcomes."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "The new treaty will enter into force when 15 Member States accede to or ratify it. Treaty ratification in Australia requires various steps including consideration by parliament."
+     }
+    ],
+    "text": "The 2025 report states that treaty entry into force requires 15 Member States to accede or ratify, and Australian ratification involves parliamentary consideration."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "IP Australia has also established a pilot Indigenous Knowledge Panel to ensure that our decision makers are better informed on matters relating to Indigenous Knowledge and the IP system."
+     }
+    ],
+    "text": "The 2025 report says IP Australia established a pilot Indigenous Knowledge Panel to better inform decision makers."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "a report was commissioned from the Australian National University on \"Methods for Estimating the Market Value of Indigenous Knowledge\"."
+     },
+     {
+      "evidence": 5,
+      "quote": "This work will support IP Australia's efforts to ensure that Indigenous Knowledge is adequately rewarded and that the owners or custodians of that knowledge are primary beneficiaries."
+     }
+    ],
+    "text": "The 2020 report describes commissioned Australian National University research on Indigenous Knowledge market valuation to support adequate rewards and primary benefits for owners or custodians."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "explore-policy-8",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.026544,
+  "input": 7262,
+  "model": "gpt-6.1-sol",
+  "output": 1202,
+  "reasoning": 231,
+  "seconds": 17.01
+ }
+}

@@ -1,0 +1,100 @@
+{
+ "cost_usd": 0.0012,
+ "data": [
+  {
+   "grade": 2,
+   "id": "p1"
+  },
+  {
+   "grade": 2,
+   "id": "p2"
+  },
+  {
+   "grade": 3,
+   "id": "p3"
+  },
+  {
+   "grade": 2,
+   "id": "p4"
+  },
+  {
+   "grade": 3,
+   "id": "p5"
+  },
+  {
+   "grade": 3,
+   "id": "p6"
+  },
+  {
+   "grade": 3,
+   "id": "p7"
+  },
+  {
+   "grade": 2,
+   "id": "p8"
+  },
+  {
+   "grade": 2,
+   "id": "p9"
+  },
+  {
+   "grade": 2,
+   "id": "p10"
+  },
+  {
+   "grade": 1,
+   "id": "p11"
+  },
+  {
+   "grade": 1,
+   "id": "p12"
+  },
+  {
+   "grade": 3,
+   "id": "p13"
+  },
+  {
+   "grade": 2,
+   "id": "p14"
+  },
+  {
+   "grade": 3,
+   "id": "p15"
+  },
+  {
+   "grade": 1,
+   "id": "p16"
+  },
+  {
+   "grade": 1,
+   "id": "p17"
+  },
+  {
+   "grade": 3,
+   "id": "p18"
+  },
+  {
+   "grade": 3,
+   "id": "p19"
+  },
+  {
+   "grade": 1,
+   "id": "p20"
+  }
+ ],
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "judge:judge-v1:gemini-3.5-flash-lite",
+ "schema_name": "grades",
+ "tag": "owner-2",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.0024,
+  "input": 5382,
+  "model": "gemini-3.5-flash-lite",
+  "output": 314,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

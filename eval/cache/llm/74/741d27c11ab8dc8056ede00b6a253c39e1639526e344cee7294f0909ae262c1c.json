@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001605,
+ "data": {
+  "reason": "Answer A provides a much wider, more comprehensive synthesis across many different IP Australia studies, directly answering what researchers acknowledge as limitations across their work. Answer B is also good, but its sixth point primarily describes robustness checks rather than an acknowledged limitation, and Answer A covers more distinct methodology and data caveats.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-evidence-1:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.003211,
+  "input": 3936,
+  "model": "gemini-3.8-flash",
+  "output": 69,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

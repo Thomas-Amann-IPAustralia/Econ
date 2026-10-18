@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8e-05,
+ "data": {
+  "context": "In *Drivers of AI investment* (2023), section 2.1, “Aims and objectives,” the report describes its study of AI investment and skills development in Australian companies. It uses LinkedIn job-posting snapshots and Lens patent data to examine AI adoption across company and industry characteristics, and the relationship between AI hiring and patent activity."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "oce-ai-investment:0019",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00016,
+  "input": 1188,
+  "model": "gpt-6-luna",
+  "output": 82,
+  "reasoning": 0,
+  "seconds": 1.5
+ }
+}

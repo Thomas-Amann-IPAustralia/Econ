@@ -1,0 +1,78 @@
+{
+ "cost_usd": 0.012775,
+ "data": {
+  "answer": "A larger venture capital (VC) market does not necessarily mean broader access to finance. The 2024 research notes that, despite rapid VC expansion in the 2010s, international evidence suggests investment became increasingly concentrated in a narrow band of technologies, notably software and related businesses.[1]\n\nOther reasons include:\n\n- **Limited financing alternatives.** Innovative entrepreneurial firms have historically struggled to obtain external debt without tangible assets or stable cash flows. Firms unable to attract VC may therefore also struggle to access other finance needed for growth.[2]\n- **Unequal access among founders.** The 2023 Australian IP Report reported that deals involving at least one female founder represented 23% of Australian VC deals in 2022, but received only 10% of total capital. However, it explicitly said more research was needed to establish whether funding difficulties contribute to the gender gap in patenting.[3]\n- **Commercialisation without independent scale-up.** Small innovators may license or sell their IP to larger firms rather than commercialise inventions themselves. The 2024 research suggests an increasing division of innovative labour could help explain lower scale-up rates: startups generate IP that large firms acquire and commercialise.[4]\n- **Wider economic conditions.** Finance is not the only influence on growth. The research notes that Australia’s declining proportion of high-growth firms from 2004 to 2014 coincided with slower GDP growth—an association, not proof of causation.[5]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "The 2010s saw a rapid expansion of the venture capital (VC) market and the emergence of new forms of financing and support programs. At the same time, international data suggests VC investment is increasingly concentrated on a narrow band of technology, notably in software and related businesses."
+     }
+    ],
+    "text": "VC expanded rapidly in the 2010s, but international evidence suggests investment became increasingly concentrated in software and related technologies rather than broadly available."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "For entrepreneurial firms oriented to innovation, access to capital is vital to realise their high growth potential. Historically, such firms have faced difficulty funding operations through external debt, in the absence of tangible assets or stable cash flows."
+     }
+    ],
+    "text": "Innovative entrepreneurial firms can face limited alternatives to VC because a lack of tangible assets or stable cash flows makes external debt difficult to obtain."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "In 2022, 23% of Australian venture capital deals included at least one female founder, a record for the sector. However, only 10% of total capital was committed to these deals"
+     },
+     {
+      "evidence": 2,
+      "quote": "More work needs to be done to determine whether the perceived difficulty of obtaining funding to commercialise IP contributes to the gender gap in patenting"
+     }
+    ],
+    "text": "Deals with female founders received a disproportionately small share of Australian VC capital in 2022; whether funding difficulties contribute to the patenting gender gap remains unresolved."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Small innovative firms face a strategic choice to either:\n\ncompete directly with market leaders in the product market, commercialising their own inventions\n\ncollaborate with market leaders by licensing or selling their IP."
+     },
+     {
+      "evidence": 5,
+      "quote": "These trends may reflect macroeconomic conditions and structural barriers to growth. They may also reflect an increasing division of innovative labour, with small firms and startups generating IP that is acquired and commercialised by large firms."
+     }
+    ],
+    "text": "Small firms may license or sell IP rather than commercialise independently, and an increasing division of innovative labour is a possible explanation for reduced scale-up."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Researchers have highlighted the importance of macroeconomic conditions in determining firm growth rates. Majeed et al. (2018) observe that a decline in the HGF proportion in Australia from 2004 to 2014 coincided with a decline in the growth rate of Australia's gross domestic product (GDP)."
+     }
+    ],
+    "text": "Macroeconomic conditions may also matter: the decline in Australia's high-growth firm proportion from 2004 to 2014 coincided with slower GDP growth, without establishing causation."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "note-sc-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.02555,
+  "input": 6850,
+  "model": "gpt-6.1-sol",
+  "output": 1185,
+  "reasoning": 237,
+  "seconds": 19.22
+ }
+}

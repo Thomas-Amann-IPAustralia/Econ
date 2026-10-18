@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000109,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2021, Chapter 7’s section on trade mark owners benefiting when tariffs drop, this source note lists the datasets used for analysis of long-term exporters and trade mark activity in the US, Canada, the UK and eight Eurozone markets."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2021:0064",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000218,
+  "input": 860,
+  "model": "gpt-6-luna",
+  "output": 264,
+  "reasoning": 195,
+  "seconds": 3.82
+ }
+}

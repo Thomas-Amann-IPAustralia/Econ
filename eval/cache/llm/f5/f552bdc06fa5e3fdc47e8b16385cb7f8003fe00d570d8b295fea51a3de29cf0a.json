@@ -1,0 +1,24 @@
+{
+ "cost_usd": 3.8e-05,
+ "data": {
+  "queries": [
+   "patent directions to request examination frequency examination request"
+  ],
+  "standalone_question": "What happens when IP Australia directs a patent applicant to request examination, and how often does it issue these directions?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp01-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 7.6e-05,
+  "input": 292,
+  "model": "gpt-6-luna",
+  "output": 93,
+  "reasoning": 43,
+  "seconds": 2.53
+ }
+}

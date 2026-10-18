@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.6e-05,
+ "data": {
+  "context": "In the 2019 report *Designs Law and Practice*, the “Appendix: Datasets and Data-Related Issues” describes labour data sources used to estimate design employment across countries. It identifies the EU Labour Force Survey for Finland, Italy and Switzerland, national surveys for the UK, France and Canada, and the US Occupational Employment Statistics, noting coverage limitations that make some estimates conservative."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp08-designs-law-practice:0052",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000151,
+  "input": 1062,
+  "model": "gpt-6-luna",
+  "output": 90,
+  "reasoning": 0,
+  "seconds": 1.43
+ }
+}

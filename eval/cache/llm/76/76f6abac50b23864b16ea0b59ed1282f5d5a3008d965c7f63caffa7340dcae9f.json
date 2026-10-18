@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000218,
+ "data": {
+  "queries": [
+   "artificial intelligence drivers Australian firms",
+   "AI capability investment patenting"
+  ],
+  "standalone_question": "What drives Australian companies to invest in AI capability, and is this investment related to patenting activity?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-synthesis-4",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000218,
+  "input": 243,
+  "model": "gemini-3.5-flash-lite",
+  "output": 58,
+  "reasoning": 0,
+  "seconds": 0.87
+ }
+}

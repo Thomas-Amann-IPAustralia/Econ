@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.3e-05,
+ "data": {
+  "context": "In *The market for design* (2014), Theme 3 discusses how sellers of design services address market challenges, including risks from weak IP protection. It describes reputation and other signals as supporting trade in high-design services, and groups sellers’ signals into five categories: rigour, rhetoric, rating, roster and referral."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp03-market-for-design:0038",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000146,
+  "input": 1078,
+  "model": "gpt-6-luna",
+  "output": 77,
+  "reasoning": 0,
+  "seconds": 1.61
+ }
+}

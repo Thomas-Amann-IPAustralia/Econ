@@ -1,0 +1,24 @@
+{
+ "cost_usd": 8.9e-05,
+ "data": {
+  "queries": [
+   "In 2021, filings from [country] grew fastest among the leading countries of origin for applications in Australia."
+  ],
+  "standalone_question": "Among the countries with the most filings in Australia, which country’s filings grew fastest in 2021?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr22-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000179,
+  "input": 765,
+  "model": "gpt-6-luna",
+  "output": 204,
+  "reasoning": 141,
+  "seconds": 2.51
+ }
+}

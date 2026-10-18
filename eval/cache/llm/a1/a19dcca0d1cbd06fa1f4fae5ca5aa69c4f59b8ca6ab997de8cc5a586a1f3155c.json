@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000336,
+ "data": {
+  "queries": [
+   "Australian resident trade mark applications overseas Madrid System",
+   "trade marks and exports international filing trends"
+  ],
+  "standalone_question": "How have Australians' trade mark filings overseas changed over time?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "multi-6",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000336,
+  "input": 660,
+  "model": "gemini-3.5-flash-lite",
+  "output": 55,
+  "reasoning": 0,
+  "seconds": 0.92
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "cost_usd": 5.3e-05,
+ "data": {
+  "queries": [
+   "innovation patents SME innovation use and impact",
+   "Innovation patents helped SMEs innovate by X, but evidence on their effectiveness was mixed."
+  ],
+  "standalone_question": "Was the innovation patent achieving its goal of helping small and medium-sized enterprises innovate?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr18-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000105,
+  "input": 761,
+  "model": "gpt-6-luna",
+  "output": 57,
+  "reasoning": 0,
+  "seconds": 1.49
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.1e-05,
+ "data": {
+  "context": "In the Australian IP Report 2026, the “Taking IP global: the Madrid system” section compares direct and Madrid-route trade mark applications in Australia, including overseas applicants and filing trends from 2016 to 2025. It explains the Madrid route and notes that IP Australia adopted WIPO’s Madrid Goods and Services List in March 2024."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0070",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000181,
+  "input": 1036,
+  "model": "gpt-6-luna",
+  "output": 154,
+  "reasoning": 69,
+  "seconds": 2.27
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.000108,
+ "data": {
+  "queries": [
+   "Patent filing and grants as predictors of firm growth"
+  ],
+  "standalone_question": "Does filing for or being granted a patent predict that a firm will grow quickly?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp15-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000216,
+  "input": 764,
+  "model": "gpt-6-luna",
+  "output": 280,
+  "reasoning": 236,
+  "seconds": 2.94
+ }
+}

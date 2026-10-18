@@ -1,0 +1,24 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "queries": [
+   "Overseas applicants from [countries] accounted for the leading design rights filings in Australia in 2020, with [country] ranking first."
+  ],
+  "standalone_question": "Who were the leading overseas applicants for design rights in Australia in 2020?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr21-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000163,
+  "input": 765,
+  "model": "gpt-6-luna",
+  "output": 173,
+  "reasoning": 109,
+  "seconds": 2.27
+ }
+}

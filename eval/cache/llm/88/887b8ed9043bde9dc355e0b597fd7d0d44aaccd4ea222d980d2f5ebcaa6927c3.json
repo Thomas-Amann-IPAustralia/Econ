@@ -1,0 +1,24 @@
+{
+ "cost_usd": 8.8e-05,
+ "data": {
+  "queries": [
+   "Design filings for technology gadgets fell by X per cent during the 2008 financial crisis, with the decline concentrated in particular product categories."
+  ],
+  "standalone_question": "Did the 2008 global financial crisis reduce design filings for technology gadgets?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr20-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000177,
+  "input": 763,
+  "model": "gpt-6-luna",
+  "output": 202,
+  "reasoning": 141,
+  "seconds": 3.22
+ }
+}

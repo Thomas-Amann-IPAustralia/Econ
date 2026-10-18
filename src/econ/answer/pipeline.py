@@ -26,6 +26,7 @@ from econ.answer import prompts
 from econ.answer.check import check
 from econ.answer.providers import Model, ProviderError, Usage
 from econ.answer.schema import Answer, Plan, strict_schema
+from econ.kb.bm25 import tokenize
 from econ.retrieval.index import EmbedderClient, Index
 
 _TAG = re.compile(r"<\s*(/?)\s*(evidence|context|conversation|question|errors|system|instructions?)\b", re.I)
@@ -75,6 +76,34 @@ def context_queries(context: str, k: int) -> list[str]:
     return heads[:k]
 
 
+def rerank_query(question: str, context: str) -> str:
+    """What the reranker compares passages with: the (standalone) question, plus pasted material's headings,
+    since a question like "does the knowledge base agree with this?" says nothing about its topic."""
+    heads = context_queries(context, 3)
+    return " ".join([question, *heads]) if heads else question
+
+
+def rerank_step(svc: Services, ranked: list, query: str) -> dict:
+    """Reorder the first stage's top candidates with the adopted cross-encoder (D-012). If the reranker
+    fails, the first-stage order stands and the event says so, as the keyword fallback does for search."""
+    rc = config.pipeline().reranking
+    if not rc.adopted or not ranked:
+        return {"model": None, "status": "off"}
+    if not getattr(svc.embedder, "configured", False):
+        return {"model": rc.adopted, "status": "not configured; first-stage order"}
+    head = ranked[: rc.depth]
+    try:
+        scores = svc.embedder.rerank(query, [svc.index.chunks[s.row]["text"] for s in head], rc.adopted)
+    except Exception as e:  # noqa: BLE001 - any failure keeps the first-stage order, visibly
+        return {"model": rc.adopted, "status": f"unavailable ({type(e).__name__}); first-stage order"}
+    return {
+        "model": rc.adopted,
+        "status": "ok",
+        "depth": len(head),
+        "ranked": svc.index.reorder(ranked, scores, rc.depth),
+    }
+
+
 def evidence_block(n: int, chunk: dict, doc: dict) -> str:
     pages = chunk["pages"]
     pg = f"{pages[0]}" if len(pages) == 1 else f"{pages[0]}-{pages[-1]}"
@@ -88,7 +117,10 @@ def evidence_block(n: int, chunk: dict, doc: dict) -> str:
 def evidence_view(svc: Services, sel, n: int, queries: list[str]) -> dict:
     c = svc.index.chunks[sel.row]
     d = svc.index.docs[c["doc_id"]]
-    terms = sorted({t for q in queries for t in svc.index.bm25.matched_terms(q, sel.row)})
+    # Matched terms highlight the passage, so only terms in its own text count (a context note, D-013, can
+    # match terms the passage doesn't contain).
+    own = set(tokenize(c["text"]))
+    terms = sorted({t for q in queries for t in svc.index.bm25.matched_terms(q, sel.row) if t in own})
     return {
         "n": n,
         "chunk_id": c["chunk_id"],
@@ -107,6 +139,7 @@ def evidence_view(svc: Services, sel, n: int, queries: list[str]) -> dict:
         "tokens": c["tokens"],
         "merged_rank": sel.merged_rank,
         "merged_score": sel.merged_score,
+        "rerank_score": sel.rerank_score,
         "per_query": {str(k): v for k, v in sel.per_query.items()},
         "matched_terms": terms,
     }
@@ -136,6 +169,8 @@ def run(req: Request, svc: Services) -> Iterator[dict]:
     question = req.question.strip()
     queries = [question]
     standalone = question
+    planned = False
+    prev = ""
     if req.history:
         prev = next((h["text"] for h in reversed(req.history) if h["role"] == "user"), "")
         queries = [f"{prev} {question}".strip()]
@@ -155,13 +190,19 @@ def run(req: Request, svc: Services) -> Iterator[dict]:
                 schema_name="plan",
                 model=p.plan_model,
                 effort=p.plan_effort,
-                max_output_tokens=600,
+                max_output_tokens=scfg.llm.plan_max_output_tokens,
             )
             plan = Plan.model_validate(rep.data)
             usages.append(rep.usage)
             qs = [q.strip() for q in plan.queries if q.strip()][: scfg.answer.max_queries]
             if qs and not any(textcheck.high(textcheck.scan(q)) for q in qs):
-                queries, standalone = qs, plan.standalone_question.strip() or question
+                standalone = plan.standalone_question.strip() or question
+                queries = (
+                    [standalone, *[q for q in qs if q != standalone]]
+                    if scfg.answer.plan_keeps_question
+                    else qs
+                )
+                planned = True
             yield {
                 "event": "plan",
                 "standalone_question": standalone,
@@ -169,6 +210,8 @@ def run(req: Request, svc: Services) -> Iterator[dict]:
                 "usage": rep.usage.__dict__,
             }
         except (ProviderError, ValidationError) as e:
+            if getattr(e, "usage", None):
+                usages.append(e.usage)  # a failed call is still billed, so it is still metered
             yield {
                 "event": "plan",
                 "standalone_question": question,
@@ -191,6 +234,12 @@ def run(req: Request, svc: Services) -> Iterator[dict]:
     t = time.time()
     allowed = svc.index.allowed(req.doc_ids, req.years)
     ranked, traces = svc.index.search(queries, qvecs, allowed=allowed)
+    # The reranker compares passages with the question as asked (as measured, D-012); in a conversation, with
+    # the planner's standalone rewrite, or without a planner, the previous question and this one.
+    asked = (standalone if planned else f"{prev} {question}".strip()) if req.history else question
+    rerank = rerank_step(svc, ranked, rerank_query(asked, req.context))
+    if rerank.get("ranked") is not None:
+        ranked = rerank.pop("ranked")
     chosen = svc.index.context(ranked)
     evidence = [evidence_view(svc, s, i + 1, queries) for i, s in enumerate(chosen)]
     for tr in traces:
@@ -201,6 +250,7 @@ def run(req: Request, svc: Services) -> Iterator[dict]:
         "event": "retrieval",
         "queries": queries,
         "dense": dense_status,
+        "rerank": rerank,
         "traces": traces,
         "evidence": evidence,
         "candidates": len(ranked),
@@ -253,6 +303,8 @@ def run(req: Request, svc: Services) -> Iterator[dict]:
                 max_output_tokens=scfg.llm.max_output_tokens,
             )
         except ProviderError as e:
+            if e.usage:
+                usages.append(e.usage)
             yield {"event": "error", "stage": "answer", "message": str(e)[:300]}
             break
         usages.append(rep.usage)

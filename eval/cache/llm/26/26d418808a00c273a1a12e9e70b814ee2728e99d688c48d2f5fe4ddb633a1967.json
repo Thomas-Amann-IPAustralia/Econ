@@ -1,0 +1,25 @@
+{
+ "cost_usd": 3.9e-05,
+ "data": {
+  "queries": [
+   "trade mark cluttering definition",
+   "trade mark cluttering Australia evidence economic impact"
+  ],
+  "standalone_question": "What is trade mark cluttering, and is it a problem in Australia?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-synthesis-10",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 7.7e-05,
+  "input": 285,
+  "model": "gpt-6-luna",
+  "output": 97,
+  "reasoning": 49,
+  "seconds": 1.97
+ }
+}

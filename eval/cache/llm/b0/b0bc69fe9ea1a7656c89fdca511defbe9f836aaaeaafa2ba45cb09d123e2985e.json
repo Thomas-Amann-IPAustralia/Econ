@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.000331,
+ "data": {
+  "queries": [
+   "top overseas destination countries for Australian trade mark applications"
+  ],
+  "standalone_question": "Which countries did Australians most often seek trade mark protection in overseas around 2014?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr16-2",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000331,
+  "input": 669,
+  "model": "gemini-3.5-flash-lite",
+  "output": 52,
+  "reasoning": 0,
+  "seconds": 0.9
+ }
+}

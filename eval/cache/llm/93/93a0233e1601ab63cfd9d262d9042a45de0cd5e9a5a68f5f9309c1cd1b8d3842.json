@@ -1,0 +1,24 @@
+{
+ "cost_usd": 8.4e-05,
+ "data": {
+  "queries": [
+   "Australian applicants filed X patent applications through the PCT, X trade mark applications through Madrid, and X design applications through Hague in [year]."
+  ],
+  "standalone_question": "How much do Australians use international filing systems such as the PCT, Madrid and Hague systems?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-policy-7",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000168,
+  "input": 766,
+  "model": "gpt-6-luna",
+  "output": 183,
+  "reasoning": 117,
+  "seconds": 2.31
+ }
+}

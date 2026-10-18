@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000347,
+ "data": {
+  "queries": [
+   "global financial crisis impact on design applications",
+   "design filings during economic downturns and shocks"
+  ],
+  "standalone_question": "Did the 2008 financial crisis impact design filings for technology gadgets?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr20-2",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000347,
+  "input": 666,
+  "model": "gemini-3.5-flash-lite",
+  "output": 59,
+  "reasoning": 0,
+  "seconds": 0.89
+ }
+}

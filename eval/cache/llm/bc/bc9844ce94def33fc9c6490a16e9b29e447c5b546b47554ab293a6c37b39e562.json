@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.4e-05,
+ "data": {
+  "context": "In *The business environment of patenting firms in Australia* (2024), Table 13 in the collaboration landscape examines whether collaboration-type breadth is associated with filed, granted and retired patent counts among Australian businesses in 2020–2021. The table reports OLS regression estimates, controlling for business age, industry, firm size, state and year."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp15-patenting-firms:0069",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000169,
+  "input": 1270,
+  "model": "gpt-6-luna",
+  "output": 83,
+  "reasoning": 0,
+  "seconds": 1.59
+ }
+}

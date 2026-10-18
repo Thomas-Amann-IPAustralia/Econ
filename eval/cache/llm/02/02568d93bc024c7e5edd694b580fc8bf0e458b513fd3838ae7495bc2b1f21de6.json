@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.6e-05,
+ "data": {
+  "context": "In the Australian IP Report 2023, this passage is part of the plant breeder’s rights (PBR) discussion on recovery in international filings. It describes the post-2019 trend in non-resident PBR applications in Australia through 2022, including a rebound in 2020 and lower filing levels than before 2019."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2023:0068",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000152,
+  "input": 849,
+  "model": "gpt-6-luna",
+  "output": 134,
+  "reasoning": 51,
+  "seconds": 1.93
+ }
+}

@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000219,
+ "data": {
+  "queries": [
+   "country of origin patent filings Australia",
+   "top foreign patent applicants Australia trends"
+  ],
+  "standalone_question": "Which countries file the most patent applications in Australia, and how has this changed in recent years?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-trend-4",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000219,
+  "input": 240,
+  "model": "gemini-3.5-flash-lite",
+  "output": 59,
+  "reasoning": 0,
+  "seconds": 1.25
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2022, the “IP rights and enterprise growth” section introduces IP Australia research on registered patents, trade marks and designs and the growth of Australian SMEs. It describes business microdata covering about 600,000 SMEs from 2002 to 2017 and defines high-growth SMEs as those with at least 20% annual employment growth for three consecutive years."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2022:0076",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00016,
+  "input": 1142,
+  "model": "gpt-6-luna",
+  "output": 91,
+  "reasoning": 0,
+  "seconds": 1.59
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "cost_usd": 8e-05,
+ "data": {
+  "queries": [
+   "Year-to-year changes in plant breeder’s rights numbers can be volatile because totals are small and individual applications have a large effect."
+  ],
+  "standalone_question": "Why should year-to-year swings in plant breeder’s rights numbers be interpreted with caution?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr26-5",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00016,
+  "input": 766,
+  "model": "gpt-6-luna",
+  "output": 166,
+  "reasoning": 105,
+  "seconds": 2.44
+ }
+}

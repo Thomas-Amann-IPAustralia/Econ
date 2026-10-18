@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000366,
+ "data": {
+  "queries": [
+   "patent examination pendency duration timeframes IP Australia",
+   "requesting expedited examination or deferment options patents"
+  ],
+  "standalone_question": "How long does patent examination take at IP Australia and what options do applicants have to change the timing?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-policy-6",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000366,
+  "input": 671,
+  "model": "gemini-3.5-flash-lite",
+  "output": 66,
+  "reasoning": 0,
+  "seconds": 0.91
+ }
+}

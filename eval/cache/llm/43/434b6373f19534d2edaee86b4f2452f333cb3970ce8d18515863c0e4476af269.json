@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.6e-05,
+ "data": {
+  "context": "In the welcome to the Australian IP Report 2026, the Albanese Government describes how Australia’s IP rights system and business use of patents and trade marks relate to productivity, competitiveness and resilience amid global trade uncertainty. It highlights 2025 application trends and Australian innovation in sectors relevant to the Future Made in Australia agenda."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0000",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000132,
+  "input": 945,
+  "model": "gpt-6-luna",
+  "output": 76,
+  "reasoning": 0,
+  "seconds": 1.37
+ }
+}

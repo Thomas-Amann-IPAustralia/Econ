@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000348,
+ "data": {
+  "queries": [
+   "international comparison design intensity and rights",
+   "patent filing rates compared to other countries"
+  ],
+  "standalone_question": "Where is Australia falling behind international peers in its use of intellectual property according to the reports?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-strategy-1",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000348,
+  "input": 668,
+  "model": "gemini-3.5-flash-lite",
+  "output": 59,
+  "reasoning": 0,
+  "seconds": 0.96
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000111,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2018, Chapter 7, “Location Names in Trade Marks: What’s in a Name?”, these notes explain geographical indications and certification trade marks, give examples of matching place names to trade marks, and identify Nice classes used in the chapter’s analysis of food and beverage trade marks."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2018:0047",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000222,
+  "input": 1049,
+  "model": "gpt-6-luna",
+  "output": 235,
+  "reasoning": 155,
+  "seconds": 3.41
+ }
+}

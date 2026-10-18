@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.6e-05,
+ "data": {
+  "context": "The 2015 IP Australia Economic Research Paper 04, *The Australian Mining Industry: More than Just Shovels and Being the Lucky Country*, Executive Summary describes a patent-based study of Australian mining innovation from 1994 to 2011. It explains the use of IPGOD and international patent data to identify mining inventions and compare patent filing by METS firms, operating miners and publicly funded entities."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp04-mining-innovation:0005",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000171,
+  "input": 1245,
+  "model": "gpt-6-luna",
+  "output": 94,
+  "reasoning": 0,
+  "seconds": 1.69
+ }
+}

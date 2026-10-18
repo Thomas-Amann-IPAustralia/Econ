@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.000105,
+ "data": {
+  "queries": [
+   "Furniture designer Henry Wilson relied on trade marks because design registration offered limited protection for his furniture products."
+  ],
+  "standalone_question": "Why did furniture designer Henry Wilson rely on trade marks instead of design registration?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp03-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000209,
+  "input": 765,
+  "model": "gpt-6-luna",
+  "output": 266,
+  "reasoning": 213,
+  "seconds": 4.12
+ }
+}

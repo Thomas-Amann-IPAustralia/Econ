@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.6e-05,
+ "data": {
+  "context": "In the Australian IP Report 2025, the section on the value of licensing through collecting societies describes 2024 distributions to copyright owners in the music and audio-visual sectors by Australian collecting societies."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2025:0091",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000151,
+  "input": 817,
+  "model": "gpt-6-luna",
+  "output": 138,
+  "reasoning": 84,
+  "seconds": 2.06
+ }
+}

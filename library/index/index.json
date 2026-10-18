@@ -3,12 +3,14 @@
   "chunks": 1896,
   "dim": 768,
   "embedder": "arctic-m-v1.5",
+  "enrichment": "S384-noprefix-nocite.luna-enrich-v1",
+  "enrichment_sha256": "aec90599a175f127",
   "files": {
-    "bm25.npz": "f928b8dbfdfaab42",
-    "bm25.vocab.json": "7ee77f1f77aaac95",
-    "chunks.jsonl": "a5ece4d11ddec877",
+    "bm25.npz": "1f7b8a389d504332",
+    "bm25.vocab.json": "943e57f59ab47285",
+    "chunks.jsonl": "d2b565450dc3dffb",
     "docs.json": "af355e79100875f0",
-    "vectors.f16.npy": "ce54e0f6221b9b0f"
+    "vectors.f16.npy": "b38e7ebdab2d691c"
   },
   "hf_id": "Snowflake/snowflake-arctic-embed-m-v1.5",
   "onnx_sha256": "bc6f7662487a0796e6f86229c8e5c3ab2f7059e08e0bb2f524125273f72171c4",

@@ -1,0 +1,52 @@
+{
+ "cost_usd": 0.007971,
+ "data": {
+  "answer": "A product’s appearance is eligible for design protection if it is **new and distinctive**—meaning it is dissimilar in overall impression to designs that constitute prior art.[1]\n\nProtection covers visual features such as **shape, configuration, pattern or ornamentation**.[2] It does not cover how the product feels, what it is made from or how it works.[3]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "To be eligible for protection, a design must be new and distinctive - dissimilar in overall impression to designs that constitute prior art."
+     }
+    ],
+    "text": "To be eligible for design protection, a product’s appearance must be new and distinctive—dissimilar in overall impression to designs that constitute prior art."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "Design rights protect the visual features of products - shape, configuration, pattern and ornamentation"
+     }
+    ],
+    "text": "Design protection covers visual features such as shape, configuration, pattern or ornamentation."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "excludes the feel of the product, what it's made from or how it works."
+     }
+    ],
+    "text": "Design protection does not cover how the product feels, what it is made from or how it works."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "ipr26-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.015942,
+  "input": 6271,
+  "model": "gpt-6.1-sol",
+  "output": 340,
+  "reasoning": 0,
+  "seconds": 4.52
+ }
+}

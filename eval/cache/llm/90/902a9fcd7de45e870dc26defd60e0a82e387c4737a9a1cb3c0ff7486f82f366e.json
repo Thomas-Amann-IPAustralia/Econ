@@ -1,0 +1,116 @@
+{
+ "cost_usd": 0.017098,
+ "data": {
+  "answer": "Researchers acknowledge several limitations, particularly around data completeness, causal attribution, measurement accuracy and how widely findings apply:\n\n- **Incomplete data and uneven samples.** The 2024 computer-implemented inventions study identifies data truncation and patent-family identification problems in EPO data, alongside small early-period samples at IP Australia. Some analyses therefore use a restricted 2010–17 period to reduce these problems.[1]\n\n- **Difficulty isolating court-decision effects.** The same study cannot disentangle the effects of *Alice* and *Research Affiliates*. It also warns that defining treatment by post-2014 filing dates may underestimate negative effects where earlier applications were examined after 2014. Long EPO examination periods may also help explain apparently positive grant effects.[2]\n\n- **Uncertain attribution to reforms.** The 2024 Raising the Bar study identifies a decline in broader Australian patents beginning around 2010. Researchers cannot establish whether this reflected anticipation of the reforms or unrelated factors: the former would mean the full reform effect was larger, while the latter would mean some estimated effects were not attributable to the reforms.[3]\n\n- **Imperfect measurement of patent scope.** That study warns that earlier measures, such as claim word count, may have poor accuracy—potentially leaving conclusions inconclusive. It presents machine learning combined with expert input as a way to improve assessment.[4]\n\n- **Small samples and limited generalisability.** The Raising the Bar study says some manual-assessment estimates likely suffer from small-sample bias and prefers estimates from the larger machine-learning dataset. Its manually assessed patents also do not cover all IP Australia examination sections, limiting conclusions about patents outside the sample.[5]\n\n- **Potential omitted-variable bias and sensitivity to sample selection.** The 2021 exporter study addresses these concerns through additional tests using changes rather than levels, and by varying samples: restricting country markets to those with complete trade mark information, excluding the largest exporters, and excluding very small export observations. These are robustness checks, rather than an admission that the findings necessarily fail.[6]\n\n- **Limits of co-filing as a collaboration indicator.** The 2022 Australian Intellectual Property Report cautions that co-filing misses technology transfer and IP trading within R&D and commercialisation partnerships. Foreign co-applicants may also be parents or subsidiaries of Australian companies, so co-filing needs careful interpretation as evidence of international collaboration.[7]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "EPO data appeared to have some truncation and other issues related to the identification of patent families"
+     },
+     {
+      "evidence": 1,
+      "quote": "some of the analyses focused only on a subset of 2010-17 period in order to minimise the effect of data truncation (caused by long pendency period particularly at the EPO) and small sample size in the early period"
+     }
+    ],
+    "text": "The 2024 computer-implemented inventions study acknowledges EPO data truncation and patent-family identification problems, plus small early-period samples, and restricts some analyses to 2010–17."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "It is not possible in our analysis to disentangle the possible differential effect of \"Alice\" and \"Research Affiliates\"."
+     },
+     {
+      "evidence": 3,
+      "quote": "the use of post-2014 filing year to determine treatment period may mean we underestimated the negative impact of the 2014 court decision if patent applications filed prior to 2014 were only examined after 2014."
+     },
+     {
+      "evidence": 3,
+      "quote": "The positive effect at the EPO is possibly caused by the pending period issue we discussed earlier"
+     }
+    ],
+    "text": "The computer-implemented inventions study cannot separate Alice from Research Affiliates effects; filing-date treatment definitions may underestimate negative effects, while EPO pendency may explain positive estimates."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "there are other factors (which may or may not be related to the RTB reform) which, starting around 2010, led to a decline in the proportion of broader AU patents."
+     },
+     {
+      "evidence": 4,
+      "quote": "If these unknown factors were related to the RTB reforms, then the full impact of the RTB reforms would be higher than indicated by the estimates presented in the report. However, if these factors were unrelated to the RTB reforms, then some components of the estimated impacts of RTB may not be attributable to the reforms."
+     }
+    ],
+    "text": "The 2024 Raising the Bar study cannot determine whether a decline beginning around 2010 reflected anticipation or unrelated factors, which could respectively increase or reduce the effect attributable to reforms."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "supervised Machine Learning (ML) methods combined with human expert inputs can be used to improve the quality of assessing patent scope"
+     },
+     {
+      "evidence": 4,
+      "quote": "there is evidence that relying on previous methods of assessing patent scope such as claim word count may ultimately result in poor accuracy. The implications of poor accuracy can have real consequences as our conclusions would be largely inconclusive."
+     }
+    ],
+    "text": "Earlier patent-scope measures such as claim word count may have poor accuracy and leave conclusions inconclusive; combining machine learning with expert input offers improved assessment."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 8,
+      "quote": "the estimates based on the Manual Assessment data presented in columns (1) - (3) are likely to suffer from small sample bias and that the impact estimates based on the much larger sample of the corresponding ML Classifier data shown on columns (4) - (6) are to be preferred."
+     },
+     {
+      "evidence": 4,
+      "quote": "Given that our sample of manually assessed patents did not cover the full spectrum of examination sections within IP Australia, further work may be needed to confirm how the reforms influenced the scope of patents outside of our sample."
+     }
+    ],
+    "text": "The Raising the Bar study acknowledges likely small-sample bias in manual estimates, prefers the larger machine-learning sample, and cautions that its manual sample does not cover all examination sections."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 16,
+      "quote": "we conduct additional tests where we include key variables in differences rather than levels to address concerns over omitted variable bias."
+     },
+     {
+      "evidence": 16,
+      "quote": "we vary our estimation sample in three ways: (1) by focusing on a restricted set of country markets for which we have complete information on the trade mark activity of firms, (2) by dropping the largest exporters (all firm-country-product-year observations in the top 1% for annual export revenue) from the samples, and (3) by dropping firms with small annual export values"
+     }
+    ],
+    "text": "The 2021 exporter study conducts robustness tests addressing omitted-variable concerns and sample selection, including complete-information markets and exclusions of very large and very small export observations; these tests do not themselves establish that results fail."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 17,
+      "quote": "R&D and commercialisation partnerships can involve technology transfer and IP trading that is not reflected in co-filing data. Further, foreign entities listed on resident applications may be parents or subsidiaries of Australian companies, so interpreting co-filing as evidence of international collaboration requires some care."
+     }
+    ],
+    "text": "The 2022 report cautions that co-filing omits some partnership technology transfer and IP trading, while foreign applicants may be related companies rather than evidence of international collaboration."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "explore-evidence-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.034196,
+  "input": 8428,
+  "model": "gpt-6.1-sol",
+  "output": 1734,
+  "reasoning": 216,
+  "seconds": 23.62
+ }
+}

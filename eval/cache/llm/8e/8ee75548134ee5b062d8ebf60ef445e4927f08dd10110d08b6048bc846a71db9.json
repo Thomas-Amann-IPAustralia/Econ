@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000209,
+ "data": {
+  "queries": [
+   "mining sector IP",
+   "resources sector patents",
+   "mining innovation intellectual property"
+  ],
+  "standalone_question": "What role does intellectual property play in Australia's mining sector?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-synthesis-5",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000209,
+  "input": 237,
+  "model": "gemini-3.5-flash-lite",
+  "output": 55,
+  "reasoning": 0,
+  "seconds": 0.95
+ }
+}

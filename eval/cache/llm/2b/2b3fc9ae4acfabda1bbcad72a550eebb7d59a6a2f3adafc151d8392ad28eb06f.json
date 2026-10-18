@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.0001,
+ "data": {
+  "queries": [
+   "The study established a relative patent scope benchmark using [method] to train its model."
+  ],
+  "standalone_question": "How did the Raising the Bar study establish a benchmark of relative patent scope for training its model?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp14-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000199,
+  "input": 769,
+  "model": "gpt-6-luna",
+  "output": 244,
+  "reasoning": 189,
+  "seconds": 3.13
+ }
+}

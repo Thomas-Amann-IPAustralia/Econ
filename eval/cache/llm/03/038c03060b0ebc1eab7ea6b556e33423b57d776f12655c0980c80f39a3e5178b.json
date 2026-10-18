@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.6e-05,
+ "data": {
+  "context": "In *Exporter responses to shocks: The role of trade marks* (2021), the export revenue section tests robustness to changing the estimation sample. Table 12 reports revenue-response estimates for firms with long or short export histories, using restricted country markets and samples that drop the largest or smallest export values, and includes tariff, real exchange rate and trade mark measures."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp11-exporters-trade-marks:0095",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000192,
+  "input": 1503,
+  "model": "gpt-6-luna",
+  "output": 84,
+  "reasoning": 0,
+  "seconds": 2.76
+ }
+}

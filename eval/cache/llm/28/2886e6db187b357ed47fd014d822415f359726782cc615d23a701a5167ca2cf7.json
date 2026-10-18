@@ -1,0 +1,44 @@
+{
+ "cost_usd": 0.001159,
+ "data": [
+  {
+   "grade": 2,
+   "id": "p1"
+  },
+  {
+   "grade": 1,
+   "id": "p2"
+  },
+  {
+   "grade": 1,
+   "id": "p3"
+  },
+  {
+   "grade": 0,
+   "id": "p4"
+  },
+  {
+   "grade": 0,
+   "id": "p5"
+  },
+  {
+   "grade": 1,
+   "id": "p6"
+  }
+ ],
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "judge:judge-v1:gemini-3.8-flash",
+ "schema_name": "grades",
+ "tag": "explore-compare-4",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002318,
+  "input": 2625,
+  "model": "gemini-3.8-flash",
+  "output": 93,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

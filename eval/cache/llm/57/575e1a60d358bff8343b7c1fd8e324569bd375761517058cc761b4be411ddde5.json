@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.6e-05,
+ "data": {
+  "context": "In the 2020 report *Intellectual property rights, business profitability and competition in the Australian economy*, Appendix A explains the economic rationale for intellectual property rights. It describes how IPRs protect costly-to-create knowledge that is generally non-rival and non-excludable, and why secrecy may not reliably prevent others from using it."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp10-ip-profitability-competition:0065",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000151,
+  "input": 1116,
+  "model": "gpt-6-luna",
+  "output": 79,
+  "reasoning": 0,
+  "seconds": 1.55
+ }
+}

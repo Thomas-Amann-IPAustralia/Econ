@@ -1,0 +1,25 @@
+{
+ "cost_usd": 9.4e-05,
+ "data": {
+  "queries": [
+   "patenting and firm productivity growth over time",
+   "Historical evidence links patenting to X productivity growth and economic performance across Australian firms over time."
+  ],
+  "standalone_question": "Is there historical evidence that patents contributed to the growth of Australia’s economy?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr25-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000188,
+  "input": 760,
+  "model": "gpt-6-luna",
+  "output": 223,
+  "reasoning": 162,
+  "seconds": 2.67
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000981,
+ "data": {
+  "reason": "Both answers accurately address the question with supported claims from the IP Australia reports. Answer A is slightly better because it includes the additional relevant metric of total pendency from Australian filing to final acceptance (2.8 years) alongside the 1.3-year substantive examination figure, providing a fuller picture of overall application timing.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-policy-6:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001963,
+  "input": 2248,
+  "model": "gemini-3.8-flash",
+  "output": 74,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

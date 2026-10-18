@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.3e-05,
+ "data": {
+  "context": "In the 2014 report *The Market for Design: Insights from Interviews with Australian Firms*, the Introduction’s Background and Motivation section considers why Australian design registrations have low visibility and growth, and whether design rights are useful only in certain contexts or alongside other IP rights and firms’ management practices. The passage introduces the project’s investigation of design protection and how firms use design."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp03-market-for-design:0005",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000145,
+  "input": 1016,
+  "model": "gpt-6-luna",
+  "output": 86,
+  "reasoning": 0,
+  "seconds": 1.67
+ }
+}

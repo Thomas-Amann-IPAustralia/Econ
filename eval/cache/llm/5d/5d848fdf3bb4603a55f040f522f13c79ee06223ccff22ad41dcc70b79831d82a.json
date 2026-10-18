@@ -1,0 +1,21 @@
+{
+ "cost_usd": 4.8e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2015, the “Innovation patent” subsection of the patents appendix explains Australia’s innovation patent, also known as a utility model, including its application fee, examination requirements, term and relationship to standard patent protection."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2015:0025",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 9.7e-05,
+  "input": 670,
+  "model": "gpt-6-luna",
+  "output": 61,
+  "reasoning": 0,
+  "seconds": 1.36
+ }
+}

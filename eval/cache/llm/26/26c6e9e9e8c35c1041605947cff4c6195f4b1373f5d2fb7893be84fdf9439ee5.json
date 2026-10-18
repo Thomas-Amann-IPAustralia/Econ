@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.7e-05,
+ "data": {
+  "context": "In the Australian IP Report 2024 section on the Centre of Data Excellence (CODE), this passage describes the Patent Analytics Hub’s use of global patent data to inform government policy and decisions. It covers its 2023 analyses of AI, quantum and other critical technologies, collaboration on seven technology fields, and planned support for agencies in 2024."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2024:0125",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000155,
+  "input": 1140,
+  "model": "gpt-6-luna",
+  "output": 82,
+  "reasoning": 0,
+  "seconds": 1.77
+ }
+}

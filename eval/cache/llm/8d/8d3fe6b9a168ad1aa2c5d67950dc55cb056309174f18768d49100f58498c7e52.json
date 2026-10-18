@@ -1,0 +1,26 @@
+{
+ "cost_usd": 5.7e-05,
+ "data": {
+  "queries": [
+   "small businesses AI specialist employment subsequent hiring",
+   "AI investment drivers firm size specialist employment",
+   "Small businesses employing AI specialists are more likely to hire additional AI specialists over time, with the likelihood varying by firm size and prior AI investment."
+  ],
+  "standalone_question": "Do small businesses that already employ AI specialists continue to hire more AI specialists?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "oce-ai-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000114,
+  "input": 763,
+  "model": "gpt-6-luna",
+  "output": 76,
+  "reasoning": 0,
+  "seconds": 1.5
+ }
+}

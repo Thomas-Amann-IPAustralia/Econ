@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000101,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2018, this passage covers trade mark filing statistics: Australian applications and classes in 2017, including the most-used classes, and limits in WIPO’s 2016 international filing data due to missing Chinese data."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2018:0017",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000202,
+  "input": 1217,
+  "model": "gpt-6-luna",
+  "output": 161,
+  "reasoning": 96,
+  "seconds": 2.05
+ }
+}

@@ -131,6 +131,39 @@ def eval_retrieval(
     )
 
 
+@app.command("eval-retrieval-v2")
+@loud
+def eval_retrieval_v2(
+    stage: str = typer.Option("stage1", help="stage1 | stage2 | final"),
+    judgments: str = typer.Option("judged-v1", help="Judgments file under eval/judgments/."),
+) -> None:
+    """Grid retrieval-v2 on the judged test set (no API calls; reads cached plans, notes and reranker scores)."""
+    from econ.evalr import grid2, judged
+    from econ.manifest import write_text_atomic
+
+    with run("eval-retrieval-v2", _hash(), stage=stage, judgments=judgments) as r:
+        needs = judged.load()
+        r.counts["needs"] = len(needs)
+        if stage == "stage1":
+            res = grid2.run_stage1(needs, judgments)
+            out = config.path("reports/retrieval-v2-stage1.md")
+            write_text_atomic(out, grid2.render_stage1(res, needs))
+            r.add_output(out)
+            ch = res["choice"]
+            r.counts.update(settings=len(res["settings"]), chosen=ch["chosen"])
+        elif stage in ("stage2", "final"):
+            res = (
+                grid2.run_stage2(needs, judgments) if stage == "stage2" else grid2.run_final(needs, judgments)
+            )
+            out = config.path(f"reports/retrieval-v2-{stage}.md")
+            write_text_atomic(out, res["report"])
+            r.add_output(out)
+            ch = res["choice"]
+        else:
+            raise StageError(f"unknown stage {stage}")
+    typer.echo(f"{stage}: chosen {ch['chosen']} ({ch['primary']} dev {ch['dev'][ch['chosen']]:.3f})")
+
+
 @app.command()
 @loud
 def index(
@@ -166,11 +199,29 @@ def index(
             fetch_model(key, mdir)
         emb = OnnxEmbedder(key, mdir, threads=4)
         chunks = load_chunks(strategy)
-        vecs = emb.encode([c["embed_text"] for c in chunks], kind="doc")
+        texts = [c["embed_text"] for c in chunks]
+        enrichment = cfg.retrieval.enrichment
+        notes_sha = None
+        if enrichment:
+            # D-013: each chunk's context note goes in front of its text, for both lanes; it is stored
+            # beside the chunk as `context_note` and never shown as evidence.
+            from econ.kb import enrich
+
+            notes = enrich.load(enrichment)
+            missing = [c["chunk_id"] for c in chunks if c["chunk_id"] not in notes]
+            if missing:
+                raise StageError(
+                    f"{len(missing)} chunk(s) have no context note in {enrichment}", item=missing[0]
+                )
+            for c in chunks:
+                c["context_note"] = notes[c["chunk_id"]]
+            texts = [(c["context_note"] + "\n\n" + c["embed_text"]).strip() for c in chunks]
+            notes_sha = sha256_file(config.path("library/enrich") / f"{enrichment}.jsonl")[:16]
+        vecs = emb.encode(texts, kind="doc")
         out = config.path(out)
         out.mkdir(parents=True, exist_ok=True)
         np.save(out / "vectors.f16.npy", vecs.astype(np.float16))
-        bm = BM25.build([c["embed_text"] for c in chunks])
+        bm = BM25.build(texts)
         bm.save(out / "bm25.npz")
         write_text_atomic(
             out / "chunks.jsonl",
@@ -209,6 +260,8 @@ def index(
             "onnx_sha256": emb.meta["onnx_sha256"],
             "dim": int(vecs.shape[1]),
             "chunks": len(chunks),
+            "enrichment": enrichment,
+            "enrichment_sha256": notes_sha,
             "built_from": r.upstream["chunk"],
             "files": {f: sha256_file(out / f)[:16] for f in files},
         }
@@ -248,7 +301,7 @@ def verify_embedder(
         q_onnx = onnx.encode(qs, kind="query")
         q_st = embed.encode(key, qs, kind="query")
         rows = list(range(0, len(idx.chunks), max(1, len(idx.chunks) // sample)))[:sample]
-        texts = [idx.chunks[i]["embed_text"] for i in rows]
+        texts = [idx.indexed_text(i) for i in rows]
         d_st = embed.encode(key, texts, kind="doc", cache=False)
         cos_q = (q_onnx * q_st).sum(1)
         cos_d = (idx.vecs[rows] * d_st).sum(1)
@@ -322,6 +375,79 @@ def verify_embedder(
     typer.echo("\n".join(lines))
 
 
+@app.command("verify-search")
+@loud
+def verify_search(
+    plans: str = typer.Option("luna-plan-v2", help="Cached plans standing in for the live planner."),
+    setting: str = typer.Option(
+        "", help="The measured setting to match (default: grid retrieval-v2's choice)."
+    ),
+) -> None:
+    """Show that the served search reproduces the measured one (SOP §19): the serving index (ONNX, float16),
+    ONNX query vectors and the service's query rule, fed by cached plans, against the measurement path,
+    on every judged need. Writes reports/search-verification.md."""
+    import json as _json
+
+    import numpy as np
+
+    from econ.answer.pipeline import context_queries
+    from econ.evalr import grid2, judged
+    from econ.evalr import plans as plans_mod
+    from econ.manifest import write_text_atomic
+    from econ.retrieval.index import Index
+
+    idx = Index()
+    key = idx.meta["embedder"]
+    setting = (
+        setting or _json.loads(config.path("eval/runs/retrieval-v2/final/choice.json").read_text())["chosen"]
+    )
+    with run("verify-search", _hash(), plans=plans, setting=setting) as r:
+        needs = judged.load()
+        grades = grid2.grades_by_need("judged-v1")
+        emb = _LocalEmbedder(key)
+        cached = plans_mod.load(plans)
+        a_cfg = config.service().answer
+        s = grid2.named(setting)
+        o10, o20, nd_serve, nd_meas = [], [], [], []
+        for n in needs:
+            p = cached[n.id]
+            if setting.startswith("raw"):
+                qs = [n.question, *context_queries(n.context, a_cfg.max_queries - 1)]
+            else:
+                qs = list(p["queries"])[: a_cfg.max_queries]
+                if a_cfg.plan_keeps_question:
+                    qs = [p["standalone"], *[q for q in qs if q != p["standalone"]]]
+            ranked, _ = idx.search(qs, emb.embed(qs, key, idx.vecs.shape[1]))
+            served = [idx.chunks[x.row]["chunk_id"] for x in idx.context(ranked)]
+            measured = [grid2.systems.chunks()[x]["chunk_id"] for x in grid2.context_rows(s, n)]
+            o10.append(len(set(served[:10]) & set(measured[:10])) / 10)
+            o20.append(len(set(served[:20]) & set(measured[:20])) / 20)
+            rows = {c["chunk_id"]: i for i, c in enumerate(grid2.systems.chunks())}
+            nd_serve.append(grid2.per_need([rows[c] for c in served], n, grades.get(n.id, {}))["ndcg@10"])
+            nd_meas.append(grid2.per_need([rows[c] for c in measured], n, grades.get(n.id, {}))["ndcg@10"])
+        lines = [
+            "# Search verification",
+            "",
+            f"Serving index `{idx.meta['strategy']}` + `{idx.meta['embedder']}` (ONNX `{idx.meta['onnx_sha256'][:16]}`, "
+            f"float16), context notes `{idx.meta.get('enrichment')}`; query rule from config/service.yaml "
+            f"(plan_keeps_question={a_cfg.plan_keeps_question}), fed by the cached plans `{plans}`; against the "
+            f"measured setting `{setting}` (sentence-transformers, float32). {len(needs)} judged needs. "
+            "Generated by `econ verify-search`.",
+            "",
+            "| Check | Result |",
+            "|---|---|",
+            f"| Top-10 overlap, served vs measured context | mean {np.mean(o10):.3f}, min {min(o10):.1f} |",
+            f"| Top-20 overlap | mean {np.mean(o20):.3f}, min {min(o20):.2f} |",
+            f"| ndcg@10 (judged), served / measured | {np.mean(nd_serve):.4f} / {np.mean(nd_meas):.4f} |",
+            f"| Needs whose top 10 differ at all | {sum(1 for x in o10 if x < 1)} of {len(needs)} |",
+        ]
+        out = config.path(config.pipeline().paths.reports) / "search-verification.md"
+        write_text_atomic(out, "\n".join(lines) + "\n")
+        r.add_output(out)
+        r.counts.update(top10_overlap=float(np.mean(o10)), top20_overlap=float(np.mean(o20)))
+    typer.echo("\n".join(lines))
+
+
 @app.command("lock-prompts")
 def lock_prompts() -> None:
     """Record the current prompts and schemas in prompts/versions.lock (for a new prompt version only)."""
@@ -388,6 +514,15 @@ class _LocalEmbedder:
 
     def embed(self, texts, expect_model, expect_dim):
         return self.model.encode(texts, kind="query")
+
+    def rerank(self, query, passages, expect_model):
+        from econ.reranker import OnnxReranker
+
+        if getattr(self, "rr", None) is None:
+            self.rr = OnnxReranker(
+                expect_model, config.path(config.pipeline().paths.models) / "rerank-onnx" / expect_model
+            )
+        return self.rr.score(query, passages)
 
     def ping(self):
         return self.health

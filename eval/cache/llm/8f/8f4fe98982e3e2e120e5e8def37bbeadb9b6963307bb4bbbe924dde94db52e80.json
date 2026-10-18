@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000323,
+ "data": {
+  "queries": [
+   "Australian residents filing patents overseas",
+   "international patent applications by Australian applicants"
+  ],
+  "standalone_question": "Are Australian applicants filing more or fewer patent applications overseas?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-trend-8",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000323,
+  "input": 659,
+  "model": "gemini-3.5-flash-lite",
+  "output": 50,
+  "reasoning": 0,
+  "seconds": 0.81
+ }
+}

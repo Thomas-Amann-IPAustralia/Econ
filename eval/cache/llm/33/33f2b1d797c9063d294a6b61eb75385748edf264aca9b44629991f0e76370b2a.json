@@ -1,0 +1,25 @@
+{
+ "cost_usd": 4.8e-05,
+ "data": {
+  "queries": [
+   "patent applications by applicant country of origin recent trends",
+   "patent filings leading countries year-on-year changes"
+  ],
+  "standalone_question": "Which countries file the most patents in Australia, and has the ranking or country mix shifted recently?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-trend-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 9.6e-05,
+  "input": 675,
+  "model": "gpt-6-luna",
+  "output": 56,
+  "reasoning": 0,
+  "seconds": 1.75
+ }
+}

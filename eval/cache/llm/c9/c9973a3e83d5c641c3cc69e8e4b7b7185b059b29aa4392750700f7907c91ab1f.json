@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.3e-05,
+ "data": {
+  "context": "In the 2023 report *Drivers of AI investment*, section 4.1 on industry discusses LinkedIn job-post data as a basis for comparing knowledge-intensive sectors, noting that the report does not make geographical comparisons. It gives examples of benchmarking Australian firms against firms abroad or mapping IP policy effects across Australian locations."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "oce-ai-investment:0029",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000145,
+  "input": 1076,
+  "model": "gpt-6-luna",
+  "output": 75,
+  "reasoning": 0,
+  "seconds": 1.28
+ }
+}

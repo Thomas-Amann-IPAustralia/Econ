@@ -1,0 +1,166 @@
+{
+ "cost_usd": 0.011307,
+ "data": {
+  "answer": "The publications link AI adoption with firms’ innovation and patenting activity, but the research examines **associations rather than establishing that patents cause AI adoption**. The 2023 economic study uses hiring of AI-skilled employees as a proxy for AI capacity building, linking LinkedIn firm and employment data with international patent records.[1]\n\n### AI adoption and innovation in firms\n- **Adoption is widespread but uneven.** The 2023 research found AI capacity across most Australian industries, particularly information and communication technologies and professional services. SMEs were generally less focused on adoption than larger established businesses, although highly specialised technical start-ups focused on AI development were emerging.[2]\n- **Patent holders are more likely to build AI capability.** The 2023 Australian IP Report identifies patent ownership as a good predictor of AI capability building. Adoption was strongly associated with patenting in Physics, which includes computer technologies. The report suggests this may indicate that firms use patents to capture returns from developing AI systems.[3]\n- **Evidence of radical recombination is limited.** The same report found no evidence that AI adopters tended to patent across more diverse technical fields. It cautiously suggests that, as then applied, AI may have been more important for automating operations than for radical recombinant innovation.[4]\n\n### What patent data show\n- **Australian AI patenting was growing from a low base.** The 2022 report found strong growth in filings in Australia over 2015–19, but only 1,343 patent families had been filed here—less than 2 per cent of global filings in the selected AI areas. It cautions that patents are not the only protection mechanism and that some overseas-origin families were not yet reflected in Australia’s 2019 figures.[5]\n- **Australian applicants were applying AI to practical problems.** They filed 156 AI patent families over 2015–19, including 86 filed in Australia. Applications included productivity, healthcare, agriculture and energy—for example, embryo selection, weed detection and solar power forecasting.[6]\n- **Analysis has continued.** The 2025 report records publication in 2024 of an overview of Australian AI patenting trends for 2015–22 and updated interactive visualisations; the supplied passage does not give the resulting figures.[7]\n\n### Implications for research and policy\nThe 2023 economic research recommends monitoring AI **beyond patents**, using complementary data to understand adoption and innovation. It also proposes targeted consultation with AI-related SMEs and younger companies, and connecting AI leaders and laggers to facilitate knowledge transfer.[8]\n\nIts capability-mapping approach could connect research strengths with firms seeking related technologies and skills, and help tailor investment and collaboration initiatives by industry, location and business type.[9]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "We then correlate AI adoption with patent activity to explore the importance of IP to these firms. We use the hiring of AI-skilled employees as a proxy for AI capacity building such as inward technology transfer and AI adoption."
+     },
+     {
+      "evidence": 1,
+      "quote": "For this report, we create a novel database that links international patent data from the Lens patent database with firm microdata constructed from LinkedIn's Jobs, Company, and People datasets."
+     }
+    ],
+    "text": "The 2023 study examines correlations, not established causal effects, using AI-skilled hiring as a proxy and linking LinkedIn data with patent records."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "What we find is that AI capacity has been developed across most industries in Australia, but capacity is more pronounced in industries with a strong technology focus such as information and communication technologies and professional services."
+     },
+     {
+      "evidence": 3,
+      "quote": "The study found that small and medium enterprise are generally less focused on AI adoption than larger established businesses. However, it identified the emergence of highly specialised, technical start-ups focused on AI development in Australia."
+     }
+    ],
+    "text": "AI capacity was present across most industries, strongest in technology-focused industries; SMEs generally lagged larger firms, but specialised AI start-ups were emerging."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "For these businesses - as for the overall sample - having a patent was a good predictor of whether they were engaged in building AI capability: businesses with a stronger innovation and patent focus adopt AI at a higher rate. Adoption was strongly associated with patenting focused on the Physics field, which encompasses computer technologies."
+     },
+     {
+      "evidence": 3,
+      "quote": "This may indicate that businesses use patents to capture returns from developing AI systems."
+     }
+    ],
+    "text": "Patent ownership predicted AI capability building, particularly Physics patenting, potentially reflecting use of patents to capture returns from AI development."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 19,
+      "quote": "To the extent that AI is being applied to innovate across domains, it might be expected that AI adopters will tend to patent across diverse technical fields. The QUT study found no evidence for this."
+     },
+     {
+      "evidence": 19,
+      "quote": "However, as currently applied, AI may be more important for automating operations than radical recombinant innovation."
+     }
+    ],
+    "text": "There was no evidence of more technically diverse patenting among AI adopters, and AI might then have mattered more for automation than radical recombination."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 17,
+      "quote": "As shown in Figure P7, the global growth trend in the select AI areas was mirrored by strong growth in patent filings in Australia from 2015 to 2019."
+     },
+     {
+      "evidence": 17,
+      "quote": "While AI patenting in Australia exhibits a strong growth trend, only 1,343 patent families have been filed in Australia, less than 2% of global filings."
+     },
+     {
+      "evidence": 17,
+      "quote": "Patents are not the only way in which AI inventions can be protected"
+     },
+     {
+      "evidence": 17,
+      "quote": "many patent families with a priority application filed in other jurisdictions will not yet have been filed in Australia and so these patent families are not yet reflected in Australia's value for 2019."
+     }
+    ],
+    "text": "The 2022 report found strong growth in Australian AI filings over 2015–19, with 1,343 families and less than 2 per cent of global filings, subject to protection-choice and timing caveats."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 11,
+      "quote": "Australian applicants filed a total of 156 patent families in AI technologies over the period 2015-19, with 86 (just over half) of these filed in Australia."
+     },
+     {
+      "evidence": 2,
+      "quote": "Australian patentees are applying key AI technologies to healthcare, productivity, energy and agriculture."
+     },
+     {
+      "evidence": 11,
+      "quote": "Presagen (3 patent families) is applying AI to advance women's medicine, including improving the selection of embryos that will lead to successful pregnancies."
+     },
+     {
+      "evidence": 11,
+      "quote": "Photonic Detection Systems (two families) has patented technology that mimics the human eye to distinguish plants from weeds and reduce herbicide application."
+     },
+     {
+      "evidence": 11,
+      "quote": "CSIRO has filed AI patents for machine vision algorithms to track and predict cloud motion for solar power forecasting."
+     }
+    ],
+    "text": "Australian applicants filed 156 AI patent families during 2015–19, 86 in Australia, with applications in productivity, healthcare, agriculture and energy."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "In 2024, Data and Analytics published an overview of Australian patenting trends in Artificial Intelligence (AI) technologies 2015-2022 and updated the previously released interactive visualisations on AI technologies, a field included in the Australian Government's Critical Technologies List."
+     }
+    ],
+    "text": "The 2025 report records a 2024 overview of Australian AI patenting for 2015–22 and updated visualisations, without presenting resulting figures in the supplied passage."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 13,
+      "quote": "it highlights the importance of monitoring the growth of AI beyond the traditional patent regime, exploiting alternative methods to track the adoption of AI and its application to innovation."
+     },
+     {
+      "evidence": 13,
+      "quote": "This involves engaging with key players in AI adoption, such as AI-related SMEs and younger companies, and understanding their engagement with AI and the IP system."
+     },
+     {
+      "evidence": 13,
+      "quote": "This would include connecting leaders and laggers (especially from smaller AI-focused companies with larger companies and AI-lagging SMEs) to facilitate knowledge transfer."
+     }
+    ],
+    "text": "The research recommends monitoring beyond patents, targeted consultation with AI SMEs and younger firms, and linking AI leaders and laggers for knowledge transfer."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 8,
+      "quote": "The presented work provides information on where to focus such investments - with respect to industries as well as locations."
+     },
+     {
+      "evidence": 8,
+      "quote": "mapping emerging and established firm capabilities and formal innovative activity can be used to connect sites of R&D strength with firms actively demonstrating need for related technology and skills."
+     },
+     {
+      "evidence": 8,
+      "quote": "Strategic initiatives can be tailored for different industries, and designed for different types of businesses, including SMEs, large enterprises, national and multinational corporations."
+     }
+    ],
+    "text": "Capability mapping can connect research strengths with firms needing technologies and skills and target initiatives by industry, location and business type."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "multi-7",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 6973,
+  "cost_usd": 0.022613,
+  "input": 3,
+  "model": "gpt-6.1-sol",
+  "output": 2191,
+  "reasoning": 307,
+  "seconds": 30.01
+ }
+}

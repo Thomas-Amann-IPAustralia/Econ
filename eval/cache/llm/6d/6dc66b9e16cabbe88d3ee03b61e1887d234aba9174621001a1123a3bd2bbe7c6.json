@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "context": "In *The business environment of patenting firms in Australia* (2024), Conclusion 5 summarises findings on patenting, firm turnover, collaboration and R&D. This passage discusses how patent retirement relates to turnover growth, Australian and overseas R&D collaboration, and R&D expenditure and funding in relation to filed, granted and retired patents."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp15-patenting-firms:0077",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000159,
+  "input": 1190,
+  "model": "gpt-6-luna",
+  "output": 80,
+  "reasoning": 0,
+  "seconds": 1.56
+ }
+}

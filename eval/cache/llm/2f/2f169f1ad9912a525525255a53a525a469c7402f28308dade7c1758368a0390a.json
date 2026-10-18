@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.4e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2022, the section on leading applicants in AI patents describes Atlassian’s machine-learning patent applications for gesture and text recognition and database queries, and notes that it has not filed its AI-related patents in Australia."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2022:0023",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000148,
+  "input": 845,
+  "model": "gpt-6-luna",
+  "output": 126,
+  "reasoning": 62,
+  "seconds": 2.05
+ }
+}

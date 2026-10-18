@@ -1,0 +1,140 @@
+{
+ "cost_usd": 0.015262,
+ "data": {
+  "answer": "AI is showing up in patents both **as the technology being protected** and **as a tool that may help people prepare filings**.[1][7]\n\n- **Rapid growth in AI inventions:** The 2022 report examined three areas—AI algorithms and hardware accelerators, machine learning, and natural language processing. Worldwide, 81,913 patent families were filed in these areas during 2015–19, with the annual total roughly doubling each year. A patent family groups related applications sharing a priority application.[2]\n- **Australia was a small but growing destination:** The same analysis identified 1,343 AI patent families filed in Australia—less than 2 per cent of global filings. Australian filings grew strongly during 2015–19, although the report cautioned that some overseas-origin families had not yet reached Australia, making the 2019 count incomplete.[3]\n- **Australian inventors also sought protection overseas:** Australian applicants filed 156 AI patent families during 2015–19, of which 86 were filed in Australia. Companies accounted for 113 families, compared with 21 from universities.[4]\n- **Applications span practical industry problems:** Examples included Atlassian’s machine learning for gesture and text recognition and neural-network database queries; medical applications involving embryo selection and seizure detection; agricultural weed identification; and CSIRO’s solar-power forecasting.[5]\n- **AI adopters have a distinctive patenting focus:** The 2023 research found that companies hiring AI employees were statistically more focused on Physics-class patents, including computing and application-specific ICT. The report suggested this *may* reflect commercial applications of AI—not an established causal effect of AI adoption.[6]\n- **AI-assisted filing is another emerging channel:** The 2026 report described digital and AI tools as potentially lowering drafting and search costs. In 2025, new filers accounted for 63 per cent of provisional applicants and self-filers for 52 per cent. These trends were described as consistent with reduced entry costs, rather than proof that AI caused the increases.[7]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "IP Australia's Patent Analytics Hub has analysed the evolution of patents for these key AI technologies in the aggregate."
+     },
+     {
+      "evidence": 17,
+      "quote": "For smaller firms and individuals, these tools can reduce initial drafting and search costs, encouraging new filers to engage with the patent system."
+     }
+    ],
+    "text": "AI appears both as patented technology and as a tool that may assist patent drafting and search."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "These are (1) AI algorithms and hardware accelerators, (2) machine learning and (3) natural language processing."
+     },
+     {
+      "evidence": 2,
+      "quote": "From 2015 to 2019, 81,913 unique patent families were filed worldwide relating to the three identified AI technologies (a patent family is a set of patent applications relating to the same or similar technical content that share one 'priority' application). The total number of AI patent families has roughly doubled each year over the period."
+     }
+    ],
+    "text": "The 2022 analysis covered three AI areas and found 81,913 worldwide patent families during 2015–19, with annual totals roughly doubling; families group applications sharing a priority application."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "the global growth trend in the select AI areas was mirrored by strong growth in patent filings in Australia from 2015 to 2019."
+     },
+     {
+      "evidence": 1,
+      "quote": "many patent families with a priority application filed in other jurisdictions will not yet have been filed in Australia and so these patent families are not yet reflected in Australia's value for 2019."
+     },
+     {
+      "evidence": 1,
+      "quote": "only 1,343 patent families have been filed in Australia, less than 2% of global filings."
+     }
+    ],
+    "text": "Australia received 1,343 AI patent families, less than 2 per cent globally, with strong growth during 2015–19 but incomplete 2019 coverage because of filing lags."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "Australian applicants filed a total of 156 patent families in AI technologies over the period 2015-19, with 86 (just over half) of these filed in Australia."
+     },
+     {
+      "evidence": 4,
+      "quote": "Companies account for 113 patent families, compared to only 21 filed by universities"
+     }
+    ],
+    "text": "Australian applicants filed 156 AI patent families during 2015–19, including 86 in Australia; companies accounted for 113 families and universities for 21."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 15,
+      "quote": "Atlassian has filed patent applications in machine learning for gesture and text recognition and querying databases using neural network models."
+     },
+     {
+      "evidence": 6,
+      "quote": "including improving the selection of embryos that will lead to successful pregnancies."
+     },
+     {
+      "evidence": 6,
+      "quote": "applies algorithms to detect and predict seizures."
+     },
+     {
+      "evidence": 6,
+      "quote": "has patented technology that mimics the human eye to distinguish plants from weeds and reduce herbicide application."
+     },
+     {
+      "evidence": 6,
+      "quote": "CSIRO has filed AI patents for machine vision algorithms to track and predict cloud motion for solar power forecasting."
+     }
+    ],
+    "text": "Australian examples include Atlassian's recognition and database technologies, embryo selection, seizure detection, weed identification and CSIRO solar forecasting."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 18,
+      "quote": "We only find statistical significance for G (Physics), suggesting that (on average) those companies currently hiring AI employees are more focused on innovations/markets in this domain."
+     },
+     {
+      "evidence": 7,
+      "quote": "This class includes subclasses such as 'Computing; Calculating or Counting' (G06) and 'ICT Specially Adapted for Specific Application Fields' (G16)."
+     },
+     {
+      "evidence": 7,
+      "quote": "It may also indicate a value-added focus on applying AI to commercialisation"
+     }
+    ],
+    "text": "The 2023 research found a statistically greater Physics-class patent focus among AI-hiring companies; commercial application of AI was a possible interpretation, not an established causal effect."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 17,
+      "quote": "This pattern is consistent with reduced entry costs and faster drafting and search enabled by digital tools, including artificial intelligence (AI) systems."
+     },
+     {
+      "evidence": 17,
+      "quote": "the proportion of provisional applicants who are 'new filers' - having never filed for patents before - jumped to 63% in 2025"
+     },
+     {
+      "evidence": 17,
+      "quote": "the proportion of provisional applicants who are 'selffilers' - applying without representation of a patent attorney - jumped to 52% in 2025"
+     }
+    ],
+    "text": "The 2026 report linked digital and AI tools to potentially lower drafting and search costs, describing 2025 new-filer and self-filer shares of 63 and 52 per cent as consistent with reduced entry costs, not proof of AI causation."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "explore-trend-11",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.030524,
+  "input": 6337,
+  "model": "gpt-6.1-sol",
+  "output": 1785,
+  "reasoning": 354,
+  "seconds": 25.65
+ }
+}

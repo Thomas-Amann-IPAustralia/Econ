@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.8e-05,
+ "data": {
+  "context": "In the 2014 Report on patent backlogs, inventories and pendency, the “Directed vs. Voluntary Examination Requests” section compares when applicants requested patent examination and the resulting acceptance rates for applications filed from 1995 to 2008. It explains the contrast between requests made after IP Australia directed applicants to seek examination and requests made voluntarily."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp01-patent-backlogs:0022",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000156,
+  "input": 1153,
+  "model": "gpt-6-luna",
+  "output": 82,
+  "reasoning": 0,
+  "seconds": 1.73
+ }
+}

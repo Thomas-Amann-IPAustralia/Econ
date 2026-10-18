@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000107,
+ "data": {
+  "context": "In the “What is a patent?” section of the Australian IP Report 2024, this passage defines standard patents and explains their role in innovation and technical disclosure. It also discusses Australian patent filings in 2023 and how inflation, rising interest rates and weak trade growth affected filing activity, particularly by US firms."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2024:0040",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000215,
+  "input": 1008,
+  "model": "gpt-6-luna",
+  "output": 229,
+  "reasoning": 152,
+  "seconds": 2.74
+ }
+}

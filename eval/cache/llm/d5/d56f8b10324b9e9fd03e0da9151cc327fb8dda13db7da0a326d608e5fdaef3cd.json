@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.3e-05,
+ "data": {
+  "context": "In *The business environment of patenting firms in Australia* (2024), this passage reports a result from the regression analysis of patenting and total R&D expenditure. Using Australian businesses observed in IPLORD and surveyed in BERD across survey years from 2011 to 2020, it states that the percentage of R&D funds from the business’s own resources is significantly negatively correlated with the number of granted patents."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp15-patenting-firms:0072",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000167,
+  "input": 1190,
+  "model": "gpt-6-luna",
+  "output": 96,
+  "reasoning": 0,
+  "seconds": 1.58
+ }
+}

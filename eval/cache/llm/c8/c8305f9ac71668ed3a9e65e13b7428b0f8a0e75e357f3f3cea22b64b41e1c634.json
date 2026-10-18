@@ -1,0 +1,24 @@
+{
+ "cost_usd": 9.2e-05,
+ "data": {
+  "queries": [
+   "Australian resident patent applications increased in 2016 despite a decline in total patent filings, with resident filings rising by X per cent."
+  ],
+  "standalone_question": "Did Australian residents file more patent applications in 2016 even though total filings fell?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr17-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000183,
+  "input": 766,
+  "model": "gpt-6-luna",
+  "output": 212,
+  "reasoning": 150,
+  "seconds": 2.45
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2022, in “The economic contribution of PBR users in Australia,” the passage reports economic activity measures for firms applying for plant breeder’s rights (PBR) and describes how PBR supports cultivar investment and international transfers. It also notes that, since Australia introduced PBR in 1987, about 55% of applications came from overseas, especially the US and the Netherlands."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2022:0063",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00016,
+  "input": 1115,
+  "model": "gpt-6-luna",
+  "output": 96,
+  "reasoning": 0,
+  "seconds": 1.76
+ }
+}

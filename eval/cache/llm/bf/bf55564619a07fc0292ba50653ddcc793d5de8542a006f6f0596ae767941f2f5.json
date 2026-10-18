@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.4e-05,
+ "data": {
+  "context": "In *The market for design: insights from interviews with Australian firms* (2014), Section 3, “Key Findings,” this passage introduces findings from interviews with buyers and sellers about design-led differentiation and intellectual property rights. It notes that firms see formal IP protection as playing a limited role in their market strategies."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp03-market-for-design:0015",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000149,
+  "input": 1118,
+  "model": "gpt-6-luna",
+  "output": 75,
+  "reasoning": 0,
+  "seconds": 1.66
+ }
+}

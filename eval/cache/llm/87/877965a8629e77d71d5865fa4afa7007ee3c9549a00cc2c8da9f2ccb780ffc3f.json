@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.7e-05,
+ "data": {
+  "context": "In *The business environment of patenting firms in Australia* (2024), Introduction: the report outlines its analysis of Australian firms’ patent activity and collaboration using BLADE, IPLORD, BERD and BCS data. It explains that the estimates describe statistical relationships, not causation, and previews the report’s sections."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp15-patenting-firms:0003",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000154,
+  "input": 1153,
+  "model": "gpt-6-luna",
+  "output": 78,
+  "reasoning": 0,
+  "seconds": 2.21
+ }
+}

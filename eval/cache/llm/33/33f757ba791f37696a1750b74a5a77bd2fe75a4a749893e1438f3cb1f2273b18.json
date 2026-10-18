@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000207,
+ "data": {
+  "queries": [
+   "Raising the Bar reforms patent impact",
+   "Raising the Bar Act economic effects"
+  ],
+  "standalone_question": "What were the Raising the Bar reforms and what effect did they have?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-policy-2",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000207,
+  "input": 239,
+  "model": "gemini-3.5-flash-lite",
+  "output": 54,
+  "reasoning": 0,
+  "seconds": 0.93
+ }
+}

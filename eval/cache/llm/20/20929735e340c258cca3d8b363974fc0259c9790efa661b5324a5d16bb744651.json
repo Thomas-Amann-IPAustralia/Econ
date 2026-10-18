@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000339,
+ "data": {
+  "queries": [
+   "patent applications by state of origin",
+   "trade mark filing statistics across states and territories"
+  ],
+  "standalone_question": "How do Australian states and territories differ in patent and trade mark activity?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-compare-7",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000339,
+  "input": 664,
+  "model": "gemini-3.5-flash-lite",
+  "output": 56,
+  "reasoning": 0,
+  "seconds": 0.87
+ }
+}

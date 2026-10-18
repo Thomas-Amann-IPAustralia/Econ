@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000345,
+ "data": {
+  "queries": [
+   "economic contribution of businesses using plant breeder rights",
+   "plant breeder rights filing statistics applicants performance"
+  ],
+  "standalone_question": "What is the economic contribution of businesses that use plant breeder's rights?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-synthesis-13",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000345,
+  "input": 665,
+  "model": "gemini-3.5-flash-lite",
+  "output": 58,
+  "reasoning": 0,
+  "seconds": 0.87
+ }
+}

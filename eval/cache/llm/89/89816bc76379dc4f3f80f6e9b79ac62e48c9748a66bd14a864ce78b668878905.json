@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.9e-05,
+ "data": {
+  "context": "In the Australian IP Report 2026 section on productivity and the performance of the IP system, this passage describes the OCE’s research on how IP rights affect Australian firms’ performance, productivity, economic growth, entry, scaling and participation in international markets."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2026:0122",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000138,
+  "input": 813,
+  "model": "gpt-6-luna",
+  "output": 114,
+  "reasoning": 49,
+  "seconds": 1.84
+ }
+}

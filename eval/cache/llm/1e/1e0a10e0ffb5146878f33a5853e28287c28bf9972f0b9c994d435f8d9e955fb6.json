@@ -1,0 +1,24 @@
+{
+ "cost_usd": 4.2e-05,
+ "data": {
+  "queries": [
+   "future research directions research limitations unanswered questions"
+  ],
+  "standalone_question": "What areas do the researchers say need more research?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-strategy-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 8.4e-05,
+  "input": 670,
+  "model": "gpt-6-luna",
+  "output": 34,
+  "reasoning": 0,
+  "seconds": 1.4
+ }
+}

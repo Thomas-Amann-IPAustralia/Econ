@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000194,
+ "data": {
+  "queries": [
+   "registered designs design protection use",
+   "designer reliance on IP rights"
+  ],
+  "standalone_question": "Do designers rely on registered designs to protect their work?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-synthesis-9",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000194,
+  "input": 237,
+  "model": "gemini-3.5-flash-lite",
+  "output": 49,
+  "reasoning": 0,
+  "seconds": 1.01
+ }
+}

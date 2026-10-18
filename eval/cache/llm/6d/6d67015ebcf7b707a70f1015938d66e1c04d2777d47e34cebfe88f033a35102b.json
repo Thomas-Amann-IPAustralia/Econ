@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001076,
+ "data": {
+  "reason": "Both answers accurately cover the foundational BLADE data comparing overall ownership and portfolio combinations. Answer B is broader and more informative, incorporating evidence on how small and large firms differ in IP trends over time and the distinct strategic roles patents play in commercialisation between small and large businesses.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-compare-1:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002152,
+  "input": 2550,
+  "model": "gemini-3.8-flash",
+  "output": 64,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

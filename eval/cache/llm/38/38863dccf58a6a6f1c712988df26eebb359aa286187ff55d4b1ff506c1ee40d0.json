@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.1e-05,
+ "data": {
+  "context": "In the “Collaborative Research Grants Lead to Better IP Outcomes” section of the Australian Intellectual Property Report 2018, this passage introduces publicly funded research organisations in Australia and government research investment in 2016–17, including funding through institutions and competitive grants from the ARC and NHMRC."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2018:0024",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000181,
+  "input": 928,
+  "model": "gpt-6-luna",
+  "output": 177,
+  "reasoning": 104,
+  "seconds": 2.41
+ }
+}

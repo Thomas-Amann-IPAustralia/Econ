@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "context": "In *Drivers of AI Investment* (2023), section 5.2 recommends frequent or scheduled longitudinal collection of company and employee data to track AI skills, mobility and knowledge flows over time. It describes retrieving job postings for the report’s AI-hiring and general-hiring companies using LinkedIn’s Voyager API."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "oce-ai-investment:0068",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000159,
+  "input": 1196,
+  "model": "gpt-6-luna",
+  "output": 78,
+  "reasoning": 0,
+  "seconds": 1.38
+ }
+}

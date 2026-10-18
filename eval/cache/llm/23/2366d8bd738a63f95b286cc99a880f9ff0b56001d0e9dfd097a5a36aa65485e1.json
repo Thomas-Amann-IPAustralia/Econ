@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001094,
+ "data": {
+  "reason": "Both answers are strong and cite relevant IP Australia research accurately. Answer A is slightly better because it directly addresses patent scope as an explicit competition issue (highlighted in the narrative), covering both the 2024 discussion on broad versus narrow patents and the 2026 findings on the Raising the Bar reforms.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-evidence-4:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002188,
+  "input": 2547,
+  "model": "gemini-3.8-flash",
+  "output": 74,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

@@ -1,0 +1,62 @@
+{
+ "cost_usd": 0.010281,
+ "data": {
+  "answer": "**Yes, some do—but registration alone is not enough to enforce a design right.** The 2018 report says applicants often rely on registration’s “shielding effect” until enforcement is needed; enforcement requires examination and certification by IP Australia.[1]\n\nUse is not universal. The 2023 report identified around **590 active Australian businesses holding a domestic design right in 2020**. The proportion of active businesses holding design rights had increased from 0.011 per cent in 2010–11 to 0.016 per cent in 2019–20.[2] Research published in 2019 also identified Australian industries that appeared to underutilise the designs system relative to their design labour intensity.[3]\n\nThe passages do not establish what proportion of designers rely on registered designs, or how important registration is compared with other protection strategies.",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 20,
+      "quote": "A design right is only enforceable if, after registration, the design is examined and certified by IP Australia."
+     },
+     {
+      "evidence": 20,
+      "quote": "Applicants do not usually opt for voluntary examination of design rights. They often rely on the shielding effect of a registration until there is a need to enforce their right."
+     }
+    ],
+    "text": "Some applicants rely on registration’s shielding effect, but examination and certification are required to enforce a design right."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 19,
+      "quote": "In Australia, around 590 active businesses held a domestic design right in 2020."
+     },
+     {
+      "evidence": 19,
+      "quote": "as a proportion of all active Australian businesses, design rights holders have increased by around a third, from 0.011% in 2010-11 to 0.016% in 2019-20."
+     }
+    ],
+    "text": "The 2023 report identified around 590 active Australian businesses holding domestic design rights in 2020, with the share of active businesses holding rights rising from 0.011 per cent to 0.016 per cent between 2010–11 and 2019–20."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 13,
+      "quote": "In the Australian context, we identify industries which appear to underutilise the designs system, given their design labour intensity."
+     }
+    ],
+    "text": "Research published in 2019 identified Australian industries that appeared to underutilise the designs system relative to their design labour intensity."
+   }
+  ],
+  "coverage": "partial",
+  "gaps": [
+   "The passages do not quantify the proportion of designers who rely on registered designs or compare their reliance on registration with other protection strategies."
+  ]
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "explore-synthesis-9",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.020562,
+  "input": 5896,
+  "model": "gpt-6.1-sol",
+  "output": 877,
+  "reasoning": 348,
+  "seconds": 14.24
+ }
+}

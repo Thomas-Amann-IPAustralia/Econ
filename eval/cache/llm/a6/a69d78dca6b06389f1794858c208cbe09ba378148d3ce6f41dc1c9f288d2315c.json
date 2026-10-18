@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000325,
+ "data": {
+  "queries": [
+   "provisional patent application protection and benefits",
+   "provisional patents filing date priority period"
+  ],
+  "standalone_question": "What protection does a provisional patent application provide?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr15-5",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000325,
+  "input": 659,
+  "model": "gemini-3.5-flash-lite",
+  "output": 51,
+  "reasoning": 0,
+  "seconds": 0.95
+ }
+}

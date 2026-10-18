@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.7e-05,
+ "data": {
+  "context": "In the 2019 report *Designs Law and Practice*, in the “Design labour intensity” section, this passage compares how design workers are distributed across industries and countries. It notes Japan’s concentration of designers in computing, and compares countries’ design labour intensity in clothing, furniture and motor vehicle manufacturing, alongside Figure 7’s comparison with design IP intensity."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp08-designs-law-practice:0046",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000133,
+  "input": 913,
+  "model": "gpt-6-luna",
+  "output": 84,
+  "reasoning": 0,
+  "seconds": 1.52
+ }
+}

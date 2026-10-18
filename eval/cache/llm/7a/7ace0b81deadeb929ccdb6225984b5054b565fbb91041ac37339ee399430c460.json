@@ -1,0 +1,94 @@
+{
+ "cost_usd": 0.014923,
+ "data": {
+  "answer": "**The United States remains the largest source of patent applications filed in Australia, but its share has eased while China’s has grown.** In 2025, the leading sources of standard complete patent applications were the US (40.8 per cent), China (9.7 per cent) and Australian residents (9.3 per cent).[1]\n\nThe main changes have been:\n\n- **A declining US share:** US applicants accounted for 45 per cent of applications in 2021, compared with 40.8 per cent in 2025. US-origin filings fell by 5.0 per cent between 2024 and 2025.[2]\n- **China’s rise in the rankings:** China was the sixth-largest source in 2017. By 2019, it had overtaken Japan and Germany, ranking behind only the US and Australia. By 2025, China also ranked ahead of Australian residents.[3]\n- **Interrupted, then renewed Chinese growth:** Applications naming Chinese applicants were unchanged at 2,358 in 2021, ending a decade of continuous growth. China-origin filings increased by 13.4 per cent in 2025.[4]\n\nFor context, the five leading **foreign** origins in 2021 were the US, China, Japan, Germany and the United Kingdom. Japan recorded 1,546 applications, Germany 1,400 and the UK 1,386 that year.[5]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 14,
+      "quote": "In 2025, the United States remained the dominant source of standard complete patent applications in Australia, accounting for 40.8% of filings. China was the second-largest source at 9.7%, followed by Australian residents at 9.3%."
+     }
+    ],
+    "text": "In 2025, the US remained the largest source of standard complete patent applications, with 40.8 per cent, followed by China at 9.7 per cent and Australian residents at 9.3 per cent."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "In 2021, applicants from the US were named on 14,582 applications, or 45% of all applications filed in Australia."
+     },
+     {
+      "evidence": 14,
+      "quote": "accounting for 40.8% of filings."
+     },
+     {
+      "evidence": 14,
+      "quote": "US-origin filings declined in absolute terms (-5.0% from 2024 levels), continuing a longer-term easing in Australia."
+     }
+    ],
+    "text": "The US share fell from 45 per cent in 2021 to 40.8 per cent in 2025, with US-origin filings declining 5.0 per cent in 2025."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 8,
+      "quote": "Applications from China grew 20 per cent to 1067, making it now the sixth largest source of patent filings in Australia."
+     },
+     {
+      "evidence": 1,
+      "quote": "The top five countries of origin for standard patent applications in 2019 were the United States (13 125 applications), Australia (2 637), China (1 832), Japan (1 573) and Germany (1 311)"
+     },
+     {
+      "evidence": 14,
+      "quote": "China was the second-largest source at 9.7%, followed by Australian residents at 9.3%."
+     }
+    ],
+    "text": "China rose from sixth in 2017 to behind only the US and Australia in 2019, overtaking Japan and Germany, and ranked ahead of Australian residents in 2025."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "standard patent applications naming applicants from China were stable (0% change, at 2,358 in 2021). This has halted a run of steep continuous growth that lasted from 2011 to 2020."
+     },
+     {
+      "evidence": 14,
+      "quote": "China-origin filings increased markedly (+13.4%), reflecting ongoing growth in applied and industrial technologies and continued outward engagement by Chinese firms."
+     }
+    ],
+    "text": "Chinese applications were unchanged at 2,358 in 2021 after continuous growth from 2011 to 2020, but grew 13.4 per cent in 2025."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "The top five foreign countries of origin for standard patent applications in Australia were the United States (US), China, Japan, Germany and the United Kingdom (UK)."
+     },
+     {
+      "evidence": 3,
+      "quote": "Applications from Japan fell by 6% in 2021 (from 1,649 to 1,546), while applications increased from Germany (+4%, from 1,348 to 1,400) and the UK (+10%, from 1,258 to 1,386)."
+     }
+    ],
+    "text": "The leading foreign origins in 2021 were the US, China, Japan, Germany and the UK; Japan had 1,546 applications, Germany 1,400 and the UK 1,386."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "explore-trend-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.029846,
+  "input": 7963,
+  "model": "gpt-6.1-sol",
+  "output": 1392,
+  "reasoning": 361,
+  "seconds": 18.12
+ }
+}

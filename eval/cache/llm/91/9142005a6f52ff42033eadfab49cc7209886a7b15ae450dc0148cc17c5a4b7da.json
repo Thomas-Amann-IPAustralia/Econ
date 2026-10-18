@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.7e-05,
+ "data": {
+  "context": "In *Drivers of AI Investment* (2023), the LinkedIn data section of the methodology describes how the study compares firms advertising AI-related jobs with general-hiring firms and identifies employees with AI skills using profile keywords. The job-ad searches were conducted in August and September 2022, and the classification supports analysis of whether existing AI capacity is associated with hiring for more AI roles."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "oce-ai-investment:0022",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000195,
+  "input": 1208,
+  "model": "gpt-6-luna",
+  "output": 149,
+  "reasoning": 58,
+  "seconds": 2.21
+ }
+}

@@ -1,0 +1,60 @@
+{
+ "cost_usd": 0.001575,
+ "data": [
+  {
+   "id": "p1",
+   "score": 1
+  },
+  {
+   "id": "p2",
+   "score": 2
+  },
+  {
+   "id": "p3",
+   "score": 0
+  },
+  {
+   "id": "p4",
+   "score": 0
+  },
+  {
+   "id": "p5",
+   "score": 0
+  },
+  {
+   "id": "p6",
+   "score": 0
+  },
+  {
+   "id": "p7",
+   "score": 0
+  },
+  {
+   "id": "p8",
+   "score": 0
+  },
+  {
+   "id": "p9",
+   "score": 1
+  },
+  {
+   "id": "p10",
+   "score": 1
+  }
+ ],
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "judge:judge-v1:gemini-3.8-flash",
+ "schema_name": "grades",
+ "tag": "ipr26-5",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00315,
+  "input": 3430,
+  "model": "gemini-3.8-flash",
+  "output": 154,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

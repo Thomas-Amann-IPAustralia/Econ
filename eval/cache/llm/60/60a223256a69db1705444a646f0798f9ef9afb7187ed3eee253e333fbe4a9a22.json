@@ -1,0 +1,24 @@
+{
+ "cost_usd": 7.1e-05,
+ "data": {
+  "queries": [
+   "difference-in-differences changes in patent eligibility standards"
+  ],
+  "standalone_question": "How did the study of computer-implemented inventions estimate the causal effect of changes in legal standards?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v2:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp16-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000142,
+  "input": 678,
+  "model": "gpt-6-luna",
+  "output": 148,
+  "reasoning": 100,
+  "seconds": 2.03
+ }
+}

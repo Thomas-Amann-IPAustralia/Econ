@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In *The Market for Design: Insights from Interviews with Australian Firms* (2014), in the prior research discussion of design as a capability, this passage reviews literature on how firms’ design capabilities help them adapt to industry transitions, dominant designs and technological discontinuities."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp03-market-for-design:0010",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000164,
+  "input": 1102,
+  "model": "gpt-6-luna",
+  "output": 108,
+  "reasoning": 41,
+  "seconds": 1.84
+ }
+}

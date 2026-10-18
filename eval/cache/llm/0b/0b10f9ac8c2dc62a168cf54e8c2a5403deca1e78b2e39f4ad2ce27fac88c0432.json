@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000105,
+ "data": {
+  "context": "In *The business environment of patenting firms in Australia* (2024), Table 13 in the collaboration analysis reports OLS regressions for 2020–2021 on collaboration partner breadth and filed, granted and retired patents. The table includes firm and industry categories and Australian states."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp15-patenting-firms:0068",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00021,
+  "input": 1387,
+  "model": "gpt-6-luna",
+  "output": 142,
+  "reasoning": 70,
+  "seconds": 2.4
+ }
+}

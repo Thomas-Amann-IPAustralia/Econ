@@ -1,0 +1,25 @@
+{
+ "cost_usd": 8.7e-05,
+ "data": {
+  "queries": [
+   "Productivity Commission inquiry intellectual property arrangements recommendations",
+   "The inquiry recommended changes to intellectual property rights, and the government response led to X subsequent reforms."
+  ],
+  "standalone_question": "What did the Productivity Commission’s inquiry into intellectual property arrangements recommend, and what happened afterward?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-policy-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000173,
+  "input": 765,
+  "model": "gpt-6-luna",
+  "output": 194,
+  "reasoning": 129,
+  "seconds": 2.62
+ }
+}

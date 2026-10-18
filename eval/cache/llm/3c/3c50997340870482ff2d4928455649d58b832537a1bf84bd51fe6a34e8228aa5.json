@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.8e-05,
+ "data": {
+  "context": "In the Australian IP Report 2025, this passage is in the patents section on Australian filings abroad. It concerns the share of Australian overseas patent filings routed through the PCT, which fell in 2023, alongside a global decline in PCT filings."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2025:0046",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000157,
+  "input": 818,
+  "model": "gpt-6-luna",
+  "output": 151,
+  "reasoning": 85,
+  "seconds": 2.22
+ }
+}

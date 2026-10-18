@@ -1,0 +1,24 @@
+{
+ "cost_usd": 9.6e-05,
+ "data": {
+  "queries": [
+   "The study was intended to inform policy work on reforming the designs system and improving the effectiveness of design protection."
+  ],
+  "standalone_question": "What policy work was the study of designs law and practice intended to inform?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp08-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000192,
+  "input": 764,
+  "model": "gpt-6-luna",
+  "output": 232,
+  "reasoning": 176,
+  "seconds": 2.68
+ }
+}

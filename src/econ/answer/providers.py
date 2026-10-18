@@ -23,7 +23,12 @@ from econ.config import Provider
 
 
 class ProviderError(Exception):
-    pass
+    """A failed call. `usage` is set when the provider billed for it (a truncated or blocked reply), so
+    the caller can still meter what it cost."""
+
+    def __init__(self, message: str, usage: Usage | None = None):
+        super().__init__(message)
+        self.usage = usage
 
 
 @dataclass
@@ -55,6 +60,29 @@ class Reply:
     meta: dict = field(default_factory=dict)
 
 
+TRANSIENT = (429, 500, 502, 503, 504)
+RETRY_WAIT = 2.0
+
+
+def post_once_more(url: str, *, json: dict, headers: dict, timeout: float) -> httpx.Response:
+    """POST, and once more after a short wait if the first try failed transiently: a rate limit, a 5xx or
+    a dropped connection. Those replies are not billed. Seen in D-014's run: an answer call returned
+    "HTTP 502: upstream request failed" and the user would have had no answer."""
+    for attempt in (1, 2):
+        try:
+            r = httpx.post(url, json=json, timeout=timeout, headers=headers)
+        except (httpx.TimeoutException, httpx.NetworkError):
+            if attempt == 2:
+                raise
+            time.sleep(RETRY_WAIT)
+            continue
+        if r.status_code in TRANSIENT and attempt == 1:
+            time.sleep(RETRY_WAIT)
+            continue
+        return r
+    raise AssertionError("unreachable")
+
+
 class Model:
     """generate_json(system, user, schema) -> Reply. Subclasses are the only network code."""
 
@@ -77,10 +105,12 @@ class Model:
 class OpenAIModel(Model):
     name = "openai"
 
-    def __init__(self, provider: Provider, key: str, timeout: float):
+    def __init__(self, provider: Provider, key: str, timeout: float, service_tier: str | None = None):
         self.base = provider.base_url.rstrip("/")
         self.key = key
         self.timeout = timeout
+        # "flex" (evaluation only): half price, slower, and may be refused when capacity is short.
+        self.service_tier = service_tier
 
     def generate_json(self, *, system, user, schema, schema_name, model, effort, max_output_tokens) -> Reply:
         body = {
@@ -95,9 +125,11 @@ class OpenAIModel(Model):
         }
         if effort:
             body["reasoning"] = {"effort": effort}
+        if self.service_tier:
+            body["service_tier"] = self.service_tier
         t = time.time()
         try:
-            r = httpx.post(
+            r = post_once_more(
                 f"{self.base}/responses",
                 json=body,
                 timeout=self.timeout,
@@ -108,21 +140,6 @@ class OpenAIModel(Model):
         if r.status_code != 200:
             raise ProviderError(f"openai: HTTP {r.status_code}: {r.text[:300]}")
         d = r.json()
-        if d.get("status") == "incomplete":
-            raise ProviderError(f"openai: incomplete ({(d.get('incomplete_details') or {}).get('reason')})")
-        text, refusal = None, None
-        for item in d.get("output", []):
-            if item.get("type") != "message":
-                continue
-            for c in item.get("content", []):
-                if c.get("type") == "output_text":
-                    text = c.get("text")
-                elif c.get("type") == "refusal":
-                    refusal = c.get("refusal")
-        if refusal:
-            raise ProviderError(f"openai: refused: {refusal[:200]}")
-        if text is None:
-            raise ProviderError("openai: no output text")
         u = d.get("usage") or {}
         cached = (u.get("input_tokens_details") or {}).get("cached_tokens", 0) or 0
         usage = Usage(
@@ -133,10 +150,26 @@ class OpenAIModel(Model):
             reasoning=(u.get("output_tokens_details") or {}).get("reasoning_tokens", 0) or 0,
             seconds=round(time.time() - t, 2),
         ).price()
+        if d.get("status") == "incomplete":
+            reason = (d.get("incomplete_details") or {}).get("reason")
+            raise ProviderError(f"openai: incomplete ({reason})", usage)
+        text, refusal = None, None
+        for item in d.get("output", []):
+            if item.get("type") != "message":
+                continue
+            for c in item.get("content", []):
+                if c.get("type") == "output_text":
+                    text = c.get("text")
+                elif c.get("type") == "refusal":
+                    refusal = c.get("refusal")
+        if refusal:
+            raise ProviderError(f"openai: refused: {refusal[:200]}", usage)
+        if text is None:
+            raise ProviderError("openai: no output text", usage)
         try:
             data = json.loads(text)
         except json.JSONDecodeError as e:
-            raise ProviderError("openai: output is not JSON") from e
+            raise ProviderError("openai: output is not JSON", usage) from e
         return Reply(
             data=data, usage=usage, raw_finish=d.get("status", ""), meta={"response_id": d.get("id")}
         )
@@ -165,7 +198,7 @@ class GeminiModel(Model):
         }
         t = time.time()
         try:
-            r = httpx.post(
+            r = post_once_more(
                 f"{self.base}/models/{model}:generateContent",
                 json=body,
                 timeout=self.timeout,
@@ -176,31 +209,35 @@ class GeminiModel(Model):
         if r.status_code != 200:
             raise ProviderError(f"gemini: HTTP {r.status_code}: {r.text[:300]}")
         d = r.json()
+        usage = _gemini_usage(d, model, time.time() - t)
         cands = d.get("candidates") or []
         if not cands:
             block = (d.get("promptFeedback") or {}).get("blockReason")
-            raise ProviderError(f"gemini: no candidates (blocked: {block})")
+            raise ProviderError(f"gemini: no candidates (blocked: {block})", usage)
         finish = cands[0].get("finishReason", "")
         if finish not in ("STOP", ""):
-            raise ProviderError(f"gemini: finished with {finish}")
+            raise ProviderError(f"gemini: finished with {finish}", usage)
         parts = (cands[0].get("content") or {}).get("parts") or []
         text = "".join(p.get("text", "") for p in parts if not p.get("thought"))
-        u = d.get("usageMetadata") or {}
-        cached = u.get("cachedContentTokenCount", 0) or 0
-        thoughts = u.get("thoughtsTokenCount", 0) or 0
-        usage = Usage(
-            model=model,
-            input=(u.get("promptTokenCount", 0) or 0) - cached,
-            cached_input=cached,
-            output=(u.get("candidatesTokenCount", 0) or 0) + thoughts,
-            reasoning=thoughts,
-            seconds=round(time.time() - t, 2),
-        ).price()
         try:
             data = json.loads(text)
         except json.JSONDecodeError as e:
-            raise ProviderError("gemini: output is not JSON") from e
+            raise ProviderError("gemini: output is not JSON", usage) from e
         return Reply(data=data, usage=usage, raw_finish=finish, meta={"model_version": d.get("modelVersion")})
+
+
+def _gemini_usage(d: dict, model: str, seconds: float) -> Usage:
+    u = d.get("usageMetadata") or {}
+    cached = u.get("cachedContentTokenCount", 0) or 0
+    thoughts = u.get("thoughtsTokenCount", 0) or 0
+    return Usage(
+        model=model,
+        input=(u.get("promptTokenCount", 0) or 0) - cached,
+        cached_input=cached,
+        output=(u.get("candidatesTokenCount", 0) or 0) + thoughts,
+        reasoning=thoughts,
+        seconds=round(seconds, 2),
+    ).price()
 
 
 class ScriptedModel(Model):

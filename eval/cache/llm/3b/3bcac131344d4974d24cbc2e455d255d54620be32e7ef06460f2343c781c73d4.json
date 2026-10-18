@@ -1,0 +1,26 @@
+{
+ "cost_usd": 7.4e-05,
+ "data": {
+  "queries": [
+   "patenting firms likelihood of collaboration",
+   "types of organisations collaborating with patenting firms",
+   "Firms that patent are more likely to collaborate, particularly with universities, research organisations, suppliers or other businesses."
+  ],
+  "standalone_question": "Are firms that patent more likely to collaborate, and which types of organisations do they collaborate with?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-compare-6",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000149,
+  "input": 765,
+  "model": "gpt-6-luna",
+  "output": 145,
+  "reasoning": 69,
+  "seconds": 2.13
+ }
+}

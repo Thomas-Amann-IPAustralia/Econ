@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "context": "In the Australian IP Report 2024, the “The PBR Reform Program” section describes IP Australia’s research into Australia’s plant breeding ecosystem and Plant Breeder’s Rights (PBR), including its 2023 survey with Swinburne University’s Centre for Transformative Innovation and how findings are informing policy and system improvements."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2024:0103",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000158,
+  "input": 1181,
+  "model": "gpt-6-luna",
+  "output": 79,
+  "reasoning": 0,
+  "seconds": 1.51
+ }
+}

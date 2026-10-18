@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000369,
+ "data": {
+  "queries": [
+   "econometric estimation of causal effects instrumental variables",
+   "propensity score matching business performance patents",
+   "regression discontinuity design intellectual property research"
+  ],
+  "standalone_question": "What statistical methods have IP Australia's economists used to estimate causal effects?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "multi-1",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000369,
+  "input": 665,
+  "model": "gemini-3.5-flash-lite",
+  "output": 68,
+  "reasoning": 0,
+  "seconds": 1.03
+ }
+}

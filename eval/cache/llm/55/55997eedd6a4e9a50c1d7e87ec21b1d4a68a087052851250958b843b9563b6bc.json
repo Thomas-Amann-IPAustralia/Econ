@@ -1,0 +1,26 @@
+{
+ "cost_usd": 7.8e-05,
+ "data": {
+  "queries": [
+   "patent applications by applicant country of origin",
+   "recent changes in countries of origin for patent filings",
+   "The leading countries of origin for Australian patent applications were X and Y, with recent filings showing a shift toward Z."
+  ],
+  "standalone_question": "Which countries file the most patent applications in Australia, and has the ranking or pattern shifted recently?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-trend-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000157,
+  "input": 764,
+  "model": "gpt-6-luna",
+  "output": 162,
+  "reasoning": 82,
+  "seconds": 2.5
+ }
+}

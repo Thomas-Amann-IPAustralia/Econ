@@ -1,0 +1,26 @@
+{
+ "cost_usd": 5.5e-05,
+ "data": {
+  "queries": [
+   "industry differences in IP rights use and intensity",
+   "IP-intensive industries patents trade marks designs business employment",
+   "IP-intensive industries account for X per cent of Australian businesses, employment or economic activity"
+  ],
+  "standalone_question": "Which industries are the most intensive users of intellectual property in Australia?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-compare-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000109,
+  "input": 761,
+  "model": "gpt-6-luna",
+  "output": 65,
+  "reasoning": 0,
+  "seconds": 1.66
+ }
+}

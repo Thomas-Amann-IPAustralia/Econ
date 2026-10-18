@@ -187,4 +187,33 @@ retrieval:
   alpha: 0.7           # weight on the dense lane
   rrf_k: 60
   context_chunks: 20   # passages given to the answer model
-  per_doc_cap: 8       # at most this many of those from one document
+  per_doc_cap: 8       # at most this many of those from one document (kept in D-013's stage 2)
+  enrichment: S384-noprefix-nocite.luna-enrich-v1   # context notes in front of each chunk, search only (D-013)
+
+reranking:
+  # Cross-encoders screened for the judged grid (retrieval-v2): permissive licence, no trust_remote_code,
+  # pinned revision, and a repository ONNX export. Served from the Cloud Run embedder service when adopted.
+  depth: 50
+  candidates:
+    ettin-17m:
+      hf_id: cross-encoder/ettin-reranker-17m-v1
+      revision: 9e4aa35321a6dd1a43ca313f500c4b4f7cfb5cc6
+      params_m: 17.6
+      licence: apache-2.0
+      onnx_sha256: 2a375ccea150a4df925a47884b510eeb4bd6227ca6fffdbbc62ca2284bfe6211
+    ettin-32m:
+      hf_id: cross-encoder/ettin-reranker-32m-v1
+      revision: b33e5ceb5110773ea9cf5e00c9bedc83a8c2afdd
+      params_m: 32.8
+      licence: apache-2.0
+      onnx_sha256: 31061d9f54e8303f5d95cf3433dcf99f50d5f6de283c3b8357452be8c824142f
+    ettin-68m:
+      hf_id: cross-encoder/ettin-reranker-68m-v1
+      revision: d166fa88ddde3c42bc3ee92f7df476d941c8204a
+      params_m: 68.6
+      licence: apache-2.0
+  # Measured in the grid but not servable as configured: ms-marco-MiniLM-L6-v2 (cross-encoder/,
+  # 233902d2, a BERT classifier export), and the 150M ceiling models ettin-reranker-150m-v1 (025501c4)
+  # and gte-reranker-modernbert-base (f7481e60). The measurement loaded them at those revisions
+  # (the main branch on 2026-10-18).
+  adopted: null

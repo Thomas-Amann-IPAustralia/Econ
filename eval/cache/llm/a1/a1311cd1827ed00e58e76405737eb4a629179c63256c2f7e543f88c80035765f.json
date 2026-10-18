@@ -1,0 +1,98 @@
+{
+ "cost_usd": 0.012393,
+ "data": {
+  "answer": "The Office of the Chief Economist (OCE) links IP records with business data by integrating its **Intellectual Property Longitudinal Research Data (IPLORD)** into the ABS’s **Business Longitudinal Analysis Data Environment (BLADE)**. This creates firm-level data for research on IP rights, business profitability and competition.[1]\n\nThe process has three main elements:\n\n1. **Build longitudinal IP records.** IPLORD transforms application information from Intellectual Property Government Open Data (IPGOD) into annual measures of each applicant’s IP activity. It covers patents, trade marks, designs and plant breeder’s rights, including stocks and flows of rights over time.[2]\n2. **Identify businesses.** Firm-level administrative analysis uses anonymised, unique Australian Business Numbers (ABNs). The BLADE version of IPLORD excludes private and international applicants without an ABN.[3]\n3. **Connect IP activity to performance measures.** The 2026 report describes linked IPLORD–BLADE data covering 2014–2023. Linking IP records to business income tax data captures close to the full population of active Australian firms and enables measurement of total income, labour productivity and total factor productivity.[4]\n\n**Access is controlled:** the 2022 report states that only authorised people could view firm-level data for those analyses, and results were confidentialised to prevent identification of particular people or organisations.[5]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "the Office of the Chief Economist at IP Australia integrated its Intellectual Property Longitudinal Research Data (IPLORD) into the Business Longitudinal Analysis Data Environment (BLADE) that is managed by the Australian Bureau of Statistics (ABS)"
+     },
+     {
+      "evidence": 4,
+      "quote": "By using the newly available Australian firm level business and IP data ('micro data') this report provides original evidence and sheds light on how IPRs affect business profitability and market competition in the Australian economy."
+     }
+    ],
+    "text": "The OCE integrates IPLORD into ABS BLADE to create firm-level business and IP data for research on profitability and competition."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "IPLORD is the annual snapshot of the stocks and flows of registrable intellectual property (IP) rights for Australian and international applicants since 1997-98 onwards."
+     },
+     {
+      "evidence": 3,
+      "quote": "IPLORD was built from the Intellectual Property Government Open Data (IPGOD), which captures the life cycle of all patents, trade marks, designs and plant breeder's rights administered by IP Australia."
+     },
+     {
+      "evidence": 3,
+      "quote": "IPLORD systematically transforms all the application information in IPGOD into derived variables to track each applicant's IP activity over time."
+     }
+    ],
+    "text": "IPLORD converts IPGOD application records into annual applicant-level measures covering stocks and flows of patents, trade marks, designs and plant breeder’s rights."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 8,
+      "quote": "The unit of observation in the analysis based on administrative records is the firm, identified through its anonymised and unique Australian Business Number (ABN)."
+     },
+     {
+      "evidence": 3,
+      "quote": "The BLADE version of IPLORD is a subset of this, but excludes private and international applicants that do not have an Australian business number (ABN)."
+     }
+    ],
+    "text": "Administrative firm-level analysis uses anonymised unique ABNs, and the BLADE IPLORD version excludes private and international applicants without ABNs."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "The analysis draws on linked administrative data covering 2014 to 2023 from the Intellectual Property Longitudinal Research Database (IPLORD) and the Australian Bureau of Statistics (ABS) Business Longitudinal Analysis Data Environment (BLADE)."
+     },
+     {
+      "evidence": 6,
+      "quote": "By linking IP records to business income tax data, the dataset captures close to the full population of active firms in Australia."
+     },
+     {
+      "evidence": 6,
+      "quote": "It enables measurement of:\n\n` total income (sales in dollar terms)\n\n` labour productivity (output per full-time equivalent worker)\n\n` total factor productivity (TFP), which captures efficiency after accounting for labour, capital and intermediate inputs."
+     }
+    ],
+    "text": "The 2026 report describes IPLORD–BLADE data covering 2014–2023, linking IP and business income tax records with near-economy-wide firm coverage to measure income and productivity."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 15,
+      "quote": "Only people authorised under the ABS Act 1975 have been allowed to view data about any firm in conducting these analyses."
+     },
+     {
+      "evidence": 15,
+      "quote": "In accordance with the Census and Statistics Act 1905, results have been confidentialised to ensure that they are not likely to enable the identification of a particular person or organisation."
+     }
+    ],
+    "text": "The 2022 report describes authorised access to firm data and confidentialisation of published results to prevent identification."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B.smoke3",
+ "schema_name": "answer",
+ "tag": "explore-methods-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.024786,
+  "input": 6463,
+  "model": "gpt-6.1-sol",
+  "output": 1186,
+  "reasoning": 159,
+  "seconds": 15.35
+ }
+}

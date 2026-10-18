@@ -1,0 +1,25 @@
+{
+ "cost_usd": 5.4e-05,
+ "data": {
+  "queries": [
+   "design applications overseas applicants country of origin annual trends",
+   "Overseas applicants' design filings increased by X per cent in recent years, with changes varying by country of origin."
+  ],
+  "standalone_question": "How have design right filings by overseas applicants changed in recent years?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-trend-7",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000108,
+  "input": 762,
+  "model": "gpt-6-luna",
+  "output": 64,
+  "reasoning": 0,
+  "seconds": 1.31
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 4.5e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2015, the “Provisional patent applications” section explains that provisional applications for standard or innovation patents provide an option to claim a priority date in a later application, lapse after 12 months, and do not themselves provide protection."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2015:0026",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 9e-05,
+  "input": 576,
+  "model": "gpt-6-luna",
+  "output": 65,
+  "reasoning": 0,
+  "seconds": 1.31
+ }
+}

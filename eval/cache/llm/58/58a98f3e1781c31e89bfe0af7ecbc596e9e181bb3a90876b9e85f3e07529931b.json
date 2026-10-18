@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.8e-05,
+ "data": {
+  "context": "In the 2023 *Drivers of AI investment* report, section 4.6.2 examines regression interaction effects and robustness checks. It describes models testing how Australian headquarters, SME status, existing AI staff and patent ownership relate to companies’ likelihood of hiring AI staff, including whether IP is associated with continued AI development or implementation by AI-skilled SMEs."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "oce-ai-investment:0058",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000177,
+  "input": 1357,
+  "model": "gpt-6-luna",
+  "output": 83,
+  "reasoning": 0,
+  "seconds": 1.7
+ }
+}

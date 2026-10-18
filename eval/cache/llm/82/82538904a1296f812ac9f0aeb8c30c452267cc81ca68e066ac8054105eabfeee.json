@@ -1,0 +1,25 @@
+{
+ "cost_usd": 0.000368,
+ "data": {
+  "queries": [
+   "resident patent applications filing statistics 2016",
+   "total patent filings trends 2016"
+  ],
+  "standalone_question": "Did Australian resident patent application filings increase in 2016 despite a drop in total filings?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v2:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr17-1",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000368,
+  "input": 669,
+  "model": "gemini-3.5-flash-lite",
+  "output": 67,
+  "reasoning": 0,
+  "seconds": 1.29
+ }
+}

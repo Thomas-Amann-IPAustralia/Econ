@@ -1,0 +1,26 @@
+{
+ "cost_usd": 5.3e-05,
+ "data": {
+  "queries": [
+   "standard patent applications Australian residents non-residents share",
+   "small businesses IP rights registration firm growth after registration",
+   "IP rights effect on market competition competition measure"
+  ],
+  "standalone_question": "Does IP Australia's research support the claims that Australian residents file only a small minority of standard patent applications, small businesses grow faster after registering IP, and IP rights have no measurable effect on market competition?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v1:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "explore-context-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000107,
+  "input": 338,
+  "model": "gpt-6-luna",
+  "output": 146,
+  "reasoning": 60,
+  "seconds": 2.1
+ }
+}

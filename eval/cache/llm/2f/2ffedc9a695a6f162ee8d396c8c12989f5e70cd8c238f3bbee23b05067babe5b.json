@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000216,
+ "data": {
+  "queries": [
+   "innovation patent review",
+   "abolition of innovation patent",
+   "innovation patent phase out reasons"
+  ],
+  "standalone_question": "What happened to the innovation patent and why was it phased out?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "multi-8",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000216,
+  "input": 235,
+  "model": "gemini-3.5-flash-lite",
+  "output": 58,
+  "reasoning": 0,
+  "seconds": 0.95
+ }
+}

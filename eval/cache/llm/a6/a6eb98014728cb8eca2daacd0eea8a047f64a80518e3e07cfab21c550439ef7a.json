@@ -1,0 +1,113 @@
+{
+ "cost_usd": 0.015676,
+ "data": {
+  "answer": "The researchers identify several priorities, ranging from specific evidence gaps to broader research agendas:\n\n- **IP policy and access:** The 2025 research agenda covers application timeframes across registered rights; patent scope and subject matter eligibility; global policy and trade developments, including protectionism and rising Chinese filings; and barriers to entering the IP system, including trade mark clutter.[1]\n- **Evaluating the Raising the Bar reforms:** The 2024 study calls for larger manually validated patent samples, coverage of examination sections outside the original sample, and investigation of factors behind the decline in broader Australian patents from around 2010. Those factors could change how much of the estimated impact is attributable to the reforms.[2]\n- **Patenting and finance:** Researchers recommend investigating how the relationship between patenting and reliance on external R&D funding varies with funding sources, such as debt, equity and government funding.[3]\n- **Geography of AI investment and skills:** The 2023 AI study recommends examining state- and city-level differences, geographical spillovers, and AI-skill mobility—including its interaction with regulation, standards and socio-economic conditions.[4]\n- **Mining-related innovation:** The 2015 mining study suggests investigating which firms innovate in renewable energy and desalination. Its coverage may have been limited by the definition of mining equipment, technology and services (METS) firms used in the research.[5]\n- **Stronger evidence on IP’s economic impacts:** The 2020 literature review identifies scope for further evidence-based research, noting weaknesses in data, methods, theoretical assumptions and the quality of innovation indicators.[6]\n\n**Earlier research agendas** also identified links between IP activity and the economy, changes in the innovation landscape, emerging ways of trading IP rights and productivity analysis (2015); and collaborative grants’ effects on university patent productivity, trade mark forecasting, and links between R&D and patenting (2017). These were priorities at those dates, not necessarily unresolved gaps today.[7][8]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 18,
+      "quote": "Application timeframe issues across the registered rights.\n\nThe economic implications of patent policy settings - such as patent scope and subject matter eligibility.\n\nImpacts for the IP system of global policy and trade developments, such as rising protectionism, and the rapid rise in IP filings from China.\n\nBarriers to entry into the IP system including the extent and sources of trade mark clutter."
+     }
+    ],
+    "text": "The 2025 research agenda includes application timeframes, patent policy settings, global policy and trade developments, and barriers to IP system entry such as trade mark clutter."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "For the future, increasing the size of the manually validated sample could turn out to be highly valuable for improving econometric analysis of the reforms. Given that our sample of manually assessed patents did not cover the full spectrum of examination sections within IP Australia, further work may be needed to confirm how the reforms influenced the scope of patents outside of our sample."
+     },
+     {
+      "evidence": 1,
+      "quote": "there are other factors (which may or may not be related to the RTB reform) which, starting around 2010, led to a decline in the proportion of broader AU patents."
+     },
+     {
+      "evidence": 1,
+      "quote": "However, if these factors were unrelated to the RTB reforms, then some components of the estimated impacts of RTB may not be attributable to the reforms."
+     }
+    ],
+    "text": "The 2024 Raising the Bar study identifies needs for larger validated samples, broader examination-section coverage and investigation of factors affecting attribution of the reforms’ impacts."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 19,
+      "quote": "it is of interest to investigate how the link between patenting and reliance on external R&D funding is conditioned by the sources of finance on which a firm relies, such as debt vs equity and government sources."
+     }
+    ],
+    "text": "Researchers recommend investigating whether funding sources condition the link between patenting and external R&D funding."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 10,
+      "quote": "it would be useful from a policy perspective to explore any geographical/spatial effects in the industries' response to AI, including at a state- or city-level, and assess any differences or spillovers not accounted for in our current analysis."
+     },
+     {
+      "evidence": 10,
+      "quote": "Policymakers and researchers could explore job mobility across different locations in Australia, for example, to explore interactions between AI-skill mobility and city- or state-level regulation, standards, and other (human) aspects such as socio-economic situation, culture, liveability, etc."
+     }
+    ],
+    "text": "The 2023 AI study recommends examining geographical differences and spillovers, and AI-skill mobility in relation to regional regulation and socio-economic conditions."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "we would predict that METS firms would be working on developing better technologies in areas such as renewable energy production and desalination in particular, considering Australia's arid environment. However, our research in these areas may have been limited by the definition of a METS firm provided by the Department of Industry and Science. An investigation into what firms are innovating in these areas would nicely complement this report."
+     }
+    ],
+    "text": "The 2015 mining study proposes investigating firms innovating in renewable energy and desalination, recognising that its METS definition may have limited coverage."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "they often neglect the hidden variation in the quality of their proposed innovation indicators and lack comprehensive analysis of the statistical deficiencies in their rankings."
+     },
+     {
+      "evidence": 2,
+      "quote": "they frequently encounter limitations in their theoretical assumptions and the availability and quality of data, as well as research methods. Considerable scope remains for evidence based research on the economic impacts of IP to explore."
+     }
+    ],
+    "text": "The 2020 literature review calls for stronger evidence on IP’s economic impacts, identifying limitations in innovation indicators, data, methods and theoretical assumptions."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "The following areas will be the focus of research projects throughout 2015 and 2016:\n\ninvestigating the relationship between IP activity and the economy\n\nthe evolution of the IP system and the changing nature of the innovation landscape domestically and internationally\n\nemerging ways of trading IP rights\n\nproductivity analysis."
+     }
+    ],
+    "text": "The 2015 research agenda identified IP–economy relationships, the changing innovation landscape, IP trading and productivity analysis as priorities at that time."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 8,
+      "quote": "Looking forward, there is ongoing work to investigate the impact that collaborative grants have on the patent productivity of universities, as well as operational research to complete work on trade mark forecasting, and we hope to further explore the links between R&D and patenting in Australia."
+     }
+    ],
+    "text": "The 2017 agenda identified collaborative grants and university patent productivity, trade mark forecasting, and R&D–patenting links as ongoing or prospective work at that time."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "explore-strategy-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.031352,
+  "input": 6621,
+  "model": "gpt-6.1-sol",
+  "output": 1811,
+  "reasoning": 266,
+  "seconds": 22.88
+ }
+}

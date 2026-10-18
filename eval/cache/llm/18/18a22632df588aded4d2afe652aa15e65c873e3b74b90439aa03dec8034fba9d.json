@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.8e-05,
+ "data": {
+  "context": "In *The business environment of patenting firms in Australia* (2024), Section 2, “Literature review,” introduces research on the economics of patents and links between innovation and collaboration. It highlights studies of patents’ social value, firms’ patenting decisions and performance, and how collaboration relates to innovation, as background for understanding patenting firms’ business environment."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp15-patenting-firms:0004",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000136,
+  "input": 928,
+  "model": "gpt-6-luna",
+  "output": 86,
+  "reasoning": 0,
+  "seconds": 1.6
+ }
+}

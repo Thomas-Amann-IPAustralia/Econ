@@ -1,0 +1,78 @@
+{
+ "cost_usd": 0.011268,
+ "data": {
+  "answer": "**Yes—firms that patent are more likely to collaborate, but the evidence shows association, not causation.** The 2024 research found a positive relationship between patenting and collaboration propensity, including between prior patenting and subsequent collaboration.[1]\n\nThe evidence identifies several forms of collaboration and partner relationships:\n\n- **Joint R&D and commercialisation:** among R&D-active firms, patent grants are positively linked to both arrangements.[2]\n- **Partners supplying technology or other IP:** Australian firms acquiring technology licences, patents or other intangible assets from partners receive more patent grants on average than their peers.[3]\n- **Domestic and overseas organisations:** the firm-level study examines collaboration networks within Australia and overseas, including supply-chain relationships, universities and research institutions.[4]\n\n**However, this does not establish that patenting firms favour particular partner types or have more partners.** The 2024 study found no statistically significant relationship between the number or types of collaborators and firms’ engagement with the patent system. It cautions that this does not rule out effects on R&D outcomes.[5]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "The AIBE study finds that patenting is positively related to a firm's propensity to collaborate. The finding is based on conditional correlations and no causality can be inferred."
+     },
+     {
+      "evidence": 5,
+      "quote": "The findings indicate a positive correlation between prior patenting activity and collaboration."
+     }
+    ],
+    "text": "The 2024 research finds a positive association between patenting and collaboration propensity, including prior patenting and subsequent collaboration, but does not establish causation."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Building on the AIBE study, IP Australia found that for R&D-active firms patent grants are positively linked to both joint R&D and joint commercialisation arrangements."
+     }
+    ],
+    "text": "Among R&D-active firms, patent grants are positively linked to joint R&D and joint commercialisation arrangements."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "In addition, Australian firms that acquire intangible assets from partners, such as technology licenses, patents or other IP assets, are on average granted more patents than their peers."
+     }
+    ],
+    "text": "Australian firms acquiring technology licences, patents or other intangible assets from partners receive more patent grants on average than their peers."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "These networks involve 12 types of collaboration partners 2 , both within Australia and overseas, resulting in 24 sources in total, as listed in Section 3.2."
+     },
+     {
+      "evidence": 4,
+      "quote": "We also utilise the Business Characteristics Survey to investigate collaboration network patterns linked to the innovation process and patenting decisions, such as collaborations within supply chains or with universities and research institutions."
+     }
+    ],
+    "text": "The firm-level study examines domestic and overseas collaboration networks, including supply-chain relationships, universities and research institutions."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "Our findings indicate no statistical relationship between the number of collaborators and their types and firms' engagement with the patent system. However, the absence of a statistical relationship doesn't imply that the number or types of collaborators have no impact on R&D outcomes, including those leading to patent filings."
+     }
+    ],
+    "text": "The 2024 study does not establish that patenting firms favour particular partner types or have more partners: it finds no statistical relationship between collaborator numbers or types and patent-system engagement, without ruling out effects on R&D outcomes."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "explore-compare-6",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.022536,
+  "input": 6468,
+  "model": "gpt-6.1-sol",
+  "output": 960,
+  "reasoning": 241,
+  "seconds": 14.52
+ }
+}

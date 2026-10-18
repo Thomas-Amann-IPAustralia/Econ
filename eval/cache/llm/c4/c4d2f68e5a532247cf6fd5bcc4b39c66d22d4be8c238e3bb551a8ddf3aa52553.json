@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.3e-05,
+ "data": {
+  "context": "In the 2015 report *The Australian Mining Industry*, this Appendix A search-strategy SQL for METS firms selects patent application records using cleaned firm names, filing dates after 1 January 1994, and IPC data, while linking applications to prior applications."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp04-mining-innovation:0055",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000187,
+  "input": 1035,
+  "model": "gpt-6-luna",
+  "output": 167,
+  "reasoning": 100,
+  "seconds": 2.18
+ }
+}

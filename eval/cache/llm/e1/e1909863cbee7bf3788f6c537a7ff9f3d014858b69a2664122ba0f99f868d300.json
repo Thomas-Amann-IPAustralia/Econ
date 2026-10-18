@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000105,
+ "data": {
+  "context": "In the 2021 paper *Exporter responses to shocks: The role of trade marks*, the export diversification section reports robustness tests of how earlier trade mark activity relates to exporters’ diversity responses to tariffs. Table 17 compares models with two-year-lagged variables and models using changes in the variables, for firms with long and short export histories."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "erp11-exporters-trade-marks:0121",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000209,
+  "input": 1690,
+  "model": "gpt-6-luna",
+  "output": 81,
+  "reasoning": 0,
+  "seconds": 1.96
+ }
+}

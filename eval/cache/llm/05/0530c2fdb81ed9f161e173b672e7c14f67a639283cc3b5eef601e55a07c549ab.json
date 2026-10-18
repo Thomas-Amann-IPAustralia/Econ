@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7e-05,
+ "data": {
+  "context": "In the 2019 Australian Intellectual Property Report, this section presents an OCE comparison of overseas trade mark applications by class for applicants from Australia, the US, Canada and the UK, using TM-Link data. It describes the classes prominent in each country’s applications and notes that adding more countries’ data could support further analysis."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2019:0035",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00014,
+  "input": 1013,
+  "model": "gpt-6-luna",
+  "output": 77,
+  "reasoning": 0,
+  "seconds": 1.55
+ }
+}

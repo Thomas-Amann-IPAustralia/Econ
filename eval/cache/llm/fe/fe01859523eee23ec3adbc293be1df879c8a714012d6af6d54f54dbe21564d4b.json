@@ -1,0 +1,21 @@
+{
+ "cost_usd": 4.4e-05,
+ "data": {
+  "context": "In the 2024 analytic note *The structural change in patenting behaviour in Australia*, this opening passage describes the shift in domestic patent holdings from large firms to SMEs and the rising SME share of Australian R&D spending between 2007 and 2022."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "note-patenting-structural-change:0000",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 8.9e-05,
+  "input": 566,
+  "model": "gpt-6-luna",
+  "output": 64,
+  "reasoning": 0,
+  "seconds": 1.88
+ }
+}

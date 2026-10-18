@@ -1,0 +1,114 @@
+{
+ "cost_usd": 0.014138,
+ "data": {
+  "answer": "**The research does not find that IP rights reduce competition overall at the industry level, but it identifies competition risks from particular features of the patent system.** The broad finding and the more specific findings need to be distinguished.[1][4][5]\n\n- **Economy-wide evidence:** A 2020 study using Australian business data for 2002–2016 examined patents, trade marks and designs. Using the Herfindahl–Hirschman Index as a proxy for market competitiveness, it found no statistically significant overall impact on concentration or competition at the industry subdivision level. This is a qualified aggregate finding—not proof that individual rights never restrict competition.[1]\n\n- **Why exclusive rights need not eliminate competition:** IP rights can increase owners’ market power, but the 2020 report explains that it is rare for an individual right to confer monopoly power over a complete market, because technologies may have viable substitutes. Rival patented technologies can provide alternatives, while more trade marks and designs may indicate greater product diversity.[2]\n\n- **Patent scope matters:** The 2024 report explains that broader patents can encourage follow-on investment within pioneering firms, whereas narrower patents reduce the likelihood that competitors infringe when building on or around existing technologies.[3]\n\n- **Patent delays can impede rivals:** Research reported in 2025 found that grant delays tend to slow and narrow rivals’ follow-on innovation, measured through their future patenting. Uncertainty about whether a patent will be granted and its scope can deter investment, R&D and market entry. An overseas grant for an equivalent invention partially mitigates these effects.[4]\n\n- **More recent reform evidence points to competition benefits from narrower protection:** The 2026 report describes forthcoming research finding that stronger patentability standards under the *Raising the Bar* reforms increased innovation through greater competition in some technology fields. That finding is field-specific and described as forthcoming, rather than an economy-wide conclusion.[5]\n\nIn short, **the evidence supports examining how IP rights are designed and administered, rather than assuming that more IP protection necessarily means less competition**.[1][3][4][5]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "Using Australian data for all businesses between 2002 and 2016"
+     },
+     {
+      "evidence": 3,
+      "quote": "This study focuses on patents, trade marks and designs only."
+     },
+     {
+      "evidence": 10,
+      "quote": "This study uses the Herfindahl-Hirschman Index (HHI), a widely used measure of market concentration, as a proxy to determine market competitiveness."
+     },
+     {
+      "evidence": 10,
+      "quote": "The econometric analysis in this study does not find any overall significant impact of IP rights on market concentration or competition at an industry subdivision level."
+     }
+    ],
+    "text": "The 2020 study of patents, trade marks and designs, using Australian business data for 2002–2016 and HHI as a competition proxy, found no significant overall industry-subdivision impact; this is an aggregate finding rather than proof of no restrictive effects in individual cases."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 10,
+      "quote": "While intellectual property rights may give certain market power for businesses to make a profit, they may also reduce competition in the market due to their granting of exclusive rights."
+     },
+     {
+      "evidence": 10,
+      "quote": "In fact, it is quite rare for an IPR to bestow monopoly power for a complete market to a business, as current technologies develop rapidly, and many technologies may have viable substitutes in the market."
+     },
+     {
+      "evidence": 6,
+      "quote": "the patented technologies by rival producers may also provide the market with substitutes between these products, offering alternative choices for both producers and consumers."
+     },
+     {
+      "evidence": 6,
+      "quote": "Similarly, a growing number of trade marks and designs in an industry may indicate the diversity of products in a market, despite their protection by exclusive IPRs."
+     }
+    ],
+    "text": "Exclusive IP rights can increase market power without creating a monopoly over a complete market; substitute technologies and product diversity can sustain competition."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 16,
+      "quote": "The scope of IP rights - for example whether they cover more specific or more general discoveries - determines their impact on investment and competition."
+     },
+     {
+      "evidence": 16,
+      "quote": "Broader patents can spur cumulative investment within pioneering firms, as they work to improve on their patented discoveries."
+     },
+     {
+      "evidence": 16,
+      "quote": "Conversely, narrower patents reduce the likelihood that competitors will infringe a patent if they seek to build on or around patented technology or ideas."
+     }
+    ],
+    "text": "The 2024 report explains that patent scope affects competition and investment: broader patents can spur cumulative investment within pioneering firms, while narrower patents reduce infringement risks for competitors building on or around patented technologies."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 18,
+      "quote": "This uncertainty can deter third parties from investing in certain technologies, undertaking R&D, or entering specific markets."
+     },
+     {
+      "evidence": 18,
+      "quote": "The Motu/EPFL study found that patent grant delays tend to slow and narrow follow-on innovation by the applicant's rivals, as reflected in their future patenting activity."
+     },
+     {
+      "evidence": 18,
+      "quote": "In addition, the impact of delays is partially mitigated when an equivalent to the Australian patent (a patent for the same or similar invention) is granted overseas."
+     }
+    ],
+    "text": "Research reported in 2025 found that patent grant delays tend to slow and narrow rivals’ follow-on patenting; uncertainty can deter investment, R&D and market entry, while equivalent overseas grants partially mitigate the effects."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 20,
+      "quote": "A key priority is evaluating the economic effects of major reforms including Australia's Intellectual Property Laws Amendments (Raising the Bar) Act 2012, which narrowed the scope of patent protection available in Australia."
+     },
+     {
+      "evidence": 20,
+      "quote": "Forthcoming research for IP Australia shows how stronger patentability standards have increased innovation through greater competition in some technology fields."
+     }
+    ],
+    "text": "The 2026 report describes forthcoming research on the Raising the Bar reforms, which narrowed patent scope, finding that stronger patentability standards increased innovation through greater competition in some technology fields, not necessarily economy-wide."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B",
+ "schema_name": "answer",
+ "tag": "explore-evidence-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.028276,
+  "input": 6358,
+  "model": "gpt-6.1-sol",
+  "output": 1556,
+  "reasoning": 283,
+  "seconds": 22.94
+ }
+}

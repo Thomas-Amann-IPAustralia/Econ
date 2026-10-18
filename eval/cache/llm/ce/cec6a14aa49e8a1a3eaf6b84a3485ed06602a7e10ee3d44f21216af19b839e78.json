@@ -1,0 +1,24 @@
+{
+ "cost_usd": 8.8e-05,
+ "data": {
+  "queries": [
+   "Exporting firms are X per cent larger than non-exporting firms, measured by employment, sales or another firm-size measure."
+  ],
+  "standalone_question": "How much larger are exporting firms than firms that do not export?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp11-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000176,
+  "input": 761,
+  "model": "gpt-6-luna",
+  "output": 200,
+  "reasoning": 143,
+  "seconds": 2.32
+ }
+}

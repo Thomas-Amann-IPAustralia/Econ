@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.000116,
+ "data": {
+  "queries": [
+   "The 2014 court rulings reduced foreign applicants’ filings of computer-implemented invention patents by X per cent."
+  ],
+  "standalone_question": "Did the 2014 court rulings discourage foreign applicants from filing software patents in Australia?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "erp16-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000233,
+  "input": 767,
+  "model": "gpt-6-luna",
+  "output": 313,
+  "reasoning": 253,
+  "seconds": 3.21
+ }
+}

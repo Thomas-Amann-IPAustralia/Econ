@@ -1,0 +1,24 @@
+{
+ "cost_usd": 7.3e-05,
+ "data": {
+  "queries": [
+   "Standard patent applications declined in 2014 compared with 2013 because of X"
+  ],
+  "standalone_question": "Why were there fewer standard patent applications in 2014 than in 2013?"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "plan:plan-v3:gpt-6-luna",
+ "schema_name": "plan",
+ "tag": "ipr15-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000146,
+  "input": 766,
+  "model": "gpt-6-luna",
+  "output": 139,
+  "reasoning": 87,
+  "seconds": 1.86
+ }
+}

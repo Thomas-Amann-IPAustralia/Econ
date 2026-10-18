@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000221,
+ "data": {
+  "queries": [
+   "design IP intensity international comparison",
+   "designs filings per capita Australia OECD",
+   "design rights cross country analysis"
+  ],
+  "standalone_question": "How does Australia compare with other countries on design IP intensity?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-compare-2",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000221,
+  "input": 237,
+  "model": "gemini-3.5-flash-lite",
+  "output": 60,
+  "reasoning": 0,
+  "seconds": 1.05
+ }
+}

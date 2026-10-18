@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000221,
+ "data": {
+  "queries": [
+   "IP intensive industries",
+   "industry use of IP Australia",
+   "trade mark and patent intensity by industry"
+  ],
+  "standalone_question": "Which industries are the most intensive users of intellectual property in Australia?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "explore-compare-4",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000221,
+  "input": 237,
+  "model": "gemini-3.5-flash-lite",
+  "output": 60,
+  "reasoning": 0,
+  "seconds": 0.92
+ }
+}

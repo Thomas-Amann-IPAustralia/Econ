@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000229,
+ "data": {
+  "queries": [
+   "copyright content COVID lockdowns",
+   "screen and audio consumption pandemic",
+   "digital content use COVID-19"
+  ],
+  "standalone_question": "Did people use more copyright content such as screen and audio during COVID lockdowns?"
+ },
+ "effort": "low",
+ "model": "gemini-3.5-flash-lite",
+ "purpose": "plan:plan-v1:gemini-3.5-flash-lite",
+ "schema_name": "plan",
+ "tag": "ipr21-3",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000229,
+  "input": 240,
+  "model": "gemini-3.5-flash-lite",
+  "output": 63,
+  "reasoning": 0,
+  "seconds": 0.85
+ }
+}
