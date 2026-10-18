@@ -1,0 +1,123 @@
+{
+ "cost_usd": 0.015655,
+ "data": {
+  "answer": "The evidence shows growing clean-energy patenting in Australia, a shift towards battery recycling technologies, and related activity in transport and electrical technologies. However, the passages do not separately identify electric-vehicle patenting.[1][2][4]\n\n### Clean energy and transport\n- **Clean-energy growth:** The 2024 Australian IP Report identifies Australia as the second fastest growing destination among 19 major economies for patent filings related to clean energy generation and storage. This is a measure of Australia as a filing destination, not Australian-origin inventions.[1]\n- **Related transport activity:** The 2025 report records 12.8% growth in transport patent filings in 2024. China accounted for 58.8% of the growth over the decade to 2024. It also reports growing strength in Chinese filings for electrical machinery, apparatus and energy. These are broader categories than electric vehicles.[2]\n\n### Batteries, recycling and critical minerals\n- **Scale and specialisation:** The 2026 report describes Australian applicants as accounting for a small share of global patent filings in battery circularity and critical metal refinement technologies, averaging 10 international patent families annually. Within critical-metal refinement for batteries, Australian applicants accounted for 8.9% of patent families published since 2000.[3]\n- **Shift towards recovery:** Materials recovery represented less than a quarter of Australian applicants’ international patent families related to battery circularity during 2014–2021. After 2021, it became the focus of more than half of Australian-origin battery-circularity patent families in recent years.[4]\n- **Commercialisation and collaboration:** The 2026 report says Australian battery innovators frequently seek protection in Europe. Public research organisations and SMEs dominate the assignee profile, suggesting patents support collaboration, licensing and investment rather than vertically integrated cell production. The 2022 report also highlighted strong international collaboration through co-filed battery patents.[5][6]\n\n### Broader green-technology intelligence\nThe 2023 report describes patent analytics covering carbon capture and storage, grid energy storage, solar photovoltaics, low-emissions steel, aluminium and iron ore, and soil carbon measurement. Its visualisations examine global filing trends, innovators, countries of origin and filing jurisdictions to inform decisions about national capability.[7]\n\n### Earlier economic research\nThe 2015 mining research identified Australian-origin PCT applications in chemical separation, materials testing, and new batteries or fuel cells, mostly filed by publicly funded entities. However, that study also reported a lack of evidence of innovation in energy production and environmental management within its mining-sector analysis. That finding should not be read as an economy-wide absence of green innovation.[8]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "Among 19 major economies, Australia is the second fastest growing destination for patent filings related to clean energy generation and storage."
+     }
+    ],
+    "text": "The 2024 report ranks Australia second among 19 major economies for growth as a destination for clean-energy generation and storage patent filings, rather than measuring Australian-origin inventions."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "Transport saw the strongest relative patent growth in 2024, overall filings in this field are up 12.8%. China has been a key driver of growth in this field - it accounted for 58.8% of the growth in transport filings over the decade to 2024."
+     },
+     {
+      "evidence": 4,
+      "quote": "In addition, over recent years, Chinese filings have shown growing strength in electrical machinery, apparatus and energy, covering electric power technologies and machines."
+     }
+    ],
+    "text": "The 2025 report records 12.8% transport patent filing growth in 2024, China's 58.8% contribution to decade-long growth, and increasing Chinese activity in electrical machinery, apparatus and energy."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 20,
+      "quote": "EPO analysis shows that Australian applicants account for a small share of global patent filings in battery circularity and critical metal refinement technologies."
+     },
+     {
+      "evidence": 20,
+      "quote": "Australian applicants account for an average 10 international patent families per year in these areas of technology. In the refinement of critical metals for batteries, Australian applicants account for 8.9% of patent families published since 2000."
+     }
+    ],
+    "text": "The 2026 report describes Australia's global share in battery circularity and critical-metal refinement as small, averaging 10 international patent families annually, with an 8.9% share in critical-metal refinement for batteries since 2000."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 20,
+      "quote": "These technologies were the focus of less than a quarter of international patent families produced by Australian applicants between 2014 and 2021 in relation to battery circularity."
+     },
+     {
+      "evidence": 5,
+      "quote": "After 2021, the picture has reversed: material recovery is the focus of more than half of patent families originating from Australia related to battery circularity in recent years."
+     }
+    ],
+    "text": "Australian battery-circularity patenting shifted towards materials recovery, from less than a quarter of international patent families in 2014–2021 to more than half after 2021 in recent years."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "Australian battery innovators frequently seek patent protection in Europe alongside other major jurisdictions with manufacturing ecosystems and regulatory demand."
+     },
+     {
+      "evidence": 5,
+      "quote": "Australia's assignee profile is dominated by public research organisations and SMEs rather than large manufacturers, suggesting patents function primarily as:\n\n` enablers of collaboration and licensing,\n\n` signals to investors and strategic partners"
+     },
+     {
+      "evidence": 5,
+      "quote": "This aligns with an innovation model centred on process IP, services and partnerships rather than vertically integrated cell production."
+     }
+    ],
+    "text": "The 2026 report links Australian battery patents to European protection, public research organisations and SMEs, collaboration, licensing and investment, rather than vertically integrated cell production."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 8,
+      "quote": "The report on batteries highlights strong international collaboration shown by Australian innovators in co-filed patents in battery technologies"
+     }
+    ],
+    "text": "The 2022 report highlighted strong international collaboration in Australian innovators' co-filed battery patents."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Analysing the global patent filing trends, innovators, countries of origin and filing jurisdictions in each of the technology areas of carbon capture and storage, grid energy storage, solar photovoltaic, low emissions steel, aluminium and iron ore, and soil carbon measurement will provide critical information for decision-makers as Australia strengthens and consolidates its national capability."
+     }
+    ],
+    "text": "The 2023 report describes patent analytics for low-emissions technologies, using filing trends, innovators, origins and jurisdictions to inform decisions on national capability."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 17,
+      "quote": "Australian-originated PCT applications are being filed in areas of chemical processing, such as separation (including evaporation, absorption and filtration), investigation of materials by testing their properties (such as placing them under stress) and the development of new batteries or fuel cells. Most of these applications are being filed by publicly funded entities."
+     },
+     {
+      "evidence": 17,
+      "quote": "One surprise emerging from this report is the lack of evidence of innovation in the energy production and environmental management sectors."
+     }
+    ],
+    "text": "The 2015 mining study identified Australian-origin PCT applications in chemical separation, materials testing and batteries or fuel cells, mostly from publicly funded entities, but found limited evidence in energy production and environmental management within its sectoral scope."
+   }
+  ],
+  "coverage": "partial",
+  "gaps": [
+   "The passages provide no separate counts, growth rates or applicant breakdowns for electric-vehicle patents; transport and electrical-technology categories cannot be treated as EV-specific measures."
+  ]
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "explore-synthesis-8",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.03131,
+  "input": 6390,
+  "model": "gpt-6.1-sol",
+  "output": 1853,
+  "reasoning": 280,
+  "seconds": 24.03
+ }
+}

@@ -1,0 +1,121 @@
+{
+ "cost_usd": 0.016612,
+ "data": {
+  "answer": "**Australian residents’ share of standard patent applications has fluctuated rather than risen steadily.** Most recently, it increased from **8.5 per cent in 2024 to 9.3 per cent in 2025**, its highest level since 2021.[1]\n\nThe longer-term pattern is:\n- **2014–2015:** residents accounted for **8 per cent** in both years. The 2015 report described the historical average as around 10 per cent.[2]\n- **2017:** the resident share was around **9 per cent**.[3]\n- **2020:** residents accounted for approximately **8 per cent**, inferred from the reported non-resident share of 92 per cent.[4]\n- **2021:** the resident share rose by one percentage point to **9 per cent**, as resident applications rebounded by 25 per cent.[5]\n- **2025:** resident applications grew by **9.0 per cent**, while non-resident applications fell by **1.3 per cent**, lifting the resident share.[6]\n\nThese figures concern **standard patents**, not all patent application types. Residents accounted for much higher shares of provisional applications—**96 per cent in 2017**—and innovation patent applications—**51 per cent in 2018**.[7]\n\nThe latest report cautions against treating resident patenting as a broad measure of business dynamism: it reflects a relatively small subset of firms engaged in R&D-intensive, technologically specialised innovation.[8]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "As a share of total standard complete filings, residents accounted for 9.3%, up from 8.5% in 2024 and the highest share since 2021."
+     },
+     {
+      "evidence": 15,
+      "quote": "the proportion of applications made by Australian residents fell to eight per cent."
+     },
+     {
+      "evidence": 5,
+      "quote": "As a result, the resident share of applications increased by a percentage point, to 9%."
+     }
+    ],
+    "text": "The resident share of standard patent filings fluctuated over time, most recently rising from 8.5 per cent in 2024 to 9.3 per cent in 2025, its highest level since 2021."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 15,
+      "quote": "On average, applications by Australian residents comprise around 10 per cent of total applications in a given year."
+     },
+     {
+      "evidence": 15,
+      "quote": "the proportion of applications made by Australian residents fell to eight per cent."
+     },
+     {
+      "evidence": 12,
+      "quote": "Standard patent filings by Australian residents increased by 16 per cent to 2 291 applications in 2015, and accounted for eight per cent of all patent filings."
+     }
+    ],
+    "text": "Residents accounted for 8 per cent of standard patent applications in both 2014 and 2015; the 2015 report put the historical average at around 10 per cent."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 13,
+      "quote": "These figures include those who filed directly with IP Australia and those who entered through the PCT route, together accounting for around nine per cent of total patent applications in Australia."
+     }
+    ],
+    "text": "Residents accounted for around 9 per cent of standard patent applications in 2017."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "In 2020, this trend continued with non-residents responsible for 92 per cent of the total applications filed in Australia"
+     }
+    ],
+    "text": "The resident share in 2020 was approximately 8 per cent, inferred from the reported non-resident share of 92 per cent."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "After declining 10% in 2020, standard patent applications from Australian residents have rebounded, rising 25% (from 2,401 in 2020 to 2,996 in 2021). As a result, the resident share of applications increased by a percentage point, to 9%."
+     }
+    ],
+    "text": "In 2021, resident applications rebounded by 25 per cent and the resident share rose one percentage point to 9 per cent."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Australian applicants filed 2,810 standard complete applications in 2025, up from 2,578 in 2024 - an increase of 9.0%."
+     },
+     {
+      "evidence": 1,
+      "quote": "Non-resident filings declined modestly in 2025, from 27,909 in 2024 to 27,538 (-1.3%)."
+     }
+    ],
+    "text": "In 2025, resident applications grew by 9.0 per cent while non-resident applications fell by 1.3 per cent, lifting the resident share."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 16,
+      "quote": "Australian residents remain overwhelmingly the primary users of Australian provisional applications, filing 96 per cent (4952) of such applications in 2017."
+     },
+     {
+      "evidence": 19,
+      "quote": "Australian residents are the primary users of the innovation patent, accounting for 51 per cent of all applications in 2018."
+     }
+    ],
+    "text": "Resident shares were higher for other patent types: 96 per cent of provisional applications in 2017 and 51 per cent of innovation patent applications in 2018."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Unlike trade marks or designs, patenting in Australia is not a broad barometer of business dynamism and commercial activity. Instead, resident patenting reflects activity by a relatively small subset of firms engaged in R&D-intensive and technologically specialised innovation."
+     }
+    ],
+    "text": "The latest report cautions that resident patenting is not a broad measure of business dynamism, reflecting a small subset of R&D-intensive, technologically specialised firms."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "explore-trend-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.033224,
+  "input": 8867,
+  "model": "gpt-6.1-sol",
+  "output": 1549,
+  "reasoning": 350,
+  "seconds": 19.82
+ }
+}

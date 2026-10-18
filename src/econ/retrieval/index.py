@@ -58,6 +58,15 @@ class Index:
         self.doc_of = np.array([c["doc_id"] for c in self.chunks])
         self.year_of = np.array([self.docs[c["doc_id"]]["year"] for c in self.chunks])
 
+    def indexed_text(self, row: int) -> str:
+        """The text both lanes indexed for a chunk: its context note (D-013), if any, then its embed_text."""
+        c = self.chunks[row]
+        return (
+            (c.get("context_note", "") + "\n\n" + c["embed_text"]).strip()
+            if c.get("context_note")
+            else c["embed_text"]
+        )
+
     def allowed(
         self, doc_ids: list[str] | None = None, years: tuple[int, int] | None = None
     ) -> np.ndarray | None:

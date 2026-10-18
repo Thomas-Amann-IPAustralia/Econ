@@ -1,0 +1,82 @@
+{
+ "cost_usd": 0.014544,
+ "data": {
+  "answer": "**Large businesses are much more likely to own IP rights.** Research published in 2020, using 2016–17 data, found that 43.9 per cent of large businesses owned patents, trade marks or designs, compared with 3.2 per cent of small and medium enterprises (SMEs).[1]\n\n- **SMEs rely more heavily on trade marks alone.** Among businesses owning IP rights, 88.7 per cent of SMEs held only trade marks, compared with 73.6 per cent of large businesses.[2]\n- **Large businesses more often combine rights.** Among IP-owning businesses, 11.2 per cent of large businesses held patents and trade marks, compared with 3.0 per cent of SMEs. All three types—patents, trade marks and designs—were held by 8.4 per cent of large owners and 1.3 per cent of SME owners.[3]\n- **Resources help explain the difference.** The 2020 report notes that obtaining and maintaining rights can involve attorney, application, renewal and litigation costs. Larger and older businesses tend to have greater financial, knowledge and organisational resources to apply for and use rights; this is an explanation offered by the report, not proof that size causes ownership.[4]\n- **Plant breeder’s rights show substantial SME participation.** The 2017 report estimated that SMEs accounted for around half of Australian-resident PBR applications in 2016. Historically, private applicants and large firms each accounted for roughly a quarter. These application shares are a different measure from the business ownership rates above.[5]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 14,
+      "quote": "| IPR owners | 43.9 | 3.2 | 3.5 |"
+     },
+     {
+      "evidence": 14,
+      "quote": "Source: ABS BLADE (2016-17 frame)."
+     },
+     {
+      "evidence": 9,
+      "quote": "An overwhelming majority (96.5 per cent) of businesses in Australia do not own any of the three IPRs (Table 2.2)."
+     }
+    ],
+    "text": "Research published in 2020, based on the 2016–17 frame, found that 43.9 per cent of large businesses and 3.2 per cent of SMEs owned patents, trade marks or designs."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 9,
+      "quote": "Specifically, among all IPR owners, 88.7 per cent of all SME IPR owners and 73.6 per cent of all large IPR owners use trade marks only and have no other rights in their portfolio."
+     }
+    ],
+    "text": "Among IP owners, 88.7 per cent of SMEs and 73.6 per cent of large businesses held trade marks alone."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 9,
+      "quote": "For example, 11.2 per cent of large IPR owners own a combination of patents and trade marks and 8.4 per cent own all three types of IPRs, while only 3.0 per cent and 1.3 per cent of SME IPR businesses own the same two combinations."
+     }
+    ],
+    "text": "Large IP owners more frequently combined rights: 11.2 per cent held patents and trade marks and 8.4 per cent all three types, compared with 3.0 and 1.3 per cent of SME owners respectively."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 10,
+      "quote": "IPRs can be a costly venture, with attorney fees, application and renewal fees and, in some instances, litigation costs. Older or larger businesses tend to have greater resources, including financial, knowledge and organisational capital, to equip them to apply for and use IP rights."
+     }
+    ],
+    "text": "The 2020 report offers costs and resource differences as an explanation for ownership patterns, rather than establishing that size causes ownership."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 18,
+      "quote": "The majority of Australian residents who apply for PBRs are SMEs who are responsible for half of Australian resident applications, while private applicants and large firms historically file a quarter each of the remaining applications."
+     },
+     {
+      "evidence": 4,
+      "quote": "This relates to PBR applications filed in 2016 by Australian applicants. This is an estimate based on Australian Business Number matching produced in IPGOD 2016 with the latest data, and as such remains an estimate."
+     }
+    ],
+    "text": "The 2017 report estimated that SMEs accounted for around half of resident PBR applications in 2016, while historically private applicants and large firms each filed about a quarter; these are application shares rather than business ownership rates."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "explore-compare-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.029088,
+  "input": 7419,
+  "model": "gpt-6.1-sol",
+  "output": 1425,
+  "reasoning": 396,
+  "seconds": 19.41
+ }
+}

@@ -433,3 +433,112 @@ fixed effects, placebo tests, lags), and Gemini answered well. The plan and the 
 corpus-wide words are now measured candidates (the next entries).
 
 **Spend:** OpenAI $0.048; Gemini $0.069 (one truncated call's cost is an estimate, $0.017, recorded as such).
+
+---
+
+## D-012 — A judged test set for broad questions, and rerankers measured: none adopted (Claude, under the owner's brief of 2026-10-18)
+
+**Context.** The silver set (D-004) measures finding the one passage a question was written from, and
+the owner's own questions (test/prompts/PROMPT_1-5) are broad. The smoke test (D-011) showed a broad
+question failing on retrieval. The owner's brief allows any change that measurably helps and stays free to
+run, with rigorous tests and up to $2.50 of each provider. Progress log: `docs/progress-rag-v2.md`.
+
+**The yardstick (judged-v1).**
+- 178 needs: the 114 silver needs and 64 new exploratory ones (`eval/testset/explore-v1.yaml`, committed
+  at `4aad8ab` before any number), five of them the owner's prompts verbatim. Each has a narrative for
+  the judge. Split by hashed id: 86 dev, 92 test.
+- The pool: the top 10 of every setting in the grid (62 settings, plus BM25 and dense alone) and, after
+  the choice, a top-up of the ceiling rerankers, the cap variants and ranks 11-20 of the baseline and the
+  choice: 9,301 (need, passage) pairs graded 0-3 by gemini-3.8-flash through the Batch API.
+- **The judge was chosen by a pilot and checked three ways.** In a 12-need pilot (rule set before it ran)
+  Flash agreed with Claude's blind grades of 100 pairs at quadratic kappa 0.915 (95% agreement on
+  relevant or not); flash-lite at 0.774, over-grading, so Flash judges. On the full pool, 128 of 129
+  passages holding a silver gold answer were graded relevant. Every need has at least one relevant
+  passage. Batch ignores the JSON schema (bare lists, "score" for "grade"); the parser reads every shape
+  but still requires each passage graded exactly once.
+- Grid `eval/grids/retrieval-v2.yaml` (committed at `31cca35` before any judgment), with amendment 1
+  (`03b57a9`, after the pilot and before the pool was judged): the budget could not judge every setting to
+  depth 20, so stage 1 chose on ndcg@10 over a depth-10 pool and a top-up then judged ranks 11-20 of the
+  baseline and the choice.
+
+**Rerankers (the grid's third factor).** Screened: permissive licence, no remote code, pinned revisions.
+ettin-reranker 17M, 32M and 68M and ms-marco-MiniLM-L6 on every first stage; gte-reranker-modernbert-base
+and ettin-reranker-150M on three, as a ceiling. Scored by sentence-transformers in bfloat16 on this CPU's
+AMX (bf16 vs float32: Spearman 0.9996, identical top 10).
+- They help the plain index: ettin-68m lifts the service's ndcg@10 on dev from 0.654 to 0.706.
+- They don't help the enriched index (D-013): the best setting with a reranker, plan-v2 queries over the
+  enriched index reranked by ettin-68m, scores 0.735 on dev and 0.673 on test, against 0.736 and 0.692
+  without one. The rerankers read only the passage, not its context note.
+- The 150M ceiling: dev 0.753 but test 0.683, below the choice. A bigger reranker buys nothing reliable.
+- Latency for 50 passages (ONNX float32, 4 threads, median of 8 needs): 17M 1.9 s, MiniLM 1.7 s, 32M
+  4.0 s, 68M 11.5 s (`eval/runs/retrieval-v2/latency.json`). The 2.5 s budget admitted only the two
+  smallest, which are neutral to harmful.
+
+**Decision.** No reranker. The serving path for one is built and tested, and stays off
+(`reranking.adopted: null`): `econ.reranker.OnnxReranker` (the Ettin ONNX exports hold only the
+transformer; the score head is read from the repository's safetensors and matches sentence-transformers
+to 3e-6), `POST /rerank` on the Cloud Run service, and a pipeline step that falls back visibly.
+
+**Spend:** Gemini $1.58 for judging (pilot $0.23, pool $1.15, top-up and retries $0.20) and $0.10 for plans; OpenAI $0.015 for plans. Totals so far: OpenAI $0.28, Gemini $1.75 (`eval/spend/ledger.jsonl`).
+
+---
+
+## D-013 — Adopt context notes in the index, plan-v2, and the question kept as a search (Claude, under the owner's brief of 2026-10-18)
+
+**Context.** Stage 1 of grid retrieval-v2 (D-012), run `eval-retrieval-v2` (reports
+`reports/retrieval-v2-stage1.md`, `-stage2.md`, `-final.md`). Rule fixed in advance: the least complex
+setting within 0.02 ndcg@10 of the best on dev, rerankers only within 2.5 s.
+
+**The three changes.**
+1. **Context notes** (`library/enrich/S384-noprefix-nocite.luna-enrich-v1.jsonl`): one or two sentences
+   per chunk, written once by gpt-6-luna (prompt `prompts/eval/enrich-v1.md`, $0.14 for 1,896 chunks), that
+   say which document and part the passage is from and resolve its vague references ("this reform", "the
+   study"). Put in front of the chunk's text for BM25 and the dense lane; never shown as evidence, never
+   sent to the answer model, hidden from every API view; highlights only name terms the passage itself
+   contains. A note with a high-severity text-check finding would be dropped (none was).
+2. **Plan prompt v2** (`prompts/plan-v2.md`, written from dev needs only): leave out the words every
+   document shares ("IP Australia", "Australian IP Report", "Office of the Chief Economist"), split broad
+   questions into parts, phrase queries as a report would, with a short map of the 24 documents.
+3. **The question is searched too** (`answer.plan_keeps_question`): the standalone question plus the
+   plan's queries, so a plan that misses can't take the question's own words out of the search.
+
+**Results** (ndcg@10 with graded judgments; test against the service today, `plan:luna-plan-v1/plain/none`):
+
+| | Dev | Test | Test difference [95% CI], Holm p |
+|---|---|---|---|
+| The service today | 0.654 | 0.606 | |
+| + context notes | 0.713 | 0.675 | |
+| **+ notes, plan-v2, question kept (adopted)** | **0.736** | **0.692** | **+0.086 [+0.047, +0.124], 0.006** |
+
+Fully judged to depth 20 after the top-up (`reports/retrieval-v2-final.md`), on the 92 test needs:
+ndcg@20 0.616 to 0.694 (+0.078 [+0.043, +0.112]); the share of a need's relevant passages that reach the
+answer model's 20 passages, 0.623 to 0.715 (+0.092 [+0.053, +0.134]); precision of those 20, 0.301 to
+0.367; all Holm p 0.002. On the 33 exploratory test needs, relevant-passage recall 0.487 to 0.566 (+0.080
+[+0.031, +0.132]). On the silver gold spans (the old yardstick), recall within 4,000 tokens 0.788 to 0.881.
+Every kind of need improves except policy questions (0.711 to 0.684, n = 8). Stage 2 kept the per-document
+cap at 8 (caps of 5 and 3 lost 0.02 and 0.06 on dev). Re-run on every judgment, the rule picks the same
+setting.
+
+**Disclosed.**
+- The grid's amendment 1 (depth-10 pool, choice on ndcg@10) was made after the judge pilot and before any
+  pool judgment; the pilot's grades were read only for agreement.
+- **Post hoc, not part of the rule:** with the question kept, plan-v1 does as well as plan-v2 (dev 0.719
+  against 0.727; test 0.692 against 0.682). Most of the gain is the notes and keeping the question;
+  plan-v2's own effect is within noise. It is kept because the rule chose it and because it removes the
+  failure seen in the smoke test (D-011). Its document map must be updated when documents are added.
+- With the Gemini planner (gemini-3.5-flash-lite), keeping the question also helps (dev 0.649 to 0.685
+  with plan-v1), but its plans add little over no plan at all (0.680). The OpenAI planner is the better
+  planner.
+- A thread-safety bug, found while running answers in a thread pool and fixed: the shared Snowball stemmer
+  gave wrong stems or raised under concurrency (81 wrong and 17 errors in 200 calls on 8 threads). The
+  service answers requests in a thread pool, so concurrent users could have corrupted keyword search. The
+  stemmer is now per thread (regression test `test_tokenising_is_safe_across_threads`). The measurements
+  tokenised in one thread and are unaffected.
+
+**Decision.** `retrieval.enrichment: S384-noprefix-nocite.luna-enrich-v1`, `answer.plan_prompt: plan-v2`,
+`answer.plan_keeps_question: true`. The index is rebuilt with the notes and re-verified against the
+measurement. Cost per question is unchanged in kind: the plan call's input grows by about 600 tokens of
+luna ($0.00006); the notes cost $0.14 once per corpus build, and new documents need notes before indexing.
+The owner can reverse any of the three in config.
+
+**Spend:** included in D-012's totals, plus $0.14 OpenAI for the notes.

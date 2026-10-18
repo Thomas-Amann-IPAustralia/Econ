@@ -1,0 +1,116 @@
+{
+ "cost_usd": 0.01409,
+ "data": {
+  "answer": "**PBR applications in Australia have fluctuated rather than grown steadily.** The latest aggregate trend supplied is for **2024**, when applications fell by 4.7 per cent—the second consecutive annual decline.[1]\n\n- **Growth in 2014–16:** applications rose from 341 in 2014 to 359 in 2015 and 387 in 2016. Growth in 2015 was driven by Australian residents, while growth in 2016 was driven by non-residents.[2]\n- **Reversals in 2017–19:** applications fell to 343 in 2017, recovered to 384 in 2018, then dropped by 27 per cent to 281 in 2019.[3]\n- **Further weakness in 2021:** applications fell by 6 per cent. The 2022 report suggested this likely reflected continuing impacts of drought, the 2019–20 bushfires, COVID-19 lockdowns and border closures.[4]\n- **Different resident and overseas trends:** in 2023, total applications fell by 1.7 per cent to 296, despite resident applications increasing by 22.9 per cent; overseas applications fell by 17.5 per cent. In 2024, non-resident filings instead rose by 21.3 per cent, driven by Germany, New Zealand and the United States, even as total filings declined.[5]\n- **Changes in plant categories:** the 2025 report describes declining fruit-crop filings and increasing ornamental filings in 2024, both reversals of trends since 2019. However, the 2024 report attributes the same category turning points to 2023, so the passages differ on their timing.[6]\n\n**Interpret annual percentage changes cautiously:** the 2020 report notes that application volumes are low and reflect decisions by a small number of applicants, so small numerical changes can produce large percentage movements.[7]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "Following a relatively stable growth trend between 2012 and 2016, annual change in application levels has been volatile over recent years"
+     },
+     {
+      "evidence": 5,
+      "quote": "Key trends for PBR filings in Australia in 2024:\n\nApplications for plant breeder's rights fell for the second consecutive year, down by 4.7% on their level in 2023."
+     }
+    ],
+    "text": "PBR applications have fluctuated, with the latest supplied aggregate trend showing a 4.7 per cent decline in 2024 for the second consecutive year."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "The number of PBR applications received in Australia increased by five per cent in 2015, from 341 to 359 applications. This growth was solely driven by a 14 per cent increase in applications by Australian residents"
+     },
+     {
+      "evidence": 4,
+      "quote": "The number of PBR applications received in Australia increased by eight per cent in 2016, from 359 to 387 applications. This growth was driven by a 22 per cent increase in applications by non-residents."
+     }
+    ],
+    "text": "Applications rose from 341 in 2014 to 359 in 2015 and 387 in 2016, with resident-driven growth in 2015 and non-resident-driven growth in 2016."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 12,
+      "quote": "In 2017, the number of PBR applications received in Australia decreased by around 11 per cent from 387 to 343 applications"
+     },
+     {
+      "evidence": 13,
+      "quote": "In 2018, 384 PBR applications were filed in Australia."
+     },
+     {
+      "evidence": 3,
+      "quote": "In 2019, a total of 281 PBR applications were filed at IP Australia, down 103 applications, or 27 per cent from their level in 2018."
+     }
+    ],
+    "text": "Applications fell to 343 in 2017, rose to 384 in 2018, then fell by 27 per cent to 281 in 2019."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 16,
+      "quote": "Applications for PBRs fell 6%, likely reflecting the continued impacts of drought, Australia's devastating bushfires in 2019-20, COVID-19 lockdowns and border closures."
+     }
+    ],
+    "text": "Applications fell by 6 per cent in 2021, which the 2022 report suggested likely reflected drought, bushfires and pandemic restrictions."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 20,
+      "quote": "| Plant Breeders' Rights | Filed | 296 | -1 .7% | 145 | +22.9% | 49.0% | 151 | -17.5% | 51 .0% |"
+     },
+     {
+      "evidence": 5,
+      "quote": "Applications for plant breeder's rights fell for the second consecutive year, down by 4.7% on their level in 2023.\n\nNon-resident filings increased by 21.3% from their level in 2023, driven by growth in applications from Germany, New Zealand and the United States."
+     }
+    ],
+    "text": "Total applications fell to 296 in 2023 as resident filings rose and overseas filings fell; non-resident filings recovered in 2024 despite an overall decline."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "Key trends for PBR filings in Australia in 2024:"
+     },
+     {
+      "evidence": 5,
+      "quote": "While filings fell for fruit crops, the first decline since 2019, this was countered by an increase in filings for ornamentals, marking their first increase since 2019."
+     },
+     {
+      "evidence": 19,
+      "quote": "Applications for plant breeder's rights in 2023 remained relatively stable for the second consecutive year. While there was a decline in applications for fruit crops, the first since 2019, this was countered by an increase in applications for ornamentals, marking the first increase in this class since 2019."
+     }
+    ],
+    "text": "The 2025 and 2024 reports describe the same fruit-crop and ornamental turning points but assign them to 2024 and 2023 respectively."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "The low numbers of applications for PBRs generally mean small annual fluctuations result in large proportional rates of change. Further, application levels reflect the decision-making of a small number of applicants, so these changes are to be expected."
+     }
+    ],
+    "text": "Low application volumes and a small applicant pool mean small numerical fluctuations can generate large percentage changes."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "explore-trend-6",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.02818,
+  "input": 6430,
+  "model": "gpt-6.1-sol",
+  "output": 1532,
+  "reasoning": 177,
+  "seconds": 17.25
+ }
+}

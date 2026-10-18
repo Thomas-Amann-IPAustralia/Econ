@@ -301,7 +301,7 @@ def verify_embedder(
         q_onnx = onnx.encode(qs, kind="query")
         q_st = embed.encode(key, qs, kind="query")
         rows = list(range(0, len(idx.chunks), max(1, len(idx.chunks) // sample)))[:sample]
-        texts = [idx.chunks[i]["embed_text"] for i in rows]
+        texts = [idx.indexed_text(i) for i in rows]
         d_st = embed.encode(key, texts, kind="doc", cache=False)
         cos_q = (q_onnx * q_st).sum(1)
         cos_d = (idx.vecs[rows] * d_st).sum(1)

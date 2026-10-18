@@ -1,0 +1,78 @@
+{
+ "cost_usd": 0.013285,
+ "data": {
+  "answer": "IP Australia is addressing Indigenous Knowledge through research, international treaty work and Indigenous input into decision-making:[1][2][3][4][5]\n\n- **Research to support treaty consideration:** In its 2026 report, the Office of the Chief Economist (OCE) says it is developing evidence with research partners to inform Australia’s consideration of the Treaty on Genetic Resources and Associated Traditional Knowledge. Once implemented, the framework is intended to improve patent-system transparency and promote fair use of Aboriginal and Torres Strait Islander Peoples’ traditional knowledge.[1]\n- **Research on Indigenous businesses and trade marks:** The OCE is working with the University of Melbourne’s Dilin Duwa Centre for Indigenous Business Leadership to examine the commercial value of trade marks for Indigenous businesses and the potential economic role of trade marks containing Indigenous Knowledge.[2]\n- **Indigenous input into decisions:** The 2025 report says IP Australia has established a pilot Indigenous Knowledge Panel to better inform its decision makers on Indigenous Knowledge and the IP system.[3]\n- **International treaty work:** The 2025 report records Australia’s significant role in concluding a treaty approved in May 2024. Under that treaty, patent applicants whose inventions are based on traditional knowledge linked to genetic resources must identify the Indigenous Peoples or local community that supplied it.[4]\n- **Valuation research:** Earlier work, reported in 2020, included commissioning the Australian National University to examine methods for estimating Indigenous Knowledge’s market value, supporting efforts to ensure it is adequately rewarded and its owners or custodians are the primary beneficiaries.[5]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "In collaboration with research partners, the OCE is developing evidence to inform Australia's consideration of the Treaty on Genetic Resources and Associated Traditional Knowledge - an international framework that, once implemented, will help increase transparency in the patent system and promote the fair use of Aboriginal and Torres Strait Islander People's traditional knowledge."
+     }
+    ],
+    "text": "In 2026, the OCE is developing evidence with research partners to inform Australia's consideration of the Treaty on Genetic Resources and Associated Traditional Knowledge, whose intended effects once implemented include greater patent transparency and fair use of traditional knowledge."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "In collaboration with The University of Melbourne's Dilin Duwa Centre for Indigenous Business Leadership, the OCE is examining the commercial value of trade marks for Indigenous businesses, and the potential economic role for trade marks containing Indigenous Knowledge."
+     }
+    ],
+    "text": "The OCE is collaborating with the University of Melbourne's Dilin Duwa Centre to research trade marks' commercial value for Indigenous businesses and the potential economic role of trade marks containing Indigenous Knowledge."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "IP Australia has also established a pilot Indigenous Knowledge Panel to ensure that our decision makers are better informed on matters relating to Indigenous Knowledge and the IP system."
+     }
+    ],
+    "text": "The 2025 report says IP Australia has established a pilot Indigenous Knowledge Panel to inform decision makers on Indigenous Knowledge and the IP system."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "In the past year Australia has played a significant role in concluding 2 landmark international treaties that will support communities of innovators, including Aboriginal and Torres Strait Islander Peoples."
+     },
+     {
+      "evidence": 2,
+      "quote": "In May 2024, member states of the World Intellectual Property Organization approved a historic new Treaty."
+     },
+     {
+      "evidence": 2,
+      "quote": "Under the Treaty, when an invention is based on traditional knowledge linked to genetic resources, applicants must identify the Indigenous Peoples or local community that supplied this traditional knowledge."
+     }
+    ],
+    "text": "The 2025 report records Australia's significant role in concluding a treaty approved in May 2024, under which applicants must identify the Indigenous Peoples or local community supplying traditional knowledge linked to genetic resources on which an invention is based."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "a report was commissioned from the Australian National University on \"Methods for Estimating the Market Value of Indigenous Knowledge\". This work will support IP Australia's efforts to ensure that Indigenous Knowledge is adequately rewarded and that the owners or custodians of that knowledge are primary beneficiaries."
+     }
+    ],
+    "text": "The 2020 report describes commissioned ANU research on valuing Indigenous Knowledge to support adequate rewards and ensure owners or custodians are primary beneficiaries."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "explore-policy-8",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.02657,
+  "input": 7390,
+  "model": "gpt-6.1-sol",
+  "output": 1179,
+  "reasoning": 222,
+  "seconds": 15.96
+ }
+}

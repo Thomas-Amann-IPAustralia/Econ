@@ -1,0 +1,87 @@
+{
+ "cost_usd": 0.011369,
+ "data": {
+  "answer": "Researchers measured **relative patent scope**: whether Australian patents were narrower, similar or broader than patents for the same inventions granted by the European Patent Office and the United States Patent and Trademark Office—not simply whether Australian claims became narrower in isolation.[1]\n\nThe 2024 study used three main steps:\n\n1. **Expert assessment and machine learning.** Researchers manually assessed 500 patent triplets, then used the labelled assessments to develop a supervised machine-learning model to predict relative scope across more than 80,000 triplets.[2]\n2. **Before-and-after comparisons.** They examined both the first claim and the full set of claims, comparing scope distributions before and after the reforms. The Australian IP Report charted these trends by examination request date.[3]\n3. **Economic modelling.** They estimated the reforms’ effect on the likelihood that Australian patents were broader than their overseas equivalents. Robustness checks included shortening the study period to focus immediately before and after the reforms.[4]\n\n**Two qualifications matter:** narrowing appeared to begin before the reforms, so the 2024 Australian IP Report cautioned against attributing the change entirely to them; and relative scope can change because overseas patents change, not just Australian patents.[5][6]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 9,
+      "quote": "assess whether the scope of the claims of patents granted in Australia aligns with the scope of the claims of equivalent patents (the set of \"identical\" patents which belong to the same patent family) granted by the European Patent Office (EPO) and the United States Patent and Trademark Office (USPTO)."
+     }
+    ],
+    "text": "The study measured Australian patent scope relative to equivalent patents granted by the EPO and USPTO, rather than measuring Australian scope in isolation."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 11,
+      "quote": "A comprehensive methodology was employed, including a manual assessment of 500 patent triplets and the development of a supervised Machine Learning (ML) model to predict patent scope across a larger sample of over 80,000 patent triplets. This innovative approach leveraged labeled data from manual assessments and ML predictions for empirical analysis."
+     }
+    ],
+    "text": "The 2024 study combined manual assessment of 500 patent triplets with supervised machine learning trained on labelled assessments to predict scope across more than 80,000 triplets."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 10,
+      "quote": "Figure 3 charts the distribution of relative patent scope for the first claim (left panel) and for all claims (right panel), showing how the distribution changed before and after the RTB reforms."
+     },
+     {
+      "evidence": 7,
+      "quote": "Patents are charted over time based on their examination request date."
+     }
+    ],
+    "text": "Researchers compared first-claim and all-claims scope distributions before and after the reforms, and the Australian IP Report charted trends by examination request date."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 8,
+      "quote": "Based on economic modelling, the reforms are estimated to have reduced the likelihood of Australian patents being broader than their international equivalents by between 1.0 and 4.0 percentage points."
+     },
+     {
+      "evidence": 8,
+      "quote": "the results were robust to shortening the study's timeframe to focus on the period immediately before and after the reforms."
+     }
+    ],
+    "text": "Economic modelling estimated the reforms’ effect on the likelihood of broader Australian patents, with robustness checks using a shorter period immediately around the reforms."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 8,
+      "quote": "Given that the narrowing of Australian patents appears to have begun prior to the reforms, caution is warranted in ascribing causality to the reforms."
+     }
+    ],
+    "text": "The 2024 Australian IP Report cautioned about causal attribution because narrowing appeared to begin before the reforms."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 7,
+      "quote": "Any changes in relative scope over time may reflect changes in Australian patents but may also partially reflect changes in patent scope within the United States or European Union."
+     }
+    ],
+    "text": "Changes in relative scope may reflect changes in overseas patents as well as Australian patents."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "explore-methods-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.022738,
+  "input": 5759,
+  "model": "gpt-6.1-sol",
+  "output": 1122,
+  "reasoning": 141,
+  "seconds": 15.33
+ }
+}

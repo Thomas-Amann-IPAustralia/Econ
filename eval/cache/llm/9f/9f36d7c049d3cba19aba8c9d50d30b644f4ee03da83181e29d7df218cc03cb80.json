@@ -1,0 +1,90 @@
+{
+ "cost_usd": 0.011928,
+ "data": {
+  "answer": "The passages document two applications: **supervised machine learning to assess patent scope**, and **machine learning to improve applicant identification in IP data**.[1][5]\n\n### 1. Measuring and comparing patent scope\n- **Supervised learning and natural language processing:** In its 2024 research, IP Australia trained a model using examiners’ manual assessments of 500 randomly selected patent triplets—equivalent patents granted in Australia, Europe and the United States—to predict relative patent scope.[1]\n- **Scaling up manual analysis:** The model automated the comparison for over 80,000 patent triplets with examination request years between 2000 and 2019. The manual assessments and model predictions were used to evaluate the Raising the Bar reform.[2]\n- **Predictive features and validation:** Inputs included examination request year, technology classification, examination section and country of origin, alongside claim-text features such as relative word counts and semantic and syntactic similarity. Model quality was tested on data not used for training.[3]\n\nThe 2024 report cautions that techniques for measuring patent scope remain experimental and subject to continuous improvement.[4]\n\n### 2. Improving research data\n- **Applicant identification:** The 2019 report records that IP Australia adopted machine-learning algorithms in 2018 for Intellectual Property Government Open Data (IPGOD), to better identify the same applicants across their IP applications over time.[5]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 14,
+      "quote": "we tasked a team of patent examiners at IP Australia with manually assessing a random sample of 500 \"patent triplets\""
+     },
+     {
+      "evidence": 14,
+      "quote": "The second stage aims to scale up the claim scope comparison beyond the original 500 sample by leveraging machine learning and natural language processing techniques"
+     },
+     {
+      "evidence": 14,
+      "quote": "we used the labelled data from the manual assessment of 500 randomly selected patent triplets of the first stage to develop a supervised Machine Learning (ML) model"
+     }
+    ],
+    "text": "The 2024 patent-scope research used supervised machine learning and natural language processing, trained on examiners’ manual assessments of 500 randomly selected Australian, European and US patent triplets."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 14,
+      "quote": "The sample of second stage covers virtually the whole population of patent triplets granted by IP Australia, the EPO and USPTO with examination request years between 2000 and 2019."
+     },
+     {
+      "evidence": 14,
+      "quote": "we end up with over 80,000 patent triplets. In the second stage we used both the manually assessed sample and the ML model predictions for the empirical analysis to assess the impact of the Raising the Bar reform."
+     }
+    ],
+    "text": "The automated comparison covered over 80,000 patent triplets with examination request years between 2000 and 2019, and supported evaluation of the Raising the Bar reform."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 12,
+      "quote": "Year of exam request,\n\n4-digit International Patent Classification (IPC) codes for a patent's technology area,\n\nIP Australia's examination section, and\n\nCountry of origin."
+     },
+     {
+      "evidence": 12,
+      "quote": "The relative word count difference between the Australian patent and its international pair, and\n\nVarious measures of semantic and syntactic similarity."
+     },
+     {
+      "evidence": 12,
+      "quote": "We assess the quality of the modelling by testing the model parameters using data that was not used to train the model."
+     }
+    ],
+    "text": "Predictors included examination year, technology classification, examination section, origin and claim-text measures; testing used data not used for training."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Techniques for measuring patent scope remain experimental in nature and the focus of continuous improvement by researchers."
+     }
+    ],
+    "text": "The 2024 report characterises patent-scope measurement techniques as experimental and undergoing continuous improvement."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 15,
+      "quote": "In 2018, we adopted machine-learning algorithms for our Intellectual Property Government Open Data (IPGOD), to better identify the same applicants across all their IP right applications over time."
+     }
+    ],
+    "text": "The 2019 report says IP Australia adopted machine-learning algorithms in 2018 for IPGOD to improve identification of the same applicants across applications over time."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A.smoke3",
+ "schema_name": "answer",
+ "tag": "explore-methods-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.023856,
+  "input": 6293,
+  "model": "gpt-6.1-sol",
+  "output": 1127,
+  "reasoning": 237,
+  "seconds": 16.57
+ }
+}

@@ -1,0 +1,83 @@
+{
+ "cost_usd": 0.01371,
+ "data": {
+  "answer": "The clearest finding is **a lower probability of grant for software-related applications most exposed to patentable-subject-matter objections**, rather than a demonstrated fall in applications. IP Australia’s 2024 study estimated that the 2014 court decisions reduced these applications’ probability of grant in Australia by **11.6–12.0 percentage points**, depending on the sample used.[1] This group comprised computer-implemented invention (CII) applications highly similar to applications that had received ‘manner of manufacture’ objections.[2]\n\nThe study analysed two decisions together: Australia’s *Research Affiliates* decision, which confirmed that the particular computer-implemented method claimed was not patentable subject matter, and the US *Alice* decision, which reaffirmed that abstract ideas and their generic computer implementation were not patentable.[3]\n\n**The effect on filing applications is less clear from the supplied evidence.** After accounting for incomplete follow-up data for recent applications, the study found no significant change around 2014 in the unconditional probability of seeking equivalent Australian protection. It cautioned that other factors could mask an effect, requiring further conditional analysis.[4]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 8,
+      "quote": "the 2014 court decisions appear to have a significant negative effect at IPA."
+     },
+     {
+      "evidence": 8,
+      "quote": "There is an 11.6 to 12.0 percentage points reduction (depending on if we only look at triplet samples or the full sample) in the probability of grant of CII-PSM-likely-adverse applications at the patent office of Australia."
+     }
+    ],
+    "text": "The 2024 study estimated a negative effect of the decisions on Australian grant probability of 11.6–12.0 percentage points for CII applications most exposed to subject-matter objections."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 15,
+      "quote": "The first group consists of CII patent applications at each office which are highly similar to patent applications which received manner of manufacture objections from IPA patent examiners."
+     }
+    ],
+    "text": "The affected group was defined by similarity to applications receiving manner of manufacture objections."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 12,
+      "quote": "the impact of 2 specific court rulings, which are potentially overlapping with respect of their timing and their implications on CII patenting legal standards, are analysed simultaneously:"
+     },
+     {
+      "evidence": 12,
+      "quote": "The Federal Court of Australia's appeal decision confirmed that Research Affiliates LLC's claims of a computer implemented method (as specified in Patent Application No. 2005213293) are not patentable subject matter."
+     },
+     {
+      "evidence": 12,
+      "quote": "The ruling reaffirmed that abstract ideas are not patentable; and any generic computer implementation of abstract ideas is not considered inventive enough as to be patentable."
+     }
+    ],
+    "text": "The study jointly analysed Research Affiliates and Alice, concerning the patentability of a particular computer-implemented method and generic computer implementations of abstract ideas."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "An applicant has up to 31 months from their earliest filing to decide whether to apply for an equivalent patent in Australia."
+     },
+     {
+      "evidence": 1,
+      "quote": "If we look at the year trend, accounting for this truncation, there does not appear to be any significant change around the year 2014."
+     },
+     {
+      "evidence": 1,
+      "quote": "However, we note that these figures presented in Table 7 are unconditional probabilities. Various factors could mask any true effect of the 2014 court decisions that may exist."
+     }
+    ],
+    "text": "Accounting for truncated follow-up data, unconditional probabilities showed no significant change around 2014 in seeking equivalent Australian protection, but other factors could mask an effect."
+   }
+  ],
+  "coverage": "partial",
+  "gaps": [
+   "The supplied passages do not provide the conditional econometric results estimating the decisions’ effect on the probability of filing in Australia."
+  ]
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "explore-policy-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.02742,
+  "input": 8545,
+  "model": "gpt-6.1-sol",
+  "output": 1033,
+  "reasoning": 239,
+  "seconds": 14.79
+ }
+}

@@ -1,0 +1,156 @@
+{
+ "cost_usd": 0.01577,
+ "data": {
+  "answer": "The clearest examples are **supervised machine learning classification supported by natural language processing**, used to scale patent-scope comparisons and classify computer-implemented inventions in two 2024 research projects.[1][4]\n\n### 1. Predicting relative patent scope\n- **Learning from examiner assessments:** The Raising the Bar study trained supervised models using 500 manually assessed patent triplets—equivalent patents granted in Australia, Europe and the United States—to automate scope comparisons across a much larger sample.[1]\n- **Combining text and bibliographic features:** Inputs included relative claim word counts, semantic and syntactic similarity, examination-request year, technology classification, examination section and country of origin.[2]\n- **Comparing and tuning classifiers:** The study explored algorithms including logistic regression, support vector classification, boosting methods and multilayer perceptron classification. It selected the **multilayer perceptron (MLP)** using F1 scores to balance precision and recall, alongside hyperparameter tuning, cross-validation and outlier analysis.[3]\n\n### 2. Classifying computer-implemented inventions (CII)\n- **Predicting research classifications:** The CII project developed models to identify relevant applications and predict whether Australian examiners would likely raise a patentable-subject-matter objection. A predicted “clear” classification concerned that issue only—not other requirements such as novelty.[4]\n- **Using neural-network text embeddings:** After cleaning and stemming text, the researchers used **word2vec** to construct separate language models for titles, abstracts and claims across Australian, EPO and USPTO applications. Each application was represented by three 300-element vectors for classification.[5]\n- **Testing alternative supervised algorithms:** The project implemented logistic regression, random forest, XGB and LightGBM classifiers, with accuracy as its primary predictive scoring measure. Its methodology also included automated hyperparameter tuning and multiple-fold cross-validation.[6]\n\n**Important qualification:** These are research and evaluation methods. The 2024 IP Report describes techniques for measuring patent scope as experimental and subject to continuing improvement, rather than settled measures.[7]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 16,
+      "quote": "The second stage aims to scale up the claim scope comparison beyond the original 500 sample by leveraging machine learning and natural language processing techniques to reduce the amount of research time and funding required."
+     },
+     {
+      "evidence": 16,
+      "quote": "we used the labelled data from the manual assessment of 500 randomly selected patent triplets of the first stage to develop a supervised Machine Learning (ML) model for predicting the relative scope for a large sample of patent triplets."
+     }
+    ],
+    "text": "The 2024 Raising the Bar study used supervised machine learning and NLP, trained on 500 manually assessed patent triplets, to automate relative-scope comparisons across a larger sample."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "Year of exam request,\n\n4-digit International Patent Classification (IPC) codes for a patent's technology area,\n\nIP Australia's examination section, and\n\nCountry of origin."
+     },
+     {
+      "evidence": 3,
+      "quote": "The relative word count difference between the Australian patent and its international pair, and\n\nVarious measures of semantic and syntactic similarity."
+     }
+    ],
+    "text": "Patent-scope models combined bibliographic features with claim word-count differences and semantic and syntactic similarity measures."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "| Logistic Regression | Scikit-learn |\n| AdaBoost Classifier | Scikit-learn |\n| Gradient Boosting Classifier | Scikit-learn |\n| Support Vector Classifier | Scikit-learn |\n| XGBoost Classifier | XGBoost |\n| LightGBM Classifier | LightGBM |\n| MLP Classifier | Scikit-learn |"
+     },
+     {
+      "evidence": 12,
+      "quote": "To select the best machine learning model, we use the F1 score"
+     },
+     {
+      "evidence": 12,
+      "quote": "Extensive methodological work was also undertaken in visual analysis and outlier detection, and in hyperparameter tuning and crossvalidation."
+     },
+     {
+      "evidence": 12,
+      "quote": "the Multilayer perceptron classifier (MLP Classifier) was subsequently selected to generate the data for the main descriptive and regression analyses"
+     }
+    ],
+    "text": "The scope study explored several classifiers and selected MLP using F1 scores, with hyperparameter tuning, cross-validation and outlier analysis."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "This project develops and fine tunes ML models to identify CII patents on the margins of patent eligibility in Australia"
+     },
+     {
+      "evidence": 17,
+      "quote": "CII patent applications to which (ML predicts) IPA examiners would likely raise an objection in an adverse examination report on the grounds that the patent is not patentable subject matter (PSM)."
+     },
+     {
+      "evidence": 17,
+      "quote": "resulting in a clear examination report with respect to PSM (the application may still be likely to receive an adverse report with respect to other matters such as novelty and fair basis)."
+     }
+    ],
+    "text": "The 2024 CII project used machine learning to identify applications and predict likely patentable-subject-matter objections; a clear prediction did not address other patentability requirements."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "We first apply standard text cleaning and preprocessing methodologies to clean and stem input texts."
+     },
+     {
+      "evidence": 6,
+      "quote": "word2vec uses neural networks to generate vector embeddings of text"
+     },
+     {
+      "evidence": 6,
+      "quote": "We use this model to produce separate language models for the corpora of patent application titles, abstracts, and claims across our Australian, EPO and USPTO data."
+     },
+     {
+      "evidence": 6,
+      "quote": "For each application, this produces 3 300-element vectors parameterising title, abstract and claims texts."
+     }
+    ],
+    "text": "The CII researchers cleaned and stemmed text, used neural-network word2vec embeddings for separate title, abstract and claim corpora, and generated three 300-element vectors per application."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 8,
+      "quote": "Various supervised learning algorithms summarised below, have their own strengths and weaknesses. They were implemented"
+     },
+     {
+      "evidence": 8,
+      "quote": "Logistic Regression: a binary classification algorithm"
+     },
+     {
+      "evidence": 8,
+      "quote": "Random Forest Classifier: a technique which incorporate randomness"
+     },
+     {
+      "evidence": 8,
+      "quote": "XGB Classifier. eXtreme Gradient Boosting."
+     },
+     {
+      "evidence": 8,
+      "quote": "Light Gradient-Boosting Machine (LGBM) Classifier scans all data instances"
+     },
+     {
+      "evidence": 2,
+      "quote": "We selected Accuracy, the fraction of predictions the modelling correctly predicted as the primary method of scoring the predictive models."
+     },
+     {
+      "evidence": 20,
+      "quote": "The use of automated hyperparameters tuning.\n\nThe consideration of various metrics for the ML objective function\n\nThe implementation of multiple folds CrossValidation to ensure robustness."
+     }
+    ],
+    "text": "The CII project implemented logistic regression, random forest, XGB and LightGBM classifiers, used accuracy as its primary scoring measure, and included automated tuning and cross-validation."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "New research methods like machine learning are creating new opportunities to evaluate and benchmark IP rights."
+     },
+     {
+      "evidence": 1,
+      "quote": "Techniques for measuring patent scope remain experimental in nature and the focus of continuous improvement by researchers."
+     }
+    ],
+    "text": "The 2024 IP Report presents these methods as research and evaluation tools and cautions that patent-scope measurement techniques remain experimental."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.B.smoke3",
+ "schema_name": "answer",
+ "tag": "explore-methods-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.03154,
+  "input": 6620,
+  "model": "gpt-6.1-sol",
+  "output": 1830,
+  "reasoning": 287,
+  "seconds": 24.19
+ }
+}

@@ -46,8 +46,9 @@ llm:
 
 answer:
   prompt: answer-v1
-  plan_prompt: plan-v1
+  plan_prompt: plan-v2               # D-013
   max_queries: 4
+  plan_keeps_question: true          # search the standalone question as well as the plan's queries (D-013)
   # The answer check (SOP §20.7). Each claim's quotes together must hold at least `quote_claim_ratio`
   # times the claim's words, and every quote at least `min_quote_words` words.
   min_quote_words: 5

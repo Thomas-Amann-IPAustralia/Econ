@@ -1,0 +1,160 @@
+{
+ "cost_usd": 0.017301,
+ "data": {
+  "answer": "## Gender gap in patenting\n\n**Women’s participation has increased, but a substantial gap remains.** The 2023 Australian IP Report puts women at 14.6% of Australian inventors named on Patent Cooperation Treaty (PCT) applications in 2022, unchanged from 2021. Its rounded estimate of 15% was 2 percentage points below the international average.[1]\n\nParticipation measures tell different stories: the share of Australian PCT applications naming at least one woman rose by 3 percentage points over the three years to 2022, reaching 26%. Growth was occurring in mixed-gender teams; the report suggests this could reflect more intensive patenting by existing women inventors rather than substantial expansion of the women inventor pool.[2]\n\nThe gap varies considerably by technology. In 2022, women were named on 61% of Australian PCT applications in biotechnology and 59% in both pharmaceuticals and organic fine chemistry.[3]\n\nThe reports do **not** attribute the gap to systematically lower productivity among women. Suggested contributing factors include the nature of women’s research, under-crediting of their contributions and disparities in research funding.[4] The 2023 report also cites US research suggesting that the gap is greatest at first contact with the patent system: among previous inventors, the gender gap in patenting again within five years was only 6%.[5]\n\n## Diversity and innovation outcomes\n\nThe 2023 report summarises evidence that gender-diverse teams tend to produce more radical innovations and higher-impact scientific ideas.[6]\n\nIP Australia’s Australian business analysis presents a nuanced picture, expressed as **associations rather than established causal effects**:\n\n- Comparing businesses of similar size within the same industry, women’s representation in leadership and STEM was associated with **lower R&D intensity**, contrary to earlier overseas studies.[7]\n- Among R&D businesses, greater women’s representation in leadership was associated with **more efficient conversion of R&D spending into patents**: a 10 percentage point increase in women’s leadership share corresponded to a 0.1% efficiency increase.[8]\n- In start-ups, women’s management participation was associated with greater overall IP holdings, including trade marks, designs and plant breeder’s rights. The reported increment was around 1% or less for each 10 percentage point increase in participation.[9]\n\nThe diversity findings extend beyond gender. The 2023 report says registered-IP businesses have larger shares of women and migrants in their STEM workforces than businesses without IP; cultural and ethnic diversity in leadership is associated with greater research intensity.[10]\n\nRelated 2024 research also cautions against treating all diversity as equivalent. Its literature review reports benefits from diversity among collaboration partners, but also diminishing returns from excessive collaboration breadth or depth, and potentially lower innovation potential from organisationally diverse partnerships. These findings concern collaboration structures, not specifically gender diversity.[11]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "In 2022, women constituted 14.6% of Australian inventors, the same level as in 2021."
+     },
+     {
+      "evidence": 8,
+      "quote": "Women account for 15% of unique inventors named on PCT applications from Australia. This represents a participation rate 2 percentage points lower than the international average"
+     }
+    ],
+    "text": "In 2022, women represented 14.6% of Australian PCT inventors, unchanged from 2021; the report’s rounded 15% estimate was 2 percentage points below the international average."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Data on Australians' patenting activity suggests that growth in women's participation is occurring in mixed-gender teams."
+     },
+     {
+      "evidence": 1,
+      "quote": "in the three years to 2022, the share of PCT applications from Australia with at least one woman inventor increased by three percentage points to 26%"
+     },
+     {
+      "evidence": 1,
+      "quote": "An alternative reading of these trends is that women inventors are filing patents more intensively without significant growth in the women inventor pool."
+     }
+    ],
+    "text": "The application-level participation share rose to 26%, with growth in mixed-gender teams, potentially reflecting more intensive patenting rather than a larger women inventor pool."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 8,
+      "quote": "In 2022, women inventors were named on around half of PCT applications in Biotechnology (61%), Organic fine chemistry (59%), Pharmaceuticals (59%), Analysis of biological materials (56%) and Food chemistry (56%)."
+     }
+    ],
+    "text": "Women’s participation differs by technology, reaching 61% of applications in biotechnology and 59% in pharmaceuticals and organic fine chemistry in 2022."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Evidence shows there are no systematic productivity differences between women and men in creative and innovative endeavours"
+     },
+     {
+      "evidence": 8,
+      "quote": "Other factors that may contribute to the gender patent gap include the nature of women's research 13 , under-crediting of women in science output 14 , and disparity in research funding"
+     }
+    ],
+    "text": "The reports find no systematic gender productivity difference and identify research characteristics, under-crediting and funding disparities as possible contributors to the patent gap."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Research from the US shows that the gender gap is greatest in the first contact of inventors with the patent system. Among previous patent inventors, there is only a 6% gap in the number of women and men inventors who patent again within five years"
+     }
+    ],
+    "text": "US research cited in the 2023 report locates the largest gap at initial entry, with only a 6% gender gap in repeat patenting within five years."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "However, gender diverse teams tend to produce more radical innovations and higher-impact scientific ideas"
+     }
+    ],
+    "text": "Gender-diverse teams tend to produce more radical innovations and higher-impact scientific ideas."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "The analysis compared businesses of similar size operating within the same industry."
+     },
+     {
+      "evidence": 3,
+      "quote": "Women's representation in leadership and STEM was associated with lower R&D intensity. These results differ from previous studies that used data from other countries"
+     }
+    ],
+    "text": "The Australian analysis compared similar-sized businesses within industries and found women’s leadership and STEM representation associated with lower R&D intensity, unlike earlier overseas studies; this is an association, not an established causal effect."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "Nevertheless, among R&D businesses, those with a greater share of women in leadership were more efficient in converting R&D investment into patents"
+     },
+     {
+      "evidence": 3,
+      "quote": "For every 10 percentage point increase in the women's share of leadership, efficiency in converting R&D expenditure into patents increased by 0.1%."
+     }
+    ],
+    "text": "Among R&D businesses, women’s leadership representation was associated with greater patent-conversion efficiency, increasing 0.1% per 10 percentage point increase in representation."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "Women's participation in the management team of start-ups was associated with increased overall IP holdings. Separately, it predicted increased holdings of trade marks, designs and PBRs. The effect was incremental, at around 1% or less for every 10 percentage point increase in women participation"
+     }
+    ],
+    "text": "Women’s management participation in start-ups was associated with increased IP holdings, including trade marks, designs and PBRs, with increments around 1% or less per 10 percentage points."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 7,
+      "quote": "Compared to businesses without IP, those with registered IP have a notably larger share of women and migrants in their STEM workforce."
+     },
+     {
+      "evidence": 7,
+      "quote": "Cultural and ethnic diversity in leadership is associated with increased research intensity."
+     }
+    ],
+    "text": "Registered-IP businesses have greater women’s and migrant STEM representation, while cultural and ethnic leadership diversity is associated with increased research intensity."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 19,
+      "quote": "Collaboration with suppliers, clients, and research organisations positively affects product innovation, with diversity among partners enhancing the effects."
+     },
+     {
+      "evidence": 19,
+      "quote": "It brings increasing returns but can lead to decreasing returns when the breadth of dept of collaboration partners becomes excessive"
+     },
+     {
+      "evidence": 20,
+      "quote": "Organisational diversity in collaborative research projects can negatively impact innovation potential. Homogeneous partnerships, such as SME-SME or large company-large company, tend to have higher innovative potential"
+     }
+    ],
+    "text": "The 2024 collaboration literature review reports both benefits and limits to partner diversity, including diminishing returns to excessive breadth or depth and potentially negative effects of organisational diversity; these findings are not specifically about gender."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "explore-synthesis-6",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.034602,
+  "input": 6336,
+  "model": "gpt-6.1-sol",
+  "output": 2193,
+  "reasoning": 394,
+  "seconds": 28.26
+ }
+}

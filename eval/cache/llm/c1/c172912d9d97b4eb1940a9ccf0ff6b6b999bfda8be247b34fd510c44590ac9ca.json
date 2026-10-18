@@ -1,0 +1,108 @@
+{
+ "cost_usd": 0.013577,
+ "data": {
+  "answer": "IP can help firms manage economic shocks by preserving investment options, protecting customer relationships and supporting export resilience.[1]\n\n- **Patents preserve flexibility and a store of value.** The 2026 Australian IP Report describes patents as ‘real options’ that allow firms to stage, delay or redirect investment. Where patents can be sold or licensed, firms have opportunities to recoup innovation investment despite volatile conditions.[2]\n- **Trade marks help protect demand.** They protect customer relationships and goodwill built under a brand, helping firms differentiate their products, stabilise demand and enter new markets.[3]\n- **Overseas trade marks support export adaptation.** A 2021 study of around 9,000 Australian manufacturers found that, after filing trade marks in an export market, firms were more likely to enter, performed better after entry, and became more resilient to exchange rate changes. They also expanded exports more following tariff reductions and were more likely to diversify in response to tariff reductions and exchange rate appreciations.[4] Illustratively, the study estimated that a 10 per cent tariff reduction would increase export revenue by 71 per cent after recent trade mark activity rose from zero to one, compared with 32 per cent without recent trade mark activity.[5]\n- **Patent intensity is associated with survival during shocks.** The 2026 report summarises evidence that more patent-intensive firms were less likely to exit during COVID-19, especially where they also undertook R&D and invested in intangibles.[6]\n\n**These findings should not be read as a guarantee or blanket proof of causation.** For example, the 2026 report explicitly cautions that its research on first IP engagement and firm performance does not establish pure causality: firms already on stronger growth paths may be more likely to invest in IP.[7]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "Patents are increasingly understood as real options: assets that allow firms to stage, delay or redirect investment decisions."
+     },
+     {
+      "evidence": 5,
+      "quote": "They protect customer relationships and goodwill that firms have accrued under their brands."
+     },
+     {
+      "evidence": 6,
+      "quote": "become more resilient to changes in the real exchange rate, and will expand exports more in response to tariff reductions."
+     }
+    ],
+    "text": "IP can help firms manage shocks through investment flexibility, protection of customer relationships and export resilience."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "Patents are increasingly understood as real options: assets that allow firms to stage, delay or redirect investment decisions. Where patents can be licensed, traded or used to attract investment, they provide firms in volatile conditions with options to later recoup returns from investing in innovation."
+     }
+    ],
+    "text": "The 2026 report describes patents as real options that preserve investment flexibility and opportunities to recoup innovation investment through sale or licensing."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "They protect customer relationships and goodwill that firms have accrued under their brands. In this way, trade marks can help stabilise demand, support differentiation and facilitate entry into new markets."
+     }
+    ],
+    "text": "Trade marks protect brand goodwill and customer relationships, helping stabilise demand, differentiate products and facilitate market entry."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "Using data on around 9,000 Australian manufacturing firms exporting across 12 countries"
+     },
+     {
+      "evidence": 6,
+      "quote": "The study finds that, after filing trade marks in an export market, exporters are more likely to enter that market, tend to perform better after entry, become more resilient to changes in the real exchange rate, and will expand exports more in response to tariff reductions."
+     },
+     {
+      "evidence": 6,
+      "quote": "Compared to the average exporter, firms are more likely to diversify their exports in response to tariff reductions and exchange rate appreciations after filing trade marks in an export market."
+     }
+    ],
+    "text": "The 2021 study of around 9,000 Australian manufacturers links overseas trade mark filing to better entry and performance, exchange rate resilience, and greater export expansion and diversification in response to specified shocks."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "after a firm has increased its recent trade marks in a destination market from zero to one, a 10% tariff reduction will induce a 71% increase in export revenue, more than double the 32% increase in revenue for the firm with no recent trade mark activity."
+     }
+    ],
+    "text": "The study estimated export revenue responses to a 10 per cent tariff reduction of 71 per cent after recent trade mark activity rose from zero to one, versus 32 per cent without recent activity."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 7,
+      "quote": "During the COVID-19 shock, firms that were more patent-intensive were less likely to exit, especially if they engaged in R&D and invested in intangibles"
+     }
+    ],
+    "text": "The 2026 report associates greater patent intensity with lower exit during COVID-19, especially among firms undertaking R&D and investing in intangibles."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 19,
+      "quote": "Selection effects are likely present: firms on stronger growth paths may be more likely to invest in IP."
+     },
+     {
+      "evidence": 19,
+      "quote": "The analysis does not claim pure causality."
+     }
+    ],
+    "text": "The findings are not blanket causal proof: the 2026 first-IP-engagement analysis acknowledges selection effects and does not claim pure causality."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "explore-synthesis-7",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.027154,
+  "input": 6167,
+  "model": "gpt-6.1-sol",
+  "output": 1482,
+  "reasoning": 372,
+  "seconds": 21.11
+ }
+}

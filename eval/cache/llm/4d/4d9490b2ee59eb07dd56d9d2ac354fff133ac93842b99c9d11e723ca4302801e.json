@@ -1,0 +1,64 @@
+{
+ "cost_usd": 0.013661,
+ "data": {
+  "answer": "**For CII applications predicted to face a patentable-subject-matter objection in Australia, the grant-probability penalty was greatest in Europe, followed by Australia, then the United States.** The 2024 study reports relative reductions against each office’s non-CII baseline of **24.2 per cent at the EPO, 18.0 per cent at IP Australia and 7.1 per cent at the USPTO**. These are relative reductions, not percentage-point differences.[1]\n\nThe non-CII baseline grant rates were approximately **52 per cent at the EPO, 64 per cent at IP Australia and 65 per cent at the USPTO**.[2]\n\nTwo qualifications matter:\n- The CII subgroup was identified using machine-learning predictions of whether **Australian examiners** would raise a patentable-subject-matter objection—not actual objections at each office.[3]\n- The estimates cover applications filed in **2010–2017**, with outcomes measured in **early 2024**. “Non-grant” includes pending applications as well as refused/rejected, withdrawn and abandoned applications.[4]\n\nThe supplied passages do not provide equivalent grant-rate comparisons for all CII applications or for the subgroup predicted not to face an objection.",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 10,
+      "quote": "Calculated from these base rates, if an application is identified as CII-PSM-likely-adverse, it's likelihood of being granted declines by 18.0% (=11.5/64) at IP Australia, by 7.1% at the USPTO and by 24.2% at the EPO."
+     }
+    ],
+    "text": "The 2024 study reports relative grant-probability reductions for CII applications predicted to face a subject-matter objection of 24.2 per cent at the EPO, 18.0 per cent at IP Australia and 7.1 per cent at the USPTO, against non-CII baselines."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 10,
+      "quote": "for non-CII applications, around 64% are granted at IP Australia, 52% are granted at the EPO and 65% are granted at the USPTO."
+     }
+    ],
+    "text": "Non-CII baseline grant rates were around 52 per cent at the EPO, 64 per cent at IP Australia and 65 per cent at the USPTO."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 13,
+      "quote": "\"CII-PSM-likely-adverse\" are patent applications ML predicts IPA examiners would raise an objection to on the grounds of lack of patentable subject matter."
+     }
+    ],
+    "text": "The adverse subgroup is based on machine-learning predictions of Australian examiners’ subject-matter objections, rather than actual objections at each office."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 10,
+      "quote": "Non-grant outcome includes refused/rejected, withdrawn, abandoned, and pending. Grant and non-grant status is as of early 2024. The sample period is filing years of 2010-2017."
+     }
+    ],
+    "text": "The estimates cover filing years 2010–2017, with status measured in early 2024; non-grant includes refused/rejected, withdrawn, abandoned and pending applications."
+   }
+  ],
+  "coverage": "partial",
+  "gaps": [
+   "The passages do not provide comparative grant rates for CII applications overall or for CII applications predicted not to face a patentable-subject-matter objection.",
+   "They describe an evaluation of the 2014 court decisions and applicants’ propensity to file in Australia, but do not provide those results."
+  ]
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "explore-compare-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.027322,
+  "input": 8026,
+  "model": "gpt-6.1-sol",
+  "output": 1127,
+  "reasoning": 377,
+  "seconds": 16.84
+ }
+}

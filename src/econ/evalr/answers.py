@@ -132,6 +132,7 @@ def run(
 ) -> list[dict]:
     from concurrent.futures import ThreadPoolExecutor
 
+    grid2.context_rows(s, needs[0])  # build the setting's indexes once, before the threads share them
     with ThreadPoolExecutor(max_workers=workers) as ex:
         rows = list(
             ex.map(

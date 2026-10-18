@@ -1,0 +1,72 @@
+{
+ "cost_usd": 0.011636,
+ "data": {
+  "answer": "**Transport stands out in the latest quantified field-growth comparison supplied, for 2024.** The 2025 report identifies it as the field with the strongest relative patent growth, with filings up **12.8%**.[1]\n\nOther growth areas are:\n\n- **Biotechnology:** filings rose **4.7% in 2024**, bucking the downward correction in pharmaceuticals and medical technology.[2]\n- **Australian-resident innovation:** Australian biotechnology filings rose **31.7% in 2024**. Biotechnology and computer technology were the fields where Australian innovators most rapidly increased their share of domestic filings over the preceding three years—not necessarily the fastest-growing fields across all applicants.[3]\n- **Clean energy generation and storage:** the 2024 report identified Australia as the **second-fastest-growing destination among 19 major economies** for patent filings in this area. This compares destinations, rather than ranking growth across technology fields within Australia.[4]\n\n**Growth is distinct from filing volume:** the latest report, published in 2026, shows that pharmaceuticals, medical technology and biotechnology together accounted for **33.3% of standard complete filings in 2025**, confirming health technologies’ continuing dominance by volume.[5]\n\nThe supplied passages do not provide a field-by-field growth ranking for 2025.",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "Transport saw the strongest relative patent growth in 2024, overall filings in this field are up 12.8%."
+     }
+    ],
+    "text": "The 2025 report identifies transport as having the strongest relative patent growth in 2024, with filings up 12.8%."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 12,
+      "quote": "In 2024, a downward correction was observed in pharmaceutical and medical technology patents, from elevated levels during the COVID-19 shock. Biotechnology was an exception, with 4.7% more filings in this field than during 2023."
+     }
+    ],
+    "text": "Biotechnology filings rose 4.7% in 2024, while pharmaceutical and medical technology patents underwent a downward correction."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "However, biotechnology and computer technology are the fields where Australian innovators have most rapidly increased their share of domestic filings over the past 3 years. With Australian biotechnology patent filings up by 31.7% in 2024, this likely reflects the reported strengthening of Australia's industry and global partnerships."
+     }
+    ],
+    "text": "Australian biotechnology filings increased 31.7% in 2024; biotechnology and computer technology had the fastest increases in Australian innovators’ share of domestic filings over the preceding three years, a different measure from overall field growth."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "Among 19 major economies, Australia is the second fastest growing destination for patent filings related to clean energy generation and storage."
+     }
+    ],
+    "text": "The 2024 report ranked Australia second among 19 major economies for destination growth in clean energy generation and storage patent filings, rather than ranking technology fields within Australia."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 9,
+      "quote": "Health-related technologies continue to anchor patenting activity in Australia. In 2025, pharmaceuticals (3,715 applications), medical technology (3,331) and biotechnology (3,073) together accounted for 33.3% of all standard complete filings."
+     }
+    ],
+    "text": "The 2026 report shows that pharmaceuticals, medical technology and biotechnology together accounted for 33.3% of standard complete filings in 2025, demonstrating continuing health-sector dominance by volume."
+   }
+  ],
+  "coverage": "partial",
+  "gaps": [
+   "The supplied passages do not provide technology-field growth rates or a fastest-growing-field ranking for 2025."
+  ]
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v1.A",
+ "schema_name": "answer",
+ "tag": "explore-trend-9",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.023272,
+  "input": 7066,
+  "model": "gpt-6.1-sol",
+  "output": 914,
+  "reasoning": 140,
+  "seconds": 11.98
+ }
+}
