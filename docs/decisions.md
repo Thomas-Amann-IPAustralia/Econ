@@ -350,3 +350,23 @@ as v1b):
 sentence-transformers path on all 114 questions.
 
 **Spend:** $0.
+
+---
+
+## D-009 — Citation filter v3: inside a reference list, every dated entry is a citation (Claude; refines D-008; 2026-10-18)
+
+**Context.** After D-008 a references entry ("Arellano, M., and Bond, S. 1991. Some tests of
+specification for panel data…") still led PROMPT_1: D-008's guard took its long title for a sentence
+with something to say.
+
+**Decision.** Under a heading containing References, Bibliography or Works cited (not Endnotes), every
+element with a year is a citation, without the guard. Endnotes keep the guard, since some say
+something substantive. 475 elements qualify; no gold passage lies in one. Regression test
+`test_everything_dated_in_a_reference_list_is_a_citation`.
+
+**Results** (grid `retrieval-v1d`, committed before its numbers; same rule): dev recall@4k_tok 0.842 for
+both; over all 114 needs ndcg@10 −0.001 [−0.003, +0.002] and recall@4k_tok −0.004 [−0.026, +0.013];
+citation-heavy share of the top 10 from 2.2% to 0.0%. Index rebuilt (1,896 passages) and re-verified
+(`3b2fdc9 clean`; identical top 10 on all 114 questions).
+
+**Spend:** $0.
