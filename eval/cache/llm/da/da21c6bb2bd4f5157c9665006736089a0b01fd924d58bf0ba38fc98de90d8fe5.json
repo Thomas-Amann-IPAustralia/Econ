@@ -1,0 +1,99 @@
+{
+ "cost_usd": 0.01541,
+ "data": {
+  "answer": "**The United States remains the largest source of standard patent applications in Australia, but China’s share is rising.** In 2025, the US accounted for **40.8%** of filings, followed by **China (9.7%)** and **Australian residents (9.3%)**, according to the 2026 report.[1]\n\nThe most recent explicitly named top-five **overseas** ranking in the passages is for **2024**: United States, China, Japan, United Kingdom and Switzerland, with respective shares of total filings of 42.7%, 8.5%, 5.0%, 4.7% and 4.3%.[2]\n\nThe country mix has shifted in several ways:\n\n- **The US lead is narrowing.** US-origin filings fell by 6.2% in 2024 and another 5.0% in 2025, while China-origin filings rose by 5.2% and 13.4% respectively.[3]\n- **China’s rise is a longer-term ranking change:** it was the sixth-largest source in 2017, compared with second-largest in 2025.[4]\n- **Smaller origins also show substantial movements.** In 2025, applications from Singapore grew by 29.0% and Finland by 20.3%, while Belgium and Spain declined by 17.8% and 13.6% respectively.[5]\n- **Overseas applicants still dominate overall.** Non-residents accounted for 90.7% of standard complete filings in 2025. Australian residents’ share rose from 8.5% in 2024 to 9.3% in 2025—the highest since 2021.[6]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "In 2025, the United States remained the dominant source of standard complete patent applications in Australia, accounting for 40.8% of filings. China was the second-largest source at 9.7%, followed by Australian residents at 9.3%."
+     }
+    ],
+    "text": "In 2025, the United States was the largest source of standard patent applications, with 40.8%, followed by China with 9.7% and Australian residents with 9.3%."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "As shown in Figure 2.3, the lead overseas origins for standard patent filings in Australia are the United States (US residents are named as applicants on 42.7% of total filings), China (8.5%), Japan (5.0%), the United Kingdom (4.7%) and Switzerland (4.3%)."
+     }
+    ],
+    "text": "For 2024, the leading overseas origins were the United States, China, Japan, the United Kingdom and Switzerland, with shares of 42.7%, 8.5%, 5.0%, 4.7% and 4.3%."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "In 2024, US filings fell for the second consecutive year, down by 6.2% from 2023 level."
+     },
+     {
+      "evidence": 3,
+      "quote": "China-origin filings reached a new record level, rising by 5.2% on their previous record in 2023."
+     },
+     {
+      "evidence": 1,
+      "quote": "US-origin filings declined in absolute terms (-5.0% from 2024 levels), continuing a longer-term easing in Australia."
+     },
+     {
+      "evidence": 1,
+      "quote": "China-origin filings increased markedly (+13.4%), reflecting ongoing growth in applied and industrial technologies and continued outward engagement by Chinese firms."
+     }
+    ],
+    "text": "The US lead is narrowing: US filings declined by 6.2% in 2024 and 5.0% in 2025, while Chinese filings grew by 5.2% and 13.4% respectively."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "Applications from China grew 20 per cent to 1067, making it now the sixth largest source of patent filings in Australia."
+     },
+     {
+      "evidence": 1,
+      "quote": "China was the second-largest source at 9.7%, followed by Australian residents at 9.3%."
+     }
+    ],
+    "text": "China rose from the sixth-largest source of patent filings in Australia in 2017 to second-largest in 2025."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "High growth in applications was observed from Singapore (+29.0%) and Finland (+20.3%), while filings from Belgium (-17.8%) and Spain (-13.6%) declined sharply."
+     }
+    ],
+    "text": "In 2025, filings from Singapore and Finland grew by 29.0% and 20.3%, while Belgium and Spain declined by 17.8% and 13.6%."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 15,
+      "quote": "As a share of total standard complete filings, residents accounted for 9.3%, up from 8.5% in 2024 and the highest share since 2021."
+     },
+     {
+      "evidence": 15,
+      "quote": "Non-resident filings declined modestly in 2025, from 27,909 in 2024 to 27,538 (-1.3%). As a result, the nonresident share eased slightly to 90.7%."
+     }
+    ],
+    "text": "Non-residents accounted for 90.7% of standard complete filings in 2025, while residents’ share rose from 8.5% in 2024 to 9.3%, its highest since 2021."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v2.C",
+ "schema_name": "answer",
+ "tag": "explore-trend-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.03082,
+  "input": 7880,
+  "model": "gpt-6.1-sol",
+  "output": 1506,
+  "reasoning": 328,
+  "seconds": 21.46
+ }
+}

@@ -1,0 +1,90 @@
+{
+ "cost_usd": 0.012328,
+ "data": {
+  "answer": "**Not necessarily.** The evidence suggests registered designs are not central to protection strategies for some designers, rather than showing that designers generally rely on them. A 2014 interview study found formal IP protection played only a limited role in participants’ design-related business practices.[1]\n\nThe research identifies several reasons and alternatives:\n\n- **Design is often a service, not just a product.** Interviewees described design as co-created with clients, making formal protection of the resulting artefact less relevant to the transaction.[2]\n- **Time and perceived enforcement difficulties matter.** One designer, Henry Wilson, preferred getting to market first at an achievable price to pursuing protection. He protected his name and brand through trade marks rather than registering his product designs.[3]\n- **Use differs across the design community.** A 2019 study found little indication that creative arts designers used the designs system, despite employing 4,020 designers—20 per cent of that sector’s workforce. It suggested they might favour copyright or produce designs registered by other agents, but said further research was needed.[4]\n\n**These findings are indicative, not a measure of all designers’ reliance.** The 2014 study was exploratory, reporting seven in-depth formal interviews supplemented by informal interviews; its aim was to understand the market rather than test a model of behaviour.[5]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "Formal protection of intellectual property rights (IPRs) feature only weakly in the strategies employed by firms that differentiate themselves through design."
+     },
+     {
+      "evidence": 7,
+      "quote": "First, IPRs play a limited role in the business practices relating to design."
+     }
+    ],
+    "text": "The evidence suggests registered designs are not central for some designers: the 2014 interview study found formal IP protection played a limited role in design-related business practices."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "One factor contributing to the limited perceived relevance of intellectual property rights is that design is commonly sold as a service rather than simply as an artifact."
+     },
+     {
+      "evidence": 3,
+      "quote": "Interviewees were broadly of the view that design is a service that is typically co-created with the client."
+     }
+    ],
+    "text": "Design is often co-created as a service, limiting the relevance of formal protection of the artefact to the transaction."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "I'm much better off I think using my time to be there first, making it en masse at an achievable price-point, rather than trying to protect it."
+     },
+     {
+      "evidence": 5,
+      "quote": "Wilson's IP strategy has been to take out trademark protection on his name and brand, eschewing options of patents and design registration for his products."
+     }
+    ],
+    "text": "Henry Wilson preferred speed to market and an achievable price over pursuing protection, and used trade marks for his name and brand rather than product design registration."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Further, large numbers of designers (4 020) are employed in the creative arts, representing 20 per cent of that sector's workforce. We see little indication that these designers use the designs system."
+     },
+     {
+      "evidence": 1,
+      "quote": "Further research is needed to determine whether creative arts professionals are producing designs registered by other agents. Alternatively, they may be oriented more toward the copyright system than registered designs."
+     }
+    ],
+    "text": "The 2019 study found little indication of designs-system use among creative arts designers, who numbered 4,020 and represented 20 per cent of the sector; copyright orientation or registration by others were possibilities requiring further research."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "We report on seven in-depth formal interviews. Our research also involved triangulation through informal interviews with a broader, targeted field of market participants."
+     },
+     {
+      "evidence": 6,
+      "quote": "First, it fits well with the exploratory nature of our research: our goal was to understand how the market operates, rather than test a model of market behaviour."
+     }
+    ],
+    "text": "The findings are indicative rather than a population-wide measure: the exploratory 2014 study used seven formal interviews, supplemented by informal interviews, to understand the market rather than test behaviour."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v2.C",
+ "schema_name": "answer",
+ "tag": "explore-synthesis-9",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.024656,
+  "input": 6943,
+  "model": "gpt-6.1-sol",
+  "output": 1077,
+  "reasoning": 208,
+  "seconds": 22.55
+ }
+}

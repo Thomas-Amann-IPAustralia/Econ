@@ -1,0 +1,77 @@
+{
+ "cost_usd": 0.008265,
+ "data": {
+  "answer": "The study created its training benchmark through **manual assessment by IP Australia patent examiners**. Examiners assessed a random sample of 500 patent triplets—families covering the same or similar technical content, with patents granted in Australia, Europe and the United States. They compared each Australian patent’s scope separately with its European and US equivalents.[1]\n\nThe assessments covered both the **first claim and the full set of claims**, producing labelled comparisons for Australian–European and Australian–US pairs.[2] These manual assessments supplied the labelled data used to develop a supervised machine learning model, scaling the comparison to more than 80,000 patent triplets.[3]\n\nThe benchmark concerned **granted claims**, not claims in the initial applications. The 500-triplet sample size reflected the time and funding costs of examiner-led comparisons.[4]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "we tasked a team of patent examiners at IP Australia with manually assessing a random sample of 500 \"patent triplets\""
+     },
+     {
+      "evidence": 1,
+      "quote": "collections of patent application families covering the same or similar technical content which were granted by IP Australia, the EPO and the USPTO"
+     },
+     {
+      "evidence": 1,
+      "quote": "We assess relative patent scope as the scope of an Australian patent compared to the scope of its equivalent patent granted in Europe and, separately, to the scope of its equivalent patent granted in the United States."
+     }
+    ],
+    "text": "IP Australia examiners manually assessed 500 randomly sampled patent triplets covering the same or similar technical content, comparing Australian scope separately with European and US equivalents."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 8,
+      "quote": "There are four sets of ML Classifier predictions depending on the labelled data used: first claim AU-EP pair, all claims AU-EP pair, first claim AU-US pair, and all claims AU-US pair."
+     }
+    ],
+    "text": "Manual assessments covered first claims and all claims for Australian–European and Australian–US pairs."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "we used the labelled data from the manual assessment of 500 randomly selected patent triplets of the first stage to develop a supervised Machine Learning (ML) model"
+     },
+     {
+      "evidence": 1,
+      "quote": "After ensuring that there is complete information on the claim text of the patents, we end up with over 80,000 patent triplets."
+     }
+    ],
+    "text": "The manual assessments provided labelled training data for a supervised model that scaled comparison to over 80,000 patent triplets."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "This report focuses only on the scope of granted patent claims. It does not assess the relative scope of the claims within the initial application."
+     },
+     {
+      "evidence": 4,
+      "quote": "It is both time and financially costly to arrange for manual comparisons of the granted patent scopes by patent examiners. The sample size of 500 was set by the time and research funding restrictions."
+     }
+    ],
+    "text": "The benchmark assessed granted claims rather than initial application claims, and the sample size was constrained by time and research funding."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v2.C",
+ "schema_name": "answer",
+ "tag": "erp14-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.01653,
+  "input": 4380,
+  "model": "gpt-6.1-sol",
+  "output": 777,
+  "reasoning": 133,
+  "seconds": 18.32
+ }
+}

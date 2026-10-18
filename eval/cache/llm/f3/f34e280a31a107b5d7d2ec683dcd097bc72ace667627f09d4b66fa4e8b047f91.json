@@ -1,0 +1,102 @@
+{
+ "cost_usd": 0.014688,
+ "data": {
+  "answer": "**There is evidence linking IP ownership to higher profitability, but it does not conclusively separate the effect of IP from firms’ tendency to select into IP ownership.** The 2020 research reports a strong positive association; newer research explicitly acknowledges selection effects and does not claim pure causality.[1]\n\n- **The profitability relationship survives controls.** The 2020 study reports approximately 2.5 times higher profit for IP owners, on average, after controlling for past profitability and certain business, industry and time characteristics. Crucially, this estimate only covers businesses profitable for at least the preceding six years: loss-making and zero-profit observations were excluded.[2]\n\n- **Selection is a credible part of the explanation.** The 2020 report finds IP-owning firms are, on average, larger, older and more profitable. It notes that larger or older firms have greater resources to obtain and use IP rights. The 2026 report likewise cautions that firms already on stronger growth paths may be more likely to invest in IP.[3]\n\n- **Owning more rights is not necessarily associated with more profit.** The 2020 research finds stronger profitability associations for certain portfolios—patents and trade marks, trade marks and designs, or all three—but no significant association with the number of rights owned. The stock-of-rights analysis had a substantially reduced sample, although tests for individual rights remained robust.[4]\n\n- **Newer evidence strengthens the timing evidence, not a definitive causal claim.** The 2026 report finds sustained income and productivity increases following first IP engagement, without sharp pre-grant acceleration. It interprets this as IP engagement coinciding with economically meaningful transitions, while explicitly retaining the selection and causality caveats. These are income and productivity findings, rather than direct profitability estimates.[5]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Ownership of IP rights, specifically patents, trade marks and designs, is strongly and positively associated with firm profitability."
+     },
+     {
+      "evidence": 5,
+      "quote": "Selection effects are likely present: firms on stronger growth paths may be more likely to invest in IP.\n\nThe analysis does not claim pure causality."
+     }
+    ],
+    "text": "The evidence links IP ownership to profitability but does not conclusively distinguish an IP effect from selection into ownership."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "IPR ownership does contribute significantly to businesses' average profit per invested capital and profit per employee after controlling for their past profitability and certain other business, industry and time characteristics. The estimated coefficient of the IP ownership dummy variable indicates that IPR owners have approximately 2.5 times higher profit than non-owners on average, all else being equal."
+     },
+     {
+      "evidence": 4,
+      "quote": "only businesses that have been making a profit in the past six years at least have been used in this estimation due to the log transformation of the probability indicator. Any negative or no profit observations are necessarily dropped from the analysis."
+     }
+    ],
+    "text": "The 2020 controlled estimate reports approximately 2.5 times higher profit for IP owners, but only includes businesses profitable for at least six preceding years."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "On average, firms that own IPRs are larger (in terms of number of employees), older and more profitable than those without IPRs"
+     },
+     {
+      "evidence": 2,
+      "quote": "Older or larger businesses tend to have greater resources, including financial, knowledge and organisational capital, to equip them to apply for and use IP rights."
+     },
+     {
+      "evidence": 5,
+      "quote": "Selection effects are likely present: firms on stronger growth paths may be more likely to invest in IP."
+     }
+    ],
+    "text": "Selection is plausible: IP owners tend to be larger, older and more profitable, resources facilitate ownership, and stronger growth paths may encourage IP investment."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "Certain IPR portfolios (all three, patents and trade marks, or trade marks and designs), contribute to business profitability more significantly compared to other combinations of IPRs."
+     },
+     {
+      "evidence": 3,
+      "quote": "We found that the number of IPRs that a business owns does not appear to be significantly associated with business profitability"
+     },
+     {
+      "evidence": 12,
+      "quote": "The number of observations valid for the estimation of this particular model is reduced significantly because the number of businesses with a valid stock of all three types of IPRs is relatively small. Robustness tests were conducted for individual IP rights-patents, trade marks and designs-by changing the appropriate number of lags for both profitability indicators and the results remain robust."
+     }
+    ],
+    "text": "Certain IP portfolios have stronger profitability associations, but counts of rights do not; the stock analysis had a reduced sample, with robust individual-right tests."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "statistically significant increases in income and productivity are observed following first IP engagement"
+     },
+     {
+      "evidence": 5,
+      "quote": "Selection effects are likely present: firms on stronger growth paths may be more likely to invest in IP."
+     },
+     {
+      "evidence": 5,
+      "quote": "The analysis does not claim pure causality. However, the absence of sharp pre-grant acceleration, combined with sustained post-grant shifts, suggests that IP engagement coincides with economically meaningful transitions"
+     }
+    ],
+    "text": "The 2026 evidence shows sustained post-engagement income and productivity increases without sharp pre-grant acceleration, but acknowledges selection and does not establish pure causality or directly estimate profitability."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v2.C",
+ "schema_name": "answer",
+ "tag": "explore-evidence-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.029376,
+  "input": 6803,
+  "model": "gpt-6.1-sol",
+  "output": 1577,
+  "reasoning": 352,
+  "seconds": 25.87
+ }
+}

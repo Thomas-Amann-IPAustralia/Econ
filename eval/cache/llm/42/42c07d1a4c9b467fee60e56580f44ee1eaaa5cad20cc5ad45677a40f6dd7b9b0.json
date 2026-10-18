@@ -1,0 +1,157 @@
+{
+ "cost_usd": 0.017033,
+ "data": {
+  "answer": "The evidence describes three main applications: **supervised patent classification, natural-language processing of patent text, and entity matching to improve research data**.[1][4][5][8]\n\n### 1. Measuring patent scope — 2024 research\nResearchers trained and tested supervised classifiers using **500 manually assessed patent triplet families**, comparing Australian patents with their European and US equivalents, then deployed the best classifier across the larger dataset.[1]\n\nPredictive features combined bibliographic information—examination-request year, technology classification, examination section and country of origin—with claim-text features, including relative word counts and semantic and syntactic similarity. Model quality was tested on data not used for training.[2]\n\nThe selected model was a **multilayer perceptron classifier (MLP)**, ranked using the F1 score to balance precision and recall. Development also involved visual analysis, outlier detection, hyperparameter tuning and cross-validation.[3]\n\n### 2. Classifying computer-implemented inventions — 2024 research\nThis work developed supervised models using Australian applications labelled according to whether examiners actually raised patentable-subject-matter objections. The models classify applications as **likely to receive, or likely not to receive, such an objection**; these are predictions rather than actual examination outcomes.[4]\n\nFor text processing, researchers cleaned and stemmed patent text and used **word2vec neural-network embeddings**. Titles, abstracts and claims were each represented by a separate 300-element vector for classification.[5]\n\nThe algorithms implemented included **logistic regression, random forest, XGBoost and LightGBM**, with predictive accuracy selected as the primary scoring measure.[6] The development approach also included automated hyperparameter tuning and multiple-fold cross-validation.[7]\n\n### 3. Matching applicants and organisations in research datasets\nThe 2019 report records that machine-learning algorithms were adopted in **2018** to identify the same applicants across their IP applications over time. The 2022 report describes further techniques applied during **2021** to match organisations and entities across IP rights, supporting more integrated and regularly supplied IPGOD data.[8]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "We compared the predictive performance of these algorithms in classifying the relative scope of Australian patent claims using the 500 manually assessed random triplet patent families as the train and test data. We then deployed the best ML Classifier on the full set of patent triplets from 2000 through 2019."
+     },
+     {
+      "evidence": 2,
+      "quote": "Australian patents with equivalent patents granted at the USPTO and EPO."
+     }
+    ],
+    "text": "The 2024 patent-scope research trained and tested supervised classifiers on 500 manually assessed patent triplet families and deployed the best classifier on a larger dataset."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "Year of exam request,\n\n4-digit International Patent Classification (IPC) codes for a patent's technology area,\n\nIP Australia's examination section, and\n\nCountry of origin."
+     },
+     {
+      "evidence": 2,
+      "quote": "The relative word count difference between the Australian patent and its international pair, and\n\nVarious measures of semantic and syntactic similarity."
+     },
+     {
+      "evidence": 2,
+      "quote": "We assess the quality of the modelling by testing the model parameters using data that was not used to train the model."
+     }
+    ],
+    "text": "Patent-scope models combined bibliographic and claim-text features, including word-count differences and semantic and syntactic similarity, and were evaluated on data not used for training."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "To select the best machine learning model, we use the F1 score (described in detail within Appendix B) as the ranking criterion. The intent was to find the best balance between precision and recall"
+     },
+     {
+      "evidence": 6,
+      "quote": "Extensive methodological work was also undertaken in visual analysis and outlier detection, and in hyperparameter tuning and crossvalidation."
+     },
+     {
+      "evidence": 6,
+      "quote": "the Multilayer perceptron classifier (MLP Classifier) was subsequently selected to generate the data for the main descriptive and regression analyses due to the F1 scores"
+     }
+    ],
+    "text": "The patent-scope study selected an MLP classifier using F1 scores, with visual analysis, outlier detection, hyperparameter tuning and cross-validation."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 13,
+      "quote": "consists of Australian CII patents for which actual PSM objections were raised in the examination process (\"CII-PSM-adverse\"), as well as Australian CII patent applications for which IPA did not raise PSM objections (\"CIIPSM-clear\")."
+     },
+     {
+      "evidence": 13,
+      "quote": "Development and fine tuning of ML models based on the labelled data in (2) to automatically classify CII patent applications into the 2 subsets: \"CII-PSM-likely-clear\" and \"CII-PSM-likely-adverse\"."
+     },
+     {
+      "evidence": 9,
+      "quote": "CII patent applications to which (ML predicts) IPA examiners would likely raise an objection in an adverse examination report on the grounds that the patent is not patentable subject matter (PSM)."
+     }
+    ],
+    "text": "The CII project used actual Australian examination-objection labels to develop supervised models predicting whether applications would likely receive patentable-subject-matter objections, rather than reporting actual outcomes."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "We first apply standard text cleaning and preprocessing methodologies to clean and stem input texts. We then use the word2vec model (Mikolov et al, 2013) to generate models of the relevant patent text corpora. Developed by Google researchers, word2vec uses neural networks to generate vector embeddings of text"
+     },
+     {
+      "evidence": 4,
+      "quote": "For each application, this produces 3 300-element vectors parameterising title, abstract and claims texts. These are the input feature vectors to the ML classification discussed in the main text."
+     }
+    ],
+    "text": "The CII research cleaned and stemmed text, then used word2vec neural-network embeddings to represent titles, abstracts and claims as three separate 300-element vectors."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "Various supervised learning algorithms summarised below, have their own strengths and weaknesses. They were implemented and the model with the best predictive performance will be used to refine the 'raw' CII patent application database:"
+     },
+     {
+      "evidence": 5,
+      "quote": "Logistic Regression: a binary classification algorithm"
+     },
+     {
+      "evidence": 5,
+      "quote": "Random Forest Classifier: a technique which incorporate randomness"
+     },
+     {
+      "evidence": 5,
+      "quote": "XGB Classifier. eXtreme Gradient Boosting."
+     },
+     {
+      "evidence": 5,
+      "quote": "Light Gradient-Boosting Machine (LGBM) Classifier scans all data instances"
+     },
+     {
+      "evidence": 1,
+      "quote": "We selected Accuracy, the fraction of predictions the modelling correctly predicted as the primary method of scoring the predictive models."
+     }
+    ],
+    "text": "The CII project implemented logistic regression, random forest, XGBoost and LightGBM, selecting accuracy as its primary scoring measure."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 11,
+      "quote": "The use of automated hyperparameters tuning."
+     },
+     {
+      "evidence": 11,
+      "quote": "The implementation of multiple folds CrossValidation to ensure robustness."
+     }
+    ],
+    "text": "CII model development included automated hyperparameter tuning and multiple-fold cross-validation."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 14,
+      "quote": "In 2018, we adopted machine-learning algorithms for our Intellectual Property Government Open Data (IPGOD), to better identify the same applicants across all their IP right applications over time."
+     },
+     {
+      "evidence": 15,
+      "quote": "Throughout 2021 the methods for producing the IPGOD dataset have been improved, with a particular focus on integrating the data across all IP rights. New machine learning techniques have been applied to match the organisations and entities that play a role in the right's life cycle. This will allow us to provide integrated data more regularly."
+     }
+    ],
+    "text": "Machine learning was adopted in 2018 for longitudinal applicant matching in IPGOD, and further techniques were applied during 2021 to match organisations and entities across IP rights and support more regular integrated data."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v2.C",
+ "schema_name": "answer",
+ "tag": "explore-methods-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.034066,
+  "input": 6943,
+  "model": "gpt-6.1-sol",
+  "output": 2018,
+  "reasoning": 325,
+  "seconds": 28.21
+ }
+}

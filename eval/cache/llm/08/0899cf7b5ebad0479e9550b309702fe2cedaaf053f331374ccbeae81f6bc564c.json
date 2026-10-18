@@ -1,0 +1,91 @@
+{
+ "cost_usd": 0.012521,
+ "data": {
+  "answer": "## How long does it take?\n\nThe **2025 Australian IP Report** gives a median of **1.3 years from requesting examination to acceptance for grant**, using 2020 data—the latest complete data reported. From filing in Australia to acceptance for grant, the median was **2.8 years**, based on 2020 filings. These are medians, not fixed timeframes; timing varies significantly with applicant behaviour and preferences.[1]\n\n## Options to change the timing\n\n- **Defer examination:** applicants have up to **5 years after filing** to request examination. However, the Commissioner of Patents can direct them to request it sooner; they then have **2 months** to comply or the application lapses.[2]\n- **Request examination early:** applicants can voluntarily request examination without waiting for a direction.[3]\n- **Seek fast-track examination:** this is available for green technology applications and applications from small and medium enterprises. Applicants can also request it for specific needs, such as commercial licensing pressures or infringement proceedings.[4]\n- **Use the Patent Prosecution Highway:** applicants with a patent allowed in another eligible jurisdiction can have the corresponding Australian application examined more quickly.[5]\n\nThird parties, including competitors, can also ask IP Australia to direct an applicant to request examination, helping resolve uncertainty around pending claims sooner.[6]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "The median time from when an applicant requests IP Australia to commence substantive examination of their patent to when the patent is accepted for grant is 1.3 years, as of 2020 (latest complete data). There is significant variation in patent application timeframes, driven largely by applicant behaviour and preferences."
+     },
+     {
+      "evidence": 4,
+      "quote": "In practice, the median time from when an application is filed in Australia to its final acceptance for grant is 2.8 years, based on 2020 filings"
+     }
+    ],
+    "text": "The 2025 report gives median times of 1.3 years from examination request to acceptance and 2.8 years from filing to acceptance, using 2020 data; timeframes vary significantly with applicant behaviour and preferences."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "After filing for a patent in Australia, applicants have 5 years to submit an RFE or their application will lapse."
+     },
+     {
+      "evidence": 1,
+      "quote": "Within that period, Australia's Commissioner of Patents may direct an applicant to request examination. The applicant then has 2 months to submit an RFE or the application lapses."
+     }
+    ],
+    "text": "Applicants have 5 years after filing to request examination, but a direction from the Commissioner requires a request within 2 months or the application lapses."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Rather than waiting to be directed, applicants can voluntarily request examination early and unprompted."
+     }
+    ],
+    "text": "Applicants can voluntarily request examination early without waiting for a direction."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "\"Fast track\" examination is available for applications related to green technology and for applications submitted by small and medium enterprise."
+     },
+     {
+      "evidence": 5,
+      "quote": "Applicants can request fast track examination on the basis of specific needs, such as pressures in commercial licensing or infringement proceedings."
+     }
+    ],
+    "text": "Fast-track examination is available for green technology and SME applications, and can be requested for specific needs such as commercial licensing pressures or infringement proceedings."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "Applicants who hold a patent allowed in another eligible jurisdiction qualify to have a corresponding Australian patent application examined more quickly through the Patent Prosecution Highway."
+     }
+    ],
+    "text": "Applicants with a patent allowed in another eligible jurisdiction can obtain faster examination of a corresponding Australian application through the Patent Prosecution Highway."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 19,
+      "quote": "In Australia, third parties such as an applicant's competitors can also influence patent timeframes. For example, they may ask the patent office to direct an applicant to submit a timely examination request. This has the advantage of more quickly resolving uncertainty around pending patent claims."
+     }
+    ],
+    "text": "Third parties, including competitors, can ask IP Australia to direct an applicant to request examination to resolve uncertainty sooner."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v2.C",
+ "schema_name": "answer",
+ "tag": "explore-policy-6",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.025042,
+  "input": 6291,
+  "model": "gpt-6.1-sol",
+  "output": 1246,
+  "reasoning": 218,
+  "seconds": 18.13
+ }
+}

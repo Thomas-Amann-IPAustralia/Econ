@@ -1,0 +1,80 @@
+{
+ "cost_usd": 0.006778,
+ "data": {
+  "answer": "- **PCT — patents:** In 2024, **60.4% of Australians’ overseas patent filings** used the PCT, making it the dominant route. However, usage has fallen from over 70% in earlier years; PCT national phase entries declined from 5,602 in 2023 to 4,887 in 2024.[1]\n- **Madrid System — trade marks:** In 2024, **56.6% of Australian trade mark classes filed abroad** went through Madrid, up from 45.0% in 2019. This measures classes, rather than applications.[2]\n- **Hague System — designs:** The passages do not quantify Australian use. The 2024 report describes the system as allowing protection in multiple countries through one application, and says Australia had agreed in principle to make all reasonable efforts to join under the Australia–UK free trade agreement.[3]\n\n**Data caveat:** The reports give different PCT shares for 2023: **64.7% in the 2026 report**, compared with **67.6% in the 2025 report**. The latest figures above follow the 2026 report; the passages do not explain the discrepancy.[4]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "The share of Australian filings abroad routed through the PCT fell from over 70% in earlier years, to 64.7% in 2023, then to 60.4% in 2024."
+     },
+     {
+      "evidence": 6,
+      "quote": "In absolute terms, PCT national phase entries declined from 5,602 in 2023 to 4,887 in 2024"
+     },
+     {
+      "evidence": 6,
+      "quote": "While the PCT remains the dominant channel for Australians taking their inventions global"
+     }
+    ],
+    "text": "In 2024, the PCT accounted for 60.4% of Australian overseas patent filings and remained dominant, but its share and national phase entries had declined."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "the share of Australian classes filed abroad through the Madrid system has increased, from 45.0% in 2019 to 56.6% in 2024."
+     }
+    ],
+    "text": "The Madrid share of Australian trade mark classes filed abroad increased from 45.0% in 2019 to 56.6% in 2024; these figures measure classes, not applications."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 9,
+      "quote": "The Hague Agreement on Industrial Designs allows design applicants to seek registration in multiple countries through a single international application."
+     },
+     {
+      "evidence": 9,
+      "quote": "In principle, Australia has agreed to make all reasonable efforts to join the Hague Agreement as part of a free trade agreement (FTA) between Australia and the UK."
+     }
+    ],
+    "text": "The 2024 report describes Hague as a single-application route for designs in multiple countries and says Australia had agreed in principle to make reasonable efforts to join under the Australia–UK FTA."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "to 64.7% in 2023, then to 60.4% in 2024."
+     },
+     {
+      "evidence": 15,
+      "quote": "In 2023, the share of Australian filings abroad routed through the PCT fell sharply, from 72.6% to 67.6%."
+     }
+    ],
+    "text": "The reports differ on the PCT share for 2023: the 2026 report gives 64.7%, while the 2025 report gives 67.6%."
+   }
+  ],
+  "coverage": "partial",
+  "gaps": [
+   "The passages provide no figures on Australian use of the Hague System.",
+   "The passages do not explain the differing PCT shares reported for 2023."
+  ]
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v2.C",
+ "schema_name": "answer",
+ "tag": "explore-policy-7",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 6497,
+  "cost_usd": 0.013556,
+  "input": 3,
+  "model": "gpt-6.1-sol",
+  "output": 1290,
+  "reasoning": 379,
+  "seconds": 56.87
+ }
+}

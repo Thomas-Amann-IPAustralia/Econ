@@ -1,0 +1,56 @@
+{
+ "cost_usd": 0.006442,
+ "data": {
+  "answer": "Yes. The 2023 study found that SMEs already employing AI-skilled staff were more likely to hire additional AI staff than other SMEs. This suggests increasing AI specialisation among AI-based small businesses.[1]\n\nThe study defined SMEs as companies with fewer than 200 staff.[2] The finding should be treated cautiously: existing AI skills were identified from potentially incomplete staff samples, limited to around 1,000 records per company.[3]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Further, SMEs with existing AI-staff are more likely to hire more AI-staff than other SMEs."
+     },
+     {
+      "evidence": 1,
+      "quote": "Together this suggests increased AI specialisation by AI-based SMEs"
+     }
+    ],
+    "text": "The 2023 study found that SMEs with existing AI staff were more likely to hire additional AI staff than other SMEs, suggesting increased AI specialisation."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 9,
+      "quote": "we define SMEs as companies with less than 200 staff count in the Companies dataset."
+     }
+    ],
+    "text": "The study defined SMEs as companies with fewer than 200 staff."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "Nevertheless, from a methodological standpoint, this finding could reflect data limitations: for each company, the data provides a potentially incomplete sample of staff (limited to ~1000 records) on the basis of which existing AI skills have been identified."
+     }
+    ],
+    "text": "The finding warrants caution because existing AI skills were identified using potentially incomplete staff samples limited to around 1,000 records per company."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v2.C",
+ "schema_name": "answer",
+ "tag": "oce-ai-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.012884,
+  "input": 3667,
+  "model": "gpt-6.1-sol",
+  "output": 555,
+  "reasoning": 222,
+  "seconds": 15.92
+ }
+}

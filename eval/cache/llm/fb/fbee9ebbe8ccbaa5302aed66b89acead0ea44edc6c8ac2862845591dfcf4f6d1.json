@@ -1,0 +1,62 @@
+{
+ "cost_usd": 0.010594,
+ "data": {
+  "answer": "**Electrical machinery, apparatus and energy, and transport are the fastest-growing fields quantified in the supplied evidence for 2025**—though the passages do not provide a complete ranking across all technology fields.[1]\n\n- **Electrical machinery, apparatus and energy:** filings grew **12.8% in 2025**. **Transport:** filings grew **9.1%**. Both continued an upward trend visible since 2021, which the 2026 report links to global electrification, electric vehicle supply chains, batteries and industrial decarbonisation.[1]\n- **Biotechnology was a growth area in 2024:** total filings increased **4.7%**, while biotechnology filings by Australian applicants rose **31.7%**. These are 2024 figures, not directly comparable with the 2025 growth rates above.[2]\n- **Digital technology is not showing the same momentum:** computer technology filings fell **10.1% in 2025**, and digital communication moderated relative to earlier peaks. The 2026 report interprets this cautiously as post-peak normalisation rather than structural retreat.[3]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 18,
+      "quote": "Electrical machinery, apparatus and energy (+12.8%) and transport (+9.1%) continued their upward trajectory in 2025, extending a trend visible since 2021. These increases align with global electrification, EV supply chains, battery technologies and industrial decarbonisation."
+     }
+    ],
+    "text": "Among fields quantified in the supplied 2025 evidence, electrical machinery, apparatus and energy grew fastest at 12.8%, followed by transport at 9.1%; both extended a trend visible since 2021, aligned with electrification, EV supply chains, batteries and industrial decarbonisation."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "Biotechnology was an exception, with 4.7% more filings in this field than during 2023."
+     },
+     {
+      "evidence": 5,
+      "quote": "With Australian biotechnology patent filings up by 31.7% in 2024"
+     }
+    ],
+    "text": "In 2024, biotechnology filings grew 4.7% overall and 31.7% for Australian applicants; these figures relate to a different year from the 2025 figures."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 17,
+      "quote": "Computer technology declined by -10.1% in 2025, while digital communication also moderated relative to earlier peaks."
+     },
+     {
+      "evidence": 17,
+      "quote": "The recent easing appears consistent with post-peak normalisation, rather than structural retreat."
+     }
+    ],
+    "text": "Computer technology filings fell 10.1% in 2025, while digital communication moderated; the 2026 report cautiously describes this as post-peak normalisation rather than structural retreat."
+   }
+  ],
+  "coverage": "partial",
+  "gaps": [
+   "The supplied passages do not provide a complete ranking of growth rates across all technology fields for 2025, or a 2025 growth rate for biotechnology."
+  ]
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v2.C",
+ "schema_name": "answer",
+ "tag": "explore-trend-9",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.021188,
+  "input": 6459,
+  "model": "gpt-6.1-sol",
+  "output": 827,
+  "reasoning": 203,
+  "seconds": 14.07
+ }
+}

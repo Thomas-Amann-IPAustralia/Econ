@@ -1,0 +1,47 @@
+{
+ "cost_usd": 0.008502,
+ "data": {
+  "answer": "The 2021 research estimates that a **tariff cut from 10 per cent to zero** is associated with an export revenue increase of about **71 per cent for an exporter with a recent trade mark filing**, compared with **32 per cent without recent trade mark activity**—more than twice the gain.[1]\n\nThis is a model-based estimate: the interaction between tariffs and trade marks was statistically significant at the 10 per cent level, providing only partial support for the revenue finding.[2]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "For trade mark owners, the reduction in tariffs (from 10 per cent to zero) will induce an increase in export revenue by 71 per cent, more than double the 32 per cent increase for firms without trade marks"
+     },
+     {
+      "evidence": 3,
+      "quote": "after a firm has increased its recent trade marks in a destination market from zero to one, a 10% tariff reduction will induce a 71% increase in export revenue, more than double the 32% increase in revenue for the firm with no recent trade mark activity."
+     }
+    ],
+    "text": "The 2021 research estimates that cutting tariffs from 10 per cent to zero is associated with about 71 per cent export revenue growth with a recent trade mark filing, compared with 32 per cent without recent trade mark activity—more than twice the gain."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "The interaction term between tariffs and trade marks is negative and significant at the 10 per cent level, offering partial support for Hypothesis 1b."
+     }
+    ],
+    "text": "The revenue result is model-based, with the tariff–trade mark interaction significant at the 10 per cent level and providing partial support for the hypothesis."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v2.C",
+ "schema_name": "answer",
+ "tag": "erp11-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.017004,
+  "input": 5232,
+  "model": "gpt-6.1-sol",
+  "output": 654,
+  "reasoning": 218,
+  "seconds": 16.97
+ }
+}

@@ -1,0 +1,115 @@
+{
+ "cost_usd": 0.01589,
+ "data": {
+  "answer": "**Large businesses are more likely to own IP rights and combine different types of rights; SMEs’ portfolios are more concentrated in trade marks.** In the 2020 study, using the 2016–17 business frame, 43.9 per cent of large businesses owned patents, trade marks or designs, compared with 3.2 per cent of SMEs.[1][2]\n\n- **Portfolio breadth:** Among IP-owning businesses, 88.7 per cent of SMEs held trade marks only, compared with 73.6 per cent of large businesses. Large IP owners were much more likely to hold both patents and trade marks—11.2 per cent versus 3.0 per cent—or all three rights—8.4 per cent versus 1.3 per cent.[2]\n\n- **Patenting is shifting towards SMEs, although ownership remains much less common.** Between 2002 and 2022, the share of employing SMEs holding patents rose from 0.13 to 0.19 per cent, while the share of large firms holding patents fell from 7.58 to 5.36 per cent. However, the number of patenting SMEs was stable over the final five years to 2022.[3]\n\n- **Low ownership rates do not mean SMEs make few applications.** In 2023, SMEs accounted for 73.7 per cent of resident trade mark filings. The share of employing SMEs holding a trade mark increased from 4.12 per cent in 2022 to 4.38 per cent in 2023.[4]\n\n- **Resources shape how patents are used.** The 2025 report explains that large businesses typically have resources to commercialise inventions, whereas small businesses may first need funding or commercialisation partners. Smaller firms may use patent-process delays to decide whether to commercialise an invention themselves or trade the patent to a larger firm.[5]\n\n- **Patent examination behaviour also differs.** The 2025 report found that 49 per cent of large businesses’ requests for examination were unprompted, compared with 35 per cent for small businesses. Small businesses were more likely to delay examination and, compared with large businesses, more likely to renew patents they had delayed. Faster office processing was linked to stronger commercialisation and follow-on innovation outcomes for large businesses—not necessarily a causal effect.[6]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "| IPR owners | 43.9 | 3.2 | 3.5 |"
+     },
+     {
+      "evidence": 6,
+      "quote": "Source: ABS BLADE (2016-17 frame)."
+     },
+     {
+      "evidence": 1,
+      "quote": "An overwhelming majority (96.5 per cent) of businesses in Australia do not own any of the three IPRs"
+     }
+    ],
+    "text": "The 2020 study, using the 2016–17 business frame, found that 43.9 per cent of large businesses owned patents, trade marks or designs, compared with 3.2 per cent of SMEs."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Specifically, among all IPR owners, 88.7 per cent of all SME IPR owners and 73.6 per cent of all large IPR owners use trade marks only and have no other rights in their portfolio."
+     },
+     {
+      "evidence": 1,
+      "quote": "For example, 11.2 per cent of large IPR owners own a combination of patents and trade marks and 8.4 per cent own all three types of IPRs, while only 3.0 per cent and 1.3 per cent of SME IPR businesses own the same two combinations."
+     }
+    ],
+    "text": "SME IP owners concentrate more on trade marks alone, while large IP owners more often combine rights: trade marks only account for 88.7 versus 73.6 per cent, patents and trade marks for 3.0 versus 11.2 per cent, and all three rights for 1.3 versus 8.4 per cent."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 20,
+      "quote": "This has also resulted in the share of employing SMEs that hold patents increasing from 0.13% in 2002 to 0.19% in 2022. Conversely, the share of large firms with patents has fallen from 7.58% to 5.36% during the same period."
+     },
+     {
+      "evidence": 20,
+      "quote": "Almost all growth for both SMEs and patent holding SMEs occurred between 2002 and 2017, with the number of patenting SMEs stable in the last 5 years to 2022."
+     }
+    ],
+    "text": "Patent ownership shifted towards SMEs between 2002 and 2022: employing SME ownership rose from 0.13 to 0.19 per cent, while large-firm ownership fell from 7.58 to 5.36 per cent; the number of patenting SMEs was nevertheless stable in the final five years."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 15,
+      "quote": "In 2023, small and medium enterprise (SMEs) accounted for 73.7% of all resident trade mark filings."
+     },
+     {
+      "evidence": 15,
+      "quote": "The share of employing SMEs operating in Australia that hold a trade mark increased between 2022 and 2023, from 4.12% to 4.38%."
+     }
+    ],
+    "text": "SMEs account for substantial application activity despite low ownership rates: they made 73.7 per cent of resident trade mark filings in 2023, and employing SME trade mark ownership increased from 4.12 to 4.38 per cent between 2022 and 2023."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 9,
+      "quote": "Typically, large businesses have the resources to commercialise and build on the inventions described in their patent applications. Small businesses often lack such resources at the outset of the patent process."
+     },
+     {
+      "evidence": 9,
+      "quote": "They may need to establish a priority claim to their invention before searching for funding to further their R&D, identifying commercialisation partners, or otherwise seeking resources to bring their innovations to market."
+     },
+     {
+      "evidence": 9,
+      "quote": "Smaller firms may use delays as time to develop strategy - to decide between commercialising the resulting patent as a product or trading the patent to a larger firm with commercialisation capabilities."
+     }
+    ],
+    "text": "The 2025 report describes large businesses as typically having commercialisation resources, while small businesses may need funding or partners and may use patent delays to choose between commercialising themselves and trading a patent."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 17,
+      "quote": "Based on the study's data, 49% of RFEs from large businesses are undirected, compared to 35% from small businesses."
+     },
+     {
+      "evidence": 17,
+      "quote": "Small businesses are more likely than large businesses to delay the examination process.\n\nCompared to large businesses, small businesses are more likely to renew a patent that they have delayed."
+     },
+     {
+      "evidence": 17,
+      "quote": "For large businesses, faster office processing - fewer delays caused by the patent office in examination - has a strong impact in enhancing economic outcomes. Faster processing is linked to a greater likelihood of the business commercialising a patent and more follow-on innovation by the business building on their patent."
+     }
+    ],
+    "text": "The 2025 report found more unprompted examination requests among large businesses, more delay and renewal after delay among small businesses, and a link—not necessarily causation—between faster office processing and stronger commercialisation and follow-on innovation for large businesses."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v2.C",
+ "schema_name": "answer",
+ "tag": "explore-compare-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.03178,
+  "input": 7055,
+  "model": "gpt-6.1-sol",
+  "output": 1767,
+  "reasoning": 203,
+  "seconds": 23.34
+ }
+}

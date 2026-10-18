@@ -1,0 +1,69 @@
+{
+ "cost_usd": 0.011521,
+ "data": {
+  "answer": "Growth in venture capital may not have broadened access for all innovators. The 2024 research notes that, alongside rapid VC market expansion in the 2010s, international evidence suggested investment was increasingly concentrated in a narrow range of technologies, notably software and related businesses.[1]\n\nOther possible explanations include:\n\n- **Limited alternative finance.** Innovative entrepreneurial firms have historically struggled to fund operations through external debt because they lack tangible assets or stable cash flows. Firms not attracting VC could therefore still face financing constraints.[2]\n- **Commercialisation without independent scale-up.** Small innovators may license or sell their IP to larger firms rather than commercialise inventions themselves. A growing division of innovative labour could mean startups generate IP while large firms acquire and commercialise it, rather than those startups becoming large firms.[3]\n- **Broader economic conditions.** The research identifies macroeconomic conditions and structural barriers as possible explanations for slower scale-up. It notes that Australia's declining proportion of high-growth firms over 2004–2014 coincided with declining GDP growth—a correlation, not proof of causation.[4]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "The 2010s saw a rapid expansion of the venture capital (VC) market and the emergence of new forms of financing and support programs. At the same time, international data suggests VC investment is increasingly concentrated on a narrow band of technology, notably in software and related businesses."
+     }
+    ],
+    "text": "VC expansion may not have broadened access across innovators because international investment was increasingly concentrated in software and related technologies."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "For entrepreneurial firms oriented to innovation, access to capital is vital to realise their high growth potential. Historically, such firms have faced difficulty funding operations through external debt, in the absence of tangible assets or stable cash flows."
+     }
+    ],
+    "text": "Innovative entrepreneurial firms lacking tangible assets or stable cash flows have historically struggled to access external debt, leaving potential financing constraints for firms not attracting VC."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Small innovative firms face a strategic choice to either:\n\ncompete directly with market leaders in the product market, commercialising their own inventions\n\ncollaborate with market leaders by licensing or selling their IP."
+     },
+     {
+      "evidence": 3,
+      "quote": "They may also reflect an increasing division of innovative labour, with small firms and startups generating IP that is acquired and commercialised by large firms."
+     }
+    ],
+    "text": "Small innovators may commercialise through licensing or selling IP to larger firms rather than scaling independently; an increasing division of innovative labour is a possible explanation."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "These trends may reflect macroeconomic conditions and structural barriers to growth."
+     },
+     {
+      "evidence": 1,
+      "quote": "Majeed et al. (2018) observe that a decline in the HGF proportion in Australia from 2004 to 2014 coincided with a decline in the growth rate of Australia's gross domestic product (GDP)."
+     }
+    ],
+    "text": "Macroeconomic conditions and structural barriers may explain slower scale-up; the decline in high-growth firms coincided with declining GDP growth, without establishing causation."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v2.C",
+ "schema_name": "answer",
+ "tag": "note-sc-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.023042,
+  "input": 6496,
+  "model": "gpt-6.1-sol",
+  "output": 1005,
+  "reasoning": 282,
+  "seconds": 22.34
+ }
+}

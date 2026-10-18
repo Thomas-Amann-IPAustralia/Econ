@@ -1,0 +1,132 @@
+{
+ "cost_usd": 0.009863,
+ "data": {
+  "answer": "The reports describe **a persistent gender gap in patenting, alongside evidence that gender and cultural diversity support innovation**. They distinguish participation in patenting from innovation productivity: women’s representation among inventors is below the world average, but the reports find no systematic productivity differences between women and men in creative and innovative endeavours.[1]\n\n### Gender gap in patenting\n- **Participation is increasing, but the inventor pool is not necessarily broadening.** The 2023 report says that, in the three years to 2022, the share of Australian PCT applications naming at least one woman increased by three percentage points to 26%. However, women accounted for 14.6% of Australian inventors on PCT applications in 2022, unchanged from 2021.[2]\n- **The explanation remains uncertain.** Growth may reflect more mixed-gender teams, greater recognition of women’s contributions on applications, or existing women inventors patenting more intensively—not necessarily substantial growth in the number of women inventors.[3]\n\n### Diversity and innovation\n- **Gender-diverse teams tend to produce more radical innovations and higher-impact scientific ideas.** The reports also describe potential benefits from cultural and gender diversity through greater marketplace understanding, creativity and problem-solving.[4]\n- **Australian business evidence shows a nuanced relationship.** The 2023 study compared similarly sized businesses within the same industry. Women’s representation in leadership and STEM was associated with lower R&D intensity; nevertheless, among R&D businesses, a larger women’s share of leadership was associated with more efficient conversion of R&D into patents. A 10 percentage point increase in that share corresponded to a 0.1% increase in conversion efficiency. These are associations, not demonstrated causal effects.[5]\n- **Cultural diversity also matters.** The 2023 report identifies foreign-born workers as a significant part of Australia’s STEM workforce and associates cultural and ethnic diversity in leadership with greater research intensity.[6]\n\nA qualification comes from the **2024 report’s discussion of collaboration**: diversity among suppliers, clients and research partners can enhance product innovation, but organisational diversity can also reduce innovative potential, and very extensive collaboration can bring diminishing returns. Diversity’s relationship with innovation therefore depends on its form and context.[7]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Despite these benefits, there remain persistent and well-documented diversity and gender gaps in science output, including patents"
+     },
+     {
+      "evidence": 3,
+      "quote": "the representation of women inventors on patents is below the world average."
+     },
+     {
+      "evidence": 4,
+      "quote": "Evidence shows there are no systematic productivity differences between women and men in creative and innovative endeavours"
+     }
+    ],
+    "text": "The reports identify persistent gender gaps and below-world-average representation of women inventors, despite no systematic productivity differences between women and men in creative and innovative endeavours."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "in the three years to 2022, the share of PCT applications from Australia with at least one woman inventor increased by three percentage points to 26%"
+     },
+     {
+      "evidence": 4,
+      "quote": "In 2022, women constituted 14.6% of Australian inventors, the same level as in 2021."
+     }
+    ],
+    "text": "The 2023 report records a three percentage point rise to 26% in Australian PCT applications with a woman inventor over the three years to 2022, while women’s inventor share remained 14.6% in 2021 and 2022."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "The results could reflect change in the team composition of inventors or, alternatively, shifts in organisational practice with women inventors more likely to be recognised on patent applications for their contributions."
+     },
+     {
+      "evidence": 4,
+      "quote": "An alternative reading of these trends is that women inventors are filing patents more intensively without significant growth in the women inventor pool."
+     }
+    ],
+    "text": "The participation trends could reflect mixed-gender teams, greater recognition of women’s contributions, or more intensive patenting by existing women inventors rather than substantial expansion of the women inventor pool."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "gender diverse teams tend to produce more radical innovations and higher-impact scientific ideas"
+     },
+     {
+      "evidence": 1,
+      "quote": "a business can gain greater marketplace understanding and diversity can enhance creativity and problem-solving ability"
+     }
+    ],
+    "text": "Gender-diverse teams tend to produce more radical innovations and higher-impact scientific ideas, while cultural and gender diversity can improve marketplace understanding, creativity and problem-solving."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "The analysis compared businesses of similar size operating within the same industry."
+     },
+     {
+      "evidence": 6,
+      "quote": "Women's representation in leadership and STEM was associated with lower R&D intensity."
+     },
+     {
+      "evidence": 6,
+      "quote": "Nevertheless, among R&D businesses, those with a greater share of women in leadership were more efficient in converting R&D investment into patents"
+     },
+     {
+      "evidence": 6,
+      "quote": "For every 10 percentage point increase in the women's share of leadership, efficiency in converting R&D expenditure into patents increased by 0.1%."
+     }
+    ],
+    "text": "The 2023 Australian study compared similarly sized firms in the same industry and found associations—not demonstrated causation—between women’s representation, lower R&D intensity and greater patent conversion efficiency among R&D businesses, including a 0.1% efficiency increase per 10 percentage point increase in women’s leadership share."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "Foreign-born workers comprise a significant component of Australia's STEM workforce"
+     },
+     {
+      "evidence": 3,
+      "quote": "Cultural and ethnic diversity in leadership is associated with increased research intensity."
+     }
+    ],
+    "text": "The 2023 report identifies foreign-born workers as a significant component of the STEM workforce and associates cultural and ethnic diversity in leadership with increased research intensity."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 15,
+      "quote": "Collaboration with suppliers, clients, and research organisations positively affects product innovation, with diversity among partners enhancing the effects."
+     },
+     {
+      "evidence": 14,
+      "quote": "Organisational diversity in collaborative research projects can negatively impact innovation potential."
+     },
+     {
+      "evidence": 15,
+      "quote": "It brings increasing returns but can lead to decreasing returns when the breadth of dept of collaboration partners becomes excessive"
+     }
+    ],
+    "text": "The 2024 collaboration discussion indicates that diversity’s relationship with innovation depends on its form and context: partner diversity can enhance product innovation, organisational diversity can reduce innovative potential, and excessive collaboration can bring diminishing returns."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v2.C",
+ "schema_name": "answer",
+ "tag": "explore-synthesis-6",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 5796,
+  "cost_usd": 0.019726,
+  "input": 3,
+  "model": "gpt-6.1-sol",
+  "output": 1914,
+  "reasoning": 323,
+  "seconds": 62.52
+ }
+}

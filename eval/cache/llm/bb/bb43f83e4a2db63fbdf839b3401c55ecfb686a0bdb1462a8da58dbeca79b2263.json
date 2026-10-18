@@ -1,0 +1,137 @@
+{
+ "cost_usd": 0.0096,
+ "data": {
+  "answer": "**The clearest finding is that patent-holding firms are more likely to build AI capability—but the evidence establishes an association, not that patents cause AI adoption.** The 2023 *Drivers of AI investment* study used AI-skilled hiring as a proxy for capacity building and correlated it with patent activity.[1]\n\n### Adoption differs across firms\n- The 2023 research identified four groups with a higher tendency to adopt AI: large corporations, SMEs with existing AI capacity, patent-holding firms and younger companies.[2]\n- AI capability was present across most Australian industries, but was more pronounced in technology-focused industries, including information and communication technologies and professional services.[3]\n\n### AI adoption is not necessarily radical innovation\nThe 2023 Australian IP Report found no evidence that AI adopters tended to patent across more diverse technical fields. It suggested that, as then applied, AI might be more important for automating operations than for radical recombinant innovation.[4]\n\nPatents also provide an incomplete picture. The research suggested that specialised AI start-ups may not be adequately captured by patent data alone, and that some SMEs may use trade secrets or proprietary algorithms rather than seek patent protection.[5]\n\n### Australian firms are developing practical AI applications\nThe 2022 report identified 156 AI patent families filed by Australian applicants during 2015–19, with 86 filed in Australia. Leading applicants were applying AI to productivity, healthcare, energy and agriculture—for example, embryo selection, seizure monitoring, weed detection and solar power forecasting.[6]\n\n### Implications for innovation policy\nThe 2023 research recommended using linked information on AI skills, hiring and patenting to connect research strengths with firms needing related technology and skills, and to tailor initiatives to different industries and business types.[7]\n\nThe knowledge base also recognises innovation pathways beyond exclusive patent protection: the 2024 report noted that, according to market leaders such as IBM, AI advances also rely on open innovation, open source and knowledge sharing.[8]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Firms that demonstrate a greater focus on innovation, proxied by being the listed owner of at least one patent, are more likely to increase their involvement with AI in their operations."
+     },
+     {
+      "evidence": 10,
+      "quote": "We then correlate AI adoption with patent activity to explore the importance of IP to these firms. We use the hiring of AI-skilled employees as a proxy for AI capacity building such as inward technology transfer and AI adoption."
+     }
+    ],
+    "text": "The 2023 study found an association between patent ownership and AI capacity building, using AI-skilled hiring as a proxy; it did not establish that patents cause adoption."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "We identified four groups of companies that have a higher tendency to adopt AI technology: (i) large corporations, (ii) small and medium size enterprises (SMEs) with existing AI capacity, (iii) patent-holding firms, and (iv) younger companies."
+     }
+    ],
+    "text": "The 2023 research identified large corporations, SMEs with existing AI capacity, patent-holding firms and younger companies as more likely AI adopters."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "What we find is that AI capacity has been developed across most industries in Australia, but capacity is more pronounced in industries with a strong technology focus such as information and communication technologies and professional services."
+     }
+    ],
+    "text": "AI capability existed across most Australian industries but was more pronounced in technology-focused industries, including information and communication technologies and professional services."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "To the extent that AI is being applied to innovate across domains, it might be expected that AI adopters will tend to patent across diverse technical fields. The QUT study found no evidence for this."
+     },
+     {
+      "evidence": 6,
+      "quote": "However, as currently applied, AI may be more important for automating operations than radical recombinant innovation."
+     }
+    ],
+    "text": "The 2023 report found no evidence that AI adopters patented across more diverse technical fields and suggested AI might then be more important for operational automation than radical recombinant innovation."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "This observation suggests the emergence of highly specialized technical start-ups that concentrate on AI development, which may not be adequately captured by patent data alone."
+     },
+     {
+      "evidence": 5,
+      "quote": "Instead, some SMEs may opt for trade secrets or leverage the proprietary nature of AI algorithms to reduce time-to-market."
+     }
+    ],
+    "text": "Patent data may miss specialised AI start-ups, while some SMEs may use trade secrets or proprietary algorithms instead of patent protection."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 8,
+      "quote": "Australian applicants filed a total of 156 patent families in AI technologies over the period 2015-19, with 86 (just over half) of these filed in Australia."
+     },
+     {
+      "evidence": 13,
+      "quote": "Australian patentees are applying key AI technologies to healthcare, productivity, energy and agriculture."
+     },
+     {
+      "evidence": 8,
+      "quote": "Presagen (3 patent families) is applying AI to advance women's medicine, including improving the selection of embryos that will lead to successful pregnancies."
+     },
+     {
+      "evidence": 8,
+      "quote": "Seesure (2 families) provides a mobile application that monitors the health of epilepsy patients and applies algorithms to detect and predict seizures."
+     },
+     {
+      "evidence": 8,
+      "quote": "Photonic Detection Systems (two families) has patented technology that mimics the human eye to distinguish plants from weeds and reduce herbicide application."
+     },
+     {
+      "evidence": 8,
+      "quote": "CSIRO has filed AI patents for machine vision algorithms to track and predict cloud motion for solar power forecasting."
+     }
+    ],
+    "text": "The 2022 report recorded 156 AI patent families from Australian applicants in 2015–19, including 86 filed in Australia, and identified applications in productivity, healthcare, energy and agriculture, including embryo selection, seizure monitoring, weed detection and solar forecasting."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 12,
+      "quote": "mapping emerging and established firm capabilities and formal innovative activity can be used to connect sites of R&D strength with firms actively demonstrating need for related technology and skills."
+     },
+     {
+      "evidence": 12,
+      "quote": "Strategic initiatives can be tailored for different industries, and designed for different types of businesses, including SMEs, large enterprises, national and multinational corporations."
+     },
+     {
+      "evidence": 12,
+      "quote": "including the strengths and weaknesses of businesses with different characteristics (industry, size, age, location) in AI jobs, skills, and innovation."
+     }
+    ],
+    "text": "The 2023 research recommended mapping AI skills, hiring and patenting to connect research strengths with firms' technology and skills needs and tailor strategic initiatives."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 17,
+      "quote": "Advances in artificial intelligence and quantum computing also rely on open innovation, open source and knowledge sharing, according to market leaders like IBM."
+     }
+    ],
+    "text": "The 2024 report noted that, according to market leaders such as IBM, advances in AI also rely on open innovation, open source and knowledge sharing."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v2.C",
+ "schema_name": "answer",
+ "tag": "multi-7",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 6326,
+  "cost_usd": 0.019199,
+  "input": 3,
+  "model": "gpt-6.1-sol",
+  "output": 1856,
+  "reasoning": 154,
+  "seconds": 29.92
+ }
+}

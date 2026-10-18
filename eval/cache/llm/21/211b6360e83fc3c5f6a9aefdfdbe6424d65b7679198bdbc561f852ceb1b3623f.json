@@ -1,0 +1,47 @@
+{
+ "cost_usd": 0.009564,
+ "data": {
+  "answer": "Yes—**as an association, not an established causal effect**. A 2024 study found that firms retiring patents were less likely to experience subsequent high turnover growth. The negative relationship was consistent across its models; the study calls for further investigation of the mechanisms behind it.[1]\n\nHere, “high growth” means annualised turnover growth of at least 20 per cent over three consecutive financial years. Patent retirement was measured three years before growth was assessed, with models accounting for firm age, size, industry, state and year.[2]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Interestingly, we observe a consistent pattern where firms retiring patents is negatively associated with future turnover growth. This relationship is worth investigating to better understand the mechanisms producing this consistent negative correlation."
+     }
+    ],
+    "text": "The 2024 study found a consistent negative association between patent retirement and subsequent high turnover growth, rather than establishing a causal effect, and called for further investigation."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "The dependent variable is a dichotomous variable that takes value 1 if a firm achieved an annualised growth in turnover of at least 20% over three consecutive financial years and 0 otherwise."
+     },
+     {
+      "evidence": 5,
+      "quote": "Covariates include a dummy indicating whether any patent was filed/granted/retired three years before turnover-based growth is assessed, business age, firm size, industry (reference category Administration and support services), state and year fixed effects."
+     }
+    ],
+    "text": "High growth means annualised turnover growth of at least 20 per cent over three consecutive financial years; patent retirement was measured three years before assessment, controlling for firm age, size, industry, state and year."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v2.C",
+ "schema_name": "answer",
+ "tag": "erp15-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.019128,
+  "input": 6954,
+  "model": "gpt-6.1-sol",
+  "output": 522,
+  "reasoning": 152,
+  "seconds": 14.86
+ }
+}

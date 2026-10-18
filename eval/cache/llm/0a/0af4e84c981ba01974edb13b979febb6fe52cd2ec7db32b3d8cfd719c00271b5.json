@@ -1,0 +1,60 @@
+{
+ "cost_usd": 0.010817,
+ "data": {
+  "answer": "The fall mainly reflected applicants bringing filings forward into 2013 ahead of the **Raising the Bar reforms**, which raised the inventive threshold for standard patents. The 2015 report attributed the unusually high 2013 total to early filing of applications that would otherwise have been filed in 2014.[1]\n\nIP Australia received **25,947 standard patent applications in 2014, down 13 per cent from 2013**.[2] The subsequent rebound supports this timing explanation: applications rose 10 per cent in 2015, returning to their normal growth trend.[3]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "This law was designed to increase the inventive threshold required for an innovation to be granted as a standard patent."
+     },
+     {
+      "evidence": 1,
+      "quote": "It can reasonably be assumed that the historically high number of applications in 2013 was caused by the early filing of applications which otherwise would have been filed in 2014."
+     }
+    ],
+    "text": "The fall mainly reflected applications brought forward into 2013 ahead of Raising the Bar reforms, which raised the inventive threshold; the 2015 report attributed the unusually high 2013 total to filings otherwise expected in 2014."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "IP Australia received 25 947 standard patent applications in 2014, a decrease of 13 per cent relative to 2013."
+     }
+    ],
+    "text": "IP Australia received 25,947 standard patent applications in 2014, down 13 per cent from 2013."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "IP Australia received 28 605 standard patent applications in 2015, an increase of 10 per cent from 2014."
+     },
+     {
+      "evidence": 4,
+      "quote": "Applications for patents returned to their normal growth trend after the sharp increase in 2013 caused by Raising the Bar which was followed by a subsequent dip in 2014."
+     }
+    ],
+    "text": "Applications rebounded by 10 per cent in 2015 and returned to their normal growth trend, supporting the timing explanation."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v2.C",
+ "schema_name": "answer",
+ "tag": "ipr15-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.021634,
+  "input": 8592,
+  "model": "gpt-6.1-sol",
+  "output": 445,
+  "reasoning": 0,
+  "seconds": 13.27
+ }
+}

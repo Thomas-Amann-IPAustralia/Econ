@@ -1,0 +1,103 @@
+{
+ "cost_usd": 0.01437,
+ "data": {
+  "answer": "**Plant breeder’s rights (PBR) applications show a longer-term decline, with substantial year-to-year volatility.** The latest figures, in the 2026 report, show applications fell by 6.4%, from 282 in 2024 to 264 in 2025—the third consecutive annual decline.[1]\n\n- **A lower filing level since 2019:** Average annual applications fell from 369 in 2015–2018 to 299 in 2019–2022, a decrease of 19.0%. The 2023 report identified a structural break in the application series in 2019.[2]\n- **Resident filings rebounded in 2025:** Applications from Australian residents increased by 17.0%, from 100 to 117, while non-resident applications fell by 19.2%, from 182 to 147. Non-residents remained the majority of applicants; resident volumes remained near the lower end of their decade range.[3]\n- **The plant mix is changing:** Fruit crops remained the largest category in 2025, accounting for 28.7% of filings, followed by ornamentals at 22.9% and non-cereal field crops at 17.6%.[4] Cereal crop filings increased by 41.7% to a record 34 applications. Ornamentals increased by 14.3%, but remained below half their 2014–2020 levels; filings for fruit, vegetable and non-cereal crops declined.[5]\n\n**Interpret annual changes cautiously:** PBR application volumes are modest, so the behaviour of a small number of large breeding programs can produce pronounced movements even when underlying breeding investment remains steady. The 2026 report interprets the narrowing resident–non-resident gap as likely volatility rather than a structural shift in international engagement.[6]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 20,
+      "quote": "then experienced volatile change afterwards with an overall declining trend."
+     },
+     {
+      "evidence": 6,
+      "quote": "In 2025, PBR applications fell by 6.4%, from 282 in 2024 to 264 (Figure 5.1). This marks the third consecutive annual decline."
+     }
+    ],
+    "text": "PBR applications show a longer-term decline and annual volatility; applications fell 6.4% from 282 in 2024 to 264 in 2025, the third consecutive annual decline."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 18,
+      "quote": "A structural break is observed in the PBR application series in 2019 (see Figure 4.1). On average, between 2015 and 2018, 369 PBR applications were filed annually; from 2019 to 2022, the annual average dropped by 19.0% to 299."
+     }
+    ],
+    "text": "The 2023 report identified a structural break in 2019, with average annual applications falling 19.0% from 369 in 2015–2018 to 299 in 2019–2022."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 11,
+      "quote": "Resident filings increased 17.0% from 100 to 117."
+     },
+     {
+      "evidence": 11,
+      "quote": "Non-resident filings declined 19.2% from 182 to 147, following a sharp increase in 2024."
+     },
+     {
+      "evidence": 11,
+      "quote": "Although residents recorded growth, filing volumes remain near the lower end of the decade range. Non-resident applicants continue to account for the majority of filings"
+     }
+    ],
+    "text": "In 2025, resident applications increased 17.0% from 100 to 117, while non-resident applications declined 19.2% from 182 to 147; non-residents remained the majority and resident volumes were near the lower end of the decade range."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 14,
+      "quote": "In 2025, most PBR applications were for fruit crops (28.7% of total filings), ornamentals (22.9%), and non-cereal field crops (17.6%)"
+     }
+    ],
+    "text": "Fruit crops, ornamentals and non-cereal field crops were the largest filing categories in 2025, accounting for 28.7%, 22.9% and 17.6% respectively."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 14,
+      "quote": "Filings for cereal crops increased 41.7%, to a record 34 applications."
+     },
+     {
+      "evidence": 14,
+      "quote": "Filings for ornamentals increased 14.3%, but still remain less than half of the level recorded between 2014 and 2020."
+     },
+     {
+      "evidence": 14,
+      "quote": "Filings decreased for non-cereal crops, fruit crops, and vegetable crops."
+     }
+    ],
+    "text": "In 2025, cereal filings increased 41.7% to a record 34, ornamentals increased 14.3% but remained below half their 2014–2020 levels, and non-cereal, fruit and vegetable crop filings declined."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "Compared with patents and trade marks, total PBR volumes are modest. As a result, annual movements can appear pronounced even when underlying breeding investment remains steady. Interpretation therefore requires caution: year-to-year volatility often reflects the behaviour of a small number of large breeding programs."
+     },
+     {
+      "evidence": 11,
+      "quote": "The narrowing gap between resident and non-resident filings in 2025 likely reflects volatility rather than a structural shift in international engagement."
+     }
+    ],
+    "text": "Modest volumes and a small number of large breeding programs can produce pronounced annual movements without changes in underlying breeding investment; the narrowing domicile gap likely reflects volatility rather than structural change."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v2.C",
+ "schema_name": "answer",
+ "tag": "explore-trend-6",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.02874,
+  "input": 6795,
+  "model": "gpt-6.1-sol",
+  "output": 1515,
+  "reasoning": 151,
+  "seconds": 19.3
+ }
+}

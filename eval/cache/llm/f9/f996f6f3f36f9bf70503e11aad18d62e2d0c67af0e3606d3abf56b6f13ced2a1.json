@@ -1,0 +1,47 @@
+{
+ "cost_usd": 0.011143,
+ "data": {
+  "answer": "**Yes—Australian-resident patent filings are concentrated in New South Wales, Victoria and Queensland.** In 2025, these three states accounted for just over 80 per cent of resident applications and most of the national increase. NSW recorded 1,152 applications, Victoria 638 and Queensland 511, according to the 2026 Australian IP Report.[1]\n\nHowever, the leader by filing volume is not necessarily the most patent-intensive jurisdiction. In 2024, NSW accounted for the largest share of resident standard patent applications, but the ACT had the most applications relative to its business population—just over two per thousand businesses.[2]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "Together, these 3 states accounted for just over 80% of resident applications in 2025, and most of the national increase in resident filings."
+     },
+     {
+      "evidence": 3,
+      "quote": "| | New South Wales | Victoria | Queensland |\n|---|---|---|---|\n| Applica ons in 2025 | 1,152 | 638 | 511 |"
+     }
+    ],
+    "text": "In 2025, NSW, Victoria and Queensland accounted for just over 80 per cent of resident applications and most of the national increase, recording 1,152, 638 and 511 applications respectively."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "Among Australian states and territories, New South Wales (NSW) is the leading source for standard patent applications in Australia (38.9% of resident applications), followed by Victoria (23.3%) and Queensland (17.3%). However, the Australian Capital Territory (ACT) is the most patent-intensive, with just over 2 applications per thousand businesses in the territory"
+     }
+    ],
+    "text": "In 2024, NSW led resident standard patent filing volumes, while the ACT was the most patent-intensive jurisdiction, with just over two applications per thousand businesses."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v2.C",
+ "schema_name": "answer",
+ "tag": "erp15-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.022286,
+  "input": 7553,
+  "model": "gpt-6.1-sol",
+  "output": 718,
+  "reasoning": 246,
+  "seconds": 19.58
+ }
+}

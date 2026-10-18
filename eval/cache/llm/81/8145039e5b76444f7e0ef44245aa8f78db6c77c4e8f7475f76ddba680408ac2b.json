@@ -1,0 +1,83 @@
+{
+ "cost_usd": 0.008562,
+ "data": {
+  "answer": "**IP Australia’s grant rate sits between the USPTO’s and the EPO’s for computer-implemented inventions (CIIs) at the margins of patentable subject matter.** The 2024 study reports grant rates of approximately **54% at IP Australia, 70% at the USPTO and 27% at the EPO** for applications classified as “CII-PSM-likely-adverse”.[1]\n\nThat category comprises applications highly similar to those that received manner of manufacture objections from IP Australia examiners; it is not a category covering all CII applications.[2] For CII applications classified as likely clear of those objections, and for non-CII applications, differences in grant rates between offices were much less significant.[3]\n\nThe study interprets the larger differences for marginal CII applications as evidence of disharmony between offices in determining patentability.[4] To improve comparability, some grant-rate analyses were restricted to “triplet patent families”—equivalent applications filed at all three offices—reducing differences attributable to the underlying inventions or applications.[5]\n\nThese findings come from a **2024 report using applications filed during 2001–2020**, rather than a snapshot of current examination outcomes.[6]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "CII-PSM-likely-adverse applications are most likely to be granted by the USPTO, with a grant rate of close to 70%."
+     },
+     {
+      "evidence": 1,
+      "quote": "Compared to USPTO, the grant rate of CII-PSM-likely-adverse applications at IPA is almost 23 per cent lower at 54%. The EPO grant rate of CII-PSM-adverse applications is less than 50 per cent of the USPTO grant rate at around 27%."
+     }
+    ],
+    "text": "For CII-PSM-likely-adverse applications, the study reports approximate grant rates of 54% at IP Australia, 70% at the USPTO and 27% at the EPO, placing IP Australia between the other two offices."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "The first group consists of CII patent applications at each office which are highly similar to patent applications which received manner of manufacture objections from IPA patent examiners."
+     }
+    ],
+    "text": "The likely-adverse category is a subset of CII applications highly similar to applications that received manner of manufacture objections from IP Australia examiners."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "The inter-office difference in grant rates for CII-PSM-likely-clear and Non-CII is much less significant."
+     }
+    ],
+    "text": "Inter-office grant-rate differences were much less significant for CII-PSM-likely-clear and non-CII applications."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "This result suggests a relatively high degree of inter-office disharmony in determining the patentability of CII patent applications with claims that are on the margins of patentable subject matter."
+     }
+    ],
+    "text": "The study interprets the differences for marginal CII applications as evidence of disharmony in determining patentability."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "Also, to ensure that we are comparing apples-toapples and thus minimising bias, in some of our comparative analysis, for example on the likelihood of grant across the 3 jurisdictions, we restricted the sample to \"triplet patent families\". These patent families consist of \"equivalent patent\" applications which were filed at IPA, EPO, and USPTO."
+     }
+    ],
+    "text": "Some grant-rate comparisons used triplet patent families, comprising equivalent applications filed at all three offices, to reduce bias from differences in the inventions or applications."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "It contains a comprehensive set of patent applications filed at IP Australia (IPA), the European Patent Office (EPO), and the United States Patent and Trademark Office (USPTO) from 2001-2020."
+     }
+    ],
+    "text": "The 2024 report's findings draw on applications filed during 2001–2020, rather than current examination outcomes."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v2.C",
+ "schema_name": "answer",
+ "tag": "explore-compare-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.017124,
+  "input": 3492,
+  "model": "gpt-6.1-sol",
+  "output": 1014,
+  "reasoning": 146,
+  "seconds": 15.8
+ }
+}

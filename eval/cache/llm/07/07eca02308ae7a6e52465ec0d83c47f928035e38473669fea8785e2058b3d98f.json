@@ -1,0 +1,55 @@
+{
+ "cost_usd": 0.009322,
+ "data": {
+  "answer": "**Switzerland is the clearest design-intensity leader among Australia’s peers** in the 2019 study, which compares 2011 and 2016. It scored more than one standard deviation above the mean on both design IP intensity and design labour intensity. Germany and the United Kingdom were also above the sample mean on both measures.[1]\n\n**Denmark and Sweden were emerging rather than established leaders.** Although classified as ‘followers’ with relatively low intensity on both measures, they experienced strong growth in both over 2011–16. The study identified them as countries Australia could look to alongside established design leaders.[2]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Figure 2. Countries by design IP intensity (vertical axis) and design labour intensity (horizontal axis), 2011 and 2016"
+     },
+     {
+      "evidence": 1,
+      "quote": "Among Australia's international peers, Switzerland (CH) is a leader, scoring higher than one standard deviation above the mean on both intensity measures. Germany (DE) and the United Kingdom (GB) are each above the sample mean on both measures."
+     }
+    ],
+    "text": "The 2019 study comparing 2011 and 2016 identifies Switzerland as a leader, more than one standard deviation above the mean on both intensity measures; Germany and the United Kingdom were also above the mean on both."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "Denmark and Sweden are examples of countries that are low in design IP intensity and low in design labour intensity also, but which are growing at a high rate on both measures."
+     },
+     {
+      "evidence": 2,
+      "quote": "Denmark and Sweden (in yellow) experienced high growth on both design intensity measures"
+     },
+     {
+      "evidence": 5,
+      "quote": "our analysis indicates that Australia should look to design leaders, but also to countries like Denmark and Sweden which have smaller but strengthening design economies."
+     }
+    ],
+    "text": "Denmark and Sweden were followers with low but rapidly growing design IP and labour intensity over 2011–16, and the study recommended Australia look to them alongside design leaders."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v2.C",
+ "schema_name": "answer",
+ "tag": "erp08-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.018644,
+  "input": 6447,
+  "model": "gpt-6.1-sol",
+  "output": 575,
+  "reasoning": 91,
+  "seconds": 15.98
+ }
+}

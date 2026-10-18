@@ -1,0 +1,56 @@
+{
+ "cost_usd": 0.010292,
+ "data": {
+  "answer": "The 2015 mining study found that:\n- **Publicly funded entities co-filed most often:** 21 per cent collaborated with other entities.[1]\n- **METS firms co-filed least often:** 3.6 per cent collaborated.[2]\n\nCollaboration was measured using patent applications with more than one applicant. These results cover only Patent Cooperation Treaty (PCT) applications, so they are not comprehensive measures of mining collaboration.[3]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "METS firms collaborate the least (3.6 per cent) and publicly funded collaborate the most (21 per cent)."
+     }
+    ],
+    "text": "Publicly funded entities had the highest co-filing rate in the 2015 mining study, at 21 per cent."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "METS firms collaborate the least (3.6 per cent) and publicly funded collaborate the most (21 per cent)."
+     }
+    ],
+    "text": "METS firms had the lowest co-filing rate in the 2015 mining study, at 3.6 per cent."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "collaboration was determined by looking at PCT applications with more than one applicant (or where applications include co-applicants) and their entity types."
+     },
+     {
+      "evidence": 1,
+      "quote": "These results are based on the subset comprising PCT applications only so is not comprehensive but does provide an excellent indication."
+     }
+    ],
+    "text": "Collaboration was measured through multiple-applicant PCT applications, so the findings are not comprehensive measures of mining collaboration."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v2.C",
+ "schema_name": "answer",
+ "tag": "erp04-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.020584,
+  "input": 8052,
+  "model": "gpt-6.1-sol",
+  "output": 448,
+  "reasoning": 98,
+  "seconds": 14.71
+ }
+}

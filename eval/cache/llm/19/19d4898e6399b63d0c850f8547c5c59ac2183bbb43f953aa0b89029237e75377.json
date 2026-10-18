@@ -1,0 +1,99 @@
+{
+ "cost_usd": 0.016295,
+ "data": {
+  "answer": "**For standard patents, Australian residents’ share has fluctuated rather than risen steadily. It reached 9.3 per cent in 2025, up from 8.5 per cent in 2024—the highest share since 2021.**[1]\n\nKey points over time:\n- **2014–2015:** residents accounted for 8 per cent of applications in each year.[2]\n- **2016 and 2019:** the resident share was around 9 per cent.[3]\n- **2020–2022:** it fell to about 8 per cent in 2020, rebounded to 9 per cent in 2021, then fell to 7.7 per cent in 2022 (the complement of the reported 92.3 per cent non-resident share).[4]\n- **2025:** residents filed 2,810 standard complete applications, up 9.0 per cent from 2,578 in 2024, lifting their share to 9.3 per cent.[1]\n\nThe latest report cautions that resident patenting reflects a relatively small group of R&D-intensive, technologically specialised firms, rather than being a broad barometer of Australian business activity.[5]\n\n**Patent type matters:** residents have accounted for much larger shares of other application types—for example, 96 per cent of provisional applications and 51 per cent of innovation patent applications in 2018.[6]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Australian applicants filed 2,810 standard complete applications in 2025, up from 2,578 in 2024 - an increase of 9.0%. As a share of total standard complete filings, residents accounted for 9.3%, up from 8.5% in 2024 and the highest share since 2021."
+     }
+    ],
+    "text": "The resident share of standard complete applications rose from 8.5 per cent in 2024 to 9.3 per cent in 2025, the highest since 2021; resident filings rose 9.0 per cent to 2,810."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 9,
+      "quote": "the proportion of applications made by Australian residents fell to eight per cent."
+     },
+     {
+      "evidence": 8,
+      "quote": "Standard patent filings by Australian residents increased by 16 per cent to 2 291 applications in 2015, and accounted for eight per cent of all patent filings."
+     }
+    ],
+    "text": "Residents accounted for 8 per cent of standard patent applications in both 2014 and 2015."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "This includes those who filed directly with IP Australia and those who entered through the PCT route, and together account for around nine per cent of total patent applications."
+     },
+     {
+      "evidence": 2,
+      "quote": "In 2019, non-residents filed 91 per cent of the total applications in Australia"
+     }
+    ],
+    "text": "The resident share was around 9 per cent in 2016 and 2019."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "In 2020, this trend continued with non-residents responsible for 92 per cent of the total applications filed in Australia"
+     },
+     {
+      "evidence": 3,
+      "quote": "As a result, the resident share of applications increased by a percentage point, to 9%."
+     },
+     {
+      "evidence": 14,
+      "quote": "In Australia, 92.3% of standard patent applications are filed from abroad, that is, by entities outside Australia."
+     }
+    ],
+    "text": "The resident share was about 8 per cent in 2020, 9 per cent in 2021 and 7.7 per cent in 2022, with the 2020 and 2022 shares calculated as complements of non-resident shares."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Unlike trade marks or designs, patenting in Australia is not a broad barometer of business dynamism and commercial activity. Instead, resident patenting reflects activity by a relatively small subset of firms engaged in R&D-intensive and technologically specialised innovation."
+     }
+    ],
+    "text": "Resident patenting is not a broad barometer of business activity, but reflects a relatively small subset of R&D-intensive and technologically specialised firms."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 20,
+      "quote": "Australian residents are overwhelmingly the primary users of this system, filing 96 per cent of all provisional applications in 2018."
+     },
+     {
+      "evidence": 12,
+      "quote": "Australian residents are the primary users of the innovation patent, accounting for 51 per cent of all applications in 2018."
+     }
+    ],
+    "text": "Residents filed 96 per cent of provisional applications and 51 per cent of innovation patent applications in 2018."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v2.C",
+ "schema_name": "answer",
+ "tag": "explore-trend-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.03259,
+  "input": 8675,
+  "model": "gpt-6.1-sol",
+  "output": 1524,
+  "reasoning": 362,
+  "seconds": 22.57
+ }
+}

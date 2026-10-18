@@ -1,0 +1,123 @@
+{
+ "cost_usd": 0.014258,
+ "data": {
+  "answer": "**The research does not find a significant overall reduction in competition from IP rights, but it identifies specific risks from patent design and administration.** The 2020 study, using Australian business data for 2002–2016, found no significant overall impact on industry-level market concentration. It used concentration as a proxy for competition, so this is not proof that IP rights never restrict competition in particular markets.[1]\n\n- **Exclusive rights create a tension, not an automatic monopoly.** They can increase owners’ market power, but competing patented technologies can also provide substitutes, while trade marks and designs can indicate product diversity.[2]\n- **Patent delays can hinder rivals.** Research reported in 2025 found that grant delays tend to slow and narrow competitors’ follow-on innovation. Uncertainty about a patent’s eventual scope can deter investment, R&D and market entry. An equivalent overseas grant partly mitigates these effects by reducing uncertainty.[3]\n- **Patent scope matters.** The 2026 report describes forthcoming research finding that stronger patentability standards under the Raising the Bar reforms—which narrowed available patent protection—increased innovation through greater competition in some technology fields.[4]\n- **Trade marks have competing effects.** They can reduce price competition by differentiating products, but can also improve information flows, reduce search costs and promote innovation, quality and competition.[5]\n\nThe latest evidence is consistent with IP supporting competitive dynamism: the 2026 report associates IP participation with firm entry and growth rather than simply reduced contestability. However, it explicitly does **not** claim pure causality and acknowledges that firms already on stronger growth paths may be more likely to invest in IP.[6]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Using Australian data for all businesses between 2002 and 2016"
+     },
+     {
+      "evidence": 3,
+      "quote": "This study uses the Herfindahl-Hirschman Index (HHI), a widely used measure of market concentration, as a proxy to determine market competitiveness."
+     },
+     {
+      "evidence": 3,
+      "quote": "The econometric analysis in this study does not find any overall significant impact of IP rights on market concentration or competition at an industry subdivision level."
+     }
+    ],
+    "text": "The 2020 study used Australian business data for 2002–2016 and found no significant overall effect on industry-level concentration, a proxy for competition; this does not establish an absence of effects in every market."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 15,
+      "quote": "patents' exclusive rights may give certain market power to their owners, thus reducing competition."
+     },
+     {
+      "evidence": 15,
+      "quote": "However, with the increase of patents in an industry, the patented technologies by rival producers may also provide the market with substitutes between these products, offering alternative choices for both producers and consumers."
+     },
+     {
+      "evidence": 15,
+      "quote": "Similarly, a growing number of trade marks and designs in an industry may indicate the diversity of products in a market, despite their protection by exclusive IPRs."
+     }
+    ],
+    "text": "Exclusive rights can increase market power, but competing patented technologies can provide substitutes, and trade marks and designs can signal product diversity rather than an automatic monopoly."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "This uncertainty can deter third parties from investing in certain technologies, undertaking R&D, or entering specific markets."
+     },
+     {
+      "evidence": 6,
+      "quote": "The Motu/EPFL study found that patent grant delays tend to slow and narrow follow-on innovation by the applicant's rivals, as reflected in their future patenting activity."
+     },
+     {
+      "evidence": 6,
+      "quote": "In addition, the impact of delays is partially mitigated when an equivalent to the Australian patent (a patent for the same or similar invention) is granted overseas."
+     }
+    ],
+    "text": "Research reported in 2025 found patent grant delays slow and narrow rivals’ follow-on innovation; uncertainty can deter investment, R&D and entry, while equivalent overseas grants partly mitigate the effects."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 7,
+      "quote": "A key priority is evaluating the economic effects of major reforms including Australia's Intellectual Property Laws Amendments (Raising the Bar) Act 2012, which narrowed the scope of patent protection available in Australia."
+     },
+     {
+      "evidence": 7,
+      "quote": "Forthcoming research for IP Australia shows how stronger patentability standards have increased innovation through greater competition in some technology fields."
+     }
+    ],
+    "text": "The 2026 report describes forthcoming research finding that Raising the Bar reforms narrowed available patent protection and stronger patentability standards increased innovation through greater competition in some technology fields."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 11,
+      "quote": "In return, trade marks enable firms to differentiate their products from rivals, reducing price competition"
+     },
+     {
+      "evidence": 8,
+      "quote": "They increase the flow of information in the market which reduces consumer search costs and business clearance costs and increases economic efficiency."
+     },
+     {
+      "evidence": 8,
+      "quote": "They also drive business innovation, product differentiation and quality which increases competition and productivity."
+     }
+    ],
+    "text": "Trade marks can reduce price competition through differentiation, but also improve information flows, reduce search costs and promote innovation, quality and competition."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 10,
+      "quote": "Competition: IP participation appears associated with firm entry and growth, rather than simply reduced contestability."
+     },
+     {
+      "evidence": 10,
+      "quote": "Selection effects are likely present: firms on stronger growth paths may be more likely to invest in IP."
+     },
+     {
+      "evidence": 10,
+      "quote": "The analysis does not claim pure causality."
+     }
+    ],
+    "text": "The 2026 report associates IP participation with entry and growth rather than simply reduced contestability, but does not claim pure causality and acknowledges selection of stronger-growth firms into IP investment."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v2.C",
+ "schema_name": "answer",
+ "tag": "explore-evidence-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.028516,
+  "input": 7068,
+  "model": "gpt-6.1-sol",
+  "output": 1438,
+  "reasoning": 266,
+  "seconds": 21.88
+ }
+}

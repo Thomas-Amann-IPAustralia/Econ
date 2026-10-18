@@ -1,0 +1,91 @@
+{
+ "cost_usd": 0.013661,
+ "data": {
+  "answer": "IP rights can help firms cope with shocks by preserving the value of innovation, keeping investment options open and protecting customer relationships—not just by preventing copying.[1]\n\n- **Flexibility and a store of value:** Patents can allow firms to stage, delay or redirect investment. Where patents can be licensed or sold, firms have options to recover returns from innovation investments in volatile conditions.[2]\n- **Business survival:** The 2026 Australian IP Report summarises research finding that more patent-intensive firms were less likely to exit during the COVID-19 shock, especially where they also undertook R&D and invested in intangibles. This is an association, rather than proof that patents alone prevented exit.[3]\n- **More resilient demand and market access:** Trade marks protect customer relationships and goodwill built around brands. This can help stabilise demand, differentiate products and facilitate entry into new markets.[4]\n- **Greater capacity to respond to trade shocks:** A 2021 study covering around 9,000 Australian manufacturing exporters over 2005–2017 found that, after filing trade marks in an export market, firms were more likely to enter, performed better, became more resilient to exchange rate changes and expanded exports more following tariff reductions.[5] For example, its estimates associated a 10 per cent tariff reduction with a 71 per cent revenue increase after recent trade mark activity rose from zero to one, compared with 32 per cent without recent trade mark activity. These are study estimates, not guaranteed outcomes for individual firms.[6]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "Patents are increasingly understood as real options: assets that allow firms to stage, delay or redirect investment decisions."
+     },
+     {
+      "evidence": 5,
+      "quote": "Where patents can be licensed, traded or used to attract investment, they provide firms in volatile conditions with options to later recoup returns from investing in innovation."
+     },
+     {
+      "evidence": 5,
+      "quote": "They protect customer relationships and goodwill that firms have accrued under their brands."
+     }
+    ],
+    "text": "IP rights can support resilience by preserving innovation value, retaining investment flexibility and protecting customer relationships."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "Patents are increasingly understood as real options: assets that allow firms to stage, delay or redirect investment decisions. Where patents can be licensed, traded or used to attract investment, they provide firms in volatile conditions with options to later recoup returns from investing in innovation."
+     }
+    ],
+    "text": "Patents can provide investment flexibility and options to recover innovation returns through licensing or sale."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 7,
+      "quote": "During the COVID-19 shock, firms that were more patent-intensive were less likely to exit, especially if they engaged in R&D and invested in intangibles (Battisti, M., 2023)."
+     }
+    ],
+    "text": "The 2026 report describes an association between patent intensity and lower exit during COVID-19, especially alongside R&D and intangible investment, rather than demonstrating that patents alone prevented exit."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "Trade marks operate in a complementary way. They protect customer relationships and goodwill that firms have accrued under their brands. In this way, trade marks can help stabilise demand, support differentiation and facilitate entry into new markets."
+     }
+    ],
+    "text": "Trade marks protect customer relationships and goodwill and can support demand stability, differentiation and market entry."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "The study uses customs and firm microdata in the Business Longitudinal Analysis Data Environment (BLADE) on a panel of around 8,937 Australian manufacturing firms per year over 2005-2017."
+     },
+     {
+      "evidence": 1,
+      "quote": "After filing trade marks in an export market, firms are more likely to enter, will perform better, become more resilient to exchange rate changes, and expand their exports more in response to tariff reductions."
+     }
+    ],
+    "text": "A 2021 study of around 9,000 Australian manufacturing exporters over 2005–2017 found improved entry, performance and responses to exchange rates and tariff reductions after trade mark filing in an export market."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "The estimated responses of export behaviour to trade marks and shocks are significant: after a firm has increased its recent trade marks in a destination market from zero to one, a 10% tariff reduction will induce a 71% increase in export revenue, more than double the 32% increase in revenue for the firm with no recent trade mark activity."
+     }
+    ],
+    "text": "The study estimated revenue increases of 71 per cent following a 10 per cent tariff reduction after recent trade marks increased from zero to one, versus 32 per cent without recent activity; these are estimates rather than individual guarantees."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v2.C",
+ "schema_name": "answer",
+ "tag": "explore-synthesis-7",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.027322,
+  "input": 6881,
+  "model": "gpt-6.1-sol",
+  "output": 1356,
+  "reasoning": 218,
+  "seconds": 23.03
+ }
+}
