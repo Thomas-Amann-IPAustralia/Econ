@@ -62,7 +62,9 @@ Branch `ccr-fe4defc0-ysiv1i`. Read D-017 to D-020 first.
 - **Spend this round:** Gemini $0.26 of the $2 given, OpenAI about $0.06 of the $3 given.
 
 ## Open items
-1. **Langfuse keys on Render** (see above); then a question to confirm traces arrive in `prod`.
+1. **Langfuse keys on Render**: set and working (2026-10-19). The span counter on `/api/health` read 0 because
+   the app was built twice; fixed on `claude/gracious-gates-x2zfot`, live once merged to `main`. Still the owner's:
+   `tracing.required: true`.
 2. **Tried and not adopted in grid v3 (D-016):** the fusion weight (flat), rerankers that read the notes
    (17M and 32M still harmful), plan-v3's answer-shaped query (level on dev, +0.022 on test with an interval
    that includes zero: the one idea worth re-testing on a larger set).
