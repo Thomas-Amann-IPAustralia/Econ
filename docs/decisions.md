@@ -1221,3 +1221,21 @@ reports, D-022, and the coverage labels); and the limits of the testing (questio
 judges, the answer comparison run on an earlier answer prompt, answer-v5 checked on six questions). Every
 figure is from the decision log; the example question is from `eval/testset/silver-v1.yaml`. Checked in a
 headless browser: both themes, a phone width (no horizontal scroll), no script errors.
+
+## D-029 — Charts of the measured results on "How it works" (the owner's request; Claude, 2026-10-19)
+
+**Request (the owner, 2026-10-19).** "Please use graphs to show the system's performance."
+
+**Built** (`web/index.html`, `web/style.css`, `initChartTips` in `web/app.js`). D-028's results table is
+replaced by:
+- a dot chart, before and now, of the useful evidence reaching the answer model (fact-finding 77% to 83%,
+  broad 49% to 64%; D-018);
+- stacked bars of the two judges' blind preferences on the 30 broad questions (Gemini 18 / 8 / 4, Claude
+  17 / 9 / 4; D-019), ordered current, no clear preference, earlier;
+- four figures with meters: every answer passing the citation check, 7 in 10 fact-finding answers citing the
+  exact passage (D-019), 13 of 18 awkward questions handled as intended (D-015), 95% grader agreement (D-012).
+Each chart has a "Show as a table" twin, a legend and direct labels; tooltips show the same text on hover and
+keyboard focus. Plain HTML and CSS, no chart library. Colours: blue and red poles with a neutral grey, and a
+grey "before" mark, checked with the dataviz palette validator against both themes' backgrounds (colour-blind
+separation and contrast pass; the greys are neutral by design and carried by labels). Checked in a headless
+browser: both themes, a phone width (no horizontal scroll), no script errors.
