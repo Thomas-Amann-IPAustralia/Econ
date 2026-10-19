@@ -866,3 +866,87 @@ runs evidence-only until `OPENAI_API_KEY` is set on Render. A rehearsal of Rende
 `pip install -e .`) started the service at about 137 MB, well under the free tier's 512 MB.
 
 **Spend:** none.
+
+## D-022 — Langfuse tracing, the garbled OCR repaired, and the front end's theme switch and process view (the owner's requests; built by Claude, 2026-10-19)
+
+**Requests (the owner, 2026-10-19).** "Build the Langfuse tracing; re-OCR the garbled pages (you may use
+Gemini for this if you need an LLM); update the front end to more easily allow a user to switch between dark
+mode and light mode … dark mode is also TOO dark, should be more of a gunmetal … I'd like the evidence trail
+to be easier to parse, using animations to indicate the process (consider wind-tunnel's process view)." Budget:
+"UP to $3 of OpenAI and $2 of Gemini tokens" (`config/eval.yaml` budgets raised by those amounts).
+
+**The filter's first live call** (owed by D-020), on Render once the OpenAI key was set: "What does the
+research say about how patent examination delays affect applicants?" Filter `ok`, read 42, kept 20 in 3.85 s;
+the answer passed the check first time (7 claims); US$0.029, 46 s.
+
+**Tracing (SOP §20.0, §20.3).** `econ.tracing`, on the Langfuse Python SDK 5.0.2 (pinned).
+- One trace per question, named `econ.ask` (agent), one session per conversation (the front end sends a
+  session id). Children: `econ.plan`, `econ.filter.rate` (one per group of 20) and `econ.answer` (one per
+  attempt) as generations with the messages, the reply, the model and effort, usage in exclusive buckets
+  (input, input_cached_tokens, output, output_reasoning_tokens) and each bucket's cost with a total;
+  `econ.search` as a retriever whose output is every passage read (rank, score, rating, chosen, text);
+  `econ.filter` as a chain; `econ.check` as an evaluator. Scores: `check_passed`, `claims_verified` on each
+  check and on the trace, and `outcome`, `coverage`, `attempts`, `cost_usd` on the trace.
+- Every observation carries the build (commit and dirty flag, hashes of the index, config and prompts, the
+  embedder, the models and efforts), checked against Langfuse's 200-character limit at start-up. The trace,
+  session and tags are set on every observation, not only the root, so Langfuse's aggregates count them all.
+- Observations start from an explicit parent, never the ambient context: the service streams from a
+  generator that a thread pool advances, and the filter rates in parallel threads.
+- The client is pinned: keys from `LANGFUSE_PUBLIC_KEY` and `LANGFUSE_SECRET_KEY` (names in config), host
+  `https://cloud.langfuse.com` (EU), environment `prod` on Render (`ECON_ENVIRONMENT`) and `dev` elsewhere,
+  release = the commit, sample rate 1.0, its own tracer provider. Exports go through a counting exporter:
+  `/api/health` shows exported and failed spans, and `econ ask` exits 2 if any span was lost. Without keys,
+  tracing is off and says so; `tracing.required: true` makes that an error (to set once the keys are on
+  Render). Emails and Australian phone numbers are masked in everything traced.
+- Checked offline with the real SDK and an in-memory exporter (`tests/test_tracing.py`, 11 tests), then live:
+  two traces sent to the Langfuse project this session's credential reaches (`data-expert-agent`, environment
+  `econ-verify`), read back through the v2 observations and v3 scores APIs (types, nesting, usage, costs,
+  scores as designed), then deleted. The service holds about 104 MB with the SDK loaded (Render: 512 MB).
+- Not built: a store of answers of our own beyond Render's log (SOP §20.3 asks for one; it is in the future
+  state), and eval runs traced to an `eval` environment.
+
+**The garbled OCR (D-002's open item).** Docling's full-page OCR of the two scanned reports had garbled 62
+of their 630 elements (a run of 3 or more words outside the vocabulary of the 22 text-layer documents); the
+page images are clean. The parse stage now re-reads each garbled element from its own box
+(`econ.ingest.reocr`), against that vocabulary:
+1. RapidOCR, the engine Docling uses, under 6 crop variants (render scale 3 or 4, padding 2, 4 or 8 points):
+   its first line is unstable under small crop changes. The reading with the fewest garbled words stands if
+   it has fewer than the old text and keeps at least 80% of the old text's sound words (old text that was
+   pure noise: a reading with no garbled words stands). 47 repaired.
+2. For what no variant repairs, gemini-3.8-flash transcribes the box image (`parse.reocr_model`), under the
+   same rule; replies cached in eval/cache/llm and metered, so a re-run spends nothing and gives the same
+   text. 8 repaired (US$0.019), among them "Pallegrino" read correctly as "Pellegrino".
+3. 7 left as they were: names and references that read the same both ways (correct as printed).
+Every attempt is in `library/reocr.json` (old text, reading, reader, agreement); a repaired element says
+`reocr: true`; boxes, pages and sequence never change, and tables are never re-read. The Docling conversion
+reproduced the committed elements exactly (630 of 630) before the repair. Elements read back many lost words
+("of go s s s s he Australian" → "of goods encompass 49 Australian and 17 overseas location names on the
+Australian").
+
+**Downstream.** Chunks (adopted strategy only; the other strategies' files are the record of D-005's
+measurement and were not rebuilt): 57 chunks of the two reports changed text, and 2018 gained one
+(1,897 passages). Context notes for 54 new prompts (US$0.004; the rest from cache). The index re-embedded
+every chunk: the 1,773 chunks of the other 22 documents have bit-identical vectors. All 11 gold quotes in the
+two reports still resolve. Judgments: the 481 judged pairs on changed chunks and the new chunk for every need
+with 2018 passages judged (602 pairs, 139 needs) were re-judged by the same judge, prompt and effort
+(gemini-3.8-flash, judge-v1, low; synchronous; US$0.245), marked `source: reocr-rejudge`. `econ verify-search` on
+the new index: served and measured search still agree (judged ndcg@10 0.6933 / 0.6933, top-10 overlap 0.996,
+the filter's 20 replayed identically); over all 178 needs the judged ndcg@10 moved from 0.6982 to 0.6933.
+That small move mixes the re-graded 2018 and 2021 passages with passages that surface only now and are
+unjudged (counted as 0); a judging top-up of those (a few cents) would separate the two. Not done.
+
+**The front end.**
+- A labelled Light/Dark switch in the header, remembered in the browser, applied before the first paint;
+  without a choice the system's setting holds.
+- Dark mode is gunmetal: ground `#262e33`, panels `#2f383e`, lines `#45525a`; text and accents keep AA
+  contrast.
+- The evidence trail opens with the process as nodes (plan, search, filter, answer, check), after
+  wind-tunnel's pipeline view: waiting, working (a breathing ring and a seconds counter), done (a settle
+  flash), skipped, failed; airflow along the edge into the working step. A timestamped activity log says the
+  same in words (a live region), and a strip of one tile per passage the filter read shows its rating and
+  whether it was kept or cited. All motion is off under `prefers-reduced-motion`; nothing depends on it.
+  Checked in a headless browser against recorded events: both themes, evidence-only mode, a phone width
+  (no horizontal scroll), no script errors.
+
+**Spend:** Gemini US$0.264 (re-OCR 0.019, re-judging 0.245); OpenAI US$0.057 (notes 0.004 in the ledger; the
+Render smoke test 0.029 and the tracing check 0.024 outside it).

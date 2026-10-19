@@ -1,16 +1,16 @@
 {
-  "built_from": "20261018T035127Z",
-  "chunks": 1896,
+  "built_from": "20261019T043535Z",
+  "chunks": 1897,
   "dim": 768,
   "embedder": "arctic-m-v1.5",
   "enrichment": "S384-noprefix-nocite.luna-enrich-v1",
-  "enrichment_sha256": "aec90599a175f127",
+  "enrichment_sha256": "7b8b0cb7ddf09adb",
   "files": {
-    "bm25.npz": "1f7b8a389d504332",
-    "bm25.vocab.json": "943e57f59ab47285",
-    "chunks.jsonl": "d2b565450dc3dffb",
-    "docs.json": "af355e79100875f0",
-    "vectors.f16.npy": "b38e7ebdab2d691c"
+    "bm25.npz": "4edf90ef9bbc9ea5",
+    "bm25.vocab.json": "8c853f1d6261b70c",
+    "chunks.jsonl": "1d89ef0cab1bcf8f",
+    "docs.json": "0bcc6c495206ac2f",
+    "vectors.f16.npy": "a909717b4d63dc25"
   },
   "hf_id": "Snowflake/snowflake-arctic-embed-m-v1.5",
   "onnx_sha256": "bc6f7662487a0796e6f86229c8e5c3ab2f7059e08e0bb2f524125273f72171c4",

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2018, the “Location names in trade marks” section examines Australian trade marks using place names, with this passage focusing on food and beverage products and Figure 17’s leading domestic locations. It explains that Wine, Spirits and Liqueurs trade marks are predominant users of location names and that city-name trade marks may indicate geographical origin rather than product quality."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2018:0033",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000159,
+  "input": 1144,
+  "model": "gpt-6-luna",
+  "output": 90,
+  "reasoning": 0,
+  "seconds": 2.8
+ }
+}

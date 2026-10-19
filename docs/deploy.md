@@ -112,6 +112,25 @@ then "Evidence only (no model key)". Ask a question: the evidence trail should s
 search, combined"; open a passage to see it highlighted on its PDF page. If the trail says "keyword
 search only", Render cannot reach the embedder: recheck `EMBEDDER_URL` and `EMBEDDER_TOKEN`.
 
+## Tracing to Langfuse (D-022)
+
+Each question becomes one trace in Langfuse (one session per conversation): the plan, the search with every
+passage read, the filter's calls, the answer and the check, with the models, tokens, costs and the build.
+
+1. In Langfuse Cloud (EU, https://cloud.langfuse.com), create a project for this service (for example
+   `econ`), then **Settings > API Keys > Create new API keys**.
+2. In the Render service's **Environment**, add `LANGFUSE_PUBLIC_KEY` and `LANGFUSE_SECRET_KEY`. The blueprint
+   already sets `ECON_ENVIRONMENT=prod`, so the service's traces are in the `prod` environment; local runs
+   are `dev`.
+3. Check `https://<your-service>.onrender.com/api/health`: `tracing` should say `"enabled": true` and, after
+   a question, `exported` above 0 and `failed` 0. Without keys it says `"status": "no keys"` and the service
+   runs untraced.
+4. Once the keys are in place, set `tracing.required: true` in `config/service.yaml`: from then on a missing
+   key stops the service instead of switching tracing off.
+
+Questions and pasted material go to Langfuse with email addresses and phone numbers masked. Every answer is
+also recorded in Render's log, which outlives Langfuse's retention.
+
 ## Optional: fewer cold starts
 
 Set the repository variable `KEEP_WARM` to `true` to have `.github/workflows/keep-warm.yml` ping the API

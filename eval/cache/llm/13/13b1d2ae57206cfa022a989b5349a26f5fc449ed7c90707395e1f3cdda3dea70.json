@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5.7e-05,
+ "data": {
+  "context": "In the 2018 Australian Intellectual Property Report, Chapter 6’s analysis of patent productivity among collaborative businesses explains how the study estimates the effect of collaborative research grants on firms’ patent applications. It describes matching grant recipients with similar nonparticipants and using a fixed-effects panel model."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2018:0047",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000114,
+  "input": 808,
+  "model": "gpt-6-luna",
+  "output": 67,
+  "reasoning": 0,
+  "seconds": 1.79
+ }
+}

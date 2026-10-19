@@ -6,11 +6,11 @@ Serving index `S384-noprefix-nocite` + `arctic-m-v1.5` (ONNX `bc6f7662487a0796`,
 |---|---|
 | Top-10 overlap, served vs measured context | mean 0.996, min 0.8 |
 | Top-20 overlap | mean 0.964, min 0.40 |
-| ndcg@10 (judged), served / measured | 0.6981 / 0.6982 |
+| ndcg@10 (judged), served / measured | 0.6933 / 0.6933 |
 | Needs whose top 10 differ at all | 4 of 178 |
-| Filter: the 60 passages read, overlap served vs measured | mean 1.000, identical lists on 156 of 178 |
-| Filter: its prompt, identical to the measured one (where the lists are identical) | 81 of 81 needs |
-| Filter: its 20 passages, replayed from the measured ratings, overlap served vs measured | mean 1.000, min 1.00 (92 test needs; passages read without a measured rating: 1) |
+| Filter: the 60 passages read, overlap served vs measured | mean 1.000, identical lists on 167 of 178 |
+| Filter: its prompt, identical to the measured one (where the lists are identical) | 87 of 87 needs |
+| Filter: its 20 passages, replayed from the measured ratings, overlap served vs measured | mean 1.000, min 1.00 (92 test needs; passages read without a measured rating: 159) |
 | Filter: relevant passages reached (judged), served / measured | 0.762 / 0.762 |
 
 Where served and measured contexts differ, they differ deep in the list: reciprocal-rank merging of two or more queries leaves near-ties, which the float16 index and the float32 measurement break differently, and the per-document cap carries the difference down the list. The judged quality of the served contexts is the measured one.

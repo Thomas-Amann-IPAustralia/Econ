@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.8e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2018, Chapter 6 discusses collaborative research grants and IP outcomes. These notes cover Australian Research Council funding and university–business research collaborations; the cited figure counts partner organisations for each project, so organisations on multiple projects may be counted more than once."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2018:0045",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000196,
+  "input": 1011,
+  "model": "gpt-6-luna",
+  "output": 190,
+  "reasoning": 119,
+  "seconds": 3.29
+ }
+}

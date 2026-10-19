@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.9e-05,
+ "data": {
+  "context": "In the endnotes of the Australian Intellectual Property Report 2021, this note defines the sample used in the report’s analysis of IP rights and exports: active Australian firms that filed at least one Australian patent, trade mark, design right or plant breeder’s right application in 2004–05 to 2016–17. It also identifies the Eurozone countries studied and the US, UK and Canada used for export-entry estimates."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2021:0068",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000138,
+  "input": 885,
+  "model": "gpt-6-luna",
+  "output": 99,
+  "reasoning": 0,
+  "seconds": 1.8
+ }
+}

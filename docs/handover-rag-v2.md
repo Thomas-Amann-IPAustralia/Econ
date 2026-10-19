@@ -51,14 +51,24 @@ Branch `ccr-fe4defc0-ysiv1i`. Read D-017 to D-020 first.
   (`https://econ-api-vk5f.onrender.com`, dense lane `ok`), Cloud Run. Render is evidence-only until the owner
   sets `OPENAI_API_KEY` there; the first question after that is the filter's live smoke test.
 
+## Update, 2026-10-19 (later): tracing, the OCR repair, the front end (D-022)
+- **Done:** the filter's first live call on Render passed. Langfuse tracing is built and tested (offline with
+  the real SDK; live against a Langfuse project, then deleted). The scanned reports' garbled OCR is repaired
+  (55 of 62 elements; index rebuilt, 602 judgments re-graded). The front end has a theme switch, gunmetal dark
+  mode and a live process view of the trail.
+- **For the owner:** create a Langfuse project and put `LANGFUSE_PUBLIC_KEY` and `LANGFUSE_SECRET_KEY` on
+  Render (docs/deploy.md, "Tracing to Langfuse"); then set `tracing.required: true`. Merge to `main` to deploy
+  the new index, the tracing and the front end.
+- **Spend this round:** Gemini $0.26 of the $2 given, OpenAI about $0.06 of the $3 given.
+
 ## Open items
-1. **The filter's first live call** (see above), with the owner's permission to spend.
+1. **Langfuse keys on Render** (see above); then a question to confirm traces arrive in `prod`.
 2. **Tried and not adopted in grid v3 (D-016):** the fusion weight (flat), rerankers that read the notes
    (17M and 32M still harmful), plan-v3's answer-shaped query (level on dev, +0.022 on test with an interval
    that includes zero: the one idea worth re-testing on a larger set).
 3. **The plan prompt's document map** must be updated when documents are added; so must the notes
    (`econ.kb.enrich`, about $0.14 a corpus).
-4. Carried from v1: Langfuse tracing, re-OCR of the 2018 and 2021 garbled pages, a persistent answer store.
+4. Carried from v1: a persistent answer store (Render's log is the only record of answers so far).
 
 ## Conventions kept
 - Grids and test sets committed before any number; deviations recorded as amendments before the data they

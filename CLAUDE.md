@@ -7,21 +7,23 @@ in the Cloudflare R2 bucket `econ-knowledge` (EU jurisdiction). Callers are peop
 doing exploratory research for strategic direction. **Transparency and traceability come first**: every
 claim an answer makes quotes a passage, and every passage leads to its page.
 
-**Current scope: the retrieval-augmented chatbot, second version (RAG v2, D-011 to D-021).** Built and
+**Current scope: the retrieval-augmented chatbot, second version (RAG v2, D-011 to D-022).** Built and
 live: the knowledge base, the serving index (with search-only context notes), the API (Render,
 `econ-api-vk5f.onrender.com`), the embedder (Cloud Run), the front end (GitHub Pages, with the PDFs); the API
-answers once `OPENAI_API_KEY` is set on Render (evidence-only until then, D-021). Measured: retrieval on a judged test set of 178 needs (silver known-item plus exploratory
+answers with gpt-6.1-sol (the filter's first live call passed, D-022); Langfuse tracing is built and waits
+for its keys on Render. Measured: retrieval on a judged test set of 178 needs (silver known-item plus exploratory
 questions like the owner's, graded by a Gemini judge), end-to-end answers on 60 test needs, and the
 out-of-scope set; both providers have made live calls. The owner adopted gpt-6.1-sol and kept answer-v1
-(D-021). Not yet done: the first live call of the filter in the service; Langfuse tracing. Progress log: `docs/progress-rag-v2.md`.
+(D-021). The scanned reports' garbled OCR is repaired (D-022). Progress log: `docs/progress-rag-v2.md`.
 
 The method is `docs/sop-agent-construction-v2.md` (the owner's SOP). Read `docs/decisions.md` (the
 decision log) and the latest `docs/handover-*.md` before acting.
 
 ## Working principles
 1. **Deterministic first.** Ingestion, chunking, indexing, search and the answer check make no model
-   calls. The only model calls are the plan, the relevance filter and the answer, at request time, behind
-   a daily spend cap.
+   calls, with one owner-approved exception: the parse stage's last-resort OCR re-read of a garbled element
+   (`parse.reocr_model`, D-022), cached and metered so a re-run is free and identical. The only request-time
+   model calls are the plan, the relevance filter and the answer, behind a daily spend cap.
 2. **Fail loudly.** Stages exit with code 2, a one-line cause, the item's id and the report to read.
 3. **Stage contract.** One module and one command per stage; each checks its upstream manifest
    (passed, output hashes unchanged); writes are atomic; outputs are deterministic (sorted, canonical
@@ -77,7 +79,10 @@ decision log) and the latest `docs/handover-*.md` before acting.
 
 ## Retrieval (adopted: D-005 to D-009, D-013)
 - Chunking `S384-noprefix-nocite`: chunks never cross a section, up to 384 tokens, no heading prefix,
-  and no bibliography entries or citation-only endnotes (`is_citation`, 475 elements). 1,896 passages.
+  and no bibliography entries or citation-only endnotes (`is_citation`, 475 elements). 1,897 passages.
+- **OCR repair** (D-022): the parse stage re-reads garbled elements of the two scanned reports from their own
+  boxes (RapidOCR under crop variants, then gemini-3.8-flash), accepted only if cleaner and in agreement with
+  the old text; `library/reocr.json` records every attempt. 55 of 62 repaired; 7 are names read correctly.
 - **Context notes** (D-013): each chunk's note (`library/enrich/S384-noprefix-nocite.luna-enrich-v1.jsonl`,
   one or two sentences saying where it sits and what its vague references mean) is put in front of its
   text for both lanes (`retrieval.enrichment`). Search only: never evidence, never sent to the answer
@@ -127,8 +132,15 @@ decision log) and the latest `docs/handover-*.md` before acting.
 High-volume extraction: a small model behind validation. General production work: a strong model at
 medium or high effort. A judge never shares the answering model's family.
 
+## Tracing (built, D-022)
+`econ.tracing`: one Langfuse trace per question (`econ.ask` > `econ.plan`, `econ.search` retriever,
+`econ.filter` > `econ.filter.rate`, `econ.answer`, `econ.check` evaluator with scores), one session per
+conversation, the build on every observation, usage in exclusive buckets with costs, a counting exporter
+(`/api/health` shows lost spans). Keys `LANGFUSE_PUBLIC_KEY`/`LANGFUSE_SECRET_KEY`; without them tracing is
+off and says so. Tests use the real SDK with an in-memory exporter; the null tracer is the default.
+
 ## Future state (context only — do not build yet)
-Langfuse tracing (SOP §20.0 and §20.3); a check of meaning for claims; plan-v3's answer-shaped query, re-tested on a larger set
+A check of meaning for claims; plan-v3's answer-shaped query, re-tested on a larger set
 (D-016); a persistent answer store and spend meter. The judged test set (`econ.evalr.judged`, `eval/judgments/judged-v1.jsonl`)
 is the yardstick for all of them; a method that surfaces unjudged passages needs a top-up first.
 
@@ -138,7 +150,8 @@ Commit code, run, then commit outputs. Australian spelling, sentence-case headin
 
 ## When to stop and ask the owner
 - New high-severity sweep findings on real items: propose allowlist entries.
-- Spending money on model calls: ask before every paid call, however small (D-021).
+- Spending money on model calls: ask before every paid call, however small (D-021), unless the owner has
+  given a budget for the work at hand (D-022: up to $3 OpenAI and $2 Gemini; spent $0.06 and $0.26).
 - Adopting a measured result outside the choices the owner delegated.
 - Changing the answer format, what the chatbot may refuse, or publishing anything new. The reports' text
   in `library/` and their PDFs on the Pages site are approved, with the acknowledgement in the README

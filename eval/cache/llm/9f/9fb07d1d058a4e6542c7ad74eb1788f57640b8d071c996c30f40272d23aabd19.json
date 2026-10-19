@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.3e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2018, the “Patent analytics” section describes the Patent Analytics Hub’s 2017 reports and data updates, its evaluation and research on Australian patenting, university–industry collaboration, and research organisations’ spin-out companies. It also reports how spin-outs’ patent-family filings compare with those of their parent research organisations."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2018:0039",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000147,
+  "input": 1057,
+  "model": "gpt-6-luna",
+  "output": 83,
+  "reasoning": 0,
+  "seconds": 1.84
+ }
+}
