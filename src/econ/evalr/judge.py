@@ -18,7 +18,7 @@ import httpx
 from econ import config, spend
 from econ.answer import pipeline
 from econ.answer.providers import _gemini_usage
-from econ.evalr import llmcall
+from econ.evalr import llmcall, systems
 from econ.evalr.judged import Need
 from econ.manifest import write_text_atomic
 
@@ -285,3 +285,40 @@ def load(name: str) -> dict[tuple[str, str], int]:
         (r["need"], r["chunk_id"]): r["grade"]
         for r in (json.loads(x) for x in p.read_text().splitlines() if x.strip())
     }
+
+
+def topup(
+    needs: list[Need], targets: dict[str, list[str]], *, name: str, source: str, model: str, effort: str
+) -> dict:
+    """Grade the target passages one request at a time (cached and metered like every paid call) and merge
+    the grades into eval/judgments/<name>.jsonl, marked `source`. Every request must grade each of its
+    passages exactly once; otherwise nothing is written."""
+    by_id = {c["chunk_id"]: c for c in systems.chunks()}
+    reqs = [
+        (call, ids)
+        for n in needs
+        if n.id in targets
+        for call, ids in requests_for(n, [by_id[c] for c in targets[n.id]], model=model, effort=effort)
+    ]
+    replies = llmcall.run_many([c for c, _ in reqs])
+    new, bad = [], []
+    for (call, ids), rep in zip(reqs, replies, strict=True):
+        got = parse(rep, ids)
+        if got is None:
+            bad.append(call.tag)
+            continue
+        new += [
+            {"chunk_id": cid, "grade": g, "judge": model, "need": call.tag, "source": source}
+            for cid, g in got.items()
+        ]
+    cost = sum(r.get("cost_usd", 0.0) for r in replies if not r.get("cached"))
+    if bad:
+        return {"requests": len(reqs), "failed": sorted(set(bad)), "cost_usd": cost, "graded": 0}
+    p = config.path("eval/judgments") / f"{name}.jsonl"
+    rows = {
+        (r["need"], r["chunk_id"]): r
+        for r in (json.loads(x) for x in p.read_text().splitlines() if x.strip())
+    }
+    rows.update({(r["need"], r["chunk_id"]): r for r in new})
+    save(name, list(rows.values()))
+    return {"requests": len(reqs), "failed": [], "cost_usd": cost, "graded": len(new)}

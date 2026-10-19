@@ -193,3 +193,22 @@ still needs the owner's permission. Checked live: Pages (with PDFs), Render on `
   602 judgments re-graded (US$0.245).
 - Front end: Light/Dark switch, gunmetal dark mode, the trail's process view with an activity log and a
   passage strip, after wind-tunnel's pipeline view.
+
+## 2026-10-19 — The Langfuse keys on Render, checked; a counter fix
+- Render runs `main` (0185d87) with tracing on in `prod`. One question as the smoke test (trade marks and small
+  businesses; the owner's request to check the keys): filter `ok` (60 read, 20 kept, 10.0 s), the answer passed
+  the check first time (4 claims), US$0.027, 39.5 s.
+- `/api/health` still said 0 spans exported, 0 failed. Cause: uvicorn reads `econ.service.app:app` twice at
+  start-up, and the module built a new app on each read: two indexes in memory and two tracers. Langfuse keeps one
+  client per key, so the first tracer's exporter sent every span and the served tracer's counter never moved.
+  Traces were sent; the health line could not see them. Reproduced locally under `econ serve` (the trace reached
+  Langfuse, the counter stayed at 0). Fixed: the app is built once (a test covers it); under `econ serve` the
+  counter now reads 2 exported about 5 s after a question. Test traces deleted from the session's Langfuse project.
+- Deploys with the next merge to `main`; then `/api/health` should show `exported` above 0 after a question.
+
+## 2026-10-19 — The judging top-up after the OCR repair (D-023)
+191 unjudged passages in the fully judged contexts (167 from the two scanned reports) graded by the same judge,
+US$0.096 Gemini. The served search's judged ndcg@10 over 178 needs: 0.6933 to 0.7016 (0.6982 before the
+repair), so the repair's apparent loss was unjudged passages. Grid v2's choice and gain unchanged (+0.086 on
+test); depth figures within 0.01. The relevance filter's measurement needs new ratings (about US$0.15-0.20
+OpenAI), not run.

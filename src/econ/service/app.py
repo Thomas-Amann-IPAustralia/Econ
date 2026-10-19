@@ -268,7 +268,15 @@ def create_app() -> FastAPI:
     return app
 
 
+_app: FastAPI | None = None
+
+
 def __getattr__(name: str):
+    # Built once: uvicorn reads `app` twice at start-up, and a second build would load a second index and a
+    # second tracer whose exporter Langfuse never uses (its client is one per key), so /api/health counted 0.
+    global _app
     if name == "app":
-        return create_app()
+        if _app is None:
+            _app = create_app()
+        return _app
     raise AttributeError(name)

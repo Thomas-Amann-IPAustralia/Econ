@@ -69,6 +69,7 @@ decision log) and the latest `docs/handover-*.md` before acting.
 | Chunk | `econ chunk` | elements | `library/chunks/<strategy>.jsonl` |
 | Measure | `econ eval-retrieval --stage chunking\|embedders\|fusion` | chunks, silver set | `eval/runs/`, `reports/retrieval-*.md` |
 | Measure (judged) | `econ eval-retrieval-v2 --stage stage1\|stage2\|final` | cached plans, notes, reranker scores, judgments | `eval/runs/retrieval-v2/`, `reports/retrieval-v2-*.md` |
+| Top up (paid) | `econ judge-topup [--confirm]` | measured contexts, judgments | `eval/judgments/judged-v1.jsonl` |
 | Index | `econ index` | adopted chunks, context notes | `library/index/` |
 | Verify | `econ verify-embedder [--url URL]`, `econ verify-search` | index | `reports/embedder-verification.md`, `reports/search-verification.md` |
 

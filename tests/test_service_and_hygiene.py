@@ -19,6 +19,15 @@ def client(index_dir, monkeypatch):
     return TestClient(create_app())
 
 
+def test_module_app_is_built_once(index_dir, monkeypatch):
+    import econ.service.app as service
+
+    built = []
+    monkeypatch.setattr(service, "_app", None)
+    monkeypatch.setattr(service, "create_app", lambda: built.append(object()) or built[-1])
+    assert service.app is service.app and len(built) == 1
+
+
 def test_health_reports_build_and_evidence_only_mode(client):
     h = client.get("/api/health").json()
     assert h["llm"]["mode"] == "evidence_only" and h["build"]["index"]["strategy"] == "S384"
