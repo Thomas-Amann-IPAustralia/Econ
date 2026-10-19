@@ -1,0 +1,89 @@
+{
+ "cost_usd": 0.014444,
+ "data": {
+  "answer": "The reports identify three areas where Australia trails peers, although the measures and periods differ:\n\n- **Growth in design activity:** the 2019 study found Australia lagged international peers in growth of both design labour intensity and registered-design IP intensity over 2011–2016. Australia’s design IP intensity declined, while Denmark and Sweden recorded strong growth on both measures. This is a finding about growth, rather than Australia having unexpectedly low registrations for its design workforce.[1]\n- **ICT-related IP:** the 2020 report placed Australia around the middle or lower among the countries compared: **16th of 35** for ICT intensity in patents in 2013–2016, **13th of 30** for trade marks and **15th of 22** for designs in 2014–2017.[2]\n- **Patent-application growth at the Australian office:** the 2024 study reported annual growth of **1.3 per cent** over 2001–2020, compared with **2.0 per cent** at the EPO and **3.3 per cent** at the USPTO. This compares filings at the offices—not specifically Australian residents’ patenting—and uses a dataset whose counts may differ from official totals.[3]\n\n**University–industry collaboration is not an unambiguous area of underperformance.** Although the 2017 report noted Australia ranked last on the OECD’s firm-survey measure, its alternative measure—university–industry co-filed PCT applications as a share of national PCT applications—ranked Australia **13th of 35** for 2000–2015, ahead of the US, UK and Germany.[4]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "Figure 2 suggests that Australia is close to the expected level of design IP intensity given its level of design labour intensity. However, based on data from 2011 to 2016, Australia lags its international peers for growth on both design attributes."
+     },
+     {
+      "evidence": 3,
+      "quote": "Australia and Japan (in purple) traversed less far than other countries along the horizontal axis (design labour intensity) and backward along the vertical axis (design IP intensity)."
+     },
+     {
+      "evidence": 3,
+      "quote": "Denmark and Sweden (in yellow) experienced high growth on both design intensity measures"
+     }
+    ],
+    "text": "The 2019 design study found Australia lagged peers in growth of design labour and registered-design IP intensity during 2011–2016, with declining IP intensity, unlike strong growth in Denmark and Sweden; Australia's IP intensity was close to that expected for its labour intensity."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 8,
+      "quote": "between 2013 and 2016. It measured each country's average number of ICT-related patents as a share of total patent families filed by the country's residents. Out of 35 leading countries, Australia ranked 16th for ICT-intensity in patents."
+     },
+     {
+      "evidence": 8,
+      "quote": "In 2014-17, Australia's average ICT-related trade mark portfolio at three large IP offices - the EUIPO, JPO and USPTO - ranked 13th out of 30 countries and its average design portfolio ranked 15th out of 22 countries."
+     }
+    ],
+    "text": "The 2020 report ranked Australia 16th of 35 for ICT patent intensity in 2013–2016, 13th of 30 for ICT trade marks and 15th of 22 for ICT designs in 2014–2017."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 9,
+      "quote": "total number of patent applications filed at IPA, EPO, and USPTO over the period 2001 to 2020 based on the filing year of the application."
+     },
+     {
+      "evidence": 9,
+      "quote": "The annual growth rates for patent applications are 1.3% for IPA, 2.0% for EPO, and 3.3% for USPTO."
+     },
+     {
+      "evidence": 9,
+      "quote": "Consequently, the count of patent applications may differ from the official count of patent applications provided by each patent office statistics."
+     }
+    ],
+    "text": "The 2024 study found annual patent-application growth at IPA of 1.3 per cent, EPO 2.0 per cent and USPTO 3.3 per cent over 2001–2020; these are office filings in a dataset that may differ from official counts, not a comparison confined to Australian residents."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 16,
+      "quote": "On the OECD measure, Australia ranks last among OECD countries."
+     },
+     {
+      "evidence": 16,
+      "quote": "A survey used by the OECD where the Australian Bureau of Statistics asked innovative firms in 2013 how often they collaborate with research organisations."
+     },
+     {
+      "evidence": 13,
+      "quote": "Figure 17 shows the number of university-industry PCT applications filed between 2000 and 2015 as a percentage of all PCT applications filed from a country. Australia ranks 13 among the 35 countries as make up 2.2 per cent of PCT applications, well ahead of other OECD countries such as the US, UK and Germany."
+     }
+    ],
+    "text": "University–industry collaboration is not an unambiguous shortfall: the 2017 report contrasted a last-place OECD firm-survey ranking with 13th of 35 for university–industry PCT co-filings as a share of national PCT applications in 2000–2015, ahead of the US, UK and Germany."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v2.C",
+ "schema_name": "answer",
+ "tag": "explore-strategy-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.028888,
+  "input": 7099,
+  "model": "gpt-6.1-sol",
+  "output": 1469,
+  "reasoning": 323,
+  "seconds": 30.03
+ }
+}

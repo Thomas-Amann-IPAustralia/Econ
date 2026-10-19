@@ -1,0 +1,125 @@
+{
+ "cost_usd": 0.014528,
+ "data": {
+  "answer": "AI is showing up in patents both **as the technology being protected and as a tool that may change how inventions are developed and filed**.[1][6][8]\n\n- **Rapid growth in AI inventions, from a low Australian base.** The 2022 report identified 81,913 patent families worldwide over 2015–19 across AI algorithms and hardware accelerators, machine learning and natural language processing. Filings roughly doubled each year.[1] Australia received 1,343 families—less than 2% of the global total—although the latest year was incomplete because some overseas-origin families had not yet been filed here.[2]\n\n- **Australian-origin activity was mainly company-led.** Australian applicants filed 156 AI patent families over 2015–19, including 86 filed in Australia. Companies accounted for 113 families, compared with 21 from universities.[3] The 2022 report identified applications in healthcare, productivity, energy and agriculture.[4]\n\n- **More recent filings include AI models and image generation.** The 2025 report placed Canva second among domestic patent applicants, with 44 applications in 2024. Many of its new filings concerned training AI models and automatically generating and processing images.[5]\n\n- **AI adoption is associated with patenting, but not clearly with broader technological invention.** Research reported in 2023 found that patent ownership predicted AI capability-building, with adoption strongly associated with patenting in Physics, which includes computer technologies.[6] However, it found no evidence that AI adopters patented across more diverse technical fields; the report suggested AI might then be more important for automating operations than radical recombinant innovation.[7]\n\n- **AI-assisted filing is another emerging channel.** The 2026 report described changes in provisional applicants as consistent with lower drafting and search costs enabled by digital tools, including AI—not as a demonstrated causal effect. It also flagged possible increases in speculative filings, examination demands, and questions about disclosure quality and inventorship.[8]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "These are (1) AI algorithms and hardware accelerators, (2) machine learning and (3) natural language processing."
+     },
+     {
+      "evidence": 2,
+      "quote": "From 2015 to 2019, 81,913 unique patent families were filed worldwide relating to the three identified AI technologies"
+     },
+     {
+      "evidence": 2,
+      "quote": "The total number of AI patent families has roughly doubled each year over the period."
+     }
+    ],
+    "text": "The 2022 analysis covered three AI technology areas and identified 81,913 patent families worldwide in 2015–19, with filings roughly doubling annually."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "only 1,343 patent families have been filed in Australia, less than 2% of global filings."
+     },
+     {
+      "evidence": 1,
+      "quote": "As of the time of analysis, many patent families with a priority application filed in other jurisdictions will not yet have been filed in Australia and so these patent families are not yet reflected in Australia's value for 2019."
+     }
+    ],
+    "text": "Australia received 1,343 AI patent families, less than 2% of global filings, with the latest year incomplete because some overseas-origin families had not yet been filed in Australia."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "Australian applicants filed a total of 156 patent families in AI technologies over the period 2015-19, with 86 (just over half) of these filed in Australia."
+     },
+     {
+      "evidence": 9,
+      "quote": "Companies account for 113 patent families, compared to only 21 filed by universities"
+     }
+    ],
+    "text": "Australian applicants filed 156 AI patent families in 2015–19, including 86 in Australia; companies accounted for 113 families and universities for 21."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "Australian patentees are applying key AI technologies to healthcare, productivity, energy and agriculture."
+     }
+    ],
+    "text": "The 2022 report identified Australian AI patent applications in healthcare, productivity, energy and agriculture."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 8,
+      "quote": "Australian design software company Canva has risen to second place, with 44 applications."
+     },
+     {
+      "evidence": 8,
+      "quote": "With a current focus on launching AI-based products, many of the company's new patent filings relate to systems and methods for training AI models and automatically generating and processing images."
+     }
+    ],
+    "text": "The 2025 report ranked Canva second among domestic applicants with 44 applications in 2024; many new filings concerned AI model training and image generation and processing."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 14,
+      "quote": "having a patent was a good predictor of whether they were engaged in building AI capability: businesses with a stronger innovation and patent focus adopt AI at a higher rate. Adoption was strongly associated with patenting focused on the Physics field, which encompasses computer technologies."
+     }
+    ],
+    "text": "The 2023 research associated patent ownership with AI capability-building and AI adoption with patenting in Physics, including computer technologies."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 15,
+      "quote": "To the extent that AI is being applied to innovate across domains, it might be expected that AI adopters will tend to patent across diverse technical fields. The QUT study found no evidence for this."
+     },
+     {
+      "evidence": 15,
+      "quote": "However, as currently applied, AI may be more important for automating operations than radical recombinant innovation."
+     }
+    ],
+    "text": "The 2023 report found no evidence that AI adopters patented across more diverse technical fields and suggested AI might be more important for operational automation than radical recombinant innovation."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 13,
+      "quote": "This pattern is consistent with reduced entry costs and faster drafting and search enabled by digital tools, including artificial intelligence (AI) systems."
+     },
+     {
+      "evidence": 13,
+      "quote": "Increased use of automated and AI-assisted tools presents challenges for patent systems globally. These may include higher volumes of speculative filings, increased demands on examination resources, and questions around disclosure quality and inventorship."
+     }
+    ],
+    "text": "The 2026 report described provisional-applicant changes as consistent with AI-enabled reductions in drafting and search costs, rather than establishing causation, and identified potential filing-volume, examination, disclosure and inventorship challenges."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v2.C",
+ "schema_name": "answer",
+ "tag": "explore-trend-11",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.029056,
+  "input": 6193,
+  "model": "gpt-6.1-sol",
+  "output": 1667,
+  "reasoning": 371,
+  "seconds": 24.83
+ }
+}

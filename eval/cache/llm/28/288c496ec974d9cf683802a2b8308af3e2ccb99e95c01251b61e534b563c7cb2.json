@@ -1,0 +1,63 @@
+{
+ "cost_usd": 0.011699,
+ "data": {
+  "answer": "**The clearest all-business ownership estimate is 4.2 per cent in 2015–16, up from 2.3 per cent in 2001–02—roughly doubling over 15 years.** This covers businesses owning at least one patent, trade mark or design, according to the 2020 economic research paper.[1]\n\nThere is a reporting inconsistency: the **2020 annual IP Report** instead describes the proportion using IP rights as relatively stable at approximately **6–7 per cent** over the same period, while reporting that the number of businesses filing doubled.[2]\n\nMore recent evidence covers narrower groups rather than all businesses: the **2025 IP Report** says the share of active Australian SMEs holding a **trade mark** increased from **6.4 per cent in 2018 to 7.0 per cent in 2024**. This is not an all-business, all-rights ownership measure.[3]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "The number of businesses that owned at least one registrable IPR increased from 15 195 in 2001-02 to 28 384 in 2015-16, accounting for 2.3 and 4.2 per cent of active businesses respectively."
+     },
+     {
+      "evidence": 2,
+      "quote": "The number of Australian actively trading businesses owning at least one patent, trade mark or design almost doubled in 15 years"
+     }
+    ],
+    "text": "The 2020 economic research paper reports that the share of active Australian businesses owning at least one patent, trade mark or design rose from 2.3 per cent in 2001–02 to 4.2 per cent in 2015–16, roughly doubling."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "The number of Australian businesses that filed at least one patent, trade mark or design doubled in the 15 years from 2001-02 to 2015-16."
+     },
+     {
+      "evidence": 4,
+      "quote": "the overall proportion of Australian firms that used IP rights is still relatively stable, approximately six to seven per cent across all the years in the 15-year period."
+     }
+    ],
+    "text": "The 2020 annual IP Report gives a different account, reporting a stable share of approximately 6–7 per cent using IP rights over 2001–02 to 2015–16, despite a doubling in the number of businesses filing."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 8,
+      "quote": "Between 2018 and 2024, the share of active SMEs in Australia who held a trade mark increased from 6.4% to 7.0%."
+     }
+    ],
+    "text": "The 2025 IP Report reports that trade mark ownership among active Australian SMEs increased from 6.4 per cent in 2018 to 7.0 per cent in 2024; this measure concerns SMEs and trade marks, not all businesses and all registered rights."
+   }
+  ],
+  "coverage": "partial",
+  "gaps": [
+   "The passages do not provide a current ownership share covering all Australian businesses and all registered IP rights.",
+   "The passages do not reconcile the differing ownership/use percentages reported in the two 2020 publications."
+  ]
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v2.C",
+ "schema_name": "answer",
+ "tag": "erp10-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.023398,
+  "input": 6524,
+  "model": "gpt-6.1-sol",
+  "output": 1035,
+  "reasoning": 280,
+  "seconds": 24.21
+ }
+}

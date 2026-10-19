@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.00081,
+ "data": {
+  "reason": "Both answers directly answer the prompt with the exact figure (a 27% increase in 2021 compared to 2020) and support their claims accurately with verbatim quotes from the source texts. There is no meaningful difference in quality or accuracy between them.",
+  "winner": "tie"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "ipr22-1:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00162,
+  "input": 855,
+  "model": "gemini-3.8-flash",
+  "output": 261,
+  "reasoning": 195,
+  "seconds": 0.0
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000662,
+ "data": {
+  "reason": "Both answers accurately explain that the drop was caused by filings brought forward into 2013 ahead of the Raising the Bar reforms. Answer B is slightly better as it includes the exact date of implementation (April 2013), explains how the rush carried over into 2014, and accurately notes the report's nuanced qualification ('may be attributed').",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "ipr15-1:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001324,
+  "input": 1336,
+  "model": "gemini-3.8-flash",
+  "output": 86,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

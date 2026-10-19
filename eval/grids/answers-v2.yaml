@@ -1,0 +1,32 @@
+# End-to-end answers v2: do the relevance filter's 20 passages (D-018) give better answers than the adopted
+# 20? Committed before any answer on the filtered contexts is generated.
+grid: answers-v2
+needs: eval/runs/answers/answers-v1.needs.json   # the same 60 test needs as answers-v1 (33 exploratory, 27 silver)
+settings:
+  B: adopted    # plan+q:luna-plan-v2/enriched/none, 20 passages: answers-v1's B, reused from the cache
+  C: filtered   # the same 60-passage context rated by filter-v1 (gpt-6-luna, D-018), the 20 rated highest
+answer:         # unchanged from answers-v1, so only the evidence differs
+  model: gpt-6.1-sol
+  effort: medium
+  prompt: answer-v1
+  tier: flex
+measures:
+  - check: passed first time, passed after the retry, flagged; coverage
+  - grounding: distinct relevant passages cited (grade 2-3 and grade 3), share of cited passages relevant,
+      distinct documents among the relevant passages cited, claims, words, silver gold passage cited. Every
+      cited passage lies in a fully judged 60-passage context.
+  - preference: gemini-3.8-flash (prompts/eval/pairwise-v1.md, low effort, Batch) compares B and C for each need
+      in both orders, blind; a preference counts only when both orders agree. Claude reads every exploratory
+      pair blind (seeded X/Y order, the mapping unread until the verdicts are recorded) as a second judge.
+rule: >-
+  Recommend adopting the filter if (a) Gemini's agreed preferences favour C over B at p < 0.05 (two-sided sign
+  test) on all 60 needs or on the 33 exploratory needs; (b) on the 27 silver needs they do not favour B at
+  p < 0.05; and (c) C's pass rate after the retry is not lower than B's by more than 5 points. Otherwise the
+  better evidence is not shown to give better answers, and the filter is not recommended on this run.
+report: reports/answers-v2.md
+amendment_1: >-
+  Made after C's answers and before any judging (no pair read, no preference requested). Three needs
+  (explore-evidence-1, explore-compare-7, explore-strategy-2) have no C answer: every attempt ended in a provider
+  error (HTTP 502, Flex unavailable, then HTTP 429 credit_balance_exhausted: the OpenAI account ran out of
+  credit). The owner chose to finish on the other 57: a need either setting failed to answer is left out of both,
+  and the rule is applied to 57 needs (30 exploratory, 27 silver).

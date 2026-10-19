@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000431,
+ "data": {
+  "reason": "Both answers directly, accurately, and fully address the question using identical substantive points supported by quotes. They explain that a trade mark expires if not renewed every 10 years, but can otherwise last indefinitely/in perpetuity if in use.",
+  "winner": "tie"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "ipr19-1:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000862,
+  "input": 865,
+  "model": "gemini-3.8-flash",
+  "output": 57,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

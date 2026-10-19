@@ -1,0 +1,11 @@
+{
+  "adopted": "plan+q:luna-plan-v2/enriched/none",
+  "depths": [
+    20,
+    40,
+    60
+  ],
+  "judgments": "judged-v1",
+  "needs": 92,
+  "stage": "depth"
+}

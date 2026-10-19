@@ -1,0 +1,98 @@
+{
+ "cost_usd": 0.010489,
+ "data": {
+  "answer": "Year-to-year swings in plant breeder’s rights (PBR) numbers need not signal a lasting change in breeding investment or filing behaviour.[1]\n\n- **Small numbers amplify changes.** PBR volumes are modest, so relatively small movements can produce large percentage changes. Individual applicants and a small number of large breeding programs can strongly influence annual totals.[2]\n- **Registrations lag applications.** Registration typically takes around 2.5 years, including examination and growing trials, so registrations in a year do not directly track that year’s filings.[3]\n- **Administrative timing and disruptions matter.** COVID-19 restrictions disrupted growing trials, while publication and processing delays reduced registrations in 2024. The 2026 report attributes the 2025 registration rebound to examination timing and pipeline dynamics, rather than a structural shift in filing behaviour.[4]\n\nThere is also a data-comparison caution: the 2025 report recorded 127 registrations for 2024, whereas the 2026 report gives 124 for that same year.[5]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "annual movements can appear pronounced even when underlying breeding investment remains steady."
+     },
+     {
+      "evidence": 1,
+      "quote": "The rise reflects examination timing and pipeline dynamics rather than a structural shift in filing behaviour."
+     }
+    ],
+    "text": "Annual PBR swings need not indicate a lasting change in breeding investment or filing behaviour."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "The low numbers of applications for PBRs generally mean small annual fluctuations result in large proportional rates of change."
+     },
+     {
+      "evidence": 1,
+      "quote": "year-to-year volatility often reflects the behaviour of a small number of large breeding programs."
+     },
+     {
+      "evidence": 3,
+      "quote": "they are volatile and strongly influenced by the behaviour of individual applicants."
+     }
+    ],
+    "text": "Small PBR volumes magnify percentage changes, and individual applicants or a few large breeding programs can strongly influence annual totals."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 10,
+      "quote": "Though timeframes vary by plant type, the process of registering a PBR typically takes around 2.5 years. This is because the application must pass a substantive examination process and a comparative growing trial."
+     },
+     {
+      "evidence": 5,
+      "quote": "There is little correlation between filings in a year and registrations in the same year, since most applications take more than 12 months to register."
+     }
+    ],
+    "text": "Registration typically takes around 2.5 years, including examination and growing trials, so annual registrations do not directly track same-year filings."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "During the COVID-19 pandemic, travel restrictions made growing trials harder to organise and attend."
+     },
+     {
+      "evidence": 6,
+      "quote": "The reduced registration numbers in 2024 were attributed to delays in publishing Journals and in processing registrations."
+     },
+     {
+      "evidence": 1,
+      "quote": "Registrations increased from 124 in 2024 to 169 in 2025. The rise reflects examination timing and pipeline dynamics rather than a structural shift in filing behaviour."
+     }
+    ],
+    "text": "COVID-19 disrupted trials, publication and processing delays reduced 2024 registrations, and the 2026 report attributes the 2025 rebound to examination timing and pipeline dynamics rather than structural filing change."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "PBR registrations experienced a sharp decline, falling by 57.2%, from 290 to 127 in 2024"
+     },
+     {
+      "evidence": 1,
+      "quote": "Registrations increased from 124 in 2024 to 169 in 2025."
+     }
+    ],
+    "text": "The reports differ on 2024 registrations: the 2025 report gives 127 and the 2026 report gives 124."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v2.C",
+ "schema_name": "answer",
+ "tag": "ipr26-5",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.020978,
+  "input": 6169,
+  "model": "gpt-6.1-sol",
+  "output": 864,
+  "reasoning": 0,
+  "seconds": 17.86
+ }
+}

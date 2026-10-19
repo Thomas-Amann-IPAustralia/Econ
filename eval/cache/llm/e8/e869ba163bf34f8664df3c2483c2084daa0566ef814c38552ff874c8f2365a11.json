@@ -1,0 +1,60 @@
+{
+ "cost_usd": 0.010889,
+ "data": {
+  "answer": "The **2024 study’s pooled regression results** indicate:\n\n- **Large firms are most likely to file patents**, with a significantly higher propensity than smaller firms.[1]\n- **Small firms are least likely**: they are less likely to file than micro firms, while medium and large firms are more likely than micro firms.[2]\n\nThe small-firm finding is **model-dependent**: its coefficient is negative in the pooled and random-effects models but positive in the fixed-effects model.[3]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Below, we present the results of the pooled OLS regressions for filed, granted, and retired patents."
+     },
+     {
+      "evidence": 1,
+      "quote": "Notably, large firms stand out as they display a significantly higher propensity for patent filing compared to smaller counterparts."
+     }
+    ],
+    "text": "The 2024 study’s pooled regression results identify large firms as having the highest propensity to file patents."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Additionally, small firms exhibit a lower likelihood of patent filing than micro firms, while medium and large firms are more inclined to file patent applications."
+     }
+    ],
+    "text": "In the pooled results, small firms are least likely to file: less likely than micro firms, whereas medium and large firms are more likely than micro firms."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "| | Pooled (1) | Random Effects (2) | Fixed Effects (3) |"
+     },
+     {
+      "evidence": 2,
+      "quote": "| Small Firm | -0.058*** | -0.043** | 0.225*** |"
+     }
+    ],
+    "text": "The small-firm coefficient is negative in the pooled and random-effects models but positive in the fixed-effects model, so the finding is model-dependent."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v2.C",
+ "schema_name": "answer",
+ "tag": "erp15-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.021778,
+  "input": 7199,
+  "model": "gpt-6.1-sol",
+  "output": 738,
+  "reasoning": 353,
+  "seconds": 21.61
+ }
+}

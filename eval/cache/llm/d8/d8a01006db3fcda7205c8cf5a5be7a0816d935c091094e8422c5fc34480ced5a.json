@@ -1,0 +1,43 @@
+{
+ "cost_usd": 0.002723,
+ "data": {
+  "answer": "**Yes.** The *Australian IP Report 2023* cites a study finding that patents significantly contributed to Australia’s economic expansion between **1947 and 2010**. A primary mechanism identified was the causal effect of patents on inward foreign direct investment (FDI).[1]\n\nThe study used over 150 years of Australian patenting data from IP Australia’s open data product, IPGOD.[2]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "a recent study found that patents significantly contributed to Australia's economic expansion between 1947 and 2010. A primary mechanism was the causal effect of patents on inward FDI"
+     }
+    ],
+    "text": "The Australian IP Report 2023 cites a study finding that patents significantly contributed to Australia's economic expansion between 1947 and 2010, with their causal effect on inward FDI identified as a primary mechanism."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "This study used over 150 years of data on patenting activity in Australia, taken from Australia's open data product, IPGOD."
+     }
+    ],
+    "text": "The study used over 150 years of Australian patenting data from IP Australia's open data product, IPGOD."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v2.C",
+ "schema_name": "answer",
+ "tag": "ipr25-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 6412,
+  "cost_usd": 0.005447,
+  "input": 3,
+  "model": "gpt-6.1-sol",
+  "output": 480,
+  "reasoning": 213,
+  "seconds": 18.5
+ }
+}

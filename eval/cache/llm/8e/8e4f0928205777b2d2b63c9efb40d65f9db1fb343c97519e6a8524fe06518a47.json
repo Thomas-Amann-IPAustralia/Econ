@@ -1,0 +1,65 @@
+{
+ "cost_usd": 0.01193,
+ "data": {
+  "answer": "**Yes—there is evidence linking IP filing with subsequent small-business growth, although this is not definitive proof that filing itself causes growth.** The 2025 Australian IP Report states that Australian SMEs filing for an IP right are **16 per cent more likely to experience high employment growth** than peers without recent filings.[1][2]\n\nThe underlying Australian study covered around **600,000 SMEs active during 2002–2017**. It defined high growth as employment increasing by at least **20 per cent annually over three consecutive years**.[3]\n\nFor start-ups, the 2022 report found that those filing for at least one IP right in their first year were **twice as likely to achieve high growth** as those without rights in their first year.[4]\n\n**Interpretation:** the Australian findings are regression-based estimates and identify IP activity as a forward indicator of employment growth. They support an association and predictive value, rather than establishing that filing alone produces the growth.[2]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "After filing for an IP right, Australian SMEs are 16% more likely to experience high employment growth than their peers without recent filings (Zhang, 2021)."
+     }
+    ],
+    "text": "The 2025 Australian IP Report states that Australian SMEs filing for an IP right are 16 per cent more likely to experience high employment growth than peers without recent filings."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Regression model estimates suggest that SMEs filing for at least one IP right in a year are 16% more likely to achieve high employment growth than non filers."
+     },
+     {
+      "evidence": 6,
+      "quote": "The above estimates suggest that IP activity is a significant forward indicator of employment growth for Australian SMEs."
+     }
+    ],
+    "text": "The Australian findings are regression-based associations and forward indicators, not definitive proof that filing itself causes growth."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "The present study focused on around 600,000 SMEs active over the period 2002 to 2017. High-growth SMEs were identified as those that achieve at least 20% annual growth in employment over 3 consecutive years."
+     }
+    ],
+    "text": "The study covered around 600,000 SMEs active during 2002–2017 and defined high growth as at least 20 per cent annual employment growth over three consecutive years."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Focusing just on startups, those that file for at least one IP right in their first year are twice as likely to achieve high growth than their peers with no rights in their first year."
+     }
+    ],
+    "text": "The 2022 report found that start-ups filing for at least one IP right in their first year were twice as likely to achieve high growth as peers without rights in their first year."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v2.C",
+ "schema_name": "answer",
+ "tag": "multi-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.02386,
+  "input": 7120,
+  "model": "gpt-6.1-sol",
+  "output": 962,
+  "reasoning": 271,
+  "seconds": 21.06
+ }
+}

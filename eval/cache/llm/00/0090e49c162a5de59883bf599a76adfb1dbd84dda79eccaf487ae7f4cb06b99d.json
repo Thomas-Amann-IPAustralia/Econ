@@ -1,0 +1,100 @@
+{
+ "cost_usd": 0.003351,
+ "data": [
+  {
+   "id": "p1",
+   "relevance": 0
+  },
+  {
+   "id": "p2",
+   "relevance": 0
+  },
+  {
+   "id": "p3",
+   "relevance": 0
+  },
+  {
+   "id": "p4",
+   "relevance": 0
+  },
+  {
+   "id": "p5",
+   "relevance": 0
+  },
+  {
+   "id": "p6",
+   "relevance": 0
+  },
+  {
+   "id": "p7",
+   "relevance": 0
+  },
+  {
+   "id": "p8",
+   "relevance": 0
+  },
+  {
+   "id": "p9",
+   "relevance": 0
+  },
+  {
+   "id": "p10",
+   "relevance": 0
+  },
+  {
+   "id": "p11",
+   "relevance": 3
+  },
+  {
+   "id": "p12",
+   "relevance": 0
+  },
+  {
+   "id": "p13",
+   "relevance": 1
+  },
+  {
+   "id": "p14",
+   "relevance": 0
+  },
+  {
+   "id": "p15",
+   "relevance": 0
+  },
+  {
+   "id": "p16",
+   "relevance": 1
+  },
+  {
+   "id": "p17",
+   "relevance": 0
+  },
+  {
+   "id": "p18",
+   "relevance": 0
+  },
+  {
+   "id": "p19",
+   "relevance": 0
+  },
+  {
+   "id": "p20",
+   "relevance": 0
+  }
+ ],
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "judge:judge-v1:gemini-3.8-flash",
+ "schema_name": "grades",
+ "tag": "ipr15-1",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.006703,
+  "input": 7267,
+  "model": "gemini-3.8-flash",
+  "output": 334,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

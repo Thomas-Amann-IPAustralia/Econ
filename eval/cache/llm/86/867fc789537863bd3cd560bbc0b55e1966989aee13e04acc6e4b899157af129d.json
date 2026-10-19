@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001407,
+ "data": {
+  "reason": "Both answers are very well supported and cover the relevant evidence accurately. Answer B is slightly better as it includes concrete empirical statistics from the 2022 report (e.g., 156 AI patent families filed, specific company applications) and is tighter and more directly focused on the prompt.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "multi-7:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002815,
+  "input": 3398,
+  "model": "gemini-3.8-flash",
+  "output": 71,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

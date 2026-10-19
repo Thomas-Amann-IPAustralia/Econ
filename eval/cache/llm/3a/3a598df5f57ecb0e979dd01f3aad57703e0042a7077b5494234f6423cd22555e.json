@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000877,
+ "data": {
+  "reason": "Answer B provides a more comprehensive answer to the prompt by including specific data on disparities in VC funding (such as the gender gap in Australian VC allocations in 2022). Both answers properly ground their claims in quotes and maintain appropriate caveats, but Answer B covers more relevant dimensions of why VC growth did not assist all innovative firms.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "note-sc-1:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001754,
+  "input": 1954,
+  "model": "gemini-3.8-flash",
+  "output": 77,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

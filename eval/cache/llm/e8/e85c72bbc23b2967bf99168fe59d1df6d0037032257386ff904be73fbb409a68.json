@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001092,
+ "data": {
+  "reason": "Both answers are very well structured and accurately supported by quotes. Answer B is slightly better because it includes the foundational technical step of how applicants are identified and matched (using machine-learning algorithms, cleaned names, and ABNs in IPGOD) before the integration into BLADE.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-methods-1:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002183,
+  "input": 2546,
+  "model": "gemini-3.8-flash",
+  "output": 73,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

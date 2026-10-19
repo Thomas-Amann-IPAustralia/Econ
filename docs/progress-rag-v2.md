@@ -145,3 +145,32 @@ Fusion weight, note-reading rerankers and an answer-shaped query (plan-v3), pre-
 fully judged top 10s: none beats the adopted setting on dev by the margin. Rerankers with notes are still
 harmful at 17M and 32M; the fusion weight is flat between 0.6 and 0.8; plan-v3 is level on dev and +0.022 on
 test (interval includes zero). Final spend: OpenAI $2.15 of $2.50, Gemini $1.92 of $2.50.
+
+## 2026-10-18 — Context depth (D-017): broad questions need more than 20 passages
+The adopted ranking at 40 and 60 passages, pre-registered, ranks 21-60 judged on the 92 test needs (1,388
+passages, $0.23). Exploratory needs: relevant evidence reached 0.491 at 20, 0.682 at 40, 0.760 at 60; lookups
+0.765 to 0.851. A perfect breadth classifier (60 for broad questions) gets 0.763 at 31 passages on average;
+the plan's query count is a weak proxy. Recommended to the owner, pending an end-to-end check: always 40, or a
+breadth field in the plan. Spend: OpenAI $2.15 of $2.50, Gemini $2.16 of $2.50.
+
+## 2026-10-18 — A relevance filter (D-018): the best 20 of 60
+Free diagnosis first: the missing evidence is mostly found but ranked 21-60; re-chunking, de-duplication and
+query interleaving would not help; removing the per-document cap helps a little. Then, pre-registered: gpt-6-luna
+rates the 60-passage context and the answer model gets the best 20. Exploratory evidence reached 0.491 to 0.635,
+lookups 0.765 to 0.833, ndcg@10 0.672 to 0.846, same context size; filter step 4.4 s median, about $0.002 a
+question. Recommended to the owner, pending an end-to-end answer comparison (needs about $0.60 more OpenAI
+budget). Spend: OpenAI $2.25 of $2.50, Gemini $2.16 of $2.50.
+
+## 2026-10-18 — End-to-end check of the filter (D-019): better answers
+The filter's 20 against the adopted 20 on the answers-v1 needs, answer model and prompt unchanged. The OpenAI
+account ran out of credit with 3 needs unanswered; on the other 57 (the owner's choice), Gemini prefers the filtered
+answers 28 to 8 (exploratory 18 to 4) and Claude, blind, 17 to 4; all 57 pass the check. Recommended to the owner:
+adopt the filter in the service (a design is in D-019). Spend: OpenAI $2.88 of $3.50 (account credit exhausted),
+Gemini $2.26 of $2.50.
+
+## 2026-10-19 — The relevance filter in the service (D-020)
+The owner adopted the filter. Built: config (`answer.filter`, `filter_model` per provider), the locked prompt
+filter-v1, the pipeline step (parallel calls, validation, fallback), the `search` event and `retrieval.pool`
+(all 60 passages with search rank, rating and selection), the compact log, the trail's filter step and 60-row
+table, and `econ verify-search` checks for the filter (same 60, same prompt, same 20 from the measured
+ratings). 92 tests pass. Not yet run live: the OpenAI account needs credit first.

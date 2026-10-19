@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000491,
+ "data": {
+  "reason": "Both answers directly answer the prompt with identical core evidence and caveat notes. Answer A is slightly better as it includes the study's specific definition of an SME (<200 staff), providing useful context for the user's question about small businesses.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "oce-ai-3:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000983,
+  "input": 1010,
+  "model": "gemini-3.8-flash",
+  "output": 60,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

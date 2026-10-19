@@ -638,3 +638,210 @@ the 2.5 s reranking budget. A top-up judged the 213 unjudged passages in the var
 candidate worth a second look on a larger test set; a test-only gain is not a reason to adopt.
 
 **Spend:** OpenAI $0.014 (plan-v3 plans), Gemini $0.067 (top-up). Totals: OpenAI $2.15, Gemini $1.92.
+
+---
+
+## D-017 — Context depth: 40 and 60 passages reach much more of a broad question's evidence (Claude; a recommendation, the owner decides)
+
+**Context.** After D-016 the owner asked whether 0.68 to 0.72 ndcg@10 is good. The ranking is strong for
+lookups; the weak point is how much of a broad question's evidence the answer model's 20 passages hold
+(0.566 on the exploratory test needs in D-013). Grid `eval/grids/retrieval-depth.yaml`, committed at
+`f1c0b0a` before any number: the adopted ranking extended to 40 and 60 passages (same first stage, cap 8 per
+document, so the first 20 are the served context), on the 92 test needs, with ranks 21-60 judged first
+(1,388 passages, 122 of them relevant). Report `reports/retrieval-depth.md`; rows in
+`eval/runs/retrieval-v2/depth/`.
+
+**Results** (share of a need's judged grade-2/3 passages in the context; test needs).
+
+| | 20 passages | 40 | 60 |
+|---|---|---|---|
+| Exploratory (33) | 0.491 | 0.682 (+0.191 [+0.150, +0.231]) | 0.760 (+0.269 [+0.211, +0.327]) |
+| Silver lookups (59) | 0.765 | 0.830 (+0.065) | 0.851 (+0.086) |
+| Passage tokens, exploratory (mean) | 5,004 | 9,578 | 13,122 |
+
+- The 20-passage figure for exploratory needs falls from D-013's 0.566 to 0.491 because the top-up found
+  relevant passages at ranks 21-60 that no earlier pool had judged: the old figure overstated recall.
+- The band added is still useful for broad questions: 26% of passages 21-40 and 16% of 41-60 are relevant
+  (5% and 3% for lookups).
+- The cap and the first stage's depth stop contexts short: the 60-passage contexts average 46 passages
+  (51.5 for exploratory needs).
+- Breadth rules (60 for broad questions, else 20): with a perfect classifier (the need's family) recall is
+  0.763 at 30.6 passages on average, against 0.818 at 46.3 for always 60 and 0.777 at 34.8 for always 40.
+  The free proxy, the plan writing 2 or more queries, catches 15 of 33 exploratory needs and 6 of 59
+  lookups: 0.722.
+
+**Not shown.** Retrieval only: whether the answer model uses the extra passages, how long its answers take
+and whether lookups get worse with more distractors need an end-to-end run (the answers-v1 set). Extra input
+cost at 60 passages, about 8,000 tokens of gpt-6.1-sol: about $0.016 an answer at the standard tier.
+
+**Recommendation (the owner decides; it changes what the answer model reads and an answer's cost).** Give broad
+questions a deeper context. Two options, both to be confirmed end to end before adoption:
+1. Always 40 passages: no classifier, most of the gain (0.777 overall, 0.682 exploratory).
+2. A breadth field in the plan (a new plan prompt version; the plan call already runs, so it is near free):
+   60 passages for broad questions, 20 otherwise. Worth it only if the classifier gets close to the oracle;
+   the plan's query count is too weak a signal.
+
+**Spend:** Gemini $0.23 (the top-up, Batch). Totals: OpenAI $2.15, Gemini $2.16 of $2.50 each.
+
+---
+
+## D-018 — A relevance filter: a small model reads 60 passages and passes the best 20 (Claude; a recommendation, the owner decides)
+
+**Context.** D-017 showed that broad questions lose most of their evidence for want of room in the
+20-passage context. A free diagnosis on the existing judgments and answers (before any spend):
+- Of the relevant passages missing from the exploratory test needs' 20, 62% are found but ranked 21-60, 13%
+  are never retrieved, 12% are dropped by the per-document cap, 12% rank below 60. Two-thirds sit in a
+  document that already contributes a relevant passage.
+- Not worth building, on that evidence: re-chunking (D-005 found 256, 384 and 512 tokens within noise at a
+  fixed token budget; 62% of sections are one chunk; adding same-section neighbours did worse; a re-chunk
+  voids every judgment and note); de-duplication (2% of the 20 are near-duplicates); interleaving the plan's
+  queries (worse); a deeper first stage (small).
+- The cap: removing it helps lookups at 20 passages (0.765 to 0.812, p 0.009) and both families at 40
+  (exploratory 0.682 to 0.761, p 0.025), at a small cost in distinct documents; D-013 tried only lower caps.
+- The answer is a second funnel: on broad questions answer-v1 cites 59% of the relevant passages it is given,
+  from 3.1 of 5.0 relevant documents, in about 220 words ("be direct and concise").
+
+Grid `eval/grids/retrieval-filter.yaml` and prompt `prompts/eval/filter-v1.md`, committed at `3315696` before
+any filter call: gpt-6-luna (low effort; another family than the judge) rates each passage of the adopted
+setting's 60-passage context 0-3 from the plan's standalone question (never the judge's narrative), 20
+passages a call, a need's calls in parallel; the answer model gets the 20 rated highest (ties by rank).
+Every passage in those contexts is judged (D-017), so no top-up. Report `reports/retrieval-filter.md`.
+
+**Results** (92 test needs; no filter call failed).
+
+| | Served today (20) | Filter, 60 read, 20 passed | Oracle filter (ceiling) | Adopted, 40 |
+|---|---|---|---|---|
+| Relevant reached, exploratory | 0.491 | **0.635** (+0.145 [+0.107, +0.183]) | 0.694 | 0.682 |
+| Relevant reached, lookups | 0.765 | **0.833** (+0.068 [+0.038, +0.102]) | 0.847 | 0.830 |
+| Relevant documents, exploratory | 0.767 | **0.892** | 0.930 | 0.932 |
+| ndcg@10, all | 0.672 | **0.846** (+0.174 [+0.143, +0.206]) | 0.919 | 0.672 |
+| Passage tokens, all | 4,945 | 5,009 | 4,991 | 8,945 |
+
+- The filter recovers 71% of the oracle's gain on exploratory needs at today's context size and answer cost.
+- Agreement with the judge: quadratic kappa 0.76; the filter is generous (it rates 92% of the judge's
+  relevant passages 2-3; 59% of its 2-3 ratings are the judge's 2-3).
+- A variable context (the filter's 2-3 passages, up to 40) sizes itself by breadth: 22.9 passages on
+  exploratory needs (0.697 reached), 11.7 on lookups (0.822). It does the job of the scope classifier
+  considered in D-017 without one.
+- Latency of the filter step at the standard tier (8 needs): median 4.4 s, slowest 7.1 s; an answer takes
+  about 17 s (median, Flex). Cost about $0.001 a question at Flex, $0.002 at the standard tier.
+- Against the rule fixed in advance (exploratory at least 0.59, lookups no loss beyond 0.02, median latency at
+  most 5 s): met.
+
+**Not shown.** Retrieval only. The filter and the judge are both language models grading relevance, so part of
+the gain could be shared model taste rather than better evidence; the families differ and the judge agreed with
+Claude's blind grades at kappa 0.92, but only answers judged blind settle it. The latency probe is 8 needs.
+
+**Recommendation (the owner decides: it adds a model call to every question).** Run the answers-v1 comparison
+(60 test needs, answer-v1 unchanged) with the filter's 20 against the adopted 20 before adopting. The filter's
+replies for those needs are cached, so the cost is the answers (about $0.70 at Flex) and the pairwise judge
+(about $0.11 Gemini); it needs about $0.60 more OpenAI budget than is left. The answer-side funnel
+(answer-v1's brevity) is a separate, later decision on the answer format.
+
+**Spend:** OpenAI $0.103 (filter calls at Flex, $0.089, and the standard-tier latency probe). Totals: OpenAI
+$2.25, Gemini $2.16 of $2.50 each.
+
+---
+
+## D-019 — End to end, the filter's 20 passages give better answers than the adopted 20 (Claude; a recommendation, the owner decides)
+
+**Context.** D-018 found that a relevance filter (gpt-6-luna rates the 60-passage context, the 20 rated highest go
+to the answer model) reaches much more of the evidence, and recommended an answer comparison before adoption. The
+owner approved $1 more OpenAI budget for it (`config/eval.yaml`, openai 3.50). Grid `eval/grids/answers-v2.yaml`,
+committed at `5c75c92` before any answer: the answers-v1 needs, B = the adopted 20 (answers-v1's B answers,
+reused after checking their evidence is unchanged), C = the filter's 20; same answer model (gpt-6.1-sol, medium),
+prompt (answer-v1), tier (Flex) and check. Report `reports/answers-v2.md`; runs `eval/runs/answers/answers-v2.*`.
+
+**Disclosed.**
+- The OpenAI account ran out of credit during C's answers (HTTP 429 `credit_balance_exhausted`, with HTTP 502s and
+  "Flex processing is temporarily unavailable" before it), at $2.88 of metered OpenAI spend: the account balance,
+  not the approved budget, was the limit. Failed calls are not cached, so the answer step was re-run twice; two
+  answers came on the second run and one on the third. Three needs never got a C answer (explore-evidence-1,
+  explore-compare-7, explore-strategy-2); one attempt at them was made at the standard tier, which also failed.
+  The owner chose to finish on the other 57 (amendment 1, committed at `2d9d0c2` before any judging): a need either
+  setting failed to answer is left out of both. 30 exploratory and 27 silver needs remain.
+- Claude's blind verdicts were committed (`fc44ada`) before the key was read and before Gemini's preferences
+  were requested.
+
+**Results** (57 needs).
+
+| | B (adopted 20) | C (filter's 20) |
+|---|---|---|
+| Passed the check | 57/57 | 57/57 (all first time) |
+| Gemini, both orders agreeing: preferred, all needs | 8 | **28** (p 0.001; 6 ties, 15 split) |
+| Gemini, exploratory (30) | 4 | **18** (p 0.004; 8 split) |
+| Gemini, silver (27) | 4 | 10 (p 0.18; 6 ties, 7 split) |
+| Claude, blind, exploratory (30) | 4 | **17** (p 0.007; 9 ties) |
+| Distinct relevant passages cited, all | 3.70 | 4.09 (+0.39 [+0.07, +0.70]) |
+| Distinct documents among them, exploratory | 2.90 | 3.13 (+0.23 [-0.07, +0.57]) |
+| Claims per answer, exploratory | 5.73 | 6.17 (+0.43 [+0.07, +0.80]) |
+| Silver answers citing the gold passage | 0.78 | 0.70 (-0.07 [-0.22, +0.07]) |
+| Cost per answer (Flex) | $0.0120 | $0.0111 |
+
+Where both judges stated a preference (19 exploratory pairs), they agreed on all 19. Against the rule fixed in
+advance (C preferred at p < 0.05 on all or exploratory needs; silver not favouring B; pass rate within 5 points):
+**met**.
+
+**Reading.** The preference gain is larger than the grounding gain: answers cite only about 0.4 more relevant
+passages, but with better evidence to choose from they answer more directly (both judges' reasons cite coverage
+of the question's parts and more current figures). Answer-v1's brevity still caps how much of the evidence an
+answer uses (D-018). The silver gold-passage rate fell (not significantly): the filter sometimes displaces the
+passage a lookup was written from with another relevant one; worth watching after adoption.
+
+**Recommendation (the owner decides: it adds a model call to every question).** Adopt the relevance filter in
+the service. Building it means: a filter step in `econ.answer.pipeline` between search (now 60 passages) and the
+answer, the prompt moved to `prompts/` and locked as filter-v1, a config switch (`answer.filter`), the
+first-stage order kept when the filter call fails (as search does without the embedder), its cost under the daily
+spend cap, and `econ verify-search` extended to the filtered context. Measured cost and delay: about $0.002 a
+question at the standard tier and 4.4 s median (D-018). Separately, the OpenAI account needs credit before the
+service can answer at all.
+
+**Spend:** OpenAI $0.63 (C's answers, including billed retries), Gemini $0.10 (the pairwise judge, Batch). Totals:
+OpenAI $2.88 of $3.50, Gemini $2.26 of $2.50.
+
+---
+
+## D-020 — The relevance filter in the service, with every passage it reads shown and recorded (the owner; built by Claude, 2026-10-19)
+
+**Decision (the owner, 2026-10-19):** "build the filter into the service. Please record/show each of the 60
+passages that are retrieved and show which of them were selected by the filter." This adopts D-018's filter on
+D-019's evidence, and changes working principle 1: the request-time model calls are now the plan, the filter
+and the answer.
+
+**What was built.**
+- `config/service.yaml`: `answer.filter` (prompt filter-v1, read 60, group 20, 3,000 output tokens) and, per
+  provider, `filter_model`/`filter_effort` (OpenAI: gpt-6-luna, low, as measured). Gemini has no filter model:
+  none was measured, and Gemini is the judge's family; a Gemini-keyed service answers from the search's top 20.
+- `prompts/filter-v1.md` moved from `prompts/eval/` and locked with its schema (`schema.Grades`, whose strict
+  schema equals the measured one, tested). The evaluation code now builds its prompts with the service's
+  functions (`pipeline.filter_block`, `filter_user`); all 234 cached measurement calls still match byte for
+  byte.
+- `econ.answer.pipeline`: search keeps `answer.filter.read` passages (`Index.context(k=...)`, same cap); the
+  filter step runs a question's calls in parallel; a reply must rate every passage it was shown exactly once,
+  0-3 (`parse_grades`); the 20 rated highest go to the answer model, ties in search order (`by_rating`, the
+  measured rule). If any call fails or replies otherwise, the search's top 20 go forward and the event says
+  why. Filter calls are metered with the rest (the daily cap) and timed (`timings.filter`).
+- Events: a `search` event while the filter reads; `retrieval.filter` (model, status, read, kept, seconds) and
+  `retrieval.pool`: every passage read, in search order, with `search_rank`, `filter_grade` and `selected`.
+  `evidence` is still exactly what the answer model sees; a chosen passage's pool entry is brief and names
+  its evidence number (the full text is in `evidence`), which keeps the event near 170 KB.
+- Recorded: Render's log line for each question lists all 60 (chunk id, search rank, rating, chosen, evidence
+  number) via `service.app.log_view`.
+- Shown: the evidence trail has a search step ("found N; read the first 60"), a filter step (counts by
+  rating, or the failure), each evidence card's search rank and rating, and a table of all 60 passages read
+  (rating, used as [n] or not used, document, section, pages; a row opens the passage, its page and its
+  neighbours). The "How it works" page describes the filter. `econ ask` prints the 60 with their ratings.
+- `econ verify-search` now also checks the filter offline (`reports/search-verification.md`): the service
+  reads the same 60 passages as the measurement (overlap 1.000; identical order on 156 of 178 needs, the rest
+  differ only at near-ties), sends the measured prompt byte for byte (81 of 81 needs where the lists are
+  identical), and, replaying the measured ratings, picks the same 20 on all 92 test needs (judged recall
+  0.762 served and measured).
+- Tests: the filter's choice and numbering, parallel groups with running ids, the fallback on a bad reply,
+  no filter without a filter model or in evidence-only mode, the reply validation, the schema and prompt as
+  measured, the compact log. A browser check of the trail with events from the real index and a scripted
+  model (the OpenAI account has no credit) showed the steps, cards and the 60-row table without errors.
+
+**Not yet done.** No live call of the filter inside the service: the OpenAI account is out of credit (D-019).
+The first question after credit is added is the smoke test for this change.
+
+**Spend:** none.

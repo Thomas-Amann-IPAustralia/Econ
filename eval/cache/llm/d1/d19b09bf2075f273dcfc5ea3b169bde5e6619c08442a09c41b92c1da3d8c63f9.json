@@ -1,0 +1,91 @@
+{
+ "cost_usd": 0.012709,
+ "data": {
+  "answer": "**Yes—patenting firms are more likely to collaborate, but the evidence does not establish causation.** The 2026 Australian IP Report describes patent grants as a forward indicator of Australian businesses forming joint R&D and commercialisation arrangements. The underlying 2024 research explicitly cautions that the relationship is based on conditional correlations.[1]\n\n**Which partners and arrangements?**\n- **Domestic and overseas R&D partners:** collaboration occurs across industries. The 2024 report identifies manufacturing and professional, scientific and technical services firms as having the most overseas partners.[2]\n- **Partners supplying technology and other IP:** Australian firms acquiring intangible assets from partners—such as technology licences, patents or other IP—are, on average, granted more patents than their peers.[3]\n- **Universities, government organisations and private industry:** historical co-filing evidence illustrates these links. The 2017 report documents university collaboration with government entities, including CSIRO, other universities and private firms. University of Queensland partners included GlaxoSmithKline Biologicals, Queensland Rail and Veolia Water Solutions.[4]\n\n**An important distinction:** a greater likelihood of collaborating does not necessarily mean more partners or a particular partner mix. The 2024 firm-level study found no statistical relationship between the number or types of collaborators and firms’ engagement with the patent system; it cautions that this does not establish that partner numbers or types have no impact on R&D outcomes.[5] Also, co-filed patents capture only one form of collaboration and understate wider knowledge-transfer relationships.[6]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 9,
+      "quote": "Patent grants are a significant forward indicator of the likelihood that Australian businesses will form collaborations such as joint R&D and commercialisation arrangements"
+     },
+     {
+      "evidence": 2,
+      "quote": "The finding is based on conditional correlations and no causality can be inferred."
+     }
+    ],
+    "text": "Patent grants predict subsequent collaboration by Australian firms, including joint R&D and commercialisation, but the relationship does not establish causation."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "Collaboration is pervasive in Australian R&D, with various industries collaborating with overseas and domestic partners. Manufacturing firms and professional, scientific and technical services stand out as having the most overseas partners."
+     }
+    ],
+    "text": "Australian R&D collaboration includes domestic and overseas partners across industries, with manufacturing and professional, scientific and technical services having the most overseas partners in the 2024 report."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "Australian firms that acquire intangible assets from partners, such as technology licenses, patents or other IP assets, are on average granted more patents than their peers."
+     }
+    ],
+    "text": "Australian firms acquiring technology licences, patents or other intangible assets from partners are granted more patents on average than peers."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 10,
+      "quote": "Firstly, there is a substantial evidence of successful collaboration with Government entities. The CSIRO is one of the biggest patent applicants in Australia, and it is not surprising to see it has at least 10 patent connections to universities. Secondly, there is a very active set of links between universities."
+     },
+     {
+      "evidence": 10,
+      "quote": "There is a very varied set of collaborative activity between universities and private industry."
+     },
+     {
+      "evidence": 10,
+      "quote": "The University of Queensland, as one of the largest collaborators, appears to do both of these things with links to entities as diverse as GlaxoSmithKline Biologicals, Queensland Rail and Veolia Water Solutions"
+     }
+    ],
+    "text": "The 2017 university co-filing evidence shows collaboration with government entities including CSIRO, other universities and private industry, with named University of Queensland partners."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "Our findings indicate no statistical relationship between the number of collaborators and their types and firms' engagement with the patent system. However, the absence of a statistical relationship doesn't imply that the number or types of collaborators have no impact on R&D outcomes, including those leading to patent filings."
+     }
+    ],
+    "text": "The 2024 study found no statistical relationship between collaborator numbers or types and patent-system engagement, without ruling out impacts on R&D outcomes."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 12,
+      "quote": "But patent data only measures a specific type of collaboration, and other forms of knowledge transfer (or links between entities) are not represented and hence this measure underestimates the total interactions."
+     }
+    ],
+    "text": "Patent co-filing captures only a specific type of collaboration and underestimates wider knowledge-transfer interactions."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v2.C",
+ "schema_name": "answer",
+ "tag": "explore-compare-6",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.025418,
+  "input": 7059,
+  "model": "gpt-6.1-sol",
+  "output": 1130,
+  "reasoning": 196,
+  "seconds": 18.46
+ }
+}

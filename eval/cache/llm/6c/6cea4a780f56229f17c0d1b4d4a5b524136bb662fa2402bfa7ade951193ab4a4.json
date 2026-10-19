@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001149,
+ "data": {
+  "reason": "Both answers are very well supported and address the question directly. Answer B is slightly better because it directly captures the shift among the top tier of countries (noting Switzerland replacing Germany in the top five between 2023 and 2024, and China overtaking Japan and Germany in 2019), which directly addresses whether the leading countries have shifted.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-trend-4:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002299,
+  "input": 2640,
+  "model": "gemini-3.8-flash",
+  "output": 85,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001334,
+ "data": {
+  "reason": "Answer B provides a deeper and more comprehensive comparison of how small and large businesses differ in their IP use. In addition to covering overall ownership and portfolio combinations (which both answers do well), Answer B incorporates specific filing shares, shifting patent rates over time, strategic differences in patent examination delays, and associated commercialisation outcomes.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-compare-1:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002668,
+  "input": 3193,
+  "model": "gemini-3.8-flash",
+  "output": 73,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

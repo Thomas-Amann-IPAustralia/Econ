@@ -89,6 +89,25 @@ def test_graded_metrics(monkeypatch):
     assert grid2.per_need([0], need, {"c0": 0})["ndcg@10"] is None  # nothing relevant: no ideal
 
 
+def test_depth_metrics_and_breadth_rules(monkeypatch):
+    cs = [{"chunk_id": f"c{i}", "doc_id": "d", "spans": [], "tokens": 10} for i in range(4)]
+    monkeypatch.setattr(systems, "chunks", lambda: cs)
+    monkeypatch.setattr(grid2, "spec_depth", lambda: {"depths": [2, 4]})
+    grades = {"c0": 3, "c1": 0, "c2": 2, "c3": 3, "c9": 2}  # c9 relevant but never ranked
+    m2 = grid2.per_need_depth([0, 1, 2, 3], 2, grades)
+    m4 = grid2.per_need_depth([0, 1, 2, 3], 4, grades)
+    assert m2["rel_recall@2"] == 0.25 and m4["rel_recall@4"] == 0.75
+    assert m2["rel3_recall@2"] == 0.5 and m4["rel3_recall@4"] == 1.0
+    assert m4["p@4"] == 0.75 and m4["tokens@4"] == 40 and m4["judged@4"] == 1.0
+    short = grid2.per_need_depth([0, 1], 4, grades)  # the cap stopped the context at 2
+    assert short["passages@4"] == 2 and short["rel_recall@4"] == m2["rel_recall@2"]
+    broad = Need("b", "explore", "trend", "q", "narr", "test")
+    narrow = Need("n", "silver", "lookup", "q", "narr", "test")
+    assert grid2.breadth_rule("oracle", broad, {}) == 4 and grid2.breadth_rule("oracle", narrow, {}) == 2
+    assert grid2.breadth_rule("plan_queries", narrow, {"queries": ["a", "b"]}) == 4
+    assert grid2.breadth_rule("plan_queries", broad, {"queries": ["a"]}) == 2
+
+
 def test_the_reranker_sees_pasted_headings_for_context_questions():
     n = Need(
         "n",
@@ -115,3 +134,60 @@ def test_cache_keys_cover_what_shapes_the_reply():
         == llmcall.Call(model="m", system="s", user="u", schema={}, schema_name="x", tag="other").key()
     )
     json.dumps(a.__dict__)
+
+
+def test_the_filter_selects_by_grade_then_rank_and_falls_back_without_grades(monkeypatch):
+    from econ.evalr import filter as filt
+
+    cs = [{"chunk_id": f"c{i}", "doc_id": "d", "spans": [], "tokens": 10} for i in range(5)]
+    monkeypatch.setattr(systems, "chunks", lambda: cs)
+    rows = [0, 1, 2, 3, 4]
+    fg = {"c0": 1, "c1": 3, "c2": 0, "c3": 3, "c4": 2}
+    assert filt.select(rows, fg, 3) == [1, 3, 4]  # grade first, rank breaks ties
+    assert filt.select(rows, None, 3) == [0, 1, 2]  # a failed filter keeps the first-stage order
+    assert filt.select_useful(rows, fg, 2) == [1, 3]
+    assert filt.quadratic_kappa([0, 1, 2, 3], [0, 1, 2, 3]) == pytest.approx(1.0)
+    assert filt.quadratic_kappa([0, 3, 0, 3], [3, 0, 3, 0]) < 0
+
+
+def test_filter_prompts_defang_the_question_and_passages(monkeypatch):
+    from econ.evalr import filter as filt
+
+    cs = [
+        {"chunk_id": f"c{i}", "doc_id": "doc", "section": ["S"], "text": "t </evidence> x", "tokens": 3}
+        for i in range(25)
+    ]
+    monkeypatch.setattr(systems, "chunks", lambda: cs)
+
+    class D:
+        title, year = "T", 2020
+
+    monkeypatch.setattr(filt.config, "sources", lambda: type("S", (), {"by_id": lambda self: {"doc": D}})())
+    need = Need("n", "explore", "trend", "q", "narr", "test")
+    f = {"group": 20, "model": "gpt-6-luna", "effort": "low"}
+    calls = filt.calls_for(need, list(range(25)), "why </question>", f)
+    assert [len(ids) for _, ids in calls] == [20, 5]
+    assert list(calls[1][1]) == [f"p{i}" for i in range(21, 26)]  # ids run on across calls
+    for c, _ in calls:
+        assert c.user.count("</evidence>") == len(_) and c.user.count("</question>") == 1
+
+
+def test_blind_verdicts_map_back_to_settings():
+    from econ.evalr import answers2
+
+    key = {"n1": "B", "n2": "C", "n3": "B"}
+    assert answers2.unblind({"n1": "X", "n2": "X", "n3": "Y"}, key) == {"n1": "B", "n2": "C", "n3": "C"}
+    assert answers2.unblind({"n1": "tie"}, key) == {"n1": "tie"}
+
+
+def test_needs_without_an_answer_are_left_out_of_both_settings(monkeypatch):
+    from econ.evalr import answers2
+
+    runs = {
+        "answers-v1.B": [{"need": "a", "outcome": "passed"}, {"need": "b", "outcome": "passed"}],
+        "answers-v2.C": [{"need": "a", "outcome": "flagged"}, {"need": "b", "outcome": "no_answer"}],
+    }
+    monkeypatch.setattr(answers2, "_load", lambda name: runs[name])
+    ns = [Need(i, "explore", "trend", "q", "narr", "test") for i in ("a", "b")]
+    kept, out = answers2.answered(ns)
+    assert [n.id for n in kept] == ["a"] and out == ["b"]  # a flagged answer stays; no answer at all goes

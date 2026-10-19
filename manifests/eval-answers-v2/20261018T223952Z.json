@@ -1,0 +1,43 @@
+{
+  "argv": [
+    "eval-answers-v2",
+    "--step",
+    "blind"
+  ],
+  "command": "eval-answers-v2",
+  "config_hash": "5b0996b679236558",
+  "counts": {
+    "pairs": 33
+  },
+  "error": null,
+  "git": {
+    "commit": "9a74ac747c2101b69b10e2366836a63695464ee8",
+    "dirty": false,
+    "dirty_paths": []
+  },
+  "git_at_end": {
+    "commit": "9a74ac747c2101b69b10e2366836a63695464ee8",
+    "dirty": false,
+    "dirty_paths": []
+  },
+  "inputs": {},
+  "outputs": {},
+  "params": {
+    "step": "blind"
+  },
+  "run_id": "20261018T223952Z",
+  "seconds": 3.3,
+  "status": "passed",
+  "upstream": {},
+  "versions": {
+    "docling": "2.140.0",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.0",
+    "pypdfium2": "5.14.0",
+    "python": "3.12.3",
+    "sentence-transformers": "6.1.0",
+    "tokenizers": "0.23.3",
+    "torch": "2.14.1+cpu"
+  },
+  "warnings": []
+}

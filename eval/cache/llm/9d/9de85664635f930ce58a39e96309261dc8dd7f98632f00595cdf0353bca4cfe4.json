@@ -1,0 +1,54 @@
+{
+ "cost_usd": 0.000185,
+ "data": {
+  "grades": [
+   {
+    "grade": 3,
+    "id": "p1"
+   },
+   {
+    "grade": 3,
+    "id": "p2"
+   },
+   {
+    "grade": 3,
+    "id": "p3"
+   },
+   {
+    "grade": 0,
+    "id": "p4"
+   },
+   {
+    "grade": 2,
+    "id": "p5"
+   },
+   {
+    "grade": 0,
+    "id": "p6"
+   },
+   {
+    "grade": 2,
+    "id": "p7"
+   },
+   {
+    "grade": 2,
+    "id": "p8"
+   }
+  ]
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "filter:filter-v1:gpt-6-luna",
+ "schema_name": "grades",
+ "tag": "erp03-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000369,
+  "input": 2340,
+  "model": "gpt-6-luna",
+  "output": 270,
+  "reasoning": 184,
+  "seconds": 5.35
+ }
+}

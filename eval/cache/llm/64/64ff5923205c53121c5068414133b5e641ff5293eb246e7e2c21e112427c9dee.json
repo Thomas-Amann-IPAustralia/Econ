@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001001,
+ "data": {
+  "reason": "Both answers accurately capture the findings of the 2024 IP Australia study. Answer B is slightly better because it includes the important nuance regarding unconditional filing trends and potential underestimation due to examination timing, directly addressing the prompt's focus without digressing into the aggregate 2015 IP Report's commentary on the Raising the Bar reforms.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-policy-4:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002002,
+  "input": 2264,
+  "model": "gemini-3.8-flash",
+  "output": 81,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

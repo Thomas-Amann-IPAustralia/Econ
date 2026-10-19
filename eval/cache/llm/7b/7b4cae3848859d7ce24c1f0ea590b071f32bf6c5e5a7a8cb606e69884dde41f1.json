@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000999,
+ "data": {
+  "reason": "Both answers accurately address the tension between causation and selection in the studies on IP ownership and profitability. Answer B is more comprehensive, incorporating both the 2020 profitability controls and the 2026 report's findings regarding pre-grant trajectories and selection caveats.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-evidence-2:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001999,
+  "input": 2341,
+  "model": "gemini-3.8-flash",
+  "output": 65,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

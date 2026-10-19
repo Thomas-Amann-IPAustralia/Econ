@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000897,
+ "data": {
+  "reason": "Both answers present the exact same data, claims, caveats, and structure, drawing on the same source material. Answer B is slightly clearer and easier to read at a glance due to the bulleted breakdown of grant rates by office.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-compare-3:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001795,
+  "input": 2113,
+  "model": "gemini-3.8-flash",
+  "output": 56,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000787,
+ "data": {
+  "reason": "Answer A incorporates the latest quantified 2025 data (including electrical machinery at +12.8% and transport at +9.1%), whereas Answer B incorrectly claims that the 2026 report passages do not provide comparable growth rates for 2025. Answer A is therefore more comprehensive, up-to-date, and accurate regarding the provided evidence.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-trend-9:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001574,
+  "input": 1658,
+  "model": "gemini-3.8-flash",
+  "output": 88,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

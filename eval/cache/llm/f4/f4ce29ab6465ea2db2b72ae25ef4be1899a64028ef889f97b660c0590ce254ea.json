@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001202,
+ "data": {
+  "reason": "Both answers are very well-structured and directly address the prompt. Answer B is slightly better as it includes valuable evidence from the 2024 report on patent scope (broader vs. narrower patents and their effects on pioneering firms vs. competitors), which directly addresses the narrative's specific mention of patent scope as a competition issue.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-evidence-4:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002403,
+  "input": 2814,
+  "model": "gemini-3.8-flash",
+  "output": 78,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

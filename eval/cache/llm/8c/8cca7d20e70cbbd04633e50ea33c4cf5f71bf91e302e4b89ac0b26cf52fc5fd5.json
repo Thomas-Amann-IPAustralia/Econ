@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000504,
+ "data": {
+  "reason": "Both answers accurately address the question using the same underlying evidence and caveats. Answer A is slightly better as it includes the additional context from the quoted evidence regarding the share of total design applications (10.8 per cent in 2013).",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "ipr20-2:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001008,
+  "input": 1039,
+  "model": "gemini-3.8-flash",
+  "output": 61,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

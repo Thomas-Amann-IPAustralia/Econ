@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.00054,
+ "data": {
+  "reason": "Both answers accurately provide the core historical finding spanning 1947 to 2010 supported by IPGOD data. Answer A is slightly more thorough by also bringing in relevant, qualified evidence from another report regarding causal caveats and firm-level economic growth mechanisms.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "ipr25-3:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001081,
+  "input": 1122,
+  "model": "gemini-3.8-flash",
+  "output": 64,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

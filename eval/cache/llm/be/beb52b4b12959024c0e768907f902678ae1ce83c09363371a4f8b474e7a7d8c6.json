@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000892,
+ "data": {
+  "reason": "Both answers are very well structured and accurately represent the evidence. Answer B is slightly better because it includes the firm's location alongside size, age, and existing capacity, which directly satisfies the specific factors noted in the narrative.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-synthesis-4:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001784,
+  "input": 2104,
+  "model": "gemini-3.8-flash",
+  "output": 55,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

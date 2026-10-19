@@ -566,3 +566,218 @@ def run_v3(needs: list[Need], judgments: str, latency: dict[str, float]) -> dict
     }
     save_choice("v3", choice)
     return {"choice": choice, "report": "\n".join(lines) + "\n"}
+
+
+# --- context depth: the adopted ranking at 20, 40 and 60 passages ----------------------------------
+
+
+def spec_depth() -> dict:
+    return yaml.safe_load(config.path("eval/grids/retrieval-depth.yaml").read_text())
+
+
+def depth_needs(needs: list[Need]) -> list[Need]:
+    want = spec_depth()["needs"]
+    return [n for n in needs if want == "all" or n.split == want]
+
+
+def depth_contexts(needs: list[Need]) -> dict[int, dict[str, list[int]]]:
+    """Rows of the adopted setting's context at each depth; the per-document cap and the first stage are
+    the adopted ones, so each depth extends the one before it."""
+    sp = spec_depth()
+    base = named(sp["adopted"])
+    return {k: {n.id: context_rows(replace(base, context=k), n) for n in needs} for k in sp["depths"]}
+
+
+def depth_topup_targets(needs: list[Need], grades: dict) -> dict[str, list[str]]:
+    """Unjudged passages in the deepest context, per need."""
+    deepest = depth_contexts(needs)[max(spec_depth()["depths"])]
+    cs = systems.chunks()
+    out = {}
+    for n in needs:
+        miss = sorted({cs[r]["chunk_id"] for r in deepest[n.id]} - set(grades.get(n.id, {})))
+        if miss:
+            out[n.id] = miss
+    return out
+
+
+def per_need_depth(ctx: list[int], k: int, grades: dict[str, int]) -> dict:
+    cs = systems.chunks()
+    rows = ctx[:k]
+    g = [grades.get(cs[r]["chunk_id"]) for r in rows]
+    n_rel = sum(1 for x in grades.values() if x >= 2)
+    n_rel3 = sum(1 for x in grades.values() if x == 3)
+    rel = sum(1 for x in g if x is not None and x >= 2)
+    return {
+        f"rel_recall@{k}": rel / n_rel if n_rel else None,
+        f"rel3_recall@{k}": sum(1 for x in g if x == 3) / n_rel3 if n_rel3 else None,
+        f"p@{k}": rel / len(rows) if rows else None,
+        f"passages@{k}": len(rows),
+        f"tokens@{k}": sum(cs[r]["tokens"] for r in rows),
+        f"judged@{k}": sum(1 for x in g if x is not None) / len(rows) if rows else None,
+    }
+
+
+def breadth_rule(rule: str, need: Need, plan: dict) -> int:
+    """The context depth a breadth rule gives a need (grid retrieval-depth)."""
+    deep, shallow = max(spec_depth()["depths"]), min(spec_depth()["depths"])
+    if rule == "oracle":
+        return deep if need.family == "explore" else shallow
+    if rule == "plan_queries":
+        return deep if len(plan["queries"]) >= 2 else shallow
+    raise ValueError(rule)
+
+
+def run_depth(needs: list[Need], judgments: str) -> dict:
+    from econ.evalr import plans as plans_mod
+
+    sp = spec_depth()
+    depths = sp["depths"]
+    needs = depth_needs(needs)
+    grades = grades_by_need(judgments)
+    ctxs = depth_contexts(needs)
+    deepest = max(depths)
+    cs = systems.chunks()
+    plan = plans_mod.load(sp["adopted"].split("/")[0].split(":", 1)[1])
+    rows = []
+    for n in needs:
+        g = grades.get(n.id, {})
+        r = {"need": n.id, "family": n.family, "kind": n.kind, "split": n.split}
+        for k in depths:
+            r |= per_need_depth(ctxs[deepest][n.id], k, g)
+        for rule in sp["breadth_rules"]:
+            r[f"depth:{rule}"] = breadth_rule(rule, n, plan[n.id])
+        r["n_rel"] = sum(1 for x in g.values() if x >= 2)
+        r["context"] = [cs[x]["chunk_id"] for x in ctxs[deepest][n.id]]
+        rows.append(r)
+    save_rows("depth", f"{sp['adopted']}/ctx{deepest}", rows)
+
+    def band_p(fam: str | None, lo: int, hi: int) -> float:
+        rel = tot = 0
+        for r in rows:
+            if fam and r["family"] != fam:
+                continue
+            band = r["context"][lo:hi]
+            g = grades.get(r["need"], {})
+            tot += len(band)
+            rel += sum(1 for c in band if g.get(c, 0) >= 2)
+        return rel / tot if tot else float("nan")
+
+    fams = [("all", None), ("silver", "silver"), ("explore", "explore")]
+    lines = [
+        "# Context depth: the adopted ranking at " + ", ".join(map(str, depths)) + " passages",
+        "",
+        f"Grid `retrieval-depth` (eval/grids/retrieval-depth.yaml, committed before any number). Setting "
+        f"`{sp['adopted']}` with its context extended; the first {min(depths)} passages are the served "
+        f"context. {len(needs)} {sp['needs']} needs. Judgments `{judgments}`, topped up so the {deepest}-passage "
+        f"contexts are fully judged (judged@{deepest} {_fmt(mean_of(rows, f'judged@{deepest}'))}).",
+        "",
+        "## Evidence reached, by depth",
+        "",
+        "| Needs | n | Metric | " + " | ".join(f"{k} passages" for k in depths) + " |",
+        "|---|---|---|" + "---|" * len(depths),
+    ]
+    for label, fam in fams:
+        where = {} if fam is None else {"family": fam}
+        n = sum(1 for r in rows if fam is None or r["family"] == fam)
+        for m, name in (
+            ("rel_recall", "relevant (grade 2-3) reached"),
+            ("rel3_recall", "grade 3 reached"),
+            ("p", "precision"),
+            ("passages", "passages (mean)"),
+            ("tokens", "tokens (mean)"),
+        ):
+            vals = [mean_of(rows, f"{m}@{k}", **where) for k in depths]
+            fmt = (
+                (lambda x: f"{x:,.0f}")
+                if m == "tokens"
+                else (lambda x: f"{x:.1f}")
+                if m == "passages"
+                else _fmt
+            )
+            lines.append(f"| {label} | {n} | {name} | " + " | ".join(fmt(v) for v in vals) + " |")
+    lines += [
+        "",
+        "## Precision of each band (grade 2-3 share of the passages added)",
+        "",
+        "| Needs | "
+        + " | ".join(f"{a + 1}-{b}" for a, b in zip([0, *depths[:-1]], depths, strict=True))
+        + " |",
+        "|---|" + "---|" * len(depths),
+    ]
+    for label, fam in fams:
+        bands = [band_p(fam, a, b) for a, b in zip([0, *depths[:-1]], depths, strict=True)]
+        lines.append(f"| {label} | " + " | ".join(_fmt(x) for x in bands) + " |")
+    lines += [
+        "",
+        f"## Gains over {min(depths)} passages (paired, test needs)",
+        "",
+        "| Needs | Depth | relevant reached: difference [95% CI] |",
+        "|---|---|---|",
+    ]
+    for label, fam in fams:
+        for k in depths[1:]:
+            sub = [
+                r for r in rows if (fam is None or r["family"] == fam) and r[f"rel_recall@{k}"] is not None
+            ]
+            xa = [r[f"rel_recall@{min(depths)}"] for r in sub]
+            xb = [r[f"rel_recall@{k}"] for r in sub]
+            c = metrics.compare(xa, xb)
+            lines.append(f"| {label} | {k} | {c['diff']:+.3f} [{c['ci'][0]:+.3f}, {c['ci'][1]:+.3f}] |")
+    lines += [
+        "",
+        "## Breadth rules: a deeper context only for broad questions",
+        "",
+        "| Rule | Needs given the deeper context | relevant reached (all) | silver | explore | passages (mean) | tokens (mean) |",
+        "|---|---|---|---|---|---|---|",
+    ]
+
+    def ruled(rule: str | int, fam: str | None, metric: str) -> float:
+        xs = []
+        for r in rows:
+            if fam and r["family"] != fam:
+                continue
+            k = rule if isinstance(rule, int) else r[f"depth:{rule}"]
+            if r[f"{metric}@{k}"] is not None:
+                xs.append(r[f"{metric}@{k}"])
+        return metrics.mean(xs)
+
+    for rule in [min(depths), *sp["breadth_rules"], deepest]:
+        label = f"always {rule}" if isinstance(rule, int) else f"`{rule}`"
+        given = (
+            ("none" if rule == min(depths) else "all")
+            if isinstance(rule, int)
+            else ", ".join(
+                f"{sum(1 for r in rows if r['family'] == f and r[f'depth:{rule}'] == deepest)}/"
+                f"{sum(1 for r in rows if r['family'] == f)} {f}"
+                for f in ("silver", "explore")
+            )
+        )
+        lines.append(
+            f"| {label} | {given} | {_fmt(ruled(rule, None, 'rel_recall'))} | {_fmt(ruled(rule, 'silver', 'rel_recall'))} | "
+            f"{_fmt(ruled(rule, 'explore', 'rel_recall'))} | {ruled(rule, None, 'passages'):.1f} | {ruled(rule, None, 'tokens'):,.0f} |"
+        )
+    reach = [r for r in rows if r["family"] == "explore"]
+    lines += [
+        "",
+        "## How to read these numbers",
+        "",
+        "- Recall is the share of a need's judged grade-2/3 passages in the context. Passages no setting ever "
+        "ranked were never judged, so every recall is an upper bound; the top-up found new relevant passages, "
+        "so the 20-passage figure is below the one reported in D-013.",
+        f"- The per-document cap (8) and the first stage's depth (50 a query) stop some contexts short: "
+        f"{sum(1 for r in rows if r[f'passages@{deepest}'] < deepest)} of {len(rows)} needs have fewer than "
+        f"{deepest} passages ({sum(1 for r in reach if r[f'passages@{deepest}'] < deepest)} of {len(reach)} exploratory).",
+        f"- Exploratory needs with more relevant passages than the deepest context holds: "
+        f"{sum(1 for r in reach if r['n_rel'] > deepest)} of {len(reach)}.",
+        "- Retrieval only. Whether the answer model uses the extra passages, and what they cost in latency, "
+        "needs an end-to-end run.",
+    ]
+    choice = {
+        "stage": "depth",
+        "adopted": sp["adopted"],
+        "depths": depths,
+        "needs": len(rows),
+        "judgments": judgments,
+    }
+    save_choice("depth", choice)
+    return {"choice": choice, "rows": rows, "report": "\n".join(lines) + "\n"}

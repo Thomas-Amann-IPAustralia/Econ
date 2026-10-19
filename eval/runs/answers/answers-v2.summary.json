@@ -1,0 +1,31 @@
+{
+  "claude": {
+    "B": 4,
+    "C": 17,
+    "missing": 0,
+    "split": 0,
+    "tie": 9
+  },
+  "gemini_all": {
+    "B": 8,
+    "C": 28,
+    "missing": 0,
+    "split": 15,
+    "tie": 6
+  },
+  "gemini_explore": {
+    "B": 4,
+    "C": 18,
+    "missing": 0,
+    "split": 8,
+    "tie": 0
+  },
+  "gemini_silver": {
+    "B": 4,
+    "C": 10,
+    "missing": 0,
+    "split": 7,
+    "tie": 6
+  },
+  "rule_met": true
+}

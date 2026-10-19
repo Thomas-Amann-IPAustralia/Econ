@@ -226,3 +226,20 @@ dialog#viewer[open] { display: flex; flex-direction: column; }
   .doc { grid-template-columns: 44px 1fr; }
   .doc > :last-child { grid-column: 1 / -1; }
 }
+
+/* Every passage the relevance filter read (D-020). */
+.pool { margin: 6px 0 14px; }
+.pool > summary { cursor: pointer; margin-bottom: 6px; }
+.pool-table { border-collapse: collapse; width: 100%; font-size: 0.84rem; }
+.pool-table th, .pool-table td { border-bottom: 1px solid var(--line); padding: 4px 6px; text-align: left; vertical-align: top; }
+.pool-row { cursor: pointer; }
+.pool-row:hover { background: var(--bg); }
+.pool-row:not(.used) .pool-title { color: var(--muted); }
+.pool-title { font-weight: 600; }
+.pool-detail td { background: var(--bg); }
+.pool-text { max-height: 10em; }
+.rating { display: inline-block; min-width: 1.6em; text-align: center; border-radius: 6px; font-weight: 700; padding: 0 4px; }
+.rating.r3 { background: var(--ok-soft); color: var(--ok); }
+.rating.r2 { background: var(--accent-soft); color: var(--accent); }
+.rating.r1 { background: var(--warn-soft); color: var(--warn); }
+.rating.r0 { background: var(--bg); color: var(--muted); border: 1px solid var(--line); }

@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.00091,
+ "data": {
+  "reason": "Both answers address the question effectively, but Answer B provides an extra, highly relevant empirical detail regarding actual reliance and protection: the fact that a registered design is only enforceable once examined and certified, which occurs for only about 16 per cent of registrations. Answer A's final point merely elaborates on the sample size methodology of the 2014 study.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-synthesis-9:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001819,
+  "input": 2005,
+  "model": "gemini-3.8-flash",
+  "output": 84,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

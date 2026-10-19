@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001092,
+ "data": {
+  "reason": "Both answers accurately address the prompt using well-supported evidence. Answer A is slightly better as it covers multiple IP rights across ICT-related IP (patents, trade marks, and designs) rather than focusing almost exclusively on industrial designs.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-strategy-1:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002185,
+  "input": 2628,
+  "model": "gemini-3.8-flash",
+  "output": 57,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

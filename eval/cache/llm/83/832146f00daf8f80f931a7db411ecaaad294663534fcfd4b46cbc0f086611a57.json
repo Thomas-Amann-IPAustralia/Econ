@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000842,
+ "data": {
+  "reason": "Both answers accurately present the primary explanation regarding technology concentration in software alongside limited external debt alternatives and macroeconomic context. Answer A is somewhat better as it includes an additional relevant, directly reported dynamic regarding venture capital allocation disparities (specifically by founder demographics).",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "note-sc-1:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001683,
+  "input": 1954,
+  "model": "gemini-3.8-flash",
+  "output": 58,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

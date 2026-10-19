@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001012,
+ "data": {
+  "reason": "Both answers accurately address the question with solid claims and caveats from the provided research. Answer A is superior because it explicitly includes evidence on business survival during pandemics/macroeconomic shocks (the COVID-19 shock findings from the 2026 report), which directly addresses the prompt narrative.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-synthesis-7:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002024,
+  "input": 2358,
+  "model": "gemini-3.8-flash",
+  "output": 68,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

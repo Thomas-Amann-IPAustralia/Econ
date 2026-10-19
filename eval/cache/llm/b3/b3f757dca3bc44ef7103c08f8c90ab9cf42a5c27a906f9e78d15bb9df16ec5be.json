@@ -1,0 +1,91 @@
+{
+ "cost_usd": 0.012434,
+ "data": {
+  "answer": "**Small businesses tend to grow and employ more people after engaging with IP, but the evidence does not establish that IP alone causes that growth.**[1][2]\n\n- **After a first trade mark filing:** the 2022 report shows continuous employment growth among Australian firms that filed, compared with much less growth among non-filers matched by age, size and industry. This comparison is descriptive.[3]\n- **For SMEs more broadly:** the 2025 report says those filing for an IP right are **16 per cent more likely to experience high employment growth** than peers without recent filings. This finding is not restricted to first-time filers.[4]\n- **For start-ups engaging early:** those filing for at least one IP right in their first year are **twice as likely to achieve high growth** as peers without rights in their first year. The underlying SME study defines high growth as at least 20 per cent annual employment growth over three consecutive years.[5]\n- **After a first patent grant:** the 2026 report links this milestone for Australian start-ups to a significant employee wage premium and workforce upgrading, likely for commercialisation. This concerns grant, rather than filing.[6]\n\n**The key caution:** the 2026 analysis does not claim pure causality; firms already on stronger growth paths may be more likely to invest in IP.[2]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 12,
+      "quote": "The results reveal that Australian SMEs that file for registered IP rights are more likely to achieve high growth and employ more people than their peers with no recent filings."
+     }
+    ],
+    "text": "IP engagement is associated with subsequent growth and higher employment among Australian SMEs."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "Selection effects are likely present: firms on stronger growth paths may be more likely to invest in IP."
+     },
+     {
+      "evidence": 6,
+      "quote": "The analysis does not claim pure causality."
+     }
+    ],
+    "text": "The 2026 analysis does not establish pure causality and acknowledges selection of stronger-growth firms into IP investment."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "a group of \"control\" companies that do not use trademarks but are matched to the treated companies for age, size and industry."
+     },
+     {
+      "evidence": 5,
+      "quote": "Based on this descriptive data, employment growth is flat in the years before trademark filing both for the filers and non-filers. After filing there is continuous growth in employment for the trademark filers but much less growth for the control group."
+     }
+    ],
+    "text": "The 2022 descriptive comparison shows continuous employment growth after first trade mark filing, with much less growth among non-filers matched by age, size and industry."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "After filing for an IP right, Australian SMEs are 16% more likely to experience high employment growth than their peers without recent filings (Zhang, 2021)."
+     }
+    ],
+    "text": "The 2025 report gives a 16 per cent higher likelihood of high employment growth for SME IP filers generally, not specifically first-time filers."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Focusing just on startups, those that file for at least one IP right in their first year are twice as likely to achieve high growth than their peers with no rights in their first year."
+     },
+     {
+      "evidence": 12,
+      "quote": "High-growth SMEs were identified as those that achieve at least 20% annual growth in employment over 3 consecutive years."
+     }
+    ],
+    "text": "Start-ups filing IP in their first year are twice as likely to achieve high growth; the underlying SME study defines high growth as at least 20 per cent annual employment growth over three consecutive years."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "For Australian startups, their first patent grant is linked to a significant wage premium for employees and workforce upgrading, likely for commercialisation (Dobson-Keeffe & Falk, 2025)."
+     }
+    ],
+    "text": "The 2026 report links Australian start-ups' first patent grant, rather than filing, to a significant wage premium and workforce upgrading, likely for commercialisation."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v2.C",
+ "schema_name": "answer",
+ "tag": "explore-synthesis-1",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.024868,
+  "input": 6864,
+  "model": "gpt-6.1-sol",
+  "output": 1114,
+  "reasoning": 174,
+  "seconds": 17.9
+ }
+}

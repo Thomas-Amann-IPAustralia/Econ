@@ -1,0 +1,34 @@
+{
+ "cost_usd": 0.006185,
+ "data": {
+  "answer": "IP Australia established its Office of the Chief Economist in **November 2012**.[1]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "IP Australia's Office of the Chief Economist (OCE) was created in November 2012."
+     }
+    ],
+    "text": "IP Australia established its Office of the Chief Economist in November 2012."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v2.C",
+ "schema_name": "answer",
+ "tag": "ipr17-5",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.01237,
+  "input": 5730,
+  "model": "gpt-6.1-sol",
+  "output": 91,
+  "reasoning": 0,
+  "seconds": 10.01
+ }
+}

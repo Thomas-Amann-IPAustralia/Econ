@@ -1,0 +1,66 @@
+{
+  "argv": [
+    "eval-answers-v2",
+    "--step",
+    "answers"
+  ],
+  "command": "eval-answers-v2",
+  "config_hash": "5b0996b679236558",
+  "counts": {
+    "cost_usd": 0.593,
+    "needs": 60,
+    "passed": 54
+  },
+  "error": null,
+  "git": {
+    "commit": "5c75c92648699aec94803e2bca6a9b169bc1494c",
+    "dirty": false,
+    "dirty_paths": []
+  },
+  "git_at_end": {
+    "commit": "5c75c92648699aec94803e2bca6a9b169bc1494c",
+    "dirty": true,
+    "dirty_paths": [
+      "eval/spend/ledger.jsonl",
+      "eval/cache/llm/00/007b583a2cac8cf047e60341ac50e3aaf3bea520c0ae1dfac9be417aed4695fc.json",
+      "eval/cache/llm/07/07eca02308ae7a6e52465ec0d83c47f928035e38473669fea8785e2058b3d98f.json",
+      "eval/cache/llm/07/07fed73c02c41a232a1e5b3c940dfb336cc6bf47b6af8b787e201a6cf87b3555.json",
+      "eval/cache/llm/08/0899cf7b5ebad0479e9550b309702fe2cedaaf053f331374ccbeae81f6bc564c.json",
+      "eval/cache/llm/0a/0af4e84c981ba01974edb13b979febb6fe52cd2ec7db32b3d8cfd719c00271b5.json",
+      "eval/cache/llm/0f/0fc353c212b7cd86e4eb4441924c8f3311e0e627644a05ea0408ae8de06024fb.json",
+      "eval/cache/llm/12/1224bd4cc0e05305d8f8a0e2d7734e53b678f2ef3e2ffb87fb067152f56219dc.json",
+      "eval/cache/llm/14/14d4fd9542bf02c868d535e685333df1a33464e3ef5350de734cec1a04e5d473.json",
+      "eval/cache/llm/19/19d4898e6399b63d0c850f8547c5c59ac2183bbb43f953aa0b89029237e75377.json",
+      "eval/cache/llm/1a/1a222ef31cdb8468069d2a1199fa536fed8655fd7164f3e664575d18ee767bcb.json",
+      "eval/cache/llm/1c/1cef93fc7107baa05cf6ed976899d8022d6d1ab46fd9bf3cf157289fbcac779d.json",
+      "eval/cache/llm/21/211b6360e83fc3c5f6a9aefdfdbe6424d65b7679198bdbc561f852ceb1b3623f.json",
+      "eval/cache/llm/23/23b67adae034513584e8882bedd80e79e84b9d549e825a65d0d62bbb2c36fa46.json",
+      "eval/cache/llm/28/288c496ec974d9cf683802a2b8308af3e2ccb99e95c01251b61e534b563c7cb2.json",
+      "eval/cache/llm/30/306518a0968ee54209c2058aa82b001cb168c9a36d116c3b6b3291d6a3035e64.json",
+      "eval/cache/llm/42/42c07d1a4c9b467fee60e56580f44ee1eaaa5cad20cc5ad45677a40f6dd7b9b0.json",
+      "eval/cache/llm/53/533b3753b3f0e2c516e0b7abb8aa443607b7d2cd9bd0fff15fbc394c2ec14b72.json",
+      "eval/cache/llm/53/53fdc35a34b485e10f75d780cae42b48e258e182728def0f351e734bf6a9ca39.json",
+      "eval/cache/llm/62/62e12d33c188fd6c7fc5c9d081c926960103a10532862dfc821e6da962a2b41e.json"
+    ]
+  },
+  "inputs": {},
+  "outputs": {},
+  "params": {
+    "step": "answers"
+  },
+  "run_id": "20261018T222717Z",
+  "seconds": 744.2,
+  "status": "passed",
+  "upstream": {},
+  "versions": {
+    "docling": "2.140.0",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.0",
+    "pypdfium2": "5.14.0",
+    "python": "3.12.3",
+    "sentence-transformers": "6.1.0",
+    "tokenizers": "0.23.3",
+    "torch": "2.14.1+cpu"
+  },
+  "warnings": []
+}

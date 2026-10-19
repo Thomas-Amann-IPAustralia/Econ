@@ -1,0 +1,133 @@
+{
+ "cost_usd": 0.014412,
+ "data": {
+  "answer": "**The main implemented changes were a 12-month grace period and improvements to design registration, introduced in March 2022.** Further reforms and international initiatives aim to make protection more flexible and easier to obtain, but the passages distinguish these from changes already in force.[1][2][3][4]\n\n### Changes made\n- **A 12-month grace period:** designers can register designs after inadvertently disclosing them. The 2023 report explains that this also makes protection easier to coordinate across jurisdictions with similar grace periods, including the US, Japan and Europe.[1]\n- **Streamlined registration:** the March 2022 changes also improved the registration system and gave designers more flexibility in protecting their products.[2]\n\n### Further reforms and international initiatives\n- **Protection better suited to product development:** in 2023, IP Australia was considering protection for non-physical or ‘virtual’ products and parts of products, and greater flexibility to adapt protection as products change during development. These were proposals under consideration, not reported as implemented changes.[3]\n- **Simpler international procedures:** the 2025 report records agreement on the Riyadh Design Law Treaty in November 2024. It aims to reduce regulatory burdens and simplify international market access. Its outcomes include consistent grace periods, simpler renewals, relief for missed deadlines and multiple designs in one application under certain conditions. Australia’s participation remained subject to further government consideration.[4]\n- **Potential Hague Agreement accession:** the 2022 report recorded Australia’s commitment to make all reasonable efforts to join. It anticipated easier overseas protection and an Australian protection term extended from 10 to 15 years—not an extension already implemented. The 2025 report still describes protection as lasting up to 10 years.[5][6]\n\n### Why change the system?\nThe reform program builds on a 12-month review researching Australia’s design economy, drivers of design innovation and the impact of design rights.[7] Earlier interview research also highlighted a business-model mismatch: some major market participants knew about design rights but chose not to engage strongly with them. It suggested that making the process seamless and easy could reduce costs and market friction—so awareness alone was not necessarily the solution.[8]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "In March 2022, several improvements to the design rights system came into effect."
+     },
+     {
+      "evidence": 1,
+      "quote": "Most significantly, a 12-month grace period has been introduced to ensure designers can register their designs after inadvertently disclosing them. Designs law in many other jurisdictions, such as the US, Japan and Europe, provide a 12-month grace period. This change will make it easier to coordinate IP protection across jurisdictions."
+     }
+    ],
+    "text": "In March 2022, Australia introduced a 12-month grace period for inadvertent disclosure, helping designers coordinate protection across jurisdictions."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "The changes also streamline and improve the design registration system, giving designers more flexibility in protecting their products."
+     }
+    ],
+    "text": "The March 2022 changes streamlined and improved registration and gave designers greater flexibility in protecting products."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "We are considering how the design rights system could accommodate non-physical or 'virtual' products and parts of products; and how to give designers more flexibility in adapting their protection as their products change during development."
+     }
+    ],
+    "text": "In 2023, protection for virtual products and product parts, and flexibility to adapt protection during development, were under consideration rather than reported as implemented."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "International negotiations for a new Design Law Treaty successfully concluded in November 2024 with consensus agreement to establish the Riyadh Design Law Treaty (the Riyadh Treaty), after negotiations spanning 20 years."
+     },
+     {
+      "evidence": 6,
+      "quote": "The Riyadh Treaty is important for Australia, because it aims to minimise regulatory burdens and simplify access to international markets for Australian designers of all sizes."
+     },
+     {
+      "evidence": 4,
+      "quote": "Consistent grace periods, allowing designers 12 months after first publicly disclosing their design to file an application without affecting the design's validity for registration."
+     },
+     {
+      "evidence": 4,
+      "quote": "A simplified procedure for requesting renewal of a design registration."
+     },
+     {
+      "evidence": 4,
+      "quote": "Relief measures and flexibility so designers don't automatically lose their rights if they miss a deadline."
+     },
+     {
+      "evidence": 4,
+      "quote": "Allowing several designs in a single application (under certain conditions)."
+     },
+     {
+      "evidence": 4,
+      "quote": "Australia's participation in the treaty will be subject to further government consideration."
+     }
+    ],
+    "text": "The Riyadh Treaty was agreed in November 2024 to simplify international access and reduce burdens; its procedural outcomes include grace periods, renewals, deadline relief and multiple-design applications, while Australian participation required further consideration."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "Australia has agreed to make all reasonable efforts to join the Hague Agreement on Industrial Designs as part of that agreement. Accession to the Hague Agreement will provide new benefits for Australian designers by allowing them to protect their original creations overseas more easily and extending the term of protection available for designs in Australia from 10 to 15 years."
+     }
+    ],
+    "text": "The 2022 report recorded a reasonable-efforts commitment to join the Hague Agreement, anticipating easier overseas protection and an extension from 10 to 15 years upon accession."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 17,
+      "quote": "Once certified, the design right confers to its owner an exclusive right to use, license and commercialise the design for up to 10 years."
+     }
+    ],
+    "text": "The 2025 report still describes the protection term as up to 10 years."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "The ongoing reforms build on a 12-month review that involved extensive research into Australia's design economy, the drivers of design innovation and the impact of design rights."
+     }
+    ],
+    "text": "The ongoing reforms build on a 12-month review of the design economy, design innovation drivers and design rights' impact."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "In order to engage market participants, it is important to make the process seamless and easy so as to avoid imposing costs and generating market friction."
+     },
+     {
+      "evidence": 3,
+      "quote": "Our interviewees were aware of the Designs System and other forms of intellectual property rights. However, due to a perceived lack of fit with their respective business models, they have made an informed decision not to engage strongly with the Designs System or its alternatives. This was a surprising observation given we interviewed major players in the Australian market for design."
+     },
+     {
+      "evidence": 5,
+      "quote": "Thus, simply increasing awareness about design rights may not lead to its increased adoption."
+     }
+    ],
+    "text": "Earlier interview research found informed non-engagement because of business-model fit and recommended seamless processes to reduce costs and friction, rather than relying on awareness alone."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v2.C",
+ "schema_name": "answer",
+ "tag": "explore-policy-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.028824,
+  "input": 6312,
+  "model": "gpt-6.1-sol",
+  "output": 1620,
+  "reasoning": 196,
+  "seconds": 22.84
+ }
+}

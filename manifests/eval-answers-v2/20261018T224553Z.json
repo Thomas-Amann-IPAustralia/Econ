@@ -1,0 +1,54 @@
+{
+  "argv": [
+    "eval-answers-v2",
+    "--step",
+    "answers"
+  ],
+  "command": "eval-answers-v2",
+  "config_hash": "5b0996b679236558",
+  "counts": {
+    "cost_usd": 0.012,
+    "needs": 60,
+    "passed": 57
+  },
+  "error": null,
+  "git": {
+    "commit": "9a74ac747c2101b69b10e2366836a63695464ee8",
+    "dirty": true,
+    "dirty_paths": [
+      "eval/spend/ledger.jsonl",
+      "eval/cache/llm/50/503ea317d4901cc2f682d99ce2c96eb1e212304a5a3887830186112b170d2a7e.json",
+      "eval/cache/llm/bf/bf20b667f1d01c89df866d7c87599a9714e609761c4668eee204fc6599837a5d.json"
+    ]
+  },
+  "git_at_end": {
+    "commit": "9a74ac747c2101b69b10e2366836a63695464ee8",
+    "dirty": true,
+    "dirty_paths": [
+      "eval/spend/ledger.jsonl",
+      "eval/cache/llm/50/503ea317d4901cc2f682d99ce2c96eb1e212304a5a3887830186112b170d2a7e.json",
+      "eval/cache/llm/78/78d42ee9249a9866d3c57a4979b6b556aa9d7c658085cf2991df58126ec1b049.json",
+      "eval/cache/llm/bf/bf20b667f1d01c89df866d7c87599a9714e609761c4668eee204fc6599837a5d.json"
+    ]
+  },
+  "inputs": {},
+  "outputs": {},
+  "params": {
+    "step": "answers"
+  },
+  "run_id": "20261018T224553Z",
+  "seconds": 322.9,
+  "status": "passed",
+  "upstream": {},
+  "versions": {
+    "docling": "2.140.0",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.0",
+    "pypdfium2": "5.14.0",
+    "python": "3.12.3",
+    "sentence-transformers": "6.1.0",
+    "tokenizers": "0.23.3",
+    "torch": "2.14.1+cpu"
+  },
+  "warnings": []
+}

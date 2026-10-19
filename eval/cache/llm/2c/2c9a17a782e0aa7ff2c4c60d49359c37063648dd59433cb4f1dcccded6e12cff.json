@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000804,
+ "data": {
+  "reason": "Both answers accurately present the primary 2001–02 to 2015–16 ownership figures and the discrepancy between the 2020 publications. Answer B is slightly more informative and helpful as it also includes the more recent 2018–2024 SME trend while appropriately noting its narrower scope.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "erp10-1:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001609,
+  "input": 1740,
+  "model": "gemini-3.8-flash",
+  "output": 81,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

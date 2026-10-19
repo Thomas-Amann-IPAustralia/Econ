@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000616,
+ "data": {
+  "reason": "Both answers are identical in prose, claims, citations, and gaps.",
+  "winner": "tie"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "oce-ai-4:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001231,
+  "input": 1522,
+  "model": "gemini-3.8-flash",
+  "output": 24,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

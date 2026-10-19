@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000978,
+ "data": {
+  "reason": "Answer A provides a more comprehensive overview across a longer span of years (including 2019, 2020, and 2022) and helpfully contextualises standard patents by noting the contrasting resident shares for provisional and innovation patents.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-trend-3:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001955,
+  "input": 2291,
+  "model": "gemini-3.8-flash",
+  "output": 63,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

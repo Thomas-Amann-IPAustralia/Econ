@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001167,
+ "data": {
+  "reason": "Both answers address the prompt thoroughly using well-supported claims. Answer B is slightly better as it includes additional relevant findings specifically addressing the competition effects of trade marks as well as entry and contestability dynamics, while carefully retaining the source's causal caveats.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-evidence-4:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002335,
+  "input": 2814,
+  "model": "gemini-3.8-flash",
+  "output": 60,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

@@ -1,0 +1,54 @@
+{
+ "cost_usd": 0.000159,
+ "data": {
+  "grades": [
+   {
+    "grade": 3,
+    "id": "p1"
+   },
+   {
+    "grade": 3,
+    "id": "p2"
+   },
+   {
+    "grade": 1,
+    "id": "p3"
+   },
+   {
+    "grade": 1,
+    "id": "p4"
+   },
+   {
+    "grade": 1,
+    "id": "p5"
+   },
+   {
+    "grade": 1,
+    "id": "p6"
+   },
+   {
+    "grade": 1,
+    "id": "p7"
+   },
+   {
+    "grade": 1,
+    "id": "p8"
+   }
+  ]
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "filter:filter-v1:gpt-6-luna",
+ "schema_name": "grades",
+ "tag": "oce-ai-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000317,
+  "input": 2752,
+  "model": "gpt-6-luna",
+  "output": 84,
+  "reasoning": 0,
+  "seconds": 1.65
+ }
+}

@@ -7,7 +7,7 @@ in the Cloudflare R2 bucket `econ-knowledge` (EU jurisdiction). Callers are peop
 doing exploratory research for strategic direction. **Transparency and traceability come first**: every
 claim an answer makes quotes a passage, and every passage leads to its page.
 
-**Current scope: the retrieval-augmented chatbot, second version (RAG v2, D-011 to D-016).** Built: the
+**Current scope: the retrieval-augmented chatbot, second version (RAG v2, D-011 to D-020).** Built: the
 knowledge base, the serving index (with search-only context notes), the API (Render), the embedder (Cloud
 Run), the front end (GitHub Pages); the embedder is live on Cloud Run, the API and front end not yet
 deployed. Measured: retrieval on a judged test set of 178 needs (silver known-item plus exploratory
@@ -20,7 +20,8 @@ decision log) and the latest `docs/handover-*.md` before acting.
 
 ## Working principles
 1. **Deterministic first.** Ingestion, chunking, indexing, search and the answer check make no model
-   calls. The only model calls are the plan and the answer, at request time, behind a daily spend cap.
+   calls. The only model calls are the plan, the relevance filter and the answer, at request time, behind
+   a daily spend cap.
 2. **Fail loudly.** Stages exit with code 2, a one-line cause, the item's id and the report to read.
 3. **Stage contract.** One module and one command per stage; each checks its upstream manifest
    (passed, output hashes unchanged); writes are atomic; outputs are deterministic (sorted, canonical
@@ -86,20 +87,31 @@ decision log) and the latest `docs/handover-*.md` before acting.
   from its ONNX export pinned by sha256.
 - Search: a dense lane (Cloud Run embedder) and a BM25 lane, min-max score fusion with alpha 0.7,
   100 candidates per lane. The plan (prompt plan-v2) writes up to 4 queries and the standalone question
-  is searched too (`answer.plan_keeps_question`); rankings are merged by reciprocal rank. The answer
-  model sees 20 passages, at most 8 from one document (re-measured in D-013).
+  is searched too (`answer.plan_keeps_question`); rankings are merged by reciprocal rank. Search keeps
+  60 passages, at most 8 from one document; the relevance filter chooses the 20 the answer model sees.
 - **No reranker** (D-012): measured, they help a plain index but not the enriched one. The serving path is
   built and off (`reranking.adopted: null`; `POST /rerank` on Cloud Run, `econ.reranker`).
 - Measured on the judged set (D-013, 92 test needs, fully judged to depth 20): ndcg@10 0.597 to 0.682
   against the previous service; relevant-passage recall in the 20-passage context 0.623 to 0.715. `econ verify-search` shows the
-  served search matches the measured one (top-10 overlap 0.996, same judged ndcg@10).
+  served search matches the measured one (top-10 overlap 0.996, same judged ndcg@10), reads the same 60
+  passages, sends the filter the measured prompt, and picks the same 20 from the measured ratings.
+- **Relevance filter** (adopted by the owner, D-020; measured in D-018, D-019): the provider's `filter_model`
+  (gpt-6-luna, low effort) rates each of the 60 passages 0-3 (prompt `prompts/filter-v1.md`, 20 a call, in
+  parallel) and the answer model gets the 20 rated highest, ties in search order. It only chooses and orders
+  passages; quotes are still checked against the passages' own text. If any call fails or a reply doesn't rate
+  every passage exactly once, the search's top 20 go forward and the event says why. A provider without a
+  `filter_model` (Gemini: none measured) doesn't filter. The `retrieval` event carries `pool`: every passage
+  read, with its search rank, rating and whether it was chosen; the trail and Render's log show all 60.
+  Measured: ndcg@10 0.672 to 0.846, broad questions' evidence reached 0.491 to 0.635, answers preferred 28 to
+  8 (Gemini) and 17 to 4 (Claude, blind). About $0.002 and 4.4 s a question.
 - If the embedder fails, search runs on BM25 alone and says so. Tokenising is per thread (the shared
   stemmer corrupted stems under concurrency, D-013).
 
 ## The answer (built; tested live in D-011, D-014, D-015)
-- Prompts `prompts/answer-v1.md` (in use; `answer-v2.md` is proposed to the owner, D-015) and
-  `prompts/plan-v2.md` (in use since D-013), locked with their schemas in `prompts/versions.lock`. A change
-  is a new version (`econ lock-prompts` after adding the file). Eval-only prompts live in `prompts/eval/`.
+- Prompts `prompts/answer-v1.md` (in use; `answer-v2.md` is proposed to the owner, D-015),
+  `prompts/plan-v2.md` (in use since D-013) and `prompts/filter-v1.md` (in use since D-020), locked with
+  their schemas in `prompts/versions.lock`. A change is a new version (`econ lock-prompts` after adding the
+  file). Eval-only prompts live in `prompts/eval/`.
 - The answer: `coverage` (complete | partial | not_in_kb), prose with claim markers, `claims` with
   verbatim quotes of numbered evidence, `gaps`. The check (`econ.answer.check`) verifies every quote
   against the passage it cites, the markers, the coverage and the text checks; one retry, then flagged.

@@ -177,7 +177,14 @@ function progressText(t) {
   if (e.error && !e.answer) return null;
   if (e.done) return null;
   if (e.answer) return "Checking the quotes…";
-  if (e.retrieval) return e.meta?.mode === "answer" ? `Found ${e.retrieval.evidence.length} passages. Writing the answer…` : "Collecting passages…";
+  if (e.retrieval) {
+    if (e.meta?.mode !== "answer") return "Collecting passages…";
+    const f = e.retrieval.filter;
+    return f?.status === "ok"
+      ? `Chose ${e.retrieval.evidence.length} of ${f.read} passages. Writing the answer…`
+      : `Found ${e.retrieval.evidence.length} passages. Writing the answer…`;
+  }
+  if (e.search) return `Found ${e.search.read} passages. Choosing the most useful…`;
   if (e.plan) return `Searching: ${e.plan.queries.join(" · ")}`;
   return "Planning the search…";
 }
@@ -303,29 +310,43 @@ function renderTrail(t) {
   if (!e.meta && !e.error) { pane.append(h("p", { class: "muted" }, "Waiting for the server…")); return; }
   const check = t.checks[t.checks.length - 1];
   const steps = h("ol", { class: "steps" });
+  let k = 0;
+  const add = (...a) => steps.append(step(++k, ...a));
   if (e.plan) {
-    steps.append(step(1, e.plan.error ? "warn" : "ok", "Planned the search",
+    add(e.plan.error ? "warn" : "ok", "Planned the search",
       e.plan.error || (e.plan.standalone_question !== t.question ? `Read as: “${e.plan.standalone_question}”` : null),
-      h("div", { class: "chips" }, e.plan.queries.map((q) => h("span", { class: "chip" }, q)))));
+      h("div", { class: "chips" }, e.plan.queries.map((q) => h("span", { class: "chip" }, q))));
   } else if (e.retrieval) {
-    steps.append(step(1, "ok", "Searched for the question as asked", null, h("div", { class: "chips" }, e.retrieval.queries.map((q) => h("span", { class: "chip" }, q)))));
+    add("ok", "Searched for the question as asked", null, h("div", { class: "chips" }, e.retrieval.queries.map((q) => h("span", { class: "chip" }, q))));
   }
-  if (e.retrieval) {
-    const r = e.retrieval;
+  const r = e.retrieval;
+  const f = r?.filter;
+  const filtered = f && !f.status.startsWith("off");
+  const how = (x) => (x.dense === "ok" ? `Meaning and keyword search, combined (${e.meta.index.embedder}, ${e.meta.index.strategy} passages)` : `Meaning search ${x.dense}`);
+  if (r && filtered) {
+    const docs = new Set(r.pool.map((x) => x.doc_id));
+    add(r.dense === "ok" ? "ok" : "warn", `Found ${r.candidates} candidate passages; read the first ${r.pool.length}, from ${docs.size} documents`, how(r));
+    const counts = [3, 2, 1, 0].map((g) => `${r.pool.filter((x) => x.filter_grade === g).length} ${RATING[g]}`).join(", ");
+    add(f.status === "ok" ? "ok" : "warn",
+      f.status === "ok" ? `Kept the ${r.evidence.length} rated most useful by ${f.model}` : `The filter failed: kept the search's top ${r.evidence.length}`,
+      f.status === "ok" ? `Rated every passage 0–3 in ${f.seconds}s: ${counts}. All ${r.pool.length} are listed below.` : f.status);
+  } else if (e.search) {
+    add(e.search.dense === "ok" ? "ok" : "warn", `Found ${e.search.candidates} candidate passages; reading the first ${e.search.read}`, how(e.search));
+    add("ok", "Choosing the most useful…", null);
+  } else if (r) {
     const docs = new Set(r.evidence.map((x) => x.doc_id));
-    steps.append(step(2, r.dense === "ok" ? "ok" : "warn", `Found ${r.candidates} candidate passages; kept the best ${r.evidence.length} from ${docs.size} documents`,
-      r.dense === "ok" ? `Meaning and keyword search, combined (${e.meta.index.embedder}, ${e.meta.index.strategy} passages)` : `Meaning search ${r.dense}`));
+    add(r.dense === "ok" ? "ok" : "warn", `Found ${r.candidates} candidate passages; kept the best ${r.evidence.length} from ${docs.size} documents`, how(r));
   }
   if (e.answers?.length) {
     const last = e.answers[e.answers.length - 1];
-    steps.append(step(3, "ok", `Answer written by ${e.meta.answer_model}`, last.attempt > 1 ? "Second attempt, after the first failed the check" : `${last.claims.length} claims, ${last.claims.reduce((a, c) => a + c.citations.length, 0)} quotes`));
+    add("ok", `Answer written by ${e.meta.answer_model}`, last.attempt > 1 ? "Second attempt, after the first failed the check" : `${last.claims.length} claims, ${last.claims.reduce((a, c) => a + c.citations.length, 0)} quotes`);
   }
   if (check) {
-    steps.append(step(4, check.passed ? "ok" : "bad", check.passed ? "Every quote was found word for word in its passage" : "The check found problems", check.passed ? null : check.errors.slice(0, 4).join("; ")));
+    add(check.passed ? "ok" : "bad", check.passed ? "Every quote was found word for word in its passage" : "The check found problems", check.passed ? null : check.errors.slice(0, 4).join("; "));
   }
   if (e.done) {
     const tm = e.done.timings || {};
-    steps.append(step(e.meta.mode === "answer" ? 5 : 3, "ok", `Done in ${e.done.seconds}s`, `search ${((tm.embed || 0) + (tm.search || 0)).toFixed(1)}s${tm.answer_1 ? ` · answer ${tm.answer_1}s` : ""}${e.done.cost_usd ? ` · US$${e.done.cost_usd.toFixed(4)}` : ""}`));
+    add("ok", `Done in ${e.done.seconds}s`, `search ${((tm.embed || 0) + (tm.search || 0)).toFixed(1)}s${tm.filter ? ` · filter ${tm.filter}s` : ""}${tm.answer_1 ? ` · answer ${tm.answer_1}s` : ""}${e.done.cost_usd ? ` · US$${e.done.cost_usd.toFixed(4)}` : ""}`);
   }
   if (e.error) steps.append(step("!", "bad", "Error", e.error.message));
   pane.append(steps);
@@ -357,7 +378,7 @@ function renderTrail(t) {
   }
   pane.append(map);
 
-  pane.append(h("div", { class: "ev-head" }, h("h3", {}, `Passages (${ev.length})`), h("span", { class: "filter-note muted", id: "filter-note" }, "Filled pips and a blue edge mark cited passages.")));
+  pane.append(h("div", { class: "ev-head" }, h("h3", {}, filtered ? `Passages the answer model read (${ev.length})` : `Passages (${ev.length})`), h("span", { class: "filter-note muted", id: "filter-note" }, "Filled pips and a blue edge mark cited passages.")));
   const list = h("div", { id: "evlist" });
   for (const x of ev) {
     const cited = citedBy[x.n];
@@ -373,7 +394,7 @@ function renderTrail(t) {
     list.append(h("article", { class: `ev${cited ? " cited" : ""}`, id: `ev-${x.n}`, "data-doc": x.doc_id },
       h("div", { class: "ev-top" }, h("div", {}, h("span", { class: "ev-n" }, x.n), h("span", { class: "ev-title" }, x.title)),
         cited ? h("span", { class: "badge info" }, `cited by ${[...cited].map((n) => `[${n}]`).join("")}`) : null),
-      h("div", { class: "ev-meta" }, `${x.year} · ${x.section.length ? x.section.join(" › ") + " · " : ""}${pages(x.pages)} · rank ${x.merged_rank}`),
+      h("div", { class: "ev-meta" }, `${x.year} · ${x.section.length ? x.section.join(" › ") + " · " : ""}${pages(x.pages)} · search rank ${x.search_rank ?? x.merged_rank}${x.filter_grade != null ? ` · rated ${x.filter_grade} (${RATING[x.filter_grade]})` : ""}`),
       x.note ? h("div", { class: "ev-note" }, x.note) : null,
       x.ocr ? h("div", { class: "ev-note" }, "Text read from a scanned page by OCR: check the wording against the page.") : null,
       textEl,
@@ -384,6 +405,7 @@ function renderTrail(t) {
       why));
   }
   pane.append(list);
+  if (filtered) pane.append(poolTable(t, r, citedBy));
 
   const trace = h("details", { class: "trace" }, h("summary", {}, "Full search trace"));
   for (const tr of e.retrieval.traces) {
@@ -396,6 +418,46 @@ function renderTrail(t) {
         h("td", {}, x.score.toFixed(3))))));
   }
   pane.append(trace);
+}
+
+// Every passage the relevance filter read: its search rank, its rating, and whether the answer model got it.
+const RATING = { 3: "essential", 2: "useful", 1: "on topic, not usable", 0: "not about the question" };
+
+function poolTable(t, r, citedBy) {
+  const f = r.filter;
+  const used = r.pool.filter((x) => x.selected).length;
+  const box = h("details", { class: "pool", open: true }, h("summary", {},
+    h("strong", {}, `All ${r.pool.length} passages the filter read`),
+    h("span", { class: "muted" }, ` · ${used} used, ${r.pool.length - used} not used${f.status === "ok" ? ` · rated by ${f.model}` : " · not rated (the filter failed)"}`)));
+  box.append(h("p", { class: "muted" }, "In search order. The rating is how much the filter judged an answer could use the passage: 3 essential, 2 useful, 1 on topic but not usable, 0 not about the question. The answer model got the passages rated highest (ties in search order); only those can be cited."));
+  const table = h("table", { class: "pool-table" }, h("tr", {}, h("th", {}, "Search"), h("th", {}, "Rating"), h("th", {}, "Used"), h("th", {}, "Passage")));
+  for (const brief of r.pool) {
+    const x = brief.selected ? { ...r.evidence[brief.n - 1], ...brief } : brief;  // chosen: full text in evidence
+    const textEl = h("div", { class: "ev-text pool-text" });
+    const open = () => {
+      if (!textEl.dataset.ready) {
+        textEl.innerHTML = highlight(x.text, [], x.matched_terms);
+        textEl.dataset.ready = "1";
+      }
+      detail.hidden = !detail.hidden;
+    };
+    const detail = h("tr", { class: "pool-detail", hidden: true }, h("td", { colspan: 4 }, textEl,
+      h("div", { class: "ev-actions" },
+        h("button", { onclick: () => textEl.classList.toggle("open") }, "Expand"),
+        h("button", { onclick: () => openViewer(x.doc_id, x.pages[0], x.boxes) }, `Show on ${pages(x.pages)}`),
+        h("button", { onclick: (ev2) => readAround(x.chunk_id, textEl, ev2.target) }, "Read around"),
+        x.selected ? h("button", { onclick: () => { const c = $(`#ev-${x.n}`); if (c) { c.style.display = ""; c.scrollIntoView({ behavior: "smooth", block: "center" }); } } }, `Go to passage ${x.n}`) : null)));
+    const g = x.filter_grade;
+    table.append(
+      h("tr", { class: `pool-row${x.selected ? " used" : ""}`, onclick: open, title: "Show the passage" },
+        h("td", {}, x.search_rank),
+        h("td", {}, g == null ? h("span", { class: "muted" }, "–") : h("span", { class: `rating r${g}`, title: RATING[g] }, g)),
+        h("td", {}, x.selected ? h("span", { class: `badge ${citedBy[x.n] ? "info" : "ok"}` }, citedBy[x.n] ? `[${x.n}] cited` : `[${x.n}]`) : h("span", { class: "muted" }, "not used")),
+        h("td", {}, h("div", { class: "pool-title" }, `${x.title}`), h("div", { class: "muted" }, `${x.year} · ${x.section.length ? x.section.join(" › ") + " · " : ""}${pages(x.pages)}`))),
+      detail);
+  }
+  box.append(table);
+  return box;
 }
 
 function filterDoc(doc, btn) {

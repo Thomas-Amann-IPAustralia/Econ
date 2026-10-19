@@ -1,0 +1,91 @@
+{
+ "cost_usd": 0.013817,
+ "data": {
+  "answer": "The evidence suggests the **2014 court decisions made some computer-implemented inventions (CIIs) harder to patent in Australia and discouraged subsequent CII applications**, but the filing effect needs qualification.[1][2]\n\nIP Australia’s 2024 study assessed Australia’s *Research Affiliates* ruling and the US *Alice* ruling together, because both occurred in 2014.[3] Its main findings were:\n\n- **Lower grant prospects:** the estimated probability of grant at IP Australia fell by **11.6–12.0 percentage points** for CII applications classified as likely to face adverse patentable-subject-matter findings—not for software applications generally.[1]\n- **Reduced subsequent filing by Australian applicants:** the negative effect appeared more likely to reflect reduced CII innovative activity than simply a switch away from patent protection. However, the study could not definitively distinguish reduced innovation from reduced propensity to patent.[2][4]\n- **No obvious break in the raw filing trend:** after accounting for incomplete follow-up data, unconditional filing probabilities showed no significant change around 2014. The study cautioned that other factors could mask an effect.[5]\n\nThese are qualified estimates: the annual analysis could not separate the effects of the two decisions, and using filing year to define exposure may have understated the negative effect on grant probability.[6]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "There is an 11.6 to 12.0 percentage points reduction (depending on if we only look at triplet samples or the full sample) in the probability of grant of CII-PSM-likely-adverse applications at the patent office of Australia."
+     }
+    ],
+    "text": "The 2024 study estimated an 11.6–12.0 percentage point reduction in grant probability at IP Australia for CII-PSM-likely-adverse applications."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Also, for Australian applicants, the negative impact appears to be more likely to be associated with a reduction in CII innovative activities."
+     }
+    ],
+    "text": "For Australian applicants, the negative effect on subsequent CII applications appeared more likely to reflect reduced CII innovative activity."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "The Full Federal Court of Australia's appeal ruling on the Research Affiliates LLC v Commissioner of Patents in Australia on 18 November 2014, and\n\nThe US Supreme Court's ruling on Alice Corp v CLS Bank International in the United States on 19 June 2014."
+     },
+     {
+      "evidence": 7,
+      "quote": "Due to their occurring in the same year, the impact of the 2 court rulings will be investigated simultaneously using the difference-in-differences (DID) method"
+     }
+    ],
+    "text": "The study analysed the Australian Research Affiliates and US Alice rulings simultaneously because both occurred in 2014."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "(i) a decrease in the propensity of CII innovation, (ii) a decrease in the propensity to apply for CII patent application (even if there is no decrease in the propensity of CII innovation), or (iii) a combined decrease in the propensities for CII innovation and for filing CII patent application."
+     },
+     {
+      "evidence": 4,
+      "quote": "Strictly speaking, the setup in equation (5) cannot identify the above three possible interpretations."
+     }
+    ],
+    "text": "The filing analysis could not definitively distinguish reduced innovation from reduced propensity to seek patent protection."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "If we look at the year trend, accounting for this truncation, there does not appear to be any significant change around the year 2014. However, we note that these figures presented in Table 7 are unconditional probabilities. Various factors could mask any true effect of the 2014 court decisions that may exist."
+     }
+    ],
+    "text": "After accounting for truncated follow-up data, unconditional filing probabilities showed no significant change around 2014, but other factors could mask an effect."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "Given that our analysis is conducted at the year level, it is not possible to distinguish the effect of the 2014 Australian High Court decision separately from the effect of the 2014 US Supreme Court decision."
+     },
+     {
+      "evidence": 3,
+      "quote": "the use of post-2014 filing year to determine treatment period may mean we underestimated the negative impact of the 2014 court decision if patent applications filed prior to 2014 were only examined after 2014."
+     }
+    ],
+    "text": "The annual analysis could not separate the two decisions' effects, and filing-year treatment timing may have understated the negative effect on grant probability."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v2.C",
+ "schema_name": "answer",
+ "tag": "explore-policy-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.027634,
+  "input": 8152,
+  "model": "gpt-6.1-sol",
+  "output": 1133,
+  "reasoning": 154,
+  "seconds": 19.19
+ }
+}

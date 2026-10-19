@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000504,
+ "data": {
+  "reason": "Both answers accurately identify that large firms are most likely and small firms are least likely to file patents based on the research. Answer B is superior because it provides important context and caveats, noting that these specific findings stem from the pooled regression models and that the small-firm result is model-dependent.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "erp15-3:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001009,
+  "input": 1000,
+  "model": "gemini-3.8-flash",
+  "output": 69,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

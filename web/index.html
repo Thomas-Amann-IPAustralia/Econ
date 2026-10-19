@@ -54,7 +54,7 @@
         <aside class="trail-col" id="trail" aria-label="Evidence trail">
           <div class="trail-empty">
             <h2>Evidence trail</h2>
-            <p>After you ask, this panel shows how the answer was made: the searches run, every passage found, why each ranked, and which ones the answer cites.</p>
+            <p>After you ask, this panel shows how the answer was made: the searches run, every passage found and how the filter rated it, why each ranked, and which ones the answer cites.</p>
           </div>
         </aside>
       </div>
@@ -73,8 +73,9 @@
         <h2>How it works</h2>
         <ol>
           <li><strong>Plan.</strong> A small language model rewrites a follow-up so it stands alone, and splits a broad question into up to four searches. The searches it chose appear in the trail.</li>
-          <li><strong>Search.</strong> Each search runs two ways: by meaning (an embedding model on Google Cloud Run) and by keyword (BM25). The two rankings are combined, and the top passages, at most eight from any one document, become the evidence.</li>
-          <li><strong>Answer.</strong> The model sees only those passages. Each claim it makes must quote a passage word for word.</li>
+          <li><strong>Search.</strong> Each search runs two ways: by meaning (an embedding model on Google Cloud Run) and by keyword (BM25). The two rankings are combined, and the first 60 passages, at most eight from any one document, go to the filter.</li>
+          <li><strong>Filter.</strong> A small language model reads those 60 passages and rates each from 0 to 3 for how much an answer to your question could use it. The 20 rated highest become the evidence. The trail lists all 60 with their ratings, so you can see what was left out. The filter only chooses passages; it never changes their text. If it fails, the search's top 20 are used and the trail says so.</li>
+          <li><strong>Answer.</strong> The model sees only those 20 passages. Each claim it makes must quote a passage word for word.</li>
           <li><strong>Check.</strong> Code, not a model, checks every quote against the passage it cites, and that every claim in the prose is backed. A failed check goes back to the model once; an answer that still fails is shown with a warning.</li>
         </ol>
         <h3>What the checks guarantee, and what they don't</h3>

@@ -24,6 +24,8 @@ llm:
       answer_effort: medium
       plan_model: gpt-6-luna       # query planning is light extraction: the small model
       plan_effort: low
+      filter_model: gpt-6-luna     # the relevance filter, as measured (D-018, D-019)
+      filter_effort: low
     - name: gemini
       key_env: GEMINI_API_KEY
       base_url: https://generativelanguage.googleapis.com/v1beta
@@ -31,6 +33,7 @@ llm:
       answer_effort: medium
       plan_model: gemini-3.5-flash-lite
       plan_effort: low
+      # No filter_model: no Gemini model has been measured as the filter (and Gemini is the judge's family).
   prices_per_mtok:                 # input, cached input, output (output includes reasoning)
     gpt-6.1-sol: [2.00, 0.10, 10.00]      # rechecked 2026-10-18 (developers.openai.com/api/docs/pricing)
     gpt-6-luna: [0.10, 0.01, 0.50]
@@ -49,6 +52,11 @@ answer:
   plan_prompt: plan-v2               # D-013
   max_queries: 4
   plan_keeps_question: true          # search the standalone question as well as the plan's queries (D-013)
+  filter:                            # adopted by the owner, 2026-10-19 (D-020)
+    prompt: filter-v1
+    read: 60                         # passages searched and rated; the answer model gets the best 20
+    group: 20                        # passages a call; a question's calls run in parallel
+    max_output_tokens: 3000          # includes reasoning
   # The answer check (SOP §20.7). Each claim's quotes together must hold at least `quote_claim_ratio`
   # times the claim's words, and every quote at least `min_quote_words` words.
   min_quote_words: 5

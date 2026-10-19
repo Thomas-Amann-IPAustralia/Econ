@@ -1,0 +1,89 @@
+{
+ "cost_usd": 0.012564,
+ "data": {
+  "answer": "Trade marks, design rights and copyright protect different aspects of a product or creative work, but can overlap or be used together:\n\n- **Trade marks protect commercial identity.** Names, logos and other branding indicate the trade origin of goods or services; their economic functions also include product differentiation and communicating quality.[1]\n- **Design rights protect product appearance.** They cover visual features such as shape, configuration or pattern—not how a product works, what it is made from or how it feels.[2]\n- **Copyright protects creative expression.** It protects the particular expression of an idea or information, rather than the idea itself.[3]\n\n**The legal intersection depends on the jurisdiction.** The 2019 designs-law study reports differences in whether copyright protects registrable or industrially applied designs, whether protection extends to functional artefacts, and whether designs can also receive trade mark protection. These differences can influence which protection designers choose.[4]\n\n**Commercially, the rights can complement one another.** The 2014 research describes design activity as potentially bundled with several IP rights, rather than design rights alone. The 2022 IP Report specifically explains that trade marks and designs can complement patents by helping businesses capture innovation returns through compelling branding.[5]\n\nThe supplied passages do not explain the detailed Australian legal rules governing copyright–design overlap or when a product’s appearance qualifies for trade mark protection.",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 15,
+      "quote": "Trade marks are signs, such as names, logos or other aspects of branding, that indicate the trade origin of goods or services."
+     },
+     {
+      "evidence": 15,
+      "quote": "However, they also have other economic functions, including product differentiation, providing a quality guarantee and advertising."
+     }
+    ],
+    "text": "Trade marks identify commercial origin through branding and also support product differentiation and communication of quality."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 14,
+      "quote": "The protection covers the shape, configuration or pattern that gives a product its unique visual appearance but excludes the feel of the product, what it's made from or how it works."
+     }
+    ],
+    "text": "Design rights protect a product's visual appearance, including shape, configuration or pattern, but not its feel, materials or operation."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "Copyright (Chapter 6) protects the unique form of an idea or information extract – the way it is expressed by a creator – founded on the person's creative skill and labour."
+     }
+    ],
+    "text": "Copyright protects the particular creative expression of an idea or information rather than the idea itself."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "Countries differ in their positions regarding the grant of copyright in registrable or industrially applied designs, and whether unregistered design rights are available (in addition to or instead of registered designs)."
+     },
+     {
+      "evidence": 2,
+      "quote": "Countries vary also in whether designs and/ or copyright protections are extended to functional artefacts. Within some jurisdictions, designs can attract protection under unfair competition laws or as trade marks."
+     },
+     {
+      "evidence": 2,
+      "quote": "These policy differences may affect the degree to which designers are oriented toward the designs system or look to other systems for IP protection"
+     }
+    ],
+    "text": "The 2019 study reports jurisdictional differences in copyright protection for registrable or industrially applied designs, protection for functional artefacts and trade mark protection for designs; these differences can influence designers' choices."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "The activity of design is likely to be bundled with a variety of intellectual property rights (IPRs), not just design rights"
+     },
+     {
+      "evidence": 8,
+      "quote": "When added to a portfolio, trade marks and designs can act in complement to patents in helping businesses capture returns from innovation through compelling branding."
+     }
+    ],
+    "text": "The 2014 research describes design as bundled with multiple IP rights, while the 2022 report explains that trade marks and designs can complement patents through branding."
+   }
+  ],
+  "coverage": "partial",
+  "gaps": [
+   "The passages do not detail Australia's copyright–design overlap rules, including how registration or industrial application affects copyright protection.",
+   "The passages do not explain when a product's appearance can qualify for trade mark protection in Australia."
+  ]
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v2.C",
+ "schema_name": "answer",
+ "tag": "owner-3",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.025128,
+  "input": 6209,
+  "model": "gpt-6.1-sol",
+  "output": 1271,
+  "reasoning": 266,
+  "seconds": 20.64
+ }
+}

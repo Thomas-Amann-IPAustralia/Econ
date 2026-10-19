@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000487,
+ "data": {
+  "reason": "Both answers provide the exact same factual information, figures, and caveats directly addressing the prompt. Answer B uses bullet points, while Answer A uses a concise paragraph, but both are exceptionally clear, accurate, and well-supported by their citations.",
+  "winner": "tie"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "erp04-2:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000975,
+  "input": 1010,
+  "model": "gemini-3.8-flash",
+  "output": 58,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

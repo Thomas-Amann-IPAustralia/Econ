@@ -1,0 +1,111 @@
+{
+ "cost_usd": 0.013784,
+ "data": {
+  "answer": "IP Australia is working on Indigenous Knowledge through research, international treaty developments and Indigenous input into decision-making.[1][2][4]\n\n- **Research and economic participation:** The 2026 report identifies Indigenous economic participation and protection of Indigenous Knowledge as priorities. The Office of the Chief Economist (OCE) is working with the University of Melbourne’s Dilin Duwa Centre for Indigenous Business Leadership to examine the commercial value of trade marks for Indigenous businesses and the potential economic role of trade marks containing Indigenous Knowledge.[1]\n\n- **Patent transparency:** Australia helped conclude the treaty agreed by World Intellectual Property Organization members in May 2024. It requires disclosure of genetic resources and associated traditional knowledge used in inventions, including identifying the Indigenous Peoples or local community that supplied that knowledge. It aims to encourage recognition, collaboration and benefit sharing—not guarantee those outcomes.[2]\n\n- **Treaty consideration and implementation:** The 2025 report says the treaty enters into force when 15 Member States accede to or ratify it, and Australian ratification requires steps including parliamentary consideration. In 2026, the OCE is developing evidence with research partners to inform Australia’s consideration of the treaty.[3]\n\n- **Indigenous advice:** The 2025 report says IP Australia established a pilot Indigenous Knowledge Panel to better inform decision makers on Indigenous Knowledge and the IP system.[4]\n\n- **Designs:** The 2025 report describes flexibility under the Riyadh Design Law Treaty for countries to create or retain rules requiring disclosure of Indigenous Knowledge used in design applications, including Traditional Cultural Expressions and Traditional Knowledge. Australian participation remains subject to further government consideration, according to that report.[5]\n\n- **Valuation:** Earlier work included commissioning an Australian National University report on methods for estimating Indigenous Knowledge’s market value. The 2020 report described this as supporting efforts to adequately reward Indigenous Knowledge and ensure its owners or custodians are the primary beneficiaries.[6]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "A further priority is improving understanding of how the IP system supports Indigenous economic participation and the protection of Indigenous Knowledge."
+     },
+     {
+      "evidence": 1,
+      "quote": "In collaboration with The University of Melbourne's Dilin Duwa Centre for Indigenous Business Leadership, the OCE is examining the commercial value of trade marks for Indigenous businesses, and the potential economic role for trade marks containing Indigenous Knowledge."
+     }
+    ],
+    "text": "The 2026 priorities include Indigenous economic participation and protection of Indigenous Knowledge, with research into the value of trade marks for Indigenous businesses and trade marks containing Indigenous Knowledge."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "In the past year Australia has played a significant role in concluding 2 landmark international treaties that will support communities of innovators, including Aboriginal and Torres Strait Islander Peoples."
+     },
+     {
+      "evidence": 2,
+      "quote": "In May 2024, member states of the World Intellectual Property Organization approved a historic new Treaty. This Treaty mandates the disclosure of genetic resources and associated traditional knowledge in patent applications."
+     },
+     {
+      "evidence": 2,
+      "quote": "Under the Treaty, when an invention is based on traditional knowledge linked to genetic resources, applicants must identify the Indigenous Peoples or local community that supplied this traditional knowledge."
+     },
+     {
+      "evidence": 3,
+      "quote": "the treaty may facilitate greater collaboration and benefit sharing between traditional custodians and other innovators."
+     }
+    ],
+    "text": "Australia helped conclude the treaty agreed in May 2024, which requires disclosure of genetic resources and associated traditional knowledge and identification of the supplying community, aiming to encourage recognition, collaboration and benefit sharing rather than guaranteeing outcomes."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "The new treaty will enter into force when 15 Member States accede to or ratify it. Treaty ratification in Australia requires various steps including consideration by parliament."
+     },
+     {
+      "evidence": 1,
+      "quote": "In collaboration with research partners, the OCE is developing evidence to inform Australia's consideration of the Treaty on Genetic Resources and Associated Traditional Knowledge"
+     }
+    ],
+    "text": "The 2025 report specifies entry into force after 15 accessions or ratifications and parliamentary consideration as part of Australian ratification; the 2026 report describes OCE research informing Australia's consideration."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "IP Australia has also established a pilot Indigenous Knowledge Panel to ensure that our decision makers are better informed on matters relating to Indigenous Knowledge and the IP system."
+     }
+    ],
+    "text": "The 2025 report says IP Australia established a pilot Indigenous Knowledge Panel to better inform decision makers about Indigenous Knowledge and the IP system."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "A second international treaty, the Riyadh Design Law Treaty, aims to simplify access to international markets for designers"
+     },
+     {
+      "evidence": 5,
+      "quote": "Flexibility for member countries to create or keep their own rules about disclosure of Indigenous Knowledge used in designs applications, including Traditional Cultural Expressions and Traditional Knowledge."
+     },
+     {
+      "evidence": 5,
+      "quote": "Australia's participation in the treaty will be subject to further government consideration."
+     }
+    ],
+    "text": "The Riyadh Design Law Treaty allows countries flexibility over Indigenous Knowledge disclosure rules for design applications, and the 2025 report says Australian participation is subject to further government consideration."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 4,
+      "quote": "a report was commissioned from the Australian National University on \"Methods for Estimating the Market Value of Indigenous Knowledge\"."
+     },
+     {
+      "evidence": 4,
+      "quote": "This work will support IP Australia's efforts to ensure that Indigenous Knowledge is adequately rewarded and that the owners or custodians of that knowledge are primary beneficiaries."
+     }
+    ],
+    "text": "IP Australia commissioned an Australian National University report on valuing Indigenous Knowledge to support adequate rewards and benefits for its owners or custodians, as described in 2020."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v2.C",
+ "schema_name": "answer",
+ "tag": "explore-policy-8",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.027568,
+  "input": 6954,
+  "model": "gpt-6.1-sol",
+  "output": 1366,
+  "reasoning": 188,
+  "seconds": 20.55
+ }
+}

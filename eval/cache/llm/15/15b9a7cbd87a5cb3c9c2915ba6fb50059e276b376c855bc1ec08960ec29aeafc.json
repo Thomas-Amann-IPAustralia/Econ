@@ -1,0 +1,30 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "grades": [
+   {
+    "grade": 3,
+    "id": "p41"
+   },
+   {
+    "grade": 2,
+    "id": "p42"
+   }
+  ]
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "filter:filter-v1:gpt-6-luna",
+ "schema_name": "grades",
+ "tag": "explore-synthesis-9",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000159,
+  "input": 943,
+  "model": "gpt-6-luna",
+  "output": 129,
+  "reasoning": 97,
+  "seconds": 1.94
+ }
+}

@@ -1,0 +1,85 @@
+{
+  "argv": [
+    "eval-answers-v2",
+    "--step",
+    "report"
+  ],
+  "command": "eval-answers-v2",
+  "config_hash": "5b0996b679236558",
+  "counts": {
+    "rule_met": true
+  },
+  "error": null,
+  "git": {
+    "commit": "fc44ada837abc49579fbf7e3a84ed049f2bef5ea",
+    "dirty": true,
+    "dirty_paths": [
+      "eval/spend/ledger.jsonl",
+      "eval/cache/llm/03/037b39fed70888618947924d68926d165cf8fca4fbda8ce92c0c9d8720338da9.json",
+      "eval/cache/llm/04/04682600f53ab57fdb03f626d3358b64cec22a94ef954b7d797a8c360c7fe4fe.json",
+      "eval/cache/llm/05/058da26d8162e60f7ad10861bd2096ceaae57a3489997bc440403fd4ace943f7.json",
+      "eval/cache/llm/05/05ed166cc0638cad2ecc02c1c541aead5d382b2342d89386325db672d7f1467e.json",
+      "eval/cache/llm/08/08029a9eb2638a98e4bd864581fd416d092c288c4a1ee28e5c2a163fb6001511.json",
+      "eval/cache/llm/0b/0b424894d55a0d006c70c28f24843f5165b88be5c2a754bc7e410f8731d6665e.json",
+      "eval/cache/llm/0f/0fce9d5f431fb1e706c221ac4fb79ff94d19b3e9a4fad8a2a84c959e807f79bc.json",
+      "eval/cache/llm/13/13a979ac20d353a15fadb766aa1c61731a8a3671e342beda5bd15fc74b0724f0.json",
+      "eval/cache/llm/13/13eb3e7ebc77b49b435d8ad54cdd4bb6b36d58f55a14b4433fd01c549e1c4582.json",
+      "eval/cache/llm/1e/1e37dd95ff50b625e01b50de0c603e543daab67ea4bc02c4142f8ba655fb3b7e.json",
+      "eval/cache/llm/1f/1f52a29e24acd1d197909147d52665925331b8030dee8bb6459d8d88abc6e4cf.json",
+      "eval/cache/llm/20/204a8c44dc577836530a695d8922933d64cd3283c30952134319fba35b924aca.json",
+      "eval/cache/llm/22/224f24b3ef3d816bcc09d325f0a7837c30cbca03cbd8a4d68f2bfcee933c9f9f.json",
+      "eval/cache/llm/23/239f5a8f02e9bfec212148135323064c7399c901e0b172e6139e2b3922368c67.json",
+      "eval/cache/llm/24/240107d3d96e7acd26d46157be1c98c93089a2cfb9a095cfdb68f31e5d5e2e5f.json",
+      "eval/cache/llm/24/24251ab8454a85948c9c33fc1a048b14d6a55891af3e872daf1009c74d8b74ac.json",
+      "eval/cache/llm/24/24b2ca5528b1e2d2cc16feb83a39e4fb3bfe62439d6b97c585112868e6c1637c.json",
+      "eval/cache/llm/26/26202efb24660a2fd834999e9885a9268cc27f833facd1e7b008be797f3893a2.json",
+      "eval/cache/llm/27/2711fe2116b39ff52972dcedfe91ebf6cff048383ff74a28941ae95831e37813.json"
+    ]
+  },
+  "git_at_end": {
+    "commit": "fc44ada837abc49579fbf7e3a84ed049f2bef5ea",
+    "dirty": true,
+    "dirty_paths": [
+      "eval/spend/ledger.jsonl",
+      "eval/cache/llm/03/037b39fed70888618947924d68926d165cf8fca4fbda8ce92c0c9d8720338da9.json",
+      "eval/cache/llm/04/04682600f53ab57fdb03f626d3358b64cec22a94ef954b7d797a8c360c7fe4fe.json",
+      "eval/cache/llm/05/058da26d8162e60f7ad10861bd2096ceaae57a3489997bc440403fd4ace943f7.json",
+      "eval/cache/llm/05/05ed166cc0638cad2ecc02c1c541aead5d382b2342d89386325db672d7f1467e.json",
+      "eval/cache/llm/08/08029a9eb2638a98e4bd864581fd416d092c288c4a1ee28e5c2a163fb6001511.json",
+      "eval/cache/llm/0b/0b424894d55a0d006c70c28f24843f5165b88be5c2a754bc7e410f8731d6665e.json",
+      "eval/cache/llm/0f/0fce9d5f431fb1e706c221ac4fb79ff94d19b3e9a4fad8a2a84c959e807f79bc.json",
+      "eval/cache/llm/13/13a979ac20d353a15fadb766aa1c61731a8a3671e342beda5bd15fc74b0724f0.json",
+      "eval/cache/llm/13/13eb3e7ebc77b49b435d8ad54cdd4bb6b36d58f55a14b4433fd01c549e1c4582.json",
+      "eval/cache/llm/1e/1e37dd95ff50b625e01b50de0c603e543daab67ea4bc02c4142f8ba655fb3b7e.json",
+      "eval/cache/llm/1f/1f52a29e24acd1d197909147d52665925331b8030dee8bb6459d8d88abc6e4cf.json",
+      "eval/cache/llm/20/204a8c44dc577836530a695d8922933d64cd3283c30952134319fba35b924aca.json",
+      "eval/cache/llm/22/224f24b3ef3d816bcc09d325f0a7837c30cbca03cbd8a4d68f2bfcee933c9f9f.json",
+      "eval/cache/llm/23/239f5a8f02e9bfec212148135323064c7399c901e0b172e6139e2b3922368c67.json",
+      "eval/cache/llm/24/240107d3d96e7acd26d46157be1c98c93089a2cfb9a095cfdb68f31e5d5e2e5f.json",
+      "eval/cache/llm/24/24251ab8454a85948c9c33fc1a048b14d6a55891af3e872daf1009c74d8b74ac.json",
+      "eval/cache/llm/24/24b2ca5528b1e2d2cc16feb83a39e4fb3bfe62439d6b97c585112868e6c1637c.json",
+      "eval/cache/llm/26/26202efb24660a2fd834999e9885a9268cc27f833facd1e7b008be797f3893a2.json",
+      "eval/cache/llm/27/2711fe2116b39ff52972dcedfe91ebf6cff048383ff74a28941ae95831e37813.json"
+    ]
+  },
+  "inputs": {},
+  "outputs": {},
+  "params": {
+    "step": "report"
+  },
+  "run_id": "20261018T231225Z",
+  "seconds": 5.9,
+  "status": "passed",
+  "upstream": {},
+  "versions": {
+    "docling": "2.140.0",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.0",
+    "pypdfium2": "5.14.0",
+    "python": "3.12.3",
+    "sentence-transformers": "6.1.0",
+    "tokenizers": "0.23.3",
+    "torch": "2.14.1+cpu"
+  },
+  "warnings": []
+}

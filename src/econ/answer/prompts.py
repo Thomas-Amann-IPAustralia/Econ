@@ -11,10 +11,10 @@ import json
 from functools import lru_cache
 
 from econ import config
-from econ.answer.schema import Answer, Plan, schema_hash
+from econ.answer.schema import Answer, Grades, Plan, schema_hash
 
 PROMPTS = config.ROOT / "prompts"
-SCHEMAS = {"answer": Answer, "plan": Plan}
+SCHEMAS = {"answer": Answer, "filter": Grades, "plan": Plan}
 
 
 def _sha(text: str) -> str:

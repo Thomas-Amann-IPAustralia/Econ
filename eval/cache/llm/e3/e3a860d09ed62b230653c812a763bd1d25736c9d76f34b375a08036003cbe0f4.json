@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000598,
+ "data": {
+  "reason": "Both answers accurately extract the exact same findings from the source text, identifying Switzerland, Germany, and the UK as leaders or above average, and noting Denmark and Sweden as high-growth followers. Answer A is slightly better structured in terms of flow, but practically both answers are identical in quality and coverage.",
+  "winner": "tie"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "erp08-2:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001195,
+  "input": 1243,
+  "model": "gemini-3.8-flash",
+  "output": 70,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

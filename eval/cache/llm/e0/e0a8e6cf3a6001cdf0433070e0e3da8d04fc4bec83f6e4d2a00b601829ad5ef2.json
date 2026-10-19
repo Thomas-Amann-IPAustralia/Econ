@@ -1,0 +1,102 @@
+{
+ "cost_usd": 0.00042,
+ "data": {
+  "grades": [
+   {
+    "grade": 2,
+    "id": "p21"
+   },
+   {
+    "grade": 1,
+    "id": "p22"
+   },
+   {
+    "grade": 2,
+    "id": "p23"
+   },
+   {
+    "grade": 2,
+    "id": "p24"
+   },
+   {
+    "grade": 2,
+    "id": "p25"
+   },
+   {
+    "grade": 3,
+    "id": "p26"
+   },
+   {
+    "grade": 3,
+    "id": "p27"
+   },
+   {
+    "grade": 2,
+    "id": "p28"
+   },
+   {
+    "grade": 1,
+    "id": "p29"
+   },
+   {
+    "grade": 1,
+    "id": "p30"
+   },
+   {
+    "grade": 1,
+    "id": "p31"
+   },
+   {
+    "grade": 1,
+    "id": "p32"
+   },
+   {
+    "grade": 1,
+    "id": "p33"
+   },
+   {
+    "grade": 2,
+    "id": "p34"
+   },
+   {
+    "grade": 1,
+    "id": "p35"
+   },
+   {
+    "grade": 2,
+    "id": "p36"
+   },
+   {
+    "grade": 1,
+    "id": "p37"
+   },
+   {
+    "grade": 2,
+    "id": "p38"
+   },
+   {
+    "grade": 3,
+    "id": "p39"
+   },
+   {
+    "grade": 2,
+    "id": "p40"
+   }
+  ]
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "filter:filter-v1:gpt-6-luna",
+ "schema_name": "grades",
+ "tag": "explore-synthesis-9",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00084,
+  "input": 6430,
+  "model": "gpt-6-luna",
+  "output": 394,
+  "reasoning": 200,
+  "seconds": 4.83
+ }
+}

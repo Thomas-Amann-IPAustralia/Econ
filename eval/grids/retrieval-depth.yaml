@@ -1,0 +1,25 @@
+# Context depth: how much of a need's relevant evidence reaches the answer model at 20, 40 and 60 passages.
+# Committed before any number on ranks 21-60 (they are unjudged: about 1,400 passages on the test needs).
+# A measurement, not a grid that adopts: it ends in a recommendation to the owner (the context size and any
+# rule that varies it change what the answer model reads and what an answer costs).
+grid: retrieval-depth
+testset: [eval/testset/silver-v1.yaml, eval/testset/explore-v1.yaml]
+judgments: judged-v1   # plus a top-up: every unjudged passage in the deepest context below, test needs only
+adopted: plan+q:luna-plan-v2/enriched/none   # D-013: depth 50 per query, cap 8 per document
+depths: [20, 40, 60]   # the adopted ranking, extended: the first 20 passages are the served context
+needs: test            # 92 (59 silver, 33 exploratory); dev is not judged deeper (the Gemini budget)
+metrics:
+  - rel_recall@k       # share of the need's judged grade-2/3 passages in the first k
+  - rel3_recall@k      # the same for grade 3 ("directly answers a key part")
+  - p@k                # grade 2/3 share of the first k, and of the band added (21-40, 41-60)
+  - passages@k         # the context's real length (the per-document cap can stop it short of k)
+  - tokens@k           # passage tokens the answer model would read
+breadth_rules:         # a rule that gives broad questions a deeper context, scored on the same rows
+  oracle: the need's family (exploratory 60, silver 20); the best a scope classifier could do
+  plan_queries: 60 when the plan writes 2 or more queries, else 20; free, the planner already runs
+report: reports/retrieval-depth.md
+caveats: >-
+  Recall is relative to the judged passages. Relevant passages no setting ever ranked are not counted, so
+  every recall here is an upper bound; the top-up adds new relevant passages to each need's set, so the
+  20-passage figure falls below D-013's 0.715. Retrieval only: whether answers use the extra passages
+  needs an end-to-end run.

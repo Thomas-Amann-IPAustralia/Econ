@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000768,
+ "data": {
+  "reason": "Answer A provides a more comprehensive answer by including absolute figures on PCT national phase entries, explaining Australia's accession status regarding the Hague Agreement to clarify why usage figures are absent, and noting a reporting discrepancy across report editions.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-policy-7:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001537,
+  "input": 1779,
+  "model": "gemini-3.8-flash",
+  "output": 54,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

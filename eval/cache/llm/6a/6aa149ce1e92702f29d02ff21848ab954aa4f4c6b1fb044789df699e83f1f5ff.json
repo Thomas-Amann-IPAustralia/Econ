@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001306,
+ "data": {
+  "reason": "Both answers are very well-structured and accurately quote the source material. Answer B is slightly better because it includes an additional relevant finding from the Australian business research regarding women's participation in start-up management and overall IP holdings.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-synthesis-6:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002612,
+  "input": 3202,
+  "model": "gemini-3.8-flash",
+  "output": 56,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

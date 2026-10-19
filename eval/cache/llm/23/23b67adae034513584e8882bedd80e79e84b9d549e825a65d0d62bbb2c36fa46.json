@@ -1,0 +1,91 @@
+{
+ "cost_usd": 0.01236,
+ "data": {
+  "answer": "Australian companies’ investment in AI capability is associated with their size, existing AI skills, age, industry and patent ownership. The 2023 research reports correlations, rather than establishing what causes investment.[1][2][3]\n\n**Which companies are more likely to invest?**\n- **Large corporations, SMEs with existing AI capacity, and younger companies** were identified as having a higher tendency to adopt AI, alongside patent-holding firms. This distinguishes AI-capable SMEs from SMEs generally, which were less focused on adoption than larger established businesses.[2]\n- **Technology-focused industries** had more pronounced AI capability, particularly information and communication technologies and professional services, although capability existed across most Australian industries.[3]\n\n**Is investment related to patenting?** Yes. Having a patent was a good predictor of building AI capability, and businesses with a stronger innovation and patent focus adopted AI at a higher rate. The association was particularly strong for patenting in Physics, which encompasses computer technologies.[4]\n\nOne possible explanation is that businesses use patents to capture returns from developing AI systems—but the report presents this as an interpretation, not a demonstrated mechanism.[5]\n\n**Measurement matters:** the study linked Lens patent records with LinkedIn company, employee and job-advertisement data. It used hiring AI-skilled employees as a proxy for AI capacity building and adoption, rather than directly measuring expenditure on AI.[6]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "We then correlate AI adoption with patent activity to explore the importance of IP to these firms."
+     },
+     {
+      "evidence": 6,
+      "quote": "We then examine how AI capacity building in the commercial sector correlates with different characteristics of the firm (e.g., size, locations, and company age) and industry"
+     }
+    ],
+    "text": "The 2023 research examines correlations between AI capability building, firm characteristics and patent activity rather than establishing causal drivers."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "We identified four groups of companies that have a higher tendency to adopt AI technology: (i) large corporations, (ii) small and medium size enterprises (SMEs) with existing AI capacity, (iii) patent-holding firms, and (iv) younger companies."
+     },
+     {
+      "evidence": 3,
+      "quote": "The study found that small and medium enterprise are generally less focused on AI adoption than larger established businesses."
+     }
+    ],
+    "text": "Large corporations, SMEs with existing AI capacity, patent-holding firms and younger companies were more inclined to adopt AI; SMEs generally were less focused on adoption than larger established businesses."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "AI capacity has been developed across most industries in Australia, but capacity is more pronounced in industries with a strong technology focus such as information and communication technologies and professional services."
+     }
+    ],
+    "text": "AI capability existed across most Australian industries but was more pronounced in technology-focused industries, including information and communication technologies and professional services."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "having a patent was a good predictor of whether they were engaged in building AI capability: businesses with a stronger innovation and patent focus adopt AI at a higher rate. Adoption was strongly associated with patenting focused on the Physics field, which encompasses computer technologies."
+     }
+    ],
+    "text": "Patent ownership predicted AI capability building, with higher adoption among businesses focused on innovation and patenting and a strong association with Physics patents."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 3,
+      "quote": "This may indicate that businesses use patents to capture returns from developing AI systems."
+     }
+    ],
+    "text": "The report tentatively interprets the relationship as indicating that businesses may use patents to capture returns from developing AI systems."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "We use the hiring of AI-skilled employees as a proxy for AI capacity building such as inward technology transfer and AI adoption."
+     },
+     {
+      "evidence": 6,
+      "quote": "For this report, we create a novel database that links international patent data from the Lens patent database with firm microdata constructed from LinkedIn's Jobs, Company, and People datasets."
+     }
+    ],
+    "text": "The study linked Lens patent records with LinkedIn data and measured AI capability building through AI-skilled hiring, not direct AI expenditure."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v2.C",
+ "schema_name": "answer",
+ "tag": "explore-synthesis-4",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.02472,
+  "input": 6550,
+  "model": "gpt-6.1-sol",
+  "output": 1162,
+  "reasoning": 293,
+  "seconds": 19.24
+ }
+}

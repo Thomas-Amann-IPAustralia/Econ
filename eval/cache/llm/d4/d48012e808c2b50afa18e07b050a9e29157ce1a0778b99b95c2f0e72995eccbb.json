@@ -1,0 +1,47 @@
+{
+ "cost_usd": 0.010462,
+ "data": {
+  "answer": "**Possibly, but the evidence does not establish causation.** The 2020 report records a sharp fall in ICT-related design applications in 2009 and says this “may reflect” the global financial crisis. Its discussion covers digital products such as mobile phones and laptop computers.[1]\n\nThe decline was not sustained: after 2009, ICT-related applications recovered quickly, trebling to 746 in 2013, or 10.8 per cent of all design applications.[2]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "The sharp fall of ICT-related designs in 2009 may reflect the impact of the global financial crisis."
+     },
+     {
+      "evidence": 1,
+      "quote": "Competing in global markets for digital products, such as mobile phones and laptop computers"
+     }
+    ],
+    "text": "The 2020 report identifies a sharp fall in ICT-related design applications in 2009 as a possible, rather than established, effect of the global financial crisis; its discussion includes mobile phones and laptop computers."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "After 2009, ICT-related applications recovered quickly and trebled to 746 in 2013, reaching its highest percentage of total applications, 10.8 per cent, in almost two decades."
+     }
+    ],
+    "text": "After 2009, ICT-related applications recovered quickly and trebled to 746 in 2013, representing 10.8 per cent of total design applications."
+   }
+  ],
+  "coverage": "complete",
+  "gaps": []
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v2.C",
+ "schema_name": "answer",
+ "tag": "ipr20-2",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.020924,
+  "input": 7702,
+  "model": "gpt-6.1-sol",
+  "output": 552,
+  "reasoning": 233,
+  "seconds": 16.66
+ }
+}

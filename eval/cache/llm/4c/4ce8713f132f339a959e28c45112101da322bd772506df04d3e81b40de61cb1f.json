@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001249,
+ "data": {
+  "reason": "Answer B is more comprehensive and directly addresses elements highlighted in the prompt's narrative, notably including the Riyadh Design Law Treaty and insights on why businesses were not engaging with the system. It is well-structured, meticulously documented, and accurately distinguishes between implemented changes and proposed or international treaties.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-policy-3:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002498,
+  "input": 2995,
+  "model": "gemini-3.8-flash",
+  "output": 67,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.001128,
+ "data": {
+  "reason": "Both answers are very well-supported and clearly address the prompt. Answer B is slightly better as it provides a more comprehensive picture of recent shifts, including growth rates across multiple consecutive years (2024 and 2025) and noting significant movements among other origins like Singapore, Finland, and domestic filings.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "explore-trend-4:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002257,
+  "input": 2640,
+  "model": "gemini-3.8-flash",
+  "output": 74,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

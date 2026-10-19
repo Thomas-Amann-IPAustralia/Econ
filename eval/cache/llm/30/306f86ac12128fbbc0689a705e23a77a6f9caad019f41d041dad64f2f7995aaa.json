@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.00054,
+ "data": {
+  "reason": "Both answers directly answer the question using the 1947–2010 study cited in the 2023 report. Answer B is slightly more comprehensive and nuanced by including relevant caveats and context regarding causality from recent evidence.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "ipr25-3:ba",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001081,
+  "input": 1122,
+  "model": "gemini-3.8-flash",
+  "output": 64,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}

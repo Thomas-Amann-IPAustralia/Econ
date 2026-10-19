@@ -1,0 +1,88 @@
+{
+ "cost_usd": 0.012253,
+ "data": {
+  "answer": "**Trade mark cluttering** occurs when unused or overly broad marks on the register block registration of the same or similar marks. This increases other applicants’ costs of creating and registering new trade marks.[1]\n\n**Australia’s 2019 assessment found a low incidence of cluttering**, with the register not unduly hindering the system. Existing mechanisms for removing unused marks that blocked other traders appeared to be working effectively.[2] For example, removals for non-use increased from 219 in 2006 to 437 in 2016, but remained below 0.1 per cent of marks in force each year.[3]\n\nThere were nevertheless warning signs: the 2019 report found that potential unused marks remaining on the register during their first ten years were increasing. It also cautioned that identifying exactly when a mark stopped being used was almost impossible.[4]\n\n**The latest evidence highlights risks rather than providing a new estimate of cluttering.** The 2026 report warns that large numbers of marks with limited commercial presence or enforcement intent may increase search and clearance costs. IP Australia continues to scan for unusual marks and monitor applicant behaviour, trade mark quality and outcomes.[5]",
+  "claims": [
+   {
+    "citations": [
+     {
+      "evidence": 1,
+      "quote": "Trade mark cluttering occurs when a trade mark register contains many unused or overly broad marks that block the same or similar marks from being registered. Cluttering of a register increases the costs to other applicants of creating and registering new trade marks."
+     }
+    ],
+    "text": "Trade mark cluttering involves unused or overly broad marks blocking similar registrations and increasing applicants’ costs."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 2,
+      "quote": "Overall, our results suggest that there is a low incidence of cluttering in IP Australia's trade mark register"
+     },
+     {
+      "evidence": 3,
+      "quote": "In summary, we find that at present the overall state of trade mark cluttering in Australia is not unduly hindering the system."
+     },
+     {
+      "evidence": 3,
+      "quote": "It appears the current mechanisms for removing non-use marks that block other traders are working effectively."
+     }
+    ],
+    "text": "The 2019 assessment found low cluttering, no undue hindrance to the system, and apparently effective non-use removal mechanisms."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 5,
+      "quote": "although the number of marks removed due to non-use doubled, from 219 in 2006 to 437 in 2016, these represent less than 0.1 per cent of the total marks in force each year."
+     }
+    ],
+    "text": "Non-use removals increased from 219 in 2006 to 437 in 2016 but were less than 0.1 per cent of marks in force each year."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 6,
+      "quote": "The number of potential non-use trade marks which remain on the register during their first ten years has been increasing"
+     },
+     {
+      "evidence": 6,
+      "quote": "It is almost impossible, though, to know exactly when a mark stopped being used."
+     }
+    ],
+    "text": "The 2019 report identified increasing potential unused marks in their first ten years, while cautioning that the timing of non-use was difficult to establish."
+   },
+   {
+    "citations": [
+     {
+      "evidence": 8,
+      "quote": "Large numbers of trade marks with limited commercial presence or enforcement intent may increase search and clearance costs for other businesses seeking to enter and compete in related markets."
+     },
+     {
+      "evidence": 8,
+      "quote": "IP Australia continues to scan the registry routinely for unusual trade marks; monitor changes in applicant behaviour, trade mark quality and outcomes; and evaluate international policy responses to market developments."
+     }
+    ],
+    "text": "The 2026 report highlights potential search and clearance costs from marks with limited commercial presence or enforcement intent, and ongoing monitoring."
+   }
+  ],
+  "coverage": "partial",
+  "gaps": [
+   "The passages do not provide an updated measurement of cluttering after the 2019 assessment, so they cannot establish its current extent or severity."
+  ]
+ },
+ "effort": "medium",
+ "model": "gpt-6.1-sol",
+ "purpose": "answer:answers-v2.C",
+ "schema_name": "answer",
+ "tag": "explore-synthesis-10",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.024506,
+  "input": 6388,
+  "model": "gpt-6.1-sol",
+  "output": 1173,
+  "reasoning": 373,
+  "seconds": 24.08
+ }
+}

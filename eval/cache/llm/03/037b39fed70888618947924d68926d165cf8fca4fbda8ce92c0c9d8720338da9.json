@@ -1,0 +1,22 @@
+{
+ "cost_usd": 0.000616,
+ "data": {
+  "reason": "Both answers provide the exact same facts, figures, and nuance regarding patent concentration by volume versus intensity. Answer A is slightly easier to read with its bulleted list of state figures, but both are exceptionally accurate, well-cited, and concise.",
+  "winner": "tie"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v1:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "erp15-4:ab",
+ "tier": "batch",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001233,
+  "input": 1349,
+  "model": "gemini-3.8-flash",
+  "output": 59,
+  "reasoning": 0,
+  "seconds": 0.0
+ }
+}
