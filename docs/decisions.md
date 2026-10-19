@@ -1291,3 +1291,34 @@ Python changed).
 and within a cited run the assistant can still add a connection of its own (How it works says so). The split
 follows where the model put its markers, so an answer that cites once at the end of a paragraph has the whole
 paragraph underlined, as its claim label does (D-027).
+
+## D-031 — A calmer answer: navy for cited prose, no key or box; green for claims drawn from several passages (the owner's request; Claude, 2026-10-19)
+
+**Request (the owner, 2026-10-19, after seeing D-030).** The chat felt cluttered: drop the key above the answer
+and the box of sentences under a paragraph ("with the claims tab as well as the citation links we don't need a
+box beneath a claim within the answer window too"); the mix of underline, bold and lighter text is "a lot of
+meta information"; go back to the older look and draw the cited text in navy, so that "formatting is the LLM
+writing to help a reader parse information quickly and the colour indicates the provenance of the information
+with the number enabling further exploration". And: where a claim cites text from more than one source, use a
+different colour (green), keeping the outlines, so a reader sees at a glance that a claim rests on several.
+
+**Built** (front end only; amends D-030's answer view, which was not yet deployed).
+- Prose that rests on cited sentences (the same runs as D-030) is navy (`--said`: #1c4380 on white, 9.7:1; in
+  dark mode #a9c8f0, 7.0:1); the assistant's own words and headings keep the ordinary colour; no underline and
+  no lighter text. A cited run's tooltip names its claim. The key above the answer and the box under the
+  paragraph are gone: a number selects its claim, lights its prose and takes the trail to its sentences (on a
+  phone too, where the trail is below the chat).
+- A claim whose sentences come from more than one passage (counted by passage, the trail's unit) is green: its
+  sentences in the claims tab, which also says how many passages, and its highlighted sentences in the trail
+  while it is selected, with the outline kept (green). Claims from one passage stay yellow. Colours: #c9ecd5
+  behind #0f3b22 (9.9:1); in dark mode #2e5b40 behind #e2f7e9 (7.0:1).
+- How it works describes blue text, the ordinary colour and green; the JSON export is unchanged.
+
+**Checked** headless against the same recorded answers as D-030: no key and no box; cited prose computes to
+navy without underline and the rest to the ink colour; a number focuses its passage; the causality answer's
+first claim (sentences from 3 passages) is green in its card and in 3 passages of the trail, a one-passage claim
+stays yellow; the rest of D-030's checks (stepping, links back from the trail, the export, Copy, both themes,
+phone width, no script errors) still pass.
+
+**Note.** The distinction between navy and ordinary text is by colour alone; the claim numbers remain the cue
+that does not depend on colour.

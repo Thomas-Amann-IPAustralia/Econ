@@ -243,3 +243,8 @@ OpenAI), not run.
 - The conversation downloads or copies as JSON (`econ-chat-export/1`), everything shown but passage text.
 - Checked headless against recorded answer-v5 answers: both themes, phone width, no script errors; 129
   tests pass. No model calls, no spend.
+
+## 2026-10-19 — A calmer answer; green for claims from several passages (D-031)
+- At the owner's request: the key and the box under a paragraph are gone; cited prose is navy, the rest the
+  ordinary colour; a number takes the trail to its sentences. A claim drawn from more than one passage is green
+  in the claims tab and in the trail. Checked headless; no model calls, no spend.
