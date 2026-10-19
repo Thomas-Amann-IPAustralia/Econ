@@ -1,4 +1,5 @@
-"""The answer's fixed structure, and the query plan's. Both are sent to the model as strict JSON schemas.
+"""The answer's fixed structure, the query plan's and the relevance filter's. All are sent to the model as
+strict JSON schemas.
 
 The answer:
 - `coverage`: complete | partial | not_in_kb. `not_in_kb` is a first-class answer.
@@ -44,6 +45,18 @@ class Answer(_Strict):
 class Plan(_Strict):
     standalone_question: str = Field(description="The user's latest question, rewritten to stand alone.")
     queries: list[str] = Field(description="One to four search queries for the knowledge base.")
+
+
+class Grade(_Strict):
+    id: str
+    grade: int = Field(ge=0, le=3)
+
+
+# The relevance filter's reply (D-018): a 0-3 rating for every passage id it was shown. Its strict schema is
+# the one the filter was measured with (the judge's, econ.evalr.judge.SCHEMA); a docstring here would enter
+# the schema as a description and change it.
+class Grades(_Strict):
+    grades: list[Grade]
 
 
 def strict_schema(model: type[BaseModel]) -> dict:

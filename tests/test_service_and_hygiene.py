@@ -105,3 +105,38 @@ def test_no_secrets_in_tracked_files_and_env_is_ignored():
 def test_the_scripted_model_is_unreachable_from_service_config():
     names = {p.name for p in config.service().llm.providers}
     assert names <= {"openai", "gemini"}
+
+
+def test_the_log_lists_every_passage_read_compactly():
+    from econ.service.app import log_view
+
+    e = {
+        "event": "retrieval",
+        "traces": [{"hits": []}],
+        "evidence": [{"n": 1, "chunk_id": "a:1", "text": "kept"}],
+        "pool": [
+            {
+                "chunk_id": "a:1",
+                "search_rank": 1,
+                "filter_grade": 3,
+                "selected": True,
+                "n": 1,
+                "text": "t",
+                "boxes": [],
+            },
+            {
+                "chunk_id": "a:2",
+                "search_rank": 2,
+                "filter_grade": 0,
+                "selected": False,
+                "n": None,
+                "text": "t",
+            },
+        ],
+    }
+    out = log_view(e)
+    assert "traces" not in out and out["evidence"] == e["evidence"]
+    assert out["pool"] == [
+        {"chunk_id": "a:1", "search_rank": 1, "filter_grade": 3, "selected": True, "n": 1},
+        {"chunk_id": "a:2", "search_rank": 2, "filter_grade": 0, "selected": False, "n": None},
+    ]

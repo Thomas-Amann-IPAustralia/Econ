@@ -9,6 +9,11 @@
     "schema_sha256": "385f1d567dabf1a6",
     "sha256": "871098355d27afc6"
   },
+  "filter-v1": {
+    "schema": "filter",
+    "schema_sha256": "27cb0355c1a50e85",
+    "sha256": "00d3fa48285ef87f"
+  },
   "plan-v1": {
     "schema": "plan",
     "schema_sha256": "ab394bace1984c1e",

@@ -435,12 +435,17 @@ def verify_search(
 ) -> None:
     """Show that the served search reproduces the measured one (SOP §19): the serving index (ONNX, float16),
     ONNX query vectors and the service's query rule, fed by cached plans, against the measurement path,
-    on every judged need. Writes reports/search-verification.md."""
+    on every judged need. With the relevance filter on (D-020), also the 60 passages it reads, its prompt,
+    and its choice of 20 replayed from the measured ratings (no model call). Writes
+    reports/search-verification.md."""
     import json as _json
+    from dataclasses import replace
 
     import numpy as np
 
+    from econ.answer import pipeline as pl
     from econ.answer.pipeline import context_queries
+    from econ.evalr import filter as filt
     from econ.evalr import grid2, judged
     from econ.evalr import plans as plans_mod
     from econ.manifest import write_text_atomic
@@ -458,7 +463,16 @@ def verify_search(
         cached = plans_mod.load(plans)
         a_cfg = config.service().answer
         s = grid2.named(setting)
+        fc = a_cfg.filter
+        keep = config.pipeline().retrieval.context_chunks
+        saved = {}
+        if fc:
+            rows_path = config.path("eval/runs/retrieval-v2/filter/filter-v1.jsonl")
+            saved = {
+                x["need"]: x["filter_grades"] for x in map(_json.loads, rows_path.read_text().splitlines())
+            }
         o10, o20, nd_serve, nd_meas = [], [], [], []
+        pool_o, pool_same, prompt_same, prompt_n, sel_o, rec_serve, rec_meas, unrated = ([] for _ in range(8))
         for n in needs:
             p = cached[n.id]
             if setting.startswith("raw"):
@@ -475,6 +489,45 @@ def verify_search(
             rows = {c["chunk_id"]: i for i, c in enumerate(grid2.systems.chunks())}
             nd_serve.append(grid2.per_need([rows[c] for c in served], n, grades.get(n.id, {}))["ndcg@10"])
             nd_meas.append(grid2.per_need([rows[c] for c in measured], n, grades.get(n.id, {}))["ndcg@10"])
+            if not fc:
+                continue
+            # The relevance filter: the 60 passages it reads, its prompt, and its choice replayed from the
+            # ratings the measurement recorded (D-018), on the needs that have them.
+            served60 = idx.context(ranked, fc.read)
+            served60_ids = [idx.chunks[x.row]["chunk_id"] for x in served60]
+            measured60 = grid2.context_rows(replace(s, context=fc.read), n)
+            measured60_ids = [grid2.systems.chunks()[x]["chunk_id"] for x in measured60]
+            pool_o.append(len(set(served60_ids) & set(measured60_ids)) / max(1, len(measured60_ids)))
+            pool_same.append(served60_ids == measured60_ids)
+            fg = saved.get(n.id)
+            if fg is None:
+                continue
+            if served60_ids == measured60_ids:
+                f_eval = {"group": fc.group, "model": "gpt-6-luna", "effort": "low"}
+                want = [c.user for c, _ in filt.calls_for(n, measured60, p["standalone"], f_eval)]
+                got = []
+                for g in range(0, len(served60), fc.group):
+                    part = served60[g : g + fc.group]
+                    blocks = [
+                        pl.filter_block(
+                            f"p{g + i + 1}", idx.chunks[x.row], idx.docs[idx.chunks[x.row]["doc_id"]]
+                        )
+                        for i, x in enumerate(part)
+                    ]
+                    got.append(pl.filter_user(p["standalone"], blocks))
+                prompt_n.append(1)
+                prompt_same.append(got == want)
+            unrated.append(sum(1 for c in served60_ids if c not in fg))
+            ratings = {x.row: fg.get(idx.chunks[x.row]["chunk_id"], 0) for x in served60}
+            pick = pl.by_rating([x.row for x in served60], ratings, keep)
+            served_sel = [served60_ids[i] for i in pick]
+            meas_sel = [grid2.systems.chunks()[x]["chunk_id"] for x in filt.select(measured60, fg, keep)]
+            sel_o.append(len(set(served_sel) & set(meas_sel)) / max(1, len(meas_sel)))
+            g = grades.get(n.id, {})
+            n_rel = sum(1 for v in g.values() if v >= 2)
+            if n_rel:
+                rec_serve.append(sum(1 for c in served_sel if g.get(c, 0) >= 2) / n_rel)
+                rec_meas.append(sum(1 for c in meas_sel if g.get(c, 0) >= 2) / n_rel)
         lines = [
             "# Search verification",
             "",
@@ -491,10 +544,33 @@ def verify_search(
             f"| ndcg@10 (judged), served / measured | {np.mean(nd_serve):.4f} / {np.mean(nd_meas):.4f} |",
             f"| Needs whose top 10 differ at all | {sum(1 for x in o10 if x < 1)} of {len(needs)} |",
         ]
+        if fc:
+            lines += [
+                f"| Filter: the {fc.read} passages read, overlap served vs measured | mean {np.mean(pool_o):.3f}, "
+                f"identical lists on {sum(pool_same)} of {len(needs)} |",
+                f"| Filter: its prompt, identical to the measured one (where the lists are identical) | "
+                f"{sum(prompt_same)} of {len(prompt_n)} needs |",
+                f"| Filter: its {keep} passages, replayed from the measured ratings, overlap served vs measured | "
+                f"mean {np.mean(sel_o):.3f}, min {min(sel_o):.2f} ({len(sel_o)} test needs; passages read "
+                f"without a measured rating: {sum(unrated)}) |",
+                f"| Filter: relevant passages reached (judged), served / measured | "
+                f"{np.mean(rec_serve):.3f} / {np.mean(rec_meas):.3f} |",
+            ]
+        lines += [
+            "",
+            "Where served and measured contexts differ, they differ deep in the list: reciprocal-rank merging of "
+            "two or more queries leaves near-ties, which the float16 index and the float32 measurement break "
+            "differently, and the per-document cap carries the difference down the list. The judged quality of "
+            "the served contexts is the measured one.",
+        ]
         out = config.path(config.pipeline().paths.reports) / "search-verification.md"
         write_text_atomic(out, "\n".join(lines) + "\n")
         r.add_output(out)
         r.counts.update(top10_overlap=float(np.mean(o10)), top20_overlap=float(np.mean(o20)))
+        if fc:
+            r.counts.update(
+                filter_pool_overlap=float(np.mean(pool_o)), filter_choice_overlap=float(np.mean(sel_o))
+            )
     typer.echo("\n".join(lines))
 
 
@@ -543,11 +619,15 @@ def ask(
     )
     for e in pipeline.run(pipeline.Request(question=question, context=context), svc):
         if e["event"] == "retrieval":
+            f = e["filter"]
             typer.echo(f"-- retrieval ({e['dense']}): queries {e['queries']}")
-            for ev in e["evidence"]:
+            typer.echo(f"-- filter: {f['status']}; read {f['read']}, kept {f['kept']}")
+            for ev in e["pool"]:
+                used = f"[{ev['n']:2d}]" if ev["selected"] else "    "
+                rated = "-" if ev["filter_grade"] is None else ev["filter_grade"]
                 typer.echo(
-                    f"  [{ev['n']:2d}] {ev['chunk_id']:36s} {ev['year']} p{ev['pages']} "
-                    f"{' > '.join(ev['section'])[:60]}"
+                    f"  {used} #{ev['search_rank']:2d} rated {rated} {ev['chunk_id']:36s} {ev['year']} "
+                    f"p{ev['pages']} {' > '.join(ev['section'])[:50]}"
                 )
         else:
             typer.echo(_json.dumps(e, ensure_ascii=False, default=str)[:2000])

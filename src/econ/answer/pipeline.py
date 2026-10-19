@@ -1,12 +1,19 @@
 """One question, start to finish, as a stream of events the UI renders as they arrive.
 
-  meta -> plan -> retrieval -> answer -> check -> done        (an answer model is configured)
-  meta -> retrieval -> done                                    (evidence-only mode)
+  meta -> plan -> search -> retrieval -> answer -> check -> done     (an answer model and the filter)
+  meta -> plan -> retrieval -> answer -> check -> done               (an answer model, no filter)
+  meta -> retrieval -> done                                          (evidence-only mode)
 
 - plan: a small model rewrites a follow-up to stand alone and splits a broad question into searches.
   Without a model, the search query is the question (with the previous question when there is history).
-- retrieval: every query is embedded in one call to the Cloud Run embedder; if that fails, search runs
-  on the keyword lane alone and the event says so. The evidence list is exactly what the model sees.
+- search and the filter (D-018 to D-020): every query is embedded in one call to the Cloud Run embedder;
+  if that fails, search runs on the keyword lane alone and the event says so. With the filter, search keeps
+  its first 60 passages (the `search` event says so while the filter reads), a small model rates each 0-3,
+  and the answer model gets the 20 rated highest. If the filter fails, the search's top 20 go forward and
+  the event says why.
+- retrieval: `evidence` is exactly what the answer model sees; `pool` is every passage the filter read,
+  in search order, with its search rank, its rating and whether it was chosen (a chosen passage's entry is
+  brief and names its evidence number `n`; its text is in `evidence`).
 - answer and check: a failed check goes back to the model once, with its errors wrapped as data. An
   answer that still fails is returned flagged, never passed silently.
 """
@@ -17,6 +24,7 @@ import re
 import time
 import uuid
 from collections.abc import Iterator
+from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass, field
 
 from pydantic import ValidationError
@@ -25,7 +33,7 @@ from econ import config, textcheck
 from econ.answer import prompts
 from econ.answer.check import check
 from econ.answer.providers import Model, ProviderError, Usage
-from econ.answer.schema import Answer, Plan, strict_schema
+from econ.answer.schema import Answer, Grades, Plan, strict_schema
 from econ.kb.bm25 import tokenize
 from econ.retrieval.index import EmbedderClient, Index
 
@@ -114,7 +122,87 @@ def evidence_block(n: int, chunk: dict, doc: dict) -> str:
     )
 
 
-def evidence_view(svc: Services, sel, n: int, queries: list[str]) -> dict:
+# --- the relevance filter (D-018 to D-020) ---------------------------------------------------------------
+
+
+def filter_block(pid: str, chunk: dict, doc: dict) -> str:
+    section = " > ".join(chunk["section"]) if chunk["section"] else ""
+    return (
+        f'<evidence id="{pid}" document="{defang(doc["title"])}" year="{doc["year"]}" '
+        f'section="{defang(section)}">\n{defang(chunk["text"])}\n</evidence>'
+    )
+
+
+def filter_user(question: str, blocks: list[str]) -> str:
+    """The filter's user message: the question, then the passages (exactly as measured, D-018)."""
+    return f"<question>{defang(question)}</question>\n\n" + "\n\n".join(blocks)
+
+
+def parse_grades(data: object, ids: dict[str, int]) -> dict[int, int] | None:
+    """Row -> rating from a filter reply, or None unless it rates every id it was shown exactly once, 0-3."""
+    try:
+        reply = Grades.model_validate(data)
+    except ValidationError:
+        return None
+    got = [(g.id, g.grade) for g in reply.grades]
+    if sorted(i for i, _ in got) != sorted(ids):
+        return None
+    return {ids[i]: g for i, g in got}
+
+
+def by_rating(rows: list[int], ratings: dict[int, int], k: int) -> list[int]:
+    """Positions in `rows` of the k rated highest; ties keep the search order (the rule measured, D-018)."""
+    return sorted(range(len(rows)), key=lambda i: (-ratings.get(rows[i], 0), i))[:k]
+
+
+def filter_step(svc: Services, question: str, pool: list) -> dict:
+    """Rate the pool's passages with the provider's filter model, the config's group size a call, the calls in
+    parallel. Any failed or malformed reply drops every rating, so the search order stands, visibly."""
+    fc = config.service().answer.filter
+    p = svc.provider
+    system = prompts.load(fc.prompt)
+    calls = []
+    for g in range(0, len(pool), fc.group):
+        part = pool[g : g + fc.group]
+        ids = {f"p{g + i + 1}": s.row for i, s in enumerate(part)}
+        blocks = [
+            filter_block(pid, svc.index.chunks[row], svc.index.docs[svc.index.chunks[row]["doc_id"]])
+            for pid, row in ids.items()
+        ]
+        calls.append((filter_user(question, blocks), ids))
+
+    def one(call: tuple[str, dict[str, int]]) -> tuple[dict[int, int] | None, Usage | None, str | None]:
+        user, ids = call
+        try:
+            rep = svc.model.generate_json(
+                system=system,
+                user=user,
+                schema=strict_schema(Grades),
+                schema_name="grades",
+                model=p.filter_model,
+                effort=p.filter_effort,
+                max_output_tokens=fc.max_output_tokens,
+            )
+        except ProviderError as e:
+            return None, e.usage, str(e)[:160]  # a failed call can still be billed, so it is still metered
+        got = parse_grades(rep.data, ids)
+        return got, rep.usage, None if got is not None else "a reply did not rate every passage exactly once"
+
+    with ThreadPoolExecutor(max_workers=max(1, len(calls))) as ex:
+        results = list(ex.map(one, calls))
+    usages = [u for _, u, _ in results if u is not None]
+    errors = [e for _, _, e in results if e]
+    if errors:
+        return {
+            "model": p.filter_model,
+            "status": f"failed ({errors[0]}); search order kept",
+            "usages": usages,
+        }
+    ratings = {row: g for got, _, _ in results for row, g in got.items()}
+    return {"model": p.filter_model, "status": "ok", "usages": usages, "ratings": ratings}
+
+
+def evidence_view(svc: Services, sel, n: int | None, queries: list[str]) -> dict:
     c = svc.index.chunks[sel.row]
     d = svc.index.docs[c["doc_id"]]
     # Matched terms highlight the passage, so only terms in its own text count (a context note, D-013, can
@@ -240,19 +328,57 @@ def run(req: Request, svc: Services) -> Iterator[dict]:
     rerank = rerank_step(svc, ranked, rerank_query(asked, req.context))
     if rerank.get("ranked") is not None:
         ranked = rerank.pop("ranked")
-    chosen = svc.index.context(ranked)
-    evidence = [evidence_view(svc, s, i + 1, queries) for i, s in enumerate(chosen)]
     for tr in traces:
         for h in tr["hits"]:
             h["chunk_id"] = svc.index.chunks[h["row"]]["chunk_id"]
+    fc = scfg.answer.filter
+    filtering = bool(svc.model and fc and getattr(p, "filter_model", None))
+    pool = svc.index.context(ranked, fc.read if filtering else None)
     timings["search"] = round(time.time() - t, 3)
+
+    # --- the relevance filter ------------------------------------------------------------------------
+    keep = config.pipeline().retrieval.context_chunks
+    ratings: dict[int, int] = {}
+    if filtering:
+        yield {"event": "search", "candidates": len(ranked), "read": len(pool), "dense": dense_status}
+        t = time.time()
+        f = filter_step(svc, standalone, pool)
+        usages.extend(f.pop("usages"))
+        ratings = f.pop("ratings", {})
+        timings["filter"] = round(time.time() - t, 2)
+        order = by_rating([s.row for s in pool], ratings, keep) if ratings else list(range(len(pool)))[:keep]
+        filt = {**f, "read": len(pool), "kept": len(order), "seconds": timings["filter"]}
+    else:
+        order = list(range(len(pool)))
+        reason = (
+            "no answer model" if not svc.model else ("off" if not fc else "this provider has no filter model")
+        )
+        filt = {"model": None, "status": f"off ({reason})", "read": len(pool), "kept": len(pool)}
+    chosen = [pool[i] for i in order]
+    # Every passage read, with its search rank and rating; the chosen ones are the evidence, numbered in the
+    # order the answer model sees them.
+    pool_views = [
+        {**evidence_view(svc, s, None, queries), "search_rank": i + 1, "filter_grade": ratings.get(s.row)}
+        for i, s in enumerate(pool)
+    ]
+    evidence = []
+    for k, i in enumerate(order):
+        pool_views[i]["n"] = k + 1
+        evidence.append(dict(pool_views[i]))
+    # A chosen passage is in full in `evidence`; its pool entry keeps what identifies it and its number.
+    brief = ("n", "chunk_id", "doc_id", "title", "year", "section", "pages", "search_rank", "filter_grade")
+    pool_views = [{k: v[k] for k in brief} if v["n"] is not None else v for v in pool_views]
+    for v in pool_views:
+        v["selected"] = v["n"] is not None
     yield {
         "event": "retrieval",
         "queries": queries,
         "dense": dense_status,
         "rerank": rerank,
+        "filter": filt,
         "traces": traces,
         "evidence": evidence,
+        "pool": pool_views,
         "candidates": len(ranked),
     }
 

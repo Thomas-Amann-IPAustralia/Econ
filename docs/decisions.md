@@ -798,3 +798,50 @@ service can answer at all.
 
 **Spend:** OpenAI $0.63 (C's answers, including billed retries), Gemini $0.10 (the pairwise judge, Batch). Totals:
 OpenAI $2.88 of $3.50, Gemini $2.26 of $2.50.
+
+---
+
+## D-020 — The relevance filter in the service, with every passage it reads shown and recorded (the owner; built by Claude, 2026-10-19)
+
+**Decision (the owner, 2026-10-19):** "build the filter into the service. Please record/show each of the 60
+passages that are retrieved and show which of them were selected by the filter." This adopts D-018's filter on
+D-019's evidence, and changes working principle 1: the request-time model calls are now the plan, the filter
+and the answer.
+
+**What was built.**
+- `config/service.yaml`: `answer.filter` (prompt filter-v1, read 60, group 20, 3,000 output tokens) and, per
+  provider, `filter_model`/`filter_effort` (OpenAI: gpt-6-luna, low, as measured). Gemini has no filter model:
+  none was measured, and Gemini is the judge's family; a Gemini-keyed service answers from the search's top 20.
+- `prompts/filter-v1.md` moved from `prompts/eval/` and locked with its schema (`schema.Grades`, whose strict
+  schema equals the measured one, tested). The evaluation code now builds its prompts with the service's
+  functions (`pipeline.filter_block`, `filter_user`); all 234 cached measurement calls still match byte for
+  byte.
+- `econ.answer.pipeline`: search keeps `answer.filter.read` passages (`Index.context(k=...)`, same cap); the
+  filter step runs a question's calls in parallel; a reply must rate every passage it was shown exactly once,
+  0-3 (`parse_grades`); the 20 rated highest go to the answer model, ties in search order (`by_rating`, the
+  measured rule). If any call fails or replies otherwise, the search's top 20 go forward and the event says
+  why. Filter calls are metered with the rest (the daily cap) and timed (`timings.filter`).
+- Events: a `search` event while the filter reads; `retrieval.filter` (model, status, read, kept, seconds) and
+  `retrieval.pool`: every passage read, in search order, with `search_rank`, `filter_grade` and `selected`.
+  `evidence` is still exactly what the answer model sees; a chosen passage's pool entry is brief and names
+  its evidence number (the full text is in `evidence`), which keeps the event near 170 KB.
+- Recorded: Render's log line for each question lists all 60 (chunk id, search rank, rating, chosen, evidence
+  number) via `service.app.log_view`.
+- Shown: the evidence trail has a search step ("found N; read the first 60"), a filter step (counts by
+  rating, or the failure), each evidence card's search rank and rating, and a table of all 60 passages read
+  (rating, used as [n] or not used, document, section, pages; a row opens the passage, its page and its
+  neighbours). The "How it works" page describes the filter. `econ ask` prints the 60 with their ratings.
+- `econ verify-search` now also checks the filter offline (`reports/search-verification.md`): the service
+  reads the same 60 passages as the measurement (overlap 1.000; identical order on 156 of 178 needs, the rest
+  differ only at near-ties), sends the measured prompt byte for byte (81 of 81 needs where the lists are
+  identical), and, replaying the measured ratings, picks the same 20 on all 92 test needs (judged recall
+  0.762 served and measured).
+- Tests: the filter's choice and numbering, parallel groups with running ids, the fallback on a bad reply,
+  no filter without a filter model or in evidence-only mode, the reply validation, the schema and prompt as
+  measured, the compact log. A browser check of the trail with events from the real index and a scripted
+  model (the OpenAI account has no credit) showed the steps, cards and the 60-row table without errors.
+
+**Not yet done.** No live call of the filter inside the service: the OpenAI account is out of credit (D-019).
+The first question after credit is added is the smoke test for this change.
+
+**Spend:** none.

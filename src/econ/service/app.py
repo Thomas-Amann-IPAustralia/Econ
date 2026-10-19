@@ -87,6 +87,16 @@ class Limiter:
             return True
 
 
+def log_view(e: dict) -> dict:
+    """An event as Render's log records it: without the search traces, and with every passage the filter
+    read as its id, search rank, rating and whether it was chosen (the evidence keeps its text)."""
+    out = {k: v for k, v in e.items() if k != "traces"}
+    if "pool" in out:
+        keys = ("chunk_id", "search_rank", "filter_grade", "selected", "n")
+        out["pool"] = [{k: p.get(k) for k in keys} for p in out["pool"]]
+    return out
+
+
 def client_id(request: Request) -> str:
     fwd = request.headers.get("x-forwarded-for", "")
     return fwd.split(",")[0].strip() or (request.client.host if request.client else "unknown")
@@ -202,7 +212,7 @@ def create_app() -> FastAPI:
                 "commit": build["commit"],
                 "question": req.question,
                 "context_chars": len(req.context),
-                "events": [{k: v for k, v in e.items() if k not in ("traces",)} for e in events],
+                "events": [log_view(e) for e in events],
             }
             print(json.dumps(log, ensure_ascii=False, default=str), flush=True)
 

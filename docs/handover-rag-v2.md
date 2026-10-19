@@ -1,11 +1,28 @@
 # Handover: RAG v2
 
-For the next session. Read `CLAUDE.md`, then D-011 to D-016 in `docs/decisions.md`, then this. The running
+For the next session. Read `CLAUDE.md`, then D-011 to D-020 in `docs/decisions.md`, then this. The running
 log of the session is `docs/progress-rag-v2.md`; the owner's summary is `docs/rag-v2-results-explained.md`.
 
 **Status (2026-10-18):** RAG v2 adopted in config and verified. Branch `claude/charming-edison-sg0ehp`
 (not merged). The owner's brief for this session: the best RAG system that stays free to run, up to $2.50
 of OpenAI and $2.50 of Gemini. Spent: OpenAI $2.15, Gemini $1.92 (`eval/spend/ledger.jsonl`).
+
+## Update, 2026-10-19: the relevance filter is in the service (D-017 to D-020)
+Branch `ccr-fe4defc0-ysiv1i`. Read D-017 to D-020 first.
+- **What it does:** search keeps 60 passages (cap 8 a document); the provider's `filter_model` (gpt-6-luna)
+  rates each 0-3 (`prompts/filter-v1.md`, 20 a call, in parallel); the answer model gets the 20 rated highest.
+  Config: `answer.filter` in `config/service.yaml`, `filter_model`/`filter_effort` per provider (Gemini has
+  none, so a Gemini-keyed service doesn't filter). Code: `pipeline.filter_step`, `by_rating`, `parse_grades`.
+- **What it shows:** a `search` event while the filter reads; the `retrieval` event's `filter` (status,
+  model, read, kept, seconds) and `pool` (every passage read: search rank, rating, chosen or not; chosen ones
+  are brief and point to `evidence` by `n`). The trail has a filter step and a table of all 60; Render's log
+  records all 60 compactly (`service.app.log_view`).
+- **Verified offline:** `econ verify-search` (`reports/search-verification.md`): same 60 passages, the
+  measured prompt byte for byte, the same 20 from the measured ratings, the same judged recall.
+- **Not yet done live:** the OpenAI account ran out of credit during D-019. After credit is added, ask one
+  question through `econ ask --confirm` (or the deployed service) and check the filter event before relying
+  on it: that is the first live call of the filter inside the service.
+- **Spend so far:** OpenAI $2.88 of $3.50 (eval budget), Gemini $2.26 of $2.50.
 
 ## What changed in the service
 - `retrieval.enrichment: S384-noprefix-nocite.luna-enrich-v1` (context notes in front of each chunk for

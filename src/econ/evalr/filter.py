@@ -18,7 +18,7 @@ from dataclasses import replace
 import yaml
 
 from econ import config
-from econ.answer import pipeline
+from econ.answer import pipeline, prompts
 from econ.evalr import grid2, judge, llmcall, metrics, systems
 from econ.evalr.judged import Need
 
@@ -33,20 +33,16 @@ def calls_for(need: Need, rows: list[int], question: str, f: dict) -> list[tuple
     """Calls for one need, each with its map from local passage id to chunk id."""
     docs = config.sources().by_id()
     cs = systems.chunks()
-    system = (config.ROOT / "prompts" / "eval" / f"{PROMPT}.md").read_text(encoding="utf-8")
+    system = prompts.load(PROMPT)  # the service's locked prompt (moved from prompts/eval/ in D-020)
     out = []
     for g in range(0, len(rows), f["group"]):
         part = rows[g : g + f["group"]]
         ids = {f"p{g + i + 1}": cs[r]["chunk_id"] for i, r in enumerate(part)}
         blocks = []
         for pid, r in zip(ids, part, strict=True):
-            c, d = cs[r], docs[cs[r]["doc_id"]]
-            sec = " > ".join(c["section"]) if c["section"] else ""
-            blocks.append(
-                f'<evidence id="{pid}" document="{pipeline.defang(d.title)}" year="{d.year}" '
-                f'section="{pipeline.defang(sec)}">\n{pipeline.defang(c["text"])}\n</evidence>'
-            )
-        user = f"<question>{pipeline.defang(question)}</question>\n\n" + "\n\n".join(blocks)
+            d = docs[cs[r]["doc_id"]]
+            blocks.append(pipeline.filter_block(pid, cs[r], {"title": d.title, "year": d.year}))
+        user = pipeline.filter_user(question, blocks)
         call = llmcall.Call(
             model=f["model"],
             system=system,

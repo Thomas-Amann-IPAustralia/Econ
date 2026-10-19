@@ -13,8 +13,9 @@ run, every passage found, why each ranked, and which ones the answer cites.
 
 ```
 GitHub Pages (web/)  ──►  Render: the API (src/econ/service)  ──►  Cloud Run: the embedder (src/econ/embedder.py)
-  chat, evidence trail,       plan, hybrid search, answer,             one ONNX model behind POST /embed
-  page viewer, library        quote check, streamed events      ──►  OpenAI or Gemini (when a key is set)
+  chat, evidence trail,       plan, hybrid search, relevance           one ONNX model behind POST /embed
+  page viewer, library        filter, answer, quote check,      ──►  OpenAI or Gemini (when a key is set)
+                              streamed events
 ```
 
 Without a model key the service runs in **evidence-only mode**: search with full provenance, no generated
@@ -27,6 +28,12 @@ passage and searches the question alongside the plan's queries; against the firs
 relevant passages that reach the answer rose from 0.62 to 0.72, and on exploratory questions two judges
 preferred the new answers by about three to one. Plain-English summary:
 [docs/rag-v2-results-explained.md](docs/rag-v2-results-explained.md).
+
+**The relevance filter (D-018 to D-020).** Search keeps its first 60 passages and a small model (gpt-6-luna) rates
+each 0 to 3 for how much an answer could use it; the answer model gets the 20 rated highest. On the judged test set
+this lifted ndcg@10 from 0.67 to 0.85 and the share of a broad question's relevant passages reaching the answer
+from 0.49 to 0.64, at the same context size; blind judges preferred the resulting answers (Gemini 28 to 8, Claude
+17 to 4 on exploratory questions). The evidence trail lists all 60 passages with their ratings.
 
 ## Repository map
 

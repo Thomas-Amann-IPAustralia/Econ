@@ -135,8 +135,11 @@ class Index:
             head[i].rerank_score = round(float(scores[i]), 6)
         return [head[i] for i in order] + ranked[depth:]
 
-    def context(self, ranked: list[Selected]) -> list[Selected]:
+    def context(self, ranked: list[Selected], k: int | None = None) -> list[Selected]:
+        """The first `k` (default `context_chunks`) ranked passages, at most `per_doc_cap` from a document. A
+        larger k extends the smaller one's list: the relevance filter reads the first 60 (D-020)."""
         r = config.pipeline().retrieval
+        k = k or r.context_chunks
         out, per_doc = [], {}
         for s in ranked:
             d = self.chunks[s.row]["doc_id"]
@@ -144,7 +147,7 @@ class Index:
                 continue
             per_doc[d] = per_doc.get(d, 0) + 1
             out.append(s)
-            if len(out) == r.context_chunks:
+            if len(out) == k:
                 break
         return out
 

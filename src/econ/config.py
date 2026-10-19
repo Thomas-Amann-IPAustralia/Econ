@@ -183,6 +183,10 @@ class Provider(Strict):
     answer_effort: Literal["none", "minimal", "low", "medium", "high"] | None = None
     plan_model: str
     plan_effort: Literal["none", "minimal", "low", "medium", "high"] | None = None
+    # The relevance filter's model (D-018). None: this provider doesn't filter, and the answer model gets the
+    # first stage's top passages (only gpt-6-luna has been measured as the filter).
+    filter_model: str | None = None
+    filter_effort: Literal["none", "minimal", "low", "medium", "high"] | None = None
 
 
 class LlmCfg(Strict):
@@ -197,15 +201,27 @@ class LlmCfg(Strict):
     @model_validator(mode="after")
     def _priced(self) -> LlmCfg:
         for p in self.providers:
-            for m in (p.answer_model, p.plan_model):
-                if m not in self.prices_per_mtok:
+            for m in (p.answer_model, p.plan_model, p.filter_model):
+                if m is not None and m not in self.prices_per_mtok:
                     raise ValueError(f"no price for model {m!r}")
         return self
+
+
+class FilterCfg(Strict):
+    """The relevance filter (D-018, D-020): a small model rates the first `read` passages of the search 0-3,
+    `group` a call (the calls run in parallel), and the answer model gets the `retrieval.context_chunks`
+    rated highest, ties in search order."""
+
+    prompt: str
+    read: int = 60
+    group: int = 20
+    max_output_tokens: int = 3000
 
 
 class AnswerCfg(Strict):
     prompt: str
     plan_prompt: str
+    filter: FilterCfg | None = None  # None: no filter; the answer model gets the search's top passages
     max_queries: int = 4
     # Search the standalone question as well as the plan's queries (D-013), so a plan that misses can't
     # take the question's own words out of the search.

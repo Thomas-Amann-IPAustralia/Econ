@@ -167,3 +167,10 @@ account ran out of credit with 3 needs unanswered; on the other 57 (the owner's 
 answers 28 to 8 (exploratory 18 to 4) and Claude, blind, 17 to 4; all 57 pass the check. Recommended to the owner:
 adopt the filter in the service (a design is in D-019). Spend: OpenAI $2.88 of $3.50 (account credit exhausted),
 Gemini $2.26 of $2.50.
+
+## 2026-10-19 — The relevance filter in the service (D-020)
+The owner adopted the filter. Built: config (`answer.filter`, `filter_model` per provider), the locked prompt
+filter-v1, the pipeline step (parallel calls, validation, fallback), the `search` event and `retrieval.pool`
+(all 60 passages with search rank, rating and selection), the compact log, the trail's filter step and 60-row
+table, and `econ verify-search` checks for the filter (same 60, same prompt, same 20 from the measured
+ratings). 92 tests pass. Not yet run live: the OpenAI account needs credit first.
