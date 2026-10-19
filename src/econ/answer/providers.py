@@ -6,6 +6,10 @@ set store=false, so the provider keeps no copy of prompts full of document text.
 
 These adapters follow the providers' documented REST shapes (checked 2026-10-18). No live call has been
 made yet: the first key that arrives needs the smoke test in SOP §20.4.
+
+Streaming (D-024): given `on_text`, the OpenAI adapter streams the reply (server-sent events) and passes each
+piece of output text to it as it arrives, so the service can show the answer's prose while it is written.
+The reply it returns is the same as without streaming. Other adapters ignore `on_text`.
 """
 
 from __future__ import annotations
@@ -13,7 +17,7 @@ from __future__ import annotations
 import json
 import os
 import time
-from collections.abc import Callable
+from collections.abc import Callable, Iterator
 from dataclasses import dataclass, field
 
 import httpx
@@ -98,6 +102,7 @@ class Model:
         model: str,
         effort: str | None,
         max_output_tokens: int,
+        on_text: Callable[[str], None] | None = None,
     ) -> Reply:
         raise NotImplementedError
 
@@ -112,7 +117,9 @@ class OpenAIModel(Model):
         # "flex" (evaluation only): half price, slower, and may be refused when capacity is short.
         self.service_tier = service_tier
 
-    def generate_json(self, *, system, user, schema, schema_name, model, effort, max_output_tokens) -> Reply:
+    def generate_json(
+        self, *, system, user, schema, schema_name, model, effort, max_output_tokens, on_text=None
+    ) -> Reply:
         body = {
             "model": model,
             "instructions": system,
@@ -128,51 +135,106 @@ class OpenAIModel(Model):
         if self.service_tier:
             body["service_tier"] = self.service_tier
         t = time.time()
-        try:
-            r = post_once_more(
-                f"{self.base}/responses",
-                json=body,
-                timeout=self.timeout,
-                headers={"Authorization": f"Bearer {self.key}"},
-            )
-        except httpx.HTTPError as e:
-            raise ProviderError(f"openai: {type(e).__name__}") from e
-        if r.status_code != 200:
-            raise ProviderError(f"openai: HTTP {r.status_code}: {r.text[:300]}")
-        d = r.json()
-        u = d.get("usage") or {}
-        cached = (u.get("input_tokens_details") or {}).get("cached_tokens", 0) or 0
-        usage = Usage(
-            model=model,
-            input=(u.get("input_tokens", 0) or 0) - cached,
-            cached_input=cached,
-            output=u.get("output_tokens", 0) or 0,
-            reasoning=(u.get("output_tokens_details") or {}).get("reasoning_tokens", 0) or 0,
-            seconds=round(time.time() - t, 2),
-        ).price()
-        if d.get("status") == "incomplete":
-            reason = (d.get("incomplete_details") or {}).get("reason")
-            raise ProviderError(f"openai: incomplete ({reason})", usage)
-        text, refusal = None, None
-        for item in d.get("output", []):
-            if item.get("type") != "message":
-                continue
-            for c in item.get("content", []):
-                if c.get("type") == "output_text":
-                    text = c.get("text")
-                elif c.get("type") == "refusal":
-                    refusal = c.get("refusal")
-        if refusal:
-            raise ProviderError(f"openai: refused: {refusal[:200]}", usage)
-        if text is None:
-            raise ProviderError("openai: no output text", usage)
-        try:
-            data = json.loads(text)
-        except json.JSONDecodeError as e:
-            raise ProviderError("openai: output is not JSON", usage) from e
-        return Reply(
-            data=data, usage=usage, raw_finish=d.get("status", ""), meta={"response_id": d.get("id")}
-        )
+        url, headers = f"{self.base}/responses", {"Authorization": f"Bearer {self.key}"}
+        if on_text is not None:
+            d = self._stream(url, body, headers, on_text)
+        else:
+            try:
+                r = post_once_more(url, json=body, timeout=self.timeout, headers=headers)
+            except httpx.HTTPError as e:
+                raise ProviderError(f"openai: {type(e).__name__}") from e
+            if r.status_code != 200:
+                raise ProviderError(f"openai: HTTP {r.status_code}: {r.text[:300]}")
+            d = r.json()
+        return _openai_reply(d, model, time.time() - t)
+
+    def _stream(self, url: str, body: dict, headers: dict, on_text: Callable[[str], None]) -> dict:
+        """The response object from a streamed call, passing output text to `on_text` as it arrives. A
+        transient failure is retried once, but only before any text has been passed on."""
+        body = {**body, "stream": True}
+        sent = False
+        for attempt in (1, 2):
+            try:
+                with httpx.stream("POST", url, json=body, timeout=self.timeout, headers=headers) as r:
+                    if r.status_code != 200:
+                        r.read()
+                        if r.status_code in TRANSIENT and attempt == 1:
+                            time.sleep(RETRY_WAIT)
+                            continue
+                        raise ProviderError(f"openai: HTTP {r.status_code}: {r.text[:300]}")
+                    final = None
+                    for ev in sse_events(r.iter_lines()):
+                        kind = ev.get("type", "")
+                        if kind == "response.output_text.delta":
+                            sent = True
+                            on_text(ev.get("delta") or "")
+                        elif kind in ("response.completed", "response.incomplete", "response.failed"):
+                            final = ev.get("response") or {}
+                        elif kind == "error":
+                            raise ProviderError(f"openai: stream error: {str(ev.get('message') or ev)[:300]}")
+                    if final is None:
+                        raise ProviderError("openai: the stream ended before the response did")
+                    return final
+            except (httpx.TimeoutException, httpx.NetworkError) as e:
+                if attempt == 2 or sent:
+                    raise ProviderError(f"openai: {type(e).__name__}") from e
+                time.sleep(RETRY_WAIT)
+            except httpx.HTTPError as e:
+                raise ProviderError(f"openai: {type(e).__name__}") from e
+        raise AssertionError("unreachable")
+
+
+def sse_events(lines) -> Iterator[dict]:
+    """The JSON payloads of a server-sent event stream, one per event."""
+    data: list[str] = []
+    for line in lines:
+        if line.startswith("data:"):
+            data.append(line[5:].strip())
+        elif not line.strip() and data:
+            payload = "\n".join(data)
+            data = []
+            if payload != "[DONE]":
+                yield json.loads(payload)
+    if data and data != ["[DONE]"]:
+        yield json.loads("\n".join(data))
+
+
+def _openai_reply(d: dict, model: str, seconds: float) -> Reply:
+    """A Reply from a Responses API response object, streamed or not."""
+    u = d.get("usage") or {}
+    cached = (u.get("input_tokens_details") or {}).get("cached_tokens", 0) or 0
+    usage = Usage(
+        model=model,
+        input=(u.get("input_tokens", 0) or 0) - cached,
+        cached_input=cached,
+        output=u.get("output_tokens", 0) or 0,
+        reasoning=(u.get("output_tokens_details") or {}).get("reasoning_tokens", 0) or 0,
+        seconds=round(seconds, 2),
+    ).price()
+    if d.get("status") == "incomplete":
+        reason = (d.get("incomplete_details") or {}).get("reason")
+        raise ProviderError(f"openai: incomplete ({reason})", usage)
+    if d.get("status") == "failed":
+        err = d.get("error") or {}
+        raise ProviderError(f"openai: failed ({str(err.get('message') or err)[:200]})", usage)
+    text, refusal = None, None
+    for item in d.get("output", []):
+        if item.get("type") != "message":
+            continue
+        for c in item.get("content", []):
+            if c.get("type") == "output_text":
+                text = c.get("text")
+            elif c.get("type") == "refusal":
+                refusal = c.get("refusal")
+    if refusal:
+        raise ProviderError(f"openai: refused: {refusal[:200]}", usage)
+    if text is None:
+        raise ProviderError("openai: no output text", usage)
+    try:
+        data = json.loads(text)
+    except json.JSONDecodeError as e:
+        raise ProviderError("openai: output is not JSON", usage) from e
+    return Reply(data=data, usage=usage, raw_finish=d.get("status", ""), meta={"response_id": d.get("id")})
 
 
 class GeminiModel(Model):
@@ -183,7 +245,9 @@ class GeminiModel(Model):
         self.key = key
         self.timeout = timeout
 
-    def generate_json(self, *, system, user, schema, schema_name, model, effort, max_output_tokens) -> Reply:
+    def generate_json(
+        self, *, system, user, schema, schema_name, model, effort, max_output_tokens, on_text=None
+    ) -> Reply:
         gen = {
             "responseMimeType": "application/json",
             "responseJsonSchema": schema,
@@ -249,12 +313,16 @@ class ScriptedModel(Model):
         self.fn, self.model = fn, model
         self.calls: list[dict] = []
 
-    def generate_json(self, *, system, user, schema, schema_name, model, effort, max_output_tokens) -> Reply:
-        self.calls.append({"schema_name": schema_name, "user": user, "model": model})
-        return Reply(
-            data=self.fn(schema_name, user),
-            usage=Usage(model=model, input=len(user) // 4, output=200).price(),
-        )
+    def generate_json(
+        self, *, system, user, schema, schema_name, model, effort, max_output_tokens, on_text=None
+    ) -> Reply:
+        self.calls.append({"schema_name": schema_name, "user": user, "model": model, "system": system})
+        data = self.fn(schema_name, user)
+        if on_text is not None:  # streamed as a provider would: the JSON text in small pieces
+            text = json.dumps(data)
+            for i in range(0, len(text), 7):
+                on_text(text[i : i + 7])
+        return Reply(data=data, usage=Usage(model=model, input=len(user) // 4, output=200).price())
 
 
 def configured() -> tuple[Model, Provider] | None:

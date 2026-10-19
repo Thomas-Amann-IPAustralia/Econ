@@ -212,3 +212,25 @@ US$0.096 Gemini. The served search's judged ndcg@10 over 178 needs: 0.6933 to 0.
 repair), so the repair's apparent loss was unjudged passages. Grid v2's choice and gain unchanged (+0.086 on
 test); depth figures within 0.01. The relevance filter's measurement needs new ratings (about US$0.15-0.20
 OpenAI), not run.
+
+## 2026-10-19 — Slow answers and constrained answers (D-024)
+- Langfuse from this session opens another project (no `econ.*` traces); diagnosed from the service's own
+  timings instead. Answer call median 19.6 s (p90 29.7 s) for about 1,100 output tokens; filter 4-10 s;
+  plan 1-2 s; search under 0.6 s. `keep-warm.yml` skipped on every run (`KEEP_WARM` unset), so cold starts
+  after 15 idle minutes add about a minute.
+- Built: the answer's prose streamed as `draft` events while it is written (text-checked, marked unchecked,
+  replaced by the checked answer; not logged); answer-v3 with plain-language explanations, conversation and
+  follow-up buttons, locked and tested, not adopted (the owner's call). 121 tests pass; UI checked headless.
+- The owner allowed US$0.50 and adopted answer-v3. Comparison (6 questions on both prompts, US$0.38): all 12
+  pass the check first time; first words at median 16.9 s (v1) and 18.7 s (v3), whole answers 41.1 s and
+  44.5 s; v3 explains more and offers follow-ups. Proposed: measure `answer_effort: low`.
+
+## 2026-10-19 — answer-v4 (D-025)
+- answer-v4: answer-v3 without its brevity instructions, adopted at the owner's request. Answer-stage anatomy:
+  ~45 tokens/s; prose 35% of the JSON, quotes 33%, claim restatements 18%. Proposed: cite by sentence number.
+
+## 2026-10-19 — Sentence citations by code; Copy (D-026)
+- answer-v5: sentence ids in the prose, claims and quotes built by `econ.answer.cite`; adopted (the owner
+  deferred the choice). 6 questions on v4 and v5 (US$0.42): whole answer 50.2 s to 31.6 s, output tokens
+  2,134 to 1,026, prose as long, 6 of 6 pass. Copy button added. 128 tests pass; UI checked headless.
+

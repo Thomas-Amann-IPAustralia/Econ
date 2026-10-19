@@ -13,8 +13,9 @@ live: the knowledge base, the serving index (with search-only context notes), th
 answers with gpt-6.1-sol (the filter's first live call passed, D-022); Langfuse tracing is built and waits
 for its keys on Render. Measured: retrieval on a judged test set of 178 needs (silver known-item plus exploratory
 questions like the owner's, graded by a Gemini judge), end-to-end answers on 60 test needs, and the
-out-of-scope set; both providers have made live calls. The owner adopted gpt-6.1-sol and kept answer-v1
-(D-021). The scanned reports' garbled OCR is repaired (D-022). Progress log: `docs/progress-rag-v2.md`.
+out-of-scope set; both providers have made live calls. The owner adopted gpt-6.1-sol (D-021) and answer-v3,
+with the answer's prose streamed while it is written (D-024), then answer-v4 (no brevity, D-025)
+and answer-v5 (sentence citations written by code, D-026). The scanned reports' garbled OCR is repaired (D-022). Progress log: `docs/progress-rag-v2.md`.
 
 The method is `docs/sop-agent-construction-v2.md` (the owner's SOP). Read `docs/decisions.md` (the
 decision log) and the latest `docs/handover-*.md` before acting.
@@ -114,13 +115,22 @@ decision log) and the latest `docs/handover-*.md` before acting.
   stemmer corrupted stems under concurrency, D-013).
 
 ## The answer (built; tested live in D-011, D-014, D-015)
-- Prompts `prompts/answer-v1.md` (in use; `answer-v2.md` was not adopted, D-021),
+- Prompts `prompts/answer-v5.md` (in use since D-026: the model cites numbered sentences like `[3.2]` and
+  code writes the claims and quotes, `econ.answer.cite`), built on answer-v4 (D-025: no brevity) and answer-v3
+  (D-024: plainer English, explains general terms and methods, conversational, two or three `follow_ups`
+  shown as buttons); `answer-v1.md` before them; `answer-v2.md` not adopted, D-021,
   `prompts/plan-v2.md` (in use since D-013) and `prompts/filter-v1.md` (in use since D-020), locked with
   their schemas in `prompts/versions.lock`. A change is a new version (`econ lock-prompts` after adding the
   file). Eval-only prompts live in `prompts/eval/`.
 - The answer: `coverage` (complete | partial | not_in_kb), prose with claim markers, `claims` with
-  verbatim quotes of numbered evidence, `gaps`. The check (`econ.answer.check`) verifies every quote
-  against the passage it cites, the markers, the coverage and the text checks; one retry, then flagged.
+  verbatim quotes of numbered evidence, `gaps`, and from answer-v3 `follow_ups` (schema `answer3`). From
+  answer-v5 (schema `answer5`) the model writes no claims: `cite.build` makes each group of sentence ids a
+  claim quoting those sentences and rewrites it as `[k]`, so the UI and the check see the same shape. The
+  check (`econ.answer.check`) verifies every quote against the passage it cites, the markers, the coverage
+  and the text checks (quote-length rules apply only to model-written quotes); one retry, then flagged.
+- Each finished answer has a Copy button (the answer, what's not covered, and a numbered source list).
+- Drafts (D-024): the answer's prose is streamed as `draft` events while it is written (OpenAI only), each
+  piece text-checked, shown as not yet checked and replaced by the checked answer; drafts are not logged.
 - Providers: OpenAI (`gpt-6.1-sol` answers, adopted by the owner without a comparison, D-021; `gpt-6-luna`
   plans and filters), with Gemini (`gemini-3.8-flash`, `gemini-3.5-flash-lite`) as the fallback if no OpenAI
   key is set. Output limits include
@@ -152,7 +162,8 @@ Commit code, run, then commit outputs. Australian spelling, sentence-case headin
 ## When to stop and ask the owner
 - New high-severity sweep findings on real items: propose allowlist entries.
 - Spending money on model calls: ask before every paid call, however small (D-021), unless the owner has
-  given a budget for the work at hand (D-022: up to $3 OpenAI and $2 Gemini; spent $0.06 and $0.26).
+  given a budget for the work at hand (D-022: up to $3 OpenAI and $2 Gemini; spent $0.06 and $0.26; D-024: up
+  to $0.50 OpenAI, spent $0.38; D-026: up to $0.75 OpenAI, spent $0.42).
 - Adopting a measured result outside the choices the owner delegated.
 - Changing the answer format, what the chatbot may refuse, or publishing anything new. The reports' text
   in `library/` and their PDFs on the Pages site are approved, with the acknowledgement in the README

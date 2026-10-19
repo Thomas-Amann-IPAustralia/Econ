@@ -1,6 +1,6 @@
 """One question, start to finish, as a stream of events the UI renders as they arrive.
 
-  meta -> plan -> search -> retrieval -> answer -> check -> done     (an answer model and the filter)
+  meta -> plan -> search -> retrieval -> draft* -> answer -> check -> done   (an answer model and the filter)
   meta -> plan -> retrieval -> answer -> check -> done               (an answer model, no filter)
   meta -> retrieval -> done                                          (evidence-only mode)
 
@@ -14,6 +14,10 @@
 - retrieval: `evidence` is exactly what the answer model sees; `pool` is every passage the filter read,
   in search order, with its search rank, its rating and whether it was chosen (a chosen passage's entry is
   brief and names its evidence number `n`; its text is in `evidence`).
+- draft (D-024): while the answer model writes, its prose so far is sent in pieces (`text`), so the reader
+  isn't left waiting for the whole reply. A draft is not yet checked; the UI shows it as such and the
+  `answer` event replaces it. Each piece is sent only if the prose so far passes the text checks; if it
+  doesn't, one `withheld` draft says so and no more are sent for that attempt.
 - answer and check: a failed check goes back to the model once, with its errors wrapped as data. An
   answer that still fails is returned flagged, never passed silently.
 - tracing (D-022): each question is one trace (`econ.tracing`), its steps observations started from an
@@ -22,20 +26,23 @@
 
 from __future__ import annotations
 
+import json
+import queue
 import re
+import threading
 import time
 import uuid
-from collections.abc import Iterator
+from collections.abc import Generator, Iterator
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass, field
 
 from pydantic import ValidationError
 
 from econ import config, textcheck, tracing
-from econ.answer import prompts
-from econ.answer.check import check
+from econ.answer import cite, prompts
+from econ.answer.check import Result, check
 from econ.answer.providers import Model, ProviderError, Usage
-from econ.answer.schema import Answer, Grades, Plan, strict_schema
+from econ.answer.schema import Answer, AnswerV5, Grades, Plan, strict_schema
 from econ.kb.bm25 import tokenize
 from econ.retrieval.index import EmbedderClient, Index
 
@@ -146,13 +153,15 @@ def rerank_step(svc: Services, ranked: list, query: str) -> dict:
     }
 
 
-def evidence_block(n: int, chunk: dict, doc: dict) -> str:
+def evidence_block(n: int, chunk: dict, doc: dict, body: str | None = None) -> str:
+    """A passage as the answer model sees it; `body` replaces its text (the numbered sentences, D-026)."""
     pages = chunk["pages"]
     pg = f"{pages[0]}" if len(pages) == 1 else f"{pages[0]}-{pages[-1]}"
     section = " > ".join(chunk["section"]) if chunk["section"] else ""
     return (
         f'<evidence n="{n}" document="{defang(doc["title"])}" year="{doc["year"]}" '
-        f'section="{defang(section)}" pages="{pg}">\n{defang(chunk["text"])}\n</evidence>'
+        f'section="{defang(section)}" pages="{pg}">\n{body if body is not None else defang(chunk["text"])}'
+        "\n</evidence>"
     )
 
 
@@ -288,6 +297,97 @@ def trace_check(root, ans: Answer, res, attempt: int) -> None:
         root.score_trace("claims_verified", verified / len(claims) if claims else 0.0, "NUMERIC")
         root.score_trace("coverage", ans.coverage, "CATEGORICAL")
         root.score_trace("attempts", attempt, "NUMERIC")
+
+
+# --- drafts: the answer's prose while it is written (D-024) -------------------------------------------------
+
+_PROSE_KEY = re.compile(r'"answer"\s*:\s*"')
+
+
+def partial_string(buf: str, start: int) -> str:
+    """The JSON string that opens at `start` (just after its quote), decoded as far as it has arrived."""
+    i, n = start, len(buf)
+    while i < n:
+        ch = buf[i]
+        if ch == "\\":
+            i += 2
+            continue
+        if ch == '"':
+            break
+        i += 1
+    seg = buf[start : min(i, n)]
+    # Drop an escape cut off at the end: a lone backslash, a partial \uXXXX, or the first half of a
+    # surrogate pair. A backslash escapes only when it ends an odd run of backslashes.
+    for cut in (r"\\+(u[0-9a-fA-F]{0,3})?$", r"\\+u[dD][89abAB][0-9a-fA-F]{2}$"):
+        m = re.search(cut, seg)
+        if m:
+            run = len(m.group(0)) - len(m.group(0).lstrip("\\"))
+            if run % 2:
+                seg = seg[: m.start() + run - 1]
+    try:
+        return json.loads(f'"{seg}"')
+    except json.JSONDecodeError:
+        return ""
+
+
+class ProseReader:
+    """The `answer` field's text so far, from the answer's JSON as it streams in (the schema puts it second,
+    after `coverage`)."""
+
+    def __init__(self):
+        self.buf, self.start = "", None
+
+    def feed(self, piece: str) -> str:
+        self.buf += piece
+        if self.start is None:
+            m = _PROSE_KEY.search(self.buf)
+            if not m:
+                return ""
+            self.start = m.end()
+        return partial_string(self.buf, self.start)
+
+
+def answer_call(svc: Services, root, attempt: int, **kw) -> Generator[dict, None, object]:
+    """One answer call, run in a worker thread so its prose can be sent as drafts while it streams. Yields
+    the draft events; returns the Reply (or raises the call's ProviderError)."""
+    pieces: queue.Queue = queue.Queue()
+    out: dict = {}
+
+    def work():
+        try:
+            out["rep"] = generate(
+                svc, root, "econ.answer", metadata={"attempt": attempt}, on_text=pieces.put, **kw
+            )
+        except BaseException as e:  # noqa: BLE001 - handed back to the caller's thread
+            out["err"] = e
+        finally:
+            pieces.put(None)
+
+    threading.Thread(target=work, daemon=True).start()
+    reader, sent, withheld, finished = ProseReader(), 0, False, False
+    while not finished:
+        got = [pieces.get()]
+        while got[-1] is not None:  # take whatever else has arrived, so drafts come in readable pieces
+            try:
+                got.append(pieces.get_nowait())
+            except queue.Empty:
+                break
+        finished = got[-1] is None
+        text = "".join(g for g in got if g)
+        if not text or withheld:
+            continue
+        prose = reader.feed(text)
+        if len(prose) <= sent:
+            continue
+        if textcheck.high(textcheck.scan(prose)):
+            withheld = True
+            yield {"event": "draft", "attempt": attempt, "withheld": True}
+            continue
+        yield {"event": "draft", "attempt": attempt, "text": prose[sent:]}
+        sent = len(prose)
+    if "err" in out:
+        raise out["err"]
+    return out["rep"]
 
 
 def run(req: Request, svc: Services) -> Iterator[dict]:
@@ -519,18 +619,27 @@ def _run(req: Request, svc: Services, root) -> Iterator[dict]:
         return
 
     # --- answer and check ----------------------------------------------------------------------------
+    a = scfg.answer
+    schema = prompts.schema_for(a.prompt)
+    by_sentence = schema is AnswerV5  # D-026: the model cites sentence ids; code writes the quotes
     passages = {e["n"]: {"chunk_id": e["chunk_id"], "text": e["text"]} for e in evidence}
-    blocks = "\n\n".join(
-        evidence_block(e["n"], svc.index.chunks[chosen[i].row], svc.index.docs[e["doc_id"]])
-        for i, e in enumerate(evidence)
-    )
+    sentence_table: dict[tuple[int, int], str] = {}
+    shown = []
+    for i, e in enumerate(evidence):
+        chunk, doc = svc.index.chunks[chosen[i].row], svc.index.docs[e["doc_id"]]
+        if by_sentence:
+            body, table = cite.numbered(e["n"], chunk["text"], defang)
+            sentence_table.update({(e["n"], k): v for k, v in table.items()})
+            shown.append(evidence_block(e["n"], chunk, doc, body=body))
+        else:
+            shown.append(evidence_block(e["n"], chunk, doc))
+    blocks = "\n\n".join(shown)
     base_user = (
         _history_block(req.history)
         + _context_block(req.context)
         + blocks
         + f"\n\n<question>\n{defang(standalone)}\n</question>"
     )
-    a = scfg.answer
     errors_prev: list[str] = []
     final = None
     for attempt in (1, 2):
@@ -542,20 +651,20 @@ def _run(req: Request, svc: Services, root) -> Iterator[dict]:
                 + defang("\n".join(errors_prev))
                 + "\n</errors>"
             )
+        call = dict(
+            system=prompts.load(a.prompt),
+            user=user,
+            schema=strict_schema(schema),
+            schema_name="answer",
+            model=p.answer_model,
+            effort=p.answer_effort,
+            max_output_tokens=scfg.llm.max_output_tokens,
+        )
         try:
-            rep = generate(
-                svc,
-                root,
-                "econ.answer",
-                metadata={"attempt": attempt},
-                system=prompts.load(a.prompt),
-                user=user,
-                schema=strict_schema(Answer),
-                schema_name="answer",
-                model=p.answer_model,
-                effort=p.answer_effort,
-                max_output_tokens=scfg.llm.max_output_tokens,
-            )
+            if a.stream_drafts:
+                rep = yield from answer_call(svc, root, attempt, **call)
+            else:
+                rep = generate(svc, root, "econ.answer", metadata={"attempt": attempt}, **call)
         except ProviderError as e:
             if e.usage:
                 usages.append(e.usage)
@@ -564,20 +673,33 @@ def _run(req: Request, svc: Services, root) -> Iterator[dict]:
         usages.append(rep.usage)
         timings[f"answer_{attempt}"] = round(time.time() - t, 2)
         try:
-            ans = Answer.model_validate(rep.data)
+            ans = schema.model_validate(rep.data)
         except ValidationError as e:
             errors_prev = [f"the output did not match the answer schema: {str(e)[:300]}"]
             continue
-        res = check(
-            ans,
-            passages,
-            min_quote_words=a.min_quote_words,
-            quote_claim_ratio=a.quote_claim_ratio,
-            max_quote_words=a.max_quote_words,
-        )
+        if by_sentence:
+            # The quotes are whole sentences copied by code, so the length rules for quotes don't apply; the
+            # check still verifies every quote, marker, the coverage and the text checks.
+            ans, cite_errors = cite.build(ans, sentence_table)
+            res = check(ans, passages, min_quote_words=1, quote_claim_ratio=0.0, max_quote_words=10**6)
+            if cite_errors:
+                res = Result(passed=False, errors=cite_errors + res.errors, claims=res.claims)
+        else:
+            res = check(
+                ans,
+                passages,
+                min_quote_words=a.min_quote_words,
+                quote_claim_ratio=a.quote_claim_ratio,
+                max_quote_words=a.max_quote_words,
+            )
         final = (ans, res, attempt)
         trace_check(root, ans, res, attempt)
-        yield {"event": "answer", "attempt": attempt, **ans.model_dump()}
+        yield {
+            "event": "answer",
+            "attempt": attempt,
+            "citations_by": "sentence" if by_sentence else "quote",
+            **ans.model_dump(),
+        }
         yield {"event": "check", "attempt": attempt, **res.as_dict()}
         if res.passed:
             break

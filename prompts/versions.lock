@@ -9,6 +9,21 @@
     "schema_sha256": "385f1d567dabf1a6",
     "sha256": "871098355d27afc6"
   },
+  "answer-v3": {
+    "schema": "answer3",
+    "schema_sha256": "829389a172791fbf",
+    "sha256": "3fa7025f739db9ec"
+  },
+  "answer-v4": {
+    "schema": "answer3",
+    "schema_sha256": "829389a172791fbf",
+    "sha256": "bc3fe15cdb242923"
+  },
+  "answer-v5": {
+    "schema": "answer5",
+    "schema_sha256": "db474714a4d4954f",
+    "sha256": "bbe7fca961070367"
+  },
   "filter-v1": {
     "schema": "filter",
     "schema_sha256": "27cb0355c1a50e85",

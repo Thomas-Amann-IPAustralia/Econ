@@ -61,6 +61,29 @@ Branch `ccr-fe4defc0-ysiv1i`. Read D-017 to D-020 first.
   the new index, the tracing and the front end.
 - **Spend this round:** Gemini $0.26 of the $2 given, OpenAI about $0.06 of the $3 given.
 
+## Update, 2026-10-19 (latest): slow answers, answer-v3 (D-024)
+- **Streaming:** `answer.stream_drafts: true`; the answer's prose arrives as `draft` events (OpenAI only), so
+  the first words show after about 6-12 s instead of 25-40 s. Code: `providers.OpenAIModel._stream`,
+  `pipeline.answer_call`, `ProseReader`; UI `drawSoon`, `liveDraft`.
+- **answer-v3** (schema `answer3`, with `follow_ups`) is adopted by the owner and in config; the UI shows
+  follow-ups as buttons. Side by side with answer-v1: `reports/answers-v3-compare.md` (6 of 6 pass on both).
+- **Measured:** first words at a median 18.7 s, whole answer 44.5 s (keyword search only, locally). The answer
+  model's wait before its first word (6-19 s at medium effort) is the next thing to cut; `answer_effort: low`
+  is proposed to the owner for a measurement (about US$0.20).
+- **For the owner:** set `KEEP_WARM=true` (the keep-warm job has never run); align the Langfuse project.
+
+## Update, 2026-10-19 (latest): answer-v4 (D-025)
+- `answer.prompt: answer-v4` (answer-v3 without brevity, the owner's request). Not yet run live.
+- Two-thirds of the answer model's output is the claims' quotes and restatements; citing by sentence number
+  (the server fills in the quotes) is proposed to the owner in D-025, not built.
+
+## Update, 2026-10-19 (latest): sentence citations and Copy (D-026)
+- `answer.prompt: answer-v5`: the model cites `[passage.sentence]`; `econ.answer.cite` builds the claims and
+  quotes. Measured on 6 questions: whole answer 50.2 s (v4) to 31.6 s, US$0.040 to US$0.027, 6 of 6 pass.
+- Copy button on every finished answer (`copyAnswer` in `web/app.js`).
+- Not yet deployed: merge to `main` (Render and Pages deploy from it). Then ask one question live and check
+  `/api/health` shows prompt answer-v5 and spans exported.
+
 ## Open items
 1. **Langfuse keys on Render**: set and working (2026-10-19). The span counter on `/api/health` read 0 because
    the app was built twice; fixed on `claude/gracious-gates-x2zfot`, live once merged to `main`. Still the owner's:
@@ -78,4 +101,4 @@ Branch `ccr-fe4defc0-ysiv1i`. Read D-017 to D-020 first.
 - Grids and test sets committed before any number; deviations recorded as amendments before the data they
   affect (see grid retrieval-v2, amendment 1).
 - Every paid call goes through `econ.evalr.llmcall` or `econ.evalr.judge` (cached, metered, capped).
-- Next free decision number: **D-024**.
+- Next free decision number: **D-027**.

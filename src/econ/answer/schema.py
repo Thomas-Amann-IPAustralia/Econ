@@ -8,6 +8,10 @@ The answer:
 - `claims`: each with its text and citations; a citation names an evidence passage by number and quotes
   it verbatim.
 - `gaps`: what the question asked that the evidence doesn't cover.
+- answer-v5 onwards (D-026): the model writes `answer` with sentence ids like [3.2] and no `claims`; code
+  builds the claims and their quotes from the cited sentences (`econ.answer.cite`).
+- `follow_ups` (answer-v3 onwards, D-024): two or three questions the reader might ask next, offered as
+  buttons. They are suggestions, not claims, and pass the text checks like the rest.
 
 Changing these shapes is a new prompt version and the owner's decision: the UI and other callers read them.
 """
@@ -40,6 +44,17 @@ class Answer(_Strict):
     answer: str = Field(description="Markdown prose with claim markers like [1] or [2][3].")
     claims: list[Claim]
     gaps: list[str] = Field(description="Parts of the question the evidence does not answer.")
+
+
+class AnswerV3(Answer):
+    follow_ups: list[str] = Field(description="Two or three natural next questions the reader might ask.")
+
+
+class AnswerV5(_Strict):
+    coverage: Literal["complete", "partial", "not_in_kb"]
+    answer: str = Field(description="Markdown prose; cite sentences by id, like [3.2] or [3.2][7.1].")
+    gaps: list[str] = Field(description="Parts of the question the evidence does not answer.")
+    follow_ups: list[str] = Field(description="Two or three natural next questions the reader might ask.")
 
 
 class Plan(_Strict):
