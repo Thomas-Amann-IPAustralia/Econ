@@ -274,8 +274,14 @@ function renderBot(t) {
     badges.append(h("span", { class: `badge ${cov[0]}` }, cov[1]));
     if (check) {
       const n = check.claims.length, bad = check.claims.filter((c) => !c.verified).length;
+      // answer-v5 (D-026): code copies the cited sentences, so "verbatim" is no longer the model's doing.
+      const bySentence = e.answer.citations_by === "sentence";
+      const ok = bySentence
+        ? h("span", { class: "badge ok", title: "Each claim's quotes are whole sentences, copied exactly by code from the passages the model was shown. The check does not judge whether a sentence supports its claim." },
+          `All ${n} claims cite sentences copied exactly from their sources`)
+        : h("span", { class: "badge ok" }, `All ${n} claims quote their sources verbatim`);
       badges.append(check.passed
-        ? h("span", { class: "badge ok" }, n ? `All ${n} claims quote their sources verbatim` : "Checked")
+        ? (n ? ok : h("span", { class: "badge ok" }, "Checked"))
         : h("span", { class: "badge bad", title: check.errors.join("\n") }, `${bad || "Some"} of ${n} claims failed the check`));
     }
   } else if (meta?.mode === "evidence_only" && e.retrieval) {
@@ -811,6 +817,28 @@ async function renderPage(n) {
 
 // --- wiring ---------------------------------------------------------------------------------------------
 
+// Chart tooltips on "How it works": the same text on hover and on keyboard focus. The tables carry every value too.
+function initChartTips() {
+  const tip = h("div", { class: "viz-tip", role: "tooltip" });
+  tip.hidden = true;
+  document.body.append(tip);
+  const show = (el, x, y) => {
+    tip.textContent = el.dataset.tip;
+    tip.hidden = false;
+    const r = tip.getBoundingClientRect();
+    tip.style.left = `${Math.max(8, Math.min(x + 12, window.innerWidth - r.width - 8))}px`;
+    tip.style.top = `${Math.max(8, y - r.height - 12)}px`;
+  };
+  const at = (el) => { const r = el.getBoundingClientRect(); return [r.left + r.width / 2, r.top]; };
+  const hide = () => { tip.hidden = true; };
+  document.querySelectorAll(".viz [data-tip]").forEach((el) => {
+    el.addEventListener("pointermove", (ev) => show(el, ev.clientX, ev.clientY));
+    el.addEventListener("pointerleave", hide);
+    el.addEventListener("focus", () => show(el, ...at(el)));
+    el.addEventListener("blur", hide);
+  });
+}
+
 function init() {
   document.querySelectorAll(".tab").forEach((b) => b.addEventListener("click", () => {
     document.querySelectorAll(".tab").forEach((x) => { x.classList.toggle("active", x === b); x.removeAttribute("aria-current"); });
@@ -833,6 +861,7 @@ function init() {
   });
   $("#viewer-close").addEventListener("click", () => $("#viewer").close());
   initTheme();
+  initChartTips();
   $("#pg-prev").addEventListener("click", () => viewer.pdf && renderPage(viewer.page - 1));
   $("#pg-next").addEventListener("click", () => viewer.pdf && renderPage(viewer.page + 1));
   wake();

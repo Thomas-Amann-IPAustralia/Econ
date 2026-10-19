@@ -122,3 +122,23 @@ def test_the_served_prompt_is_locked_with_its_schema():
 
     p = service().answer.prompt
     assert prompts.load(p) and prompts.schema_for(p).__name__ in ("AnswerV3", "AnswerV5")
+
+
+def test_a_claim_label_is_all_the_prose_its_ids_back_within_the_line():
+    table = {(1, 1): "Filings rose sharply.", (1, 2): "Small firms led.", (2, 1): "Designs grew."}
+    ans = AnswerV5(
+        coverage="complete",
+        answer=(
+            "## Trends\n\nFilings rose. **Small firms** led the rise. [1.1][1.2]\n\n"
+            "Designs grew [2.1]. They grew again, and fast. [2.1][1.1]"
+        ),
+        gaps=[],
+        follow_ups=[],
+    )
+    built, errors = cite.build(ans, table)
+    assert not errors
+    assert [c.text for c in built.claims] == [
+        "Filings rose. Small firms led the rise.",
+        "Designs grew",
+        "They grew again, and fast.",
+    ]

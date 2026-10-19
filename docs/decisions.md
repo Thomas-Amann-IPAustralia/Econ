@@ -1179,3 +1179,63 @@ after the run, with a test (prose, quotes and checks unaffected).
 supported (`citations_by: "quote"`) and is the fallback if sentence citations disappoint in use.
 
 **Spend:** OpenAI US$0.42 of the US$0.75 given (in the ledger, purpose `answers-v5-compare`).
+
+## D-027 — The check badge and claim labels under sentence citations (the owner's request; Claude, 2026-10-19)
+
+**Request (the owner, 2026-10-19).** Check whether the badge "All N claims quote their sources verbatim" still
+holds under answer-v5; then "reword the badge and fix the claim labels".
+
+**Checked (no model calls).**
+- Every sentence the model can cite (17,578 in the served index) is found verbatim in its passage by the
+  check, and the six answer-v5 answers of D-026 (82 claims, 181 quotes) re-verify. The badge is true, but by
+  construction: code copies the quotes, so it no longer measures anything the model did.
+- Claim labels were only the last prose sentence before a group of ids. The model often cites at the end of a
+  paragraph, so 26 of the 85 markers in those answers backed more prose than their label showed.
+- Not changed, for the record: cited sentences skip the quote-length rules (about 1,600 possible sentences
+  have under 5 words; none were cited in the six answers), and for 90 very short sentences the highlight
+  would fall inside another word of the passage.
+
+**Built.**
+- Badge, for `citations_by: "sentence"`: "All N claims cite sentences copied exactly from their sources", with
+  a tooltip saying the check does not judge whether a sentence supports its claim. answer-v4 answers keep the
+  old wording, which is still what their check tests.
+- `cite._claim_text`: a claim's label is all the prose since the previous group of ids or the start of the
+  line, whichever is later, so a paragraph-end group is labelled with the whole paragraph. On the six answers:
+  median label 31 words, longest 75. Prose, quotes and the check are unchanged. One new test.
+
+## D-028 — "How it works" rewritten for a non-technical reader, with the measured results (the owner's request; Claude, 2026-10-19)
+
+**Request (the owner, 2026-10-19).** Make the "How it works" page clearer about the performance metrics
+established, comprehensible to a non-technical audience; implicitly, it should tell a reader how far to trust
+the system.
+
+**Built** (`web/index.html`, a table style in `web/style.css`). The page now has: what the library is (24
+documents, 1,099 pages); the five steps in plain words, with the answer step updated for sentence citations
+(D-026); how it was tested (178 questions, half held back, five real staff questions, the AI grader checked by
+a second family at 95% agreement); a table of results (useful passages reaching the answer model: about 5 in 6
+for fact-finding, about 2 in 3 for broad questions, up from about half, D-018; the gold passage cited about 7 in
+10, D-019; every answer passing the citation check; blind preference 18 to 4 and 17 to 4, D-019); the 18 awkward
+questions and the two weaknesses they showed (D-015, D-021); what is guaranteed and what to check oneself (a
+quote's support for its claim, syntheses, uncited explanations of general terms, dates, the repaired scanned
+reports, D-022, and the coverage labels); and the limits of the testing (questions written for testing, AI
+judges, the answer comparison run on an earlier answer prompt, answer-v5 checked on six questions). Every
+figure is from the decision log; the example question is from `eval/testset/silver-v1.yaml`. Checked in a
+headless browser: both themes, a phone width (no horizontal scroll), no script errors.
+
+## D-029 — Charts of the measured results on "How it works" (the owner's request; Claude, 2026-10-19)
+
+**Request (the owner, 2026-10-19).** "Please use graphs to show the system's performance."
+
+**Built** (`web/index.html`, `web/style.css`, `initChartTips` in `web/app.js`). D-028's results table is
+replaced by:
+- a dot chart, before and now, of the useful evidence reaching the answer model (fact-finding 77% to 83%,
+  broad 49% to 64%; D-018);
+- stacked bars of the two judges' blind preferences on the 30 broad questions (Gemini 18 / 8 / 4, Claude
+  17 / 9 / 4; D-019), ordered current, no clear preference, earlier;
+- four figures with meters: every answer passing the citation check, 7 in 10 fact-finding answers citing the
+  exact passage (D-019), 13 of 18 awkward questions handled as intended (D-015), 95% grader agreement (D-012).
+Each chart has a "Show as a table" twin, a legend and direct labels; tooltips show the same text on hover and
+keyboard focus. Plain HTML and CSS, no chart library. Colours: blue and red poles with a neutral grey, and a
+grey "before" mark, checked with the dataviz palette validator against both themes' backgrounds (colour-blind
+separation and contrast pass; the greys are neutral by design and carried by labels). Checked in a headless
+browser: both themes, a phone width (no horizontal scroll), no script errors.
