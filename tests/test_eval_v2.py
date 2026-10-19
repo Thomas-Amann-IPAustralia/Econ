@@ -191,3 +191,34 @@ def test_needs_without_an_answer_are_left_out_of_both_settings(monkeypatch):
     ns = [Need(i, "explore", "trend", "q", "narr", "test") for i in ("a", "b")]
     kept, out = answers2.answered(ns)
     assert [n.id for n in kept] == ["a"] and out == ["b"]  # a flagged answer stays; no answer at all goes
+
+
+def test_a_topup_merges_new_grades_and_writes_nothing_if_a_reply_is_incomplete(tmp_path, monkeypatch):
+    cs = [{"chunk_id": f"c{i}", "doc_id": "doc", "section": [], "text": "t", "tokens": 1} for i in range(3)]
+    monkeypatch.setattr(systems, "chunks", lambda: cs)
+
+    class D:
+        title, year = "T", 2020
+
+    monkeypatch.setattr(judge.config, "sources", lambda: type("S", (), {"by_id": lambda self: {"doc": D}})())
+    monkeypatch.setattr(judge.config, "path", lambda rel: tmp_path / rel)
+    (tmp_path / "eval/judgments").mkdir(parents=True)
+    old = {"chunk_id": "c0", "grade": 1, "judge": "j", "need": "n", "source": "pool"}
+    p = tmp_path / "eval/judgments/set.jsonl"
+    p.write_text(json.dumps(old) + "\n")
+    need = Need("n", "explore", "trend", "q", "narr", "test")
+
+    def reply(full):
+        def run_many(calls):
+            ids = judge.requests_for(need, cs[1:], model="m", effort="low")[0][1]
+            grades = [{"id": k, "grade": 2} for k in ids][: None if full else 1]
+            return [{"data": {"grades": grades}, "cost_usd": 0.01, "cached": False} for _ in calls]
+
+        return run_many
+
+    monkeypatch.setattr(llmcall, "run_many", reply(full=False))
+    res = judge.topup([need], {"n": ["c1", "c2"]}, name="set", source="s", model="m", effort="low")
+    assert res["failed"] == ["n"] and res["graded"] == 0 and p.read_text().count("\n") == 1
+    monkeypatch.setattr(llmcall, "run_many", reply(full=True))
+    res = judge.topup([need], {"n": ["c1", "c2"]}, name="set", source="s", model="m", effort="low")
+    assert res["graded"] == 2 and judge.load("set") == {("n", "c0"): 1, ("n", "c1"): 2, ("n", "c2"): 2}

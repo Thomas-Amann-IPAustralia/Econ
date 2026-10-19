@@ -169,6 +169,56 @@ def eval_retrieval_v2(
     typer.echo(f"{stage}: chosen {ch['chosen']} ({ch['primary']} dev {ch['dev'][ch['chosen']]:.3f})")
 
 
+@app.command("judge-topup")
+@loud
+def judge_topup(
+    scope: str = typer.Option(
+        "reocr", help="reocr: every fully judged context the OCR repair changed (D-022)."
+    ),
+    judgments: str = typer.Option("judged-v1", help="Judgments file under eval/judgments/."),
+    confirm: bool = typer.Option(
+        False, "--confirm", help="Make the paid calls; without it, count and price."
+    ),
+) -> None:
+    """Grade the unjudged passages in the measured contexts (gemini-3.8-flash, judge-v1, low effort; one
+    request at a time, cached and metered) and merge them into the judgments, marked by scope."""
+    from econ.evalr import grid2, judge, judged, llmcall
+
+    if scope != "reocr":
+        raise StageError(f"unknown scope {scope}")
+    model, effort = "gemini-3.8-flash", "low"
+    with run("judge-topup", _hash(), scope=scope, judgments=judgments, confirm=confirm) as r:
+        needs = judged.load()
+        targets = grid2.reocr_topup_targets(needs, grid2.grades_by_need(judgments))
+        by_id = {c["chunk_id"]: c for c in grid2.systems.chunks()}
+        calls = [
+            c
+            for n in needs
+            if n.id in targets
+            for c, _ in judge.requests_for(n, [by_id[x] for x in targets[n.id]], model=model, effort=effort)
+        ]
+        reserve = sum(llmcall.estimate(c) for c in calls if llmcall.cached(c) is None)
+        r.counts.update(needs=len(targets), passages=sum(map(len, targets.values())), requests=len(calls))
+        r.counts["reserve_usd"] = round(reserve, 4)
+        if confirm:
+            res = judge.topup(
+                needs, targets, name=judgments, source=f"{scope}-topup", model=model, effort=effort
+            )
+            r.counts.update(graded=res["graded"], cost_usd=round(res["cost_usd"], 6))
+            if res["failed"]:
+                raise StageError(
+                    f"{len(res['failed'])} requests did not grade every passage exactly once; nothing written",
+                    item=res["failed"][0],
+                    report="eval/cache/llm",
+                )
+            r.add_output(config.path("eval/judgments") / f"{judgments}.jsonl")
+    c = r.counts
+    typer.echo(
+        f"{c['passages']} passages, {c['needs']} needs, {c['requests']} requests, reserve ${c['reserve_usd']:.4f}"
+        + (f"; graded {c['graded']}, spent ${c['cost_usd']:.4f}" if confirm else " (dry run)")
+    )
+
+
 @app.command("eval-filter")
 @loud
 def eval_filter(

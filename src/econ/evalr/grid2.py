@@ -85,6 +85,26 @@ def rr_cache(name: str, rr_input: str = "text") -> systems.RerankCache:
     return _rr[key]
 
 
+def score_missing(settings: list[systems.System], needs: list[Need]) -> int:
+    """Score, locally and free, the reranker pairs these settings need that the caches lack (chunks whose
+    text changed, as in the OCR repair of D-022, have none). Returns how many pairs were scored."""
+    n_new = 0
+    for s in settings:
+        if not s.reranker:
+            continue
+        cache = rr_cache(s.reranker, s.rr_input)
+        pairs = []
+        for n in needs:
+            rq, rows = systems.candidates(s, n)
+            pairs += [(rq, systems.passage(r, s.rr_input)) for r in rows[: s.rr_depth]]
+        todo = cache.missing(pairs)
+        if todo:
+            systems.score_pairs(s.reranker, s.rr_input, todo)
+            _rr.pop(cache.key, None)
+            n_new += len(todo)
+    return n_new
+
+
 def context_rows(s: systems.System, need: Need) -> list[int]:
     rows = systems.rank(s, need, rr_cache(s.reranker, s.rr_input) if s.reranker else None)
     return systems.context(s, rows)
@@ -471,6 +491,7 @@ def run_final(needs: list[Need], judgments: str) -> dict:
     # ideal ranking). The recorded choice stands either way; this shows whether it depended on the pool.
     st = sp["stage1"]
     settings = stage1_settings(include_reference=False)
+    score_missing(settings, needs)
     dev_all = {x.name: mean_of(evaluate(x, needs, grades), "ndcg@10", split="dev") for x in settings}
     again = choose(settings, dev_all, st["margin"], st["latency_budget_s"])
     top = sorted(dev_all.items(), key=lambda kv: -kv[1])[:5]
@@ -598,6 +619,27 @@ def depth_topup_targets(needs: list[Need], grades: dict) -> dict[str, list[str]]
         if miss:
             out[n.id] = miss
     return out
+
+
+def reocr_topup_targets(needs: list[Need], grades: dict) -> dict[str, list[str]]:
+    """Unjudged passages in every context a reported number was fully judged on, after the OCR repair
+    (D-022) changed the chunks of the two scanned reports: grid v2's final (the baseline and the choice to
+    depth 20, test needs), grid v3's variants without a reranker (to depth 10, all needs; the rerankers were
+    rejected and their cached scores predate the repair), the depth grid (the adopted ranking to 60, its
+    needs) and the served search's ndcg@10 (the adopted setting to depth 10, all needs)."""
+    out: dict[str, set[str]] = {n.id: set() for n in needs}
+    test = [n for n in needs if n.split == "test"]
+    final = [spec()["stage1"]["baseline"], _choice_of("final")["chosen"]]
+    v3 = [x for x in v3_settings() if not x.endswith("/noted")]
+    parts = [
+        topup_targets(test, final, 20, grades),
+        topup_targets(needs, [*v3, final[1]], 10, grades),
+        depth_topup_targets(depth_needs(needs), grades),
+    ]
+    for part in parts:
+        for nid, cids in part.items():
+            out[nid].update(cids)
+    return {k: sorted(v) for k, v in out.items() if v}
 
 
 def per_need_depth(ctx: list[int], k: int, grades: dict[str, int]) -> dict:
