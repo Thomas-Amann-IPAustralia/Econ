@@ -274,8 +274,14 @@ function renderBot(t) {
     badges.append(h("span", { class: `badge ${cov[0]}` }, cov[1]));
     if (check) {
       const n = check.claims.length, bad = check.claims.filter((c) => !c.verified).length;
+      // answer-v5 (D-026): code copies the cited sentences, so "verbatim" is no longer the model's doing.
+      const bySentence = e.answer.citations_by === "sentence";
+      const ok = bySentence
+        ? h("span", { class: "badge ok", title: "Each claim's quotes are whole sentences, copied exactly by code from the passages the model was shown. The check does not judge whether a sentence supports its claim." },
+          `All ${n} claims cite sentences copied exactly from their sources`)
+        : h("span", { class: "badge ok" }, `All ${n} claims quote their sources verbatim`);
       badges.append(check.passed
-        ? h("span", { class: "badge ok" }, n ? `All ${n} claims quote their sources verbatim` : "Checked")
+        ? (n ? ok : h("span", { class: "badge ok" }, "Checked"))
         : h("span", { class: "badge bad", title: check.errors.join("\n") }, `${bad || "Some"} of ${n} claims failed the check`));
     }
   } else if (meta?.mode === "evidence_only" && e.retrieval) {

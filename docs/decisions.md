@@ -1179,3 +1179,26 @@ after the run, with a test (prose, quotes and checks unaffected).
 supported (`citations_by: "quote"`) and is the fallback if sentence citations disappoint in use.
 
 **Spend:** OpenAI US$0.42 of the US$0.75 given (in the ledger, purpose `answers-v5-compare`).
+
+## D-027 — The check badge and claim labels under sentence citations (the owner's request; Claude, 2026-10-19)
+
+**Request (the owner, 2026-10-19).** Check whether the badge "All N claims quote their sources verbatim" still
+holds under answer-v5; then "reword the badge and fix the claim labels".
+
+**Checked (no model calls).**
+- Every sentence the model can cite (17,578 in the served index) is found verbatim in its passage by the
+  check, and the six answer-v5 answers of D-026 (82 claims, 181 quotes) re-verify. The badge is true, but by
+  construction: code copies the quotes, so it no longer measures anything the model did.
+- Claim labels were only the last prose sentence before a group of ids. The model often cites at the end of a
+  paragraph, so 26 of the 85 markers in those answers backed more prose than their label showed.
+- Not changed, for the record: cited sentences skip the quote-length rules (about 1,600 possible sentences
+  have under 5 words; none were cited in the six answers), and for 90 very short sentences the highlight
+  would fall inside another word of the passage.
+
+**Built.**
+- Badge, for `citations_by: "sentence"`: "All N claims cite sentences copied exactly from their sources", with
+  a tooltip saying the check does not judge whether a sentence supports its claim. answer-v4 answers keep the
+  old wording, which is still what their check tests.
+- `cite._claim_text`: a claim's label is all the prose since the previous group of ids or the start of the
+  line, whichever is later, so a paragraph-end group is labelled with the whole paragraph. On the six answers:
+  median label 31 words, longest 75. Prose, quotes and the check are unchanged. One new test.

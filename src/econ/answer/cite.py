@@ -64,10 +64,12 @@ def numbered(n: int, text: str, wrap) -> tuple[str, dict[int, str]]:
 
 
 def _claim_text(segment: str) -> str:
-    """The prose sentence a group of ids ends: the last sentence of the text before it, without markdown."""
-    seg = re.sub(r"[*_`#>]+", "", GROUP.sub(" ", segment)).strip()  # earlier ids are not part of it
-    pieces = [p.strip(" -•:;") for p in re.split(r"(?<=[.!?])\s+|\n+", seg) if p.strip(" -•:;")]
-    return pieces[-1] if pieces else ""
+    """The prose a group of ids backs, without markdown: everything since the previous group of ids or the
+    start of the line, whichever is later. A group at the end of a paragraph backs the whole paragraph, so
+    the label is every sentence of it, not just the last."""
+    seg = re.sub(r"[*_`#>]+", "", segment.rsplit("\n", 1)[-1])
+    pieces = [p.strip(" -•:;") for p in re.split(r"(?<=[.!?])\s+", seg)]
+    return " ".join(p for p in pieces if re.search(r"\w", p))
 
 
 def build(prose_answer, table: dict[tuple[int, int], str]) -> tuple[AnswerV3, list[str]]:
@@ -92,7 +94,7 @@ def build(prose_answer, table: dict[tuple[int, int], str]) -> tuple[AnswerV3, li
         out.append(prose[pos : g.start()])
         if known:
             if known not in number:
-                text = _claim_text(prose[: g.start()][-600:]) or "See the cited sentences."
+                text = _claim_text(prose[pos : g.start()]) or "See the cited sentences."
                 cits = [Citation(evidence=n, quote=table[(n, s)]) for n, s in known]
                 claims.append(Claim(text=text, citations=cits))
                 number[known] = len(claims)
