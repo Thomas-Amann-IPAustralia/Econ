@@ -1202,3 +1202,22 @@ holds under answer-v5; then "reword the badge and fix the claim labels".
 - `cite._claim_text`: a claim's label is all the prose since the previous group of ids or the start of the
   line, whichever is later, so a paragraph-end group is labelled with the whole paragraph. On the six answers:
   median label 31 words, longest 75. Prose, quotes and the check are unchanged. One new test.
+
+## D-028 — "How it works" rewritten for a non-technical reader, with the measured results (the owner's request; Claude, 2026-10-19)
+
+**Request (the owner, 2026-10-19).** Make the "How it works" page clearer about the performance metrics
+established, comprehensible to a non-technical audience; implicitly, it should tell a reader how far to trust
+the system.
+
+**Built** (`web/index.html`, a table style in `web/style.css`). The page now has: what the library is (24
+documents, 1,099 pages); the five steps in plain words, with the answer step updated for sentence citations
+(D-026); how it was tested (178 questions, half held back, five real staff questions, the AI grader checked by
+a second family at 95% agreement); a table of results (useful passages reaching the answer model: about 5 in 6
+for fact-finding, about 2 in 3 for broad questions, up from about half, D-018; the gold passage cited about 7 in
+10, D-019; every answer passing the citation check; blind preference 18 to 4 and 17 to 4, D-019); the 18 awkward
+questions and the two weaknesses they showed (D-015, D-021); what is guaranteed and what to check oneself (a
+quote's support for its claim, syntheses, uncited explanations of general terms, dates, the repaired scanned
+reports, D-022, and the coverage labels); and the limits of the testing (questions written for testing, AI
+judges, the answer comparison run on an earlier answer prompt, answer-v5 checked on six questions). Every
+figure is from the decision log; the example question is from `eval/testset/silver-v1.yaml`. Checked in a
+headless browser: both themes, a phone width (no horizontal scroll), no script errors.

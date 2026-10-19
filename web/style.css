@@ -345,3 +345,10 @@ dialog#viewer[open] { display: flex; flex-direction: column; }
   .edge.live { animation: airflow-v 0.7s linear infinite; }
 }
 @keyframes airflow-v { to { background-position: 0 14px, 0 0; } }
+
+/* how it works */
+.prose table.facts { border-collapse: collapse; width: 100%; margin: 6px 0 14px; font-size: 0.9rem; }
+.prose table.facts th, .prose table.facts td { border-bottom: 1px solid var(--line); padding: 7px 8px; text-align: left; vertical-align: top; }
+.prose table.facts th { color: var(--muted); font-weight: 600; font-size: 0.82rem; }
+.prose table.facts td:first-child { width: 55%; }
+@media (max-width: 600px) { .prose table.facts td:first-child { width: auto; } }
