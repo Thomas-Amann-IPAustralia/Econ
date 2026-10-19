@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.6e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2021, the section on resident and non-resident trade mark filings compares Australian and overseas applicants’ 2020 applications, including single- and multi-party filings. It also reports the share of applications from SMEs and large firms operating in Australia."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2021:0021",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000151,
+  "input": 1168,
+  "model": "gpt-6-luna",
+  "output": 68,
+  "reasoning": 0,
+  "seconds": 1.4
+ }
+}

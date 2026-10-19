@@ -1,0 +1,79 @@
+{
+  "argv": [
+    "parse",
+    "--only",
+    "ipr-2018",
+    "--only",
+    "ipr-2021"
+  ],
+  "command": "parse",
+  "config_hash": "b926ce2acf8e3aa7",
+  "counts": {
+    "documents": 2,
+    "elements": 630,
+    "parsed_now": 0,
+    "reocr_garbled": 62,
+    "reocr_repaired": 34,
+    "text_findings": 0
+  },
+  "error": null,
+  "git": {
+    "commit": "cbf11ef6cdd51e47e0815952da102a5d0c9f1417",
+    "dirty": true,
+    "dirty_paths": [
+      "config/pipeline.yaml",
+      "src/econ/config.py",
+      "src/econ/ingest/parse.py",
+      "src/econ/ingest/reocr.py",
+      "tests/test_reocr.py"
+    ]
+  },
+  "git_at_end": {
+    "commit": "cbf11ef6cdd51e47e0815952da102a5d0c9f1417",
+    "dirty": true,
+    "dirty_paths": [
+      "config/pipeline.yaml",
+      "src/econ/config.py",
+      "src/econ/ingest/parse.py",
+      "src/econ/ingest/reocr.py",
+      "tests/test_reocr.py"
+    ]
+  },
+  "inputs": {
+    "data/raw/ipr-2018.pdf": "55501b20ad956a9863bcdd97d124195a7d41e471f8b394437a39acc3550ba97a",
+    "data/raw/ipr-2021.pdf": "037e81a6db9b0595f9928ee1e09ea235c6330ab08ca186db6493d3b5600ff717"
+  },
+  "outputs": {
+    "library/elements/ipr-2018.jsonl": "db4d8b65aa4f6d77ed9a426b5b3c372310d81e16a7e8581da842ed0b7dbe5386",
+    "library/elements/ipr-2021.jsonl": "5715f884a5b5d1b34927b4fd3f846f4651490ffa1539b123766f0000b3fcaba4",
+    "library/parse.json": "d9f66e219801131d720d47194229d765d91a51d50deb91c93139b0ab502d0d47",
+    "library/reocr.json": "ea64b075051af24089aa2b3781fbb0710d4e03b37f40d030fb2158ac53d44533"
+  },
+  "params": {
+    "only": [
+      "ipr-2018",
+      "ipr-2021"
+    ],
+    "timings": {},
+    "workers": 1
+  },
+  "run_id": "20261019T040746Z",
+  "seconds": 121.2,
+  "status": "passed",
+  "upstream": {
+    "sweep": "20261018T002149Z"
+  },
+  "versions": {
+    "docling": "2.140.0",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.0",
+    "pypdfium2": "5.14.0",
+    "python": "3.12.3",
+    "sentence-transformers": "6.1.0",
+    "tokenizers": "0.23.3",
+    "torch": "2.14.1+cpu"
+  },
+  "warnings": [
+    "ipr-2021: no licence statement found in the extracted text"
+  ]
+}

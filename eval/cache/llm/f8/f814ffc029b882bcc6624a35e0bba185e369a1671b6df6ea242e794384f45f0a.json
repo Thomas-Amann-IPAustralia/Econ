@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.6e-05,
+ "data": {
+  "context": "Australian Intellectual Property Report 2018, Chapter 2, patent statistics endnotes. These notes cite sources and clarify that a priority date establishes an applicant as first to file, describe the 2016–17 shift in Chinese patent applications, and define the Patent Cooperation Treaty."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2018:0042",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000132,
+  "input": 985,
+  "model": "gpt-6-luna",
+  "output": 67,
+  "reasoning": 0,
+  "seconds": 1.99
+ }
+}

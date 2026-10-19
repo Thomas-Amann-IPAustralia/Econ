@@ -174,3 +174,22 @@ filter-v1, the pipeline step (parallel calls, validation, fallback), the `search
 (all 60 passages with search rank, rating and selection), the compact log, the trail's filter step and 60-row
 table, and `econ verify-search` checks for the filter (same 60, same prompt, same 20 from the measured
 ratings). 92 tests pass. Not yet run live: the OpenAI account needs credit first.
+
+## 2026-10-19 — The owner's decisions; deployment checked (D-021)
+gpt-6.1-sol adopted; answer-v1 kept (answer-v2 not adopted); coverage calibration dropped; every paid call
+still needs the owner's permission. Checked live: Pages (with PDFs), Render on `main`'s commit (dense lane
+`ok`, CORS for the Pages origin), Cloud Run. Render's build rehearsed with plain pip: the service holds about
+137 MB. Left: the owner sets `OPENAI_API_KEY` on Render, then one question as the filter's live smoke test.
+
+## 2026-10-19 — Tracing, the OCR repair, the front end (D-022)
+- The filter's first live call on Render: filter ok (42 read, 20 kept, 3.85 s), the answer passed the check,
+  US$0.029.
+- Langfuse tracing (`econ.tracing`, SDK 5.0.2): one trace per question with typed observations, the build on
+  each, usage and costs, scores from the check; 11 offline tests with the real SDK; verified live and the test
+  traces deleted. Waits for the owner's Langfuse keys on Render.
+- OCR repair in the parse stage: 62 garbled elements in the 2018 and 2021 reports; 47 repaired by RapidOCR
+  under crop variants, 8 by gemini-3.8-flash (US$0.019), 7 names left as printed. 57 chunks changed, one
+  added (1,897); notes for 54 new prompts (US$0.004); index rebuilt (other documents' vectors identical);
+  602 judgments re-graded (US$0.245).
+- Front end: Light/Dark switch, gunmetal dark mode, the trail's process view with an activity log and a
+  passage strip, after wind-tunnel's pipeline view.

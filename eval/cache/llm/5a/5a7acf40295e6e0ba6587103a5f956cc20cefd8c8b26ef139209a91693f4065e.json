@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.1e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2018, the Patents section discusses Australian innovation and standard patent applications in 2017. It reports the main origins of non-resident innovation patent applications and changes in resident and non-resident standard patent filings, including use of the Patent Cooperation Treaty route."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2018:0009",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000142,
+  "input": 1070,
+  "model": "gpt-6-luna",
+  "output": 71,
+  "reasoning": 0,
+  "seconds": 3.72
+ }
+}

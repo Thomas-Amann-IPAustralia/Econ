@@ -1,0 +1,89 @@
+{
+  "argv": [
+    "verify-search"
+  ],
+  "command": "verify-search",
+  "config_hash": "3cba165ec8c6252c",
+  "counts": {
+    "filter_choice_overlap": 1.0,
+    "filter_pool_overlap": 0.9995318352059924,
+    "top10_overlap": 0.9960674157303372,
+    "top20_overlap": 0.9637640449438202
+  },
+  "error": null,
+  "git": {
+    "commit": "cbf11ef6cdd51e47e0815952da102a5d0c9f1417",
+    "dirty": true,
+    "dirty_paths": [
+      "config/eval.yaml",
+      "config/pipeline.yaml",
+      "docs/deploy.md",
+      "eval/judgments/judged-v1.jsonl",
+      "eval/spend/ledger.jsonl",
+      "src/econ/config.py",
+      "src/econ/ingest/parse.py",
+      "eval/cache/llm/00/009404af1cf42bf87a42211a26e43e25704f4e0ee8b9eba930e8ae3f3e0a274f.json",
+      "eval/cache/llm/01/0198c3b09e15bfb810d4453fb8b42145aee61842e786795674a277798d579cc9.json",
+      "eval/cache/llm/01/01e2c33841b7c15feb93435d304d54b62ebc240296277e8224dbad3d21992491.json",
+      "eval/cache/llm/02/02d536002893ae4e88d2ec215fae9ee8247ee3614a0a4d15a081af53160ad63f.json",
+      "eval/cache/llm/04/04274d2d11a6ac52556a6ecaef8cb3a95b9919f36aab25182d087aebea17eac8.json",
+      "eval/cache/llm/06/06193458fd86218ec3704c36824c2d2101579724ec6d1e83ab0928aa37f4eb25.json",
+      "eval/cache/llm/08/08d2e3f229bb3358a4e080e7adb05029bc1e3742e67f79980fba80732bb8f2cf.json",
+      "eval/cache/llm/09/092ffdceb4eb8e69dbc7e8f92a3fb154b2c39855a8fe8936544b500aef7f7192.json",
+      "eval/cache/llm/09/0930ef365ee3c44ed061a01226db29a5f74023071398c2b3286cc79b412d3a5f.json",
+      "eval/cache/llm/09/097ca4f73811ba364feead0cd6d2165b4a59b9cc1a23e800ed6864d46740c49a.json",
+      "eval/cache/llm/0a/0a5d95bdf37560c863634d4ed1040f24997af3697d4c1023e82577a4091afce6.json",
+      "eval/cache/llm/0b/0bd15dbbdf6d85b8f04c3d66ac84924e73dbf951f4e8f2d16fc253f1734aab2b.json",
+      "eval/cache/llm/0b/0beedfd9152f9dcd7f01651561e4ee857884dfa8febf5827632a33f21b1a23e0.json"
+    ]
+  },
+  "git_at_end": {
+    "commit": "cbf11ef6cdd51e47e0815952da102a5d0c9f1417",
+    "dirty": true,
+    "dirty_paths": [
+      "CLAUDE.md",
+      "config/eval.yaml",
+      "config/pipeline.yaml",
+      "docs/decisions.md",
+      "docs/deploy.md",
+      "docs/handover-rag-v2.md",
+      "docs/progress-rag-v2.md",
+      "eval/judgments/judged-v1.jsonl",
+      "eval/spend/ledger.jsonl",
+      "src/econ/config.py",
+      "src/econ/ingest/parse.py",
+      "eval/cache/llm/00/009404af1cf42bf87a42211a26e43e25704f4e0ee8b9eba930e8ae3f3e0a274f.json",
+      "eval/cache/llm/01/0198c3b09e15bfb810d4453fb8b42145aee61842e786795674a277798d579cc9.json",
+      "eval/cache/llm/01/01e2c33841b7c15feb93435d304d54b62ebc240296277e8224dbad3d21992491.json",
+      "eval/cache/llm/02/02d536002893ae4e88d2ec215fae9ee8247ee3614a0a4d15a081af53160ad63f.json",
+      "eval/cache/llm/04/04274d2d11a6ac52556a6ecaef8cb3a95b9919f36aab25182d087aebea17eac8.json",
+      "eval/cache/llm/06/06193458fd86218ec3704c36824c2d2101579724ec6d1e83ab0928aa37f4eb25.json",
+      "eval/cache/llm/08/08d2e3f229bb3358a4e080e7adb05029bc1e3742e67f79980fba80732bb8f2cf.json",
+      "eval/cache/llm/09/092ffdceb4eb8e69dbc7e8f92a3fb154b2c39855a8fe8936544b500aef7f7192.json",
+      "eval/cache/llm/09/0930ef365ee3c44ed061a01226db29a5f74023071398c2b3286cc79b412d3a5f.json"
+    ]
+  },
+  "inputs": {},
+  "outputs": {
+    "reports/search-verification.md": "55748b6a0ac298d739de15124a6b190a57345fec58ac38a0b4583975d7a626d3"
+  },
+  "params": {
+    "plans": "luna-plan-v2",
+    "setting": "plan+q:luna-plan-v2/enriched/none"
+  },
+  "run_id": "20261019T044628Z",
+  "seconds": 595.9,
+  "status": "passed",
+  "upstream": {},
+  "versions": {
+    "docling": "2.140.0",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.0",
+    "pypdfium2": "5.14.0",
+    "python": "3.12.3",
+    "sentence-transformers": "6.1.0",
+    "tokenizers": "0.23.3",
+    "torch": "2.14.1+cpu"
+  },
+  "warnings": []
+}

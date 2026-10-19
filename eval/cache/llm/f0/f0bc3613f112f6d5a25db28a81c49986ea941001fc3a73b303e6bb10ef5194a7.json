@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.8e-05,
+ "data": {
+  "context": "In the 2018 Australian Intellectual Property Report, this section of “Collaborative Research Grants Lead to Better IP Outcomes” examines how ARC Linkage collaborative research funding relates to patenting by Australian business recipients. It describes the Swinburne study’s comparison of grant recipients with similar non-recipients and its early findings on funding and patent production."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2018:0029",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000135,
+  "input": 939,
+  "model": "gpt-6-luna",
+  "output": 82,
+  "reasoning": 0,
+  "seconds": 2.34
+ }
+}

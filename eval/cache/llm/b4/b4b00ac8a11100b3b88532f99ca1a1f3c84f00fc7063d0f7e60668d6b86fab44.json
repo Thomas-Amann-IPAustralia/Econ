@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.8e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2018, Box 2, “TM-Link: a world-first international trade mark database,” follows discussion of Australian trade mark filings abroad in 2016, including filing destinations and class trends. The passage then shows a product packaging design registration record."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2018:0019",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000137,
+  "input": 1024,
+  "model": "gpt-6-luna",
+  "output": 69,
+  "reasoning": 0,
+  "seconds": 3.73
+ }
+}

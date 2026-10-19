@@ -1,11 +1,12 @@
 # Evaluation spend and the models that build and judge the test sets. Unknown keys are errors.
 # Budgets are the owner's (2026-10-18: "a maximum of $2.50 on OpenAI tokens and $2.50 on Google
-# (Gemini) tokens"; later the same day, for the answers-v2 comparison: "I approve $1 more OpenAI budget").
-# Code enforces them: a paid call starts only if the ledger's total plus the call's
+# (Gemini) tokens"; later the same day, for the answers-v2 comparison: "I approve $1 more OpenAI budget";
+# 2026-10-19, for tracing, the re-OCR and the front end: "You may use UP to $3 of OpenAI and $2 of Gemini
+# tokens", D-022). Code enforces them: a paid call starts only if the ledger's total plus the call's
 # reserve fits under `cap_fraction` of the budget, so a mis-estimate can't overrun it.
 budgets_usd:
-  openai: 3.50
-  gemini: 2.50
+  openai: 6.50
+  gemini: 4.50
 cap_fraction: 0.96
 ledger: eval/spend/ledger.jsonl
 cache: eval/cache/llm          # every paid response, kept for good (SOP §14.1)

@@ -70,6 +70,11 @@ class ParseCfg(Strict):
     ocr_min_chars_per_page: int = 100
     ocr_page_share: float = 0.5
     ocr_scale: float = 2.0
+    reocr: bool = True  # re-read garbled OCR elements from their own boxes (D-022)
+    reocr_scales: list[float] = [3.0, 4.0]
+    reocr_pads: list[float] = [2.0, 4.0, 8.0]
+    reocr_agreement: float = 0.8
+    reocr_model: str | None = None  # the vision model for what no crop variant repairs (D-022); null: none
     threads: int = 4
     table_structure: bool = True
 
@@ -242,6 +247,20 @@ class LoggingCfg(Strict):
     record_questions: bool = True
 
 
+class TracingCfg(Strict):
+    """Langfuse (SOP §20.3). Keys come from the environment under these names; the host and the
+    environment are explicit, never ambient."""
+
+    enabled: bool = True
+    required: bool = False  # true: no keys is an error, not a quiet null tracer
+    base_url: str = "https://cloud.langfuse.com"
+    public_key_env: str = "LANGFUSE_PUBLIC_KEY"
+    secret_key_env: str = "LANGFUSE_SECRET_KEY"
+    environment_env: str = "ECON_ENVIRONMENT"
+    default_environment: str = "dev"
+    sample_rate: float = 1.0
+
+
 class Service(Strict):
     cors_origins: list[str]
     embedder: EmbedderCfg = EmbedderCfg()
@@ -249,6 +268,7 @@ class Service(Strict):
     answer: AnswerCfg
     limits: LimitsCfg = LimitsCfg()
     logging: LoggingCfg = LoggingCfg()
+    tracing: TracingCfg = TracingCfg()
 
 
 # --- loading -------------------------------------------------------------------------------------

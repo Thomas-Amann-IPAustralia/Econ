@@ -1,7 +1,6 @@
 # The Render API service and its calls to the Cloud Run embedder and the answer model.
-# Model ids and prices were checked on the providers' pages on 2026-10-18. The answer models are
-# provisional defaults so the service can run once a key exists; the owner adopts a model after the
-# agent evaluation (SOP §20.5). Unknown keys are errors.
+# Model ids and prices were checked on the providers' pages on 2026-10-18. The owner adopted OpenAI's
+# gpt-6.1-sol as the answer model (D-021); Gemini answers only if no OpenAI key is set. Unknown keys are errors.
 
 cors_origins:
   - https://thomas-amann-ipaustralia.github.io
@@ -71,3 +70,13 @@ limits:
 
 logging:
   record_questions: true           # one JSON line per answer on stdout (Render's log)
+
+tracing:                           # Langfuse (SOP §20.3, D-022): one trace per question, one session a conversation
+  enabled: true
+  required: false                  # true once the keys are on Render: then a missing key stops the service
+  base_url: https://cloud.langfuse.com   # Langfuse Cloud EU
+  public_key_env: LANGFUSE_PUBLIC_KEY
+  secret_key_env: LANGFUSE_SECRET_KEY
+  environment_env: ECON_ENVIRONMENT      # prod on Render (render.yaml); dev elsewhere; eval for eval runs
+  default_environment: dev
+  sample_rate: 1.0                 # every trace kept

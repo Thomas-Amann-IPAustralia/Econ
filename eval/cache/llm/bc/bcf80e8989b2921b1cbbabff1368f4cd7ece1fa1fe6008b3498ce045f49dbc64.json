@@ -1,0 +1,38 @@
+{
+ "cost_usd": 0.001841,
+ "data": {
+  "grades": [
+   {
+    "grade": 0,
+    "id": "p1"
+   },
+   {
+    "grade": 0,
+    "id": "p2"
+   },
+   {
+    "grade": 0,
+    "id": "p3"
+   },
+   {
+    "grade": 0,
+    "id": "p4"
+   }
+  ]
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "judge:judge-v1:gemini-3.8-flash",
+ "schema_name": "grades",
+ "tag": "explore-trend-5",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001841,
+  "input": 1955,
+  "model": "gemini-3.8-flash",
+  "output": 100,
+  "reasoning": 0,
+  "seconds": 1.92
+ }
+}

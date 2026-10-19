@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7e-05,
+ "data": {
+  "context": "In the 2021 Australian Intellectual Property Report, Chapter 7, “Trade Marks and Exports,” this passage summarises 2020 IP Australia research using Australian customs and firm microdata on how trade marks relate to export entry, performance and resilience to shocks, including exchange-rate changes and tariff reductions."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2021:0058",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00014,
+  "input": 1036,
+  "model": "gpt-6-luna",
+  "output": 73,
+  "reasoning": 0,
+  "seconds": 1.62
+ }
+}

@@ -1,0 +1,95 @@
+{
+  "argv": [
+    "parse",
+    "--only",
+    "ipr-2018",
+    "--only",
+    "ipr-2021"
+  ],
+  "command": "parse",
+  "config_hash": "3cba165ec8c6252c",
+  "counts": {
+    "documents": 2,
+    "elements": 630,
+    "parsed_now": 0,
+    "reocr_garbled": 62,
+    "reocr_repaired": 55,
+    "text_findings": 0
+  },
+  "error": null,
+  "git": {
+    "commit": "cbf11ef6cdd51e47e0815952da102a5d0c9f1417",
+    "dirty": true,
+    "dirty_paths": [
+      "config/eval.yaml",
+      "config/pipeline.yaml",
+      "src/econ/config.py",
+      "src/econ/ingest/parse.py",
+      "src/econ/ingest/reocr.py",
+      "tests/test_reocr.py"
+    ]
+  },
+  "git_at_end": {
+    "commit": "cbf11ef6cdd51e47e0815952da102a5d0c9f1417",
+    "dirty": true,
+    "dirty_paths": [
+      "config/eval.yaml",
+      "config/pipeline.yaml",
+      "docs/deploy.md",
+      "eval/spend/ledger.jsonl",
+      "src/econ/config.py",
+      "src/econ/ingest/parse.py",
+      "eval/cache/llm/0b/0bd15dbbdf6d85b8f04c3d66ac84924e73dbf951f4e8f2d16fc253f1734aab2b.json",
+      "eval/cache/llm/21/21e3e6a412f6003391b4ecb3843c742cf5c46d95f0521943439fccced1e0f56f.json",
+      "eval/cache/llm/2d/2d5757f9955353e6090cdf0c61a4d3dee030528c1f1307e3f55264c23197eba7.json",
+      "eval/cache/llm/3e/3e7b5553c0a2c306a76c2758db67a3c075cdbfbd3768daacf686db50248e8d30.json",
+      "eval/cache/llm/44/448b26164528953496d63bd27f15d73c4c803d86f74903328617ef871e5e7047.json",
+      "eval/cache/llm/4b/4b63be10ac4d9b1e44659c87e2560d14ee4c0b1974694a6ec7b8045a488526b6.json",
+      "eval/cache/llm/4e/4efa2e8a5a8edf533733784845c92a03a4549d35f8dd236ab874915c5443fd4d.json",
+      "eval/cache/llm/50/50205af35064f9c23ffd5d795bb750a0b24da001679116981ea62bf9080bd82f.json",
+      "eval/cache/llm/51/51d97b2c20f7efd0aad09d2e23ac2ab5a337d4adc7bde4a93b5277fdc0408e49.json",
+      "eval/cache/llm/5e/5e4e49a37ff864a01e318eb636b174b62ad2e011e224bff870239b28b55edd48.json",
+      "eval/cache/llm/7b/7b22769c96f07bc7b65b45e1fae2578c46a8590f0a56ddc4ee8db1ce3991951f.json",
+      "eval/cache/llm/ab/abb7262d50768d368dc0821a36c429e574527ea05abdf333189cd3fbe9b1425d.json",
+      "eval/cache/llm/c1/c16bfb0c31f1ac7fff380255e8de2a5dc1c73a53601e750077ce876cd807d030.json",
+      "eval/cache/llm/c5/c5fd2ac969452dc24416b452cd3feecdd9a137ef55e8cad16bf4eb4371ce853b.json"
+    ]
+  },
+  "inputs": {
+    "data/raw/ipr-2018.pdf": "55501b20ad956a9863bcdd97d124195a7d41e471f8b394437a39acc3550ba97a",
+    "data/raw/ipr-2021.pdf": "037e81a6db9b0595f9928ee1e09ea235c6330ab08ca186db6493d3b5600ff717"
+  },
+  "outputs": {
+    "library/elements/ipr-2018.jsonl": "f642f0a56ae6e4f32336b63f08011a867af8f8c1df5bbc1beb1cb37a371a637a",
+    "library/elements/ipr-2021.jsonl": "019f7238c1a1e88761cf198cda66b26fe1b0f741fe31f524fb055fc2f2018fb0",
+    "library/parse.json": "3c926f397c88a3ff7d17bb77b287f0c64c4e8a753ee468bd2f7dd12487ccf055",
+    "library/reocr.json": "1a2f4609a17b46c3dce92e0063d472bf4c7ab575f3fcbf1c6a6aa71d5cfd56a0"
+  },
+  "params": {
+    "only": [
+      "ipr-2018",
+      "ipr-2021"
+    ],
+    "timings": {},
+    "workers": 1
+  },
+  "run_id": "20261019T042314Z",
+  "seconds": 708.9,
+  "status": "passed",
+  "upstream": {
+    "sweep": "20261018T002149Z"
+  },
+  "versions": {
+    "docling": "2.140.0",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.0",
+    "pypdfium2": "5.14.0",
+    "python": "3.12.3",
+    "sentence-transformers": "6.1.0",
+    "tokenizers": "0.23.3",
+    "torch": "2.14.1+cpu"
+  },
+  "warnings": [
+    "ipr-2021: no licence statement found in the extracted text"
+  ]
+}

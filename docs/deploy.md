@@ -8,8 +8,10 @@ GitHub Pages (front end, PDFs)  ──►  Render (API: search, answer, check)  
                                                  └──►  OpenAI or Gemini (answers, when a key is set)
 ```
 
-Deployed so far: the embedder on Cloud Run (2026-10-18, project `gen-lang-client-0664096123`,
-`australia-southeast1`). Render and Pages are next.
+Deployed (checked 2026-10-19, D-021): the embedder on Cloud Run (project `gen-lang-client-0664096123`,
+`australia-southeast1`), the API on Render (`https://econ-api-vk5f.onrender.com`), the front end on Pages
+(`https://thomas-amann-ipaustralia.github.io/Econ/`, with the PDFs). The API is evidence-only until a model key
+is set: see the last section.
 
 ## 0. Merge to `main`
 
@@ -110,14 +112,34 @@ then "Evidence only (no model key)". Ask a question: the evidence trail should s
 search, combined"; open a passage to see it highlighted on its PDF page. If the trail says "keyword
 search only", Render cannot reach the embedder: recheck `EMBEDDER_URL` and `EMBEDDER_TOKEN`.
 
+## Tracing to Langfuse (D-022)
+
+Each question becomes one trace in Langfuse (one session per conversation): the plan, the search with every
+passage read, the filter's calls, the answer and the check, with the models, tokens, costs and the build.
+
+1. In Langfuse Cloud (EU, https://cloud.langfuse.com), create a project for this service (for example
+   `econ`), then **Settings > API Keys > Create new API keys**.
+2. In the Render service's **Environment**, add `LANGFUSE_PUBLIC_KEY` and `LANGFUSE_SECRET_KEY`. The blueprint
+   already sets `ECON_ENVIRONMENT=prod`, so the service's traces are in the `prod` environment; local runs
+   are `dev`.
+3. Check `https://<your-service>.onrender.com/api/health`: `tracing` should say `"enabled": true` and, after
+   a question, `exported` above 0 and `failed` 0. Without keys it says `"status": "no keys"` and the service
+   runs untraced.
+4. Once the keys are in place, set `tracing.required: true` in `config/service.yaml`: from then on a missing
+   key stops the service instead of switching tracing off.
+
+Questions and pasted material go to Langfuse with email addresses and phone numbers masked. Every answer is
+also recorded in Render's log, which outlives Langfuse's retention.
+
 ## Optional: fewer cold starts
 
 Set the repository variable `KEEP_WARM` to `true` to have `.github/workflows/keep-warm.yml` ping the API
 every 10 minutes in Canberra business hours (about 220 of Render's 750 free hours a month). GitHub can
 delay scheduled runs, so this reduces cold starts rather than removing them.
 
-## Later: model keys
+## Model keys
 
-Add `OPENAI_API_KEY` or `GEMINI_API_KEY` in the Render service's **Environment** settings; saving them
-redeploys the service with answers turned on. The daily spending cap is `daily_budget_usd` in
+Add `OPENAI_API_KEY` in the Render service's **Environment** settings (the adopted answer model is OpenAI's,
+D-021; `GEMINI_API_KEY` is needed only as a fallback); saving it redeploys the service with answers turned on.
+`/api/health` then shows `"mode": "answer"` with the provider and models. The daily spending cap is `daily_budget_usd` in
 `config/service.yaml`.

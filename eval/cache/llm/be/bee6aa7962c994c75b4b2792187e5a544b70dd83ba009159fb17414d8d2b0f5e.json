@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.8e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2018 section “Location Names in Trade Marks: What’s in a Name?”, this passage describes an OCE collaboration that matched GeoNames locations with Australian trade marks registered from 1990 to 2013, checked the matches, and used the resulting database to explore patterns in location-name use."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2018:0031",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000137,
+  "input": 979,
+  "model": "gpt-6-luna",
+  "output": 78,
+  "reasoning": 0,
+  "seconds": 2.37
+ }
+}

@@ -16,6 +16,8 @@
   brief and names its evidence number `n`; its text is in `evidence`).
 - answer and check: a failed check goes back to the model once, with its errors wrapped as data. An
   answer that still fails is returned flagged, never passed silently.
+- tracing (D-022): each question is one trace (`econ.tracing`), its steps observations started from an
+  explicit parent; the `done` event names the trace. The null tracer records nothing.
 """
 
 from __future__ import annotations
@@ -29,7 +31,7 @@ from dataclasses import dataclass, field
 
 from pydantic import ValidationError
 
-from econ import config, textcheck
+from econ import config, textcheck, tracing
 from econ.answer import prompts
 from econ.answer.check import check
 from econ.answer.providers import Model, ProviderError, Usage
@@ -52,6 +54,7 @@ class Request:
     context: str = ""
     doc_ids: list[str] | None = None
     years: tuple[int, int] | None = None
+    session_id: str | None = None  # one per conversation, from the front end; groups its traces
 
 
 @dataclass
@@ -60,6 +63,37 @@ class Services:
     embedder: EmbedderClient
     model: Model | None = None
     provider: object | None = None
+    tracer: object = field(default_factory=tracing.NullTracer)
+
+
+def generate(svc: Services, parent, name: str, *, system: str, user: str, metadata: dict | None = None, **kw):
+    """One model call, traced as a generation under `parent`: the messages, the reply, the usage in
+    exclusive buckets and the cost. A failed call is traced as an error with whatever it was billed."""
+    g = parent.child(
+        name,
+        as_type="generation",
+        model=kw["model"],
+        model_parameters={"effort": kw["effort"], "max_output_tokens": kw["max_output_tokens"]},
+        input=[{"role": "system", "content": system}, {"role": "user", "content": user}],
+        metadata={"schema": kw["schema_name"], **(metadata or {})},
+    )
+    try:
+        rep = svc.model.generate_json(system=system, user=user, **kw)
+    except ProviderError as e:
+        g.update(level="ERROR", status_message=str(e)[:300], **tracing.usage_fields(e.usage))
+        g.end()
+        raise
+    g.update(
+        output=rep.data,
+        metadata={
+            "finish": rep.raw_finish,
+            "seconds": rep.usage.seconds,
+            **{k: str(v) for k, v in rep.meta.items()},
+        },
+        **tracing.usage_fields(rep.usage),
+    )
+    g.end()
+    return rep
 
 
 def _history_block(history: list[dict]) -> str:
@@ -155,11 +189,12 @@ def by_rating(rows: list[int], ratings: dict[int, int], k: int) -> list[int]:
     return sorted(range(len(rows)), key=lambda i: (-ratings.get(rows[i], 0), i))[:k]
 
 
-def filter_step(svc: Services, question: str, pool: list) -> dict:
+def filter_step(svc: Services, question: str, pool: list, parent=None) -> dict:
     """Rate the pool's passages with the provider's filter model, the config's group size a call, the calls in
     parallel. Any failed or malformed reply drops every rating, so the search order stands, visibly."""
     fc = config.service().answer.filter
     p = svc.provider
+    parent = parent or tracing.NullObs()
     system = prompts.load(fc.prompt)
     calls = []
     for g in range(0, len(pool), fc.group):
@@ -174,7 +209,11 @@ def filter_step(svc: Services, question: str, pool: list) -> dict:
     def one(call: tuple[str, dict[str, int]]) -> tuple[dict[int, int] | None, Usage | None, str | None]:
         user, ids = call
         try:
-            rep = svc.model.generate_json(
+            rep = generate(
+                svc,
+                parent,
+                "econ.filter.rate",
+                metadata={"passages": ",".join(sorted(ids, key=lambda s: int(s[1:])))[:200]},
                 system=system,
                 user=user,
                 schema=strict_schema(Grades),
@@ -233,7 +272,53 @@ def evidence_view(svc: Services, sel, n: int | None, queries: list[str]) -> dict
     }
 
 
+def trace_check(root, ans: Answer, res, attempt: int) -> None:
+    """The check as an evaluator observation, with its results as scores (SOP §20.0, convention 6): on the
+    observation for every attempt, and on the trace for the attempt that stands."""
+    d = res.as_dict()
+    ev = root.child("econ.check", as_type="evaluator", input={"attempt": attempt, "claims": len(ans.claims)})
+    claims = d.get("claims", [])
+    verified = sum(1 for c in claims if c.get("verified"))
+    ev.update(output=d, level="DEFAULT" if res.passed else "WARNING")
+    ev.score("check_passed", res.passed, "BOOLEAN")
+    ev.score("claims_verified", verified / len(claims) if claims else 0.0, "NUMERIC")
+    ev.end()
+    if res.passed or attempt == 2:
+        root.score_trace("check_passed", res.passed, "BOOLEAN", comment="; ".join(res.errors)[:500] or None)
+        root.score_trace("claims_verified", verified / len(claims) if claims else 0.0, "NUMERIC")
+        root.score_trace("coverage", ans.coverage, "CATEGORICAL")
+        root.score_trace("attempts", attempt, "NUMERIC")
+
+
 def run(req: Request, svc: Services) -> Iterator[dict]:
+    """The question's events, traced: the root observation ends however the stream ends (finished, failed,
+    or abandoned by a client that went away), and says which."""
+    mode = "answer" if svc.model else "evidence_only"
+    root = svc.tracer.trace(
+        "econ.ask",
+        as_type="agent",
+        session_id=req.session_id,
+        tags=[mode.replace("_", "-")],
+        input={"question": req.question, "context": req.context, "history": req.history},
+        metadata={"history_turns": len(req.history), "context_chars": len(req.context)},
+    )
+    finished = False
+    try:
+        for e in _run(req, svc, root):
+            if e["event"] == "done":
+                e["trace_id"] = root.trace_id
+                finished = True
+            yield e
+    except Exception as e:
+        root.update(level="ERROR", status_message=f"{type(e).__name__}: {str(e)[:200]}")
+        raise
+    finally:
+        if not finished:
+            root.update(level="WARNING", status_message="the stream ended before the question was done")
+        root.end()
+
+
+def _run(req: Request, svc: Services, root) -> Iterator[dict]:
     started = time.time()
     scfg = config.service()
     usages: list[Usage] = []
@@ -241,6 +326,7 @@ def run(req: Request, svc: Services) -> Iterator[dict]:
     request_id = uuid.uuid4().hex[:12]
     mode = "answer" if svc.model else "evidence_only"
     p = svc.provider
+    root.update(metadata={"request_id": request_id, "mode": mode})
     yield {
         "event": "meta",
         "request_id": request_id,
@@ -271,7 +357,10 @@ def run(req: Request, svc: Services) -> Iterator[dict]:
             + f"<question>\n{defang(question)}\n</question>"
         )
         try:
-            rep = svc.model.generate_json(
+            rep = generate(
+                svc,
+                root,
+                "econ.plan",
                 system=prompts.load(scfg.answer.plan_prompt),
                 user=user,
                 schema=strict_schema(Plan),
@@ -310,6 +399,11 @@ def run(req: Request, svc: Services) -> Iterator[dict]:
 
     # --- retrieval -----------------------------------------------------------------------------------
     t = time.time()
+    search_obs = root.child(
+        "econ.search",
+        as_type="retriever",
+        input={"queries": queries, "doc_ids": req.doc_ids, "years": req.years},
+    )
     qvecs, dense_status = None, "ok"
     if svc.embedder.configured:
         try:
@@ -342,12 +436,19 @@ def run(req: Request, svc: Services) -> Iterator[dict]:
     if filtering:
         yield {"event": "search", "candidates": len(ranked), "read": len(pool), "dense": dense_status}
         t = time.time()
-        f = filter_step(svc, standalone, pool)
+        fobs = root.child("econ.filter", as_type="chain", input={"question": standalone, "read": len(pool)})
+        f = filter_step(svc, standalone, pool, fobs)
         usages.extend(f.pop("usages"))
         ratings = f.pop("ratings", {})
         timings["filter"] = round(time.time() - t, 2)
         order = by_rating([s.row for s in pool], ratings, keep) if ratings else list(range(len(pool)))[:keep]
         filt = {**f, "read": len(pool), "kept": len(order), "seconds": timings["filter"]}
+        fobs.update(
+            output={"status": f["status"], "kept": [pool[i].row for i in order], "ratings": len(ratings)},
+            level="DEFAULT" if f["status"] == "ok" else "WARNING",
+            status_message=None if f["status"] == "ok" else f["status"],
+        )
+        fobs.end()
     else:
         order = list(range(len(pool)))
         reason = (
@@ -370,6 +471,28 @@ def run(req: Request, svc: Services) -> Iterator[dict]:
     pool_views = [{k: v[k] for k in brief} if v["n"] is not None else v for v in pool_views]
     for v in pool_views:
         v["selected"] = v["n"] is not None
+    search_obs.update(
+        output=[
+            {
+                "chunk_id": svc.index.chunks[s.row]["chunk_id"],
+                "search_rank": i + 1,
+                "score": s.merged_score,
+                "filter_grade": ratings.get(s.row),
+                "n": pool_views[i]["n"],
+                "pages": svc.index.chunks[s.row]["pages"],
+                "text": svc.index.chunks[s.row]["text"],
+            }
+            for i, s in enumerate(pool)
+        ],
+        metadata={
+            "dense": dense_status[:200],
+            "candidates": len(ranked),
+            "read": len(pool),
+            "kept": len(order),
+        },
+        level="DEFAULT" if dense_status == "ok" else "WARNING",
+    )
+    search_obs.end()
     yield {
         "event": "retrieval",
         "queries": queries,
@@ -383,6 +506,7 @@ def run(req: Request, svc: Services) -> Iterator[dict]:
     }
 
     if not svc.model:
+        root.update(output={"evidence": [e["chunk_id"] for e in evidence]})
         yield {
             "event": "done",
             "mode": mode,
@@ -419,7 +543,11 @@ def run(req: Request, svc: Services) -> Iterator[dict]:
                 + "\n</errors>"
             )
         try:
-            rep = svc.model.generate_json(
+            rep = generate(
+                svc,
+                root,
+                "econ.answer",
+                metadata={"attempt": attempt},
                 system=prompts.load(a.prompt),
                 user=user,
                 schema=strict_schema(Answer),
@@ -448,6 +576,7 @@ def run(req: Request, svc: Services) -> Iterator[dict]:
             max_quote_words=a.max_quote_words,
         )
         final = (ans, res, attempt)
+        trace_check(root, ans, res, attempt)
         yield {"event": "answer", "attempt": attempt, **ans.model_dump()}
         yield {"event": "check", "attempt": attempt, **res.as_dict()}
         if res.passed:
@@ -456,6 +585,15 @@ def run(req: Request, svc: Services) -> Iterator[dict]:
 
     cost = round(sum(u.cost_usd for u in usages), 6)
     outcome = "no_answer" if final is None else ("passed" if final[1].passed else "flagged")
+    root.update(
+        output={"answer": final[0].answer, "coverage": final[0].coverage, "outcome": outcome}
+        if final
+        else None,
+        metadata={"outcome": outcome, "cost_usd": cost},
+        level="DEFAULT" if outcome == "passed" else "WARNING",
+    )
+    root.score_trace("outcome", outcome, "CATEGORICAL")
+    root.score_trace("cost_usd", cost, "NUMERIC")
     yield {
         "event": "done",
         "mode": mode,

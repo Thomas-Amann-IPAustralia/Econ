@@ -1,0 +1,95 @@
+{
+  "argv": [
+    "index"
+  ],
+  "command": "index",
+  "config_hash": "3cba165ec8c6252c",
+  "counts": {
+    "chunks": 1897,
+    "dim": 768
+  },
+  "error": null,
+  "git": {
+    "commit": "cbf11ef6cdd51e47e0815952da102a5d0c9f1417",
+    "dirty": true,
+    "dirty_paths": [
+      "config/eval.yaml",
+      "config/pipeline.yaml",
+      "docs/deploy.md",
+      "eval/spend/ledger.jsonl",
+      "src/econ/config.py",
+      "src/econ/ingest/parse.py",
+      "eval/cache/llm/01/01e2c33841b7c15feb93435d304d54b62ebc240296277e8224dbad3d21992491.json",
+      "eval/cache/llm/02/02d536002893ae4e88d2ec215fae9ee8247ee3614a0a4d15a081af53160ad63f.json",
+      "eval/cache/llm/08/08d2e3f229bb3358a4e080e7adb05029bc1e3742e67f79980fba80732bb8f2cf.json",
+      "eval/cache/llm/09/0930ef365ee3c44ed061a01226db29a5f74023071398c2b3286cc79b412d3a5f.json",
+      "eval/cache/llm/09/097ca4f73811ba364feead0cd6d2165b4a59b9cc1a23e800ed6864d46740c49a.json",
+      "eval/cache/llm/0b/0bd15dbbdf6d85b8f04c3d66ac84924e73dbf951f4e8f2d16fc253f1734aab2b.json",
+      "eval/cache/llm/0b/0beedfd9152f9dcd7f01651561e4ee857884dfa8febf5827632a33f21b1a23e0.json",
+      "eval/cache/llm/13/13b1d2ae57206cfa022a989b5349a26f5fc449ed7c90707395e1f3cdda3dea70.json",
+      "eval/cache/llm/17/1778f6fafb7da7bc1334720bcb78fa20944bbb96882beb5dd7f3503d701dc62e.json",
+      "eval/cache/llm/1d/1d97ce68052cac4571961a98ebade5373f23dda7689d1a7582d7e9ae49478eec.json",
+      "eval/cache/llm/21/21e3e6a412f6003391b4ecb3843c742cf5c46d95f0521943439fccced1e0f56f.json",
+      "eval/cache/llm/23/2373f5a15647bc75abcb4dcd37c880812e0c7f887701cbd8d7875dd82d4bf5ad.json",
+      "eval/cache/llm/27/27714891689eebe1ce656a6a16f9ef7147dab267aaf873272f83bb3fbe8b84b8.json",
+      "eval/cache/llm/2b/2b1041b25d88714534c529cbe60a4ce86f5363a4fd6eac2a75832ec7492e0d6d.json"
+    ]
+  },
+  "git_at_end": {
+    "commit": "cbf11ef6cdd51e47e0815952da102a5d0c9f1417",
+    "dirty": true,
+    "dirty_paths": [
+      "config/eval.yaml",
+      "config/pipeline.yaml",
+      "docs/deploy.md",
+      "eval/judgments/judged-v1.jsonl",
+      "eval/spend/ledger.jsonl",
+      "src/econ/config.py",
+      "src/econ/ingest/parse.py",
+      "eval/cache/llm/00/009404af1cf42bf87a42211a26e43e25704f4e0ee8b9eba930e8ae3f3e0a274f.json",
+      "eval/cache/llm/01/0198c3b09e15bfb810d4453fb8b42145aee61842e786795674a277798d579cc9.json",
+      "eval/cache/llm/01/01e2c33841b7c15feb93435d304d54b62ebc240296277e8224dbad3d21992491.json",
+      "eval/cache/llm/02/02d536002893ae4e88d2ec215fae9ee8247ee3614a0a4d15a081af53160ad63f.json",
+      "eval/cache/llm/04/04274d2d11a6ac52556a6ecaef8cb3a95b9919f36aab25182d087aebea17eac8.json",
+      "eval/cache/llm/06/06193458fd86218ec3704c36824c2d2101579724ec6d1e83ab0928aa37f4eb25.json",
+      "eval/cache/llm/08/08d2e3f229bb3358a4e080e7adb05029bc1e3742e67f79980fba80732bb8f2cf.json",
+      "eval/cache/llm/09/092ffdceb4eb8e69dbc7e8f92a3fb154b2c39855a8fe8936544b500aef7f7192.json",
+      "eval/cache/llm/09/0930ef365ee3c44ed061a01226db29a5f74023071398c2b3286cc79b412d3a5f.json",
+      "eval/cache/llm/09/097ca4f73811ba364feead0cd6d2165b4a59b9cc1a23e800ed6864d46740c49a.json",
+      "eval/cache/llm/0a/0a5d95bdf37560c863634d4ed1040f24997af3697d4c1023e82577a4091afce6.json",
+      "eval/cache/llm/0b/0bd15dbbdf6d85b8f04c3d66ac84924e73dbf951f4e8f2d16fc253f1734aab2b.json",
+      "eval/cache/llm/0b/0beedfd9152f9dcd7f01651561e4ee857884dfa8febf5827632a33f21b1a23e0.json"
+    ]
+  },
+  "inputs": {},
+  "outputs": {
+    "library/index/bm25.npz": "4edf90ef9bbc9ea50ec32f53368dcff56a28cd8ec7ad0218ee484cb06f07dc4e",
+    "library/index/bm25.vocab.json": "8c853f1d6261b70c415526aa2a5dca7d139cd4f0a6b10c40c84e2a353d04d63d",
+    "library/index/chunks.jsonl": "1d89ef0cab1bcf8f45d234172946315cb8c96cca8bf41937b63e05d40acc5d0b",
+    "library/index/docs.json": "0bcc6c495206ac2f4a60ebb6d666120e887449a6b4dbd2f4e57b2e79015ea482",
+    "library/index/index.json": "7c4a36163b1986cd0b868b80f2d6eb7102008d96377e5857cb192d5d1f3c05a7",
+    "library/index/vectors.f16.npy": "a909717b4d63dc25f4c45a83413597a98156101c6bfea5880c04ff0e38589d09"
+  },
+  "params": {
+    "embedder": "arctic-m-v1.5",
+    "out": "library/index",
+    "strategy": "S384-noprefix-nocite"
+  },
+  "run_id": "20261019T043631Z",
+  "seconds": 558.5,
+  "status": "passed",
+  "upstream": {
+    "chunk": "20261019T043535Z"
+  },
+  "versions": {
+    "docling": "2.140.0",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.0",
+    "pypdfium2": "5.14.0",
+    "python": "3.12.3",
+    "sentence-transformers": "6.1.0",
+    "tokenizers": "0.23.3",
+    "torch": "2.14.1+cpu"
+  },
+  "warnings": []
+}

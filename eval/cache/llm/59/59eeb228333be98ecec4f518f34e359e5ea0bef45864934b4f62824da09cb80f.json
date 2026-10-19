@@ -1,0 +1,26 @@
+{
+ "cost_usd": 0.000731,
+ "data": {
+  "grades": [
+   {
+    "grade": 0,
+    "id": "p1"
+   }
+  ]
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "judge:judge-v1:gemini-3.8-flash",
+ "schema_name": "grades",
+ "tag": "note-tm-3",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000731,
+  "input": 840,
+  "model": "gemini-3.8-flash",
+  "output": 27,
+  "reasoning": 0,
+  "seconds": 2.09
+ }
+}

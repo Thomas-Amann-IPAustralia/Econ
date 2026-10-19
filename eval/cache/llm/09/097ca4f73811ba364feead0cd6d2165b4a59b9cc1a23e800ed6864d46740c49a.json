@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.8e-05,
+ "data": {
+  "context": "In the Australian Intellectual Property Report 2018, the Patents section discusses Australian provisional and innovation patent applications, including their trends in 2017. It explains the innovation patent’s features and its original aim of encouraging innovation among Australian SMEs, noting the Government’s acceptance of a recommendation to phase it out."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v1:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "ipr-2018:0008",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000156,
+  "input": 1196,
+  "model": "gpt-6-luna",
+  "output": 73,
+  "reasoning": 0,
+  "seconds": 4.15
+ }
+}

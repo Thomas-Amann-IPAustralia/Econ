@@ -30,7 +30,29 @@ const h = (tag, attrs = {}, ...kids) => {
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 const pages = (p) => (p.length === 1 ? `p. ${p[0]}` : `pp. ${p[0]}–${p[p.length - 1]}`);
 
-const state = { docs: {}, turns: [], selected: null, health: null };
+// One conversation per page; its id groups the conversation's traces (D-022).
+const newId = () => (crypto.randomUUID ? crypto.randomUUID() : Array.from(crypto.getRandomValues(new Uint8Array(16)), (b) => b.toString(16).padStart(2, "0")).join(""));
+const state = { docs: {}, turns: [], selected: null, health: null, session: newId() };
+
+// --- the theme: the reader's choice if they made one (remembered in this browser), otherwise the system's --
+
+const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
+function currentTheme() {
+  return document.documentElement.dataset.theme || (darkQuery.matches ? "dark" : "light");
+}
+function showTheme() {
+  const cur = currentTheme();
+  document.querySelectorAll("[data-theme-choice]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.themeChoice === cur)));
+}
+function initTheme() {
+  document.querySelectorAll("[data-theme-choice]").forEach((b) => b.addEventListener("click", () => {
+    document.documentElement.dataset.theme = b.dataset.themeChoice;
+    try { localStorage.setItem("econ-theme", b.dataset.themeChoice); } catch (e) { /* not remembered; still applied */ }
+    showTheme();
+  }));
+  darkQuery.addEventListener("change", showTheme);
+  showTheme();
+}
 
 // --- server status: wake Render (and through it Cloud Run) as soon as the page opens ----------------
 
@@ -126,7 +148,7 @@ async function ask(question, context) {
   const years = [+$("#y0").value, +$("#y1").value].sort((a, b) => a - b);
   const allYears = Object.values(state.docs).map((d) => d.year);
   const filtered = allYears.length && (years[0] > Math.min(...allYears) || years[1] < Math.max(...allYears));
-  const turn = { question, context, events: {}, checks: [], el: null };
+  const turn = { question, context, events: {}, checks: [], el: null, t0: performance.now(), shown: {} };
   state.turns.push(turn);
   $("#thread").append(h("div", { class: "msg user" }, question,
     context ? h("span", { class: "ctxnote" }, `+ ${context.length.toLocaleString()} characters of your material`) : null,
@@ -151,13 +173,14 @@ async function ask(question, context) {
     const resp = await fetch(`${API}/api/ask`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ question, context, history, years: filtered ? years : null }),
+      body: JSON.stringify({ question, context, history, years: filtered ? years : null, session_id: state.session }),
     });
     if (!resp.ok) {
       const msg = (await resp.json().catch(() => ({}))).detail || `The server answered ${resp.status}.`;
       throw new Error(msg);
     }
     for await (const ev of sse(resp)) {
+      ev._t = (performance.now() - turn.t0) / 1000;  // when it arrived, for the activity log
       if (ev.event === "check") turn.checks.push(ev);
       if (ev.event === "answer") turn.events.answers = [...(turn.events.answers || []), ev];
       turn.events[ev.event] = ev;
@@ -165,8 +188,9 @@ async function ask(question, context) {
       if (state.selected === turn) renderTrail(turn);
     }
   } catch (e) {
-    turn.events.error = { message: e.message || String(e) };
+    turn.events.error = { message: e.message || String(e), _t: (performance.now() - turn.t0) / 1000 };
     renderBot(turn);
+    if (state.selected === turn) renderTrail(turn);
   } finally {
     $("#send").disabled = false;
   }
@@ -299,57 +323,18 @@ function highlight(text, quotes, terms) {
   return out + esc(text.slice(pos));
 }
 
-function step(n, cls, title, detail, extra) {
-  return h("li", { class: `step ${cls}` }, h("span", { class: "n" }, n), h("div", {}, h("div", { class: "t" }, title), detail ? h("div", { class: "d" }, detail) : null, extra || null));
-}
-
 function renderTrail(t) {
   const e = t.events;
   const pane = $("#trail");
   pane.replaceChildren(h("h2", {}, "Evidence trail"));
   if (!e.meta && !e.error) { pane.append(h("p", { class: "muted" }, "Waiting for the server…")); return; }
   const check = t.checks[t.checks.length - 1];
-  const steps = h("ol", { class: "steps" });
-  let k = 0;
-  const add = (...a) => steps.append(step(++k, ...a));
-  if (e.plan) {
-    add(e.plan.error ? "warn" : "ok", "Planned the search",
-      e.plan.error || (e.plan.standalone_question !== t.question ? `Read as: “${e.plan.standalone_question}”` : null),
-      h("div", { class: "chips" }, e.plan.queries.map((q) => h("span", { class: "chip" }, q))));
-  } else if (e.retrieval) {
-    add("ok", "Searched for the question as asked", null, h("div", { class: "chips" }, e.retrieval.queries.map((q) => h("span", { class: "chip" }, q))));
-  }
   const r = e.retrieval;
   const f = r?.filter;
   const filtered = f && !f.status.startsWith("off");
-  const how = (x) => (x.dense === "ok" ? `Meaning and keyword search, combined (${e.meta.index.embedder}, ${e.meta.index.strategy} passages)` : `Meaning search ${x.dense}`);
-  if (r && filtered) {
-    const docs = new Set(r.pool.map((x) => x.doc_id));
-    add(r.dense === "ok" ? "ok" : "warn", `Found ${r.candidates} candidate passages; read the first ${r.pool.length}, from ${docs.size} documents`, how(r));
-    const counts = [3, 2, 1, 0].map((g) => `${r.pool.filter((x) => x.filter_grade === g).length} ${RATING[g]}`).join(", ");
-    add(f.status === "ok" ? "ok" : "warn",
-      f.status === "ok" ? `Kept the ${r.evidence.length} rated most useful by ${f.model}` : `The filter failed: kept the search's top ${r.evidence.length}`,
-      f.status === "ok" ? `Rated every passage 0–3 in ${f.seconds}s: ${counts}. All ${r.pool.length} are listed below.` : f.status);
-  } else if (e.search) {
-    add(e.search.dense === "ok" ? "ok" : "warn", `Found ${e.search.candidates} candidate passages; reading the first ${e.search.read}`, how(e.search));
-    add("ok", "Choosing the most useful…", null);
-  } else if (r) {
-    const docs = new Set(r.evidence.map((x) => x.doc_id));
-    add(r.dense === "ok" ? "ok" : "warn", `Found ${r.candidates} candidate passages; kept the best ${r.evidence.length} from ${docs.size} documents`, how(r));
-  }
-  if (e.answers?.length) {
-    const last = e.answers[e.answers.length - 1];
-    add("ok", `Answer written by ${e.meta.answer_model}`, last.attempt > 1 ? "Second attempt, after the first failed the check" : `${last.claims.length} claims, ${last.claims.reduce((a, c) => a + c.citations.length, 0)} quotes`);
-  }
-  if (check) {
-    add(check.passed ? "ok" : "bad", check.passed ? "Every quote was found word for word in its passage" : "The check found problems", check.passed ? null : check.errors.slice(0, 4).join("; "));
-  }
-  if (e.done) {
-    const tm = e.done.timings || {};
-    add("ok", `Done in ${e.done.seconds}s`, `search ${((tm.embed || 0) + (tm.search || 0)).toFixed(1)}s${tm.filter ? ` · filter ${tm.filter}s` : ""}${tm.answer_1 ? ` · answer ${tm.answer_1}s` : ""}${e.done.cost_usd ? ` · US$${e.done.cost_usd.toFixed(4)}` : ""}`);
-  }
-  if (e.error) steps.append(step("!", "bad", "Error", e.error.message));
-  pane.append(steps);
+  pane.append(processView(t), activityLog(t));
+  const strip = passageStrip(t);
+  if (strip) pane.append(strip);
 
   if (check?.claims?.length) {
     pane.append(h("h3", {}, "Claims"));
@@ -420,6 +405,171 @@ function renderTrail(t) {
   pane.append(trace);
 }
 
+// --- the process view (after wind-tunnel's pipeline view): the steps as nodes, lit as the events arrive ---
+
+const STEPS = [
+  ["plan", "Plan"],
+  ["search", "Search"],
+  ["filter", "Filter"],
+  ["answer", "Answer"],
+  ["check", "Check"],
+];
+const WORD = { pending: "waiting", active: "working", done: "done", warn: "done, with a note", failed: "failed", skipped: "skipped" };
+
+function nodeStates(t) {
+  const e = t.events, r = e.retrieval, f = r?.filter;
+  const evidenceOnly = e.meta && e.meta.mode !== "answer";
+  const answers = e.answers || [], checks = t.checks;
+  const last = checks[checks.length - 1];
+  const s = {}, sub = {};
+  // plan
+  if (evidenceOnly) { s.plan = "skipped"; sub.plan = "no model: the question is searched as asked"; }
+  else if (e.plan) { s.plan = e.plan.error ? "warn" : "done"; sub.plan = e.plan.error ? "searched as asked" : `${e.plan.queries.length} searches`; }
+  else if (e.meta) { s.plan = "active"; sub.plan = "rewriting and splitting the question"; }
+  else { s.plan = "pending"; sub.plan = "waking the server"; }
+  // search
+  const dense = (e.search || r)?.dense;
+  if (e.search || r) { s.search = dense === "ok" ? "done" : "warn"; sub.search = `${(e.search || r).candidates} found${dense === "ok" ? "" : ", keywords only"}`; }
+  else if (["done", "warn", "skipped"].includes(s.plan) && e.meta) { s.search = "active"; sub.search = "by meaning and by keywords"; }
+  else { s.search = "pending"; sub.search = "by meaning and by keywords"; }
+  // filter
+  if (evidenceOnly || (r && !(f && !f.status.startsWith("off")))) { s.filter = "skipped"; sub.filter = evidenceOnly ? "no model" : "off"; }
+  else if (r) { s.filter = f.status === "ok" ? "done" : "warn"; sub.filter = f.status === "ok" ? `kept ${r.evidence.length} of ${f.read}` : `failed: search's top ${r.evidence.length}`; }
+  else if (e.search) { s.filter = "active"; sub.filter = `rating ${e.search.read} passages`; }
+  else { s.filter = "pending"; sub.filter = "chooses 20 passages"; }
+  // answer and check
+  if (evidenceOnly) {
+    s.answer = s.check = "skipped";
+    sub.answer = "no model";
+    sub.check = "nothing to check";
+  } else {
+    const retrying = checks.length && checks.length === answers.length && !last.passed && !e.done;
+    if (retrying) { s.answer = "active"; sub.answer = "second attempt, after the check"; }
+    else if (answers.length) { s.answer = "done"; const a = answers[answers.length - 1]; sub.answer = `${a.claims.length} claims${a.attempt > 1 ? ", 2nd attempt" : ""}`; }
+    else if (r) { s.answer = "active"; sub.answer = `reading ${r.evidence.length} passages`; }
+    else { s.answer = "pending"; sub.answer = e.meta?.answer_model || "the answer model"; }
+    if (last && checks.length === answers.length) {
+      const bad = last.claims.filter((c) => !c.verified).length;
+      s.check = last.passed ? "done" : (e.done ? "failed" : "warn");
+      sub.check = last.passed ? "every quote found" : `${bad || "some"} claim${bad === 1 ? "" : "s"} failed`;
+    } else if (answers.length > checks.length) { s.check = "active"; sub.check = "matching quotes to passages"; }
+    else { s.check = "pending"; sub.check = "quotes, word for word"; }
+    if (e.done?.outcome === "no_answer") { s.answer = "failed"; sub.answer = "no answer"; }
+  }
+  if (e.error) {
+    const k = STEPS.map(([key]) => key).find((key) => s[key] === "active") || "answer";
+    s[k] = "failed";
+    sub[k] = "stopped here";
+    for (const [key] of STEPS) if (s[key] === "active") s[key] = "pending";
+  }
+  return { s, sub };
+}
+
+function processView(t) {
+  const { s, sub } = nodeStates(t);
+  const flow = h("ol", { class: "flow", "aria-label": "How this answer is made" });
+  STEPS.forEach(([key, name], i) => {
+    if (i) {
+      const nxt = s[key];
+      flow.append(h("li", { class: `edge ${nxt === "active" ? "live" : ["done", "warn"].includes(nxt) ? "done" : ""}`, "aria-hidden": "true" }));
+    }
+    const prev = t.shown[key];
+    const settled = ["done", "warn"].includes(s[key]) && prev && !["done", "warn"].includes(prev);
+    const mark = { done: "✓", warn: "!", failed: "✕", skipped: "–", active: i + 1, pending: i + 1 }[s[key]];
+    flow.append(h("li", { class: `node ${s[key]}${settled ? " settle" : ""}${prev === undefined ? " enter" : ""}` },
+      h("span", { class: "mark", "aria-hidden": "true" }, mark),
+      h("span", { class: "name" }, name),
+      h("span", { class: "word" }, WORD[s[key]]),
+      h("span", { class: "sub" }, sub[key], s[key] === "active" ? h("span", { class: "elapsed" }) : null)));
+    t.shown[key] = s[key];
+  });
+  return flow;
+}
+
+function activityLog(t) {
+  const e = t.events, r = e.retrieval, f = r?.filter;
+  const items = [[0, "", "Question sent"]];
+  if (e.meta) items.push([e.meta._t, "", e.meta.mode === "answer" ? `Server ready: ${e.meta.answer_model} will answer` : "Evidence only: no language model is configured"]);
+  if (e.plan) items.push([e.plan._t, e.plan.error ? "warn" : "", e.plan.error ? `Planning failed; searching the question as asked` : `Planned ${e.plan.queries.length} searches: ${e.plan.queries.map((q) => `“${q}”`).join(", ")}`]);
+  const found = e.search || r;
+  if (found) items.push([found._t, found.dense === "ok" ? "" : "warn",
+    `Found ${found.candidates} candidate passages ${found.dense === "ok" ? "by meaning and keywords" : `by keywords only (meaning search ${found.dense.split(";")[0]})`}${e.search ? `; the filter reads the first ${e.search.read}` : ""}`]);
+  if (r && f && !f.status.startsWith("off")) {
+    const counts = [3, 2, 1, 0].map((g) => `${r.pool.filter((x) => x.filter_grade === g).length} ${RATING[g]}`).join(", ");
+    items.push([r._t, f.status === "ok" ? "" : "warn", f.status === "ok"
+      ? `${f.model} rated ${f.read} passages in ${f.seconds}s (${counts}) and kept the ${r.evidence.length} rated highest`
+      : `The filter failed (${f.status}); the search's top ${r.evidence.length} go forward`]);
+  } else if (r) {
+    items.push([r._t, "", `Kept the best ${r.evidence.length} passages from ${new Set(r.evidence.map((x) => x.doc_id)).size} documents`]);
+  }
+  for (const a of e.answers || []) {
+    items.push([a._t, "", `${a.attempt > 1 ? "Second answer" : "Answer"} written: ${a.claims.length} claims, ${a.claims.reduce((n, c) => n + c.citations.length, 0)} quotes`]);
+    const c = t.checks.find((x) => x.attempt === a.attempt);
+    if (c) items.push([c._t, c.passed ? "" : "bad", c.passed ? "Check: every quote was found word for word in the passage it cites" : `Check failed: ${c.errors.slice(0, 2).join("; ")}`]);
+  }
+  if (e.done) items.push([e.done._t, "", `Done in ${e.done.seconds}s${e.done.cost_usd ? ` · US$${e.done.cost_usd.toFixed(4)}` : ""}`]);
+  if (e.error) items.push([e.error._t ?? null, "bad", `Stopped: ${e.error.message}`]);
+  const now = progressText(t);
+  const log = h("ol", { class: "log", "aria-live": "polite", "aria-label": "Activity" });
+  const seen = t.logShown || 0;
+  items.forEach(([at, cls, text], i) => log.append(h("li", { class: `${cls}${i >= seen ? " enter" : ""}` },
+    h("time", {}, at == null ? "" : `${at.toFixed(1)}s`), h("span", {}, text))));
+  if (now) log.append(h("li", { class: "now" }, h("time", {}), h("span", {}, now.replace(/…$/, ""))));
+  t.logShown = items.length;
+  return log;
+}
+
+// Every passage the filter read, as one tile each in search order: coloured by rating, the kept ones outlined.
+function passageStrip(t) {
+  const e = t.events, r = e.retrieval, f = r?.filter;
+  const filtering = f ? !f.status.startsWith("off") : Boolean(e.search);
+  if (!filtering) return null;
+  const wrap = h("div", { class: "strip-wrap" });
+  const strip = h("div", { class: "strip", role: "list", "aria-label": "Passages the filter read, in search order" });
+  if (!r) {
+    for (let i = 0; i < e.search.read; i++) strip.append(h("span", { class: "tile waiting", style: `--i:${i}`, role: "listitem", "aria-label": `Passage ${i + 1}: being rated` }));
+    wrap.append(h("div", { class: "legend" }, h("span", {}, `The filter is rating ${e.search.read} passages…`)), strip);
+    return wrap;
+  }
+  const check = t.checks[t.checks.length - 1];
+  const cited = new Set();
+  for (const c of check?.claims || []) for (const x of c.citations) cited.add(x.evidence);
+  const first = !t.stripShown;
+  r.pool.forEach((x, i) => {
+    const g = x.filter_grade;
+    const label = `Search rank ${x.search_rank}: ${g == null ? "not rated" : `rated ${g} (${RATING[g]})`}${x.selected ? `, kept as passage ${x.n}` : ", not used"}${cited.has(x.n) ? ", cited" : ""}. ${x.title}`;
+    strip.append(h("button", {
+      class: `tile${g != null ? ` r${g}` : ""}${x.selected ? " kept" : ""}${x.selected && cited.has(x.n) ? " cited" : ""}${first ? " enter" : ""}`,
+      style: first ? `animation-delay:${i * 18}ms` : null, title: label, "aria-label": label, role: "listitem",
+      onclick: () => openPoolRow(x.search_rank),
+    }, x.selected && !cited.has(x.n) ? x.n : ""));
+  });
+  t.stripShown = true;
+  wrap.append(h("div", { class: "legend" },
+    h("span", {}, h("i", { class: "r3" }), "3 essential"), h("span", {}, h("i", { class: "r2" }), "2 useful"),
+    h("span", {}, h("i", { class: "r1" }), "1 on topic"), h("span", {}, h("i", {}), "0 not about it"),
+    h("span", {}, h("i", { class: "k" }), "kept for the answer (a dot: cited)")), strip);
+  return wrap;
+}
+
+function openPoolRow(rank) {
+  const row = $(`#pool-${rank}`);
+  if (!row) return;
+  row.closest("details").open = true;
+  if (row.nextElementSibling?.hidden) row.click();
+  row.scrollIntoView({ behavior: "smooth", block: "center" });
+  row.classList.add("flash");
+  setTimeout(() => row.classList.remove("flash"), 1200);
+}
+
+// While a step works, its node counts the seconds, so a long wait never looks frozen.
+setInterval(() => {
+  const t = state.selected;
+  if (!t || t.events.done || t.events.error) return;
+  const el = $("#trail .node.active .elapsed");
+  if (el) el.textContent = ` · ${Math.round((performance.now() - t.t0) / 1000)}s`;
+}, 1000);
+
 // Every passage the relevance filter read: its search rank, its rating, and whether the answer model got it.
 const RATING = { 3: "essential", 2: "useful", 1: "on topic, not usable", 0: "not about the question" };
 
@@ -449,7 +599,7 @@ function poolTable(t, r, citedBy) {
         x.selected ? h("button", { onclick: () => { const c = $(`#ev-${x.n}`); if (c) { c.style.display = ""; c.scrollIntoView({ behavior: "smooth", block: "center" }); } } }, `Go to passage ${x.n}`) : null)));
     const g = x.filter_grade;
     table.append(
-      h("tr", { class: `pool-row${x.selected ? " used" : ""}`, onclick: open, title: "Show the passage" },
+      h("tr", { class: `pool-row${x.selected ? " used" : ""}`, id: `pool-${x.search_rank}`, onclick: open, title: "Show the passage" },
         h("td", {}, x.search_rank),
         h("td", {}, g == null ? h("span", { class: "muted" }, "–") : h("span", { class: `rating r${g}`, title: RATING[g] }, g)),
         h("td", {}, x.selected ? h("span", { class: `badge ${citedBy[x.n] ? "info" : "ok"}` }, citedBy[x.n] ? `[${x.n}] cited` : `[${x.n}]`) : h("span", { class: "muted" }, "not used")),
@@ -584,6 +734,7 @@ function init() {
     if (ev.key === "Enter" && !ev.shiftKey) { ev.preventDefault(); $("#ask").requestSubmit(); }
   });
   $("#viewer-close").addEventListener("click", () => $("#viewer").close());
+  initTheme();
   $("#pg-prev").addEventListener("click", () => viewer.pdf && renderPage(viewer.page - 1));
   $("#pg-next").addEventListener("click", () => viewer.pdf && renderPage(viewer.page + 1));
   wake();
