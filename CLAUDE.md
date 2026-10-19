@@ -14,7 +14,7 @@ answers with gpt-6.1-sol (the filter's first live call passed, D-022); Langfuse 
 for its keys on Render. Measured: retrieval on a judged test set of 178 needs (silver known-item plus exploratory
 questions like the owner's, graded by a Gemini judge), end-to-end answers on 60 test needs, and the
 out-of-scope set; both providers have made live calls. The owner adopted gpt-6.1-sol (D-021) and answer-v3,
-with the answer's prose streamed while it is written (D-024). The scanned reports' garbled OCR is repaired (D-022). Progress log: `docs/progress-rag-v2.md`.
+with the answer's prose streamed while it is written (D-024), then answer-v4 (no brevity, D-025). The scanned reports' garbled OCR is repaired (D-022). Progress log: `docs/progress-rag-v2.md`.
 
 The method is `docs/sop-agent-construction-v2.md` (the owner's SOP). Read `docs/decisions.md` (the
 decision log) and the latest `docs/handover-*.md` before acting.
@@ -114,9 +114,9 @@ decision log) and the latest `docs/handover-*.md` before acting.
   stemmer corrupted stems under concurrency, D-013).
 
 ## The answer (built; tested live in D-011, D-014, D-015)
-- Prompts `prompts/answer-v3.md` (in use since D-024: plainer English, explains general terms and methods,
-  conversational, two or three `follow_ups` shown as buttons; `answer-v1.md` before it; `answer-v2.md` not
-  adopted, D-021),
+- Prompts `prompts/answer-v4.md` (in use since D-025: answer-v3 without its brevity instructions;
+  answer-v3, D-024: plainer English, explains general terms and methods, conversational, two or three
+  `follow_ups` shown as buttons; `answer-v1.md` before it; `answer-v2.md` not adopted, D-021),
   `prompts/plan-v2.md` (in use since D-013) and `prompts/filter-v1.md` (in use since D-020), locked with
   their schemas in `prompts/versions.lock`. A change is a new version (`econ lock-prompts` after adding the
   file). Eval-only prompts live in `prompts/eval/`.

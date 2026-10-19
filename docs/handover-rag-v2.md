@@ -72,6 +72,11 @@ Branch `ccr-fe4defc0-ysiv1i`. Read D-017 to D-020 first.
   is proposed to the owner for a measurement (about US$0.20).
 - **For the owner:** set `KEEP_WARM=true` (the keep-warm job has never run); align the Langfuse project.
 
+## Update, 2026-10-19 (latest): answer-v4 (D-025)
+- `answer.prompt: answer-v4` (answer-v3 without brevity, the owner's request). Not yet run live.
+- Two-thirds of the answer model's output is the claims' quotes and restatements; citing by sentence number
+  (the server fills in the quotes) is proposed to the owner in D-025, not built.
+
 ## Open items
 1. **Langfuse keys on Render**: set and working (2026-10-19). The span counter on `/api/health` read 0 because
    the app was built twice; fixed on `claude/gracious-gates-x2zfot`, live once merged to `main`. Still the owner's:
@@ -89,4 +94,4 @@ Branch `ccr-fe4defc0-ysiv1i`. Read D-017 to D-020 first.
 - Grids and test sets committed before any number; deviations recorded as amendments before the data they
   affect (see grid retrieval-v2, amendment 1).
 - Every paid call goes through `econ.evalr.llmcall` or `econ.evalr.judge` (cached, metered, capped).
-- Next free decision number: **D-025**.
+- Next free decision number: **D-026**.

@@ -1092,3 +1092,38 @@ embedding model):
   text and could be the next things to shorten.
 
 **Spend:** OpenAI US$0.38 of the US$0.50 given (in the ledger, purpose `answers-v3-compare`).
+
+## D-025 — answer-v4: no instruction to be brief; what the answer stage spends its time on (the owner's request; Claude, 2026-10-19)
+
+**Request (the owner, 2026-10-19).** "I also would like to remove the instruction for it to respond
+concisely." And: "it took ~1 minute for the question to get answered. EASILY the bulk of the time is spent by
+LLM producing final answer stage."
+
+**Built and adopted (the owner's request).** `prompts/answer-v4.md` is answer-v3 with its brevity removed:
+rule 7 no longer asks for "one to three" lead sentences, "in a sentence, not a methods section" or "a quick
+lookup gets a short reply", and instead asks for the full picture the evidence offers, "thorough rather than
+brief"; rule 9 drops "and briefly". Kept, because they are not about the reply's length: "keep each claim
+short" (the claims array is the audit trail, and the check needs each claim's quotes to be at least half as
+long as the claim) and "short questions" for the follow-up buttons. Same schema (`answer3`). Config:
+`answer.prompt: answer-v4`. Not run live (no budget asked for it yet); answers will be longer, so slower.
+
+**The ~1 minute.** Render still runs `main` (e62be9e, answer-v1, no streaming): D-024 is not deployed yet.
+
+**Where the answer stage's time goes** (the 12 answers of D-024's comparison, gpt-6.1-sol, medium effort):
+- The model writes at a steady 42-51 tokens a second. Reasoning is 114-516 tokens (10-25% of the output);
+  the rest is the visible JSON, 372-1,906 tokens.
+- Of the JSON's characters: the prose the reader sees 35%; the claims' verbatim quotes 33%; the claims' own
+  restatements 18%; structure 14%. Two-thirds of the writing is the audit trail, and the schema puts it after
+  the prose, so with streaming the reader has the prose and then waits for the claims.
+
+**Proposal to the owner (a change to the answer format; not built).** Cite by sentence instead of copying
+quotes: number the sentences of each evidence passage in the prompt (`[3.2]` for passage 3, sentence 2), have
+the model cite sentence numbers in its prose markers, and let the server fill in the quotes from the passages'
+own text. The quotes become exact by construction (the check verifies the numbers exist and the coverage),
+highlighting and page links work as now, and the model no longer writes claims or quotes: roughly half its
+output goes, so the answer stage should take about half as long. What is lost: the claim-by-claim
+restatement, and the rule that a quote is at least half as long as its claim (a cited sentence is the
+quote). It needs a new prompt, schema, check and UI change, offline tests, and a paid comparison (about
+US$0.30) before adoption.
+
+**Spend:** none.

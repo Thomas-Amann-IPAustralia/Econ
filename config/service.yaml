@@ -47,7 +47,7 @@ llm:
   query_planning: true             # rewrite follow-ups and split broad questions into searches
 
 answer:
-  prompt: answer-v3                  # adopted by the owner, 2026-10-19 (D-024): plainer, conversational, follow-ups
+  prompt: answer-v4                  # the owner, 2026-10-19 (D-025): answer-v3 without its brevity instructions
   stream_drafts: true                # show the prose while it is written, marked not yet checked (D-024)
   plan_prompt: plan-v2               # D-013
   max_queries: 4

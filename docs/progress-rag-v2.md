@@ -224,3 +224,8 @@ OpenAI), not run.
 - The owner allowed US$0.50 and adopted answer-v3. Comparison (6 questions on both prompts, US$0.38): all 12
   pass the check first time; first words at median 16.9 s (v1) and 18.7 s (v3), whole answers 41.1 s and
   44.5 s; v3 explains more and offers follow-ups. Proposed: measure `answer_effort: low`.
+
+## 2026-10-19 — answer-v4 (D-025)
+- answer-v4: answer-v3 without its brevity instructions, adopted at the owner's request. Answer-stage anatomy:
+  ~45 tokens/s; prose 35% of the JSON, quotes 33%, claim restatements 18%. Proposed: cite by sentence number.
+
