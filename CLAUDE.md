@@ -13,8 +13,8 @@ live: the knowledge base, the serving index (with search-only context notes), th
 answers with gpt-6.1-sol (the filter's first live call passed, D-022); Langfuse tracing is built and waits
 for its keys on Render. Measured: retrieval on a judged test set of 178 needs (silver known-item plus exploratory
 questions like the owner's, graded by a Gemini judge), end-to-end answers on 60 test needs, and the
-out-of-scope set; both providers have made live calls. The owner adopted gpt-6.1-sol and kept answer-v1
-(D-021). The scanned reports' garbled OCR is repaired (D-022). Progress log: `docs/progress-rag-v2.md`.
+out-of-scope set; both providers have made live calls. The owner adopted gpt-6.1-sol (D-021) and answer-v3,
+with the answer's prose streamed while it is written (D-024). The scanned reports' garbled OCR is repaired (D-022). Progress log: `docs/progress-rag-v2.md`.
 
 The method is `docs/sop-agent-construction-v2.md` (the owner's SOP). Read `docs/decisions.md` (the
 decision log) and the latest `docs/handover-*.md` before acting.
@@ -114,13 +114,14 @@ decision log) and the latest `docs/handover-*.md` before acting.
   stemmer corrupted stems under concurrency, D-013).
 
 ## The answer (built; tested live in D-011, D-014, D-015)
-- Prompts `prompts/answer-v1.md` (in use; `answer-v2.md` was not adopted, D-021; `answer-v3.md`, plainer and
-  conversational with `follow_ups`, built for the owner's decision, D-024),
+- Prompts `prompts/answer-v3.md` (in use since D-024: plainer English, explains general terms and methods,
+  conversational, two or three `follow_ups` shown as buttons; `answer-v1.md` before it; `answer-v2.md` not
+  adopted, D-021),
   `prompts/plan-v2.md` (in use since D-013) and `prompts/filter-v1.md` (in use since D-020), locked with
   their schemas in `prompts/versions.lock`. A change is a new version (`econ lock-prompts` after adding the
   file). Eval-only prompts live in `prompts/eval/`.
 - The answer: `coverage` (complete | partial | not_in_kb), prose with claim markers, `claims` with
-  verbatim quotes of numbered evidence, `gaps`. The check (`econ.answer.check`) verifies every quote
+  verbatim quotes of numbered evidence, `gaps`, and from answer-v3 `follow_ups` (schema `answer3`). The check (`econ.answer.check`) verifies every quote
   against the passage it cites, the markers, the coverage and the text checks; one retry, then flagged.
 - Drafts (D-024): the answer's prose is streamed as `draft` events while it is written (OpenAI only), each
   piece text-checked, shown as not yet checked and replaced by the checked answer; drafts are not logged.
@@ -155,7 +156,8 @@ Commit code, run, then commit outputs. Australian spelling, sentence-case headin
 ## When to stop and ask the owner
 - New high-severity sweep findings on real items: propose allowlist entries.
 - Spending money on model calls: ask before every paid call, however small (D-021), unless the owner has
-  given a budget for the work at hand (D-022: up to $3 OpenAI and $2 Gemini; spent $0.06 and $0.26).
+  given a budget for the work at hand (D-022: up to $3 OpenAI and $2 Gemini; spent $0.06 and $0.26; D-024: up
+  to $0.50 OpenAI, spent $0.38).
 - Adopting a measured result outside the choices the owner delegated.
 - Changing the answer format, what the chatbot may refuse, or publishing anything new. The reports' text
   in `library/` and their PDFs on the Pages site are approved, with the acknowledgement in the README

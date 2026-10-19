@@ -1065,3 +1065,30 @@ and one free call to Render's search.
    questions on both prompts).
 
 **Spend:** none (one free call to Render's `/api/search`).
+
+**Update (the owner, later on 2026-10-19).** The owner allowed up to US$0.50 of OpenAI for a comparison and
+adopted answer-v3 ("Switch now"): `answer.prompt: answer-v3` in `config/service.yaml`. The comparison
+(`reports/answers-v3-compare.md`, `eval/runs/answers/answers-v3-compare.jsonl`; six questions, the sixth a
+follow-up, each under both prompts, streaming on, keyword search only because this container had no
+embedding model):
+| | answer-v1 | answer-v3 |
+|---|---|---|
+| Passed the check first time | 6 of 6 | 6 of 6 |
+| First words on screen, median | 16.9 s | 18.7 s |
+| Whole answer, checked, median | 41.1 s | 44.5 s |
+| Prose, median characters / claims | 1,796 / 6 | 2,326 / 8 |
+| Cost a question, median | US$0.033 | US$0.031 |
+- answer-v3's answers explain terms in everyday words (for example censoring, "judging a queue only by those
+  who have already finished"), use question-shaped headings, say how much weight a finding bears, mark a
+  partly answered follow-up `partial` with its gap, and offer three follow-ups each time. They are about a
+  third longer, so they take a few seconds more in total.
+- **The estimate above was too optimistic.** Words appear at 13-27 s, not 6-12 s: before its first word the
+  answer model spends 6-19 s (reading about 7,000 tokens of evidence and reasoning at medium effort), after
+  5-11 s of plan and filter. Streaming still puts the prose on screen about 25 s before the checked answer
+  (median 18.7 s against 44.5 s) and shows it growing.
+- **Recommendation to the owner (not adopted, costs nothing to try but changes the owner's heuristic):**
+  measure `answer_effort: low` against medium on the same six questions (about US$0.20); lower effort should
+  cut the wait before the first word. Also: the filter (3-7 s) and the plan (1.5-4 s) run before any answer
+  text and could be the next things to shorten.
+
+**Spend:** OpenAI US$0.38 of the US$0.50 given (in the ledger, purpose `answers-v3-compare`).

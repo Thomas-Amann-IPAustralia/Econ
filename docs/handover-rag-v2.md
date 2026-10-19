@@ -65,8 +65,11 @@ Branch `ccr-fe4defc0-ysiv1i`. Read D-017 to D-020 first.
 - **Streaming:** `answer.stream_drafts: true`; the answer's prose arrives as `draft` events (OpenAI only), so
   the first words show after about 6-12 s instead of 25-40 s. Code: `providers.OpenAIModel._stream`,
   `pipeline.answer_call`, `ProseReader`; UI `drawSoon`, `liveDraft`.
-- **answer-v3** is locked (schema `answer3`, with `follow_ups`) and not adopted; the UI shows follow-ups
-  when present. To adopt: `answer.prompt: answer-v3` in `config/service.yaml`, after the owner says so.
+- **answer-v3** (schema `answer3`, with `follow_ups`) is adopted by the owner and in config; the UI shows
+  follow-ups as buttons. Side by side with answer-v1: `reports/answers-v3-compare.md` (6 of 6 pass on both).
+- **Measured:** first words at a median 18.7 s, whole answer 44.5 s (keyword search only, locally). The answer
+  model's wait before its first word (6-19 s at medium effort) is the next thing to cut; `answer_effort: low`
+  is proposed to the owner for a measurement (about US$0.20).
 - **For the owner:** set `KEEP_WARM=true` (the keep-warm job has never run); align the Langfuse project.
 
 ## Open items

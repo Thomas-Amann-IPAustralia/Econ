@@ -221,3 +221,6 @@ OpenAI), not run.
 - Built: the answer's prose streamed as `draft` events while it is written (text-checked, marked unchecked,
   replaced by the checked answer; not logged); answer-v3 with plain-language explanations, conversation and
   follow-up buttons, locked and tested, not adopted (the owner's call). 121 tests pass; UI checked headless.
+- The owner allowed US$0.50 and adopted answer-v3. Comparison (6 questions on both prompts, US$0.38): all 12
+  pass the check first time; first words at median 16.9 s (v1) and 18.7 s (v3), whole answers 41.1 s and
+  44.5 s; v3 explains more and offers follow-ups. Proposed: measure `answer_effort: low`.

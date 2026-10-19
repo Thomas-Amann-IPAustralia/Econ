@@ -37,6 +37,7 @@ def good_answer(schema_name, user):
             }
         ],
         "gaps": [],
+        "follow_ups": ["What about design registrations?"],  # the adopted answer-v3's schema (D-024)
     }
 
 
