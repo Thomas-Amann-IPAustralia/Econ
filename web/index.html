@@ -44,6 +44,13 @@
     <section id="view-chat" class="view active">
       <div class="layout">
         <div class="chat-col">
+          <div class="chat-bar" id="chat-bar" hidden>
+            <span id="chat-count" class="muted"></span>
+            <span class="chat-actions">
+              <button type="button" class="linkish" id="save-chat" title="Every question, its searches, the filter's ratings, the answer, its claims and quotes, the check, the timings and the cost; passages by their identifiers and page links, without their full text">Download the conversation (JSON)</button>
+              <button type="button" class="linkish" id="copy-chat" title="The same JSON, to the clipboard">Copy as JSON</button>
+            </span>
+          </div>
           <div id="thread" class="thread" aria-live="polite">
             <div class="empty" id="empty">
               <h2>Ask about IP and the economy</h2>
@@ -200,6 +207,14 @@
 
         <p>It was also given 18 awkward questions: off-topic requests, questions about current events, questions built on a false premise, and pasted text pretending to be instructions. It declined the off-topic ones, gave the year of any figure it found for current events, corrected both false premises, and ignored the instructions hidden in the pasted text. Two weaknesses showed up. It sometimes labels an answer "Complete" when "Partial" would be fairer. And it can be talked into tasks that have nothing to do with the publications, such as writing a poem.</p>
 
+        <h3>Reading an answer</h3>
+        <ul>
+          <li><strong>Underlined text with a number</strong> rests on the sentences that number cites. Select the number to read those sentences under the paragraph, copied word for word from the publication, and the evidence trail goes to the passage they come from.</li>
+          <li><strong>Lighter text with no number</strong> is the assistant's own words: an explanation of a term, a connection between findings, or a judgement. No publication is cited for it.</li>
+          <li><strong>Claims made by the chatbot</strong>, the second tab on each answer, lists every claim in the assistant's words above the sentences it cites. Step through them with Previous and Next, and the evidence trail follows, passage by passage.</li>
+          <li><strong>Download the conversation</strong> (or copy it) as a JSON file to look further into the results: every question, the searches, the filter's rating of every passage it read, the answer, its claims and their quotes, the check, the timings and the cost. Passages are listed by their identifiers and page links, without their full text.</li>
+        </ul>
+
         <h3>What you can rely on, and what to check yourself</h3>
         <p><strong>You can rely on these:</strong></p>
         <ul>
@@ -209,7 +224,7 @@
         </ul>
         <p><strong>Check these yourself:</strong></p>
         <ul>
-          <li><strong>Whether a quote supports the claim it's attached to.</strong> No check covers this yet. Read the highlighted sentences, especially for any point your work depends on.</li>
+          <li><strong>Whether a quote supports the claim it's attached to.</strong> No check covers this yet. Underlining shows that a stretch of the answer cites sentences, not that they bear out every word of it: the assistant writes in its own words and can add its own connections. Read the cited sentences, especially for any point your work depends on.</li>
           <li><strong>How the findings are joined up.</strong> When the answer connects findings ("Taken together…"), that is the AI's reading of the evidence, not a finding from the reports.</li>
           <li><strong>Explanations of general terms</strong>, such as what a regression is, may be given without a citation. They are there to help you follow the answer and add no facts about IP, firms or the economy.</li>
           <li><strong>How current a figure is.</strong> The publications run from 2014 to 2026, and a figure is only as recent as the report it comes from. The assistant knows nothing published since.</li>

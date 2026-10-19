@@ -1239,3 +1239,55 @@ keyboard focus. Plain HTML and CSS, no chart library. Colours: blue and red pole
 grey "before" mark, checked with the dataviz palette validator against both themes' backgrounds (colour-blind
 separation and contrast pass; the greys are neutral by design and carried by labels). Checked in a headless
 browser: both themes, a phone width (no horizontal scroll), no script errors.
+
+## D-030 — Quoted words and the assistant's own told apart; claims beside the answer; the conversation as JSON (the owner's request; Claude, 2026-10-19)
+
+**Request (the owner, 2026-10-19).** "Within the LLM's response, I would like to more clearly delineate where
+something is being quoted verbatim from the source and where the LLM may be adding its opinion." Keep the
+evidence trail as it is, but let "Passages the answer model read" stay the priority: put the claims below the
+response or in a tab, "Claims made by the chatbot", that steps through the source material on the right. "I'd
+like users to be able to copy out their full chat trace (basically everything on screen except for the full
+text sources)... Maybe as a JSON file?"
+
+**Built** (the front end only: `web/app.js`, `web/style.css`, `web/index.html`; the API, prompts, answer
+schema and check are unchanged).
+- **The answer's prose in runs.** A run of prose that ends in claim markers is underlined: it rests on those
+  claims' sentences. Prose after a line's last marker, or on a line with none, is drawn lighter as the
+  assistant's own words (an explanation, a connection, a judgement; no citation). Headings are plain. A key
+  above the prose says so. The rule is the server's claim-label rule (`cite._claim_text`, D-027), so a run is
+  exactly the prose its claim's label covers. Emphasis that spans a marker is closed and reopened, so each
+  run's markup is balanced.
+- **The verbatim sentences in the answer.** A claim marker opens, under its paragraph, the sentences the
+  claim cites, copied word for word, on the same yellow as the quotes highlighted in the passages, each with
+  its document, year, section and page, a button to its passage in the trail and one to its page in the PDF.
+  The trail focuses the passage at the same time, as before.
+- **"Claims made by the chatbot"**, a second tab on each answer: every claim in the assistant's words above
+  the sentences it cites. Previous and Next (or the arrow keys) step through the claims and the trail follows,
+  outlining each claim's passage and lighting its sentences there; a failed claim shows its errors. The claim
+  list is gone from the trail, so the passages follow the process view and the passage strip directly. Each
+  passage's "cited by" numbers and its highlighted sentences lead back to their claim in the answer. A
+  sentence cited by two claims is one highlight naming both (before, it named only the first).
+- **The conversation as JSON** (`econ-chat-export/1`): a bar above the conversation downloads it as a file or
+  copies it. For each question: when it was asked, the question, any pasted material, the year limits, the
+  request id, the models and prompt, the plan, the search, the filter, the answer (the prose with its markers,
+  its runs as `cited`, `own` or `heading`, gaps, follow-ups), the check, the claims with their quotes, offsets
+  and page links, any earlier failed attempt, the 20 passages (identity, page link, search rank, rating, the
+  claims citing them, matched terms, scores per search), every passage the filter read (rank, rating, chosen
+  or not), the search traces, the activity log, the timings, the usage and the cost. Passage text is left out;
+  the quotes (whole cited sentences) are kept. Drafts are left out, as they are from the log (D-024).
+- "How it works" has a short "Reading an answer" section, and its point on whether a quote supports its
+  claim now says that underlining shows a citation, not that the sentences bear out every word.
+
+**Checked** in headless Chromium, the API mocked with two recorded answer-v5 answers (D-026) with their real
+passages and the real check, the first with a failed first attempt: the tabs; the marking (17 cited runs, 3
+of the assistant's own and 5 headings in the causality answer); the drawer's sentences equal the claim's
+quotes; Close returns focus to the marker; stepping and the arrow keys move the trail to each claim's passages
+and bring its card into view; "cited by" and highlighted sentences lead back to the claim; the export (both
+questions, the failed attempt, 60 passages read, no passage's full text, no internal fields); Copy as JSON and
+the answer's Copy; both themes; a phone width without horizontal scroll; no script errors. 129 tests pass (no
+Python changed).
+
+**Limits, for the record.** An underlined run cites sentences; it is not checked that they support every word,
+and within a cited run the assistant can still add a connection of its own (How it works says so). The split
+follows where the model put its markers, so an answer that cites once at the end of a paragraph has the whole
+paragraph underlined, as its claim label does (D-027).

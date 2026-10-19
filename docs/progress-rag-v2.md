@@ -234,3 +234,12 @@ OpenAI), not run.
   deferred the choice). 6 questions on v4 and v5 (US$0.42): whole answer 50.2 s to 31.6 s, output tokens
   2,134 to 1,026, prose as long, 6 of 6 pass. Copy button added. 128 tests pass; UI checked headless.
 
+
+## 2026-10-19 — Quoted and own words, claims beside the answer, the conversation as JSON (D-030)
+- The answer's prose is marked in runs: underlined where it ends in claim markers, lighter where it is the
+  assistant's own words; a marker opens its cited sentences, word for word, under the paragraph.
+- "Claims made by the chatbot", a tab on each answer, steps through the claims and the trail follows; the
+  claim list left the trail, whose passages link back to their claims.
+- The conversation downloads or copies as JSON (`econ-chat-export/1`), everything shown but passage text.
+- Checked headless against recorded answer-v5 answers: both themes, phone width, no script errors; 129
+  tests pass. No model calls, no spend.

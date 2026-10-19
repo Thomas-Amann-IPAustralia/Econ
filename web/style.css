@@ -181,10 +181,62 @@ button { cursor: pointer; }
 .bar.kw { background: var(--warn); }
 .trace { margin-top: 16px; font-size: 0.82rem; }
 .trace summary { cursor: pointer; font-weight: 600; font-size: 0.92rem; }
-.claimlist { margin: 0 0 16px; padding: 0; list-style: none; display: grid; gap: 6px; }
-.claimlist li { font-size: 0.88rem; padding: 6px 9px; border-radius: 8px; background: var(--panel); border: 1px solid var(--line); }
-.claimlist li.failed { border-color: var(--bad); }
-.claimlist .why-failed { color: var(--bad); font-size: 0.82rem; }
+.why-failed { color: var(--bad); font-size: 0.82rem; }
+.cited-by { display: inline-flex; gap: 2px; align-items: center; font-size: 0.8rem; color: var(--muted); white-space: nowrap; }
+.cited-by .cite { margin-left: 3px; }
+.ev-text mark.q[data-claims] { cursor: pointer; }
+.ev-text mark.q.on { outline: 2px solid var(--mark-line); outline-offset: 1px; }
+
+/* --- the answer (D-030): what rests on cited sentences, what is the assistant's own, and the sentences -------
+   Cited runs are underlined and the assistant's own words are lighter; the sentences, copied word for word,
+   are on the same yellow as the quotes highlighted in the passages. */
+.said.cited { text-decoration-line: underline; text-decoration-thickness: 1px; text-underline-offset: 3px;
+  text-decoration-color: color-mix(in srgb, var(--accent) 55%, transparent); }
+.said.cited.on { background: var(--accent-soft); text-decoration-color: var(--accent); border-radius: 3px; }
+.said.own { color: var(--muted); }
+.msg.bot .said-key { font-size: 0.8rem; margin: 0 0 10px; padding: 5px 9px; border-radius: 8px; background: var(--bg);
+  border: 1px solid var(--line); }
+.atabs { display: flex; flex-wrap: wrap; gap: 2px; border-bottom: 1px solid var(--line); margin: 0 0 10px; }
+.atab { border: 0; background: none; padding: 5px 10px; font-size: 0.86rem; color: var(--muted);
+  border-bottom: 2px solid transparent; margin-bottom: -1px; }
+.atab.on { color: var(--ink); border-bottom-color: var(--accent); font-weight: 600; }
+.atab:hover { color: var(--ink); }
+
+.drawer { margin: 0 0 12px; padding: 8px 10px; border: 1px solid var(--line); border-left: 3px solid var(--mark-line);
+  border-radius: 8px; background: var(--bg); cursor: default; }
+li > .drawer { margin-top: 6px; }
+.drawer-head { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; font-size: 0.8rem;
+  color: var(--muted); margin-bottom: 6px; }
+.verbatim { margin: 0 0 8px; }
+.verbatim:last-child { margin-bottom: 0; }
+.verbatim blockquote { margin: 0; padding: 5px 9px; border-radius: 6px; background: var(--quote); color: var(--quote-ink);
+  font-size: 0.9rem; }
+.verbatim blockquote::before { content: "“"; }
+.verbatim blockquote::after { content: "”"; }
+.verbatim.missing blockquote { background: var(--bad-soft); color: var(--bad); }
+.verbatim figcaption { display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: center; margin-top: 4px;
+  font-size: 0.78rem; color: var(--muted); }
+.verbatim figcaption .linkish { padding: 1px 7px; font-size: 0.78rem; }
+
+/* Sticky offsets are measured inside the thread's padding: -18px puts the bar at the thread's top edge. */
+.claim-nav { position: sticky; top: -18px; z-index: 1; display: flex; flex-wrap: wrap; gap: 6px; align-items: center;
+  padding: 6px 0; margin-bottom: 4px; background: var(--panel); }
+.claim-pos { font-weight: 600; font-size: 0.86rem; margin-right: auto; }
+.claim-nav .linkish:disabled { opacity: 0.45; cursor: default; }
+.msg.bot .claims-intro { font-size: 0.82rem; color: var(--muted); margin: 0 0 8px; }
+.msg.bot .claim-cards { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.claim-card { border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; background: var(--panel); cursor: pointer; }
+.claim-card:hover { border-color: color-mix(in srgb, var(--accent) 50%, var(--line)); }
+.claim-card.on { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent); }
+.claim-card.failed { border-left: 3px solid var(--bad); }
+.cc-head { display: flex; gap: 6px; align-items: center; }
+.cc-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin: 8px 0 3px; }
+.msg.bot .cc-text { margin: 0; }
+
+.chat-bar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 6px 10px;
+  padding: 6px 20px; border-bottom: 1px solid var(--line); background: var(--panel); font-size: 0.84rem; }
+.chat-bar[hidden] { display: none; }
+.chat-actions { display: flex; flex-wrap: wrap; gap: 6px; }
 
 /* library */
 .page { max-width: 980px; margin: 0 auto; padding: 22px 20px 60px; }
@@ -222,6 +274,8 @@ dialog#viewer[open] { display: flex; flex-direction: column; }
   .layout { grid-template-columns: 1fr; height: auto; }
   .chat-col { border-right: 0; min-height: 70vh; }
   .thread { padding: 14px 16px; }
+  .chat-bar { padding: 6px 16px; }
+  .claim-nav { top: -14px; }
   .ask { padding: 12px 16px; position: sticky; bottom: 0; }
   .trail-col { border-top: 1px solid var(--line); padding: 16px; }
   .foot { padding: 8px 16px; }

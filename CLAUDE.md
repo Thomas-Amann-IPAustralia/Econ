@@ -15,7 +15,8 @@ for its keys on Render. Measured: retrieval on a judged test set of 178 needs (s
 questions like the owner's, graded by a Gemini judge), end-to-end answers on 60 test needs, and the
 out-of-scope set; both providers have made live calls. The owner adopted gpt-6.1-sol (D-021) and answer-v3,
 with the answer's prose streamed while it is written (D-024), then answer-v4 (no brevity, D-025)
-and answer-v5 (sentence citations written by code, D-026). The scanned reports' garbled OCR is repaired (D-022). Progress log: `docs/progress-rag-v2.md`.
+and answer-v5 (sentence citations written by code, D-026); the answer view marks cited and own words, lists
+claims in a tab, and exports the conversation as JSON (D-030). The scanned reports' garbled OCR is repaired (D-022). Progress log: `docs/progress-rag-v2.md`.
 
 The method is `docs/sop-agent-construction-v2.md` (the owner's SOP). Read `docs/decisions.md` (the
 decision log) and the latest `docs/handover-*.md` before acting.
@@ -129,6 +130,11 @@ decision log) and the latest `docs/handover-*.md` before acting.
   check (`econ.answer.check`) verifies every quote against the passage it cites, the markers, the coverage
   and the text checks (quote-length rules apply only to model-written quotes); one retry, then flagged.
 - Each finished answer has a Copy button (the answer, what's not covered, and a numbered source list).
+- Reading an answer (D-030, front end only): prose that ends in claim markers is underlined, prose with none is
+  lighter as the assistant's own words (the same rule as `cite._claim_text`); a marker opens its cited
+  sentences, word for word, under the paragraph. A "Claims made by the chatbot" tab steps through the claims
+  while the trail follows (the trail lists passages, not claims). The conversation downloads or copies as JSON
+  (`econ-chat-export/1`): everything shown except passage text.
 - Drafts (D-024): the answer's prose is streamed as `draft` events while it is written (OpenAI only), each
   piece text-checked, shown as not yet checked and replaced by the checked answer; drafts are not logged.
 - Providers: OpenAI (`gpt-6.1-sol` answers, adopted by the owner without a comparison, D-021; `gpt-6-luna`
