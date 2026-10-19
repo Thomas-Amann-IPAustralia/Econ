@@ -845,3 +845,24 @@ and the answer.
 The first question after credit is added is the smoke test for this change.
 
 **Spend:** none.
+
+## D-021 — The answer model, answer-v1 kept, coverage calibration dropped, spending by permission (the owner, 2026-10-19)
+
+**Decisions (the owner, 2026-10-19).**
+- **Answer model:** "GPT-6.1-sol is good thank you." `gpt-6.1-sol` (medium effort) is adopted as the answer
+  model, with `gpt-6-luna` for the plan and the filter. The model comparison (SOP §20.5) is not run. Gemini
+  stays in `config/service.yaml` as the fallback provider, used only if no OpenAI key is set.
+- **answer-v2 (D-015) is not adopted:** answer-v1 stays. The service is used by the owner's internal team, and
+  the owner accepts that it may misbehave when someone deliberately tries to break it (the poem, the missing
+  advice caveat).
+- **Coverage calibration** (answers labelling `complete` too readily) is dropped from the open items.
+- **Spending:** the OpenAI account has credit again. Claude still asks the owner before every paid call,
+  however small, including smoke tests.
+
+**Deployment, checked 2026-10-19.** All three pieces are live: the embedder on Cloud Run, the API on Render
+(`https://econ-api-vk5f.onrender.com`, on `main`'s commit 1750563, dense lane `ok`, CORS allows the Pages
+origin), the front end on Pages (`https://thomas-amann-ipaustralia.github.io/Econ/`, with the PDFs). The API
+runs evidence-only until `OPENAI_API_KEY` is set on Render. A rehearsal of Render's build (plain
+`pip install -e .`) started the service at about 137 MB, well under the free tier's 512 MB.
+
+**Spend:** none.

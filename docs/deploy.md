@@ -8,8 +8,10 @@ GitHub Pages (front end, PDFs)  ──►  Render (API: search, answer, check)  
                                                  └──►  OpenAI or Gemini (answers, when a key is set)
 ```
 
-Deployed so far: the embedder on Cloud Run (2026-10-18, project `gen-lang-client-0664096123`,
-`australia-southeast1`). Render and Pages are next.
+Deployed (checked 2026-10-19, D-021): the embedder on Cloud Run (project `gen-lang-client-0664096123`,
+`australia-southeast1`), the API on Render (`https://econ-api-vk5f.onrender.com`), the front end on Pages
+(`https://thomas-amann-ipaustralia.github.io/Econ/`, with the PDFs). The API is evidence-only until a model key
+is set: see the last section.
 
 ## 0. Merge to `main`
 
@@ -116,8 +118,9 @@ Set the repository variable `KEEP_WARM` to `true` to have `.github/workflows/kee
 every 10 minutes in Canberra business hours (about 220 of Render's 750 free hours a month). GitHub can
 delay scheduled runs, so this reduces cold starts rather than removing them.
 
-## Later: model keys
+## Model keys
 
-Add `OPENAI_API_KEY` or `GEMINI_API_KEY` in the Render service's **Environment** settings; saving them
-redeploys the service with answers turned on. The daily spending cap is `daily_budget_usd` in
+Add `OPENAI_API_KEY` in the Render service's **Environment** settings (the adopted answer model is OpenAI's,
+D-021; `GEMINI_API_KEY` is needed only as a fallback); saving it redeploys the service with answers turned on.
+`/api/health` then shows `"mode": "answer"` with the provider and models. The daily spending cap is `daily_budget_usd` in
 `config/service.yaml`.

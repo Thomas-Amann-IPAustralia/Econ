@@ -7,13 +7,13 @@ in the Cloudflare R2 bucket `econ-knowledge` (EU jurisdiction). Callers are peop
 doing exploratory research for strategic direction. **Transparency and traceability come first**: every
 claim an answer makes quotes a passage, and every passage leads to its page.
 
-**Current scope: the retrieval-augmented chatbot, second version (RAG v2, D-011 to D-020).** Built: the
-knowledge base, the serving index (with search-only context notes), the API (Render), the embedder (Cloud
-Run), the front end (GitHub Pages); the embedder is live on Cloud Run, the API and front end not yet
-deployed. Measured: retrieval on a judged test set of 178 needs (silver known-item plus exploratory
+**Current scope: the retrieval-augmented chatbot, second version (RAG v2, D-011 to D-021).** Built and
+live: the knowledge base, the serving index (with search-only context notes), the API (Render,
+`econ-api-vk5f.onrender.com`), the embedder (Cloud Run), the front end (GitHub Pages, with the PDFs); the API
+answers once `OPENAI_API_KEY` is set on Render (evidence-only until then, D-021). Measured: retrieval on a judged test set of 178 needs (silver known-item plus exploratory
 questions like the owner's, graded by a Gemini judge), end-to-end answers on 60 test needs, and the
-out-of-scope set; both providers have made live calls. Not yet done: Langfuse tracing; the model choice
-(SOP §20.5); adopting answer-v2 (the owner's call, D-015). Progress log: `docs/progress-rag-v2.md`.
+out-of-scope set; both providers have made live calls. The owner adopted gpt-6.1-sol and kept answer-v1
+(D-021). Not yet done: the first live call of the filter in the service; Langfuse tracing. Progress log: `docs/progress-rag-v2.md`.
 
 The method is `docs/sop-agent-construction-v2.md` (the owner's SOP). Read `docs/decisions.md` (the
 decision log) and the latest `docs/handover-*.md` before acting.
@@ -108,15 +108,16 @@ decision log) and the latest `docs/handover-*.md` before acting.
   stemmer corrupted stems under concurrency, D-013).
 
 ## The answer (built; tested live in D-011, D-014, D-015)
-- Prompts `prompts/answer-v1.md` (in use; `answer-v2.md` is proposed to the owner, D-015),
+- Prompts `prompts/answer-v1.md` (in use; `answer-v2.md` was not adopted, D-021),
   `prompts/plan-v2.md` (in use since D-013) and `prompts/filter-v1.md` (in use since D-020), locked with
   their schemas in `prompts/versions.lock`. A change is a new version (`econ lock-prompts` after adding the
   file). Eval-only prompts live in `prompts/eval/`.
 - The answer: `coverage` (complete | partial | not_in_kb), prose with claim markers, `claims` with
   verbatim quotes of numbered evidence, `gaps`. The check (`econ.answer.check`) verifies every quote
   against the passage it cites, the markers, the coverage and the text checks; one retry, then flagged.
-- Providers: OpenAI (`gpt-6.1-sol` answers, `gpt-6-luna` plans) or Gemini (`gemini-3.8-flash`,
-  `gemini-3.5-flash-lite`): provisional defaults, not yet compared (SOP §20.5). Output limits include
+- Providers: OpenAI (`gpt-6.1-sol` answers, adopted by the owner without a comparison, D-021; `gpt-6-luna`
+  plans and filters), with Gemini (`gemini-3.8-flash`, `gemini-3.5-flash-lite`) as the fallback if no OpenAI
+  key is set. Output limits include
   reasoning tokens (12,000 answer, 1,500 plan; D-011); a failed but billed call is still metered; a
   transient error (429, 5xx, dropped connection) is retried once (D-015).
 - End to end (D-014, 60 test needs): every answer passes the check; on exploratory questions answers cite
@@ -127,8 +128,7 @@ High-volume extraction: a small model behind validation. General production work
 medium or high effort. A judge never shares the answering model's family.
 
 ## Future state (context only — do not build yet)
-Langfuse tracing (SOP §20.0 and §20.3); the model evaluation and adoption (SOP §20.5); answer-v2 (owner's
-decision, D-015); a check of meaning for claims; plan-v3's answer-shaped query, re-tested on a larger set
+Langfuse tracing (SOP §20.0 and §20.3); a check of meaning for claims; plan-v3's answer-shaped query, re-tested on a larger set
 (D-016); a persistent answer store and spend meter. The judged test set (`econ.evalr.judged`, `eval/judgments/judged-v1.jsonl`)
 is the yardstick for all of them; a method that surfaces unjudged passages needs a top-up first.
 
@@ -138,7 +138,7 @@ Commit code, run, then commit outputs. Australian spelling, sentence-case headin
 
 ## When to stop and ask the owner
 - New high-severity sweep findings on real items: propose allowlist entries.
-- Spending money on model calls beyond an approved budget.
+- Spending money on model calls: ask before every paid call, however small (D-021).
 - Adopting a measured result outside the choices the owner delegated.
 - Changing the answer format, what the chatbot may refuse, or publishing anything new. The reports' text
   in `library/` and their PDFs on the Pages site are approved, with the acknowledgement in the README

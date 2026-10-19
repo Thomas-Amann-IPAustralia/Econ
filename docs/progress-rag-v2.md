@@ -174,3 +174,9 @@ filter-v1, the pipeline step (parallel calls, validation, fallback), the `search
 (all 60 passages with search rank, rating and selection), the compact log, the trail's filter step and 60-row
 table, and `econ verify-search` checks for the filter (same 60, same prompt, same 20 from the measured
 ratings). 92 tests pass. Not yet run live: the OpenAI account needs credit first.
+
+## 2026-10-19 — The owner's decisions; deployment checked (D-021)
+gpt-6.1-sol adopted; answer-v1 kept (answer-v2 not adopted); coverage calibration dropped; every paid call
+still needs the owner's permission. Checked live: Pages (with PDFs), Render on `main`'s commit (dense lane
+`ok`, CORS for the Pages origin), Cloud Run. Render's build rehearsed with plain pip: the service holds about
+137 MB. Left: the owner sets `OPENAI_API_KEY` on Render, then one question as the filter's live smoke test.

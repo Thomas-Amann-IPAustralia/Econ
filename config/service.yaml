@@ -1,7 +1,6 @@
 # The Render API service and its calls to the Cloud Run embedder and the answer model.
-# Model ids and prices were checked on the providers' pages on 2026-10-18. The answer models are
-# provisional defaults so the service can run once a key exists; the owner adopts a model after the
-# agent evaluation (SOP §20.5). Unknown keys are errors.
+# Model ids and prices were checked on the providers' pages on 2026-10-18. The owner adopted OpenAI's
+# gpt-6.1-sol as the answer model (D-021); Gemini answers only if no OpenAI key is set. Unknown keys are errors.
 
 cors_origins:
   - https://thomas-amann-ipaustralia.github.io

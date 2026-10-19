@@ -1,6 +1,6 @@
 # Handover: RAG v2
 
-For the next session. Read `CLAUDE.md`, then D-011 to D-020 in `docs/decisions.md`, then this. The running
+For the next session. Read `CLAUDE.md`, then D-011 to D-021 in `docs/decisions.md`, then this. The running
 log of the session is `docs/progress-rag-v2.md`; the owner's summary is `docs/rag-v2-results-explained.md`.
 
 **Status (2026-10-18):** RAG v2 adopted in config and verified. Branch `claude/charming-edison-sg0ehp`
@@ -44,21 +44,24 @@ Branch `ccr-fe4defc0-ysiv1i`. Read D-017 to D-020 first.
   `eval/runs/judged-v1/plans/`, reranker scores in `eval/cache/rerank/`, paid replies in `eval/cache/llm/`.
 - Batch ignores the JSON schema: parse every reply shape and require each item exactly once.
 
+## Update, 2026-10-19: the owner's decisions and the deployment (D-021)
+- Adopted: gpt-6.1-sol answers. Kept: answer-v1 (answer-v2 not adopted: an internal team uses the service).
+  Dropped: coverage calibration. The OpenAI account has credit again; ask the owner before every paid call.
+- Live: Pages (`https://thomas-amann-ipaustralia.github.io/Econ/`, with the PDFs), Render
+  (`https://econ-api-vk5f.onrender.com`, dense lane `ok`), Cloud Run. Render is evidence-only until the owner
+  sets `OPENAI_API_KEY` there; the first question after that is the filter's live smoke test.
+
 ## Open items
-1. **For the owner: answer-v2** (D-015): declines non-information requests (the poem), says when a reply is
-   not advice, calibrates `complete`. Run on 9 items only; before adopting, run the answers-v1 set with it
-   (about $0.70) to check in-scope answers don't suffer.
-2. **Model choice** (SOP §20.5): gpt-6.1-sol vs gemini-3.8-flash vs others, judged across families.
-3. **Coverage calibration**: answers label `complete` too readily (the vague and trade-secrets items).
-4. **Tried and not adopted in grid v3 (D-016):** the fusion weight (flat), rerankers that read the notes
+1. **The filter's first live call** (see above), with the owner's permission to spend.
+2. **Tried and not adopted in grid v3 (D-016):** the fusion weight (flat), rerankers that read the notes
    (17M and 32M still harmful), plan-v3's answer-shaped query (level on dev, +0.022 on test with an interval
    that includes zero: the one idea worth re-testing on a larger set).
-5. **The plan prompt's document map** must be updated when documents are added; so must the notes
+3. **The plan prompt's document map** must be updated when documents are added; so must the notes
    (`econ.kb.enrich`, about $0.14 a corpus).
-6. Carried from v1: Langfuse tracing, re-OCR of the 2018 and 2021 garbled pages, a persistent answer store.
+4. Carried from v1: Langfuse tracing, re-OCR of the 2018 and 2021 garbled pages, a persistent answer store.
 
 ## Conventions kept
 - Grids and test sets committed before any number; deviations recorded as amendments before the data they
   affect (see grid retrieval-v2, amendment 1).
 - Every paid call goes through `econ.evalr.llmcall` or `econ.evalr.judge` (cached, metered, capped).
-- Next free decision number: **D-017**.
+- Next free decision number: **D-022**.
