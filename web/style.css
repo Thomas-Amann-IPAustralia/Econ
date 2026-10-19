@@ -11,9 +11,10 @@
   --quote: #fff1b8;
   --quote-ink: #3d3000;
   --said: #1c4380;
-  --quote-multi: #c9ecd5;
-  --quote-multi-ink: #0f3b22;
-  --mark-multi-line: #2f9a5c;
+  /* a claim's sentences, each its own colour (D-032): pink, green, violet, then grey; tint, outline and number */
+  --k1-bg: #f1b0c8; --k1-line: #c2397f; --k2-bg: #66b566; --k2-line: #006300;
+  --k3-bg: #a196e6; --k3-line: #4a3aa7; --k4-bg: #cfd3d6; --k4-line: #5d6670;
+  --k-ink: #1d2125; --k-badge-ink: #ffffff;
   --term: #e8eefc;
   --ok: #1d7a46;
   --ok-soft: #e3f4ea;
@@ -34,7 +35,8 @@
   :root:not([data-theme="light"]) {
     --bg: #262e33; --panel: #2f383e; --raised: #38434a; --ink: #e7ebee; --muted: #aab5bc; --line: #45525a;
     --accent: #7cb4f0; --accent-ink: #10202f; --accent-soft: #34485c; --quote: #6b5a1c; --quote-ink: #fff4cc;
-    --said: #a9c8f0; --quote-multi: #2e5b40; --quote-multi-ink: #e2f7e9; --mark-multi-line: #7fdca8;
+    --said: #a9c8f0; --k1-bg: #dd749a; --k1-line: #f6b3cd; --k2-bg: #339c33; --k2-line: #9be39b;
+    --k3-bg: #a69ded; --k3-line: #d3cdfb; --k4-bg: #aab5bc; --k4-line: #e2e7ea; --k-ink: #10161a; --k-badge-ink: #10161a;
     --term: #3a4a63; --ok: #7fdca8; --ok-soft: #2c4a3b; --warn: #f2bd72; --warn-soft: #4d3d22;
     --bad: #f5978f; --bad-soft: #553231; --mark: rgba(255, 196, 0, 0.30); --mark-line: #ffc400;
     --shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0 4px 16px rgba(0, 0, 0, 0.2);
@@ -44,7 +46,8 @@
 :root[data-theme="dark"] {
   --bg: #262e33; --panel: #2f383e; --raised: #38434a; --ink: #e7ebee; --muted: #aab5bc; --line: #45525a;
   --accent: #7cb4f0; --accent-ink: #10202f; --accent-soft: #34485c; --quote: #6b5a1c; --quote-ink: #fff4cc;
-  --said: #a9c8f0; --quote-multi: #2e5b40; --quote-multi-ink: #e2f7e9; --mark-multi-line: #7fdca8;
+  --said: #a9c8f0; --k1-bg: #dd749a; --k1-line: #f6b3cd; --k2-bg: #339c33; --k2-line: #9be39b;
+  --k3-bg: #a69ded; --k3-line: #d3cdfb; --k4-bg: #aab5bc; --k4-line: #e2e7ea; --k-ink: #10161a; --k-badge-ink: #10161a;
   --term: #3a4a63; --ok: #7fdca8; --ok-soft: #2c4a3b; --warn: #f2bd72; --warn-soft: #4d3d22;
   --bad: #f5978f; --bad-soft: #553231; --mark: rgba(255, 196, 0, 0.30); --mark-line: #ffc400;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.25), 0 4px 16px rgba(0, 0, 0, 0.2);
@@ -192,11 +195,20 @@ button { cursor: pointer; }
 .cited-by .cite { margin-left: 3px; }
 .ev-text mark.q[data-claims] { cursor: pointer; }
 .ev-text mark.q.on { outline: 2px solid var(--mark-line); outline-offset: 1px; }
-.ev-text mark.q.on.multi { background: var(--quote-multi); color: var(--quote-multi-ink); outline-color: var(--mark-multi-line); }
+.k1 { --k-bg: var(--k1-bg); --k-line: var(--k1-line); }
+.k2 { --k-bg: var(--k2-bg); --k-line: var(--k2-line); }
+.k3 { --k-bg: var(--k3-bg); --k-line: var(--k3-line); }
+.k4 { --k-bg: var(--k4-bg); --k-line: var(--k4-line); }
+.ev-text mark.q.on.k { background: var(--k-bg); color: var(--k-ink); outline-color: var(--k-line); }
+.ev-text mark.q.on[data-k]::before { content: attr(data-k); }
+.ev-text mark.q.on[data-k]::before, .qk { display: inline-block; min-width: 1.45em; height: 1.45em; padding: 0 3px;
+  border-radius: 999px; background: var(--k-line); color: var(--k-badge-ink); font-size: 0.7rem; font-weight: 700;
+  line-height: 1.45em; text-align: center; vertical-align: 1px; }
+.ev-text mark.q.on[data-k]::before { margin-right: 4px; }
 
-/* --- the answer (D-030, D-031): prose that rests on cited sentences is navy; the sentences themselves, copied
-   word for word, are on the same yellow as the quotes highlighted in the passages, or green when a claim's
-   sentences come from more than one passage. */
+/* --- the answer (D-030, D-031, D-032): prose that rests on cited sentences is navy; the sentences themselves,
+   copied word for word, are on the same yellow as the quotes highlighted in the passages, or, when a claim cites
+   several, each in its own colour and number. */
 .said.cited { color: var(--said); }
 .said.cited.on { background: var(--accent-soft); border-radius: 3px; }
 .atabs { display: flex; flex-wrap: wrap; gap: 2px; border-bottom: 1px solid var(--line); margin: 0 0 10px; }
@@ -211,7 +223,10 @@ button { cursor: pointer; }
   font-size: 0.9rem; }
 .verbatim blockquote::before { content: "“"; }
 .verbatim blockquote::after { content: "”"; }
-.claim-card.multi .verbatim blockquote { background: var(--quote-multi); color: var(--quote-multi-ink); }
+.verbatim.k { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 7px; align-items: start; }
+.verbatim.k .qk { margin-top: 6px; }
+.verbatim.k blockquote { background: var(--k-bg); color: var(--k-ink); box-shadow: inset 3px 0 0 var(--k-line); }
+.verbatim.k figcaption { grid-column: 2; }
 .verbatim.missing blockquote { background: var(--bad-soft); color: var(--bad); }
 .verbatim figcaption { display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: center; margin-top: 4px;
   font-size: 0.78rem; color: var(--muted); }

@@ -399,8 +399,11 @@ function claimsOf(t) {
   const c = t.checks[t.checks.length - 1];
   return c && (!t.events.answer || c.attempt === t.events.answer.attempt) ? c.claims : [];
 }
-// How many passages a claim's sentences come from: more than one is shown in green (D-031).
+// How many passages a claim's sentences come from, for the claim's label.
 const passagesOf = (c) => new Set(c.citations.map((q) => q.evidence)).size;
+// A claim citing several sentences gives each its own colour and number (D-032), the same in its card and in the
+// trail: pink, green and violet for the first three (the most that stay distinct side by side), grey after.
+const sentenceColour = (k) => `k k${Math.min(k, 4)}`;
 const evidenceByN = (t) => Object.fromEntries((t.events.retrieval?.evidence || []).map((x) => [x.n, x]));
 const narrow = () => window.matchMedia("(max-width: 860px)").matches;
 
@@ -436,14 +439,15 @@ function answerPanel(t, claims) {
 }
 
 // One cited sentence (or, under answer-v4, one quote), as the publication has it, with where it is from.
-function quoteBlock(t, q, src, n) {
-  return h("figure", { class: `verbatim${q.found ? "" : " missing"}` },
+function quoteBlock(t, q, src, n, k = null) {
+  return h("figure", { class: `verbatim${q.found ? "" : " missing"}${k ? ` ${sentenceColour(k)}` : ""}` },
+    k ? h("span", { class: "qk", title: `Sentence ${k} of this claim` }, k) : null,
     h("blockquote", {}, q.quote),
     h("figcaption", {},
       h("span", {}, src ? sourceLine(src) : `Passage ${q.evidence}`, q.found ? "" : " · not found in the passage"),
       h("button", { class: "linkish", type: "button", title: "Show this passage in the evidence trail", onclick: (ev) => {
         ev.stopPropagation();
-        pickClaim(t, n, { passage: q.evidence, scroll: true });
+        pickClaim(t, n, { passage: q.evidence, span: q.start != null ? `${q.start}-${q.end}` : null, scroll: true });
       } }, `Passage ${q.evidence}`),
       src ? h("button", { class: "linkish", type: "button", onclick: (ev) => { ev.stopPropagation(); openViewer(src.doc_id, src.pages[0], src.boxes); } }, `Show on ${pages(src.pages)}`) : null));
 }
@@ -469,9 +473,9 @@ function claimsPanel(t, claims) {
     h("span", { class: "claim-pos", "aria-live": "polite" }, at >= 0 ? `Claim ${at + 1} of ${claims.length}` : `${claims.length} claims`),
     h("button", { class: "linkish", type: "button", "data-step": "-1", disabled: at <= 0, onclick: step(-1) }, "‹ Previous"),
     h("button", { class: "linkish", type: "button", "data-step": "1", disabled: at === claims.length - 1, onclick: step(1) }, at < 0 ? "First claim ›" : "Next ›")));
-  panel.append(h("p", { class: "claims-intro" }, "Each claim is in the assistant's words, above the sentences it cites, copied word for word by code, not by the AI. Green marks a claim drawn from more than one passage. Select a claim, or step through them, to see its passages in the evidence trail."));
+  panel.append(h("p", { class: "claims-intro" }, "Each claim is in the assistant's words, above the sentences it cites, copied word for word by code, not by the AI. When a claim cites several sentences, each has its own colour and number, here and in the evidence trail. Select a claim, or step through them, to see its passages."));
   panel.append(h("ol", { class: "claim-cards" }, claims.map((c) => h("li", {
-    class: `claim-card${c.verified ? "" : " failed"}${passagesOf(c) > 1 ? " multi" : ""}`, "data-claim": c.n, tabindex: "0",
+    class: `claim-card${c.verified ? "" : " failed"}`, "data-claim": c.n, tabindex: "0",
     "aria-label": `Claim ${c.n}${c.verified ? "" : ", failed the check"}`,
     onclick: (e2) => { e2.stopPropagation(); pickClaim(t, c.n, { focus: () => t.el.querySelector(`.claim-card[data-claim="${c.n}"]`) }); },
     onkeydown: (e2) => {
@@ -485,8 +489,10 @@ function claimsPanel(t, claims) {
     c.verified ? h("span", { class: "badge ok" }, "Found word for word") : h("span", { class: "badge bad" }, "Failed the check")),
   h("div", { class: "cc-label" }, "In the assistant's words"),
   h("p", { class: "cc-text" }, c.text),
-  h("div", { class: "cc-label" }, passagesOf(c) > 1 ? `What the sources say, word for word: ${passagesOf(c)} passages` : "What the source says, word for word"),
-  c.citations.map((q) => quoteBlock(t, q, ev[q.evidence], c.n)),
+  h("div", { class: "cc-label" }, c.citations.length > 1
+    ? `What the sources say, word for word: ${c.citations.length} sentences from ${passagesOf(c)} ${passagesOf(c) === 1 ? "passage" : "passages"}`
+    : "What the source says, word for word"),
+  c.citations.map((q, i) => quoteBlock(t, q, ev[q.evidence], c.n, c.citations.length > 1 ? i + 1 : null)),
   c.errors.length ? h("div", { class: "why-failed" }, c.errors.join("; ")) : null))));
   return panel;
 }
@@ -494,13 +500,13 @@ function claimsPanel(t, claims) {
 // Select a claim: lit in the answer, its passages focused in the trail. From the chat the trail scrolls to the
 // passage (on a narrow screen only from a number or a passage button, as the trail is then below the chat);
 // from the trail, the chat scrolls to the claim.
-function pickClaim(t, n, { focus = null, passage = null, scroll = false, reveal = false, fromTrail = false } = {}) {
+function pickClaim(t, n, { focus = null, passage = null, span = null, scroll = false, reveal = false, fromTrail = false } = {}) {
   if (state.selected !== t) select(t);
   t.claimOn = n;
   renderBot(t);
   focus?.()?.focus({ preventScroll: true });
   const wide = !narrow();
-  focusClaim(t, n, { scroll: scroll || (wide && !fromTrail), passage });
+  focusClaim(t, n, { scroll: scroll || (wide && !fromTrail), passage, span });
   if (fromTrail || reveal) {
     const target = t.el.querySelector(t.view === "claims" ? `.claim-card[data-claim="${n}"]` : `.answer-panel .cite[data-claim="${n}"]`);
     target?.scrollIntoView({ behavior: "smooth", block: "nearest" });
@@ -700,7 +706,7 @@ function highlight(text, quotes, terms) {
   for (const r of ranges) {
     if (r.start < pos) continue;
     out += esc(text.slice(pos, r.start));
-    const by = r.claims ? ` data-claims="${r.claims.join(" ")}" title="Cited by claim ${r.claims.join(", ")}: select to show it in the answer"` : "";
+    const by = r.claims ? ` data-claims="${r.claims.join(" ")}" data-span="${r.start}-${r.end}" title="Cited by claim ${r.claims.join(", ")}: select to show it in the answer"` : "";
     out += `<mark class="${r.cls}"${by}>${esc(text.slice(r.start, r.end))}</mark>`;
     pos = r.end;
   }
@@ -1006,21 +1012,28 @@ function filterDoc(doc, btn) {
   $("#filter-note").textContent = on ? "Filled pips and a blue edge mark cited passages." : `Showing ${state.docs[doc]?.title || doc}. Select it again to show all.`;
 }
 
-// A claim's passages in the trail: outlined, opened, its sentences lit; scrolled to on request (to `passage`
-// if given, otherwise the first it cites).
-function focusClaim(t, n, { scroll = false, passage = null } = {}) {
+// A claim's passages in the trail: outlined, opened, its sentences lit (each in its own colour and number when
+// it cites several); scrolled to on request (to the sentence `span` in `passage` if given, otherwise the first).
+function focusClaim(t, n, { scroll = false, passage = null, span = null } = {}) {
   if (state.selected !== t) return;
   const pane = $("#trail");
-  pane.querySelectorAll(".cite.on, mark.q.on").forEach((x) => x.classList.remove("on", "multi"));
+  pane.querySelectorAll(".cite.on, mark.q.on").forEach((x) => {
+    x.classList.remove("on", "k", "k1", "k2", "k3", "k4");
+    delete x.dataset.k;
+  });
   pane.querySelectorAll(".ev.focus").forEach((a) => a.classList.remove("focus"));
   const claim = claimsOf(t).find((c) => c.n === n);
   if (!claim) return;
   pane.querySelectorAll(`.cite[data-claim="${n}"]`).forEach((b) => b.classList.add("on"));
-  const multi = passagesOf(claim) > 1;
+  const order = new Map(claim.citations.length > 1 ? claim.citations.map((q, i) => [`${q.evidence}:${q.start}-${q.end}`, i + 1]) : []);
   pane.querySelectorAll("mark.q[data-claims]").forEach((m) => {
-    const on = m.dataset.claims.split(" ").includes(String(n));
-    m.classList.toggle("on", on);
-    m.classList.toggle("multi", on && multi);
+    if (!m.dataset.claims.split(" ").includes(String(n))) return;
+    m.classList.add("on");
+    const k = order.get(`${m.closest(".ev")?.id.slice(3)}:${m.dataset.span}`);
+    if (k) {
+      m.classList.add(...sentenceColour(k).split(" "));
+      m.dataset.k = k;
+    }
   });
   let first = null;
   for (const c of claim.citations) {
@@ -1029,7 +1042,7 @@ function focusClaim(t, n, { scroll = false, passage = null } = {}) {
     card.style.display = "";
     card.classList.add("focus");
     card.querySelector(".ev-text").classList.add("open");
-    if (passage == null || c.evidence === passage) first ||= card.querySelector("mark.q.on") || card;
+    if (passage == null || c.evidence === passage) first ||= (span && card.querySelector(`mark.q[data-span="${span}"]`)) || card.querySelector("mark.q.on") || card;
   }
   if (scroll) first?.scrollIntoView({ behavior: "smooth", block: "center" });
 }

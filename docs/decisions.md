@@ -1322,3 +1322,34 @@ phone width, no script errors) still pass.
 
 **Note.** The distinction between navy and ordinary text is by colour alone; the claim numbers remain the cue
 that does not depend on colour.
+
+## D-032 — Each of a claim's sentences in its own colour and number (the owner's request; Claude, 2026-10-19)
+
+**Request (the owner, 2026-10-19, after D-031).** "Where a claim has multiple sources, my intention was for each
+source to be given a unique colour. This way a user, at a glance, could quickly see which portions of text
+support the claim." The owner's sketch coloured the two sentences of one claim, from the same passage, pink and
+green, in the claim's card and in the passage.
+
+**Built** (front end only; replaces D-031's green for claims from several passages).
+- A claim that cites more than one sentence gives each sentence its own colour and number, the same in its card
+  (a numbered badge beside the quote, which is tinted) and in the evidence trail while the claim is selected
+  (the sentence tinted, outlined in the darker shade, and numbered). A claim citing one sentence stays yellow,
+  unnumbered, as before. The card's label says how many sentences from how many passages. A sentence's
+  "Passage" button scrolls the trail to that sentence.
+- Colours, in a fixed order: pink, green, violet, then grey for the fourth and later sentences. Three is the most
+  that stay distinct when any two can sit side by side and beside the other claims' yellow: the dataviz
+  validator, run on every subset of the reference palette's hues with the yellow included, finds no passing set
+  of four (blue and violet, for one, are too close). Of the 82 claims in D-026's six answers, 28 cite one
+  sentence, 26 two, 13 three and 15 four or more, so the grey and the numbers do real work. The numbers make the
+  match independent of colour.
+- Light: tints #f1b0c8, #66b566, #a196e6 (60% of the palette's magenta, green and violet over white) under the
+  page's ink, at 6.2:1 or better; outlines and badges #c2397f, #006300, #4a3aa7. Dark: brighter tints #dd749a,
+  #339c33, #a69ded (80% over white) under dark text, at 4.6:1 or better (the tints mixed into the dark panel were
+  too muddy beside the dark yellow); outlines and badges in lighter shades. With the yellow, all pairs clear the
+  colour-blind (protan, deutan) and normal-vision floors in both themes. Grey: #cfd3d6 light, #aab5bc dark.
+- How it works and the claims tab say so.
+
+**Checked** headless: the causality answer's first claim (4 sentences from 3 passages) shows 1 pink, 2 green,
+3 violet, 4 grey in its card, and the same numbers and colours on the same sentences in passages 4, 3 and 20;
+a one-sentence claim stays yellow and unnumbered; a sentence's Passage button brings it into view; the earlier
+checks still pass, in both themes and at phone width, with no script errors.

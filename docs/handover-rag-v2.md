@@ -96,6 +96,9 @@ Branch `ccr-fe4defc0-ysiv1i`. Read D-017 to D-020 first.
 - D-031 (the owner's review of D-030): no key and no box under a paragraph; cited prose is navy (`--said`), the
   rest the ordinary colour; a number takes the trail to its sentences. A claim drawn from more than one passage
   (`passagesOf`) is green in the claims tab and, while selected, in the trail (`--quote-multi`).
+- D-032 replaces that green: a claim citing several sentences gives each its own colour and number (pink, green,
+  violet, then grey; `sentenceColour`, tokens `--k1-bg` to `--k4-line`), in its card and, while selected, in the
+  trail (marks carry `data-span`).
 
 ## Open items
 1. **Langfuse keys on Render**: set and working (2026-10-19). The span counter on `/api/health` read 0 because
@@ -114,4 +117,4 @@ Branch `ccr-fe4defc0-ysiv1i`. Read D-017 to D-020 first.
 - Grids and test sets committed before any number; deviations recorded as amendments before the data they
   affect (see grid retrieval-v2, amendment 1).
 - Every paid call goes through `econ.evalr.llmcall` or `econ.evalr.judge` (cached, metered, capped).
-- Next free decision number: **D-032**.
+- Next free decision number: **D-033**.

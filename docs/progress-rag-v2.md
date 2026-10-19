@@ -248,3 +248,8 @@ OpenAI), not run.
 - At the owner's request: the key and the box under a paragraph are gone; cited prose is navy, the rest the
   ordinary colour; a number takes the trail to its sentences. A claim drawn from more than one passage is green
   in the claims tab and in the trail. Checked headless; no model calls, no spend.
+
+## 2026-10-19 — Each of a claim's sentences in its own colour (D-032)
+- At the owner's request: a claim citing several sentences shows each in its own colour and number (pink, green,
+  violet, then grey), the same in its card and in the trail; palette checked with the dataviz validator in both
+  themes. Checked headless; no model calls, no spend.
