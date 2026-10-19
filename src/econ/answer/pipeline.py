@@ -11,6 +11,11 @@
   its first 60 passages (the `search` event says so while the filter reads), a small model rates each 0-3,
   and the answer model gets the 20 rated highest. If the filter fails, the search's top 20 go forward and
   the event says why.
+- more than one corpus (D-033): with an optional corpus on (the reader's toggle), each corpus is searched
+  apart and gives its own first `combined.read_per_corpus` passages; the filter reads them all, interleaved
+  so that rating ties go to the corpora in turn, and the answer model gets the `keep_min` rated highest plus
+  any more rated `keep_grade` or above, up to `keep_max`. The plan, filter and answer prompts are the
+  combined ones, which name both publishers. With every optional corpus off, nothing here applies.
 - retrieval: `evidence` is exactly what the answer model sees; `pool` is every passage the filter read,
   in search order, with its search rank, its rating and whether it was chosen (a chosen passage's entry is
   brief and names its evidence number `n`; its text is in `evidence`).
@@ -62,6 +67,9 @@ class Request:
     doc_ids: list[str] | None = None
     years: tuple[int, int] | None = None
     session_id: str | None = None  # one per conversation, from the front end; groups its traces
+    corpora: list[str] | None = (
+        None  # optional corpora switched on (D-033); the first corpus is always searched
+    )
 
 
 @dataclass
@@ -153,13 +161,19 @@ def rerank_step(svc: Services, ranked: list, query: str) -> dict:
     }
 
 
-def evidence_block(n: int, chunk: dict, doc: dict, body: str | None = None) -> str:
+def _publisher(doc: dict, named: bool) -> str:
+    """The publisher attribute, shown only when more than one corpus is searched (D-033), so a single-corpus
+    prompt is byte for byte the one measured."""
+    return f' publisher="{defang(doc.get("publisher") or "")}"' if named else ""
+
+
+def evidence_block(n: int, chunk: dict, doc: dict, body: str | None = None, publisher: bool = False) -> str:
     """A passage as the answer model sees it; `body` replaces its text (the numbered sentences, D-026)."""
     pages = chunk["pages"]
     pg = f"{pages[0]}" if len(pages) == 1 else f"{pages[0]}-{pages[-1]}"
     section = " > ".join(chunk["section"]) if chunk["section"] else ""
     return (
-        f'<evidence n="{n}" document="{defang(doc["title"])}" year="{doc["year"]}" '
+        f'<evidence n="{n}" document="{defang(doc["title"])}"{_publisher(doc, publisher)} year="{doc["year"]}" '
         f'section="{defang(section)}" pages="{pg}">\n{body if body is not None else defang(chunk["text"])}'
         "\n</evidence>"
     )
@@ -168,10 +182,10 @@ def evidence_block(n: int, chunk: dict, doc: dict, body: str | None = None) -> s
 # --- the relevance filter (D-018 to D-020) ---------------------------------------------------------------
 
 
-def filter_block(pid: str, chunk: dict, doc: dict) -> str:
+def filter_block(pid: str, chunk: dict, doc: dict, publisher: bool = False) -> str:
     section = " > ".join(chunk["section"]) if chunk["section"] else ""
     return (
-        f'<evidence id="{pid}" document="{defang(doc["title"])}" year="{doc["year"]}" '
+        f'<evidence id="{pid}" document="{defang(doc["title"])}"{_publisher(doc, publisher)} year="{doc["year"]}" '
         f'section="{defang(section)}">\n{defang(chunk["text"])}\n</evidence>'
     )
 
@@ -198,19 +212,45 @@ def by_rating(rows: list[int], ratings: dict[int, int], k: int) -> list[int]:
     return sorted(range(len(rows)), key=lambda i: (-ratings.get(rows[i], 0), i))[:k]
 
 
-def filter_step(svc: Services, question: str, pool: list, parent=None) -> dict:
+def by_rating_upto(
+    rows: list[int], ratings: dict[int, int], keep_min: int, keep_max: int, grade: int
+) -> list[int]:
+    """The `keep_min` rated highest, then any further ones rated `grade` or more, up to `keep_max` (D-033):
+    a narrow question keeps the usual 20, a broad one with many useful passages gets more."""
+    order = by_rating(rows, ratings, len(rows))
+    out = order[:keep_min]
+    for i in order[keep_min:keep_max]:
+        if ratings.get(rows[i], 0) < grade:
+            break
+        out.append(i)
+    return out
+
+
+def interleave(lists: list[list]) -> list[tuple[int, int]]:
+    """(list, position) pairs taking each list's next item in turn, so no corpus is first on every tie."""
+    out = []
+    for k in range(max((len(x) for x in lists), default=0)):
+        out.extend((j, k) for j, x in enumerate(lists) if k < len(x))
+    return out
+
+
+def filter_step(
+    svc: Services, question: str, pool: list, parent=None, prompt: str | None = None, publisher: bool = False
+) -> dict:
     """Rate the pool's passages with the provider's filter model, the config's group size a call, the calls in
     parallel. Any failed or malformed reply drops every rating, so the search order stands, visibly."""
     fc = config.service().answer.filter
     p = svc.provider
     parent = parent or tracing.NullObs()
-    system = prompts.load(fc.prompt)
+    system = prompts.load(prompt or fc.prompt)
     calls = []
     for g in range(0, len(pool), fc.group):
         part = pool[g : g + fc.group]
         ids = {f"p{g + i + 1}": s.row for i, s in enumerate(part)}
         blocks = [
-            filter_block(pid, svc.index.chunks[row], svc.index.docs[svc.index.chunks[row]["doc_id"]])
+            filter_block(
+                pid, svc.index.chunks[row], svc.index.docs[svc.index.chunks[row]["doc_id"]], publisher
+            )
             for pid, row in ids.items()
         ]
         calls.append((filter_user(question, blocks), ids))
@@ -264,6 +304,8 @@ def evidence_view(svc: Services, sel, n: int | None, queries: list[str]) -> dict
         "title": d["title"],
         "year": d["year"],
         "series": d["series"],
+        "corpus": c.get("corpus", config.DEFAULT_CORPUS),
+        "publisher": d.get("publisher"),
         "licence": d.get("licence"),
         "ocr": d.get("ocr", False),
         "note": d.get("note"),
@@ -426,7 +468,15 @@ def _run(req: Request, svc: Services, root) -> Iterator[dict]:
     request_id = uuid.uuid4().hex[:12]
     mode = "answer" if svc.model else "evidence_only"
     p = svc.provider
-    root.update(metadata={"request_id": request_id, "mode": mode})
+    # The corpora searched (D-033): the first always; an optional one when the reader switched it on.
+    first = svc.index.corpora[0]
+    cc = scfg.answer.combined
+    extra = [c for c in dict.fromkeys(req.corpora or []) if c != first and c in svc.index.corpora]
+    combined = bool(extra and cc)
+    searched = [first, *extra] if combined else [first]
+    answer_prompt = cc.prompt if combined else scfg.answer.prompt
+    plan_prompt = cc.plan_prompt if combined else scfg.answer.plan_prompt
+    root.update(metadata={"request_id": request_id, "mode": mode, "corpora": ",".join(searched)})
     yield {
         "event": "meta",
         "request_id": request_id,
@@ -435,7 +485,8 @@ def _run(req: Request, svc: Services, root) -> Iterator[dict]:
         "answer_model": getattr(p, "answer_model", None),
         "plan_model": getattr(p, "plan_model", None),
         "index": {k: svc.index.meta[k] for k in ("strategy", "embedder", "revision", "chunks", "built_from")},
-        "prompt": scfg.answer.prompt if svc.model else None,
+        "prompt": answer_prompt if svc.model else None,
+        "corpora": searched,
     }
 
     # --- plan --------------------------------------------------------------------------------------
@@ -461,7 +512,7 @@ def _run(req: Request, svc: Services, root) -> Iterator[dict]:
                 svc,
                 root,
                 "econ.plan",
-                system=prompts.load(scfg.answer.plan_prompt),
+                system=prompts.load(plan_prompt),
                 user=user,
                 schema=strict_schema(Plan),
                 schema_name="plan",
@@ -502,7 +553,7 @@ def _run(req: Request, svc: Services, root) -> Iterator[dict]:
     search_obs = root.child(
         "econ.search",
         as_type="retriever",
-        input={"queries": queries, "doc_ids": req.doc_ids, "years": req.years},
+        input={"queries": queries, "doc_ids": req.doc_ids, "years": req.years, "corpora": searched},
     )
     qvecs, dense_status = None, "ok"
     if svc.embedder.configured:
@@ -514,34 +565,79 @@ def _run(req: Request, svc: Services, root) -> Iterator[dict]:
         dense_status = "not configured; keyword search only"
     timings["embed"] = round(time.time() - t, 2)
     t = time.time()
-    allowed = svc.index.allowed(req.doc_ids, req.years)
-    ranked, traces = svc.index.search(queries, qvecs, allowed=allowed)
-    # The reranker compares passages with the question as asked (as measured, D-012); in a conversation, with
-    # the planner's standalone rewrite, or without a planner, the previous question and this one.
-    asked = (standalone if planned else f"{prev} {question}".strip()) if req.history else question
-    rerank = rerank_step(svc, ranked, rerank_query(asked, req.context))
-    if rerank.get("ranked") is not None:
-        ranked = rerank.pop("ranked")
+    fc = scfg.answer.filter
+    filtering = bool(svc.model and fc and getattr(p, "filter_model", None))
+    if not combined:
+        allowed = svc.index.allowed(req.doc_ids, req.years)
+        ranked, traces = svc.index.search(queries, qvecs, allowed=allowed)
+        # The reranker compares passages with the question as asked (as measured, D-012); in a conversation,
+        # with the planner's standalone rewrite, or without a planner, the previous question and this one.
+        asked = (standalone if planned else f"{prev} {question}".strip()) if req.history else question
+        rerank = rerank_step(svc, ranked, rerank_query(asked, req.context))
+        if rerank.get("ranked") is not None:
+            ranked = rerank.pop("ranked")
+        pool = svc.index.context(ranked, fc.read if filtering else None)
+        ranks = list(range(1, len(pool) + 1))
+        candidates = len(ranked)
+    else:
+        # Each corpus searched apart, its own first passages kept, the lists interleaved (D-033).
+        lists, traces, candidates = [], [], 0
+        for c in searched:
+            r_c, t_c = svc.index.search(
+                queries, qvecs, allowed=svc.index.allowed(req.doc_ids, req.years, corpus=c)
+            )
+            candidates += len(r_c)
+            for tr in t_c:
+                tr["corpus"] = c
+            traces += t_c
+            lists.append(svc.index.context(r_c, cc.read_per_corpus if filtering else None))
+        turns = interleave(lists)
+        pool = [lists[j][k] for j, k in turns]
+        ranks = [k + 1 for _, k in turns]
+        rc = config.pipeline().reranking
+        rerank = {
+            "model": rc.adopted,
+            "status": "off (not measured with more than one corpus)" if rc.adopted else "off",
+        }
     for tr in traces:
         for h in tr["hits"]:
             h["chunk_id"] = svc.index.chunks[h["row"]]["chunk_id"]
-    fc = scfg.answer.filter
-    filtering = bool(svc.model and fc and getattr(p, "filter_model", None))
-    pool = svc.index.context(ranked, fc.read if filtering else None)
     timings["search"] = round(time.time() - t, 3)
 
     # --- the relevance filter ------------------------------------------------------------------------
     keep = config.pipeline().retrieval.context_chunks
     ratings: dict[int, int] = {}
     if filtering:
-        yield {"event": "search", "candidates": len(ranked), "read": len(pool), "dense": dense_status}
+        yield {
+            "event": "search",
+            "candidates": candidates,
+            "read": len(pool),
+            "dense": dense_status,
+            "corpora": searched,
+            "read_by_corpus": {
+                c: sum(1 for s in pool if svc.index.chunks[s.row]["corpus"] == c) for c in searched
+            },
+        }
         t = time.time()
         fobs = root.child("econ.filter", as_type="chain", input={"question": standalone, "read": len(pool)})
-        f = filter_step(svc, standalone, pool, fobs)
+        f = filter_step(
+            svc,
+            standalone,
+            pool,
+            fobs,
+            prompt=cc.filter_prompt if combined else None,
+            publisher=combined,
+        )
         usages.extend(f.pop("usages"))
         ratings = f.pop("ratings", {})
         timings["filter"] = round(time.time() - t, 2)
-        order = by_rating([s.row for s in pool], ratings, keep) if ratings else list(range(len(pool)))[:keep]
+        rows = [s.row for s in pool]
+        if not ratings:
+            order = list(range(len(pool)))[: cc.keep_min if combined else keep]
+        elif combined:
+            order = by_rating_upto(rows, ratings, cc.keep_min, cc.keep_max, cc.keep_grade)
+        else:
+            order = by_rating(rows, ratings, keep)
         filt = {**f, "read": len(pool), "kept": len(order), "seconds": timings["filter"]}
         fobs.update(
             output={"status": f["status"], "kept": [pool[i].row for i in order], "ratings": len(ratings)},
@@ -550,16 +646,16 @@ def _run(req: Request, svc: Services, root) -> Iterator[dict]:
         )
         fobs.end()
     else:
-        order = list(range(len(pool)))
+        order = list(range(len(pool)))[: cc.keep_min] if combined else list(range(len(pool)))
         reason = (
             "no answer model" if not svc.model else ("off" if not fc else "this provider has no filter model")
         )
-        filt = {"model": None, "status": f"off ({reason})", "read": len(pool), "kept": len(pool)}
+        filt = {"model": None, "status": f"off ({reason})", "read": len(pool), "kept": len(order)}
     chosen = [pool[i] for i in order]
     # Every passage read, with its search rank and rating; the chosen ones are the evidence, numbered in the
     # order the answer model sees them.
     pool_views = [
-        {**evidence_view(svc, s, None, queries), "search_rank": i + 1, "filter_grade": ratings.get(s.row)}
+        {**evidence_view(svc, s, None, queries), "search_rank": ranks[i], "filter_grade": ratings.get(s.row)}
         for i, s in enumerate(pool)
     ]
     evidence = []
@@ -567,7 +663,18 @@ def _run(req: Request, svc: Services, root) -> Iterator[dict]:
         pool_views[i]["n"] = k + 1
         evidence.append(dict(pool_views[i]))
     # A chosen passage is in full in `evidence`; its pool entry keeps what identifies it and its number.
-    brief = ("n", "chunk_id", "doc_id", "title", "year", "section", "pages", "search_rank", "filter_grade")
+    brief = (
+        "n",
+        "chunk_id",
+        "doc_id",
+        "corpus",
+        "title",
+        "year",
+        "section",
+        "pages",
+        "search_rank",
+        "filter_grade",
+    )
     pool_views = [{k: v[k] for k in brief} if v["n"] is not None else v for v in pool_views]
     for v in pool_views:
         v["selected"] = v["n"] is not None
@@ -575,7 +682,8 @@ def _run(req: Request, svc: Services, root) -> Iterator[dict]:
         output=[
             {
                 "chunk_id": svc.index.chunks[s.row]["chunk_id"],
-                "search_rank": i + 1,
+                "corpus": svc.index.chunks[s.row].get("corpus"),
+                "search_rank": ranks[i],
                 "score": s.merged_score,
                 "filter_grade": ratings.get(s.row),
                 "n": pool_views[i]["n"],
@@ -586,9 +694,10 @@ def _run(req: Request, svc: Services, root) -> Iterator[dict]:
         ],
         metadata={
             "dense": dense_status[:200],
-            "candidates": len(ranked),
+            "candidates": candidates,
             "read": len(pool),
             "kept": len(order),
+            "corpora": ",".join(searched),
         },
         level="DEFAULT" if dense_status == "ok" else "WARNING",
     )
@@ -602,7 +711,8 @@ def _run(req: Request, svc: Services, root) -> Iterator[dict]:
         "traces": traces,
         "evidence": evidence,
         "pool": pool_views,
-        "candidates": len(ranked),
+        "candidates": candidates,
+        "corpora": searched,
     }
 
     if not svc.model:
@@ -620,7 +730,7 @@ def _run(req: Request, svc: Services, root) -> Iterator[dict]:
 
     # --- answer and check ----------------------------------------------------------------------------
     a = scfg.answer
-    schema = prompts.schema_for(a.prompt)
+    schema = prompts.schema_for(answer_prompt)
     by_sentence = schema is AnswerV5  # D-026: the model cites sentence ids; code writes the quotes
     passages = {e["n"]: {"chunk_id": e["chunk_id"], "text": e["text"]} for e in evidence}
     sentence_table: dict[tuple[int, int], str] = {}
@@ -630,9 +740,9 @@ def _run(req: Request, svc: Services, root) -> Iterator[dict]:
         if by_sentence:
             body, table = cite.numbered(e["n"], chunk["text"], defang)
             sentence_table.update({(e["n"], k): v for k, v in table.items()})
-            shown.append(evidence_block(e["n"], chunk, doc, body=body))
+            shown.append(evidence_block(e["n"], chunk, doc, body=body, publisher=combined))
         else:
-            shown.append(evidence_block(e["n"], chunk, doc))
+            shown.append(evidence_block(e["n"], chunk, doc, publisher=combined))
     blocks = "\n\n".join(shown)
     base_user = (
         _history_block(req.history)
@@ -652,7 +762,7 @@ def _run(req: Request, svc: Services, root) -> Iterator[dict]:
                 + "\n</errors>"
             )
         call = dict(
-            system=prompts.load(a.prompt),
+            system=prompts.load(answer_prompt),
             user=user,
             schema=strict_schema(schema),
             schema_name="answer",

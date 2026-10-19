@@ -59,7 +59,7 @@ class Chunk:
 
 
 def load_elements(doc_id: str) -> list[Element]:
-    p = config.path(config.pipeline().paths.library) / "elements" / f"{doc_id}.jsonl"
+    p = config.library() / "elements" / f"{doc_id}.jsonl"
     rows = [json.loads(line) for line in p.read_text(encoding="utf-8").splitlines() if line.strip()]
     els = [Element(r["seq"], r["label"], r["text"], r["page"], r["boxes"], r.get("level")) for r in rows]
     for e in els:

@@ -253,3 +253,12 @@ OpenAI), not run.
 - At the owner's request: a claim citing several sentences shows each in its own colour and number (pink, green,
   violet, then grey), the same in its card and in the trail; palette checked with the dataviz validator in both
   themes. Checked headless; no model calls, no spend.
+
+## 2026-10-19 — The WIPO reports as a second corpus (D-033)
+- Built: corpora in config with per-corpus fetch, sweep, parse, chunk, notes, index and manifests (`--corpus`);
+  the service searches each collection apart (60 each), the filter rates all 120, and the answer model gets 20 to
+  40 by rating; plan-v4, filter-v2 and answer-v6 for combined questions; the "Include WIPO reports" switch,
+  collection labels, the export and the Pages build. 140 tests pass; the UI was checked headless against a scratch
+  WIPO index.
+- Blocked: the R2 key here is refused, so no WIPO document is registered or ingested. The design and the
+  recommendations on charts, chunking, volume and measurement are in `docs/design-wipo-corpus.md`. No spend.

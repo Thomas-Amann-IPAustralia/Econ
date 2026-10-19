@@ -113,7 +113,7 @@ def sweep(run: Run) -> dict:
         }
         run.add_input(p)
 
-    out = config.path(config.pipeline().paths.library) / "sweep.json"
+    out = config.library() / "sweep.json"
     write_json_atomic(out, report)
     run.add_output(out)
     run.counts.update(

@@ -67,6 +67,7 @@
               <textarea id="ctx" rows="5" maxlength="20000" placeholder="Paste material here"></textarea>
             </details>
             <div class="ask-row">
+              <div class="corpora" id="corpora" hidden></div>
               <label class="years">From <select id="y0"></select> to <select id="y1"></select></label>
               <button type="submit" id="send">Ask</button>
             </div>
@@ -102,6 +103,9 @@
           <li><strong>Write the answer.</strong> A larger AI model writes the answer from those 20 passages and nothing else. It doesn't copy quotes itself. Instead it points to the numbered sentences each statement rests on, and the system copies those sentences, word for word, from the publication.</li>
           <li><strong>Check the answer.</strong> Ordinary code, not an AI model, then checks that every cited sentence comes from a passage the model was actually given, and that every claim in the answer is backed by at least one. If the answer fails, the model gets one more try. An answer that still fails is shown with a warning.</li>
         </ol>
+
+        <h3>Including WIPO's reports</h3>
+        <p>Where the server has them, a switch under the question box adds reports by the World Intellectual Property Organization (WIPO), with international statistics and analysis. The two collections are searched separately, so that one can't crowd the other out, and 60 passages come from each. The filter rates all 120, and the answer model gets the 20 rated highest, and up to 40 when more are rated useful. Each passage is labelled with its collection, and the answer says whose figures it is using. With the switch off, nothing changes. This mode has not yet been through the testing described below, and charts in WIPO's reports are searchable only through their titles, notes and the text around them.</p>
 
         <h3>How well it has been tested</h3>
         <p>Every part of the system was measured against a set of 178 test questions before it was put in place. Some ask for a specific fact ("What share of Australian businesses own a registered IP right, and how has that changed?"). Others are broad, exploratory questions of the kind staff ask when researching a topic. Five of them are real questions from IP Australia staff. Half the questions were used to make design choices, and the other half were kept back to confirm them. For each question, an AI grader rated thousands of passages for whether they helped answer it. A second AI, from a different company, independently re-graded a sample, and the two agreed on 95% of those passages.</p>
@@ -246,6 +250,9 @@
     The documents and passages shown here are from IP Australia's public reports, as published at
     <a href="https://www.ipaustralia.gov.au/tools-and-research/professional-resources/data-research-and-reports" target="_blank" rel="noopener">ipaustralia.gov.au</a>.
     The published reports are the authoritative source.
+    <span id="foot-wipo" hidden>With WIPO's reports included, those passages are from the World Intellectual Property Organization's
+    publications, as published at <a href="https://www.wipo.int/publications/en/" target="_blank" rel="noopener">wipo.int</a>, under the licence
+    each states.</span>
   </footer>
 
   <dialog id="viewer" aria-label="Source page">

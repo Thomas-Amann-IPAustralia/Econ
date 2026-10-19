@@ -16,7 +16,10 @@ questions like the owner's, graded by a Gemini judge), end-to-end answers on 60 
 out-of-scope set; both providers have made live calls. The owner adopted gpt-6.1-sol (D-021) and answer-v3,
 with the answer's prose streamed while it is written (D-024), then answer-v4 (no brevity, D-025)
 and answer-v5 (sentence citations written by code, D-026); the answer view draws cited prose in navy, lists
-claims in a tab, and exports the conversation as JSON (D-030 to D-032). The scanned reports' garbled OCR is repaired (D-022). Progress log: `docs/progress-rag-v2.md`.
+claims in a tab, and exports the conversation as JSON (D-030 to D-032). The scanned reports' garbled OCR is repaired (D-022). **The WIPO reports** (D-033): built as a second corpus
+behind an "Include WIPO reports" switch (each collection searched apart, 60 each, the filter rates all, the answer
+model gets 20 to 40 by rating; plan-v4, filter-v2, answer-v6), not yet ingested or measured; read
+`docs/design-wipo-corpus.md`. Progress log: `docs/progress-rag-v2.md`.
 
 The method is `docs/sop-agent-construction-v2.md` (the owner's SOP). Read `docs/decisions.md` (the
 decision log) and the latest `docs/handover-*.md` before acting.
@@ -66,6 +69,8 @@ decision log) and the latest `docs/handover-*.md` before acting.
 | Stage | Command | Reads | Writes (committed unless noted) |
 |---|---|---|---|
 | Fetch | `econ fetch` | R2 | `data/raw/*.pdf` (ignored) |
+| (any stage) | `--corpus wipo` | the corpus's registry, R2 folder | `library/wipo/…`, `manifests/wipo/<stage>/` (D-033) |
+| Notes (paid) | `econ enrich [--corpus] [--confirm]` | adopted chunks | `<library>/enrich/<name>.jsonl` |
 | Sweep | `econ sweep` | raw PDFs | `library/sweep.json` |
 | Parse | `econ parse --workers 2` | raw PDFs | `library/elements/*.jsonl`, `library/parse.json` |
 | Chunk | `econ chunk` | elements | `library/chunks/<strategy>.jsonl` |

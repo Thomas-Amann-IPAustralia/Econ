@@ -4,7 +4,7 @@ name: pages
 on:
   push:
     branches: [main]
-    paths: ["web/**", "library/index/docs.json", "deploy/pages/**", ".github/workflows/pages.yml"]
+    paths: ["web/**", "library/index/docs.json", "library/*/index/docs.json", "config/pipeline.yaml", "deploy/pages/**", ".github/workflows/pages.yml"]
   workflow_dispatch:
 permissions:
   contents: read

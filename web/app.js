@@ -81,6 +81,7 @@ async function wake() {
         }
         el.title = `Search model: ${state.health.build.index.embedder} (${emb.configured ? (emb.warm ? "warm" : "waking") : "not configured"})`;
         $("#build").textContent = `Build ${String(state.health.build.commit).slice(0, 8)} · index ${state.health.build.index.strategy} / ${state.health.build.index.embedder} · ${state.health.build.index.chunks} passages · prompt ${state.health.build.prompt}`;
+        showCorpora(state.health.corpora || []);
         return;
       }
     } catch (e) { /* still waking */ }
@@ -91,6 +92,38 @@ async function wake() {
   el.className = "status down";
   txt.textContent = "Server unavailable";
 }
+
+// --- optional corpora (D-033): a switch per collection the reader can add to the search ------------------
+
+const CORPUS_KEY = "econ-corpora";
+function savedCorpora() {
+  try { return JSON.parse(localStorage.getItem(CORPUS_KEY) || "[]"); } catch (e) { return []; }
+}
+function showCorpora(list) {
+  const box = $("#corpora");
+  const optional = list.filter((c) => c.optional);
+  box.hidden = !optional.length;
+  $("#foot-wipo").hidden = !optional.some((c) => c.name === "wipo" && c.available);
+  const saved = savedCorpora();
+  box.replaceChildren(...optional.map((c) => {
+    const input = h("input", { type: "checkbox", role: "switch", id: `corpus-${c.name}`, value: c.name,
+      disabled: !c.available, checked: c.available && saved.includes(c.name) });
+    input.addEventListener("change", () => {
+      try { localStorage.setItem(CORPUS_KEY, JSON.stringify(chosenCorpora())); } catch (e) { /* not remembered; still applied */ }
+    });
+    return h("label", { class: `switch${c.available ? "" : " off"}`,
+      title: c.available
+        ? `Also search ${c.label} (${c.documents} documents). The filter then reads 60 passages from each collection and the answer model gets 20 to 40.`
+        : `${c.label}: not yet indexed on this server` },
+      input, h("span", { class: "track", "aria-hidden": "true" }), h("span", {}, `Include ${c.label}`),
+      c.available ? null : h("span", { class: "muted" }, " (coming)"));
+  }));
+}
+const chosenCorpora = () => [...document.querySelectorAll("#corpora input:checked")].map((x) => x.value);
+const corpusLabel = (name) => (state.health?.corpora || []).find((c) => c.name === name)?.label || name;
+// A collection tag on a passage, shown only when the question searched more than one collection.
+const multi = (t) => (t.events.meta?.corpora || t.corpora || []).length > 1;
+const corpusTag = (t, x) => multi(t) && x.corpus ? h("span", { class: `corpus-tag c-${x.corpus}` }, x.corpus === "ipa" ? "IP Australia" : corpusLabel(x.corpus).replace(/ reports$/, "")) : null;
 
 // --- the library ---------------------------------------------------------------------------------------
 
@@ -110,13 +143,16 @@ async function loadCatalogue() {
     h("div", { class: "doc-year" }, d.year),
     h("div", {},
       h("div", { class: "doc-title" }, d.title),
-      h("div", { class: "doc-meta" }, `${d.series} · ${d.page_count} pages · ${d.chunks} passages · ${d.licence || "no licence statement in the document"}${d.ocr ? " · text from OCR" : ""}`),
+      h("div", { class: "doc-meta" }, `${d.corpus && d.corpus !== "ipa" ? `${d.publisher} · ` : ""}${d.series} · ${d.page_count} pages · ${d.chunks} passages · ${d.licence || "no licence statement in the document"}${d.ocr ? " · text from OCR" : ""}`),
       d.note ? h("div", { class: "doc-meta" }, d.note) : null),
     h("div", {}, h("button", { class: "linkish", onclick: () => openViewer(d.doc_id, 1, []) }, "View"),
       d.url ? h("a", { class: "linkish", href: d.url, target: "_blank", rel: "noopener" }, "Publisher page") : null),
   )));
   const pagesTotal = list.reduce((a, d) => a + d.page_count, 0);
-  $("#lib-summary").textContent = `${list.length} documents, ${pagesTotal} pages, published by IP Australia under Creative Commons Attribution 4.0 unless noted.`;
+  const byPub = {};
+  for (const d of list) byPub[d.publisher || "IP Australia"] = (byPub[d.publisher || "IP Australia"] || 0) + 1;
+  const pubs = Object.entries(byPub).map(([p, n]) => `${n} by ${p}`).join(" and ");
+  $("#lib-summary").textContent = `${list.length} documents, ${pagesTotal} pages${Object.keys(byPub).length > 1 ? ` (${pubs})` : ", published by IP Australia"}, under Creative Commons Attribution 4.0 unless noted.`;
   const years = [...new Set(list.map((d) => d.year))].sort();
   for (const sel of [$("#y0"), $("#y1")]) sel.replaceChildren(...years.map((y) => h("option", { value: y }, y)));
   $("#y0").value = years[0];
@@ -148,13 +184,15 @@ async function ask(question, context) {
   const years = [+$("#y0").value, +$("#y1").value].sort((a, b) => a - b);
   const allYears = Object.values(state.docs).map((d) => d.year);
   const filtered = allYears.length && (years[0] > Math.min(...allYears) || years[1] < Math.max(...allYears));
+  const corpora = chosenCorpora();
   const turn = { question, context, events: {}, checks: [], el: null, t0: performance.now(), shown: {},
-    askedAt: new Date().toISOString(), years: filtered ? years : null };
+    askedAt: new Date().toISOString(), years: filtered ? years : null, corpora: ["ipa", ...corpora] };
   state.turns.push(turn);
   showChatBar();
   $("#thread").append(h("div", { class: "msg user" }, question,
     context ? h("span", { class: "ctxnote" }, `+ ${context.length.toLocaleString()} characters of your material`) : null,
-    filtered ? h("span", { class: "ctxnote" }, `Limited to ${years[0]}–${years[1]}`) : null));
+    filtered ? h("span", { class: "ctxnote" }, `Limited to ${years[0]}–${years[1]}`) : null,
+    corpora.length ? h("span", { class: "ctxnote" }, `+ ${corpora.map(corpusLabel).join(", ")}`) : null));
   const bot = h("div", { class: "msg bot", tabindex: "0", onclick: () => {
     select(turn);
     if (narrow()) $("#trail").scrollIntoView({ behavior: "smooth" });
@@ -175,7 +213,8 @@ async function ask(question, context) {
     const resp = await fetch(`${API}/api/ask`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ question, context, history, years: filtered ? years : null, session_id: state.session }),
+      body: JSON.stringify({ question, context, history, years: filtered ? years : null, session_id: state.session,
+        corpora: corpora.length ? corpora : null }),
     });
     if (!resp.ok) {
       const msg = (await resp.json().catch(() => ({}))).detail || `The server answered ${resp.status}.`;
@@ -190,6 +229,7 @@ async function ask(question, context) {
         continue;
       }
       ev._t = (performance.now() - turn.t0) / 1000;  // when it arrived, for the activity log
+      if (ev.event === "retrieval") rememberDocs(ev);
       if (ev.event === "check") turn.checks.push(ev);
       if (ev.event === "answer") turn.events.answers = [...(turn.events.answers || []), ev];
       turn.events[ev.event] = ev;
@@ -577,7 +617,7 @@ function copyOut(btn, plain, html = null) {
 // --- the conversation as JSON (D-030): everything on screen but the passages' text --------------------------
 
 const pageUrl = (doc, page) => new URL(`${CFG.pdfBase}${encodeURIComponent(doc)}.pdf#page=${page}`, location.href).href;
-const sourceOf = (x) => ({ doc_id: x.doc_id, title: x.title, year: x.year, section: x.section, pages: x.pages, page_url: pageUrl(x.doc_id, x.pages[0]) });
+const sourceOf = (x) => ({ doc_id: x.doc_id, corpus: x.corpus ?? null, publisher: x.publisher ?? null, title: x.title, year: x.year, section: x.section, pages: x.pages, page_url: pageUrl(x.doc_id, x.pages[0]) });
 
 function exportTurn(t, i) {
   const e = t.events, r = e.retrieval, a = e.answer;
@@ -600,6 +640,7 @@ function exportTurn(t, i) {
     question: t.question,
     pasted_context: t.context || null,
     years: t.years,
+    corpora: e.meta?.corpora ?? t.corpora ?? null,
     status: e.error ? "error" : e.done ? (e.done.outcome || e.done.mode) : "in progress",
     request_id: e.meta?.request_id ?? null,
     mode: e.meta?.mode ?? null,
@@ -627,7 +668,7 @@ function exportTurn(t, i) {
     passages_read: (r?.pool || []).map((x) => ({
       search_rank: x.search_rank, filter_rating: x.filter_grade ?? null, selected: x.selected, n: x.n ?? null, chunk_id: x.chunk_id, ...sourceOf(x),
     })),
-    search_traces: (r?.traces || []).map((tr) => ({ query: tr.query, lanes: tr.lanes, hits: tr.hits.map(({ row, ...hit }) => hit) })),
+    search_traces: (r?.traces || []).map((tr) => ({ query: tr.query, corpus: tr.corpus ?? null, lanes: tr.lanes, hits: tr.hits.map(({ row, ...hit }) => hit) })),
     activity: activityItems(t).map(([at, level, text]) => ({ at_seconds: at == null ? null : Math.round(at * 100) / 100, level: level || "info", text })),
     done: e.done ? { outcome: e.done.outcome ?? null, attempts: e.done.attempts ?? null, seconds: e.done.seconds, cost_usd: e.done.cost_usd, timings: e.done.timings, usage: e.done.usage } : null,
     error: e.error?.message ?? null,
@@ -645,6 +686,7 @@ function exportChat() {
       "Everything the page showed for each question except the passages' full text: each passage is named by its chunk_id and links to its page (page_url).",
       "answer.text is the assistant's prose, where [k] marks claim k. answer.parts splits it into runs that rest on claims (kind cited), runs in the assistant's own words with no citation (kind own), and headings.",
       "Each claim's quotes are the sentences it cites, copied word for word from the passage by code; start and end are character offsets in the passage's text. verified means every quote was found there; it does not judge whether a quote supports its claim.",
+      "corpora: the collections searched. With more than one, each was searched on its own; search_rank is a passage's rank within its own collection (corpus).",
       "filter_rating: 3 essential, 2 useful, 1 on topic but not usable, 0 not about the question. Only the evidence (the passages_read with selected true, numbered n) was given to the answer model.",
     ],
     turns: state.turns.map(exportTurn),
@@ -760,7 +802,7 @@ function renderTrail(t) {
         h("td", {}, s.bm25 != null ? `${s.bm25.toFixed(2)} (#${s.bm25_rank})` : "–")))),
       x.matched_terms.length ? h("p", { class: "muted" }, `Keywords matched: ${x.matched_terms.join(", ")}`) : null);
     list.append(h("article", { class: `ev${cited ? " cited" : ""}`, id: `ev-${x.n}`, "data-doc": x.doc_id },
-      h("div", { class: "ev-top" }, h("div", {}, h("span", { class: "ev-n" }, x.n), h("span", { class: "ev-title" }, x.title)),
+      h("div", { class: "ev-top" }, h("div", {}, h("span", { class: "ev-n" }, x.n), corpusTag(t, x), h("span", { class: "ev-title" }, x.title)),
         cited ? h("span", { class: "cited-by" }, "cited by", [...cited].map((n) => h("button", {
           class: "cite", type: "button", "data-claim": n, title: `Claim ${n}: show it in the answer`,
           onclick: () => pickClaim(t, n, { fromTrail: true, passage: x.n }),
@@ -823,7 +865,7 @@ function nodeStates(t) {
   if (evidenceOnly || (r && !(f && !f.status.startsWith("off")))) { s.filter = "skipped"; sub.filter = evidenceOnly ? "no model" : "off"; }
   else if (r) { s.filter = f.status === "ok" ? "done" : "warn"; sub.filter = f.status === "ok" ? `kept ${r.evidence.length} of ${f.read}` : `failed: search's top ${r.evidence.length}`; }
   else if (e.search) { s.filter = "active"; sub.filter = `rating ${e.search.read} passages`; }
-  else { s.filter = "pending"; sub.filter = "chooses 20 passages"; }
+  else { s.filter = "pending"; sub.filter = multi(t) ? "chooses 20 to 40 passages" : "chooses 20 passages"; }
   // answer and check
   if (evidenceOnly) {
     s.answer = s.check = "skipped";
@@ -881,7 +923,7 @@ function activityItems(t) {
   if (e.plan) items.push([e.plan._t, e.plan.error ? "warn" : "", e.plan.error ? `Planning failed; searching the question as asked` : `Planned ${e.plan.queries.length} searches: ${e.plan.queries.map((q) => `“${q}”`).join(", ")}`]);
   const found = e.search || r;
   if (found) items.push([found._t, found.dense === "ok" ? "" : "warn",
-    `Found ${found.candidates} candidate passages ${found.dense === "ok" ? "by meaning and keywords" : `by keywords only (meaning search ${found.dense.split(";")[0]})`}${e.search ? `; the filter reads the first ${e.search.read}` : ""}`]);
+    `Found ${found.candidates} candidate passages ${found.dense === "ok" ? "by meaning and keywords" : `by keywords only (meaning search ${found.dense.split(";")[0]})`}${multi(t) ? ` in ${(found.corpora || e.meta.corpora).map((c) => c === "ipa" ? "IP Australia" : corpusLabel(c)).join(" and ")}, each searched apart` : ""}${e.search ? `; the filter reads the first ${e.search.read}${e.search.read_by_corpus && multi(t) ? ` (${Object.entries(e.search.read_by_corpus).map(([c, n]) => `${n} from ${c === "ipa" ? "IP Australia" : corpusLabel(c)}`).join(", ")})` : ""}` : ""}`]);
   if (r && f && !f.status.startsWith("off")) {
     const counts = [3, 2, 1, 0].map((g) => `${r.pool.filter((x) => x.filter_grade === g).length} ${RATING[g]}`).join(", ");
     items.push([r._t, f.status === "ok" ? "" : "warn", f.status === "ok"
@@ -930,11 +972,11 @@ function passageStrip(t) {
   const first = !t.stripShown;
   r.pool.forEach((x, i) => {
     const g = x.filter_grade;
-    const label = `Search rank ${x.search_rank}: ${g == null ? "not rated" : `rated ${g} (${RATING[g]})`}${x.selected ? `, kept as passage ${x.n}` : ", not used"}${cited.has(x.n) ? ", cited" : ""}. ${x.title}`;
+    const label = `${multi(t) ? `${x.corpus === "ipa" ? "IP Australia" : corpusLabel(x.corpus)}, s` : "S"}earch rank ${x.search_rank}: ${g == null ? "not rated" : `rated ${g} (${RATING[g]})`}${x.selected ? `, kept as passage ${x.n}` : ", not used"}${cited.has(x.n) ? ", cited" : ""}. ${x.title}`;
     strip.append(h("button", {
       class: `tile${g != null ? ` r${g}` : ""}${x.selected ? " kept" : ""}${x.selected && cited.has(x.n) ? " cited" : ""}${first ? " enter" : ""}`,
       style: first ? `animation-delay:${i * 18}ms` : null, title: label, "aria-label": label, role: "listitem",
-      onclick: () => openPoolRow(x.search_rank),
+      onclick: () => openPoolRow(i),
     }, x.selected && !cited.has(x.n) ? x.n : ""));
   });
   t.stripShown = true;
@@ -945,8 +987,8 @@ function passageStrip(t) {
   return wrap;
 }
 
-function openPoolRow(rank) {
-  const row = $(`#pool-${rank}`);
+function openPoolRow(i) {  // by position in the pool: with two collections, search ranks repeat (D-033)
+  const row = $(`#pool-${i}`);
   if (!row) return;
   row.closest("details").open = true;
   if (row.nextElementSibling?.hidden) row.click();
@@ -972,9 +1014,11 @@ function poolTable(t, r, citedBy) {
   const box = h("details", { class: "pool", open: true }, h("summary", {},
     h("strong", {}, `All ${r.pool.length} passages the filter read`),
     h("span", { class: "muted" }, ` · ${used} used, ${r.pool.length - used} not used${f.status === "ok" ? ` · rated by ${f.model}` : " · not rated (the filter failed)"}`)));
-  box.append(h("p", { class: "muted" }, "In search order. The rating is how much the filter judged an answer could use the passage: 3 essential, 2 useful, 1 on topic but not usable, 0 not about the question. The answer model got the passages rated highest (ties in search order); only those can be cited."));
+  box.append(h("p", { class: "muted" }, multi(t)
+    ? "Each collection was searched on its own; its passages are listed in its search order, the two taken in turn. The rating is how much the filter judged an answer could use the passage: 3 essential, 2 useful, 1 on topic but not usable, 0 not about the question. The answer model got the 20 rated highest, and up to 40 when more were rated useful or essential (ties in turn); only those can be cited."
+    : "In search order. The rating is how much the filter judged an answer could use the passage: 3 essential, 2 useful, 1 on topic but not usable, 0 not about the question. The answer model got the passages rated highest (ties in search order); only those can be cited."));
   const table = h("table", { class: "pool-table" }, h("tr", {}, h("th", {}, "Search"), h("th", {}, "Rating"), h("th", {}, "Used"), h("th", {}, "Passage")));
-  for (const brief of r.pool) {
+  r.pool.forEach((brief, i) => {
     const x = brief.selected ? { ...r.evidence[brief.n - 1], ...brief } : brief;  // chosen: full text in evidence
     const textEl = h("div", { class: "ev-text pool-text" });
     const open = () => {
@@ -992,13 +1036,13 @@ function poolTable(t, r, citedBy) {
         x.selected ? h("button", { onclick: () => { const c = $(`#ev-${x.n}`); if (c) { c.style.display = ""; c.scrollIntoView({ behavior: "smooth", block: "center" }); } } }, `Go to passage ${x.n}`) : null)));
     const g = x.filter_grade;
     table.append(
-      h("tr", { class: `pool-row${x.selected ? " used" : ""}`, id: `pool-${x.search_rank}`, onclick: open, title: "Show the passage" },
-        h("td", {}, x.search_rank),
+      h("tr", { class: `pool-row${x.selected ? " used" : ""}`, id: `pool-${i}`, onclick: open, title: "Show the passage" },
+        h("td", {}, corpusTag(t, x), x.search_rank),
         h("td", {}, g == null ? h("span", { class: "muted" }, "–") : h("span", { class: `rating r${g}`, title: RATING[g] }, g)),
         h("td", {}, x.selected ? h("span", { class: `badge ${citedBy[x.n] ? "info" : "ok"}` }, citedBy[x.n] ? `[${x.n}] cited` : `[${x.n}]`) : h("span", { class: "muted" }, "not used")),
         h("td", {}, h("div", { class: "pool-title" }, `${x.title}`), h("div", { class: "muted" }, `${x.year} · ${x.section.length ? x.section.join(" › ") + " · " : ""}${pages(x.pages)}`))),
       detail);
-  }
+  });
   box.append(table);
   return box;
 }
@@ -1068,8 +1112,19 @@ async function readAround(chunkId, textEl, btn) {
 let pdfjs = null;
 const viewer = { doc: null, pdf: null, page: 1, boxes: [] };
 
+// A passage from a document the site's catalogue doesn't list (a collection added after the site was built)
+// is known from the passage itself; its PDF isn't on the site.
+function rememberDocs(r) {
+  for (const x of [...r.evidence, ...(r.pool || [])]) {
+    if (!state.docs[x.doc_id] && x.title) {
+      state.docs[x.doc_id] = { doc_id: x.doc_id, title: x.title, year: x.year, series: x.series, url: x.url ?? null,
+        licence: x.licence ?? null, publisher: x.publisher ?? null, corpus: x.corpus ?? null, pages: {}, pdf: false, unlisted: true };
+    }
+  }
+}
+
 async function openViewer(docId, page, boxes) {
-  const d = state.docs[docId] || { title: docId, pages: {} };
+  const d = state.docs[docId] || { title: docId, pages: {}, pdf: false };
   const dlg = $("#viewer");
   $("#viewer-title").textContent = d.title;
   $("#viewer-meta").textContent = ` · ${d.year || ""} · ${d.licence || ""}`;
@@ -1078,6 +1133,14 @@ async function openViewer(docId, page, boxes) {
   $("#viewer-open").textContent = d.url ? "Publisher page" : "Open PDF";
   $("#viewer-msg").textContent = "Loading the document…";
   if (!dlg.open) dlg.showModal();
+  if (d.pdf === false) {  // not published on this site (D-033): the publisher's copy, at the page
+    viewer.doc = null;
+    $("#page-canvas").width = 0;
+    $("#page-marks").replaceChildren();
+    if (d.url) $("#viewer-open").href = `${d.url}#page=${page}`;
+    $("#viewer-msg").textContent = `This document's PDF isn't on this site, so the passage can't be outlined here. ${d.url ? `The publisher's copy opens at page ${page} from the link above.` : ""}`;
+    return;
+  }
   try {
     pdfjs ||= await import(PDFJS);
     pdfjs.GlobalWorkerOptions.workerSrc = PDFJS_WORKER;

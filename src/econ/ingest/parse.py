@@ -139,7 +139,7 @@ def parse(run: Run, *, workers: int = 1, only: list[str] | None = None) -> None:
 
     sweep_m = require_upstream("sweep")
     run.upstream["sweep"] = sweep_m["run_id"]
-    lib = config.path(config.pipeline().paths.library)
+    lib = config.library()
     sweep_report = json.loads((lib / "sweep.json").read_text())
     raw = config.path(config.pipeline().paths.raw)
     cache = config.path("data/parsed")

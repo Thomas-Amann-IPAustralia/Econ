@@ -19,7 +19,7 @@ from datetime import UTC, datetime
 from importlib import metadata
 from pathlib import Path
 
-from econ.config import ROOT, path, pipeline
+from econ.config import DEFAULT_CORPUS, ROOT, corpus_name, path, pipeline
 
 # Paths whose changes are the outputs of commands, not code. Writing them doesn't make a run dirty.
 GENERATED = ("library/", "manifests/", "reports/", "eval/runs/", "web/data/")
@@ -116,8 +116,15 @@ class Run:
         return path(pipeline().paths.manifests) / self.command / f"{self.run_id}.json"
 
 
+def stage_name(command: str) -> str:
+    """A command's manifest folder: `<command>` for the original corpus, `<corpus>/<command>` for another
+    (D-033), so one corpus's runs are never taken for another's upstream."""
+    c = corpus_name()
+    return command if c == DEFAULT_CORPUS else f"{c}/{command}"
+
+
 def latest_manifest(command: str, *, passed: bool = True) -> dict | None:
-    d = path(pipeline().paths.manifests) / command
+    d = path(pipeline().paths.manifests) / stage_name(command)
     if not d.exists():
         return None
     for p in sorted(d.glob("*.json"), reverse=True):
@@ -131,7 +138,7 @@ def require_upstream(command: str) -> dict:
     """Check the previous stage passed and its outputs still match the disk."""
     m = latest_manifest(command)
     if m is None:
-        raise StageError(f"no passed run of `{command}`; run it first")
+        raise StageError(f"no passed run of `{stage_name(command)}`; run it first")
     for rel, digest in m["outputs"].items():
         p = ROOT / rel
         if not p.exists():
@@ -145,6 +152,7 @@ def require_upstream(command: str) -> dict:
 def run(command: str, config_hash: str, **params):
     """Wrap a stage: always writes a manifest, passed or failed."""
     run_id = datetime.now(UTC).strftime("%Y%m%dT%H%M%SZ")
+    command = stage_name(command)
     r = Run(command=command, run_id=run_id, config_hash=config_hash, params=params)
     # The code that ran is the code at the start; a commit made during a long run must not be mistaken
     # for it (the first chunking measurement recorded only the end state).

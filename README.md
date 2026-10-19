@@ -65,7 +65,8 @@ econ fetch && econ sweep && econ parse --workers 2 && econ chunk     # the knowl
 econ eval-retrieval --stage chunking                                  # then embedders, then fusion (silver set)
 econ eval-retrieval-v2 --stage stage1                                 # then stage2, final (judged set, cached)
 econ index && econ verify-embedder && econ verify-search              # the serving index, checked
-econ ask "How did trade mark filings change during the pandemic?"     # one question, locally
+econ fetch --corpus wipo && econ sweep --corpus wipo && …             # the WIPO reports, a corpus of their own (D-033)
+econ ask "How did trade mark filings change during the pandemic?"     # one question, locally (--also wipo: both)
 econ serve                                                            # the API on http://127.0.0.1:8787
 uv run pytest -q                                                      # tests: no network, no models
 ```
@@ -86,6 +87,11 @@ This repository holds text extracted from those reports (`library/`), and the pu
 copies of the PDFs, for reference and traceability. The published reports are the authoritative source:
 extracted text can contain conversion errors, most of all in the 2018 and 2021 reports, which were
 read by OCR.
+
+A second corpus of reports by the World Intellectual Property Organization (WIPO) is built behind the
+"Include WIPO reports" switch (D-033, `docs/design-wipo-corpus.md`). It is not yet ingested. When it is, its text
+in `library/wipo/` is WIPO's, under the licence each report states, and its PDFs are linked at wipo.int rather than
+served from the site unless the owner decides otherwise.
 
 ## Licence
 

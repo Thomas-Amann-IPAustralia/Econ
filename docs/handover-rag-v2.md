@@ -100,6 +100,14 @@ Branch `ccr-fe4defc0-ysiv1i`. Read D-017 to D-020 first.
   violet, then grey; `sentenceColour`, tokens `--k1-bg` to `--k4-line`), in its card and, while selected, in the
   trail (marks carry `data-span`).
 
+## Update, 2026-10-19 (latest): the WIPO reports as a second corpus (D-033)
+- Read `docs/design-wipo-corpus.md` first. Built and tested; no WIPO document ingested yet: the R2 key here was
+  refused, so `config/sources-wipo.yaml` is empty. Steps to ingest are at the end of the design note.
+- Code: `config.corpus()`, `config.library()`, `config.enrichment()`; `manifest.stage_name`; `fetch.owned`;
+  `Index(extra=...)`, `StackedBM25`; `pipeline.interleave`, `by_rating_upto`, `answer.combined`; `served_corpora`
+  in the service; `showCorpora`, `corpusTag`, `rememberDocs` in `web/app.js`.
+- With WIPO off, nothing changes (tested byte for byte). With it on, nothing is measured yet.
+
 ## Open items
 1. **Langfuse keys on Render**: set and working (2026-10-19). The span counter on `/api/health` read 0 because
    the app was built twice; fixed on `claude/gracious-gates-x2zfot`, live once merged to `main`. Still the owner's:
@@ -117,4 +125,4 @@ Branch `ccr-fe4defc0-ysiv1i`. Read D-017 to D-020 first.
 - Grids and test sets committed before any number; deviations recorded as amendments before the data they
   affect (see grid retrieval-v2, amendment 1).
 - Every paid call goes through `econ.evalr.llmcall` or `econ.evalr.judge` (cached, metered, capped).
-- Next free decision number: **D-033**.
+- Next free decision number: **D-034**.

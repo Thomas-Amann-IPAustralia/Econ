@@ -8,6 +8,25 @@ paths:
   reports: reports
   models: data/models
 
+# The corpora (D-033). Each is fetched, swept, parsed, chunked, noted and indexed on its own (`--corpus`), so a
+# new one never changes another's chunks, boilerplate, keyword statistics or vectors. `ipa` keeps the paths it
+# had before there was more than one. The service searches each corpus apart and merges them (service.yaml).
+corpora:
+  ipa:
+    label: IP Australia
+    sources: sources.yaml
+    library: library
+    enrich_prompt: enrich-v1        # its notes are `retrieval.enrichment`
+    pdfs_on_site: true              # approved (D-010)
+  wipo:
+    label: WIPO
+    sources: sources-wipo.yaml
+    library: library/wipo
+    r2_prefix: WIPO/
+    enrich_prompt: enrich-wipo-v1
+    enrichment: S384-noprefix-nocite.luna-enrich-wipo-v1
+    pdfs_on_site: false             # not yet: publishing them on the Pages site is the owner's call
+
 parse:
   ocr_min_chars_per_page: 100   # a page with fewer text-layer characters counts as image-only
   ocr_page_share: 0.5           # OCR the whole document when at least this share of pages is image-only

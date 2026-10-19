@@ -1,0 +1,14 @@
+# The WIPO corpus registry (D-033): reports published by the World Intellectual Property Organization, in the
+# bucket's WIPO/ folder. Same rules as config/sources.yaml: one entry per object, the fetch stage fails if
+# the folder and the registry disagree, and a doc_id never changes once answers cite it. doc_ids start with
+# `wipo-` so they never collide with IP Australia's.
+#
+# Empty until the folder can be listed: the R2 key in the build session was refused (2026-10-19), so the
+# entries are written from `econ fetch --corpus wipo`, whose failed run lists every unregistered object.
+bucket: econ-knowledge
+endpoint: "https://{account_id}.eu.r2.cloudflarestorage.com"
+publisher: World Intellectual Property Organization (WIPO)
+documents: []
+# Objects seen and left out for now. The Global Innovation Index workbook is deferred at the owner's request
+# (2026-10-19): tabular data needs a different kind of lookup from passage search (docs/design-wipo-corpus.md).
+deferred: []

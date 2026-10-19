@@ -36,12 +36,30 @@ def _hash() -> str:
     return config.config_hash(config.sources(), config.pipeline())
 
 
+CORPUS = typer.Option(
+    config.DEFAULT_CORPUS, help="The corpus to work on (config/pipeline.yaml `corpora`, D-033)."
+)
+
+
+def _use(corpus: str) -> None:
+    """Point the stage at one corpus: its registry, library and manifests. Carried in the environment, so
+    the parse stage's worker processes see it too."""
+    import os
+
+    os.environ["ECON_CORPUS"] = corpus
+    try:
+        config.corpus(corpus)
+    except ValueError as e:
+        raise StageError(str(e), item=corpus) from None
+
+
 @app.command()
 @loud
-def fetch() -> None:
-    """Copy the corpus from R2 into data/raw and reconcile it with config/sources.yaml."""
+def fetch(corpus: str = CORPUS) -> None:
+    """Copy the corpus from R2 into data/raw and reconcile it with its registry (config/sources*.yaml)."""
     from econ.ingest.fetch import fetch as _fetch
 
+    _use(corpus)
     with run("fetch", _hash()) as r:
         _fetch(r)
     typer.echo(f"fetch passed: {r.counts}")
@@ -49,10 +67,11 @@ def fetch() -> None:
 
 @app.command()
 @loud
-def sweep() -> None:
+def sweep(corpus: str = CORPUS) -> None:
     """Security sweep of the raw PDFs (active content, text checks)."""
     from econ.ingest.sweep import sweep as _sweep
 
+    _use(corpus)
     with run("sweep", _hash()) as r:
         _sweep(r)
     typer.echo(f"sweep passed: {r.counts}")
@@ -63,10 +82,12 @@ def sweep() -> None:
 def parse(
     workers: int = typer.Option(1, help="Parallel worker processes."),
     only: list[str] = typer.Option(None, help="Parse only these doc_ids (for probes; not a full run)."),
+    corpus: str = CORPUS,
 ) -> None:
     """Parse PDFs into layout elements with page and box provenance (Docling)."""
     from econ.ingest.parse import parse as _parse
 
+    _use(corpus)
     with run("parse", _hash(), workers=workers, only=only or []) as r:
         _parse(r, workers=workers, only=only)
     typer.echo(f"parse passed: {r.counts}")
@@ -76,18 +97,21 @@ def parse(
 @loud
 def chunk(
     strategy: list[str] = typer.Option(None, help="Strategies to build (default: all in config)."),
+    corpus: str = CORPUS,
 ) -> None:
-    """Chunk the parsed elements under one or more strategies into library/chunks/<strategy>.jsonl."""
+    """Chunk the parsed elements under one or more strategies into <library>/chunks/<strategy>.jsonl. The
+    boilerplate rule counts recurrences within the corpus only."""
     import json as _json
 
     from econ.kb.chunk import boilerplate, chunk_document, load_elements
     from econ.manifest import require_upstream, write_text_atomic
 
+    _use(corpus)
     cfg = config.pipeline().chunking
     names = strategy or list(cfg.strategies)
     with run("chunk", _hash(), strategies=names) as r:
         r.upstream["parse"] = require_upstream("parse")["run_id"]
-        lib = config.path(config.pipeline().paths.library)
+        lib = config.library()
         docs = sorted(config.sources().documents, key=lambda d: d.doc_id)
         elements = {d.doc_id: load_elements(d.doc_id) for d in docs}
         skip = boilerplate(elements)
@@ -271,8 +295,10 @@ def index(
     strategy: str = typer.Option("", help="A chunking strategy other than the adopted one (a named option)."),
     embedder: str = typer.Option("", help="An embedder other than the adopted one (a named option)."),
     out: str = typer.Option(
-        "library/index", help="Where to write; only the adopted build belongs in library/index."
+        "",
+        help="Where to write (default: the corpus's <library>/index, which only the adopted build may use).",
     ),
+    corpus: str = CORPUS,
 ) -> None:
     """Build the serving index from the adopted strategy and embedder (or named ones), via ONNX."""
     import json as _json
@@ -284,11 +310,14 @@ def index(
     from econ.kb.bm25 import BM25
     from econ.manifest import require_upstream, sha256_file, write_json_atomic, write_text_atomic
 
+    _use(corpus)
     cfg = config.pipeline()
     strategy, key = strategy or cfg.chunking.adopted, embedder or cfg.embedding.adopted
     if not strategy or not key:
         raise StageError("chunking.adopted and embedding.adopted must be set in config/pipeline.yaml")
-    if out == "library/index" and (strategy != cfg.chunking.adopted or key != cfg.embedding.adopted):
+    serving = f"{config.corpus().library}/index"
+    out = out or serving
+    if out == serving and (strategy != cfg.chunking.adopted or key != cfg.embedding.adopted):
         raise StageError("a non-adopted build must go elsewhere: pass --out")
     with run("index", _hash(), strategy=strategy, embedder=key, out=out) as r:
         r.upstream["chunk"] = require_upstream("chunk")["run_id"]
@@ -300,7 +329,7 @@ def index(
         emb = OnnxEmbedder(key, mdir, threads=4)
         chunks = load_chunks(strategy)
         texts = [c["embed_text"] for c in chunks]
-        enrichment = cfg.retrieval.enrichment
+        enrichment = config.enrichment()
         notes_sha = None
         if enrichment:
             # D-013: each chunk's context note goes in front of its text, for both lanes; it is stored
@@ -316,7 +345,7 @@ def index(
             for c in chunks:
                 c["context_note"] = notes[c["chunk_id"]]
             texts = [(c["context_note"] + "\n\n" + c["embed_text"]).strip() for c in chunks]
-            notes_sha = sha256_file(config.path("library/enrich") / f"{enrichment}.jsonl")[:16]
+            notes_sha = sha256_file(config.library() / "enrich" / f"{enrichment}.jsonl")[:16]
         vecs = emb.encode(texts, kind="doc")
         out = config.path(out)
         out.mkdir(parents=True, exist_ok=True)
@@ -327,7 +356,7 @@ def index(
             out / "chunks.jsonl",
             "".join(_json.dumps(c, sort_keys=True, ensure_ascii=False) + "\n" for c in chunks),
         )
-        parse = _json.loads((config.path(cfg.paths.library) / "parse.json").read_text())
+        parse = _json.loads((config.library() / "parse.json").read_text())
         counts: dict[str, int] = {}
         for c in chunks:
             counts[c["doc_id"]] = counts.get(c["doc_id"], 0) + 1
@@ -343,6 +372,7 @@ def index(
                 "url": d.url,
                 "note": d.note,
                 "publisher": config.sources().publisher,
+                "corpus": config.corpus_name(),
                 "licence": p.get("licence"),
                 "page_count": p["page_count"],
                 "pages": p["pages"],
@@ -362,6 +392,7 @@ def index(
             "chunks": len(chunks),
             "enrichment": enrichment,
             "enrichment_sha256": notes_sha,
+            "corpus": config.corpus_name(),
             "built_from": r.upstream["chunk"],
             "files": {f: sha256_file(out / f)[:16] for f in files},
         }
@@ -370,6 +401,40 @@ def index(
             r.add_output(out / f)
         r.counts.update(chunks=len(chunks), dim=int(vecs.shape[1]))
     typer.echo(f"index passed: {r.counts}")
+
+
+@app.command()
+@loud
+def enrich(
+    corpus: str = CORPUS,
+    confirm: bool = typer.Option(False, help="Make the paid calls (without it: count and estimate only)."),
+    model: str = typer.Option("gpt-6-luna", help="The note writer (D-013 used gpt-6-luna at low effort)."),
+) -> None:
+    """Write the context notes for a corpus's adopted chunks (D-013): one paid call a chunk, cached and
+    metered in eval/spend/ledger.jsonl, so a re-run is free. Search only; never evidence."""
+    from econ.evalr.retrieval import load_chunks
+    from econ.kb import enrich as _enrich
+    from econ.manifest import require_upstream
+
+    _use(corpus)
+    cfg = config.pipeline()
+    name = config.enrichment()
+    if not name:
+        raise StageError("this corpus has no `enrichment` name in config/pipeline.yaml", item=corpus)
+    chunks = load_chunks(cfg.chunking.adopted)
+    if not confirm:
+        words = sum(len(c["text"].split()) for c in chunks)
+        typer.echo(
+            f"{len(chunks)} chunks ({words:,} words) would get notes in {name}.jsonl with {model}, "
+            f"prompt {config.corpus().enrich_prompt}; about US${0.14 * len(chunks) / 1897:.2f} at D-013's rate. "
+            "Pass --confirm to make the calls (ask the owner first)."
+        )
+        return
+    with run("enrich", _hash(), model=model, notes=name) as r:
+        r.upstream["chunk"] = require_upstream("chunk")["run_id"]
+        r.counts.update(_enrich.run(chunks, name, model=model, effort="low", flex=False))
+        r.add_output(config.library() / "enrich" / f"{name}.jsonl")
+    typer.echo(f"enrich passed: {r.counts}")
 
 
 @app.command("verify-embedder")
@@ -652,6 +717,7 @@ def ask(
     confirm: bool = typer.Option(False, help="Allow paid model calls. Without it, evidence-only."),
     local_embedder: bool = typer.Option(True, help="Embed the query with the local ONNX model."),
     trace: bool = typer.Option(True, help="Trace to Langfuse when its keys are set (environment dev)."),
+    also: list[str] = typer.Option(None, help="Optional corpora to search too, e.g. --also wipo (D-033)."),
 ) -> None:
     """Ask one question from the command line and print every event."""
     import json as _json
@@ -660,8 +726,15 @@ def ask(
     from econ.answer import pipeline
     from econ.answer.providers import configured
     from econ.retrieval.index import EmbedderClient, Index
+    from econ.service.app import served_corpora
 
-    idx = Index()
+    extra, _ = served_corpora(config.service())
+    missing = sorted(set(also or []) - set(extra))
+    if missing:
+        raise StageError(
+            f"no index for corpora {missing}; build it with `econ index --corpus`", item=missing[0]
+        )
+    idx = Index(extra={k: v for k, v in extra.items() if k in (also or [])})
     emb = EmbedderClient()
     if local_embedder and not emb.configured:
         emb = _LocalEmbedder(idx.meta["embedder"])
@@ -674,7 +747,8 @@ def ask(
         provider=found[1] if found else None,
         tracer=tracer,
     )
-    for e in pipeline.run(pipeline.Request(question=question, context=context), svc):
+    req = pipeline.Request(question=question, context=context, corpora=list(also) if also else None)
+    for e in pipeline.run(req, svc):
         if e["event"] == "retrieval":
             f = e["filter"]
             typer.echo(f"-- retrieval ({e['dense']}): queries {e['queries']}")
@@ -683,7 +757,7 @@ def ask(
                 used = f"[{ev['n']:2d}]" if ev["selected"] else "    "
                 rated = "-" if ev["filter_grade"] is None else ev["filter_grade"]
                 typer.echo(
-                    f"  {used} #{ev['search_rank']:2d} rated {rated} {ev['chunk_id']:36s} {ev['year']} "
+                    f"  {used} {ev['corpus']:5s} #{ev['search_rank']:2d} rated {rated} {ev['chunk_id']:36s} {ev['year']} "
                     f"p{ev['pages']} {' > '.join(ev['section'])[:50]}"
                 )
         else:

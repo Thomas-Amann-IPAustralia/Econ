@@ -7,6 +7,17 @@ cors_origins:
   - http://localhost:8000
   - http://127.0.0.1:8000
 
+# The corpora searched (D-033). The first is always on. An optional one is the reader's toggle in the UI and is
+# offered only when its index exists; each is searched apart, so with it off nothing changes.
+corpora:
+  - name: ipa
+    label: IP Australia
+    index: library/index
+  - name: wipo
+    label: WIPO reports
+    index: library/wipo/index
+    optional: true
+
 embedder:
   url_env: EMBEDDER_URL        # the Cloud Run service URL
   token_env: EMBEDDER_TOKEN    # shared bearer token; the service refuses calls without it when set
@@ -57,6 +68,14 @@ answer:
     read: 60                         # passages searched and rated; the answer model gets the best 20
     group: 20                        # passages a call; a question's calls run in parallel
     max_output_tokens: 3000          # includes reasoning
+  combined:                          # with an optional corpus on (D-033; not yet measured)
+    read_per_corpus: 60              # each corpus's own top 60, so the filter reads 120 with WIPO on
+    keep_min: 20                     # the answer model gets the 20 rated highest...
+    keep_max: 40                     # ...and up to 40 when more are rated useful (2) or essential (3)
+    keep_grade: 2
+    prompt: answer-v6                # answer-v5 naming both publishers and keeping their figures apart
+    plan_prompt: plan-v4             # plan-v2 with the WIPO collection described
+    filter_prompt: filter-v2         # filter-v1 rating both publishers on one scale
   # The answer check (SOP §20.7). Each claim's quotes together must hold at least `quote_claim_ratio`
   # times the claim's words, and every quote at least `min_quote_words` words.
   min_quote_words: 5

@@ -1,7 +1,9 @@
 """Stage `fetch`: copy the corpus from the R2 bucket to data/raw, and reconcile it with config/sources.yaml.
 
 Identity is the R2 object key. An object without a registry entry, or an entry without an object, fails
-the run: the owner decides what enters the knowledge base.
+the run: the owner decides what enters the knowledge base. Each corpus (D-033) owns a folder of the bucket
+(`r2_prefix`); the original corpus owns the root, less the other corpora's folders. An object the registry
+lists as deferred is acknowledged and not fetched.
 """
 
 from __future__ import annotations
@@ -30,32 +32,51 @@ def r2_client():
     )
 
 
+def owned(keys, prefix: str, others: list[str]) -> list[str]:
+    """The keys a corpus owns: those under its folder, or for the root corpus, those under no other's."""
+    if prefix:
+        return [k for k in keys if k.startswith(prefix)]
+    return [k for k in keys if not any(o and k.startswith(o) for o in others)]
+
+
 def fetch(run: Run) -> None:
     src = config.sources()
+    corpus = config.corpus()
+    others = [c.r2_prefix for n, c in config.pipeline().corpora.items() if n != config.corpus_name()]
     raw = config.path(config.pipeline().paths.raw)
     raw.mkdir(parents=True, exist_ok=True)
     s3 = r2_client()
 
-    objects = {}
+    listed = {}
     token = None
     while True:
-        kw = {"Bucket": src.bucket, **({"ContinuationToken": token} if token else {})}
+        kw = {
+            "Bucket": src.bucket,
+            **({"Prefix": corpus.r2_prefix} if corpus.r2_prefix else {}),
+            **({"ContinuationToken": token} if token else {}),
+        }
         page = s3.list_objects_v2(**kw)
         for o in page.get("Contents", []):
-            objects[o["Key"]] = o
+            if not o["Key"].endswith("/"):  # a folder marker is not an object of the corpus
+                listed[o["Key"]] = o
         if not page.get("IsTruncated"):
             break
         token = page["NextContinuationToken"]
+    deferred = {d.key for d in src.deferred}
+    objects = {k: listed[k] for k in owned(listed, corpus.r2_prefix, others) if k not in deferred}
 
     registry = src.by_key()
     unknown = sorted(set(objects) - set(registry))
     absent = sorted(set(registry) - set(objects))
     if unknown:
+        # Every unregistered object goes in the manifest, so the registry entries can be written from it.
+        run.params["unregistered"] = [{"key": k, "bytes": objects[k]["Size"]} for k in unknown]
         raise StageError(
-            f"{len(unknown)} object(s) in R2 have no entry in config/sources.yaml", item=unknown[0]
+            f"{len(unknown)} object(s) in R2 have no entry in config/{corpus.sources}", item=unknown[0]
         )
     if absent:
         raise StageError(f"{len(absent)} registry entr(ies) have no object in R2", item=absent[0])
+    run.counts["deferred"] = len(deferred & set(listed))
 
     downloaded = 0
     for key in sorted(objects):

@@ -11,6 +11,11 @@ Files, written by `econ index` and committed:
 A question may become several queries (the plan). Each query is ranked by `fuse`; the per-query lists
 are merged by reciprocal rank, and the context takes the top `context_chunks` with at most `per_doc_cap`
 from any one document.
+
+More than one corpus (D-033): each corpus's index is built on its own and loaded side by side. The rows
+are concatenated (the first corpus's come first, so its row numbers and tie order are unchanged), the
+vectors stacked, and each corpus keeps its own BM25, so its keyword statistics are its own. A search is
+always limited to one corpus's rows (`allowed`), which makes it the search that corpus's index alone gives.
 """
 
 from __future__ import annotations
@@ -37,26 +42,69 @@ class Selected:
     rerank_score: float | None = None  # the cross-encoder's logit, when a reranker ordered the list
 
 
+class StackedBM25:
+    """Several corpora's BM25 indexes read as one: each scores its own rows with its own statistics."""
+
+    def __init__(self, parts: list[BM25]):
+        self.parts = parts
+        self.offsets = np.cumsum([0] + [b.n for b in parts])
+        self.n = int(self.offsets[-1])
+
+    def scores(self, query: str) -> np.ndarray:
+        return np.concatenate([b.scores(query) for b in self.parts])
+
+    def matched_terms(self, query: str, row: int) -> list[str]:
+        k = int(np.searchsorted(self.offsets, row, side="right")) - 1
+        return self.parts[k].matched_terms(query, row - int(self.offsets[k]))
+
+
 class Index:
-    def __init__(self, root: Path | None = None):
+    def __init__(self, root: Path | None = None, extra: dict[str, Path] | None = None):
+        """`root` is the first corpus's index; `extra` maps further corpora (D-033) to theirs."""
         import os
 
         root = root or Path(os.environ.get("ECON_INDEX_DIR") or config.path(INDEX_DIR))
         self.root = root
-        self.meta = json.loads((root / "index.json").read_text())
-        self.docs = json.loads((root / "docs.json").read_text())
-        self.chunks = [
-            json.loads(line)
-            for line in (root / "chunks.jsonl").read_text(encoding="utf-8").splitlines()
-            if line
-        ]
-        self.vecs = np.load(root / "vectors.f16.npy").astype(np.float32)
-        self.bm25 = BM25.load(root / "bm25.npz")
+        parts = {config.DEFAULT_CORPUS: root, **(extra or {})}
+        self.metas, self.docs, self.chunks, vecs, bms = {}, {}, [], [], []
+        for name, d in parts.items():
+            meta = json.loads((d / "index.json").read_text())
+            chunks = [
+                json.loads(line)
+                for line in (d / "chunks.jsonl").read_text(encoding="utf-8").splitlines()
+                if line
+            ]
+            v = np.load(d / "vectors.f16.npy").astype(np.float32)
+            bm = BM25.load(d / "bm25.npz")
+            if len(chunks) != v.shape[0] or len(chunks) != bm.n:
+                raise RuntimeError(f"{name}: index files are not row-aligned; rebuild with `econ index`")
+            if self.metas:
+                first = next(iter(self.metas.values()))
+                if (meta["embedder"], meta["dim"]) != (first["embedder"], first["dim"]):
+                    raise RuntimeError(
+                        f"{name}: built with {meta['embedder']}, the first corpus with {first['embedder']}"
+                    )
+            docs = json.loads((d / "docs.json").read_text())
+            clash = sorted(set(docs) & set(self.docs))
+            if clash:
+                raise RuntimeError(f"{name}: doc_ids already in another corpus: {clash[:3]}")
+            for doc in docs.values():
+                doc.setdefault("corpus", name)
+            for c in chunks:
+                c["corpus"] = name
+            self.metas[name] = meta
+            self.docs.update(docs)
+            self.chunks.extend(chunks)
+            vecs.append(v)
+            bms.append(bm)
+        self.meta = self.metas[config.DEFAULT_CORPUS]
+        self.corpora = list(self.metas)
+        self.vecs = vecs[0] if len(vecs) == 1 else np.vstack(vecs)
+        self.bm25 = bms[0] if len(bms) == 1 else StackedBM25(bms)
         self.by_id = {c["chunk_id"]: i for i, c in enumerate(self.chunks)}
-        if len(self.chunks) != self.vecs.shape[0] or len(self.chunks) != self.bm25.n:
-            raise RuntimeError("index files are not row-aligned; rebuild with `econ index`")
         self.doc_of = np.array([c["doc_id"] for c in self.chunks])
         self.year_of = np.array([self.docs[c["doc_id"]]["year"] for c in self.chunks])
+        self.corpus_of = np.array([c["corpus"] for c in self.chunks])
 
     def indexed_text(self, row: int) -> str:
         """The text both lanes indexed for a chunk: its context note (D-013), if any, then its embed_text."""
@@ -68,11 +116,20 @@ class Index:
         )
 
     def allowed(
-        self, doc_ids: list[str] | None = None, years: tuple[int, int] | None = None
+        self,
+        doc_ids: list[str] | None = None,
+        years: tuple[int, int] | None = None,
+        corpus: str | None = None,
     ) -> np.ndarray | None:
-        if not doc_ids and not years:
+        """The rows a search may return; None is every row. With more than one corpus loaded, a search is
+        always limited to one (the first, unless named)."""
+        if len(self.corpora) > 1:
+            corpus = corpus or self.corpora[0]
+        if not doc_ids and not years and not corpus:
             return None
         mask = np.ones(len(self.chunks), dtype=bool)
+        if corpus:
+            mask &= self.corpus_of == corpus
         if doc_ids:
             mask &= np.isin(self.doc_of, doc_ids)
         if years:

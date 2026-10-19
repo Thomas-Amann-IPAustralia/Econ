@@ -33,11 +33,19 @@ class Document(Strict):
     note: str | None = None  # shown with every passage from the document
 
 
+class Deferred(Strict):
+    """An object in the corpus's R2 folder that the owner has seen and left out of the knowledge base for now."""
+
+    key: str
+    reason: str
+
+
 class Sources(Strict):
     bucket: str
     endpoint: str
     publisher: str
     documents: list[Document]
+    deferred: list[Deferred] = []
 
     @model_validator(mode="after")
     def _unique(self) -> Sources:
@@ -161,8 +169,25 @@ class RetrievalCfg(Strict):
     enrichment: str | None = None
 
 
+class Corpus(Strict):
+    """A collection ingested, chunked, noted and indexed on its own (D-033): its own registry, R2 folder,
+    library directory and manifests, so adding one never changes another's chunks, keyword statistics or
+    index. `ipa` is the original corpus and keeps the original paths."""
+
+    label: str
+    sources: str  # the registry, under config/
+    library: str  # the corpus's library root (elements, chunks, notes, index, parse.json, sweep.json)
+    r2_prefix: str = (
+        ""  # the corpus's folder in the bucket; "" is the bucket's root minus other corpora's folders
+    )
+    enrich_prompt: str = "enrich-v1"  # prompts/eval/<name>.md, the context notes' prompt
+    enrichment: str | None = None  # this corpus's notes file; None: `retrieval.enrichment`
+    pdfs_on_site: bool = False  # copy its PDFs to the Pages site (publishing them is the owner's call, D-010)
+
+
 class Pipeline(Strict):
     paths: Paths = Paths()
+    corpora: dict[str, Corpus] = {}
     parse: ParseCfg = ParseCfg()
     chunking: ChunkingCfg
     embedding: EmbeddingCfg
@@ -223,10 +248,32 @@ class FilterCfg(Strict):
     max_output_tokens: int = 3000
 
 
+class CombinedCfg(Strict):
+    """A question with an optional corpus switched on (D-033). Each corpus is searched apart and gives its own
+    first `read_per_corpus` passages; the filter reads them all, and the answer model gets the `keep_min`
+    rated highest, plus any further ones rated `keep_grade` or more, up to `keep_max`. Rating ties go to the
+    corpora in turn. The prompts name both publishers; with every optional corpus off nothing here applies."""
+
+    read_per_corpus: int = 60
+    keep_min: int = 20
+    keep_max: int = 40
+    keep_grade: int = Field(2, ge=0, le=3)
+    prompt: str
+    plan_prompt: str
+    filter_prompt: str
+
+    @model_validator(mode="after")
+    def _bounds(self) -> CombinedCfg:
+        if not 0 < self.keep_min <= self.keep_max:
+            raise ValueError("combined: need 0 < keep_min <= keep_max")
+        return self
+
+
 class AnswerCfg(Strict):
     prompt: str
     plan_prompt: str
     filter: FilterCfg | None = None  # None: no filter; the answer model gets the search's top passages
+    combined: CombinedCfg | None = None  # how questions with an optional corpus on are answered (D-033)
     max_queries: int = 4
     # Search the standalone question as well as the plan's queries (D-013), so a plan that misses can't
     # take the question's own words out of the search.
@@ -264,8 +311,21 @@ class TracingCfg(Strict):
     sample_rate: float = 1.0
 
 
+class ServedCorpus(Strict):
+    """A corpus the service loads (D-033). The first is always searched; an optional one is the reader's
+    toggle, and is offered only when its index exists."""
+
+    name: str
+    label: str
+    index: (
+        str  # its serving index, repo-relative; ECON_INDEX_DIR (the first) or ECON_INDEX_DIR_<NAME> overrides
+    )
+    optional: bool = False
+
+
 class Service(Strict):
     cors_origins: list[str]
+    corpora: list[ServedCorpus] = []
     embedder: EmbedderCfg = EmbedderCfg()
     llm: LlmCfg
     answer: AnswerCfg
@@ -283,9 +343,44 @@ def _load_yaml(name: str) -> dict:
         return yaml.safe_load(fh) or {}
 
 
+DEFAULT_CORPUS = "ipa"
+
+
+def corpus_name() -> str:
+    """The corpus a stage command works on: `--corpus`, carried in ECON_CORPUS so worker processes see it."""
+    import os
+
+    return os.environ.get("ECON_CORPUS") or DEFAULT_CORPUS
+
+
+def corpus(name: str | None = None) -> Corpus:
+    name = name or corpus_name()
+    cs = pipeline().corpora
+    if name not in cs:
+        if name == DEFAULT_CORPUS and not cs:
+            return Corpus(label="IP Australia", sources="sources.yaml", library=pipeline().paths.library)
+        raise ValueError(f"unknown corpus {name!r}; config/pipeline.yaml lists {sorted(cs)}")
+    return cs[name]
+
+
+def library(name: str | None = None) -> Path:
+    """The library root of a corpus (default: the current one)."""
+    return path(corpus(name).library)
+
+
+def enrichment(name: str | None = None) -> str | None:
+    c = corpus(name)
+    return c.enrichment if c.enrichment is not None else pipeline().retrieval.enrichment
+
+
 @lru_cache
-def sources() -> Sources:
-    return Sources.model_validate(_load_yaml("sources.yaml"))
+def _sources(file: str) -> Sources:
+    return Sources.model_validate(_load_yaml(file))
+
+
+def sources(name: str | None = None) -> Sources:
+    """The registry of a corpus (default: the current one)."""
+    return _sources(corpus(name).sources)
 
 
 @lru_cache

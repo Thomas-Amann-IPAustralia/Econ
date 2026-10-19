@@ -1,6 +1,6 @@
 """The API service on Render: the front end on GitHub Pages calls it.
 
-  GET  /api/health            build identity, the embedder's and the model's state; wakes the embedder
+  GET  /api/health            build identity, the corpora, the embedder's and the model's state; wakes the embedder
   GET  /api/catalogue         the documents in the knowledge base
   POST /api/ask               one question, streamed as server-sent events (econ.answer.pipeline)
   POST /api/search            retrieval only, as JSON
@@ -44,12 +44,15 @@ class AskIn(BaseModel):
     years: tuple[int, int] | None = None
     # One per conversation, made by the front end; it groups the conversation's traces into a session.
     session_id: str | None = Field(None, pattern="^[A-Za-z0-9-]{8,64}$")
+    # Optional corpora the reader switched on (D-033), e.g. ["wipo"]; the first corpus is always searched.
+    corpora: list[str] | None = Field(None, max_length=4)
 
 
 class SearchIn(BaseModel):
     query: str = Field(min_length=2, max_length=500)
     doc_ids: list[str] | None = None
     years: tuple[int, int] | None = None
+    corpora: list[str] | None = Field(None, max_length=4)
 
 
 class Meter:
@@ -96,7 +99,10 @@ def log_view(e: dict) -> dict:
     out = {k: v for k, v in e.items() if k != "traces"}
     if "pool" in out:
         keys = ("chunk_id", "search_rank", "filter_grade", "selected", "n")
-        out["pool"] = [{k: p.get(k) for k in keys} for p in out["pool"]]
+        out["pool"] = [
+            {**{k: p.get(k) for k in keys}, **({"corpus": p["corpus"]} if "corpus" in p else {})}
+            for p in out["pool"]
+        ]
     return out
 
 
@@ -105,9 +111,31 @@ def client_id(request: Request) -> str:
     return fwd.split(",")[0].strip() or (request.client.host if request.client else "unknown")
 
 
+def served_corpora(scfg) -> tuple[dict, list[dict]]:
+    """The optional corpora whose index exists (ECON_INDEX_DIR_<NAME> overrides the configured path), and
+    every configured corpus with whether it is served. A missing optional index is not an error: the toggle
+    is simply not offered until it is built (D-033)."""
+    from pathlib import Path
+
+    extra, listing = {}, []
+    for i, c in enumerate(scfg.corpora):
+        d = Path(os.environ.get(f"ECON_INDEX_DIR_{c.name.upper()}") or config.path(c.index))
+        here = i == 0 or (d / "index.json").exists()
+        if i > 0 and here:
+            extra[c.name] = d
+        listing.append({"name": c.name, "label": c.label, "optional": c.optional, "available": here})
+    return extra, listing
+
+
 def create_app() -> FastAPI:
     scfg = config.service()
-    index = Index()
+    extra, corpora = served_corpora(scfg)
+    index = Index(extra=extra)
+    for c in corpora:
+        if c["available"]:
+            c["documents"] = sum(1 for d in index.docs.values() if d.get("corpus") == c["name"])
+            c["chunks"] = int((index.corpus_of == c["name"]).sum())
+    optional = {c["name"] for c in corpora if c["optional"] and c["available"]}
     embedder = EmbedderClient()
     found = configured()
     model, provider = found if found else (None, None)
@@ -116,7 +144,9 @@ def create_app() -> FastAPI:
     build = {
         "commit": os.environ.get("RENDER_GIT_COMMIT") or git_state()["commit"],
         "index": index.meta,
+        "indexes": index.metas,
         "prompt": scfg.answer.prompt,
+        "combined_prompt": scfg.answer.combined.prompt if scfg.answer.combined and optional else None,
         "started": datetime.now(UTC).isoformat(timespec="seconds"),
     }
     tracer = tracing.from_env(index.meta, provider, commit=build["commit"])
@@ -147,6 +177,7 @@ def create_app() -> FastAPI:
         return {
             "status": "ok",
             "build": build,
+            "corpora": corpora,
             "embedder": {"configured": embedder.configured, "warm": embedder.warm, "health": embedder.health},
             "llm": {
                 "mode": "answer" if model and meter.available() else "evidence_only",
@@ -208,6 +239,12 @@ def create_app() -> FastAPI:
             unknown = sorted(set(body.doc_ids) - set(index.docs))
             if unknown:
                 raise HTTPException(400, f"unknown documents: {unknown}")
+        asked = [c for c in (body.corpora or []) if c != index.corpora[0]]
+        unserved = sorted(set(asked) - optional)
+        if unserved:
+            raise HTTPException(400, f"corpora not available: {unserved}")
+        if asked and not scfg.answer.combined:
+            raise HTTPException(400, "this service has no settings for more than one corpus")
         return pipeline.Request(
             question=body.question,
             history=[t.model_dump() for t in body.history],
@@ -215,6 +252,7 @@ def create_app() -> FastAPI:
             doc_ids=body.doc_ids,
             years=body.years,
             session_id=body.session_id,
+            corpora=asked or None,
         )
 
     def record(req: pipeline.Request, events: list[dict]):
@@ -226,6 +264,7 @@ def create_app() -> FastAPI:
                 "at": datetime.now(UTC).isoformat(timespec="seconds"),
                 "commit": build["commit"],
                 "question": req.question,
+                "corpora": req.corpora,
                 "context_chars": len(req.context),
                 "events": [log_view(e) for e in events],
             }
@@ -263,7 +302,9 @@ def create_app() -> FastAPI:
 
     @app.post("/api/search")
     def search(body: SearchIn, request: Request) -> dict:
-        req = validate(AskIn(question=body.query, doc_ids=body.doc_ids, years=body.years), request)
+        req = validate(
+            AskIn(question=body.query, doc_ids=body.doc_ids, years=body.years, corpora=body.corpora), request
+        )
         svc = pipeline.Services(index=index, embedder=embedder)
         return {"events": list(pipeline.run(req, svc))}
 

@@ -1353,3 +1353,77 @@ green, in the claim's card and in the passage.
 3 violet, 4 grey in its card, and the same numbers and colours on the same sentences in passages 4, 3 and 20;
 a one-sentence claim stays yellow and unnumbered; a sentence's Passage button brings it into view; the earlier
 checks still pass, in both themes and at phone width, with no script errors.
+
+## D-033 — The WIPO reports as a second corpus behind a switch: built and tested, not yet ingested (the owner's request; Claude, 2026-10-19)
+
+**Request (the owner, 2026-10-19).** WIPO reports are in the bucket under `WIPO/`, with a Global Innovation Index
+workbook (deferred). "Add an 'on/off' toggle on the UI. When it's 'on' the system should essentially double its
+search, sending 120 top candidates to the Luna filter. 60 of those candidates should be from the WIPO reports and
+60 from the IP Australia ones." Treat the WIPO reports as a corpus of their own, possibly needing different
+treatment for their graphs (is a multimodal embedding model needed?); consider the pipeline, chunk size, how the
+passages interact, whether 40 chunks can go to the answer model meaningfully, and how else to handle volume and
+quality. The design and the reasoning are in `docs/design-wipo-corpus.md`.
+
+**Built.**
+- Corpora (`config/pipeline.yaml` `corpora`): each with its own registry, R2 folder, library, manifests
+  (`manifests/<corpus>/<stage>/`) and note prompt; every stage takes `--corpus` (`ECON_CORPUS`). `ipa` keeps every
+  path it had. Fetch owns a folder (`r2_prefix`), lists every unregistered key in its manifest, and skips
+  `deferred` objects. `econ enrich` (new) prints the estimate, and calls only with `--confirm`. `prompts/eval/enrich-wipo-v1.md`.
+- Serving (`config/service.yaml` `corpora`, `answer.combined`): `Index(extra=...)` loads corpora side by side,
+  each with its own BM25 (`StackedBM25`), every search limited to one corpus. With an optional corpus on, each is
+  searched apart for its own top 60 (cap 8 a document within it); the lists are interleaved; the filter rates all
+  (`filter-v2`); the answer model gets the 20 rated highest plus any more rated 2 or 3, up to 40 (`by_rating_upto`);
+  plan-v4, answer-v6 (publisher named on each passage; publishers kept apart; need not use every passage).
+  Failed filter: the first 20 of the interleaved list. `/api/health` lists the corpora and whether each is served;
+  `corpora` on `/api/ask` and `/api/search`; `econ ask --also wipo`. An optional corpus without an index is not
+  offered.
+- Front end: an "Include WIPO reports" switch (disabled, "coming", until the index exists; remembered in the
+  browser), collection labels on passages and pool rows when two collections were searched, pool rows keyed by
+  position (search ranks repeat), the export's `corpora`, `corpus` and `publisher`, a viewer that links to the
+  publisher's copy at the page for PDFs not on the site, a footer line crediting WIPO, and a How it works paragraph.
+  The Pages build merges every built corpus's catalogue, and copies PDFs only for corpora with `pdfs_on_site`
+  (`ipa` true, D-010; `wipo` false, the owner's call).
+
+**Checked.** 140 tests pass, 11 of them new (`tests/test_corpora.py`):
+- with WIPO off, the same 60 passages, scores and prompts byte for byte whether or not a second index is loaded;
+- each corpus's keyword scores are its own;
+- the interleaved pool, the 20-to-40 rule and the fallback;
+- the publisher attribute in both prompts;
+- the service offers the switch only when the index exists, and rejects a corpus that isn't served;
+- fetch's folder ownership, and per-corpus manifests, library and registry.
+
+Headless Chromium against a local API with a throwaway index of 12 WIPO pages: switch off, 20 passages and no
+labels; on, 12 IP Australia and 8 WIPO (the probe is one document, so the cap of 8 applied); the export records
+both; the viewer links out; both themes and a phone width; no script errors. Then the same check with a scripted
+stand-in model (no paid calls):
+- the filter read 68 (60 IP Australia, 8 WIPO, as the activity log says);
+- the 68-row pool and the strip are labelled by collection, and each tile opens its own row;
+- 54 were rated 2 or 3, so 40 were kept.
+
+**Not done.**
+- The R2 key in this environment is refused for every call (`AccessDenied` on list, head and list-buckets, both
+  endpoints), so `WIPO/` could not be listed and `config/sources-wipo.yaml` has no documents. No WIPO document is
+  fetched, parsed, chunked, noted or indexed.
+- Nothing measured: the combined mode, its prompts and the 20-to-40 rule are unmeasured.
+
+**Probe (scratch, not committed).** WIPI 2024 pages 19-24 and 40-45 from wipo.int, parsed with the pipeline's
+Docling settings and chunked with the adopted strategy:
+- charts are vector graphics that Docling drops whole, keeping the takeaway headline, the title, the note and the
+  source line;
+- the prose states the charts' key figures;
+- annex tables come through verbatim;
+- 39 chunks (median 307 tokens): 17 are pieces of four annex tables (a 13-column table makes 7 chunks of one to
+  three rows), and 4 are a chart's note alone.
+
+**Recommendations (for the owner).**
+1. No multimodal embedding: an image or model-read values can't be checked word for word, most chart content is
+   in text, and a third lane costs money or a GPU on every question. Instead, in order: figure and table titles in
+   WIPO chunks' searchable text, with the picture's box kept (free); then, only if measured misses justify it,
+   vision-model chart descriptions as search-only notes (about US$0.002 a chart; the owner's permission first).
+2. WIPO's own chunking choices: per-row table chunks or a larger table budget; the per-document cap; near-duplicate
+   collapse across editions and collections. Delegated (D-005), to be measured before adoption.
+3. Keep the adaptive 20-to-40 rule rather than a flat 40 or a 20 + 20 quota; measure it on a WIPO test set (about
+   US$5 in all: notes, judging, answers, pairwise).
+4. Owner decisions: fix the R2 key; WIPO's PDFs on the Pages site or not; the measurement budget.
+
+**Spend:** none (no model calls).

@@ -17,7 +17,7 @@ from econ.evalr import llmcall
 from econ.kb.chunk import load_elements
 from econ.manifest import write_text_atomic
 
-PROMPT = "enrich-v1"
+PROMPT = "enrich-v1"  # the original corpus's; another corpus names its own (`corpora.<name>.enrich_prompt`)
 SCHEMA = {
     "type": "object",
     "properties": {"context": {"type": "string", "description": "One or two sentences, at most 50 words."}},
@@ -40,8 +40,12 @@ def outline(doc_id: str, limit_chars: int = 1600) -> str:
     return out[:limit_chars]
 
 
+def prompt_name() -> str:
+    return config.corpus().enrich_prompt or PROMPT
+
+
 def prompt_text() -> str:
-    return (config.ROOT / "prompts" / "eval" / f"{PROMPT}.md").read_text(encoding="utf-8")
+    return (config.ROOT / "prompts" / "eval" / f"{prompt_name()}.md").read_text(encoding="utf-8")
 
 
 def calls(chunks: list[dict], *, model: str, effort: str | None) -> list[llmcall.Call]:
@@ -69,7 +73,7 @@ def calls(chunks: list[dict], *, model: str, effort: str | None) -> list[llmcall
                 schema_name="context_note",
                 effort=effort,
                 max_output_tokens=600,
-                purpose=f"enrich:{PROMPT}:{model}",
+                purpose=f"enrich:{prompt_name()}:{model}",
                 tag=c["chunk_id"],
             )
         )
@@ -90,13 +94,13 @@ def run(
             if textcheck.high(textcheck.scan(note)):
                 note, dropped = "", dropped + 1
         rows.append({"chunk_id": c["chunk_id"], "context": note})
-    out = config.path("library/enrich") / f"{name}.jsonl"
+    out = config.library() / "enrich" / f"{name}.jsonl"
     write_text_atomic(out, "".join(json.dumps(r, sort_keys=True, ensure_ascii=False) + "\n" for r in rows))
     return {"chunks": len(rows), "failed": failed, "dropped": dropped, "file": str(out)}
 
 
 def load(name: str) -> dict[str, str]:
-    p = config.path("library/enrich") / f"{name}.jsonl"
+    p = config.library() / "enrich" / f"{name}.jsonl"
     return {
         r["chunk_id"]: r["context"] for r in (json.loads(x) for x in p.read_text().splitlines() if x.strip())
     }

@@ -69,17 +69,18 @@ def _vec(i: int, dim: int = 8) -> np.ndarray:
     return v / np.linalg.norm(v)
 
 
-@pytest.fixture
-def index_dir(tmp_path, monkeypatch):
+def build_index(d, chunks, docs, publisher="Test", corpus=None, offset=0):
+    """An index directory of placeholder chunks, as `econ index` lays it out. `offset` shifts the fake
+    vectors, so a second corpus's passages don't share the first one's."""
     rows = []
-    for i, (doc, section, text) in enumerate(CHUNKS):
+    for i, (doc, section, text) in enumerate(chunks):
         rows.append(
             {
                 "chunk_id": f"{doc}:{i:04d}",
                 "doc_id": doc,
                 "seq": i,
                 "text": text,
-                "embed_text": f"{DOCS[doc]['title']}\n{' > '.join(section)}\n\n{text}",
+                "embed_text": f"{docs[doc]['title']}\n{' > '.join(section)}\n\n{text}",
                 "section": section,
                 "headings": [],
                 "pages": [i + 1],
@@ -90,28 +91,28 @@ def index_dir(tmp_path, monkeypatch):
                 "tokens": len(text.split()),
             }
         )
-    d = tmp_path / "index"
     d.mkdir()
     (d / "chunks.jsonl").write_text("".join(json.dumps(r) + "\n" for r in rows))
-    np.save(d / "vectors.f16.npy", np.stack([_vec(i) for i in range(len(rows))]).astype(np.float16))
+    np.save(d / "vectors.f16.npy", np.stack([_vec(i + offset) for i in range(len(rows))]).astype(np.float16))
     BM25.build([r["embed_text"] for r in rows]).save(d / "bm25.npz")
-    docs = {
+    out = {
         k: {
             **v,
             "doc_id": k,
             "authors": [],
             "url": None,
-            "publisher": "Test",
+            "publisher": publisher,
             "licence": "CC BY 4.0",
             "page_count": 9,
             "pages": {},
             "ocr": False,
             "chunks": 3,
             "source_sha256": "x",
+            **({"corpus": corpus} if corpus else {}),
         }
-        for k, v in DOCS.items()
+        for k, v in docs.items()
     }
-    (d / "docs.json").write_text(json.dumps(docs))
+    (d / "docs.json").write_text(json.dumps(out))
     (d / "index.json").write_text(
         json.dumps(
             {
@@ -125,7 +126,15 @@ def index_dir(tmp_path, monkeypatch):
             }
         )
     )
+    return d
+
+
+@pytest.fixture
+def index_dir(tmp_path, monkeypatch):
+    d = build_index(tmp_path / "index", CHUNKS, DOCS)
     monkeypatch.setenv("ECON_INDEX_DIR", str(d))
+    # The tests see only the corpora they build: no optional corpus's index from the repository.
+    monkeypatch.setenv("ECON_INDEX_DIR_WIPO", str(tmp_path / "no-wipo-index"))
     return d
 
 

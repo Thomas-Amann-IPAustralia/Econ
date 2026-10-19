@@ -24,7 +24,7 @@ DEPTH = 50  # ranked chunks kept per need: enough for the 8k-token budget at the
 
 
 def load_chunks(strategy: str) -> list[dict]:
-    p = config.path(config.pipeline().paths.library) / "chunks" / f"{strategy}.jsonl"
+    p = config.library() / "chunks" / f"{strategy}.jsonl"
     if not p.exists():
         raise StageError(f"no chunks for {strategy}; run `econ chunk`", item=strategy)
     return [json.loads(line) for line in p.read_text(encoding="utf-8").splitlines() if line.strip()]
