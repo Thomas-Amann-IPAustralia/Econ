@@ -3,7 +3,9 @@
 Each document becomes library/elements/<doc_id>.jsonl: one row per body element in reading order, with
 its label, text, page and bounding box (PDF points, top-left origin). Page furniture (running headers,
 footers, page numbers), the table of contents and figure interiors are left out; captions are kept.
-Documents whose text layer is empty are OCR'd at a higher render scale (D-002).
+Documents whose text layer is empty are OCR'd at a higher render scale (D-002); their garbled elements
+are then re-read from their own boxes (`econ.ingest.reocr`, D-022), against the vocabulary of the
+text-layer documents, and library/reocr.json records every attempt.
 
 The Docling result per document is cached in data/parsed/ under the input's hash, so a run can resume.
 """
@@ -122,6 +124,16 @@ def _parse_one(args: tuple[str, str, bool, str]) -> tuple[str, dict]:
     return doc_id, {"seconds": round(time.time() - started, 1), "status": str(res.status)}
 
 
+def _catalogue(p: Path) -> dict:
+    """parse.json as the stage builds it: page numbers as integers, so they sort as numbers when written."""
+    if not p.exists():
+        return {}
+    cat = json.loads(p.read_text())
+    for info in cat.values():
+        info["pages"] = {int(k): v for k, v in info["pages"].items()}
+    return cat
+
+
 def parse(run: Run, *, workers: int = 1, only: list[str] | None = None) -> None:
     from docling_core.types.doc import DoclingDocument
 
@@ -167,14 +179,47 @@ def parse(run: Run, *, workers: int = 1, only: list[str] | None = None) -> None:
 
     out_dir = lib / "elements"
     out_dir.mkdir(parents=True, exist_ok=True)
+    parsed = {}
+    for d in docs:
+        pdf, cpath, ocr = plan[d.doc_id]
+        ddoc = DoclingDocument.model_validate(json.loads(cpath.read_text()))
+        parsed[d.doc_id] = elements_from_docling(ddoc, d.doc_id, ocr)
+        if not parsed[d.doc_id][0]:
+            raise StageError("no body text extracted", item=d.doc_id)
+
+    # Re-read the OCR documents' garbled elements (D-022), against the text-layer documents' vocabulary:
+    # this run's, and for a partial run the committed elements of the text-layer documents it left out.
+    reocr_report = {}
+    if cfg.reocr and any(plan[d][2] for d in parsed):
+        from econ.ingest import reocr
+
+        texts = [r["text"] for d, (rows, _) in parsed.items() if not plan[d][2] for r in rows]
+        prev = _catalogue(lib / "parse.json")
+        for doc_id, info in prev.items():
+            if doc_id not in parsed and not info["ocr"] and (out_dir / f"{doc_id}.jsonl").exists():
+                texts += [json.loads(line)["text"] for line in (out_dir / f"{doc_id}.jsonl").open()]
+        vocab = reocr.vocabulary(texts)
+        for doc_id, (rows, _) in parsed.items():
+            if plan[doc_id][2]:
+                reader = reocr.BoxReader(str(plan[doc_id][0]), cfg.reocr_scales, cfg.reocr_pads)
+                vision = (
+                    reocr.VisionReader(str(plan[doc_id][0]), cfg.reocr_model) if cfg.reocr_model else None
+                )
+                reocr_report[doc_id] = reocr.repair(
+                    rows,
+                    vocab,
+                    reader,
+                    variants=len(reader.variants),
+                    min_agreement=cfg.reocr_agreement,
+                    fallback=vision,
+                    fallback_name=cfg.reocr_model or "",
+                )
+
     catalogue = {}
     n_el, findings = 0, []
     for d in docs:
         pdf, cpath, ocr = plan[d.doc_id]
-        ddoc = DoclingDocument.model_validate(json.loads(cpath.read_text()))
-        rows, pages = elements_from_docling(ddoc, d.doc_id, ocr)
-        if not rows:
-            raise StageError("no body text extracted", item=d.doc_id)
+        rows, pages = parsed[d.doc_id]
         for r in rows:
             for f in textcheck.scan(r["text"]):
                 if f.severity == "high":
@@ -204,8 +249,18 @@ def parse(run: Run, *, workers: int = 1, only: list[str] | None = None) -> None:
         n_el += len(rows)
 
     out = lib / "parse.json"
+    if only and out.exists():
+        # A partial run updates its own documents and keeps the rest of the catalogue as it was.
+        catalogue = {**_catalogue(out), **catalogue}
     write_json_atomic(out, catalogue)
     run.add_output(out)
+    if reocr_report:
+        rp = lib / "reocr.json"
+        old = json.loads(rp.read_text()) if (only and rp.exists()) else {}
+        write_json_atomic(rp, dict(sorted({**old, **reocr_report}.items())))
+        run.add_output(rp)
+        tried = [e for rep in reocr_report.values() for e in rep]
+        run.counts.update(reocr_garbled=len(tried), reocr_repaired=sum(e["repaired"] for e in tried))
     run.counts.update(
         documents=len(docs), parsed_now=len(timings), elements=n_el, text_findings=len(findings)
     )

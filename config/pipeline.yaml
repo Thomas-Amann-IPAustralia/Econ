@@ -12,6 +12,11 @@ parse:
   ocr_min_chars_per_page: 100   # a page with fewer text-layer characters counts as image-only
   ocr_page_share: 0.5           # OCR the whole document when at least this share of pages is image-only
   ocr_scale: 2.0                # render scale for OCR; 1.0 garbled the 2018 report in a probe
+  reocr: true                   # re-read garbled OCR elements from their own boxes (D-022)
+  reocr_scales: [3.0, 4.0]      # render scales for that re-read; every scale is tried with every padding
+  reocr_pads: [2.0, 4.0, 8.0]   # crop padding in PDF points (RapidOCR's first line is unstable under small changes)
+  reocr_agreement: 0.8          # a re-read must keep this share of the old text's sound words
+  reocr_model: gemini-3.8-flash # last resort for what no crop variant repairs; cached and metered (D-022)
   threads: 2                    # per worker; `econ parse --workers 2` uses all 4 vCPUs
   table_structure: true
 

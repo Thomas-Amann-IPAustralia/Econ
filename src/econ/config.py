@@ -70,6 +70,11 @@ class ParseCfg(Strict):
     ocr_min_chars_per_page: int = 100
     ocr_page_share: float = 0.5
     ocr_scale: float = 2.0
+    reocr: bool = True  # re-read garbled OCR elements from their own boxes (D-022)
+    reocr_scales: list[float] = [3.0, 4.0]
+    reocr_pads: list[float] = [2.0, 4.0, 8.0]
+    reocr_agreement: float = 0.8
+    reocr_model: str | None = None  # the vision model for what no crop variant repairs (D-022); null: none
     threads: int = 4
     table_structure: bool = True
 
