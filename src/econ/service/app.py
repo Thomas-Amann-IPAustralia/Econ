@@ -16,6 +16,7 @@ import os
 import threading
 import time
 from collections import defaultdict, deque
+from contextlib import asynccontextmanager
 from datetime import UTC, datetime
 
 from fastapi import FastAPI, HTTPException, Request
@@ -23,7 +24,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, StreamingResponse
 from pydantic import BaseModel, Field
 
-from econ import config
+from econ import config, tracing
 from econ.answer import pipeline
 from econ.answer.providers import configured
 from econ.manifest import git_state
@@ -41,6 +42,8 @@ class AskIn(BaseModel):
     context: str = ""
     doc_ids: list[str] | None = None
     years: tuple[int, int] | None = None
+    # One per conversation, made by the front end; it groups the conversation's traces into a session.
+    session_id: str | None = Field(None, pattern="^[A-Za-z0-9-]{8,64}$")
 
 
 class SearchIn(BaseModel):
@@ -116,6 +119,7 @@ def create_app() -> FastAPI:
         "prompt": scfg.answer.prompt,
         "started": datetime.now(UTC).isoformat(timespec="seconds"),
     }
+    tracer = tracing.from_env(index.meta, provider, commit=build["commit"])
 
     def warm_embedder():
         if embedder.configured and not embedder.warm and not embedder.pinging:
@@ -123,7 +127,12 @@ def create_app() -> FastAPI:
 
     warm_embedder()  # Render wakes first; wake Cloud Run alongside it
 
-    app = FastAPI(title="Econ knowledge base", docs_url="/api/docs", redoc_url=None)
+    @asynccontextmanager
+    async def lifespan(_app: FastAPI):
+        yield
+        tracer.shutdown()  # sends what is still queued before the instance stops
+
+    app = FastAPI(title="Econ knowledge base", docs_url="/api/docs", redoc_url=None, lifespan=lifespan)
     app.add_middleware(
         CORSMiddleware,
         allow_origins=scfg.cors_origins,
@@ -146,6 +155,7 @@ def create_app() -> FastAPI:
                 "plan_model": getattr(provider, "plan_model", None),
                 "budget_reached": bool(model) and not meter.available(),
             },
+            "tracing": tracer.status(),
         }
 
     @app.get("/api/catalogue")
@@ -175,7 +185,11 @@ def create_app() -> FastAPI:
     def services() -> pipeline.Services:
         use_model = model if (model and meter.available()) else None
         return pipeline.Services(
-            index=index, embedder=embedder, model=use_model, provider=provider if use_model else None
+            index=index,
+            embedder=embedder,
+            model=use_model,
+            provider=provider if use_model else None,
+            tracer=tracer,
         )
 
     def validate(body: AskIn, request: Request) -> pipeline.Request:
@@ -200,6 +214,7 @@ def create_app() -> FastAPI:
             context=body.context,
             doc_ids=body.doc_ids,
             years=body.years,
+            session_id=body.session_id,
         )
 
     def record(req: pipeline.Request, events: list[dict]):

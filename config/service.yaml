@@ -70,3 +70,13 @@ limits:
 
 logging:
   record_questions: true           # one JSON line per answer on stdout (Render's log)
+
+tracing:                           # Langfuse (SOP §20.3, D-022): one trace per question, one session a conversation
+  enabled: true
+  required: false                  # true once the keys are on Render: then a missing key stops the service
+  base_url: https://cloud.langfuse.com   # Langfuse Cloud EU
+  public_key_env: LANGFUSE_PUBLIC_KEY
+  secret_key_env: LANGFUSE_SECRET_KEY
+  environment_env: ECON_ENVIRONMENT      # prod on Render (render.yaml); dev elsewhere; eval for eval runs
+  default_environment: dev
+  sample_rate: 1.0                 # every trace kept

@@ -242,6 +242,20 @@ class LoggingCfg(Strict):
     record_questions: bool = True
 
 
+class TracingCfg(Strict):
+    """Langfuse (SOP §20.3). Keys come from the environment under these names; the host and the
+    environment are explicit, never ambient."""
+
+    enabled: bool = True
+    required: bool = False  # true: no keys is an error, not a quiet null tracer
+    base_url: str = "https://cloud.langfuse.com"
+    public_key_env: str = "LANGFUSE_PUBLIC_KEY"
+    secret_key_env: str = "LANGFUSE_SECRET_KEY"
+    environment_env: str = "ECON_ENVIRONMENT"
+    default_environment: str = "dev"
+    sample_rate: float = 1.0
+
+
 class Service(Strict):
     cors_origins: list[str]
     embedder: EmbedderCfg = EmbedderCfg()
@@ -249,6 +263,7 @@ class Service(Strict):
     answer: AnswerCfg
     limits: LimitsCfg = LimitsCfg()
     logging: LoggingCfg = LoggingCfg()
+    tracing: TracingCfg = TracingCfg()
 
 
 # --- loading -------------------------------------------------------------------------------------

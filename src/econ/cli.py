@@ -601,10 +601,12 @@ def ask(
     context: str = typer.Option("", help="Material to compare against the knowledge base (never cited)."),
     confirm: bool = typer.Option(False, help="Allow paid model calls. Without it, evidence-only."),
     local_embedder: bool = typer.Option(True, help="Embed the query with the local ONNX model."),
+    trace: bool = typer.Option(True, help="Trace to Langfuse when its keys are set (environment dev)."),
 ) -> None:
     """Ask one question from the command line and print every event."""
     import json as _json
 
+    from econ import tracing
     from econ.answer import pipeline
     from econ.answer.providers import configured
     from econ.retrieval.index import EmbedderClient, Index
@@ -614,8 +616,13 @@ def ask(
     if local_embedder and not emb.configured:
         emb = _LocalEmbedder(idx.meta["embedder"])
     found = configured() if confirm else None
+    tracer = tracing.from_env(idx.meta, found[1] if found else None) if trace else tracing.NullTracer()
     svc = pipeline.Services(
-        index=idx, embedder=emb, model=found[0] if found else None, provider=found[1] if found else None
+        index=idx,
+        embedder=emb,
+        model=found[0] if found else None,
+        provider=found[1] if found else None,
+        tracer=tracer,
     )
     for e in pipeline.run(pipeline.Request(question=question, context=context), svc):
         if e["event"] == "retrieval":
@@ -631,6 +638,13 @@ def ask(
                 )
         else:
             typer.echo(_json.dumps(e, ensure_ascii=False, default=str)[:2000])
+    tracer.flush()
+    st = tracer.status()
+    typer.echo(f"-- tracing: {st}")
+    if st.get("failed"):
+        raise StageError(
+            f"{st['failed']} spans were not exported to Langfuse", report="the tracing line above"
+        )
 
 
 class _LocalEmbedder:

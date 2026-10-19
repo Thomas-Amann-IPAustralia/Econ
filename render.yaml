@@ -28,3 +28,9 @@ services:
         sync: false
       - key: GEMINI_API_KEY
         sync: false
+      - key: LANGFUSE_PUBLIC_KEY # Langfuse tracing (D-022); with neither key, tracing is off and /api/health says so
+        sync: false
+      - key: LANGFUSE_SECRET_KEY
+        sync: false
+      - key: ECON_ENVIRONMENT    # the Langfuse environment of this service's traces
+        value: prod
