@@ -1127,3 +1127,55 @@ quote). It needs a new prompt, schema, check and UI change, offline tests, and a
 US$0.30) before adoption.
 
 **Spend:** none.
+
+## D-026 — Citations by sentence: code writes the quotes (answer-v5); copying answers out (the owner's request; Claude, 2026-10-19)
+
+**Request (the owner, 2026-10-19).** "Yes, build the sentence citations but... only if I can continue to view
+the spans in the PDF. Actually, could we use code to produce the references rather than getting the LLM to
+write it? You can spend up to $0.75. I defer to you about which way is best. Please also add the ability so
+users can copy the responses out too."
+
+**Built.**
+- **answer-v5** (`prompts/answer-v5.md`, schema `answer5`: `coverage`, `answer`, `gaps`, `follow_ups`; no
+  `claims`). answer-v4's text with the citation rules replaced: each evidence passage is shown split into
+  numbered sentences (`[3.2]` = passage 3, sentence 2) and the prose cites those ids.
+- **`econ.answer.cite`**: a deterministic sentence splitter (line breaks; . ! ? before a capital, digit or
+  bracket; not after common abbreviations or initials; table rule lines get no id), the numbered passage text,
+  and `build`, which turns each group of ids into a claim whose quotes are the cited sentences copied from the
+  passage, rewrites the group as that claim's marker `[k]`, and reports ids that were not shown (and bare
+  `[3]` markers) as errors. The check then runs as before on the built answer, without the quote-length rules
+  (a cited sentence is the quote); a failed check goes back to the model once, as before. The `answer` event
+  carries `citations_by: "sentence"`.
+- **What the reader sees is unchanged**: claim buttons in the prose, the claim list, quote highlights in the
+  passages (offsets found by the check in the passage text), and "Show on p. N", which opens the PDF at the
+  passage's page with the passage's text blocks outlined. The owner's condition holds: the spans are still
+  viewable in the PDF. (Outlining only the cited sentence on the page is not possible from the stored boxes,
+  which are per document element; sentences don't map to elements reliably.)
+- **Drafts** show the raw sentence ids as pending pills until the checked answer replaces them.
+- **Copy**: each finished answer has a Copy button. It copies the question, the answer with its markers, what
+  is not covered and a numbered source list (each claim's quotes with document, year, section and page), as
+  formatted text for documents and plain text elsewhere, with a fallback where the Clipboard API is missing.
+- Tests: 128 pass (7 new in `tests/test_cite.py`: the splitter, the numbered text, claims built from ids,
+  unknown and bare ids, answer-v5 end to end with streaming, the retry on an unknown id, the served prompt's
+  lock). The quote-style tests pin answer-v4. The UI was checked headless: the draft pills, the final answer,
+  follow-ups, and Copy (clipboard text read back).
+
+**Measured** (`reports/answers-v5-compare.md`; six questions under answer-v4 and answer-v5, streaming on,
+keyword search only):
+| Median | answer-v4 | answer-v5 |
+|---|---|---|
+| Passed the check first time | 5 of 6 | 6 of 6 |
+| Whole answer, checked | 50.2 s | 31.6 s |
+| The answer model's call | 38.1 s | 21.4 s |
+| Output tokens | 2,134 | 1,026 |
+| Prose, characters | 3,440 | 3,624 |
+| Quoted passages per answer | 15 | 31 sentences |
+| Cost a question | US$0.040 | US$0.027 |
+answer-v4 (no brevity) was about 9 s slower than answer-v3 (D-024); answer-v5 is faster than both while
+keeping answer-v4's length. In the run, code-written claim labels could carry an earlier claim's ids; fixed
+after the run, with a test (prose, quotes and checks unaffected).
+
+**Decision (the owner deferred it to Claude).** Adopt answer-v5: `answer.prompt: answer-v5`. answer-v4 stays
+supported (`citations_by: "quote"`) and is the fallback if sentence citations disappoint in use.
+
+**Spend:** OpenAI US$0.42 of the US$0.75 given (in the ledger, purpose `answers-v5-compare`).

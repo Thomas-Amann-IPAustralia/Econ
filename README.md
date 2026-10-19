@@ -4,8 +4,9 @@ Ask questions of IP Australia's Office of the Chief Economist publications and s
 answer comes from. The knowledge base is 24 PDFs (1,099 pages): the annual Australian IP Reports 2015 to
 2026 and 12 economic research papers and analytic notes.
 
-**Built for traceability.** Every claim in an answer quotes a passage word for word, and code (not a
-model) checks each quote against the passage it cites. Each passage shows its document, year, section and
+**Built for traceability.** Every claim in an answer quotes a passage word for word: the model cites
+numbered sentences, and code (not a model) copies those sentences from the passages as the quotes and checks
+every citation. Each passage shows its document, year, section and
 page, and the page viewer draws the passage on the original PDF page. The evidence trail shows the searches
 run, every passage found, why each ranked, and which ones the answer cites.
 

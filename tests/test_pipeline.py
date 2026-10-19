@@ -1,5 +1,7 @@
 import re
 
+import pytest
+
 from econ.answer import pipeline
 from econ.answer.providers import ScriptedModel
 from econ.config import pipeline as pipeline_cfg
@@ -8,6 +10,7 @@ from econ.retrieval.index import Index
 from tests.conftest import FakeEmbedder
 
 PROVIDER = service().llm.providers[0]
+ORIGINAL_SERVICE = service
 
 
 def rate_all(user, grade=1, overrides=()):
@@ -39,6 +42,19 @@ def good_answer(schema_name, user):
         "gaps": [],
         "follow_ups": ["What about design registrations?"],  # the adopted answer-v3's schema (D-024)
     }
+
+
+@pytest.fixture(autouse=True)
+def quote_style_answers(monkeypatch):
+    """These tests drive the pipeline with answers that write their own claims and quotes (answer-v4). The
+    served prompt cites sentences instead (answer-v5, D-026); tests/test_cite.py covers that path."""
+    pin_prompt(monkeypatch, "answer-v4")
+
+
+def pin_prompt(monkeypatch, prompt):
+    s = ORIGINAL_SERVICE()
+    s2 = s.model_copy(update={"answer": s.answer.model_copy(update={"prompt": prompt})})
+    monkeypatch.setattr(pipeline.config, "service", lambda: s2)
 
 
 def events(req, svc):
@@ -127,7 +143,7 @@ def test_pasted_headings_become_searches_without_a_planner(index_dir):
 
 def with_config(monkeypatch, *, keep=None, group=None, filter_cfg="same"):
     """Patch the retrieval context size, the filter's group size or the filter itself, for one test."""
-    s, pc = service(), pipeline_cfg()
+    s, pc = pipeline.config.service(), pipeline_cfg()
     f = s.answer.filter if filter_cfg == "same" else filter_cfg
     if f is not None and group:
         f = f.model_copy(update={"group": group})
@@ -247,7 +263,7 @@ def test_the_filter_sends_the_schema_and_prompt_it_was_measured_with():
 
 
 def with_answer(monkeypatch, **update):
-    s = service()
+    s = pipeline.config.service()
     s2 = s.model_copy(update={"answer": s.answer.model_copy(update=update)})
     monkeypatch.setattr(pipeline.config, "service", lambda: s2)
 

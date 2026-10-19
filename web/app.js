@@ -237,8 +237,9 @@ function renderMarkdown(md, claims, draft = false) {
   const inline = (s) => esc(s)
     .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
     .replace(/(^|[^*])\*([^*]+)\*/g, "$1<em>$2</em>")
-    .replace(/\[(\d{1,3})\]/g, (_, n) => draft
-      ? `<span class="cite pending" title="Claim ${n}: not yet checked">${n}</span>`
+    // A draft's markers are not yet claims: [n] (answer-v4) or a sentence id [3.2] (answer-v5, D-026).
+    .replace(draft ? /\[(\d{1,3}(?:\.\d{1,3})?)\]/g : /\[(\d{1,3})\]/g, (_, n) => draft
+      ? `<span class="cite pending" title="${n.includes(".") ? `Passage ${n.split(".")[0]}, sentence ${n.split(".")[1]}` : `Claim ${n}`}: not yet checked">${n}</span>`
       : `<button class="cite${failed.has(+n) ? " failed" : ""}" data-claim="${n}" title="Claim ${n}${failed.has(+n) ? ": failed the check" : ""}">${n}</button>`);
   const out = [];
   let list = null;
@@ -304,7 +305,9 @@ function renderBot(t) {
   if (prog) el.append(h("div", { class: "progress" }, h("span", { class: "spinner" }), h("span", {}, prog)));
   if (e.done) {
     const cost = e.done.cost_usd ? ` · US$${e.done.cost_usd.toFixed(4)}` : "";
-    el.append(h("div", { class: "gaps" }, `${e.done.seconds}s${cost} · ${window.matchMedia("(max-width: 860px)").matches ? "tap to see the evidence trail" : "select to see the evidence trail"}`));
+    el.append(h("div", { class: "gaps answer-foot" },
+      e.answer ? h("button", { class: "linkish copy", type: "button", title: "Copy the answer and its sources", onclick: (ev) => { ev.stopPropagation(); copyAnswer(t, ev.currentTarget); } }, "Copy") : null,
+      `${e.done.seconds}s${cost} · ${window.matchMedia("(max-width: 860px)").matches ? "tap to see the evidence trail" : "select to see the evidence trail"}`));
     // Suggested next questions (answer-v3 onwards, D-024): one select asks it, in this conversation.
     const next = e.answer?.follow_ups || [];
     if (next.length) {
@@ -320,6 +323,62 @@ function renderBot(t) {
     select(t);
     focusClaim(t, +b.dataset.claim);
   }));
+}
+
+// --- copying an answer out: the prose with its markers, then every source with its quote and page ------
+
+function answerSources(t) {
+  const e = t.events, check = t.checks[t.checks.length - 1];
+  const ev = Object.fromEntries((e.retrieval?.evidence || []).map((x) => [x.n, x]));
+  return (check?.claims || []).map((c) => ({
+    n: c.n,
+    cites: c.citations.map((q) => ({ quote: q.quote, src: ev[q.evidence] })),
+  }));
+}
+
+const sourceLine = (s) => s ? `${s.title} (${s.year})${s.section?.length ? `, ${s.section[s.section.length - 1]}` : ""}, ${pages(s.pages)}` : "";
+
+function copyAnswer(t, btn) {
+  const a = t.events.answer;
+  const sources = answerSources(t);
+  const plain = [
+    `Q: ${t.question}`, "", a.answer.trim(), "",
+    a.gaps?.length ? `Not covered: ${a.gaps.join("; ")}\n` : null,
+    sources.length ? "Sources" : null,
+    ...sources.map((s) => `[${s.n}] ${s.cites.map((c) => `"${c.quote}" (${sourceLine(c.src)})`).join("; ")}`),
+    "", "From IP Australia's Office of the Chief Economist publications; every quote was checked against the source text.",
+  ].filter((x) => x !== null).join("\n");
+  // The same, formatted, for pasting into a document: the answer as shown, with markers as superscripts.
+  const box = document.createElement("div");
+  box.innerHTML = renderMarkdown(a.answer, []);
+  box.querySelectorAll(".cite").forEach((b) => b.replaceWith(Object.assign(document.createElement("sup"), { textContent: `[${b.dataset.claim}]` })));
+  const html = `<p><strong>${esc(t.question)}</strong></p>${box.innerHTML}`
+    + (a.gaps?.length ? `<p><em>Not covered: ${esc(a.gaps.join("; "))}</em></p>` : "")
+    + (sources.length ? `<p><strong>Sources</strong></p><ol>${sources.map((s) => `<li value="${s.n}">${s.cites.map((c) => `“${esc(c.quote)}” (${esc(sourceLine(c.src))})`).join("; ")}</li>`).join("")}</ol>` : "")
+    + "<p><em>From IP Australia's Office of the Chief Economist publications; every quote was checked against the source text.</em></p>";
+  const done = (ok) => {
+    btn.textContent = ok ? "Copied" : "Couldn't copy";
+    setTimeout(() => { btn.textContent = "Copy"; }, 1600);
+  };
+  const fallback = () => {
+    const ta = Object.assign(document.createElement("textarea"), { value: plain });
+    ta.style.position = "fixed"; ta.style.opacity = "0";
+    document.body.append(ta); ta.select();
+    let ok = false;
+    try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+    ta.remove();
+    done(ok);
+  };
+  if (navigator.clipboard && window.ClipboardItem) {
+    navigator.clipboard.write([new ClipboardItem({
+      "text/plain": new Blob([plain], { type: "text/plain" }),
+      "text/html": new Blob([html], { type: "text/html" }),
+    })]).then(() => done(true), () => navigator.clipboard.writeText(plain).then(() => done(true), fallback));
+  } else if (navigator.clipboard) {
+    navigator.clipboard.writeText(plain).then(() => done(true), fallback);
+  } else {
+    fallback();
+  }
 }
 
 // --- the evidence trail ---------------------------------------------------------------------------------

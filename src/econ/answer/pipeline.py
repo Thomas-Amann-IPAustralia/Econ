@@ -39,10 +39,10 @@ from dataclasses import dataclass, field
 from pydantic import ValidationError
 
 from econ import config, textcheck, tracing
-from econ.answer import prompts
-from econ.answer.check import check
+from econ.answer import cite, prompts
+from econ.answer.check import Result, check
 from econ.answer.providers import Model, ProviderError, Usage
-from econ.answer.schema import Answer, Grades, Plan, strict_schema
+from econ.answer.schema import Answer, AnswerV5, Grades, Plan, strict_schema
 from econ.kb.bm25 import tokenize
 from econ.retrieval.index import EmbedderClient, Index
 
@@ -153,13 +153,15 @@ def rerank_step(svc: Services, ranked: list, query: str) -> dict:
     }
 
 
-def evidence_block(n: int, chunk: dict, doc: dict) -> str:
+def evidence_block(n: int, chunk: dict, doc: dict, body: str | None = None) -> str:
+    """A passage as the answer model sees it; `body` replaces its text (the numbered sentences, D-026)."""
     pages = chunk["pages"]
     pg = f"{pages[0]}" if len(pages) == 1 else f"{pages[0]}-{pages[-1]}"
     section = " > ".join(chunk["section"]) if chunk["section"] else ""
     return (
         f'<evidence n="{n}" document="{defang(doc["title"])}" year="{doc["year"]}" '
-        f'section="{defang(section)}" pages="{pg}">\n{defang(chunk["text"])}\n</evidence>'
+        f'section="{defang(section)}" pages="{pg}">\n{body if body is not None else defang(chunk["text"])}'
+        "\n</evidence>"
     )
 
 
@@ -617,19 +619,27 @@ def _run(req: Request, svc: Services, root) -> Iterator[dict]:
         return
 
     # --- answer and check ----------------------------------------------------------------------------
+    a = scfg.answer
+    schema = prompts.schema_for(a.prompt)
+    by_sentence = schema is AnswerV5  # D-026: the model cites sentence ids; code writes the quotes
     passages = {e["n"]: {"chunk_id": e["chunk_id"], "text": e["text"]} for e in evidence}
-    blocks = "\n\n".join(
-        evidence_block(e["n"], svc.index.chunks[chosen[i].row], svc.index.docs[e["doc_id"]])
-        for i, e in enumerate(evidence)
-    )
+    sentence_table: dict[tuple[int, int], str] = {}
+    shown = []
+    for i, e in enumerate(evidence):
+        chunk, doc = svc.index.chunks[chosen[i].row], svc.index.docs[e["doc_id"]]
+        if by_sentence:
+            body, table = cite.numbered(e["n"], chunk["text"], defang)
+            sentence_table.update({(e["n"], k): v for k, v in table.items()})
+            shown.append(evidence_block(e["n"], chunk, doc, body=body))
+        else:
+            shown.append(evidence_block(e["n"], chunk, doc))
+    blocks = "\n\n".join(shown)
     base_user = (
         _history_block(req.history)
         + _context_block(req.context)
         + blocks
         + f"\n\n<question>\n{defang(standalone)}\n</question>"
     )
-    a = scfg.answer
-    schema = prompts.schema_for(a.prompt)
     errors_prev: list[str] = []
     final = None
     for attempt in (1, 2):
@@ -667,16 +677,29 @@ def _run(req: Request, svc: Services, root) -> Iterator[dict]:
         except ValidationError as e:
             errors_prev = [f"the output did not match the answer schema: {str(e)[:300]}"]
             continue
-        res = check(
-            ans,
-            passages,
-            min_quote_words=a.min_quote_words,
-            quote_claim_ratio=a.quote_claim_ratio,
-            max_quote_words=a.max_quote_words,
-        )
+        if by_sentence:
+            # The quotes are whole sentences copied by code, so the length rules for quotes don't apply; the
+            # check still verifies every quote, marker, the coverage and the text checks.
+            ans, cite_errors = cite.build(ans, sentence_table)
+            res = check(ans, passages, min_quote_words=1, quote_claim_ratio=0.0, max_quote_words=10**6)
+            if cite_errors:
+                res = Result(passed=False, errors=cite_errors + res.errors, claims=res.claims)
+        else:
+            res = check(
+                ans,
+                passages,
+                min_quote_words=a.min_quote_words,
+                quote_claim_ratio=a.quote_claim_ratio,
+                max_quote_words=a.max_quote_words,
+            )
         final = (ans, res, attempt)
         trace_check(root, ans, res, attempt)
-        yield {"event": "answer", "attempt": attempt, **ans.model_dump()}
+        yield {
+            "event": "answer",
+            "attempt": attempt,
+            "citations_by": "sentence" if by_sentence else "quote",
+            **ans.model_dump(),
+        }
         yield {"event": "check", "attempt": attempt, **res.as_dict()}
         if res.passed:
             break

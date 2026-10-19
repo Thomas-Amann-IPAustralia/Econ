@@ -13,7 +13,13 @@ from econ.answer.providers import ScriptedModel, Usage
 from econ.config import service
 from econ.retrieval.index import Index
 from tests.conftest import FakeEmbedder
-from tests.test_pipeline import PROVIDER, good_answer
+from tests.test_pipeline import PROVIDER, good_answer, pin_prompt
+
+
+@pytest.fixture(autouse=True)
+def quote_style_answers(monkeypatch):
+    pin_prompt(monkeypatch, "answer-v4")  # the scripted answers write their own quotes (answer-v4)
+
 
 _keys = itertools.count()
 
@@ -178,7 +184,7 @@ def test_metadata_over_langfuses_limit_is_an_error_not_a_silent_drop():
 def test_the_build_identity_fits_langfuses_limits(index_dir):
     meta = tracing.build_identity(Index().meta, PROVIDER)
     assert {"commit", "dirty", "index", "config", "prompts", "models"} <= set(meta)
-    assert service().answer.prompt in meta["prompts"]
+    assert tracing.config.service().answer.prompt in meta["prompts"]
 
 
 def test_without_keys_tracing_is_off_visibly_and_required_makes_it_an_error(monkeypatch, index_dir):

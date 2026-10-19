@@ -229,3 +229,8 @@ OpenAI), not run.
 - answer-v4: answer-v3 without its brevity instructions, adopted at the owner's request. Answer-stage anatomy:
   ~45 tokens/s; prose 35% of the JSON, quotes 33%, claim restatements 18%. Proposed: cite by sentence number.
 
+## 2026-10-19 — Sentence citations by code; Copy (D-026)
+- answer-v5: sentence ids in the prose, claims and quotes built by `econ.answer.cite`; adopted (the owner
+  deferred the choice). 6 questions on v4 and v5 (US$0.42): whole answer 50.2 s to 31.6 s, output tokens
+  2,134 to 1,026, prose as long, 6 of 6 pass. Copy button added. 128 tests pass; UI checked headless.
+

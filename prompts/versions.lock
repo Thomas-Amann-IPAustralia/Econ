@@ -19,6 +19,11 @@
     "schema_sha256": "829389a172791fbf",
     "sha256": "bc3fe15cdb242923"
   },
+  "answer-v5": {
+    "schema": "answer5",
+    "schema_sha256": "db474714a4d4954f",
+    "sha256": "bbe7fca961070367"
+  },
   "filter-v1": {
     "schema": "filter",
     "schema_sha256": "27cb0355c1a50e85",

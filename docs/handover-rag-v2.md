@@ -77,6 +77,13 @@ Branch `ccr-fe4defc0-ysiv1i`. Read D-017 to D-020 first.
 - Two-thirds of the answer model's output is the claims' quotes and restatements; citing by sentence number
   (the server fills in the quotes) is proposed to the owner in D-025, not built.
 
+## Update, 2026-10-19 (latest): sentence citations and Copy (D-026)
+- `answer.prompt: answer-v5`: the model cites `[passage.sentence]`; `econ.answer.cite` builds the claims and
+  quotes. Measured on 6 questions: whole answer 50.2 s (v4) to 31.6 s, US$0.040 to US$0.027, 6 of 6 pass.
+- Copy button on every finished answer (`copyAnswer` in `web/app.js`).
+- Not yet deployed: merge to `main` (Render and Pages deploy from it). Then ask one question live and check
+  `/api/health` shows prompt answer-v5 and spans exported.
+
 ## Open items
 1. **Langfuse keys on Render**: set and working (2026-10-19). The span counter on `/api/health` read 0 because
    the app was built twice; fixed on `claude/gracious-gates-x2zfot`, live once merged to `main`. Still the owner's:
@@ -94,4 +101,4 @@ Branch `ccr-fe4defc0-ysiv1i`. Read D-017 to D-020 first.
 - Grids and test sets committed before any number; deviations recorded as amendments before the data they
   affect (see grid retrieval-v2, amendment 1).
 - Every paid call goes through `econ.evalr.llmcall` or `econ.evalr.judge` (cached, metered, capped).
-- Next free decision number: **D-026**.
+- Next free decision number: **D-027**.
