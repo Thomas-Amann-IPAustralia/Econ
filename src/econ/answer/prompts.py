@@ -10,11 +10,23 @@ import hashlib
 import json
 from functools import lru_cache
 
+from pydantic import BaseModel
+
 from econ import config
-from econ.answer.schema import Answer, Grades, Plan, schema_hash
+from econ.answer.schema import Answer, AnswerV3, Grades, Plan, schema_hash
 
 PROMPTS = config.ROOT / "prompts"
-SCHEMAS = {"answer": Answer, "filter": Grades, "plan": Plan}
+SCHEMAS = {"answer": Answer, "answer3": AnswerV3, "filter": Grades, "plan": Plan}
+
+
+def schema_kind(name: str) -> str:
+    """The schema a prompt is written for: its kind, except that answer prompts from v3 on add follow-ups."""
+    kind, version = name.rsplit("-v", 1)
+    return "answer3" if kind == "answer" and int(version) >= 3 else kind
+
+
+def schema_for(name: str) -> type[BaseModel]:
+    return SCHEMAS[schema_kind(name)]
 
 
 def _sha(text: str) -> str:
@@ -25,7 +37,7 @@ def current_lock() -> dict:
     lock = {}
     for p in sorted(PROMPTS.glob("*-v*.md")):
         name = p.stem
-        kind = name.rsplit("-v", 1)[0]
+        kind = schema_kind(name)
         lock[name] = {
             "sha256": _sha(p.read_text(encoding="utf-8")),
             "schema": kind,

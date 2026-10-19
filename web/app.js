@@ -180,6 +180,13 @@ async function ask(question, context) {
       throw new Error(msg);
     }
     for await (const ev of sse(resp)) {
+      if (ev.event === "draft") {  // the prose while it is written (D-024): shown, not yet checked
+        if (turn.draft?.attempt !== ev.attempt) turn.draft = { attempt: ev.attempt, text: "" };
+        if (ev.withheld) turn.draft.withheld = true;
+        else turn.draft.text += ev.text;
+        drawSoon(turn);
+        continue;
+      }
       ev._t = (performance.now() - turn.t0) / 1000;  // when it arrived, for the activity log
       if (ev.event === "check") turn.checks.push(ev);
       if (ev.event === "answer") turn.events.answers = [...(turn.events.answers || []), ev];
@@ -196,10 +203,21 @@ async function ask(question, context) {
   }
 }
 
+// Drafts arrive many times a second: draw at most once a frame, and leave the evidence trail alone.
+function drawSoon(t) {
+  if (t.drawing) return;
+  t.drawing = true;
+  requestAnimationFrame(() => { t.drawing = false; renderBot(t); });
+}
+
+// The draft being written, unless the answer it will become (or a later one) has arrived.
+const liveDraft = (t) => (t.draft && !t.events.done && !(t.events.answer && t.events.answer.attempt >= t.draft.attempt) ? t.draft : null);
+
 function progressText(t) {
   const e = t.events;
   if (e.error && !e.answer) return null;
   if (e.done) return null;
+  if (liveDraft(t)) return "Writing the answer… the quotes are checked when it is finished.";
   if (e.answer) return "Checking the quotes…";
   if (e.retrieval) {
     if (e.meta?.mode !== "answer") return "Collecting passages…";
@@ -214,12 +232,14 @@ function progressText(t) {
 }
 
 // Markdown-lite: escape first, then paragraphs, lists, bold, italics; [n] markers become buttons.
-function renderMarkdown(md, claims) {
+function renderMarkdown(md, claims, draft = false) {
   const failed = new Set((claims || []).filter((c) => !c.verified).map((c) => c.n));
   const inline = (s) => esc(s)
     .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
     .replace(/(^|[^*])\*([^*]+)\*/g, "$1<em>$2</em>")
-    .replace(/\[(\d{1,3})\]/g, (_, n) => `<button class="cite${failed.has(+n) ? " failed" : ""}" data-claim="${n}" title="Claim ${n}${failed.has(+n) ? ": failed the check" : ""}">${n}</button>`);
+    .replace(/\[(\d{1,3})\]/g, (_, n) => draft
+      ? `<span class="cite pending" title="Claim ${n}: not yet checked">${n}</span>`
+      : `<button class="cite${failed.has(+n) ? " failed" : ""}" data-claim="${n}" title="Claim ${n}${failed.has(+n) ? ": failed the check" : ""}">${n}</button>`);
   const out = [];
   let list = null;
   for (const raw of md.split("\n")) {
@@ -260,8 +280,18 @@ function renderBot(t) {
   } else if (meta?.mode === "evidence_only" && e.retrieval) {
     badges.append(h("span", { class: "badge info" }, "Evidence only"));
   }
+  const draft = liveDraft(t);
+  if (draft) {
+    badges.replaceChildren(h("span", { class: "badge info" }, draft.withheld ? "Draft hidden: it failed a text check" : "Draft · not yet checked"));
+  }
   if (badges.childNodes.length) el.append(badges);
-  if (e.answer) {
+  if (draft) {
+    if (!draft.withheld) {
+      const body = h("div", { class: "draft" });
+      body.innerHTML = renderMarkdown(draft.text, [], true);
+      el.append(body);
+    }
+  } else if (e.answer) {
     const body = h("div");
     body.innerHTML = renderMarkdown(e.answer.answer, check?.claims);
     el.append(body);
@@ -275,6 +305,15 @@ function renderBot(t) {
   if (e.done) {
     const cost = e.done.cost_usd ? ` · US$${e.done.cost_usd.toFixed(4)}` : "";
     el.append(h("div", { class: "gaps" }, `${e.done.seconds}s${cost} · ${window.matchMedia("(max-width: 860px)").matches ? "tap to see the evidence trail" : "select to see the evidence trail"}`));
+    // Suggested next questions (answer-v3 onwards, D-024): one select asks it, in this conversation.
+    const next = e.answer?.follow_ups || [];
+    if (next.length) {
+      el.append(h("div", { class: "followups" }, h("span", { class: "muted" }, "You could ask next:"),
+        ...next.map((q) => h("button", { class: "starter followup", type: "button", onclick: (ev) => {
+          ev.stopPropagation();
+          if (!$("#send").disabled) ask(q, "");
+        } }, q))));
+    }
   }
   el.querySelectorAll(".cite").forEach((b) => b.addEventListener("click", (ev) => {
     ev.stopPropagation();

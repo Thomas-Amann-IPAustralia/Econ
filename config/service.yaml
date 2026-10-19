@@ -48,6 +48,7 @@ llm:
 
 answer:
   prompt: answer-v1
+  stream_drafts: true                # show the prose while it is written, marked not yet checked (D-024)
   plan_prompt: plan-v2               # D-013
   max_queries: 4
   plan_keeps_question: true          # search the standalone question as well as the plan's queries (D-013)

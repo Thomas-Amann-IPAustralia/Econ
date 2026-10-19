@@ -231,6 +231,9 @@ class AnswerCfg(Strict):
     # Search the standalone question as well as the plan's queries (D-013), so a plan that misses can't
     # take the question's own words out of the search.
     plan_keeps_question: bool = False
+    # Stream the answer's prose to the reader as it is written (D-024), marked as not yet checked; the checked
+    # answer replaces it. Providers that can't stream send none.
+    stream_drafts: bool = False
     min_quote_words: int = 5
     quote_claim_ratio: float = 0.5
     max_quote_words: int = 80

@@ -167,7 +167,7 @@ def check(
     if ans.coverage != "not_in_kb" and not ans.claims:
         errors.append(f"coverage is {ans.coverage}, but the answer makes no claims")
 
-    output = " ".join([ans.answer, *(c.text for c in ans.claims), *ans.gaps])
+    output = " ".join([ans.answer, *(c.text for c in ans.claims), *ans.gaps, *getattr(ans, "follow_ups", [])])
     for f in textcheck.high(textcheck.scan(output)):
         errors.append(f"the output failed a text check ({f.rule})")
     return Result(passed=not errors, errors=errors, claims=claims_out)

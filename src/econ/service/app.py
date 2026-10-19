@@ -235,8 +235,9 @@ def create_app() -> FastAPI:
     def ask(body: AskIn, request: Request, stream: bool = True):
         req = validate(body, request)
         svc = services()
+        # Drafts (D-024) are streamed to the reader but not recorded: the answer event holds the final prose.
         if not stream:
-            events = list(pipeline.run(req, svc))
+            events = [e for e in pipeline.run(req, svc) if e["event"] != "draft"]
             record(req, events)
             return JSONResponse({"events": events})
 
@@ -244,7 +245,8 @@ def create_app() -> FastAPI:
             events = []
             try:
                 for e in pipeline.run(req, svc):
-                    events.append(e)
+                    if e["event"] != "draft":
+                        events.append(e)
                     yield f"event: {e['event']}\ndata: {json.dumps(e, ensure_ascii=False, default=str)}\n\n"
             except Exception as e:  # noqa: BLE001 - the client gets a final error event, never a hang
                 err = {"event": "error", "stage": "service", "message": f"{type(e).__name__}"}

@@ -994,3 +994,74 @@ is unchanged. Records updated.
 
 **Spend:** Gemini US$0.096 (in the ledger; D-022's grant: US$0.36 of US$2 used). OpenAI US$0.027 (the
 Render smoke test, outside the ledger).
+
+## D-024 — Slow answers: the prose streamed while it is written; answer-v3 built for the owner's decision (the owner's request; Claude, 2026-10-19)
+
+**Request (the owner, 2026-10-19).** "The chatbot appears to be VERY slow. Can you please check on the system
+logs in Langfuse and resolve whatever issue it might be having? Additionally, the answers do seem very
+constrained and aren't as helpful as I think they could be. I'm wanting to essentially have a conversation
+with these documents so it should feel pretty fluid and natural. The documents are very hard to parse for
+non-experts."
+
+**Langfuse.** The Langfuse key this session can use opens a different project (`data-expert-agent`, which
+holds another application's traces, the latest on 2026-10-06); it has no `econ.*` traces. Render's keys point
+elsewhere. `/api/health` on Render (build e62be9e, started 11:26 UTC) showed tracing `ok` with 0 spans
+exported, so no question had been asked since that restart. The diagnosis below uses the timings the
+service records in every `done` event (`eval/runs/oos/*.events.jsonl`, `eval/runs/answers/answers-v2.C.jsonl`)
+and one free call to Render's search.
+
+**Where the time goes** (a substantive question, gpt-6.1-sol at medium effort):
+| Step | Time | Source |
+|---|---|---|
+| Plan (gpt-6-luna) | 1.2-2.1 s | oos events |
+| Embed and search | 0.1-0.5 s (Render: 0.48 s embed, 0.06 s search) | oos events; a free `/api/search` |
+| Relevance filter (3 parallel gpt-6-luna calls) | 3.9-10.0 s live, 4.4 s median measured | D-020 smoke test; D-018 |
+| Answer (gpt-6.1-sol) | median 19.6 s, p90 29.7 s, max 62.5 s over 60 answers | answers-v2.C |
+| Check | milliseconds | |
+| **Total, warm** | about 25-40 s (the live smoke test: 39.5 s) | D-023 |
+| Cold start (Render free plan sleeps after 15 idle minutes; 0.1 CPU) | about a minute more | render.yaml, the UI's wake message |
+
+- The answer call dominates. It writes about 1,100 output tokens (median), of which only about 200 are
+  reasoning: the time is the writing of the prose plus the claims' verbatim quotes, at roughly 45 tokens a
+  second. Lower effort would save little; the reader simply waits for the whole JSON before seeing a word.
+- `keep-warm.yml` has been **skipped on all four of its runs**: the repository variable `KEEP_WARM` was
+  never set, so staff meet Render's cold start after every idle quarter-hour. GitHub ran it only four times
+  in about nine hours, so even when on it reduces cold starts rather than removing them.
+
+**Built.**
+- **Streamed drafts.** With `answer.stream_drafts: true` (on), the OpenAI adapter streams the answer call
+  (`stream: true`, Responses API server-sent events); the pipeline runs it in a worker thread and decodes the
+  `answer` field of the partial JSON (`pipeline.ProseReader`, `partial_string`), sending `draft` events with
+  the prose so far while the model writes. Every draft piece is sent only if the prose so far passes the text
+  checks; if not, one `withheld` draft says so and none follow for that attempt. Drafts are marked "not yet
+  checked" in the UI, their markers are not clickable, and the checked `answer` replaces them; they are not
+  recorded in Render's log (the answer event holds the final prose). A stream is retried once on a transient
+  failure only before any text has been passed on. Gemini does not stream (no drafts; unchanged).
+  Expected effect: the first words of an answer appear about 6-12 s after the question (plan, search,
+  filter, and the answer's first tokens) instead of 25-40 s; the total time is unchanged.
+- **answer-v3** (`prompts/answer-v3.md`, locked with a new schema `answer3` = answer + `follow_ups`), for the
+  owner's decision, **not adopted** (`answer.prompt` stays `answer-v1`): written for non-specialists and for
+  conversation. Same rules for facts (only from the evidence, every claim quoted and checked), with three
+  changes: (1) it may explain general terms and methods in everyday words without a marker, adding no facts,
+  figures, names or dates; (2) it may draw cited findings together as a reading of the evidence, without
+  recommending policy the publications don't discuss; (3) it leads with a plain answer, matches length to the
+  question, spells out abbreviations, builds on earlier turns, and offers two or three `follow_ups`, which
+  the UI shows as buttons that ask them in the same conversation. Follow-ups pass the text checks.
+  Not measured: it needs paid answers to compare with answer-v1 (the owner's permission first, D-021).
+  The relaxation in (1) is the one place the answer may say something not quoted from a passage; it is
+  limited to explanations of general terms and methods, and it is for the owner to accept.
+- Tests: 121 pass (7 new: the streamed call, its retry rule, an incomplete stream's usage, drafts that add
+  up to the answer, no drafts when off, a withheld draft, answer-v3's follow-ups and their text check), and
+  the UI was checked in a headless browser with a canned event stream (draft state, then the checked answer
+  with follow-up buttons).
+
+**For the owner.**
+1. Set the repository variable `KEEP_WARM` to `true` (GitHub > Settings > Secrets and variables > Actions >
+   Variables), so the server is woken in Canberra business hours. For no cold starts at all, Render's
+   paid Starter instance (always on, more CPU) is the reliable fix; it costs money, so it is the owner's call.
+2. Put this session's Langfuse project and Render's in agreement (or give Claude a key to the Econ project)
+   so traces can be read from here.
+3. Decide on answer-v3, preferably after a small paid comparison with answer-v1 (about US$0.30 for six
+   questions on both prompts).
+
+**Spend:** none (one free call to Render's `/api/search`).

@@ -114,13 +114,16 @@ decision log) and the latest `docs/handover-*.md` before acting.
   stemmer corrupted stems under concurrency, D-013).
 
 ## The answer (built; tested live in D-011, D-014, D-015)
-- Prompts `prompts/answer-v1.md` (in use; `answer-v2.md` was not adopted, D-021),
+- Prompts `prompts/answer-v1.md` (in use; `answer-v2.md` was not adopted, D-021; `answer-v3.md`, plainer and
+  conversational with `follow_ups`, built for the owner's decision, D-024),
   `prompts/plan-v2.md` (in use since D-013) and `prompts/filter-v1.md` (in use since D-020), locked with
   their schemas in `prompts/versions.lock`. A change is a new version (`econ lock-prompts` after adding the
   file). Eval-only prompts live in `prompts/eval/`.
 - The answer: `coverage` (complete | partial | not_in_kb), prose with claim markers, `claims` with
   verbatim quotes of numbered evidence, `gaps`. The check (`econ.answer.check`) verifies every quote
   against the passage it cites, the markers, the coverage and the text checks; one retry, then flagged.
+- Drafts (D-024): the answer's prose is streamed as `draft` events while it is written (OpenAI only), each
+  piece text-checked, shown as not yet checked and replaced by the checked answer; drafts are not logged.
 - Providers: OpenAI (`gpt-6.1-sol` answers, adopted by the owner without a comparison, D-021; `gpt-6-luna`
   plans and filters), with Gemini (`gemini-3.8-flash`, `gemini-3.5-flash-lite`) as the fallback if no OpenAI
   key is set. Output limits include

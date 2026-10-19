@@ -212,3 +212,12 @@ US$0.096 Gemini. The served search's judged ndcg@10 over 178 needs: 0.6933 to 0.
 repair), so the repair's apparent loss was unjudged passages. Grid v2's choice and gain unchanged (+0.086 on
 test); depth figures within 0.01. The relevance filter's measurement needs new ratings (about US$0.15-0.20
 OpenAI), not run.
+
+## 2026-10-19 — Slow answers and constrained answers (D-024)
+- Langfuse from this session opens another project (no `econ.*` traces); diagnosed from the service's own
+  timings instead. Answer call median 19.6 s (p90 29.7 s) for about 1,100 output tokens; filter 4-10 s;
+  plan 1-2 s; search under 0.6 s. `keep-warm.yml` skipped on every run (`KEEP_WARM` unset), so cold starts
+  after 15 idle minutes add about a minute.
+- Built: the answer's prose streamed as `draft` events while it is written (text-checked, marked unchecked,
+  replaced by the checked answer; not logged); answer-v3 with plain-language explanations, conversation and
+  follow-up buttons, locked and tested, not adopted (the owner's call). 121 tests pass; UI checked headless.

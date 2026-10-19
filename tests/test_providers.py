@@ -183,3 +183,104 @@ def test_a_second_transient_failure_raises_and_a_client_error_is_not_retried(mon
     with pytest.raises(ProviderError, match="400"):
         GeminiModel(GEMINI, "k", 30).generate_json(model="gemini-3.8-flash", **ARGS)
     assert seq.calls == 1
+
+
+# --- streaming (D-024) ------------------------------------------------------------------------------
+
+
+def sse(*events):
+    lines = []
+    for e in events:
+        lines += [f"event: {e['type']}", f"data: {json.dumps(e)}", ""]
+    return lines
+
+
+class FakeStream:
+    """httpx.stream stand-in: each call takes the next (status, lines, fail_after) in turn."""
+
+    def __init__(self, *replies):
+        self.replies, self.calls = list(replies), []
+
+    def __call__(self, method, url, json=None, timeout=None, headers=None):
+        self.calls.append({"url": url, "json": json, "headers": headers})
+        status, lines, fail_after = self.replies.pop(0)
+        outer = self
+
+        class Resp:
+            status_code = status
+            text = "upstream failed"
+
+            def read(self):
+                return b""
+
+            def iter_lines(self):
+                for i, line in enumerate(lines):
+                    if fail_after is not None and i == fail_after:
+                        raise httpx.ReadError("dropped")
+                    yield line
+
+            def __enter__(self):
+                return self
+
+            def __exit__(self, *a):
+                return False
+
+        outer.last = Resp()
+        return outer.last
+
+
+DONE = {
+    "type": "response.completed",
+    "response": {
+        "id": "resp_2",
+        "status": "completed",
+        "output": [{"type": "message", "content": [{"type": "output_text", "text": '{"a": 1}'}]}],
+        "usage": {"input_tokens": 10, "output_tokens": 5},
+    },
+}
+STREAM = sse(
+    {"type": "response.created"},
+    {"type": "response.output_text.delta", "delta": '{"a"'},
+    {"type": "response.output_text.delta", "delta": ": 1}"},
+    DONE,
+)
+
+
+def test_a_streamed_call_passes_the_text_on_and_returns_the_same_reply(monkeypatch):
+    fake = FakeStream((200, STREAM, None))
+    monkeypatch.setattr(httpx, "stream", fake)
+    got = []
+    rep = OpenAIModel(OPENAI, "k", 30).generate_json(model="gpt-6.1-sol", on_text=got.append, **ARGS)
+    assert got == ['{"a"', ": 1}"] and rep.data == {"a": 1} and rep.meta["response_id"] == "resp_2"
+    sent = fake.calls[0]
+    assert sent["json"]["stream"] is True and sent["json"]["store"] is False
+    assert set(sent["headers"]) == {"Authorization"}
+
+
+def test_a_stream_is_retried_only_before_any_text(monkeypatch):
+    monkeypatch.setattr(providers, "RETRY_WAIT", 0)
+    fake = FakeStream((502, [], None), (200, STREAM, None))
+    monkeypatch.setattr(httpx, "stream", fake)
+    rep = OpenAIModel(OPENAI, "k", 30).generate_json(model="gpt-6.1-sol", on_text=lambda s: None, **ARGS)
+    assert rep.data == {"a": 1} and len(fake.calls) == 2
+    # Dropped after text was passed on: a retry would repeat it, so the call fails instead.
+    fake = FakeStream((200, STREAM, 7), (200, STREAM, None))
+    monkeypatch.setattr(httpx, "stream", fake)
+    with pytest.raises(ProviderError, match="ReadError"):
+        OpenAIModel(OPENAI, "k", 30).generate_json(model="gpt-6.1-sol", on_text=lambda s: None, **ARGS)
+    assert len(fake.calls) == 1
+
+
+def test_a_stream_that_ends_incomplete_carries_its_usage(monkeypatch):
+    end = {
+        "type": "response.incomplete",
+        "response": {
+            "status": "incomplete",
+            "incomplete_details": {"reason": "max_output_tokens"},
+            "usage": {"input_tokens": 100, "output_tokens": 100},
+        },
+    }
+    monkeypatch.setattr(httpx, "stream", FakeStream((200, sse(end), None)))
+    with pytest.raises(ProviderError, match="incomplete") as e:
+        OpenAIModel(OPENAI, "k", 30).generate_json(model="gpt-6.1-sol", on_text=lambda s: None, **ARGS)
+    assert e.value.usage.output == 100
