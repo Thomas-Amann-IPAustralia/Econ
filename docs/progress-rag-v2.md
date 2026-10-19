@@ -205,3 +205,10 @@ still needs the owner's permission. Checked live: Pages (with PDFs), Render on `
   Langfuse, the counter stayed at 0). Fixed: the app is built once (a test covers it); under `econ serve` the
   counter now reads 2 exported about 5 s after a question. Test traces deleted from the session's Langfuse project.
 - Deploys with the next merge to `main`; then `/api/health` should show `exported` above 0 after a question.
+
+## 2026-10-19 — The judging top-up after the OCR repair (D-023)
+191 unjudged passages in the fully judged contexts (167 from the two scanned reports) graded by the same judge,
+US$0.096 Gemini. The served search's judged ndcg@10 over 178 needs: 0.6933 to 0.7016 (0.6982 before the
+repair), so the repair's apparent loss was unjudged passages. Grid v2's choice and gain unchanged (+0.086 on
+test); depth figures within 0.01. The relevance filter's measurement needs new ratings (about US$0.15-0.20
+OpenAI), not run.

@@ -950,3 +950,47 @@ unjudged (counted as 0); a judging top-up of those (a few cents) would separate 
 
 **Spend:** Gemini US$0.264 (re-OCR 0.019, re-judging 0.245); OpenAI US$0.057 (notes 0.004 in the ledger; the
 Render smoke test 0.029 and the tracing check 0.024 outside it).
+
+## D-023 — The judging top-up after the OCR repair, and the Langfuse counter fix (the owner's request; Claude, 2026-10-19)
+
+**Request (the owner, 2026-10-19).** "Please check the Langfuse keys are working and that the system is
+functioning as expected", then "You may re-grade the scores relevant to the OCR repair."
+
+**The Langfuse keys.** Set on Render and working: one live question (US$0.027, outside the ledger) passed
+the check, and its trace was sent. `/api/health` showed 0 spans exported because uvicorn reads
+`econ.service.app:app` twice and the module built an app on each read (two indexes and two tracers; Langfuse
+keeps one client per key, so the served tracer's counter was never used). The app is now built once.
+
+**The top-up.** D-022's re-grade covered the changed chunks already judged; the rebuilt index also surfaced
+passages no one had judged, counted as 0. `econ judge-topup --scope reocr` (new; dry run by default) grades
+the unjudged passages in every context a reported number was fully judged on: grid v2's final (baseline and
+choice to depth 20, test needs), grid v3's variants without a reranker (depth 10, all needs), the depth grid
+(the adopted ranking to 60, test needs) and the served search (depth 10, all needs). 191 passages over 88
+needs, by the same judge, prompt and effort (gemini-3.8-flash, judge-v1, low; one request at a time), marked
+`source: reocr-topup`. 167 were from the 2018 and 2021 reports (41 graded relevant), 24 from others (1).
+The final stage's robustness re-check needed reranker scores for the repaired chunks: scored locally and free
+(`grid2.score_missing`, appended to `eval/cache/rerank/`).
+
+**Results** (before: the reports as of D-022, judged before the top-up).
+| Measure | Before | After |
+|---|---|---|
+| Served search, judged ndcg@10, 178 needs (`econ verify-search`) | 0.6933 (0.6982 before the repair) | **0.7016** |
+| Grid v2 final, ndcg@10, test: baseline / choice / difference | 0.597 / 0.682 / +0.085 | 0.592 / 0.678 / +0.086 [+0.049, +0.123] |
+| Grid v2 final, the stage-1 rule re-run on all judgments | the choice | the choice (dev 0.727) |
+| Depth: exploratory evidence reached at 20 / 40 / 60 | 0.491 / 0.682 / 0.760 | 0.484 / 0.674 / 0.754 |
+| Depth: all test needs at 20 / 40 / 60 | 0.667 / 0.777 / 0.818 | 0.665 / 0.777 / 0.818 |
+
+- The repair's apparent loss (0.6982 to 0.6933) came from unjudged passages; judged, the repaired index scores
+  slightly above the old one. The two scanned reports now hold relevant evidence the old text hid.
+- The final report's recall@20 (0.715 for the choice in D-013, now 0.665) mostly reflects D-017's judging of
+  ranks 21-60 since that report was written, which raised every need's count of known relevant passages.
+- Not re-measured: the relevance filter (D-018). Its ratings are cached for the old 60-passage contexts; 189
+  calls on 76 of the 92 test needs have changed (the rebuilt index reorders the 60), so a re-measure is about
+  US$0.15-0.20 of OpenAI (gpt-6-luna, flex, plus the latency probe). Until then `verify-search` replays the
+  old ratings (relevant evidence reached 0.742, from 0.762: newly relevant passages the old ratings never saw).
+
+**Decision.** No change to the service: the adopted setting stands and its measured gain over the baseline
+is unchanged. Records updated.
+
+**Spend:** Gemini US$0.096 (in the ledger; D-022's grant: US$0.36 of US$2 used). OpenAI US$0.027 (the
+Render smoke test, outside the ledger).

@@ -1,0 +1,88 @@
+{
+  "argv": [
+    "eval-retrieval-v2",
+    "--stage",
+    "final"
+  ],
+  "command": "eval-retrieval-v2",
+  "config_hash": "3cba165ec8c6252c",
+  "counts": {
+    "needs": 178
+  },
+  "error": null,
+  "git": {
+    "commit": "5259720fe87c9d94860d849df35739ae3af1b738",
+    "dirty": true,
+    "dirty_paths": [
+      "eval/cache/rerank/ettin-17m.text.bf16.jsonl",
+      "eval/cache/rerank/ettin-32m.text.bf16.jsonl",
+      "eval/cache/rerank/ettin-68m.text.bf16.jsonl",
+      "eval/cache/rerank/minilm-l6.text.bf16.jsonl",
+      "eval/judgments/judged-v1.jsonl",
+      "eval/spend/ledger.jsonl",
+      "src/econ/cli.py",
+      "src/econ/evalr/grid2.py",
+      "src/econ/evalr/judge.py",
+      "eval/cache/llm/06/061f83b8c5bc939b55e9c5828185741b52ec6364efec28f28d919b39eb81b8c7.json",
+      "eval/cache/llm/06/064ff0f10b25e4779d9a21a2540121664eb817543987c1a8bcab941c202506c8.json",
+      "eval/cache/llm/08/08db465601dacdaf3c587baf2a1f79450ed4abf827fba03b13ef489dff7fd423.json",
+      "eval/cache/llm/0a/0a2cb3a8836ae662f46e32a3a1179e86247e239815af430fd90f3a1a382af1dd.json",
+      "eval/cache/llm/12/124ad1035021f6322518fac58440e6a800409c2aee80e12992b11179fb1d78f3.json",
+      "eval/cache/llm/17/179f529258baa8a51033e70b4c8894c66df4c73d8c127cf7db08fca03b5451e4.json",
+      "eval/cache/llm/18/183fe150dbfebcbe619f6adbe1553b2f05f1f261b6325d7860ab76c277b859a7.json",
+      "eval/cache/llm/18/188c6879dc6e2247b2ca70f159e2911314f4879279b8f02de582ebdfb523b73f.json",
+      "eval/cache/llm/1f/1f5a438c89e4cc98bdb07e758a4aeba56c9a8a872887ec52c874ced314aecb7c.json",
+      "eval/cache/llm/1f/1f987d99cb5f0156bf0f9806fabd71e2d8b6140585f08ab515f377e168a2595a.json",
+      "eval/cache/llm/20/200deb166faf627eecf0a03ccf08baee1381ff5f82ba0aa923fd116bd7409411.json"
+    ]
+  },
+  "git_at_end": {
+    "commit": "5259720fe87c9d94860d849df35739ae3af1b738",
+    "dirty": true,
+    "dirty_paths": [
+      "eval/cache/rerank/ettin-17m.text.bf16.jsonl",
+      "eval/cache/rerank/ettin-32m.text.bf16.jsonl",
+      "eval/cache/rerank/ettin-68m.text.bf16.jsonl",
+      "eval/cache/rerank/minilm-l6.text.bf16.jsonl",
+      "eval/judgments/judged-v1.jsonl",
+      "eval/spend/ledger.jsonl",
+      "src/econ/cli.py",
+      "src/econ/evalr/grid2.py",
+      "src/econ/evalr/judge.py",
+      "eval/cache/llm/06/061f83b8c5bc939b55e9c5828185741b52ec6364efec28f28d919b39eb81b8c7.json",
+      "eval/cache/llm/06/064ff0f10b25e4779d9a21a2540121664eb817543987c1a8bcab941c202506c8.json",
+      "eval/cache/llm/08/08db465601dacdaf3c587baf2a1f79450ed4abf827fba03b13ef489dff7fd423.json",
+      "eval/cache/llm/0a/0a2cb3a8836ae662f46e32a3a1179e86247e239815af430fd90f3a1a382af1dd.json",
+      "eval/cache/llm/12/124ad1035021f6322518fac58440e6a800409c2aee80e12992b11179fb1d78f3.json",
+      "eval/cache/llm/17/179f529258baa8a51033e70b4c8894c66df4c73d8c127cf7db08fca03b5451e4.json",
+      "eval/cache/llm/18/183fe150dbfebcbe619f6adbe1553b2f05f1f261b6325d7860ab76c277b859a7.json",
+      "eval/cache/llm/18/188c6879dc6e2247b2ca70f159e2911314f4879279b8f02de582ebdfb523b73f.json",
+      "eval/cache/llm/1f/1f5a438c89e4cc98bdb07e758a4aeba56c9a8a872887ec52c874ced314aecb7c.json",
+      "eval/cache/llm/1f/1f987d99cb5f0156bf0f9806fabd71e2d8b6140585f08ab515f377e168a2595a.json",
+      "eval/cache/llm/20/200deb166faf627eecf0a03ccf08baee1381ff5f82ba0aa923fd116bd7409411.json"
+    ]
+  },
+  "inputs": {},
+  "outputs": {
+    "reports/retrieval-v2-final.md": "82409f5f926e53b49ea39b05db5030bb435e87deb236cf8be07263270f7a3369"
+  },
+  "params": {
+    "judgments": "judged-v1",
+    "stage": "final"
+  },
+  "run_id": "20261019T081337Z",
+  "seconds": 247.6,
+  "status": "passed",
+  "upstream": {},
+  "versions": {
+    "docling": "2.140.0",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.0",
+    "pypdfium2": "5.14.0",
+    "python": "3.12.3",
+    "sentence-transformers": "6.1.0",
+    "tokenizers": "0.23.3",
+    "torch": "2.14.1+cpu"
+  },
+  "warnings": []
+}

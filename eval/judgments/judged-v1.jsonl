@@ -72,6 +72,8 @@
 {"chunk_id": "ipr-2016:0005", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp01-2", "source": "topup-depth"}
 {"chunk_id": "ipr-2016:0033", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp01-2", "source": "topup-depth"}
 {"chunk_id": "ipr-2018:0012", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp01-2", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0013", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp01-2", "source": "reocr-topup"}
+{"chunk_id": "ipr-2018:0041", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp01-2", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp01-2", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2020:0006", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp01-2", "source": "topup-depth"}
 {"chunk_id": "ipr-2021:0018", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp01-2", "source": "topup-depth"}
@@ -207,6 +209,7 @@
 {"chunk_id": "ipr-2017:0019", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp03-1", "source": "topup"}
 {"chunk_id": "ipr-2018:0013", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp03-1", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0019", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp03-1", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0020", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp03-1", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp03-1", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0003", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp03-1", "source": "pool"}
 {"chunk_id": "ipr-2019:0012", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp03-1", "source": "pool"}
@@ -543,7 +546,10 @@
 {"chunk_id": "ipr-2017:0025", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp04-2", "source": "topup-depth"}
 {"chunk_id": "ipr-2017:0027", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp04-2", "source": "pool"}
 {"chunk_id": "ipr-2017:0028", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp04-2", "source": "topup-depth"}
+{"chunk_id": "ipr-2018:0027", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp04-2", "source": "reocr-topup"}
+{"chunk_id": "ipr-2018:0029", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp04-2", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0038", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp04-2", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0039", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp04-2", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0045", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp04-2", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp04-2", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2020:0059", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp04-2", "source": "pool"}
@@ -598,6 +604,7 @@
 {"chunk_id": "ipr-2022:0074", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp04-3", "source": "pool"}
 {"chunk_id": "ipr-2024:0127", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp04-3", "source": "pool"}
 {"chunk_id": "ipr-2025:0036", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp04-3", "source": "pool"}
+{"chunk_id": "ipr-2026:0001", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp04-3", "source": "reocr-topup"}
 {"chunk_id": "ipr-2026:0044", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp04-3", "source": "pool"}
 {"chunk_id": "oce-ai-investment:0014", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp04-3", "source": "topup"}
 {"chunk_id": "oce-ai-investment:0015", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp04-3", "source": "pool"}
@@ -760,6 +767,7 @@
 {"chunk_id": "ipr-2016:0036", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp08-3", "source": "pool"}
 {"chunk_id": "ipr-2018:0021", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp08-3", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0043", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp08-3", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0044", "grade": 3, "judge": "gemini-3.8-flash", "need": "erp08-3", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp08-3", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0020", "grade": 3, "judge": "gemini-3.8-flash", "need": "erp08-3", "source": "pool"}
 {"chunk_id": "ipr-2019:0039", "grade": 3, "judge": "gemini-3.8-flash", "need": "erp08-3", "source": "pool"}
@@ -1393,6 +1401,7 @@
 {"chunk_id": "ipr-2015:0007", "grade": 2, "judge": "gemini-3.8-flash", "need": "erp14-3", "source": "topup"}
 {"chunk_id": "ipr-2016:0009", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp14-3", "source": "topup"}
 {"chunk_id": "ipr-2016:0033", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp14-3", "source": "pool"}
+{"chunk_id": "ipr-2018:0041", "grade": 2, "judge": "gemini-3.8-flash", "need": "erp14-3", "source": "reocr-topup"}
 {"chunk_id": "ipr-2021:0005", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp14-3", "source": "pool"}
 {"chunk_id": "ipr-2021:0018", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp14-3", "source": "pool"}
 {"chunk_id": "ipr-2024:0033", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp14-3", "source": "pool"}
@@ -1480,6 +1489,7 @@
 {"chunk_id": "erp15-patenting-firms:0077", "grade": 3, "judge": "gemini-3.8-flash", "need": "erp15-1", "source": "pool"}
 {"chunk_id": "ipr-2016:0022", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp15-1", "source": "pool"}
 {"chunk_id": "ipr-2018:0027", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-1", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0028", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-1", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0046", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-1", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-1", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2021:0005", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-1", "source": "topup"}
@@ -1628,6 +1638,7 @@
 {"chunk_id": "ipr-2016:0024", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-3", "source": "pool"}
 {"chunk_id": "ipr-2020:0050", "grade": 3, "judge": "gemini-3.8-flash", "need": "erp15-3", "source": "topup"}
 {"chunk_id": "ipr-2021:0006", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp15-3", "source": "pool"}
+{"chunk_id": "ipr-2021:0068", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-3", "source": "reocr-topup"}
 {"chunk_id": "ipr-2022:0076", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-3", "source": "pool"}
 {"chunk_id": "ipr-2022:0079", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-3", "source": "pool"}
 {"chunk_id": "ipr-2024:0007", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-3", "source": "pool"}
@@ -1661,6 +1672,7 @@
 {"chunk_id": "erp15-patenting-firms:0027", "grade": 3, "judge": "gemini-3.8-flash", "need": "erp15-4", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0076", "grade": 3, "judge": "gemini-3.8-flash", "need": "erp15-4", "source": "pool"}
 {"chunk_id": "erp16-cii-patent-trends:0061", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-4", "source": "pool"}
+{"chunk_id": "ipr-2015:0007", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-4", "source": "reocr-topup"}
 {"chunk_id": "ipr-2015:0011", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-4", "source": "topup"}
 {"chunk_id": "ipr-2015:0014", "grade": 2, "judge": "gemini-3.8-flash", "need": "erp15-4", "source": "pool"}
 {"chunk_id": "ipr-2015:0015", "grade": 1, "judge": "gemini-3.8-flash", "need": "erp15-4", "source": "pool"}
@@ -1681,6 +1693,7 @@
 {"chunk_id": "ipr-2018:0009", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-4", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0010", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-4", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0011", "grade": 3, "judge": "gemini-3.8-flash", "need": "erp15-4", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0012", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-4", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-4", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0006", "grade": 3, "judge": "gemini-3.8-flash", "need": "erp15-4", "source": "pool"}
 {"chunk_id": "ipr-2019:0007", "grade": 2, "judge": "gemini-3.8-flash", "need": "erp15-4", "source": "pool"}
@@ -1769,7 +1782,10 @@
 {"chunk_id": "ipr-2017:0041", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-5", "source": "pool"}
 {"chunk_id": "ipr-2017:0042", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-5", "source": "pool"}
 {"chunk_id": "ipr-2018:0028", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-5", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0029", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-5", "source": "reocr-topup"}
+{"chunk_id": "ipr-2018:0030", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-5", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0044", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-5", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0045", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-5", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-5", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0053", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-5", "source": "topup-depth"}
 {"chunk_id": "ipr-2020:0052", "grade": 0, "judge": "gemini-3.8-flash", "need": "erp15-5", "source": "topup-depth"}
@@ -2055,6 +2071,7 @@
 {"chunk_id": "ipr-2020:0052", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-compare-1", "source": "pool"}
 {"chunk_id": "ipr-2020:0054", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-compare-1", "source": "pool"}
 {"chunk_id": "ipr-2020:0056", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-compare-1", "source": "pool"}
+{"chunk_id": "ipr-2021:0021", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-compare-1", "source": "reocr-topup"}
 {"chunk_id": "ipr-2021:0059", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-compare-1", "source": "topup-depth"}
 {"chunk_id": "ipr-2022:0003", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-compare-1", "source": "pool"}
 {"chunk_id": "ipr-2022:0004", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-compare-1", "source": "topup-depth"}
@@ -2195,6 +2212,7 @@
 {"chunk_id": "ipr-2024:0029", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-compare-3", "source": "pool"}
 {"chunk_id": "ipr-2024:0030", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-compare-3", "source": "topup"}
 {"chunk_id": "ipr-2024:0032", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-compare-3", "source": "pool"}
+{"chunk_id": "ipr-2024:0047", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-compare-3", "source": "reocr-topup"}
 {"chunk_id": "ipr-2024:0122", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-compare-3", "source": "pool"}
 {"chunk_id": "ipr-2025:0011", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-compare-3", "source": "pool"}
 {"chunk_id": "ipr-2025:0012", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-compare-3", "source": "pool"}
@@ -2385,11 +2403,17 @@
 {"chunk_id": "ipr-2017:0028", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-compare-6", "source": "topup-depth"}
 {"chunk_id": "ipr-2017:0029", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-compare-6", "source": "topup"}
 {"chunk_id": "ipr-2018:0025", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-compare-6", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0026", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-compare-6", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0027", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-compare-6", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0028", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-compare-6", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0029", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-compare-6", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0030", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-compare-6", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0038", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-compare-6", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0039", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-compare-6", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0044", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-compare-6", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0045", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-compare-6", "source": "reocr-topup"}
+{"chunk_id": "ipr-2018:0046", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-compare-6", "source": "reocr-topup"}
+{"chunk_id": "ipr-2018:0047", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-compare-6", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-compare-6", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2022:0012", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-compare-6", "source": "topup-depth"}
 {"chunk_id": "ipr-2022:0021", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-compare-6", "source": "topup-depth"}
@@ -2423,8 +2447,11 @@
 {"chunk_id": "ipr-2017:0014", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-compare-7", "source": "pool"}
 {"chunk_id": "ipr-2018:0003", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-compare-7", "source": "pool"}
 {"chunk_id": "ipr-2018:0010", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-compare-7", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0011", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-compare-7", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0014", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-compare-7", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0015", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-compare-7", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0016", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-compare-7", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0017", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-compare-7", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-compare-7", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0006", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-compare-7", "source": "pool"}
 {"chunk_id": "ipr-2019:0007", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-compare-7", "source": "topup-depth"}
@@ -2883,6 +2910,7 @@
 {"chunk_id": "ipr-2020:0055", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-evidence-2", "source": "pool"}
 {"chunk_id": "ipr-2020:0056", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-evidence-2", "source": "pool"}
 {"chunk_id": "ipr-2020:0071", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-evidence-2", "source": "topup"}
+{"chunk_id": "ipr-2021:0068", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-evidence-2", "source": "reocr-topup"}
 {"chunk_id": "ipr-2021:0069", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-evidence-2", "source": "pool"}
 {"chunk_id": "ipr-2022:0006", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-evidence-2", "source": "topup-depth"}
 {"chunk_id": "ipr-2022:0076", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-evidence-2", "source": "topup-depth"}
@@ -2970,7 +2998,9 @@
 {"chunk_id": "ipr-2017:0043", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-evidence-4", "source": "topup"}
 {"chunk_id": "ipr-2018:0003", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-evidence-4", "source": "pool"}
 {"chunk_id": "ipr-2018:0025", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-evidence-4", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0026", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-evidence-4", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0037", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-evidence-4", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0038", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-evidence-4", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-evidence-4", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0047", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-evidence-4", "source": "pool"}
 {"chunk_id": "ipr-2020:0003", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-evidence-4", "source": "pool"}
@@ -3093,6 +3123,7 @@
 {"chunk_id": "ipr-2018:0029", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-evidence-6", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0038", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-evidence-6", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0044", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-evidence-6", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0045", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-evidence-6", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-evidence-6", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2024:0001", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-evidence-6", "source": "pool"}
 {"chunk_id": "ipr-2024:0003", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-evidence-6", "source": "pool"}
@@ -3130,9 +3161,13 @@
 {"chunk_id": "ipr-2017:0035", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "topup-v3"}
 {"chunk_id": "ipr-2018:0015", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0028", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0029", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0035", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0036", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0037", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0038", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0045", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0046", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0033", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "pool"}
 {"chunk_id": "ipr-2019:0034", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "topup"}
@@ -3146,6 +3181,7 @@
 {"chunk_id": "ipr-2020:0054", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "pool"}
 {"chunk_id": "ipr-2020:0056", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "pool"}
 {"chunk_id": "ipr-2020:0057", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "pool"}
+{"chunk_id": "ipr-2020:0058", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "reocr-topup"}
 {"chunk_id": "ipr-2020:0060", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "pool"}
 {"chunk_id": "ipr-2020:0071", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "topup-v3"}
 {"chunk_id": "ipr-2021:0000", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-methods-1", "source": "reocr-rejudge"}
@@ -3223,7 +3259,9 @@
 {"chunk_id": "ipr-2018:0035", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-methods-2", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0036", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-methods-2", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0037", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-methods-2", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0038", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-methods-2", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0039", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-methods-2", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0040", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-methods-2", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-methods-2", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0045", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-methods-2", "source": "pool"}
 {"chunk_id": "ipr-2019:0046", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-methods-2", "source": "pool"}
@@ -3253,6 +3291,7 @@
 {"chunk_id": "ipr-2024:0032", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-methods-2", "source": "pool"}
 {"chunk_id": "ipr-2024:0038", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-methods-2", "source": "pool"}
 {"chunk_id": "ipr-2024:0122", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-methods-2", "source": "pool"}
+{"chunk_id": "ipr-2024:0125", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-methods-2", "source": "reocr-topup"}
 {"chunk_id": "ipr-2025:0096", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-methods-2", "source": "topup-depth"}
 {"chunk_id": "ipr-2025:0102", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-methods-2", "source": "topup-depth"}
 {"chunk_id": "ipr-2026:0121", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-methods-2", "source": "topup-depth"}
@@ -3361,9 +3400,13 @@
 {"chunk_id": "ipr-2017:0042", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-methods-4", "source": "topup-depth"}
 {"chunk_id": "ipr-2018:0003", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-methods-4", "source": "topup-depth"}
 {"chunk_id": "ipr-2018:0018", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-methods-4", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0019", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-methods-4", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0035", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-methods-4", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0036", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-methods-4", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0037", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-methods-4", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0038", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-methods-4", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0039", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-methods-4", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0040", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-methods-4", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0045", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-methods-4", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-methods-4", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0033", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-methods-4", "source": "pool"}
@@ -3500,6 +3543,7 @@
 {"chunk_id": "ipr-2018:0004", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-policy-1", "source": "pool"}
 {"chunk_id": "ipr-2018:0037", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-1", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0041", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-1", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0042", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-policy-1", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-1", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0027", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-policy-1", "source": "pool"}
 {"chunk_id": "ipr-2019:0052", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-1", "source": "pool"}
@@ -3583,6 +3627,7 @@
 {"chunk_id": "ipr-2017:0017", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-3", "source": "topup"}
 {"chunk_id": "ipr-2017:0019", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-policy-3", "source": "topup-depth"}
 {"chunk_id": "ipr-2018:0019", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-3", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0020", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-3", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-3", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0018", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-3", "source": "topup"}
 {"chunk_id": "ipr-2019:0037", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-policy-3", "source": "pool"}
@@ -3678,6 +3723,7 @@
 {"chunk_id": "ipr-2017:0007", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-4", "source": "pool"}
 {"chunk_id": "ipr-2017:0009", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-4", "source": "topup"}
 {"chunk_id": "ipr-2017:0010", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-4", "source": "topup"}
+{"chunk_id": "ipr-2018:0005", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-4", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0009", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-4", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-4", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0005", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-4", "source": "pool"}
@@ -3759,9 +3805,12 @@
 {"chunk_id": "ipr-2015:0024", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-6", "source": "topup-depth"}
 {"chunk_id": "ipr-2015:0026", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-6", "source": "topup-depth"}
 {"chunk_id": "ipr-2016:0007", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-6", "source": "topup-depth"}
+{"chunk_id": "ipr-2018:0005", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-6", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0007", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-policy-6", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0012", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-6", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0013", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-policy-6", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0040", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-6", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0041", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-6", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-6", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2020:0006", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-6", "source": "topup-depth"}
 {"chunk_id": "ipr-2021:0014", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-6", "source": "topup-depth"}
@@ -3807,10 +3856,15 @@
 {"chunk_id": "ipr-2017:0028", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-policy-7", "source": "topup-depth"}
 {"chunk_id": "ipr-2018:0006", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-policy-7", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0011", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-policy-7", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0012", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-policy-7", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0014", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-7", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0015", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-policy-7", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0018", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-7", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0020", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-7", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0021", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-policy-7", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0042", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-policy-7", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0043", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-policy-7", "source": "reocr-topup"}
+{"chunk_id": "ipr-2018:0044", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-policy-7", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-7", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0012", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-policy-7", "source": "topup-depth"}
 {"chunk_id": "ipr-2019:0051", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-policy-7", "source": "topup-depth"}
@@ -3883,6 +3937,7 @@
 {"chunk_id": "ipr-2017:0033", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-8", "source": "pool"}
 {"chunk_id": "ipr-2018:0001", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-8", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0004", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-8", "source": "pool"}
+{"chunk_id": "ipr-2018:0038", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-8", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0039", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-8", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-8", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0002", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-policy-8", "source": "topup-depth"}
@@ -3996,11 +4051,15 @@
 {"chunk_id": "ipr-2018:0011", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-1", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0025", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-1", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0026", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-1", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0027", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-1", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0028", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-1", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0029", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-1", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0030", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-1", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0037", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-1", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0038", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-1", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0039", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-1", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0045", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-1", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0046", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-1", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-1", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0002", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-1", "source": "pool"}
 {"chunk_id": "ipr-2019:0003", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-strategy-1", "source": "pool"}
@@ -4028,6 +4087,7 @@
 {"chunk_id": "ipr-2021:0002", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-1", "source": "pool"}
 {"chunk_id": "ipr-2021:0017", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-1", "source": "pool"}
 {"chunk_id": "ipr-2021:0059", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-1", "source": "pool"}
+{"chunk_id": "ipr-2021:0068", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-1", "source": "reocr-topup"}
 {"chunk_id": "ipr-2022:0000", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-1", "source": "pool"}
 {"chunk_id": "ipr-2022:0003", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-1", "source": "pool"}
 {"chunk_id": "ipr-2022:0004", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-1", "source": "pool"}
@@ -4070,6 +4130,7 @@
 {"chunk_id": "ipr-2026:0008", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-1", "source": "pool"}
 {"chunk_id": "ipr-2026:0010", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-1", "source": "topup-depth"}
 {"chunk_id": "ipr-2026:0040", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-1", "source": "pool"}
+{"chunk_id": "ipr-2026:0062", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-strategy-1", "source": "reocr-topup"}
 {"chunk_id": "ipr-2026:0070", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-1", "source": "pool"}
 {"chunk_id": "oce-ai-investment:0039", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-1", "source": "pool"}
 {"chunk_id": "oce-ai-investment:0066", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-1", "source": "pool"}
@@ -4129,8 +4190,11 @@
 {"chunk_id": "ipr-2017:0036", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-strategy-2", "source": "pool"}
 {"chunk_id": "ipr-2017:0042", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-2", "source": "pool"}
 {"chunk_id": "ipr-2018:0002", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-2", "source": "pool"}
+{"chunk_id": "ipr-2018:0025", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-2", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0029", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-strategy-2", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0030", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-2", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0037", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-2", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0038", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-strategy-2", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-2", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0003", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-2", "source": "pool"}
 {"chunk_id": "ipr-2019:0044", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-strategy-2", "source": "topup"}
@@ -4201,6 +4265,8 @@
 {"chunk_id": "ipr-2018:0004", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-3", "source": "pool"}
 {"chunk_id": "ipr-2018:0028", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-3", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0029", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-3", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0030", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-strategy-3", "source": "reocr-topup"}
+{"chunk_id": "ipr-2018:0038", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-3", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-3", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0047", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-strategy-3", "source": "pool"}
 {"chunk_id": "ipr-2020:0013", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-strategy-3", "source": "topup-depth"}
@@ -4512,10 +4578,13 @@
 {"chunk_id": "ipr-2017:0013", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-10", "source": "pilot"}
 {"chunk_id": "ipr-2017:0015", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-10", "source": "topup-depth"}
 {"chunk_id": "ipr-2018:0013", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-10", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0014", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-10", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0016", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-10", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0017", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-10", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0018", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-10", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0019", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-10", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0037", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-10", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0038", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-synthesis-10", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-10", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0003", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-synthesis-10", "source": "pilot"}
 {"chunk_id": "ipr-2019:0016", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-10", "source": "pilot"}
@@ -4530,6 +4599,7 @@
 {"chunk_id": "ipr-2020:0016", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-10", "source": "pilot"}
 {"chunk_id": "ipr-2020:0018", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-10", "source": "pilot"}
 {"chunk_id": "ipr-2020:0023", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-10", "source": "topup-depth"}
+{"chunk_id": "ipr-2021:0000", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-10", "source": "reocr-topup"}
 {"chunk_id": "ipr-2021:0002", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-10", "source": "topup-depth"}
 {"chunk_id": "ipr-2021:0022", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-10", "source": "pilot"}
 {"chunk_id": "ipr-2021:0058", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-10", "source": "pilot"}
@@ -4556,6 +4626,7 @@
 {"chunk_id": "ipr-2024:0070", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-synthesis-10", "source": "topup-depth"}
 {"chunk_id": "ipr-2024:0071", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-10", "source": "pilot"}
 {"chunk_id": "ipr-2025:0001", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-10", "source": "pilot"}
+{"chunk_id": "ipr-2025:0048", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-10", "source": "reocr-topup"}
 {"chunk_id": "ipr-2025:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-10", "source": "pilot"}
 {"chunk_id": "ipr-2025:0050", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-10", "source": "pilot"}
 {"chunk_id": "ipr-2025:0054", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-10", "source": "pilot"}
@@ -4586,6 +4657,7 @@
 {"chunk_id": "ipr-2015:0019", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-11", "source": "topup-depth"}
 {"chunk_id": "ipr-2015:0023", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-11", "source": "pool"}
 {"chunk_id": "ipr-2016:0037", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-11", "source": "topup"}
+{"chunk_id": "ipr-2019:0055", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-11", "source": "reocr-topup"}
 {"chunk_id": "ipr-2020:0002", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-11", "source": "topup-depth"}
 {"chunk_id": "ipr-2020:0034", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-11", "source": "topup-depth"}
 {"chunk_id": "ipr-2021:0000", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-synthesis-11", "source": "reocr-rejudge"}
@@ -4655,7 +4727,10 @@
 {"chunk_id": "ipr-2018:0032", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-synthesis-12", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0033", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-synthesis-12", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0034", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-synthesis-12", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0035", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-synthesis-12", "source": "reocr-topup"}
+{"chunk_id": "ipr-2018:0038", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-synthesis-12", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0047", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-12", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0048", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-synthesis-12", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-12", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0012", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-12", "source": "pool"}
 {"chunk_id": "ipr-2019:0035", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-12", "source": "pool"}
@@ -4954,7 +5029,11 @@
 {"chunk_id": "erp16-cii-patent-trends:0087", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-6", "source": "topup-depth"}
 {"chunk_id": "ipr-2017:0037", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-6", "source": "pool"}
 {"chunk_id": "ipr-2018:0028", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-6", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0029", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-6", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0038", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-6", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0045", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-6", "source": "reocr-topup"}
+{"chunk_id": "ipr-2018:0046", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-6", "source": "reocr-topup"}
+{"chunk_id": "ipr-2018:0047", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-6", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-6", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0001", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-synthesis-6", "source": "pool"}
 {"chunk_id": "ipr-2019:0007", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-6", "source": "pool"}
@@ -5104,6 +5183,7 @@
 {"chunk_id": "erp16-cii-patent-trends:0123", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-8", "source": "topup-v3"}
 {"chunk_id": "ipr-2015:0024", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-8", "source": "pool"}
 {"chunk_id": "ipr-2015:0025", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-8", "source": "pool"}
+{"chunk_id": "ipr-2018:0010", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-8", "source": "reocr-topup"}
 {"chunk_id": "ipr-2019:0007", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-8", "source": "pool"}
 {"chunk_id": "ipr-2019:0048", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-8", "source": "topup-depth"}
 {"chunk_id": "ipr-2020:0006", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-8", "source": "topup"}
@@ -5197,6 +5277,7 @@
 {"chunk_id": "ipr-2018:0019", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-9", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0020", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-synthesis-9", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0021", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-synthesis-9", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0022", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-synthesis-9", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-9", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0018", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-9", "source": "pool"}
 {"chunk_id": "ipr-2019:0019", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-synthesis-9", "source": "topup-depth"}
@@ -5332,9 +5413,11 @@
 {"chunk_id": "erp16-cii-patent-trends:0101", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-11", "source": "topup-v3"}
 {"chunk_id": "erp16-cii-patent-trends:0103", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-11", "source": "topup"}
 {"chunk_id": "erp16-cii-patent-trends:0104", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-11", "source": "topup"}
+{"chunk_id": "erp16-cii-patent-trends:0105", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-11", "source": "reocr-topup"}
 {"chunk_id": "erp16-cii-patent-trends:0109", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-11", "source": "pool"}
 {"chunk_id": "erp16-cii-patent-trends:0113", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-11", "source": "pool"}
 {"chunk_id": "erp16-cii-patent-trends:0117", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-11", "source": "pool"}
+{"chunk_id": "ipr-2018:0010", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-11", "source": "reocr-topup"}
 {"chunk_id": "ipr-2019:0007", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-11", "source": "topup-depth"}
 {"chunk_id": "ipr-2020:0036", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-11", "source": "pool"}
 {"chunk_id": "ipr-2020:0038", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-11", "source": "pool"}
@@ -5536,7 +5619,9 @@
 {"chunk_id": "ipr-2018:0009", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-trend-3", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0010", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-3", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0011", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-trend-3", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0012", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-trend-3", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0014", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-3", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0015", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-3", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-3", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0005", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-3", "source": "topup-depth"}
 {"chunk_id": "ipr-2019:0006", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-trend-3", "source": "pool"}
@@ -5588,6 +5673,7 @@
 {"chunk_id": "ipr-2018:0009", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-trend-4", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0010", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-trend-4", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0011", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-4", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0012", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-4", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-4", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0005", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-4", "source": "topup"}
 {"chunk_id": "ipr-2019:0006", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-trend-4", "source": "pool"}
@@ -5606,6 +5692,7 @@
 {"chunk_id": "ipr-2021:0017", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-4", "source": "pool"}
 {"chunk_id": "ipr-2021:0028", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-4", "source": "pool"}
 {"chunk_id": "ipr-2021:0040", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-4", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2021:0046", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-trend-4", "source": "reocr-topup"}
 {"chunk_id": "ipr-2022:0008", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-trend-4", "source": "topup"}
 {"chunk_id": "ipr-2022:0011", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-trend-4", "source": "pool"}
 {"chunk_id": "ipr-2022:0012", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-trend-4", "source": "pool"}
@@ -5692,6 +5779,7 @@
 {"chunk_id": "ipr-2018:0021", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-6", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0022", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-trend-6", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0023", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-trend-6", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0024", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-trend-6", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-6", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0002", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-trend-6", "source": "topup-depth"}
 {"chunk_id": "ipr-2019:0022", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-trend-6", "source": "pool"}
@@ -5706,6 +5794,7 @@
 {"chunk_id": "ipr-2021:0045", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-trend-6", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2021:0046", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-trend-6", "source": "topup-depth"}
 {"chunk_id": "ipr-2021:0047", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-trend-6", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2021:0048", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-trend-6", "source": "reocr-topup"}
 {"chunk_id": "ipr-2021:0049", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-trend-6", "source": "topup-depth"}
 {"chunk_id": "ipr-2022:0003", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-trend-6", "source": "pool"}
 {"chunk_id": "ipr-2022:0054", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-trend-6", "source": "pool"}
@@ -5720,6 +5809,7 @@
 {"chunk_id": "ipr-2023:0064", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-6", "source": "pool"}
 {"chunk_id": "ipr-2023:0065", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-trend-6", "source": "topup-v3"}
 {"chunk_id": "ipr-2023:0066", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-trend-6", "source": "topup-depth"}
+{"chunk_id": "ipr-2023:0068", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-trend-6", "source": "reocr-topup"}
 {"chunk_id": "ipr-2023:0069", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-trend-6", "source": "pool"}
 {"chunk_id": "ipr-2023:0072", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-6", "source": "pool"}
 {"chunk_id": "ipr-2023:0074", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-trend-6", "source": "pool"}
@@ -5753,6 +5843,7 @@
 {"chunk_id": "ipr-2017:0017", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-trend-7", "source": "pool"}
 {"chunk_id": "ipr-2018:0018", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-7", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0020", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-trend-7", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0021", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-trend-7", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-7", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0002", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-trend-7", "source": "pool"}
 {"chunk_id": "ipr-2019:0009", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-7", "source": "topup"}
@@ -5803,6 +5894,7 @@
 {"chunk_id": "ipr-2018:0009", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-8", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0010", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-8", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0011", "grade": 1, "judge": "gemini-3.8-flash", "need": "explore-trend-8", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0012", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-trend-8", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-8", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0009", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-trend-8", "source": "pool"}
 {"chunk_id": "ipr-2019:0010", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-trend-8", "source": "pool"}
@@ -5838,6 +5930,7 @@
 {"chunk_id": "ipr-2017:0008", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-9", "source": "pilot"}
 {"chunk_id": "ipr-2018:0006", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-9", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0009", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-9", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0010", "grade": 2, "judge": "gemini-3.8-flash", "need": "explore-trend-9", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-9", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0007", "grade": 3, "judge": "gemini-3.8-flash", "need": "explore-trend-9", "source": "pilot"}
 {"chunk_id": "ipr-2019:0010", "grade": 0, "judge": "gemini-3.8-flash", "need": "explore-trend-9", "source": "pilot"}
@@ -5924,14 +6017,17 @@
 {"chunk_id": "ipr-2017:0041", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-1", "source": "pool"}
 {"chunk_id": "ipr-2018:0005", "grade": 3, "judge": "gemini-3.8-flash", "need": "ipr15-1", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0007", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr15-1", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0008", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-1", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0009", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-1", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0010", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-1", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0011", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-1", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-1", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0005", "grade": 3, "judge": "gemini-3.8-flash", "need": "ipr15-1", "source": "topup-depth"}
 {"chunk_id": "ipr-2019:0007", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-1", "source": "topup-depth"}
 {"chunk_id": "ipr-2020:0005", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-1", "source": "topup"}
 {"chunk_id": "ipr-2021:0005", "grade": 3, "judge": "gemini-3.8-flash", "need": "ipr15-1", "source": "pool"}
 {"chunk_id": "ipr-2022:0008", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-1", "source": "topup-depth"}
+{"chunk_id": "ipr-2022:0025", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-1", "source": "reocr-topup"}
 {"chunk_id": "ipr-2023:0011", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-1", "source": "pool"}
 {"chunk_id": "ipr-2023:0015", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-1", "source": "topup-depth"}
 {"chunk_id": "ipr-2023:0016", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-1", "source": "topup-depth"}
@@ -6054,7 +6150,9 @@
 {"chunk_id": "ipr-2017:0031", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-3", "source": "pool"}
 {"chunk_id": "ipr-2018:0001", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr15-3", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0003", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-3", "source": "pool"}
+{"chunk_id": "ipr-2018:0006", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-3", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0024", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-3", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0025", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-3", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-3", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0001", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-3", "source": "pool"}
 {"chunk_id": "ipr-2019:0002", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr15-3", "source": "pool"}
@@ -6131,7 +6229,9 @@
 {"chunk_id": "ipr-2018:0030", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-4", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0031", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-4", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0032", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-4", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0033", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-4", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0047", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-4", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0048", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-4", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-4", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0012", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr15-4", "source": "pool"}
 {"chunk_id": "ipr-2019:0014", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-4", "source": "pool"}
@@ -6197,9 +6297,12 @@
 {"chunk_id": "ipr-2017:0039", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-5", "source": "topup-depth"}
 {"chunk_id": "ipr-2018:0005", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-5", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0007", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-5", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0008", "grade": 3, "judge": "gemini-3.8-flash", "need": "ipr15-5", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0012", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-5", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0013", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-5", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0026", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-5", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0027", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr15-5", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0028", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-5", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0040", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-5", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0041", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr15-5", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-5", "source": "reocr-rejudge"}
@@ -6209,6 +6312,7 @@
 {"chunk_id": "ipr-2019:0011", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-5", "source": "topup-depth"}
 {"chunk_id": "ipr-2019:0022", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-5", "source": "topup-depth"}
 {"chunk_id": "ipr-2019:0051", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-5", "source": "topup-depth"}
+{"chunk_id": "ipr-2019:0057", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-5", "source": "reocr-topup"}
 {"chunk_id": "ipr-2020:0006", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-5", "source": "topup"}
 {"chunk_id": "ipr-2020:0013", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr15-5", "source": "pool"}
 {"chunk_id": "ipr-2020:0030", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr15-5", "source": "topup-depth"}
@@ -6265,6 +6369,7 @@
 {"chunk_id": "ipr-2018:0003", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-1", "source": "pilot"}
 {"chunk_id": "ipr-2018:0013", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-1", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0014", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr16-1", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0015", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-1", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0016", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-1", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0017", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr16-1", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0018", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-1", "source": "reocr-rejudge"}
@@ -6281,6 +6386,7 @@
 {"chunk_id": "ipr-2020:0039", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr16-1", "source": "pilot"}
 {"chunk_id": "ipr-2020:0040", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-1", "source": "pilot"}
 {"chunk_id": "ipr-2020:0049", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr16-1", "source": "pilot"}
+{"chunk_id": "ipr-2021:0021", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-1", "source": "reocr-topup"}
 {"chunk_id": "ipr-2021:0028", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-1", "source": "pilot"}
 {"chunk_id": "ipr-2021:0029", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-1", "source": "pilot"}
 {"chunk_id": "ipr-2022:0034", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-1", "source": "topup-depth"}
@@ -6331,8 +6437,12 @@
 {"chunk_id": "ipr-2017:0015", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr16-2", "source": "topup-depth"}
 {"chunk_id": "ipr-2017:0016", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr16-2", "source": "pool"}
 {"chunk_id": "ipr-2018:0014", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-2", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0015", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-2", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0016", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-2", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0017", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-2", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0018", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr16-2", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0019", "grade": 3, "judge": "gemini-3.8-flash", "need": "ipr16-2", "source": "reocr-topup"}
+{"chunk_id": "ipr-2018:0034", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-2", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-2", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0009", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-2", "source": "topup-depth"}
 {"chunk_id": "ipr-2019:0013", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-2", "source": "topup-depth"}
@@ -6420,9 +6530,12 @@
 {"chunk_id": "ipr-2018:0003", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-3", "source": "pool"}
 {"chunk_id": "ipr-2018:0006", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-3", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0009", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-3", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0010", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-3", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0011", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-3", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0014", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-3", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0015", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-3", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0020", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-3", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0021", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-3", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0041", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-3", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-3", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0002", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-3", "source": "pool"}
@@ -6452,6 +6565,7 @@
 {"chunk_id": "ipr-2021:0026", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr16-3", "source": "pool"}
 {"chunk_id": "ipr-2021:0027", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr16-3", "source": "topup-depth"}
 {"chunk_id": "ipr-2021:0035", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-3", "source": "pool"}
+{"chunk_id": "ipr-2021:0038", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-3", "source": "reocr-topup"}
 {"chunk_id": "ipr-2022:0000", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-3", "source": "pool"}
 {"chunk_id": "ipr-2022:0003", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-3", "source": "topup"}
 {"chunk_id": "ipr-2022:0004", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-3", "source": "topup"}
@@ -6498,6 +6612,7 @@
 {"chunk_id": "ipr-2017:0037", "grade": 2, "judge": "gemini-3.8-flash", "need": "ipr16-4", "source": "pool"}
 {"chunk_id": "ipr-2018:0035", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-4", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0038", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-4", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0039", "grade": 2, "judge": "gemini-3.8-flash", "need": "ipr16-4", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0048", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-4", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0049", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr16-4", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0045", "grade": 2, "judge": "gemini-3.8-flash", "need": "ipr16-4", "source": "pool"}
@@ -6529,6 +6644,7 @@
 {"chunk_id": "ipr-2018:0021", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-5", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0022", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-5", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0023", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr16-5", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0024", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-5", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-5", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0022", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-5", "source": "pool"}
 {"chunk_id": "ipr-2019:0023", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr16-5", "source": "topup"}
@@ -6540,6 +6656,7 @@
 {"chunk_id": "ipr-2021:0045", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-5", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2021:0046", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-5", "source": "pool"}
 {"chunk_id": "ipr-2021:0047", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-5", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2021:0048", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-5", "source": "reocr-topup"}
 {"chunk_id": "ipr-2021:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-5", "source": "topup-depth"}
 {"chunk_id": "ipr-2022:0054", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-5", "source": "topup"}
 {"chunk_id": "ipr-2022:0055", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr16-5", "source": "topup-depth"}
@@ -6597,6 +6714,7 @@
 {"chunk_id": "ipr-2018:0009", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr17-1", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0010", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-1", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0011", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr17-1", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0012", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr17-1", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0041", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-1", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-1", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0009", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-1", "source": "pool"}
@@ -6629,6 +6747,7 @@
 {"chunk_id": "ipr-2018:0016", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-2", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0017", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-2", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0018", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-2", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0019", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-2", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-2", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0012", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-2", "source": "pool"}
 {"chunk_id": "ipr-2019:0013", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-2", "source": "pool"}
@@ -6670,6 +6789,7 @@
 {"chunk_id": "ipr-2018:0021", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-3", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0022", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr17-3", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0023", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-3", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0024", "grade": 3, "judge": "gemini-3.8-flash", "need": "ipr17-3", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-3", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0002", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-3", "source": "topup-depth"}
 {"chunk_id": "ipr-2019:0022", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-3", "source": "pool"}
@@ -6681,6 +6801,7 @@
 {"chunk_id": "ipr-2021:0001", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-3", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2021:0042", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-3", "source": "pool"}
 {"chunk_id": "ipr-2021:0044", "grade": 3, "judge": "gemini-3.8-flash", "need": "ipr17-3", "source": "pool"}
+{"chunk_id": "ipr-2021:0046", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-3", "source": "reocr-topup"}
 {"chunk_id": "ipr-2021:0047", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr17-3", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2021:0048", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-3", "source": "topup-depth"}
 {"chunk_id": "ipr-2022:0003", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-3", "source": "topup-depth"}
@@ -6787,6 +6908,9 @@
 {"chunk_id": "ipr-2017:0034", "grade": 3, "judge": "gemini-3.8-flash", "need": "ipr17-5", "source": "pool"}
 {"chunk_id": "ipr-2017:0035", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-5", "source": "topup-depth"}
 {"chunk_id": "ipr-2018:0035", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-5", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0036", "grade": 3, "judge": "gemini-3.8-flash", "need": "ipr17-5", "source": "reocr-topup"}
+{"chunk_id": "ipr-2018:0041", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-5", "source": "reocr-topup"}
+{"chunk_id": "ipr-2018:0042", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-5", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-5", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0002", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr17-5", "source": "topup-depth"}
 {"chunk_id": "ipr-2019:0027", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr17-5", "source": "topup-depth"}
@@ -6952,12 +7076,16 @@
 {"chunk_id": "ipr-2017:0030", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr18-3", "source": "pool"}
 {"chunk_id": "ipr-2018:0015", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-3", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0016", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-3", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0017", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-3", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0030", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-3", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0031", "grade": 3, "judge": "gemini-3.8-flash", "need": "ipr18-3", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0032", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr18-3", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0033", "grade": 2, "judge": "gemini-3.8-flash", "need": "ipr18-3", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0034", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr18-3", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0035", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr18-3", "source": "reocr-topup"}
+{"chunk_id": "ipr-2018:0038", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr18-3", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0047", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-3", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0048", "grade": 2, "judge": "gemini-3.8-flash", "need": "ipr18-3", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-3", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0012", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-3", "source": "pool"}
 {"chunk_id": "ipr-2019:0016", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-3", "source": "pool"}
@@ -7011,7 +7139,9 @@
 {"chunk_id": "ipr-2018:0032", "grade": 3, "judge": "gemini-3.8-flash", "need": "ipr18-4", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0033", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr18-4", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0034", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr18-4", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0035", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-4", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0047", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-4", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0048", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-4", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-4", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0012", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-4", "source": "pool"}
 {"chunk_id": "ipr-2019:0013", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-4", "source": "pool"}
@@ -7043,6 +7173,7 @@
 {"chunk_id": "erp15-patenting-firms:0004", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-5", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0007", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr18-5", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0009", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-5", "source": "pool"}
+{"chunk_id": "erp15-patenting-firms:0015", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-5", "source": "reocr-topup"}
 {"chunk_id": "erp15-patenting-firms:0056", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr18-5", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0059", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-5", "source": "topup"}
 {"chunk_id": "erp15-patenting-firms:0060", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-5", "source": "topup"}
@@ -7050,6 +7181,7 @@
 {"chunk_id": "erp15-patenting-firms:0077", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr18-5", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0078", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-5", "source": "pool"}
 {"chunk_id": "erp16-cii-patent-trends:0003", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-5", "source": "pool"}
+{"chunk_id": "erp16-cii-patent-trends:0009", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-5", "source": "reocr-topup"}
 {"chunk_id": "erp16-cii-patent-trends:0084", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-5", "source": "topup-depth"}
 {"chunk_id": "ipr-2016:0031", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-5", "source": "pool"}
 {"chunk_id": "ipr-2017:0022", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-5", "source": "pool"}
@@ -7066,8 +7198,10 @@
 {"chunk_id": "ipr-2018:0027", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-5", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0028", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-5", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0029", "grade": 3, "judge": "gemini-3.8-flash", "need": "ipr18-5", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0030", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr18-5", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0045", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-5", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0046", "grade": 2, "judge": "gemini-3.8-flash", "need": "ipr18-5", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0047", "grade": 3, "judge": "gemini-3.8-flash", "need": "ipr18-5", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-5", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0033", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-5", "source": "topup-depth"}
 {"chunk_id": "ipr-2022:0012", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr18-5", "source": "topup-depth"}
@@ -7096,6 +7230,7 @@
 {"chunk_id": "ipr-2017:0013", "grade": 2, "judge": "gemini-3.8-flash", "need": "ipr19-1", "source": "pool"}
 {"chunk_id": "ipr-2017:0036", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-1", "source": "topup-depth"}
 {"chunk_id": "ipr-2018:0013", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-1", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0014", "grade": 3, "judge": "gemini-3.8-flash", "need": "ipr19-1", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0032", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-1", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-1", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0002", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-1", "source": "pool"}
@@ -7127,6 +7262,7 @@
 {"chunk_id": "ipr-2024:0062", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-1", "source": "pool"}
 {"chunk_id": "ipr-2024:0063", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-1", "source": "topup"}
 {"chunk_id": "ipr-2024:0064", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-1", "source": "topup-depth"}
+{"chunk_id": "ipr-2024:0067", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-1", "source": "reocr-topup"}
 {"chunk_id": "ipr-2024:0080", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-1", "source": "topup-depth"}
 {"chunk_id": "ipr-2024:0081", "grade": 3, "judge": "gemini-3.8-flash", "need": "ipr19-1", "source": "pool"}
 {"chunk_id": "ipr-2025:0048", "grade": 3, "judge": "gemini-3.8-flash", "need": "ipr19-1", "source": "pool"}
@@ -7152,6 +7288,7 @@
 {"chunk_id": "ipr-2016:0016", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-2", "source": "pool"}
 {"chunk_id": "ipr-2017:0017", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-2", "source": "pool"}
 {"chunk_id": "ipr-2018:0020", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-2", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0021", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-2", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-2", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0002", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr19-2", "source": "pool"}
 {"chunk_id": "ipr-2019:0007", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-2", "source": "pool"}
@@ -7196,6 +7333,7 @@
 {"chunk_id": "ipr-2016:0016", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-3", "source": "pool"}
 {"chunk_id": "ipr-2017:0017", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-3", "source": "pool"}
 {"chunk_id": "ipr-2018:0020", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-3", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0021", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-3", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0043", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-3", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-3", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0006", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr19-3", "source": "topup-v3"}
@@ -7349,6 +7487,7 @@
 {"chunk_id": "ipr-2018:0008", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-1", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0009", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr20-1", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0010", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr20-1", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0011", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-1", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-1", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0002", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-1", "source": "topup-depth"}
 {"chunk_id": "ipr-2019:0004", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-1", "source": "topup-depth"}
@@ -7358,6 +7497,7 @@
 {"chunk_id": "ipr-2019:0008", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-1", "source": "pool"}
 {"chunk_id": "ipr-2019:0009", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-1", "source": "pool"}
 {"chunk_id": "ipr-2019:0013", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-1", "source": "topup-v3"}
+{"chunk_id": "ipr-2019:0020", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-1", "source": "reocr-topup"}
 {"chunk_id": "ipr-2020:0003", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-1", "source": "pool"}
 {"chunk_id": "ipr-2020:0005", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-1", "source": "pool"}
 {"chunk_id": "ipr-2020:0006", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-1", "source": "topup-depth"}
@@ -7376,6 +7516,7 @@
 {"chunk_id": "ipr-2021:0009", "grade": 2, "judge": "gemini-3.8-flash", "need": "ipr20-1", "source": "pool"}
 {"chunk_id": "ipr-2021:0017", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-1", "source": "pool"}
 {"chunk_id": "ipr-2021:0026", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-1", "source": "pool"}
+{"chunk_id": "ipr-2021:0039", "grade": 2, "judge": "gemini-3.8-flash", "need": "ipr20-1", "source": "reocr-topup"}
 {"chunk_id": "ipr-2021:0040", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-1", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2021:0046", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-1", "source": "topup-depth"}
 {"chunk_id": "ipr-2022:0008", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-1", "source": "topup-depth"}
@@ -7427,6 +7568,7 @@
 {"chunk_id": "ipr-2017:0017", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-2", "source": "pool"}
 {"chunk_id": "ipr-2018:0005", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-2", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0020", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-2", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0021", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-2", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-2", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0019", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-2", "source": "topup-depth"}
 {"chunk_id": "ipr-2020:0026", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-2", "source": "topup-depth"}
@@ -7439,6 +7581,7 @@
 {"chunk_id": "ipr-2021:0012", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-2", "source": "topup-depth"}
 {"chunk_id": "ipr-2021:0036", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-2", "source": "topup"}
 {"chunk_id": "ipr-2021:0037", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-2", "source": "topup-depth"}
+{"chunk_id": "ipr-2021:0040", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-2", "source": "reocr-topup"}
 {"chunk_id": "ipr-2021:0041", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-2", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2021:0063", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-2", "source": "pool"}
 {"chunk_id": "ipr-2021:0071", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr20-2", "source": "topup-depth"}
@@ -7613,6 +7756,7 @@
 {"chunk_id": "erp16-cii-patent-trends:0028", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-1", "source": "topup-depth"}
 {"chunk_id": "erp16-cii-patent-trends:0074", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-1", "source": "topup-depth"}
 {"chunk_id": "erp16-cii-patent-trends:0085", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-1", "source": "topup-depth"}
+{"chunk_id": "ipr-2015:0004", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-1", "source": "reocr-topup"}
 {"chunk_id": "ipr-2015:0005", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-1", "source": "topup-depth"}
 {"chunk_id": "ipr-2015:0007", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-1", "source": "pool"}
 {"chunk_id": "ipr-2015:0025", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-1", "source": "pool"}
@@ -7626,6 +7770,7 @@
 {"chunk_id": "ipr-2018:0007", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-1", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0008", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr21-1", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0009", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr21-1", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0010", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-1", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0041", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-1", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-1", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0007", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-1", "source": "topup"}
@@ -7649,6 +7794,7 @@
 {"chunk_id": "ipr-2021:0014", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-1", "source": "pool"}
 {"chunk_id": "ipr-2021:0015", "grade": 3, "judge": "gemini-3.8-flash", "need": "ipr21-1", "source": "pool"}
 {"chunk_id": "ipr-2021:0028", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-1", "source": "topup"}
+{"chunk_id": "ipr-2021:0035", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-1", "source": "reocr-topup"}
 {"chunk_id": "ipr-2021:0040", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-1", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2022:0003", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-1", "source": "pool"}
 {"chunk_id": "ipr-2022:0008", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-1", "source": "pool"}
@@ -7682,6 +7828,7 @@
 {"chunk_id": "ipr-2017:0019", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-2", "source": "topup"}
 {"chunk_id": "ipr-2018:0018", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-2", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0020", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-2", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0021", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-2", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-2", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0002", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-2", "source": "pool"}
 {"chunk_id": "ipr-2019:0009", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-2", "source": "topup-depth"}
@@ -7731,6 +7878,7 @@
 {"chunk_id": "ipr-2024:0092", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-2", "source": "pool"}
 {"chunk_id": "ipr-2024:0093", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-2", "source": "topup-v3"}
 {"chunk_id": "ipr-2024:0094", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-2", "source": "pool"}
+{"chunk_id": "ipr-2024:0095", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-2", "source": "reocr-topup"}
 {"chunk_id": "ipr-2025:0029", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-2", "source": "topup-depth"}
 {"chunk_id": "ipr-2025:0052", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-2", "source": "pool"}
 {"chunk_id": "ipr-2025:0064", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-2", "source": "topup-depth"}
@@ -7774,7 +7922,9 @@
 {"chunk_id": "ipr-2016:0015", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr21-4", "source": "pool"}
 {"chunk_id": "ipr-2017:0017", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr21-4", "source": "topup-depth"}
 {"chunk_id": "ipr-2018:0018", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-4", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0019", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-4", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0020", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-4", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0021", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr21-4", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-4", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0019", "grade": 2, "judge": "gemini-3.8-flash", "need": "ipr21-4", "source": "pool"}
 {"chunk_id": "ipr-2019:0020", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr21-4", "source": "topup-depth"}
@@ -7839,6 +7989,7 @@
 {"chunk_id": "ipr-2017:0007", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-1", "source": "topup-depth"}
 {"chunk_id": "ipr-2017:0039", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-1", "source": "topup-depth"}
 {"chunk_id": "ipr-2017:0041", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-1", "source": "topup-depth"}
+{"chunk_id": "ipr-2018:0008", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-1", "source": "reocr-topup"}
 {"chunk_id": "ipr-2020:0013", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr22-1", "source": "topup"}
 {"chunk_id": "ipr-2021:0005", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-1", "source": "topup-v3"}
 {"chunk_id": "ipr-2021:0006", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr22-1", "source": "pool"}
@@ -7938,6 +8089,7 @@
 {"chunk_id": "ipr-2018:0008", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-2", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0012", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-2", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0040", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-2", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0041", "grade": 3, "judge": "gemini-3.8-flash", "need": "ipr22-2", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-2", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0004", "grade": 3, "judge": "gemini-3.8-flash", "need": "ipr22-2", "source": "pool"}
 {"chunk_id": "ipr-2019:0007", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-2", "source": "topup-depth"}
@@ -7981,6 +8133,7 @@
 {"chunk_id": "ipr-2018:0006", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-3", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0009", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-3", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0010", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-3", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0011", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-3", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-3", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0006", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-3", "source": "topup-depth"}
 {"chunk_id": "ipr-2019:0009", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-3", "source": "topup"}
@@ -7995,6 +8148,7 @@
 {"chunk_id": "ipr-2021:0015", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-3", "source": "topup-depth"}
 {"chunk_id": "ipr-2021:0016", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-3", "source": "topup-depth"}
 {"chunk_id": "ipr-2021:0017", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-3", "source": "pool"}
+{"chunk_id": "ipr-2021:0021", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-3", "source": "reocr-topup"}
 {"chunk_id": "ipr-2021:0028", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-3", "source": "pool"}
 {"chunk_id": "ipr-2021:0029", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-3", "source": "topup-depth"}
 {"chunk_id": "ipr-2021:0040", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-3", "source": "reocr-rejudge"}
@@ -8086,6 +8240,7 @@
 {"chunk_id": "ipr-2017:0017", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-4", "source": "pool"}
 {"chunk_id": "ipr-2017:0019", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-4", "source": "topup-depth"}
 {"chunk_id": "ipr-2018:0019", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-4", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0020", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-4", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0021", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-4", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-4", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0018", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-4", "source": "pool"}
@@ -8134,6 +8289,7 @@
 {"chunk_id": "ipr-2026:0087", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-4", "source": "topup-depth"}
 {"chunk_id": "ipr-2026:0090", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-4", "source": "pool"}
 {"chunk_id": "ipr-2026:0091", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-4", "source": "pool"}
+{"chunk_id": "note-tm-leading-indicator:0007", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-4", "source": "reocr-topup"}
 {"chunk_id": "erp03-market-for-design:0055", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-5", "source": "pool"}
 {"chunk_id": "erp04-mining-innovation:0032", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-5", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0002", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-5", "source": "pool"}
@@ -8171,6 +8327,7 @@
 {"chunk_id": "ipr-2017:0029", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-5", "source": "pool"}
 {"chunk_id": "ipr-2018:0029", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-5", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0046", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-5", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0047", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-5", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-5", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0009", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-5", "source": "pool"}
 {"chunk_id": "ipr-2022:0031", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr22-5", "source": "pool"}
@@ -8288,6 +8445,7 @@
 {"chunk_id": "ipr-2021:0029", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr23-2", "source": "topup"}
 {"chunk_id": "ipr-2021:0030", "grade": 3, "judge": "gemini-3.8-flash", "need": "ipr23-2", "source": "pool"}
 {"chunk_id": "ipr-2021:0031", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr23-2", "source": "pool"}
+{"chunk_id": "ipr-2021:0032", "grade": 2, "judge": "gemini-3.8-flash", "need": "ipr23-2", "source": "reocr-topup"}
 {"chunk_id": "ipr-2021:0058", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr23-2", "source": "pool"}
 {"chunk_id": "ipr-2021:0063", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr23-2", "source": "pool"}
 {"chunk_id": "ipr-2022:0001", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr23-2", "source": "topup"}
@@ -8337,6 +8495,7 @@
 {"chunk_id": "ipr-2018:0014", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr23-3", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0018", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr23-3", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0020", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr23-3", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0021", "grade": 3, "judge": "gemini-3.8-flash", "need": "ipr23-3", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr23-3", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0019", "grade": 2, "judge": "gemini-3.8-flash", "need": "ipr23-3", "source": "pool"}
 {"chunk_id": "ipr-2019:0044", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr23-3", "source": "pool"}
@@ -8615,6 +8774,7 @@
 {"chunk_id": "ipr-2016:0005", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr24-5", "source": "pool"}
 {"chunk_id": "ipr-2018:0006", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr24-5", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0009", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr24-5", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0010", "grade": 2, "judge": "gemini-3.8-flash", "need": "ipr24-5", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr24-5", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0001", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr24-5", "source": "pool"}
 {"chunk_id": "ipr-2019:0007", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr24-5", "source": "pool"}
@@ -8674,7 +8834,10 @@
 {"chunk_id": "ipr-2016:0013", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-1", "source": "topup-depth"}
 {"chunk_id": "ipr-2017:0005", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-1", "source": "pool"}
 {"chunk_id": "ipr-2018:0003", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-1", "source": "pool"}
+{"chunk_id": "ipr-2018:0006", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-1", "source": "reocr-topup"}
+{"chunk_id": "ipr-2018:0009", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-1", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0018", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-1", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0019", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-1", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-1", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0002", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-1", "source": "pool"}
 {"chunk_id": "ipr-2020:0002", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-1", "source": "topup"}
@@ -8724,6 +8887,7 @@
 {"chunk_id": "ipr-2025:0064", "grade": 2, "judge": "gemini-3.8-flash", "need": "ipr25-1", "source": "pool"}
 {"chunk_id": "ipr-2025:0069", "grade": 3, "judge": "gemini-3.8-flash", "need": "ipr25-1", "source": "pool"}
 {"chunk_id": "ipr-2026:0003", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-1", "source": "pool"}
+{"chunk_id": "ipr-2026:0006", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr25-1", "source": "reocr-topup"}
 {"chunk_id": "ipr-2026:0042", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-1", "source": "topup-depth"}
 {"chunk_id": "ipr-2026:0044", "grade": 2, "judge": "gemini-3.8-flash", "need": "ipr25-1", "source": "pool"}
 {"chunk_id": "ipr-2026:0045", "grade": 2, "judge": "gemini-3.8-flash", "need": "ipr25-1", "source": "pool"}
@@ -8773,6 +8937,7 @@
 {"chunk_id": "ipr-2017:0019", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-2", "source": "pool"}
 {"chunk_id": "ipr-2017:0039", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-2", "source": "pool"}
 {"chunk_id": "ipr-2018:0019", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-2", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0020", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-2", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0041", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-2", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-2", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0018", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-2", "source": "topup"}
@@ -8806,6 +8971,7 @@
 {"chunk_id": "erp10-ip-profitability-competition:0070", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr25-3", "source": "pool"}
 {"chunk_id": "erp10-ip-profitability-competition:0071", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr25-3", "source": "topup-depth"}
 {"chunk_id": "erp11-exporters-trade-marks:0012", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-3", "source": "topup-depth"}
+{"chunk_id": "erp11-exporters-trade-marks:0050", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-3", "source": "reocr-topup"}
 {"chunk_id": "erp14-raising-the-bar:0028", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-3", "source": "pool"}
 {"chunk_id": "erp14-raising-the-bar:0064", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-3", "source": "topup-depth"}
 {"chunk_id": "erp14-raising-the-bar:0065", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-3", "source": "topup-depth"}
@@ -8825,6 +8991,7 @@
 {"chunk_id": "ipr-2016:0031", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr25-3", "source": "pool"}
 {"chunk_id": "ipr-2017:0001", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr25-3", "source": "pool"}
 {"chunk_id": "ipr-2017:0032", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr25-3", "source": "pool"}
+{"chunk_id": "ipr-2018:0001", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr25-3", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0045", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-3", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-3", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0001", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr25-3", "source": "topup"}
@@ -8904,6 +9071,7 @@
 {"chunk_id": "ipr-2017:0014", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr25-4", "source": "topup"}
 {"chunk_id": "ipr-2018:0013", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-4", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0016", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-4", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0017", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr25-4", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0033", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-4", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-4", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0013", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-4", "source": "pool"}
@@ -8940,6 +9108,7 @@
 {"chunk_id": "ipr-2017:0041", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-5", "source": "pool"}
 {"chunk_id": "ipr-2018:0022", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-5", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0023", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-5", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0024", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-5", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-5", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0022", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-5", "source": "pool"}
 {"chunk_id": "ipr-2019:0023", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr25-5", "source": "pool"}
@@ -9137,6 +9306,7 @@
 {"chunk_id": "erp03-market-for-design:0078", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr26-4", "source": "topup"}
 {"chunk_id": "erp03-market-for-design:0083", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr26-4", "source": "topup-depth"}
 {"chunk_id": "erp08-designs-law-practice:0003", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr26-4", "source": "pool"}
+{"chunk_id": "erp08-designs-law-practice:0008", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr26-4", "source": "reocr-topup"}
 {"chunk_id": "erp08-designs-law-practice:0012", "grade": 3, "judge": "gemini-3.8-flash", "need": "ipr26-4", "source": "pool"}
 {"chunk_id": "erp08-designs-law-practice:0013", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr26-4", "source": "pool"}
 {"chunk_id": "erp08-designs-law-practice:0014", "grade": 2, "judge": "gemini-3.8-flash", "need": "ipr26-4", "source": "pool"}
@@ -9154,7 +9324,9 @@
 {"chunk_id": "ipr-2017:0017", "grade": 3, "judge": "gemini-3.8-flash", "need": "ipr26-4", "source": "pool"}
 {"chunk_id": "ipr-2017:0019", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr26-4", "source": "pool"}
 {"chunk_id": "ipr-2018:0019", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr26-4", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0020", "grade": 3, "judge": "gemini-3.8-flash", "need": "ipr26-4", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0021", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr26-4", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0022", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr26-4", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr26-4", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0018", "grade": 3, "judge": "gemini-3.8-flash", "need": "ipr26-4", "source": "pool"}
 {"chunk_id": "ipr-2019:0020", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr26-4", "source": "topup-depth"}
@@ -9204,6 +9376,7 @@
 {"chunk_id": "ipr-2018:0021", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr26-5", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0022", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr26-5", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0023", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr26-5", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0024", "grade": 2, "judge": "gemini-3.8-flash", "need": "ipr26-5", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr26-5", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0022", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr26-5", "source": "pool"}
 {"chunk_id": "ipr-2019:0025", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr26-5", "source": "topup-depth"}
@@ -9214,6 +9387,7 @@
 {"chunk_id": "ipr-2021:0043", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr26-5", "source": "topup-depth"}
 {"chunk_id": "ipr-2021:0044", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr26-5", "source": "pool"}
 {"chunk_id": "ipr-2021:0045", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr26-5", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2021:0046", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr26-5", "source": "reocr-topup"}
 {"chunk_id": "ipr-2021:0047", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr26-5", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2022:0002", "grade": 0, "judge": "gemini-3.8-flash", "need": "ipr26-5", "source": "topup-depth"}
 {"chunk_id": "ipr-2022:0003", "grade": 1, "judge": "gemini-3.8-flash", "need": "ipr26-5", "source": "pool"}
@@ -9361,8 +9535,10 @@
 {"chunk_id": "ipr-2018:0028", "grade": 1, "judge": "gemini-3.8-flash", "need": "multi-1", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0035", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-1", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0039", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-1", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0040", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-1", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0045", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-1", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0046", "grade": 2, "judge": "gemini-3.8-flash", "need": "multi-1", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0047", "grade": 3, "judge": "gemini-3.8-flash", "need": "multi-1", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-1", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0003", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-1", "source": "pool"}
 {"chunk_id": "ipr-2019:0040", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-1", "source": "pool"}
@@ -9388,6 +9564,7 @@
 {"chunk_id": "ipr-2024:0035", "grade": 1, "judge": "gemini-3.8-flash", "need": "multi-1", "source": "pool"}
 {"chunk_id": "ipr-2024:0038", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-1", "source": "pool"}
 {"chunk_id": "ipr-2024:0122", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-1", "source": "pool"}
+{"chunk_id": "ipr-2024:0123", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-1", "source": "reocr-topup"}
 {"chunk_id": "ipr-2025:0095", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-1", "source": "pool"}
 {"chunk_id": "ipr-2026:0017", "grade": 2, "judge": "gemini-3.8-flash", "need": "multi-1", "source": "pool"}
 {"chunk_id": "ipr-2026:0023", "grade": 1, "judge": "gemini-3.8-flash", "need": "multi-1", "source": "pool"}
@@ -9463,11 +9640,14 @@
 {"chunk_id": "ipr-2017:0029", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-2", "source": "pool"}
 {"chunk_id": "ipr-2018:0003", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-2", "source": "topup"}
 {"chunk_id": "ipr-2018:0025", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-2", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0026", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-2", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0028", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-2", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0029", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-2", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0037", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-2", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0038", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-2", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0045", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-2", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0046", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-2", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0047", "grade": 1, "judge": "gemini-3.8-flash", "need": "multi-2", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-2", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0003", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-2", "source": "pool"}
 {"chunk_id": "ipr-2019:0047", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-2", "source": "pool"}
@@ -9567,6 +9747,7 @@
 {"chunk_id": "ipr-2017:0041", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-4", "source": "pilot"}
 {"chunk_id": "ipr-2018:0003", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-4", "source": "pilot"}
 {"chunk_id": "ipr-2018:0037", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-4", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0038", "grade": 1, "judge": "gemini-3.8-flash", "need": "multi-4", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-4", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0001", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-4", "source": "pilot"}
 {"chunk_id": "ipr-2019:0002", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-4", "source": "pilot"}
@@ -9714,6 +9895,7 @@
 {"chunk_id": "ipr-2017:0015", "grade": 3, "judge": "gemini-3.8-flash", "need": "multi-6", "source": "pool"}
 {"chunk_id": "ipr-2018:0014", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-6", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0018", "grade": 1, "judge": "gemini-3.8-flash", "need": "multi-6", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0019", "grade": 3, "judge": "gemini-3.8-flash", "need": "multi-6", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-6", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0012", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-6", "source": "pool"}
 {"chunk_id": "ipr-2019:0013", "grade": 0, "judge": "gemini-3.8-flash", "need": "multi-6", "source": "pool"}
@@ -9906,14 +10088,18 @@
 {"chunk_id": "erp15-patenting-firms:0051", "grade": 0, "judge": "gemini-3.8-flash", "need": "note-sc-1", "source": "topup-depth"}
 {"chunk_id": "erp15-patenting-firms:0059", "grade": 0, "judge": "gemini-3.8-flash", "need": "note-sc-1", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0062", "grade": 0, "judge": "gemini-3.8-flash", "need": "note-sc-1", "source": "pool"}
+{"chunk_id": "erp15-patenting-firms:0073", "grade": 0, "judge": "gemini-3.8-flash", "need": "note-sc-1", "source": "reocr-topup"}
 {"chunk_id": "erp15-patenting-firms:0077", "grade": 1, "judge": "gemini-3.8-flash", "need": "note-sc-1", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0078", "grade": 0, "judge": "gemini-3.8-flash", "need": "note-sc-1", "source": "pool"}
 {"chunk_id": "erp15-patenting-firms:0080", "grade": 0, "judge": "gemini-3.8-flash", "need": "note-sc-1", "source": "pool"}
 {"chunk_id": "ipr-2017:0042", "grade": 0, "judge": "gemini-3.8-flash", "need": "note-sc-1", "source": "pool"}
 {"chunk_id": "ipr-2018:0024", "grade": 0, "judge": "gemini-3.8-flash", "need": "note-sc-1", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0025", "grade": 0, "judge": "gemini-3.8-flash", "need": "note-sc-1", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0027", "grade": 0, "judge": "gemini-3.8-flash", "need": "note-sc-1", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0028", "grade": 0, "judge": "gemini-3.8-flash", "need": "note-sc-1", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0029", "grade": 0, "judge": "gemini-3.8-flash", "need": "note-sc-1", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0030", "grade": 0, "judge": "gemini-3.8-flash", "need": "note-sc-1", "source": "reocr-topup"}
+{"chunk_id": "ipr-2018:0045", "grade": 0, "judge": "gemini-3.8-flash", "need": "note-sc-1", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "note-sc-1", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0008", "grade": 0, "judge": "gemini-3.8-flash", "need": "note-sc-1", "source": "topup-depth"}
 {"chunk_id": "ipr-2020:0050", "grade": 0, "judge": "gemini-3.8-flash", "need": "note-sc-1", "source": "pool"}
@@ -10713,7 +10899,9 @@
 {"chunk_id": "ipr-2017:0017", "grade": 1, "judge": "gemini-3.8-flash", "need": "owner-3", "source": "pool"}
 {"chunk_id": "ipr-2017:0019", "grade": 1, "judge": "gemini-3.8-flash", "need": "owner-3", "source": "topup-depth"}
 {"chunk_id": "ipr-2018:0013", "grade": 0, "judge": "gemini-3.8-flash", "need": "owner-3", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0014", "grade": 2, "judge": "gemini-3.8-flash", "need": "owner-3", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0019", "grade": 0, "judge": "gemini-3.8-flash", "need": "owner-3", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0020", "grade": 2, "judge": "gemini-3.8-flash", "need": "owner-3", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "owner-3", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0002", "grade": 1, "judge": "gemini-3.8-flash", "need": "owner-3", "source": "pool"}
 {"chunk_id": "ipr-2019:0003", "grade": 0, "judge": "gemini-3.8-flash", "need": "owner-3", "source": "pool"}
@@ -10809,10 +10997,13 @@
 {"chunk_id": "ipr-2018:0005", "grade": 1, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0008", "grade": 1, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0009", "grade": 2, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0010", "grade": 1, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0011", "grade": 2, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0024", "grade": 0, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0025", "grade": 2, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0026", "grade": 2, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0029", "grade": 2, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "reocr-rejudge"}
+{"chunk_id": "ipr-2018:0030", "grade": 2, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "reocr-topup"}
 {"chunk_id": "ipr-2018:0037", "grade": 0, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2018:0049", "grade": 0, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "reocr-rejudge"}
 {"chunk_id": "ipr-2019:0002", "grade": 1, "judge": "gemini-3.8-flash", "need": "owner-4", "source": "pool"}

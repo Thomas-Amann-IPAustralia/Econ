@@ -70,10 +70,12 @@ Branch `ccr-fe4defc0-ysiv1i`. Read D-017 to D-020 first.
    that includes zero: the one idea worth re-testing on a larger set).
 3. **The plan prompt's document map** must be updated when documents are added; so must the notes
    (`econ.kb.enrich`, about $0.14 a corpus).
-4. Carried from v1: a persistent answer store (Render's log is the only record of answers so far).
+4. **The filter's measurement (D-018) on the repaired index**: 189 changed calls, about US$0.15-0.20 of
+   OpenAI; the owner's permission first (D-023).
+5. Carried from v1: a persistent answer store (Render's log is the only record of answers so far).
 
 ## Conventions kept
 - Grids and test sets committed before any number; deviations recorded as amendments before the data they
   affect (see grid retrieval-v2, amendment 1).
 - Every paid call goes through `econ.evalr.llmcall` or `econ.evalr.judge` (cached, metered, capped).
-- Next free decision number: **D-022**.
+- Next free decision number: **D-024**.
