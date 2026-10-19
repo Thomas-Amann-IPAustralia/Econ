@@ -148,14 +148,16 @@ async function ask(question, context) {
   const years = [+$("#y0").value, +$("#y1").value].sort((a, b) => a - b);
   const allYears = Object.values(state.docs).map((d) => d.year);
   const filtered = allYears.length && (years[0] > Math.min(...allYears) || years[1] < Math.max(...allYears));
-  const turn = { question, context, events: {}, checks: [], el: null, t0: performance.now(), shown: {} };
+  const turn = { question, context, events: {}, checks: [], el: null, t0: performance.now(), shown: {},
+    askedAt: new Date().toISOString(), years: filtered ? years : null };
   state.turns.push(turn);
+  showChatBar();
   $("#thread").append(h("div", { class: "msg user" }, question,
     context ? h("span", { class: "ctxnote" }, `+ ${context.length.toLocaleString()} characters of your material`) : null,
     filtered ? h("span", { class: "ctxnote" }, `Limited to ${years[0]}–${years[1]}`) : null));
   const bot = h("div", { class: "msg bot", tabindex: "0", onclick: () => {
     select(turn);
-    if (window.matchMedia("(max-width: 860px)").matches) $("#trail").scrollIntoView({ behavior: "smooth" });
+    if (narrow()) $("#trail").scrollIntoView({ behavior: "smooth" });
   } },
     h("div", { class: "progress" }, h("span", { class: "spinner" }), h("span", {}, "Planning the search…")));
   turn.el = bot;
@@ -231,16 +233,69 @@ function progressText(t) {
   return "Planning the search…";
 }
 
-// Markdown-lite: escape first, then paragraphs, lists, bold, italics; [n] markers become buttons.
-function renderMarkdown(md, claims, draft = false) {
-  const failed = new Set((claims || []).filter((c) => !c.verified).map((c) => c.n));
-  const inline = (s) => esc(s)
-    .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
-    .replace(/(^|[^*])\*([^*]+)\*/g, "$1<em>$2</em>")
+// Emphasis is marked before escaping, so a run of prose cut at a claim marker can close what is open at its
+// end and reopen it in the next run: every run's HTML is balanced.
+const EMPH = { "\uE000": ["strong", true], "\uE001": ["strong", false], "\uE002": ["em", true], "\uE003": ["em", false] };
+const emphasis = (s) => s.replace(/[\uE000-\uE003]/g, "").replace(/\*\*(.+?)\*\*/g, "\uE000$1\uE001").replace(/(^|[^*])\*([^*]+)\*/g, "$1\uE002$2\uE003");
+function emphHtml(s, open) {
+  if (!s) return "";
+  let out = (open.strong ? "<strong>" : "") + (open.em ? "<em>" : "");
+  out += esc(s).replace(/[\uE000-\uE003]/g, (c) => { const [tag, on] = EMPH[c]; open[tag] = on; return on ? `<${tag}>` : `</${tag}>`; });
+  return out + (open.em ? "</em>" : "") + (open.strong ? "</strong>" : "");
+}
+
+// The answer's prose in runs (D-030). A run that ends in claim markers rests on those claims' sentences; the
+// prose after a line's last marker, or on a line with none, is the assistant's own words. It is the rule that
+// labels the claims on the server (cite._claim_text): a group of ids backs all the prose since the previous
+// group or the start of the line. Runs without a word in them (a full stop after a marker) are neither.
+const MARKER_RUN = /((?:\[\d{1,3}\][ \t]*)+)/;
+function lineParts(line) {
+  const bits = line.split(MARKER_RUN);
+  const parts = [];
+  for (let i = 0; i < bits.length; i += 2) {
+    const text = bits[i], run = bits[i + 1];
+    if (run) parts.push({ kind: "cited", text, claims: [...run.matchAll(/\[(\d{1,3})\]/g)].map((m) => +m[1]), run });
+    else if (text) parts.push({ kind: /\w/.test(text) ? "own" : "plain", text });
+  }
+  return parts;
+}
+
+// The same runs for a whole answer, without markdown: what the JSON export records. Headings are drawn plain.
+function answerParts(md) {
+  return md.split("\n").flatMap((line) => {
+    const heading = /^\s*#{1,4}\s+/.test(line);
+    return lineParts(line.replace(/^\s*(?:[-*•]|\d+[.)]|#{1,4})\s+/, "").replace(/\*+/g, ""))
+      .filter((p) => p.kind !== "plain")
+      .map((p) => (p.kind === "cited" ? { kind: "cited", claims: p.claims, text: p.text.trim() } : { kind: heading ? "heading" : "own", text: p.text.trim() }));
+  });
+}
+
+// Markdown-lite: escape first, then paragraphs, lists, bold, italics; [n] markers become buttons. With
+// `parts`, each run of prose that rests on cited sentences is drawn in navy (D-031); the assistant's own words
+// keep the ordinary colour, so the model's formatting is the only other mark on the text.
+function renderMarkdown(md, { claims = [], draft = false, parts = false } = {}) {
+  const failed = new Set(claims.filter((c) => !c.verified).map((c) => c.n));
+  const marker = (n) => `<button class="cite${failed.has(n) ? " failed" : ""}" type="button" data-claim="${n}" title="Claim ${n}${failed.has(n) ? ": failed the check" : ""}. Select to read the sentences it cites">${n}</button>`;
+  const inline = (s) => emphHtml(emphasis(s), {})
     // A draft's markers are not yet claims: [n] (answer-v4) or a sentence id [3.2] (answer-v5, D-026).
     .replace(draft ? /\[(\d{1,3}(?:\.\d{1,3})?)\]/g : /\[(\d{1,3})\]/g, (_, n) => draft
       ? `<span class="cite pending" title="${n.includes(".") ? `Passage ${n.split(".")[0]}, sentence ${n.split(".")[1]}` : `Claim ${n}`}: not yet checked">${n}</span>`
-      : `<button class="cite${failed.has(+n) ? " failed" : ""}" data-claim="${n}" title="Claim ${n}${failed.has(+n) ? ": failed the check" : ""}">${n}</button>`);
+      : marker(+n));
+  const said = (s) => {
+    const open = {};
+    return lineParts(emphasis(s)).map((p) => {
+      if (p.kind !== "cited") return emphHtml(p.text, open);
+      // Leading punctuation (the full stop after the previous marker) and trailing space stay outside the run.
+      const lead = p.text.match(/^[\s.,;:!?)\]”’"']*/)[0];
+      const rest = p.text.slice(lead.length);
+      const tail = rest.match(/\s*$/)[0];
+      const body = rest.slice(0, rest.length - tail.length);
+      return emphHtml(lead, open)
+        + (body ? `<span class="said cited" data-claims="${p.claims.join(" ")}" title="Rests on the sentences claim ${p.claims.join(", ")} cites">${emphHtml(body, open)}</span>` : "")
+        + emphHtml(tail, open) + p.run.replace(/\[(\d{1,3})\]/g, (_, n) => marker(+n));
+    }).join("");
+  };
+  const text = (s) => (parts && !draft ? said(s) : inline(s));
   const out = [];
   let list = null;
   for (const raw of md.split("\n")) {
@@ -249,13 +304,13 @@ function renderMarkdown(md, claims, draft = false) {
     if (m) {
       const kind = /\d/.test(m[1]) ? "ol" : "ul";
       if (!list || list.kind !== kind) { if (list) out.push(`</${list.kind}>`); out.push(`<${kind}>`); list = { kind }; }
-      out.push(`<li>${inline(m[2])}</li>`);
+      out.push(`<li>${text(m[2])}</li>`);
       continue;
     }
     if (list) { out.push(`</${list.kind}>`); list = null; }
     if (!line.trim()) continue;
     const hd = line.match(/^#{1,4}\s+(.*)$/);
-    out.push(hd ? `<p><strong>${inline(hd[1])}</strong></p>` : `<p>${inline(line)}</p>`);
+    out.push(hd ? `<p><strong>${text(hd[1])}</strong></p>` : `<p>${text(line)}</p>`);
   }
   if (list) out.push(`</${list.kind}>`);
   return out.join("");
@@ -295,14 +350,15 @@ function renderBot(t) {
   if (draft) {
     if (!draft.withheld) {
       const body = h("div", { class: "draft" });
-      body.innerHTML = renderMarkdown(draft.text, [], true);
+      body.innerHTML = renderMarkdown(draft.text, { draft: true });
       el.append(body);
     }
   } else if (e.answer) {
-    const body = h("div");
-    body.innerHTML = renderMarkdown(e.answer.answer, check?.claims);
-    el.append(body);
-    if (e.answer.gaps?.length) el.append(h("div", { class: "gaps" }, "Not covered: ", e.answer.gaps.join("; ")));
+    // A new attempt has new claims: what was selected in the last one no longer applies.
+    if (t.shownAttempt !== e.answer.attempt) Object.assign(t, { shownAttempt: e.answer.attempt, claimOn: null });
+    const claims = claimsOf(t);
+    if (claims.length) el.append(answerTabs(t, claims.length));
+    el.append(t.view === "claims" && claims.length ? claimsPanel(t, claims) : answerPanel(t, claims));
   } else if (e.retrieval && meta?.mode === "evidence_only") {
     const docs = new Set(e.retrieval.evidence.map((x) => x.doc_id));
     el.append(h("p", {}, `No language model is configured, so here are the ${e.retrieval.evidence.length} most relevant passages, from ${docs.size} documents. They are in the evidence trail, best first.`));
@@ -313,7 +369,7 @@ function renderBot(t) {
     const cost = e.done.cost_usd ? ` · US$${e.done.cost_usd.toFixed(4)}` : "";
     el.append(h("div", { class: "gaps answer-foot" },
       e.answer ? h("button", { class: "linkish copy", type: "button", title: "Copy the answer and its sources", onclick: (ev) => { ev.stopPropagation(); copyAnswer(t, ev.currentTarget); } }, "Copy") : null,
-      `${e.done.seconds}s${cost} · ${window.matchMedia("(max-width: 860px)").matches ? "tap to see the evidence trail" : "select to see the evidence trail"}`));
+      `${e.done.seconds}s${cost} · ${narrow() ? "tap to see the evidence trail" : "select to see the evidence trail"}`));
     // Suggested next questions (answer-v3 onwards, D-024): one select asks it, in this conversation.
     const next = e.answer?.follow_ups || [];
     if (next.length) {
@@ -324,19 +380,144 @@ function renderBot(t) {
         } }, q))));
     }
   }
-  el.querySelectorAll(".cite").forEach((b) => b.addEventListener("click", (ev) => {
+  // A claim marker selects its claim and goes to its sentences in the evidence trail.
+  el.querySelectorAll(".answer-panel button.cite").forEach((b, i) => b.addEventListener("click", (ev) => {
     ev.stopPropagation();
-    select(t);
-    focusClaim(t, +b.dataset.claim);
+    pickClaim(t, +b.dataset.claim, { focus: () => t.el.querySelectorAll(".answer-panel button.cite")[i], scroll: true });
   }));
+  // The selected claim, lit in the prose and the claim list.
+  if (t.claimOn != null) {
+    el.querySelectorAll(`.cite[data-claim="${t.claimOn}"], .claim-card[data-claim="${t.claimOn}"]`).forEach((x) => x.classList.add("on"));
+    el.querySelectorAll(".said.cited[data-claims]").forEach((x) => x.classList.toggle("on", x.dataset.claims.split(" ").includes(String(t.claimOn))));
+  }
+}
+
+// --- the answer's two views: the answer itself, and the claims it makes beside the sentences they cite ----
+
+// The claims of the answer on screen: the last check's, if it checked the answer shown.
+function claimsOf(t) {
+  const c = t.checks[t.checks.length - 1];
+  return c && (!t.events.answer || c.attempt === t.events.answer.attempt) ? c.claims : [];
+}
+// How many passages a claim's sentences come from, for the claim's label.
+const passagesOf = (c) => new Set(c.citations.map((q) => q.evidence)).size;
+// A claim citing several sentences gives each its own colour and number (D-032), the same in its card and in the
+// trail: pink, green and violet for the first three (the most that stay distinct side by side), grey after.
+const sentenceColour = (k) => `k k${Math.min(k, 4)}`;
+const evidenceByN = (t) => Object.fromEntries((t.events.retrieval?.evidence || []).map((x) => [x.n, x]));
+const narrow = () => window.matchMedia("(max-width: 860px)").matches;
+
+function answerTabs(t, n) {
+  const views = [["answer", "Answer"], ["claims", `Claims made by the chatbot (${n})`]];
+  const cur = t.view === "claims" ? "claims" : "answer";
+  const go = (key) => {
+    if (state.selected !== t) select(t);
+    t.view = key;
+    renderBot(t);
+    t.el.querySelector(`.atab[data-view="${key}"]`)?.focus();
+    if (t.claimOn != null) focusClaim(t, t.claimOn);
+  };
+  return h("div", { class: "atabs", role: "tablist", "aria-label": "This answer", onkeydown: (ev) => {
+    if (ev.key !== "ArrowLeft" && ev.key !== "ArrowRight") return;
+    ev.preventDefault();
+    go(cur === "answer" ? "claims" : "answer");
+  } }, views.map(([key, label]) => h("button", {
+    class: `atab${key === cur ? " on" : ""}`, type: "button", role: "tab", "data-view": key,
+    "aria-selected": String(key === cur), tabindex: key === cur ? "0" : "-1",
+    onclick: (ev) => { ev.stopPropagation(); if (key !== cur) go(key); },
+  }, label)));
+}
+
+function answerPanel(t, claims) {
+  const a = t.events.answer;
+  const panel = h("div", { class: "answer-panel", role: claims.length ? "tabpanel" : null });
+  const body = h("div", { class: "prose-answer" });
+  body.innerHTML = renderMarkdown(a.answer, { claims, parts: true });
+  panel.append(body);
+  if (a.gaps?.length) panel.append(h("div", { class: "gaps" }, "Not covered: ", a.gaps.join("; ")));
+  return panel;
+}
+
+// One cited sentence (or, under answer-v4, one quote), as the publication has it, with where it is from.
+function quoteBlock(t, q, src, n, k = null) {
+  return h("figure", { class: `verbatim${q.found ? "" : " missing"}${k ? ` ${sentenceColour(k)}` : ""}` },
+    k ? h("span", { class: "qk", title: `Sentence ${k} of this claim` }, k) : null,
+    h("blockquote", {}, q.quote),
+    h("figcaption", {},
+      h("span", {}, src ? sourceLine(src) : `Passage ${q.evidence}`, q.found ? "" : " · not found in the passage"),
+      h("button", { class: "linkish", type: "button", title: "Show this passage in the evidence trail", onclick: (ev) => {
+        ev.stopPropagation();
+        pickClaim(t, n, { passage: q.evidence, span: q.start != null ? `${q.start}-${q.end}` : null, scroll: true });
+      } }, `Passage ${q.evidence}`),
+      src ? h("button", { class: "linkish", type: "button", onclick: (ev) => { ev.stopPropagation(); openViewer(src.doc_id, src.pages[0], src.boxes); } }, `Show on ${pages(src.pages)}`) : null));
+}
+
+function claimsPanel(t, claims) {
+  const ev = evidenceByN(t);
+  const at = claims.findIndex((c) => c.n === t.claimOn);
+  const step = (d) => (e2) => {
+    e2.stopPropagation();
+    const i = Math.max(0, Math.min(claims.length - 1, at + d));
+    pickClaim(t, claims[i].n, { focus: () => t.el.querySelector(`.claim-nav [data-step="${d}"]:not(:disabled)`) || t.el.querySelector(".claim-nav [data-step]:not(:disabled)"), reveal: true });
+  };
+  const panel = h("div", { class: "claims-panel", role: "tabpanel", onkeydown: (e2) => {
+    const d = { ArrowDown: 1, ArrowRight: 1, ArrowUp: -1, ArrowLeft: -1 }[e2.key];
+    if (!d || !e2.target.closest(".claim-card, .claim-nav")) return;
+    e2.preventDefault();
+    const card = e2.target.closest(".claim-card");
+    const from = card ? claims.findIndex((c) => c.n === +card.dataset.claim) : at;
+    const i = Math.max(0, Math.min(claims.length - 1, from < 0 ? 0 : from + d));
+    pickClaim(t, claims[i].n, { focus: () => t.el.querySelector(`.claim-card[data-claim="${claims[i].n}"]`), reveal: true });
+  } });
+  panel.append(h("div", { class: "claim-nav" },
+    h("span", { class: "claim-pos", "aria-live": "polite" }, at >= 0 ? `Claim ${at + 1} of ${claims.length}` : `${claims.length} claims`),
+    h("button", { class: "linkish", type: "button", "data-step": "-1", disabled: at <= 0, onclick: step(-1) }, "‹ Previous"),
+    h("button", { class: "linkish", type: "button", "data-step": "1", disabled: at === claims.length - 1, onclick: step(1) }, at < 0 ? "First claim ›" : "Next ›")));
+  panel.append(h("p", { class: "claims-intro" }, "Each claim is in the assistant's words, above the sentences it cites, copied word for word by code, not by the AI. When a claim cites several sentences, each has its own colour and number, here and in the evidence trail. Select a claim, or step through them, to see its passages."));
+  panel.append(h("ol", { class: "claim-cards" }, claims.map((c) => h("li", {
+    class: `claim-card${c.verified ? "" : " failed"}`, "data-claim": c.n, tabindex: "0",
+    "aria-label": `Claim ${c.n}${c.verified ? "" : ", failed the check"}`,
+    onclick: (e2) => { e2.stopPropagation(); pickClaim(t, c.n, { focus: () => t.el.querySelector(`.claim-card[data-claim="${c.n}"]`) }); },
+    onkeydown: (e2) => {
+      if (e2.target !== e2.currentTarget || (e2.key !== "Enter" && e2.key !== " ")) return;
+      e2.preventDefault();
+      e2.currentTarget.click();
+    },
+  },
+  h("div", { class: "cc-head" },
+    h("span", { class: `cite${c.verified ? "" : " failed"}`, "aria-hidden": "true" }, c.n),
+    c.verified ? h("span", { class: "badge ok" }, "Found word for word") : h("span", { class: "badge bad" }, "Failed the check")),
+  h("div", { class: "cc-label" }, "In the assistant's words"),
+  h("p", { class: "cc-text" }, c.text),
+  h("div", { class: "cc-label" }, c.citations.length > 1
+    ? `What the sources say, word for word: ${c.citations.length} sentences from ${passagesOf(c)} ${passagesOf(c) === 1 ? "passage" : "passages"}`
+    : "What the source says, word for word"),
+  c.citations.map((q, i) => quoteBlock(t, q, ev[q.evidence], c.n, c.citations.length > 1 ? i + 1 : null)),
+  c.errors.length ? h("div", { class: "why-failed" }, c.errors.join("; ")) : null))));
+  return panel;
+}
+
+// Select a claim: lit in the answer, its passages focused in the trail. From the chat the trail scrolls to the
+// passage (on a narrow screen only from a number or a passage button, as the trail is then below the chat);
+// from the trail, the chat scrolls to the claim.
+function pickClaim(t, n, { focus = null, passage = null, span = null, scroll = false, reveal = false, fromTrail = false } = {}) {
+  if (state.selected !== t) select(t);
+  t.claimOn = n;
+  renderBot(t);
+  focus?.()?.focus({ preventScroll: true });
+  const wide = !narrow();
+  focusClaim(t, n, { scroll: scroll || (wide && !fromTrail), passage, span });
+  if (fromTrail || reveal) {
+    const target = t.el.querySelector(t.view === "claims" ? `.claim-card[data-claim="${n}"]` : `.answer-panel .cite[data-claim="${n}"]`);
+    target?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  }
 }
 
 // --- copying an answer out: the prose with its markers, then every source with its quote and page ------
 
 function answerSources(t) {
-  const e = t.events, check = t.checks[t.checks.length - 1];
-  const ev = Object.fromEntries((e.retrieval?.evidence || []).map((x) => [x.n, x]));
-  return (check?.claims || []).map((c) => ({
+  const ev = evidenceByN(t);
+  return claimsOf(t).map((c) => ({
     n: c.n,
     cites: c.citations.map((q) => ({ quote: q.quote, src: ev[q.evidence] })),
   }));
@@ -356,15 +537,21 @@ function copyAnswer(t, btn) {
   ].filter((x) => x !== null).join("\n");
   // The same, formatted, for pasting into a document: the answer as shown, with markers as superscripts.
   const box = document.createElement("div");
-  box.innerHTML = renderMarkdown(a.answer, []);
+  box.innerHTML = renderMarkdown(a.answer);
   box.querySelectorAll(".cite").forEach((b) => b.replaceWith(Object.assign(document.createElement("sup"), { textContent: `[${b.dataset.claim}]` })));
   const html = `<p><strong>${esc(t.question)}</strong></p>${box.innerHTML}`
     + (a.gaps?.length ? `<p><em>Not covered: ${esc(a.gaps.join("; "))}</em></p>` : "")
     + (sources.length ? `<p><strong>Sources</strong></p><ol>${sources.map((s) => `<li value="${s.n}">${s.cites.map((c) => `“${esc(c.quote)}” (${esc(sourceLine(c.src))})`).join("; ")}</li>`).join("")}</ol>` : "")
     + "<p><em>From IP Australia's Office of the Chief Economist publications; every quote was checked against the source text.</em></p>";
+  copyOut(btn, plain, html);
+}
+
+// To the clipboard: formatted where the browser allows it, plain text otherwise, a hidden textarea last.
+function copyOut(btn, plain, html = null) {
+  const label = btn.textContent;
   const done = (ok) => {
     btn.textContent = ok ? "Copied" : "Couldn't copy";
-    setTimeout(() => { btn.textContent = "Copy"; }, 1600);
+    setTimeout(() => { btn.textContent = label; }, 1600);
   };
   const fallback = () => {
     const ta = Object.assign(document.createElement("textarea"), { value: plain });
@@ -375,7 +562,7 @@ function copyAnswer(t, btn) {
     ta.remove();
     done(ok);
   };
-  if (navigator.clipboard && window.ClipboardItem) {
+  if (html && navigator.clipboard && window.ClipboardItem) {
     navigator.clipboard.write([new ClipboardItem({
       "text/plain": new Blob([plain], { type: "text/plain" }),
       "text/html": new Blob([html], { type: "text/html" }),
@@ -387,21 +574,119 @@ function copyAnswer(t, btn) {
   }
 }
 
+// --- the conversation as JSON (D-030): everything on screen but the passages' text --------------------------
+
+const pageUrl = (doc, page) => new URL(`${CFG.pdfBase}${encodeURIComponent(doc)}.pdf#page=${page}`, location.href).href;
+const sourceOf = (x) => ({ doc_id: x.doc_id, title: x.title, year: x.year, section: x.section, pages: x.pages, page_url: pageUrl(x.doc_id, x.pages[0]) });
+
+function exportTurn(t, i) {
+  const e = t.events, r = e.retrieval, a = e.answer;
+  const ev = evidenceByN(t);
+  const claims = claimsOf(t);
+  const check = t.checks[t.checks.length - 1];
+  const citedBy = {};
+  for (const c of claims) for (const x of c.citations) (citedBy[x.evidence] ||= new Set()).add(c.n);
+  const claimOut = (c) => ({
+    n: c.n, text: c.text, verified: c.verified, errors: c.errors,
+    citations: c.citations.map((q) => ({
+      passage: q.evidence, chunk_id: q.chunk_id, quote: q.quote, found: q.found, start: q.start, end: q.end,
+      source: ev[q.evidence] ? sourceOf(ev[q.evidence]) : null,
+    })),
+  });
+  const found = e.search || r;
+  return {
+    n: i + 1,
+    asked_at: t.askedAt,
+    question: t.question,
+    pasted_context: t.context || null,
+    years: t.years,
+    status: e.error ? "error" : e.done ? (e.done.outcome || e.done.mode) : "in progress",
+    request_id: e.meta?.request_id ?? null,
+    mode: e.meta?.mode ?? null,
+    models: { plan: e.meta?.plan_model ?? null, filter: r?.filter?.model ?? null, answer: e.meta?.answer_model ?? null },
+    prompt: e.meta?.prompt ?? null,
+    plan: e.plan ? { standalone_question: e.plan.standalone_question, queries: e.plan.queries, error: e.plan.error ?? null } : null,
+    search: found ? { candidates: found.candidates, dense: found.dense, read: r ? (r.pool?.length ?? r.evidence.length) : e.search.read } : null,
+    filter: r?.filter ?? null,
+    answer: a ? {
+      attempt: a.attempt, coverage: a.coverage, citations_by: a.citations_by ?? null,
+      text: a.answer, parts: answerParts(a.answer), gaps: a.gaps, follow_ups: a.follow_ups || [],
+    } : null,
+    check: check && a && check.attempt === a.attempt ? { passed: check.passed, errors: check.errors } : null,
+    claims: claims.map(claimOut),
+    earlier_attempts: (e.answers || []).filter((x) => x.attempt !== a?.attempt).map((x) => {
+      const c = t.checks.find((k) => k.attempt === x.attempt);
+      return { attempt: x.attempt, coverage: x.coverage, text: x.answer, gaps: x.gaps, check: c ? { passed: c.passed, errors: c.errors } : null, claims: (c?.claims || []).map(claimOut) };
+    }),
+    evidence: (r?.evidence || []).map((x) => ({
+      n: x.n, chunk_id: x.chunk_id, ...sourceOf(x), series: x.series,
+      search_rank: x.search_rank ?? x.merged_rank, filter_rating: x.filter_grade ?? null, cited_by: [...(citedBy[x.n] || [])],
+      matched_terms: x.matched_terms, per_query: Object.entries(x.per_query).map(([qi, s]) => ({ query: r.queries[+qi], ...s })),
+      ocr: Boolean(x.ocr), note: x.note || null,
+    })),
+    passages_read: (r?.pool || []).map((x) => ({
+      search_rank: x.search_rank, filter_rating: x.filter_grade ?? null, selected: x.selected, n: x.n ?? null, chunk_id: x.chunk_id, ...sourceOf(x),
+    })),
+    search_traces: (r?.traces || []).map((tr) => ({ query: tr.query, lanes: tr.lanes, hits: tr.hits.map(({ row, ...hit }) => hit) })),
+    activity: activityItems(t).map(([at, level, text]) => ({ at_seconds: at == null ? null : Math.round(at * 100) / 100, level: level || "info", text })),
+    done: e.done ? { outcome: e.done.outcome ?? null, attempts: e.done.attempts ?? null, seconds: e.done.seconds, cost_usd: e.done.cost_usd, timings: e.done.timings, usage: e.done.usage } : null,
+    error: e.error?.message ?? null,
+  };
+}
+
+function exportChat() {
+  return {
+    format: "econ-chat-export/1",
+    exported_at: new Date().toISOString(),
+    page: location.origin + location.pathname,
+    session_id: state.session,
+    service: state.health ? { build: state.health.build, llm: state.health.llm } : null,
+    notes: [
+      "Everything the page showed for each question except the passages' full text: each passage is named by its chunk_id and links to its page (page_url).",
+      "answer.text is the assistant's prose, where [k] marks claim k. answer.parts splits it into runs that rest on claims (kind cited), runs in the assistant's own words with no citation (kind own), and headings.",
+      "Each claim's quotes are the sentences it cites, copied word for word from the passage by code; start and end are character offsets in the passage's text. verified means every quote was found there; it does not judge whether a quote supports its claim.",
+      "filter_rating: 3 essential, 2 useful, 1 on topic but not usable, 0 not about the question. Only the evidence (the passages_read with selected true, numbered n) was given to the answer model.",
+    ],
+    turns: state.turns.map(exportTurn),
+  };
+}
+
+function chatJson() { return JSON.stringify(exportChat(), null, 2); }
+
+function saveChat() {
+  const url = URL.createObjectURL(new Blob([chatJson()], { type: "application/json" }));
+  const a = h("a", { href: url, download: `ip-economics-chat-${new Date().toISOString().slice(0, 16).replace(/[:T]/g, "-")}.json` });
+  document.body.append(a);
+  a.click();
+  a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+function showChatBar() {
+  const n = state.turns.length;
+  $("#chat-bar").hidden = !n;
+  $("#chat-count").textContent = `${n} ${n === 1 ? "question" : "questions"} in this conversation`;
+}
+
 // --- the evidence trail ---------------------------------------------------------------------------------
 
 function select(t) {
+  if (state.selected === t) return;
   state.selected = t;
   document.querySelectorAll(".msg.bot").forEach((m) => m.classList.toggle("selected", m === t.el));
   renderTrail(t);
 }
 
 function quoteRanges(t) {
-  // evidence n -> [{start, end, claim}] from the last check
-  const check = t.checks[t.checks.length - 1];
+  // evidence n -> [{start, end, claims}] from the last check; a sentence cited by several claims is one range
   const by = {};
-  for (const c of check?.claims || []) {
+  for (const c of claimsOf(t)) {
     for (const cit of c.citations) {
-      if (cit.found && cit.start != null) (by[cit.evidence] ||= []).push({ start: cit.start, end: cit.end, claim: c.n });
+      if (!cit.found || cit.start == null) continue;
+      const list = (by[cit.evidence] ||= []);
+      const same = list.find((r) => r.start === cit.start && r.end === cit.end);
+      if (same) same.claims.push(c.n);
+      else list.push({ start: cit.start, end: cit.end, claims: [c.n] });
     }
   }
   return by;
@@ -421,7 +706,8 @@ function highlight(text, quotes, terms) {
   for (const r of ranges) {
     if (r.start < pos) continue;
     out += esc(text.slice(pos, r.start));
-    out += `<mark class="${r.cls}"${r.claim ? ` data-claim="${r.claim}"` : ""}>${esc(text.slice(r.start, r.end))}</mark>`;
+    const by = r.claims ? ` data-claims="${r.claims.join(" ")}" data-span="${r.start}-${r.end}" title="Cited by claim ${r.claims.join(", ")}: select to show it in the answer"` : "";
+    out += `<mark class="${r.cls}"${by}>${esc(text.slice(r.start, r.end))}</mark>`;
     pos = r.end;
   }
   return out + esc(text.slice(pos));
@@ -432,7 +718,6 @@ function renderTrail(t) {
   const pane = $("#trail");
   pane.replaceChildren(h("h2", {}, "Evidence trail"));
   if (!e.meta && !e.error) { pane.append(h("p", { class: "muted" }, "Waiting for the server…")); return; }
-  const check = t.checks[t.checks.length - 1];
   const r = e.retrieval;
   const f = r?.filter;
   const filtered = f && !f.status.startsWith("off");
@@ -440,19 +725,13 @@ function renderTrail(t) {
   const strip = passageStrip(t);
   if (strip) pane.append(strip);
 
-  if (check?.claims?.length) {
-    pane.append(h("h3", {}, "Claims"));
-    pane.append(h("ul", { class: "claimlist" }, check.claims.map((c) => h("li", { class: c.verified ? "" : "failed" },
-      h("button", { class: `cite${c.verified ? "" : " failed"}`, onclick: () => focusClaim(t, c.n) }, c.n), " ", c.text, " ",
-      h("span", { class: "muted" }, `(evidence ${[...new Set(c.citations.map((x) => x.evidence))].join(", ")})`),
-      c.errors.length ? h("div", { class: "why-failed" }, c.errors.join("; ")) : null))));
-  }
-
+  // The claims are listed with the answer (its "Claims made by the chatbot" view, D-030); here each passage
+  // says which claims cite it.
   if (!e.retrieval) return;
   const ev = e.retrieval.evidence;
   const quotes = quoteRanges(t);
   const citedBy = {};
-  for (const c of check?.claims || []) for (const x of c.citations) (citedBy[x.evidence] ||= new Set()).add(c.n);
+  for (const c of claimsOf(t)) for (const x of c.citations) (citedBy[x.evidence] ||= new Set()).add(c.n);
 
   // Source map: where the evidence came from, by year.
   pane.append(h("h3", {}, "Where the evidence came from"));
@@ -482,7 +761,10 @@ function renderTrail(t) {
       x.matched_terms.length ? h("p", { class: "muted" }, `Keywords matched: ${x.matched_terms.join(", ")}`) : null);
     list.append(h("article", { class: `ev${cited ? " cited" : ""}`, id: `ev-${x.n}`, "data-doc": x.doc_id },
       h("div", { class: "ev-top" }, h("div", {}, h("span", { class: "ev-n" }, x.n), h("span", { class: "ev-title" }, x.title)),
-        cited ? h("span", { class: "badge info" }, `cited by ${[...cited].map((n) => `[${n}]`).join("")}`) : null),
+        cited ? h("span", { class: "cited-by" }, "cited by", [...cited].map((n) => h("button", {
+          class: "cite", type: "button", "data-claim": n, title: `Claim ${n}: show it in the answer`,
+          onclick: () => pickClaim(t, n, { fromTrail: true, passage: x.n }),
+        }, n))) : null),
       h("div", { class: "ev-meta" }, `${x.year} · ${x.section.length ? x.section.join(" › ") + " · " : ""}${pages(x.pages)} · search rank ${x.search_rank ?? x.merged_rank}${x.filter_grade != null ? ` · rated ${x.filter_grade} (${RATING[x.filter_grade]})` : ""}`),
       x.note ? h("div", { class: "ev-note" }, x.note) : null,
       x.ocr ? h("div", { class: "ev-note" }, "Text read from a scanned page by OCR: check the wording against the page.") : null,
@@ -507,6 +789,7 @@ function renderTrail(t) {
         h("td", {}, x.score.toFixed(3))))));
   }
   pane.append(trace);
+  if (t.claimOn != null) focusClaim(t, t.claimOn);  // a claim selected before the trail was redrawn
 }
 
 // --- the process view (after wind-tunnel's pipeline view): the steps as nodes, lit as the events arrive ---
@@ -590,7 +873,8 @@ function processView(t) {
   return flow;
 }
 
-function activityLog(t) {
+// What happened, when: [seconds, level, text], for the activity log and the JSON export.
+function activityItems(t) {
   const e = t.events, r = e.retrieval, f = r?.filter;
   const items = [[0, "", "Question sent"]];
   if (e.meta) items.push([e.meta._t, "", e.meta.mode === "answer" ? `Server ready: ${e.meta.answer_model} will answer` : "Evidence only: no language model is configured"]);
@@ -613,6 +897,11 @@ function activityLog(t) {
   }
   if (e.done) items.push([e.done._t, "", `Done in ${e.done.seconds}s${e.done.cost_usd ? ` · US$${e.done.cost_usd.toFixed(4)}` : ""}`]);
   if (e.error) items.push([e.error._t ?? null, "bad", `Stopped: ${e.error.message}`]);
+  return items;
+}
+
+function activityLog(t) {
+  const items = activityItems(t);
   const now = progressText(t);
   const log = h("ol", { class: "log", "aria-live": "polite", "aria-label": "Activity" });
   const seen = t.logShown || 0;
@@ -723,12 +1012,29 @@ function filterDoc(doc, btn) {
   $("#filter-note").textContent = on ? "Filled pips and a blue edge mark cited passages." : `Showing ${state.docs[doc]?.title || doc}. Select it again to show all.`;
 }
 
-function focusClaim(t, n) {
-  const check = t.checks[t.checks.length - 1];
-  const claim = check?.claims.find((c) => c.n === n);
-  document.querySelectorAll(".cite").forEach((b) => b.classList.toggle("on", +b.dataset.claim === n));
-  document.querySelectorAll(".ev").forEach((a) => a.classList.remove("focus"));
+// A claim's passages in the trail: outlined, opened, its sentences lit (each in its own colour and number when
+// it cites several); scrolled to on request (to the sentence `span` in `passage` if given, otherwise the first).
+function focusClaim(t, n, { scroll = false, passage = null, span = null } = {}) {
+  if (state.selected !== t) return;
+  const pane = $("#trail");
+  pane.querySelectorAll(".cite.on, mark.q.on").forEach((x) => {
+    x.classList.remove("on", "k", "k1", "k2", "k3", "k4");
+    delete x.dataset.k;
+  });
+  pane.querySelectorAll(".ev.focus").forEach((a) => a.classList.remove("focus"));
+  const claim = claimsOf(t).find((c) => c.n === n);
   if (!claim) return;
+  pane.querySelectorAll(`.cite[data-claim="${n}"]`).forEach((b) => b.classList.add("on"));
+  const order = new Map(claim.citations.length > 1 ? claim.citations.map((q, i) => [`${q.evidence}:${q.start}-${q.end}`, i + 1]) : []);
+  pane.querySelectorAll("mark.q[data-claims]").forEach((m) => {
+    if (!m.dataset.claims.split(" ").includes(String(n))) return;
+    m.classList.add("on");
+    const k = order.get(`${m.closest(".ev")?.id.slice(3)}:${m.dataset.span}`);
+    if (k) {
+      m.classList.add(...sentenceColour(k).split(" "));
+      m.dataset.k = k;
+    }
+  });
   let first = null;
   for (const c of claim.citations) {
     const card = $(`#ev-${c.evidence}`);
@@ -736,9 +1042,9 @@ function focusClaim(t, n) {
     card.style.display = "";
     card.classList.add("focus");
     card.querySelector(".ev-text").classList.add("open");
-    first ||= card.querySelector(`mark[data-claim="${n}"]`) || card;
+    if (passage == null || c.evidence === passage) first ||= (span && card.querySelector(`mark.q[data-span="${span}"]`)) || card.querySelector("mark.q.on") || card;
   }
-  first?.scrollIntoView({ behavior: "smooth", block: "center" });
+  if (scroll) first?.scrollIntoView({ behavior: "smooth", block: "center" });
 }
 
 async function readAround(chunkId, textEl, btn) {
@@ -860,6 +1166,13 @@ function init() {
     if (ev.key === "Enter" && !ev.shiftKey) { ev.preventDefault(); $("#ask").requestSubmit(); }
   });
   $("#viewer-close").addEventListener("click", () => $("#viewer").close());
+  $("#save-chat").addEventListener("click", saveChat);
+  $("#copy-chat").addEventListener("click", (ev) => copyOut(ev.currentTarget, chatJson()));
+  // A cited sentence in a passage shows the claim that cites it, in the answer.
+  $("#trail").addEventListener("click", (ev) => {
+    const m = ev.target.closest("mark.q[data-claims]");
+    if (m && state.selected) pickClaim(state.selected, +m.dataset.claims.split(" ")[0], { fromTrail: true });
+  });
   initTheme();
   initChartTips();
   $("#pg-prev").addEventListener("click", () => viewer.pdf && renderPage(viewer.page - 1));

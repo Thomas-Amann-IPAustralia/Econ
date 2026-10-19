@@ -84,6 +84,22 @@ Branch `ccr-fe4defc0-ysiv1i`. Read D-017 to D-020 first.
 - Not yet deployed: merge to `main` (Render and Pages deploy from it). Then ask one question live and check
   `/api/health` shows prompt answer-v5 and spans exported.
 
+## Update, 2026-10-19 (latest): reading an answer, and the conversation as JSON (D-030)
+- Front end only. The answer's prose is underlined where it rests on claims and lighter where it is the
+  assistant's own words (`lineParts`, the same rule as `cite._claim_text`); a marker opens its cited sentences
+  under the paragraph (`quoteDrawer`). Each answer has an Answer tab and a "Claims made by the chatbot" tab
+  (`claimsPanel`, `pickClaim`), which steps through the claims while the trail follows; the trail no longer
+  lists claims.
+- The conversation downloads or copies as JSON (`exportChat`, format `econ-chat-export/1`): everything shown
+  except passage text. A change to the events the API sends should be reflected in `exportTurn`.
+- Deploys with the next merge to `main` (Pages).
+- D-031 (the owner's review of D-030): no key and no box under a paragraph; cited prose is navy (`--said`), the
+  rest the ordinary colour; a number takes the trail to its sentences. A claim drawn from more than one passage
+  (`passagesOf`) is green in the claims tab and, while selected, in the trail (`--quote-multi`).
+- D-032 replaces that green: a claim citing several sentences gives each its own colour and number (pink, green,
+  violet, then grey; `sentenceColour`, tokens `--k1-bg` to `--k4-line`), in its card and, while selected, in the
+  trail (marks carry `data-span`).
+
 ## Open items
 1. **Langfuse keys on Render**: set and working (2026-10-19). The span counter on `/api/health` read 0 because
    the app was built twice; fixed on `claude/gracious-gates-x2zfot`, live once merged to `main`. Still the owner's:
@@ -101,4 +117,4 @@ Branch `ccr-fe4defc0-ysiv1i`. Read D-017 to D-020 first.
 - Grids and test sets committed before any number; deviations recorded as amendments before the data they
   affect (see grid retrieval-v2, amendment 1).
 - Every paid call goes through `econ.evalr.llmcall` or `econ.evalr.judge` (cached, metered, capped).
-- Next free decision number: **D-027**.
+- Next free decision number: **D-033**.

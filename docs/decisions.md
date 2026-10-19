@@ -1239,3 +1239,117 @@ keyboard focus. Plain HTML and CSS, no chart library. Colours: blue and red pole
 grey "before" mark, checked with the dataviz palette validator against both themes' backgrounds (colour-blind
 separation and contrast pass; the greys are neutral by design and carried by labels). Checked in a headless
 browser: both themes, a phone width (no horizontal scroll), no script errors.
+
+## D-030 — Quoted words and the assistant's own told apart; claims beside the answer; the conversation as JSON (the owner's request; Claude, 2026-10-19)
+
+**Request (the owner, 2026-10-19).** "Within the LLM's response, I would like to more clearly delineate where
+something is being quoted verbatim from the source and where the LLM may be adding its opinion." Keep the
+evidence trail as it is, but let "Passages the answer model read" stay the priority: put the claims below the
+response or in a tab, "Claims made by the chatbot", that steps through the source material on the right. "I'd
+like users to be able to copy out their full chat trace (basically everything on screen except for the full
+text sources)... Maybe as a JSON file?"
+
+**Built** (the front end only: `web/app.js`, `web/style.css`, `web/index.html`; the API, prompts, answer
+schema and check are unchanged).
+- **The answer's prose in runs.** A run of prose that ends in claim markers is underlined: it rests on those
+  claims' sentences. Prose after a line's last marker, or on a line with none, is drawn lighter as the
+  assistant's own words (an explanation, a connection, a judgement; no citation). Headings are plain. A key
+  above the prose says so. The rule is the server's claim-label rule (`cite._claim_text`, D-027), so a run is
+  exactly the prose its claim's label covers. Emphasis that spans a marker is closed and reopened, so each
+  run's markup is balanced.
+- **The verbatim sentences in the answer.** A claim marker opens, under its paragraph, the sentences the
+  claim cites, copied word for word, on the same yellow as the quotes highlighted in the passages, each with
+  its document, year, section and page, a button to its passage in the trail and one to its page in the PDF.
+  The trail focuses the passage at the same time, as before.
+- **"Claims made by the chatbot"**, a second tab on each answer: every claim in the assistant's words above
+  the sentences it cites. Previous and Next (or the arrow keys) step through the claims and the trail follows,
+  outlining each claim's passage and lighting its sentences there; a failed claim shows its errors. The claim
+  list is gone from the trail, so the passages follow the process view and the passage strip directly. Each
+  passage's "cited by" numbers and its highlighted sentences lead back to their claim in the answer. A
+  sentence cited by two claims is one highlight naming both (before, it named only the first).
+- **The conversation as JSON** (`econ-chat-export/1`): a bar above the conversation downloads it as a file or
+  copies it. For each question: when it was asked, the question, any pasted material, the year limits, the
+  request id, the models and prompt, the plan, the search, the filter, the answer (the prose with its markers,
+  its runs as `cited`, `own` or `heading`, gaps, follow-ups), the check, the claims with their quotes, offsets
+  and page links, any earlier failed attempt, the 20 passages (identity, page link, search rank, rating, the
+  claims citing them, matched terms, scores per search), every passage the filter read (rank, rating, chosen
+  or not), the search traces, the activity log, the timings, the usage and the cost. Passage text is left out;
+  the quotes (whole cited sentences) are kept. Drafts are left out, as they are from the log (D-024).
+- "How it works" has a short "Reading an answer" section, and its point on whether a quote supports its
+  claim now says that underlining shows a citation, not that the sentences bear out every word.
+
+**Checked** in headless Chromium, the API mocked with two recorded answer-v5 answers (D-026) with their real
+passages and the real check, the first with a failed first attempt: the tabs; the marking (17 cited runs, 3
+of the assistant's own and 5 headings in the causality answer); the drawer's sentences equal the claim's
+quotes; Close returns focus to the marker; stepping and the arrow keys move the trail to each claim's passages
+and bring its card into view; "cited by" and highlighted sentences lead back to the claim; the export (both
+questions, the failed attempt, 60 passages read, no passage's full text, no internal fields); Copy as JSON and
+the answer's Copy; both themes; a phone width without horizontal scroll; no script errors. 129 tests pass (no
+Python changed).
+
+**Limits, for the record.** An underlined run cites sentences; it is not checked that they support every word,
+and within a cited run the assistant can still add a connection of its own (How it works says so). The split
+follows where the model put its markers, so an answer that cites once at the end of a paragraph has the whole
+paragraph underlined, as its claim label does (D-027).
+
+## D-031 — A calmer answer: navy for cited prose, no key or box; green for claims drawn from several passages (the owner's request; Claude, 2026-10-19)
+
+**Request (the owner, 2026-10-19, after seeing D-030).** The chat felt cluttered: drop the key above the answer
+and the box of sentences under a paragraph ("with the claims tab as well as the citation links we don't need a
+box beneath a claim within the answer window too"); the mix of underline, bold and lighter text is "a lot of
+meta information"; go back to the older look and draw the cited text in navy, so that "formatting is the LLM
+writing to help a reader parse information quickly and the colour indicates the provenance of the information
+with the number enabling further exploration". And: where a claim cites text from more than one source, use a
+different colour (green), keeping the outlines, so a reader sees at a glance that a claim rests on several.
+
+**Built** (front end only; amends D-030's answer view, which was not yet deployed).
+- Prose that rests on cited sentences (the same runs as D-030) is navy (`--said`: #1c4380 on white, 9.7:1; in
+  dark mode #a9c8f0, 7.0:1); the assistant's own words and headings keep the ordinary colour; no underline and
+  no lighter text. A cited run's tooltip names its claim. The key above the answer and the box under the
+  paragraph are gone: a number selects its claim, lights its prose and takes the trail to its sentences (on a
+  phone too, where the trail is below the chat).
+- A claim whose sentences come from more than one passage (counted by passage, the trail's unit) is green: its
+  sentences in the claims tab, which also says how many passages, and its highlighted sentences in the trail
+  while it is selected, with the outline kept (green). Claims from one passage stay yellow. Colours: #c9ecd5
+  behind #0f3b22 (9.9:1); in dark mode #2e5b40 behind #e2f7e9 (7.0:1).
+- How it works describes blue text, the ordinary colour and green; the JSON export is unchanged.
+
+**Checked** headless against the same recorded answers as D-030: no key and no box; cited prose computes to
+navy without underline and the rest to the ink colour; a number focuses its passage; the causality answer's
+first claim (sentences from 3 passages) is green in its card and in 3 passages of the trail, a one-passage claim
+stays yellow; the rest of D-030's checks (stepping, links back from the trail, the export, Copy, both themes,
+phone width, no script errors) still pass.
+
+**Note.** The distinction between navy and ordinary text is by colour alone; the claim numbers remain the cue
+that does not depend on colour.
+
+## D-032 — Each of a claim's sentences in its own colour and number (the owner's request; Claude, 2026-10-19)
+
+**Request (the owner, 2026-10-19, after D-031).** "Where a claim has multiple sources, my intention was for each
+source to be given a unique colour. This way a user, at a glance, could quickly see which portions of text
+support the claim." The owner's sketch coloured the two sentences of one claim, from the same passage, pink and
+green, in the claim's card and in the passage.
+
+**Built** (front end only; replaces D-031's green for claims from several passages).
+- A claim that cites more than one sentence gives each sentence its own colour and number, the same in its card
+  (a numbered badge beside the quote, which is tinted) and in the evidence trail while the claim is selected
+  (the sentence tinted, outlined in the darker shade, and numbered). A claim citing one sentence stays yellow,
+  unnumbered, as before. The card's label says how many sentences from how many passages. A sentence's
+  "Passage" button scrolls the trail to that sentence.
+- Colours, in a fixed order: pink, green, violet, then grey for the fourth and later sentences. Three is the most
+  that stay distinct when any two can sit side by side and beside the other claims' yellow: the dataviz
+  validator, run on every subset of the reference palette's hues with the yellow included, finds no passing set
+  of four (blue and violet, for one, are too close). Of the 82 claims in D-026's six answers, 28 cite one
+  sentence, 26 two, 13 three and 15 four or more, so the grey and the numbers do real work. The numbers make the
+  match independent of colour.
+- Light: tints #f1b0c8, #66b566, #a196e6 (60% of the palette's magenta, green and violet over white) under the
+  page's ink, at 6.2:1 or better; outlines and badges #c2397f, #006300, #4a3aa7. Dark: brighter tints #dd749a,
+  #339c33, #a69ded (80% over white) under dark text, at 4.6:1 or better (the tints mixed into the dark panel were
+  too muddy beside the dark yellow); outlines and badges in lighter shades. With the yellow, all pairs clear the
+  colour-blind (protan, deutan) and normal-vision floors in both themes. Grey: #cfd3d6 light, #aab5bc dark.
+- How it works and the claims tab say so.
+
+**Checked** headless: the causality answer's first claim (4 sentences from 3 passages) shows 1 pink, 2 green,
+3 violet, 4 grey in its card, and the same numbers and colours on the same sentences in passages 4, 3 and 20;
+a one-sentence claim stays yellow and unnumbered; a sentence's Passage button brings it into view; the earlier
+checks still pass, in both themes and at phone width, with no script errors.
