@@ -131,6 +131,39 @@ def eval_retrieval(
     )
 
 
+@app.command()
+@loud
+def enrich(
+    name: str = typer.Option(..., help="The notes file to write, under library/enrich/."),
+    base: str = typer.Option(
+        None, help="Keep this notes file's notes; write notes only for chunks it lacks."
+    ),
+    prompt: str = typer.Option("enrich-v2", help="The note prompt under prompts/eval/."),
+    model: str = typer.Option("gpt-6-luna"),
+    effort: str = typer.Option("low"),
+    confirm: bool = typer.Option(False, help="Make the paid calls. Without it, a dry run."),
+) -> None:
+    """Context notes for the adopted chunks (search only, D-013); paid, cached and metered."""
+    from econ.evalr.retrieval import load_chunks
+    from econ.kb import enrich as _enrich
+
+    chunks = load_chunks(config.pipeline().chunking.adopted)
+    have = _enrich.load(base) if base else {}
+    todo = [c for c in chunks if c["chunk_id"] not in have]
+    est = len(todo) * 0.0000725  # enrich-v1 cost US$0.1413 for 1,950 calls at flex (D-013)
+    typer.echo(f"enrich: {len(todo)} chunks need notes ({len(have)} kept from {base}); about US${est:.2f}")
+    if not confirm:
+        typer.echo("dry run: add --confirm to make the calls")
+        return
+    with run("enrich", _hash(), name=name, base=base, prompt=prompt, model=model) as r:
+        out = _enrich.run(todo, name, model=model, effort=effort, flex=True, prompt=prompt, base=base)
+        r.add_output(config.path("library/enrich") / f"{name}.jsonl")
+        r.counts.update({k: v for k, v in out.items() if k != "file"})
+        if out["failed"]:
+            raise StageError(f"{out['failed']} note call(s) failed", item=name)
+    typer.echo(f"enrich passed: {out}")
+
+
 @app.command("eval-wipo")
 @loud
 def eval_wipo(grid: str = typer.Option("wipo-v1", help="Grid file under eval/grids/.")) -> None:

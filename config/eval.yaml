@@ -4,9 +4,11 @@
 # 2026-10-19, for tracing, the re-OCR and the front end: "You may use UP to $3 of OpenAI and $2 of Gemini
 # tokens", D-022). Code enforces them: a paid call starts only if the ledger's total plus the call's
 # reserve fits under `cap_fraction` of the budget, so a mis-estimate can't overrun it.
+# 2026-10-20, for the WIPO notes and the prompt comparison: "Budget of $1.50 approved" (D-034). The
+# ledger then held US$3.68 OpenAI and US$2.62 Gemini, so the caps are those plus 1.40 and 0.08.
 budgets_usd:
-  openai: 6.50
-  gemini: 4.50
+  openai: 5.08
+  gemini: 2.70
 cap_fraction: 0.96
 ledger: eval/spend/ledger.jsonl
 cache: eval/cache/llm          # every paid response, kept for good (SOP §14.1)
