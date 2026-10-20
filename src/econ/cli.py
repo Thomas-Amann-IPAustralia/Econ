@@ -426,7 +426,7 @@ def index(
                 "url": d.url,
                 "note": d.note,
                 "publisher": config.sources().publisher_of(d),
-                "licence": p.get("licence"),
+                "licence": p.get("licence") or d.licence,
                 "page_count": p["page_count"],
                 "pages": p["pages"],
                 "ocr": p["ocr"],

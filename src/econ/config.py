@@ -32,6 +32,7 @@ class Document(Strict):
     url: str | None = None
     note: str | None = None  # shown with every passage from the document
     publisher: str | None = None  # when not the registry's default publisher
+    licence: str | None = None  # when the document doesn't state its own (the owner's word, D-034)
 
     @property
     def raw_name(self) -> str:
