@@ -54,6 +54,8 @@ def main(out: Path) -> None:
     )
     (out / "pdfs").mkdir(exist_ok=True)
     for d in src["documents"]:
+        if d["doc_id"] not in docs:
+            continue  # registered but not yet served (the WIPO documents, D-033): not published
         dest = out / "pdfs" / f"{d['doc_id']}.pdf"
         s3.download_file(src["bucket"], d["key"], str(dest))
         digest = hashlib.sha256(dest.read_bytes()).hexdigest()
@@ -62,7 +64,7 @@ def main(out: Path) -> None:
             sys.exit(
                 f"{d['doc_id']}: the PDF in R2 changed since the index was built ({digest[:12]} != {expected[:12]})"
             )
-    print(f"copied {len(src['documents'])} PDFs from R2")
+    print(f"copied {len(list((out / 'pdfs').glob('*.pdf')))} PDFs from R2")
 
 
 if __name__ == "__main__":
