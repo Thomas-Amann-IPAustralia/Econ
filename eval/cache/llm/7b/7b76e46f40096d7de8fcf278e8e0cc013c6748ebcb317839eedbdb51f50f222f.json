@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.3e-05,
+ "data": {
+  "context": "WIPO’s Global Innovation Index 2026 economy profile for Niger presents the country’s infrastructure indicators, including ecological sustainability, and market sophistication indicators, including credit and investment. The figures report scores and ranks, with unavailable data marked n/a."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1131",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000167,
+  "input": 1360,
+  "model": "gpt-6-luna",
+  "output": 62,
+  "reasoning": 0,
+  "seconds": 2.28
+ }
+}

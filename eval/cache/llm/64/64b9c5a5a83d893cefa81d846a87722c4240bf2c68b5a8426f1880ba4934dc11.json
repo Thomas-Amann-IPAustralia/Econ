@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.4e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026* (2026), Ghana’s economy profile reports the Knowledge and technology outputs pillar and its knowledge impact and diffusion indicators. The passage gives Ghana’s scores and ranks, including intellectual property receipts, production and export complexity, high-tech exports, and ICT services exports."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0740",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000169,
+  "input": 1314,
+  "model": "gpt-6-luna",
+  "output": 75,
+  "reasoning": 0,
+  "seconds": 2.4
+ }
+}

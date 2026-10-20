@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.008491,
+ "data": {
+  "misattributed_A": 0,
+  "misattributed_B": 0,
+  "reason": "Both answers accurately attribute their sources to WIPO and IP Australia. Answer B is superior because it directly addresses the narrative request for empirical evidence linking IP rights to firm investment and performance (presenting findings on design rights and productivity, trade marks and exports, and patents and firm resilience during shocks). Answer A omits this empirical performance dimension entirely, focusing instead on theoretical mechanisms.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v2:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "both-4:ba",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.008491,
+  "input": 10756,
+  "model": "gemini-3.8-flash",
+  "output": 113,
+  "reasoning": 0,
+  "seconds": 2.71
+ }
+}

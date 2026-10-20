@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.007396,
+ "data": {
+  "misattributed_A": 0,
+  "misattributed_B": 0,
+  "reason": "Both answers accurately address the question and narrative, properly citing WIPO and IP Australia sources without misattributions. Answer B is slightly better structured, providing a clearer breakdown of specific strengths and weaknesses (including concrete indicators like trade marks and export complexity) and clearly distinguishing WIPO's overarching index from IP Australia's historical, narrower studies.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v2:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "both-1:ab",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.007396,
+  "input": 9326,
+  "model": "gemini-3.8-flash",
+  "output": 107,
+  "reasoning": 0,
+  "seconds": 2.68
+ }
+}

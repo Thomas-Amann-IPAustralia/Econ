@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In WIPO’s *PCT Yearly Review 2026*, the table on top university PCT applicants compares published applications by applicant and origin for 2023–2025. The accompanying statement identifies the University of California as the leading university-sector PCT applicant since 1993."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0045",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000164,
+  "input": 1295,
+  "model": "gpt-6-luna",
+  "output": 70,
+  "reasoning": 0,
+  "seconds": 2.17
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.5e-05,
+ "data": {
+  "context": "In WIPO’s *World Intangible Investment Highlights 2026*, Box 3’s table explains how AI may drive investment in intangible assets in the short and long term. The passage covers AI-related changes to financial products and employer training, followed by growth in organizational capital and brands across economies in 2015–2025."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-intangibles-2026:0028",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00017,
+  "input": 1299,
+  "model": "gpt-6-luna",
+  "output": 81,
+  "reasoning": 0,
+  "seconds": 2.47
+ }
+}

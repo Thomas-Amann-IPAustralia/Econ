@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.0001,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, section B20, this table reports trademark application class counts for the top 20 offices and origins in 2024. The excerpt shows counts by applicant origin and destination trademark office, including Iran, Italy, Japan, Mexico, the Republic of Korea, the Russian Federation, Türkiye, the UK, the US and Viet Nam."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0237",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.0002,
+  "input": 1546,
+  "model": "gpt-6-luna",
+  "output": 90,
+  "reasoning": 0,
+  "seconds": 2.41
+ }
+}

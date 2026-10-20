@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000107,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, the Design section describes industrial designs, their protection and usual term, and explains that “in force” refers to valid IP rights or active trademarks whose protection is maintained."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0495",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000213,
+  "input": 1077,
+  "model": "gpt-6-luna",
+  "output": 211,
+  "reasoning": 149,
+  "seconds": 5.13
+ }
+}

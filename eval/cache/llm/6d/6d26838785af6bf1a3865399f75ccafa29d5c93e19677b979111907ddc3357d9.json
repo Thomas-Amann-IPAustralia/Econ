@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.8e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026* (2026), this passage appears in the Human capital and research section, under Education, and explains the PISA indicator for reading, mathematics and science. It describes how 2022 scores for 15-year-olds are compiled across countries and economies, including the stated exceptions for China and Azerbaijan."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1709",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000157,
+  "input": 1158,
+  "model": "gpt-6-luna",
+  "output": 83,
+  "reasoning": 0,
+  "seconds": 2.72
+ }
+}

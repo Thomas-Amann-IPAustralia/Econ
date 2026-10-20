@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.6e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, in the section “How large and important is deep science entrepreneurship?”, this passage defines the Dealroom-WIPO Deep Science Startup Tracker and its coverage of startups and spinouts worldwide from 2000 onward. It describes the tracker’s venture-capital funding, deep-science field, technology-risk and capital-intensiveness criteria."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0220",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000151,
+  "input": 1075,
+  "model": "gpt-6-luna",
+  "output": 88,
+  "reasoning": 0,
+  "seconds": 2.96
+ }
+}

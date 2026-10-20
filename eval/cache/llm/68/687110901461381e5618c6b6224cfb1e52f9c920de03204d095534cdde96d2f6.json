@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.5e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, this passage is from the methodological discussion of principal component and reliability analysis. It explains how the GII combines the Innovation Input and Output Sub-Indices, reporting their correlations and equal weighting in the overall index."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1600",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00013,
+  "input": 977,
+  "model": "gpt-6-luna",
+  "output": 64,
+  "reasoning": 0,
+  "seconds": 2.0
+ }
+}

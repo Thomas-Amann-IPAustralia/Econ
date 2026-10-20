@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.4e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, the Barbados economy profile reports the country’s GII 2026 scores and ranks for infrastructure and market sophistication, including ecological sustainability, credit and investment indicators."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0396",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000168,
+  "input": 1407,
+  "model": "gpt-6-luna",
+  "output": 55,
+  "reasoning": 0,
+  "seconds": 2.15
+ }
+}

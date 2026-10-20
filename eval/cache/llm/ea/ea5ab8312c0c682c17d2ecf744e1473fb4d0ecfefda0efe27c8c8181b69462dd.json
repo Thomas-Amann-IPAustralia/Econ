@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.7e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, the patent statistics section presents potentially pending patent applications at the top 20 offices in 2024. The passage explains how pending applications are counted, notes that China’s data are excluded from the graph because only partial information was available, and cautions that office procedures differ."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0106",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000174,
+  "input": 1341,
+  "model": "gpt-6-luna",
+  "output": 79,
+  "reasoning": 0,
+  "seconds": 1.67
+ }
+}

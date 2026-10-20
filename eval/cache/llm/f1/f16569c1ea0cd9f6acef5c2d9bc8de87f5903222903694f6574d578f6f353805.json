@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9e-05,
+ "data": {
+  "context": "In WIPO’s Madrid Yearly Review 2026, table B28 in the statistical tables reports 2025 renewals of Madrid international registrations by origin and the number of designations covered by renewed registrations, alongside designations by designated member. The excerpt lists countries and territories including China, Canada, and the European Union."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0106",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00018,
+  "input": 1415,
+  "model": "gpt-6-luna",
+  "output": 77,
+  "reasoning": 0,
+  "seconds": 2.46
+ }
+}

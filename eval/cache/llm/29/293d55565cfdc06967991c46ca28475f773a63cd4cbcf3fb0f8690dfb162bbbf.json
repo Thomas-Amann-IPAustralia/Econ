@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.1e-05,
+ "data": {
+  "context": "In WIPO’s *Madrid Yearly Review 2026*, the section on provisional refusals reports the 2011–2025 trend in refusals of designations in Madrid international registrations. It notes that designated Madrid members issued around 173,500 provisional refusals in 2025, 6.4% fewer than in 2024."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0083",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000141,
+  "input": 994,
+  "model": "gpt-6-luna",
+  "output": 83,
+  "reasoning": 0,
+  "seconds": 2.17
+ }
+}

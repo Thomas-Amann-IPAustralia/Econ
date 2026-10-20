@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.7e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, section A32 presents the relative specialization index for the top 15 origins in five energy-related technology fields, based on published patent applications from 2021–2023. It explains that a positive index means an origin has a relatively high share of filings in that field."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0098",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000154,
+  "input": 1143,
+  "model": "gpt-6-luna",
+  "output": 79,
+  "reasoning": 0,
+  "seconds": 2.09
+ }
+}

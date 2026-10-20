@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.4e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, Jamaica’s economy profile reports its Business sophistication pillar indicators for innovation linkages and knowledge absorption. The passage gives Jamaica’s scores, ranks, and indicator values, including intellectual property payments and high-tech imports."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0855",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000168,
+  "input": 1362,
+  "model": "gpt-6-luna",
+  "output": 64,
+  "reasoning": 0,
+  "seconds": 1.96
+ }
+}

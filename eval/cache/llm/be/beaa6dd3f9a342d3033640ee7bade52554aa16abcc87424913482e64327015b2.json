@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, the Norway economy profile reports Norway’s scores and ranks for human capital and research—especially R&D—and infrastructure indicators."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1157",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000164,
+  "input": 1401,
+  "model": "gpt-6-luna",
+  "output": 48,
+  "reasoning": 0,
+  "seconds": 1.63
+ }
+}

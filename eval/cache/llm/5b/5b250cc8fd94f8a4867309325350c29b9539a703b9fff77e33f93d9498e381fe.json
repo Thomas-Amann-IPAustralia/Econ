@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "context": "In WIPO’s *Madrid Yearly Review 2026*, this passage in the section on renewals of Madrid international registrations covers renewal trends by origin, including selected middle-income countries, and the average number of designations renewed worldwide from 2011 to 2025. It refers to figures B16–B18 and uses the registration holder’s address to identify origin."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0085",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000158,
+  "input": 1131,
+  "model": "gpt-6-luna",
+  "output": 89,
+  "reasoning": 0,
+  "seconds": 2.44
+ }
+}

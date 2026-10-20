@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, under “Step 2: Data checks,” this passage discusses JRC recommendations for treating indicator data in the GII, comparing winsorization and natural-log transformations with the 2025 edition. It identifies how adjusting the maximum number of winsorized values could affect selected indicators, including patent and intellectual-property-receipt measures."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1593",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00016,
+  "input": 1150,
+  "model": "gpt-6-luna",
+  "output": 89,
+  "reasoning": 0,
+  "seconds": 2.57
+ }
+}

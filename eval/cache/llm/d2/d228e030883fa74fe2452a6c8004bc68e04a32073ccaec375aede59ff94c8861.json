@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.3e-05,
+ "data": {
+  "context": "In WIPO’s *PCT Yearly Review 2026*, this passage accompanies the chart on average timeliness of transmitting PCT applications to the International Bureau from 2011 to 2025. It explains the deadline for receiving offices to send the record copy and how timeliness is measured, excluding applications transmitted under PCT Rule 19.4."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0157",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000145,
+  "input": 1029,
+  "model": "gpt-6-luna",
+  "output": 84,
+  "reasoning": 0,
+  "seconds": 3.47
+ }
+}

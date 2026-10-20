@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.4e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, in the section “What policies and practices can strengthen deep science entrepreneurship ecosystems?”, this passage describes funding and support measures to help deep-science ventures move from research through validation and pilots to commercial scale, including evidence from the US SBIR program."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0286",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000149,
+  "input": 1135,
+  "model": "gpt-6-luna",
+  "output": 71,
+  "reasoning": 0,
+  "seconds": 1.96
+ }
+}

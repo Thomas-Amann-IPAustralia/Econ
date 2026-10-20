@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.3e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, in Ireland’s economy profile, this passage reports Ireland’s scores and ranks for knowledge diffusion and creative outputs, including intellectual property receipts, high-tech and ICT services exports, intangible assets, trademarks, and industrial designs."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0830",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000166,
+  "input": 1331,
+  "model": "gpt-6-luna",
+  "output": 65,
+  "reasoning": 0,
+  "seconds": 1.83
+ }
+}

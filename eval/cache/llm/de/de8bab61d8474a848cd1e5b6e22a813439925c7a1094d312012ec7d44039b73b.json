@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.6e-05,
+ "data": {
+  "context": "In WIPO’s PCT Yearly Review 2026, section B6 covers PCT national phase entries by origin and region in 2022–2024. The table reports entry counts, regional shares and year-on-year changes, including declines across geographical regions in 2024."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0105",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000191,
+  "input": 1549,
+  "model": "gpt-6-luna",
+  "output": 72,
+  "reasoning": 0,
+  "seconds": 2.12
+ }
+}

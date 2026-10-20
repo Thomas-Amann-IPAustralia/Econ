@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, in Lesotho’s economy profile, this passage reports the country’s Human capital and research pillar score and rank, with indicator scores and rankings for education and tertiary education."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0940",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00016,
+  "input": 1320,
+  "model": "gpt-6-luna",
+  "output": 56,
+  "reasoning": 0,
+  "seconds": 2.24
+ }
+}

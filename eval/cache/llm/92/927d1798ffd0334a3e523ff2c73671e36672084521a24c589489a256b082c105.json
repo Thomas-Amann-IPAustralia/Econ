@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.1e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, section B1, this note accompanies the worldwide trend in trademark applications from 2010 to 2024. World totals are WIPO estimates based on data from 170 IP offices and include direct filings and, where applicable, Madrid System designations."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0212",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000142,
+  "input": 1047,
+  "model": "gpt-6-luna",
+  "output": 75,
+  "reasoning": 0,
+  "seconds": 2.81
+ }
+}

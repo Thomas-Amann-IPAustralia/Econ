@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.8e-05,
+ "data": {
+  "context": "In WIPO’s *Madrid Yearly Review 2026*, the section on goods and services protected by Madrid applications describes Nice Classification statistics for international trademark applications worldwide. It notes that applicants specified an average of two to three classes per application over the past 15 years, and that the total classes specified rose slightly in 2025."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0013",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000135,
+  "input": 948,
+  "model": "gpt-6-luna",
+  "output": 81,
+  "reasoning": 0,
+  "seconds": 2.24
+ }
+}

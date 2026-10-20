@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, this Lesotho economy profile reports indicators for knowledge and technology outputs and creative outputs, including knowledge diffusion and intellectual property receipts. It gives Lesotho’s scores and ranks alongside data availability and selected indicator notes."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0946",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000164,
+  "input": 1320,
+  "model": "gpt-6-luna",
+  "output": 64,
+  "reasoning": 0,
+  "seconds": 2.53
+ }
+}

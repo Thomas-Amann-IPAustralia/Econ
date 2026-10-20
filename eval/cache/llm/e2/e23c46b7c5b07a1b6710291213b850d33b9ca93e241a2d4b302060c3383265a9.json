@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, table B44 presents 2024 trademark application class counts by office and origin, including resident and non-resident applications, equivalent class counts by origin, and changes from the previous year. This excerpt covers Slovakia, Slovenia and the Solomon Islands."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0274",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000165,
+  "input": 1289,
+  "model": "gpt-6-luna",
+  "output": 73,
+  "reasoning": 0,
+  "seconds": 2.62
+ }
+}

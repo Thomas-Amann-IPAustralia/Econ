@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.3e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, in the section on economies reaching new ranking thresholds, this passage describes 2026 GII rankings and the factors associated with gains by Portugal, Lithuania, Latvia, Kuwait, the Republic of Moldova, Costa Rica, Kazakhstan and Bhutan."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0115",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000145,
+  "input": 1092,
+  "model": "gpt-6-luna",
+  "output": 71,
+  "reasoning": 0,
+  "seconds": 1.25
+ }
+}

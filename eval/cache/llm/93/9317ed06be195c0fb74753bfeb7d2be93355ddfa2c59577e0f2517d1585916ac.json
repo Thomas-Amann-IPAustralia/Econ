@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In WIPO’s *Australia ranking in the Global Innovation Index 2026*, this passage presents Australia’s infrastructure indicators in the GII, including information and communication technologies, general infrastructure and ecological sustainability."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026-australia:0025",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000163,
+  "input": 1371,
+  "model": "gpt-6-luna",
+  "output": 52,
+  "reasoning": 0,
+  "seconds": 1.83
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, the Uzbekistan economy profile reports indicators for knowledge and technology outputs and creative outputs, including intellectual property receipts, trademarks and industrial designs, with scores and ranks."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1512",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00016,
+  "input": 1322,
+  "model": "gpt-6-luna",
+  "output": 55,
+  "reasoning": 0,
+  "seconds": 2.03
+ }
+}

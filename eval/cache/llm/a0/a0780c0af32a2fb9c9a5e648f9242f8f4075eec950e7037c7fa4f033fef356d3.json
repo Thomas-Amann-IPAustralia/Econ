@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, the section “Deep science firms vs. startups and spinouts since 2000” continues a table of the 20 most valuable deep science companies founded since 2000. It lists company rankings, economies, founding years, valuations, venture capital funding and sectors."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0243",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00018,
+  "input": 1419,
+  "model": "gpt-6-luna",
+  "output": 77,
+  "reasoning": 0,
+  "seconds": 1.38
+ }
+}

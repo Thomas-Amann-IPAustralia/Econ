@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.8e-05,
+ "data": {
+  "context": "In WIPO’s *Madrid Yearly Review 2026*, this glossary passage defines the Madrid System and related terms used in the report’s statistics on international trademark registration. It explains the system’s governing treaty and administration, and defines Nice Classification, non-resident applications, opposition, and origin."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0154",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000156,
+  "input": 1208,
+  "model": "gpt-6-luna",
+  "output": 71,
+  "reasoning": 0,
+  "seconds": 2.1
+ }
+}

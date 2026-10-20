@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.9e-05,
+ "data": {
+  "context": "In WIPO’s *Madrid Yearly Review 2026: International Registration of Marks*, this passage is part of the Madrid international applications section and lists applicants ranked by the number of Madrid applications they filed in 2025, alongside their origin and 2024 application totals. The preceding table entries continue the same worldwide applicant ranking."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0026",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000179,
+  "input": 1405,
+  "model": "gpt-6-luna",
+  "output": 78,
+  "reasoning": 0,
+  "seconds": 2.19
+ }
+}

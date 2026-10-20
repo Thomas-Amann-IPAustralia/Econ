@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, table B44 reports 2024 trademark registration class counts by office and origin, and trademark registrations in force with year-on-year changes. It covers national and regional offices worldwide; preceding notes explain data qualifications and abbreviations."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0281",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000164,
+  "input": 1297,
+  "model": "gpt-6-luna",
+  "output": 69,
+  "reasoning": 0,
+  "seconds": 2.17
+ }
+}

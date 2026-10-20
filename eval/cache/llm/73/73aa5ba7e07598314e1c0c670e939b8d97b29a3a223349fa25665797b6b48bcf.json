@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.3e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, this Tunisia economy profile reports the country’s overall GII ranking and scores, income group, region and population and GDP measures, followed by scores and rankings for the Institutions pillar and its indicators."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1424",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000166,
+  "input": 1356,
+  "model": "gpt-6-luna",
+  "output": 61,
+  "reasoning": 0,
+  "seconds": 2.29
+ }
+}

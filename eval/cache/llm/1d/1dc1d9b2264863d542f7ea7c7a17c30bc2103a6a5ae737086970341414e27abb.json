@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.6e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, in the section “Policy: from copying to fit” on science-powered entrepreneurship, this passage discusses how lower- and middle-income economies can tailor startup and IP policies to local capabilities. Drawing on cases from Brazil, China, the Republic of Korea and South Africa, it describes capability gaps between public research and domestic firms, and the need to pair university and technology-transfer reforms with demand-side investment."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0270",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000172,
+  "input": 1207,
+  "model": "gpt-6-luna",
+  "output": 102,
+  "reasoning": 0,
+  "seconds": 2.54
+ }
+}

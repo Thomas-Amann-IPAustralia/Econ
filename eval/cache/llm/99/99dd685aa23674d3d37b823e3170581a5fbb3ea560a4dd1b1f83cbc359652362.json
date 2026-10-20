@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "context": "In WIPO’s *PCT Yearly Review 2026: The International Patent System*, this passage lists the PCT Contracting States. It follows the statement that the PCT had 158 Contracting States in 2025."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0196",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000159,
+  "input": 1292,
+  "model": "gpt-6-luna",
+  "output": 60,
+  "reasoning": 0,
+  "seconds": 2.44
+ }
+}

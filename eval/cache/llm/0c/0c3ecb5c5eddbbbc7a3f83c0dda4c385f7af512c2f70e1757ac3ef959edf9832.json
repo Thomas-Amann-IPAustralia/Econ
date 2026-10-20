@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.7e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, the patent statistics section’s figure A44 examines patent survival by application year across 85 offices. It shows the share of applications filed in each year that were in force in 2024, noting that patent holders may let patents lapse and reporting how long granted patents remained in force."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0103",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000155,
+  "input": 1131,
+  "model": "gpt-6-luna",
+  "output": 83,
+  "reasoning": 0,
+  "seconds": 2.35
+ }
+}

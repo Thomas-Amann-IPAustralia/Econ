@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.6e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, this passage explains the comparison of application and registration design counts across offices with different filing rules, then presents the regional distribution of application design counts in 2014 and 2024. It covers industrial designs worldwide, including the 2024 regional shares and average annual growth over 2014–2024."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0323",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000152,
+  "input": 1089,
+  "model": "gpt-6-luna",
+  "output": 86,
+  "reasoning": 0,
+  "seconds": 4.61
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.5e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, this Benin economy profile reports the country’s Business sophistication pillar scores and ranks, covering innovation linkages and knowledge absorption indicators, including intellectual property payments, trade, FDI, and research-industry collaboration."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0425",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00017,
+  "input": 1367,
+  "model": "gpt-6-luna",
+  "output": 66,
+  "reasoning": 0,
+  "seconds": 2.07
+ }
+}

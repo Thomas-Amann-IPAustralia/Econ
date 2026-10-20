@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.2e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, this figure in the trademark statistics section compares the 2024 class counts in trademark applications filed abroad by the top 20 origins. It distinguishes absolute counts, which count applications at regional offices once, from equivalent counts, which account for the member states."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0231",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000143,
+  "input": 1042,
+  "model": "gpt-6-luna",
+  "output": 77,
+  "reasoning": 0,
+  "seconds": 1.7
+ }
+}

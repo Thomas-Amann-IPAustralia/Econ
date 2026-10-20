@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.4e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, Brazil’s economy profile reports indicators for the Knowledge and technology outputs and Creative outputs pillars. This passage gives Brazil’s knowledge-diffusion and intangible-asset results, including intellectual property receipts, trademarks and industrial designs, with scores and GII ranks."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0473",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000169,
+  "input": 1321,
+  "model": "gpt-6-luna",
+  "output": 73,
+  "reasoning": 0,
+  "seconds": 2.11
+ }
+}

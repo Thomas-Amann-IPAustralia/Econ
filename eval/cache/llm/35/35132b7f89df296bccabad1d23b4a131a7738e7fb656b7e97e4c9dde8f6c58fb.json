@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.8e-05,
+ "data": {
+  "context": "In WIPO’s *Madrid Yearly Review 2026* (2026), the section on renewals of Madrid international registrations describes worldwide renewal trends from 2011 to 2025. It explains that figure B13 shows renewals, which depend on registrations and renewals recorded 10 years earlier."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0066",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000137,
+  "input": 999,
+  "model": "gpt-6-luna",
+  "output": 74,
+  "reasoning": 0,
+  "seconds": 2.2
+ }
+}

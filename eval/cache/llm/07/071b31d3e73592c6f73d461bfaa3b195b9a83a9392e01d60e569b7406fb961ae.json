@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.7e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, section C5, “Trend in registration design counts worldwide, 2010–2024,” this note explains that worldwide totals are WIPO estimates based on 158 IP offices and include designs in registrations issued for direct filings and Hague System designations."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0339",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000134,
+  "input": 968,
+  "model": "gpt-6-luna",
+  "output": 75,
+  "reasoning": 0,
+  "seconds": 1.9
+ }
+}

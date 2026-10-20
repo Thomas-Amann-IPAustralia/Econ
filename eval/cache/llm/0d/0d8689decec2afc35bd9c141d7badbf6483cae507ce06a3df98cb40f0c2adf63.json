@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.8e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, the patent statistics appendix section “Patent applications by office and origin, 2024” presents country-level 2024 patent application counts and year-on-year changes, distinguishing filings by office and by origin and showing PCT national phase entries. The excerpt lists India, Indonesia, Iran, Iraq, Ireland, Israel, Italy and Jamaica."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0126",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000196,
+  "input": 1490,
+  "model": "gpt-6-luna",
+  "output": 93,
+  "reasoning": 0,
+  "seconds": 2.61
+ }
+}

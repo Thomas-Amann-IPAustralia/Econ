@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.7e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, the “Patent family” topic defines patent families and explains how they account for inventions with patent applications filed in multiple jurisdictions. The definition covers interlinked invention applications and excludes families associated with utility model applications."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0511",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000134,
+  "input": 1016,
+  "model": "gpt-6-luna",
+  "output": 65,
+  "reasoning": 0,
+  "seconds": 1.77
+ }
+}

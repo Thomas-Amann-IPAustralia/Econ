@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, in the section “Who leads global innovation in 2026?”, this passage describes the leading innovation economies and their rankings, emphasizing stability among the top 25 and the established presence of Asian economies. It also highlights the Republic of Korea’s business R&D and patent strengths, Singapore’s innovation inputs and China’s position."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0107",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000158,
+  "input": 1154,
+  "model": "gpt-6-luna",
+  "output": 86,
+  "reasoning": 0,
+  "seconds": 1.3
+ }
+}

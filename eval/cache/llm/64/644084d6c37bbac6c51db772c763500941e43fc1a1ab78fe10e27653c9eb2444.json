@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.8e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, the “Patent office procedural data, 2024” section presents country-level figures on utility model applications and grants, including resident and non-resident breakdowns. This excerpt covers offices from Malaysia to Norway."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0182",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000177,
+  "input": 1443,
+  "model": "gpt-6-luna",
+  "output": 66,
+  "reasoning": 0,
+  "seconds": 2.94
+ }
+}

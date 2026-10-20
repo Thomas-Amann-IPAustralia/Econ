@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In WIPO’s *World Intangible Investment Highlights 2026*, the “Stylized trend 2” section compares real intangible and tangible investment growth amid economic headwinds. It reports annual growth from 2020 to 2025 across 22 EU economies, the UK and the US, and explains the resilience of investment in software, data, R&D, organizational capital and training."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-intangibles-2026:0008",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000164,
+  "input": 1188,
+  "model": "gpt-6-luna",
+  "output": 90,
+  "reasoning": 0,
+  "seconds": 2.17
+ }
+}

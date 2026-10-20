@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.2e-05,
+ "data": {
+  "context": "In WIPO’s *Madrid Yearly Review 2026* (2026), the administration statistics section discusses formal compliance in Madrid international applications received by the International Bureau (IB). It explains what makes an application irregular and reports the share of applications meeting all formal requirements in 2025, including irregularities involving classification of goods and services."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0114",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000143,
+  "input": 1035,
+  "model": "gpt-6-luna",
+  "output": 80,
+  "reasoning": 0,
+  "seconds": 1.79
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.7e-05,
+ "data": {
+  "context": "In WIPO’s *World Intangible Investment Highlights 2026*, this passage discusses how AI is affecting investment across intangible asset categories, following an update on AI investment trends since 2025. It describes effects on organizational capital, R&D, software and data, brands, design, creative content, financial products and skills, with adoption patterns varying by industry and country."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-intangibles-2026:0024",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000175,
+  "input": 1316,
+  "model": "gpt-6-luna",
+  "output": 86,
+  "reasoning": 0,
+  "seconds": 4.57
+ }
+}

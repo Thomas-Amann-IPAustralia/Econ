@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.7e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, section C1, this passage concerns worldwide industrial design application trends from 2010 to 2024. It explains that China’s design application data from 2017 include only applications with fees paid, and that WIPO’s worldwide totals are estimates covering 159 IP offices and direct filings plus Hague System designations."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0335",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000153,
+  "input": 1091,
+  "model": "gpt-6-luna",
+  "output": 88,
+  "reasoning": 0,
+  "seconds": 2.31
+ }
+}

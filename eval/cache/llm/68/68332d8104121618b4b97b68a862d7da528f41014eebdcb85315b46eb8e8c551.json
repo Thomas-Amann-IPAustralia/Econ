@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.008833,
+ "data": {
+  "misattributed_A": 0,
+  "misattributed_B": 0,
+  "reason": "Answer A directly addresses both parts of the question, providing detailed figures for Australian trends as well as global and PCT trends drawn directly from WIPO publications (including 2024–2025 data). Answer B wrongly claims in its gaps that recent worldwide totals and PCT time series were missing from the passages, leading to a much less complete answer.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v2:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "both-2:ab",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.008833,
+  "input": 11222,
+  "model": "gemini-3.8-flash",
+  "output": 111,
+  "reasoning": 0,
+  "seconds": 3.06
+ }
+}

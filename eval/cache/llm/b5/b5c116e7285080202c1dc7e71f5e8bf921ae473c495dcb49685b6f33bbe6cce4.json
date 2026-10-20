@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.9e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, this table section reports correlations and variance explained for indicators, sub-pillars, sub-indices and the overall GII. The rows shown compare education-related input indicators with patenting and research-output indicators, including patents by origin and scientific publications."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1616",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000179,
+  "input": 1430,
+  "model": "gpt-6-luna",
+  "output": 72,
+  "reasoning": 0,
+  "seconds": 2.34
+ }
+}

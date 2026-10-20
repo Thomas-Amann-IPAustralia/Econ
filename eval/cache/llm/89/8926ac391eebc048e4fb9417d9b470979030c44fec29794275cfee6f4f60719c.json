@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.2e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, statistical table A61 reports 2024 patent grants by office and origin, including resident and non-resident grants and changes from the previous year, alongside patents in force and their annual changes for countries and offices worldwide."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0144",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000183,
+  "input": 1489,
+  "model": "gpt-6-luna",
+  "output": 68,
+  "reasoning": 0,
+  "seconds": 1.9
+ }
+}

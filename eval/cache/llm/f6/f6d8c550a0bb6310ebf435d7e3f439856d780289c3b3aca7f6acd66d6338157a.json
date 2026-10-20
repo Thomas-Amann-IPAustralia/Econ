@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.1e-05,
+ "data": {
+  "context": "In WIPO’s *Madrid Yearly Review 2026*, in the section on the international application and registration procedure, this passage explains how designated Madrid members decide whether to protect an international trademark registration under domestic law, including the 12- or 18-month period for communicating a provisional refusal."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0145",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000182,
+  "input": 1066,
+  "model": "gpt-6-luna",
+  "output": 151,
+  "reasoning": 78,
+  "seconds": 3.72
+ }
+}

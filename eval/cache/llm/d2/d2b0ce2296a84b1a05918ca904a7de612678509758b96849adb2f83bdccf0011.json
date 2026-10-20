@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.7e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, Côte d’Ivoire’s economy profile reports its scores and ranks for the Human capital and research pillar, covering education and tertiary education indicators."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0593",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000155,
+  "input": 1289,
+  "model": "gpt-6-luna",
+  "output": 53,
+  "reasoning": 0,
+  "seconds": 2.13
+ }
+}

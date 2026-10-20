@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.5e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, this passage concludes the acknowledgments and describes the GII Advisory Committee’s role, composition and contribution to the index since 2011."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0010",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00015,
+  "input": 1248,
+  "model": "gpt-6-luna",
+  "output": 50,
+  "reasoning": 0,
+  "seconds": 4.65
+ }
+}

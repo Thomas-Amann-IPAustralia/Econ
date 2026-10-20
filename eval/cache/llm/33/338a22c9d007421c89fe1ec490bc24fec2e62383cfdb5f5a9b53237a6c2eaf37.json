@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7e-05,
+ "data": {
+  "context": "In WIPO’s *PCT Yearly Review 2026: The International Patent System*, this passage accompanies figure A2 in the statistics section on the international phase of PCT applications. It notes that 2025 regional data are estimates and identifies the origins included in each world region compared with 2015."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0018",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00014,
+  "input": 1027,
+  "model": "gpt-6-luna",
+  "output": 75,
+  "reasoning": 0,
+  "seconds": 2.01
+ }
+}

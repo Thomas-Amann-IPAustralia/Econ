@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.4e-05,
+ "data": {
+  "context": "In WIPO’s *World Intangible Investment Highlights 2026*, this chart compares intangible investment in the five largest economies, in trillions of USD PPP, for 2015–2025. It notes that the US is excluded from the preceding chart because of its scale, and that some countries’ figures use earlier years where newer data are unavailable."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-intangibles-2026:0018",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000149,
+  "input": 1079,
+  "model": "gpt-6-luna",
+  "output": 83,
+  "reasoning": 0,
+  "seconds": 2.54
+ }
+}

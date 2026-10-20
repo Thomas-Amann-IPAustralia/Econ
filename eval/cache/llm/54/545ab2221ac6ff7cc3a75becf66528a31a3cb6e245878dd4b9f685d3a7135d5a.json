@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.6e-05,
+ "data": {
+  "context": "In WIPO’s *PCT Yearly Review 2026: The International Patent System*, section A3 compares the worldwide distribution of PCT applications across five technology sectors in 2015 and 2025. The figures use published applications classified by publication date, with IPC symbols mapped to technology sectors using WIPO’s concordance table."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0019",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000132,
+  "input": 921,
+  "model": "gpt-6-luna",
+  "output": 80,
+  "reasoning": 0,
+  "seconds": 2.45
+ }
+}

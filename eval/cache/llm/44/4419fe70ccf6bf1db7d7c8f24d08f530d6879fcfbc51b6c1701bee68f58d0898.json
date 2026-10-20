@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.5e-05,
+ "data": {
+  "context": "In WIPO’s Madrid Yearly Review 2026, this passage in the section on partial cancellations describes trends in total cancellations of Madrid registrations and cancellations requested by registration holders, worldwide, from 2011 to 2025. It explains the five-year dependency on the basic mark and notes that holder-requested cancellations can cover all or some goods and services across designated Madrid members."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0123",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00015,
+  "input": 1050,
+  "model": "gpt-6-luna",
+  "output": 91,
+  "reasoning": 0,
+  "seconds": 1.91
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.7e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, this passage accompanies the figure on patent applications at the top five offices from 1883 to 2024. It notes that Germany led in selected periods in the 1940s and that the Soviet Union led from 1964 to 1969; the Soviet Union is not shown in the figure."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0018",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000154,
+  "input": 1098,
+  "model": "gpt-6-luna",
+  "output": 88,
+  "reasoning": 0,
+  "seconds": 1.72
+ }
+}

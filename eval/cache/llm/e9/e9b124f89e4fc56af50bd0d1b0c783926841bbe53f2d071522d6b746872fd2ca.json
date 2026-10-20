@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.8e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, this passage discusses caveats in comparing economies’ year-to-year GII rankings. It notes that changes in indicator definitions or data collection can shift rankings independently of changes in innovation performance, and recommends detailed economy-level analysis to monitor performance and identify possible improvements."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1578",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000135,
+  "input": 979,
+  "model": "gpt-6-luna",
+  "output": 74,
+  "reasoning": 0,
+  "seconds": 1.58
+ }
+}

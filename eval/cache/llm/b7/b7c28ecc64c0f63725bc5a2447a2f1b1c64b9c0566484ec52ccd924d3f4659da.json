@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.4e-05,
+ "data": {
+  "context": "In WIPO’s *PCT Yearly Review 2026*, the section on top applicants in foreign-oriented patent families presents leading applicants using the PCT System in 2020–2022 and compares top applicants across 2017–2019 and 2020–2022. A foreign-oriented patent family has at least one filing outside the applicant’s home office."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0121",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000168,
+  "input": 1242,
+  "model": "gpt-6-luna",
+  "output": 87,
+  "reasoning": 0,
+  "seconds": 2.37
+ }
+}

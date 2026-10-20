@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.001474,
+ "data": {
+  "misattributed_A": 0,
+  "misattributed_B": 0,
+  "reason": "Both answers directly and accurately answer the question. Answer B is slightly better because it includes an important methodological caveat regarding the exclusion of employer-provided training and explicitly names the source report.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v2:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "int-4:ab",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.001474,
+  "input": 1590,
+  "model": "gemini-3.8-flash",
+  "output": 75,
+  "reasoning": 0,
+  "seconds": 2.41
+ }
+}

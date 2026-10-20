@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000106,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, the patent-statistics appendix section on foreign-oriented patent families for the top 20 origins in 2020–2021 defines patent families and identifies the data sources. The definition covers linked invention-patent applications and excludes utility model applications."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0091",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000212,
+  "input": 1279,
+  "model": "gpt-6-luna",
+  "output": 168,
+  "reasoning": 93,
+  "seconds": 3.59
+ }
+}

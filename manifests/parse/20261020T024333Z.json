@@ -1,0 +1,101 @@
+{
+  "argv": [
+    "parse",
+    "--workers",
+    "1",
+    "--only",
+    "wipo-gii-2026",
+    "--only",
+    "wipo-gii-2026-australia",
+    "--only",
+    "wipo-intangibles-2026",
+    "--only",
+    "wipo-pct-2026",
+    "--only",
+    "wipo-madrid-2026",
+    "--only",
+    "wipo-wipi-2025"
+  ],
+  "command": "parse",
+  "config_hash": "c533bebfe56aef06",
+  "counts": {
+    "documents": 6,
+    "elements": 6927,
+    "parsed_now": 2,
+    "text_findings": 0
+  },
+  "error": null,
+  "git": {
+    "commit": "3d5d3f8fb201fd323b1c24835ad8fb86af1f6dcd",
+    "dirty": true,
+    "dirty_paths": [
+      "config/pipeline.yaml",
+      "src/econ/config.py",
+      "src/econ/ingest/parse.py"
+    ]
+  },
+  "git_at_end": {
+    "commit": "bc27ac2ce57229be3d5c4a17fc2d92c71fea11da",
+    "dirty": true,
+    "dirty_paths": [
+      "eval/testset/wipo-v1.yaml"
+    ]
+  },
+  "inputs": {
+    "data/raw/wipo-gii-2026-australia.pdf": "48a1b2b41a3131eaef2f4edc5ca7da580b3fdad3a7eeb60147b8cb5b36dfffef",
+    "data/raw/wipo-gii-2026.pdf": "fe20db3be672521560faa07e684a2e3d5f1c8de03e1845a4fa41a97e6ffec578",
+    "data/raw/wipo-intangibles-2026.pdf": "938b87c6e24403883128b234777a8d637d7705e4a0ab232d811f76022b15e66c",
+    "data/raw/wipo-madrid-2026.pdf": "9735572be5ccd26fd6d7c37d658f6bc2ee8ab301c8fa8edb20b2ddd3c6d99550",
+    "data/raw/wipo-pct-2026.pdf": "48b8921556e1a8a551d849ab9ddcdf96c4b0c861f77c2d78116e2b1fd9e69ec1",
+    "data/raw/wipo-wipi-2025.pdf": "7e4d37a419ee9b186b39788dacc50e0611f724982eeb696da6356f32e7ab8da6"
+  },
+  "outputs": {
+    "library/elements/wipo-gii-2026-australia.jsonl": "7098f4ec5d2f01654b0eb0ebc866e6451ed87f3bf52b065b5c640ee34bd83764",
+    "library/elements/wipo-gii-2026.jsonl": "fb8ce406d48c2e3d5405c82205c91b81ef6036e4ed4c290934f95543fa7e4069",
+    "library/elements/wipo-intangibles-2026.jsonl": "515ea6ad00a0d0d2c289abdf3a65434b4198399a4768e0b4c79ff47bd5faada9",
+    "library/elements/wipo-madrid-2026.jsonl": "e389f0b575c779e5ff19aab72fb8aedee8f725ecef2afb2ef50d344b1fdc6f4d",
+    "library/elements/wipo-pct-2026.jsonl": "5549c283df503cee09c69c93b004e4eafb4bd7ab7509161c2f3874b613e829ae",
+    "library/elements/wipo-wipi-2025.jsonl": "a44751de51f5e47d8d12e20caec607019108103dda47f512e9b8592f4072ed42",
+    "library/parse.json": "34df18ef2e11e167f2354f6ee949004da48370c0927e795ace1ff28d3fbf4b13"
+  },
+  "params": {
+    "only": [
+      "wipo-gii-2026",
+      "wipo-gii-2026-australia",
+      "wipo-intangibles-2026",
+      "wipo-pct-2026",
+      "wipo-madrid-2026",
+      "wipo-wipi-2025"
+    ],
+    "timings": {
+      "wipo-gii-2026": {
+        "seconds": 3389.2,
+        "status": "ConversionStatus.SUCCESS,cached"
+      },
+      "wipo-wipi-2025": {
+        "seconds": 497.1,
+        "status": "ConversionStatus.SUCCESS,cached"
+      }
+    },
+    "workers": 1
+  },
+  "run_id": "20261020T024333Z",
+  "seconds": 3959.1,
+  "status": "passed",
+  "upstream": {
+    "sweep": "20261019T213822Z"
+  },
+  "versions": {
+    "docling": "2.140.0",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.0",
+    "pypdfium2": "5.14.0",
+    "python": "3.12.3",
+    "sentence-transformers": "6.1.0",
+    "tokenizers": "0.23.3",
+    "torch": "2.14.1+cpu"
+  },
+  "warnings": [
+    "wipo-gii-2026-australia: no licence statement found in the extracted text"
+  ]
+}

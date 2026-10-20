@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.6e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, the India economy profile reports India’s infrastructure and market sophistication indicators, including scores, ranks, and identified strengths or weaknesses. The passage covers ecological sustainability, credit, and investment, with venture capital and startup financing measures."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0799",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000171,
+  "input": 1380,
+  "model": "gpt-6-luna",
+  "output": 67,
+  "reasoning": 0,
+  "seconds": 2.21
+ }
+}

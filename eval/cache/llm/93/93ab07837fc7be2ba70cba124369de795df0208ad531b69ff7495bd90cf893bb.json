@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.7e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, section B46 reports trademark office procedural data for 2024. The table gives office-level application processing outcomes, pending applications, examiner numbers, and time to first action and final decision for countries including Lithuania, Mexico, and Myanmar."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0313",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000175,
+  "input": 1395,
+  "model": "gpt-6-luna",
+  "output": 71,
+  "reasoning": 0,
+  "seconds": 1.89
+ }
+}

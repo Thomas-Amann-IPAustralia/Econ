@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.1e-05,
+ "data": {
+  "context": "In WIPO’s PCT Yearly Review 2026, in the section on where PCT applications were filed, this passage compares regional shares of international PCT applications in 2025 with Asia’s share in 2015, noting the contributions of China and the Republic of Korea and the shares of other regions."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0006",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000142,
+  "input": 1043,
+  "model": "gpt-6-luna",
+  "output": 76,
+  "reasoning": 0,
+  "seconds": 2.49
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000113,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, the appendix table on technology-field distributions reports how patent families of selected universities and public research organizations were distributed across technology fields in 2020–2022."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0088",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000227,
+  "input": 1536,
+  "model": "gpt-6-luna",
+  "output": 146,
+  "reasoning": 86,
+  "seconds": 2.42
+ }
+}

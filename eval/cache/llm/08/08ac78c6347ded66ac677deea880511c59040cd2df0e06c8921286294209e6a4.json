@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.4e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, the business sophistication section’s knowledge absorption indicator reports telecommunications, computer and information services imports as a share of total trade in 2024. It describes the OECD EBOPS 2010 measure and cites WTO commercial services and WTO-OECD BaTiS data for 2020–2024."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1751",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000148,
+  "input": 1067,
+  "model": "gpt-6-luna",
+  "output": 83,
+  "reasoning": 0,
+  "seconds": 1.56
+ }
+}

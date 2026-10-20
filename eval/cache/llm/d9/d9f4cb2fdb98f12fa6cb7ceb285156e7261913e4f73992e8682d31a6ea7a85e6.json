@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.6e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index (GII) 2026, this passage is part of Kuwait’s economy profile and reports its pillar 6 knowledge-diffusion and pillar 7 creative-output indicators, including IP receipts, ICT services exports, trademarks, global brand value and industrial designs, with scores, rankings and noted strengths."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0901",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000172,
+  "input": 1330,
+  "model": "gpt-6-luna",
+  "output": 79,
+  "reasoning": 0,
+  "seconds": 2.49
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In WIPO’s *PCT Yearly Review 2026: The International Patent System*, this passage accompanies statistics on women inventors by technology field and region. It notes that, among PCT applications from Latin America and the Caribbean, organic fine chemistry was the only field in which women made up a majority of listed inventors."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0068",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000164,
+  "input": 1247,
+  "model": "gpt-6-luna",
+  "output": 79,
+  "reasoning": 0,
+  "seconds": 2.68
+ }
+}

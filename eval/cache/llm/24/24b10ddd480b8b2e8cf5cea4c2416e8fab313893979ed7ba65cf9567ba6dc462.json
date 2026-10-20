@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, this passage is part of Lesotho’s economy profile and reports the country’s Market sophistication and Business sophistication scores, ranks, and indicator data, including trade, domestic market scale, and knowledge workers."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0943",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00016,
+  "input": 1285,
+  "model": "gpt-6-luna",
+  "output": 62,
+  "reasoning": 0,
+  "seconds": 1.85
+ }
+}

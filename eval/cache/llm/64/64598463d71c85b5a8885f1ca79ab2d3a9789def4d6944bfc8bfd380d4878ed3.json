@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.2e-05,
+ "data": {
+  "context": "In WIPO’s *Madrid Yearly Review 2026*, this passage discusses the industries and regions represented among leading Madrid System applicants and their share of international trademark applications filed worldwide in 2025."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0011",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000144,
+  "input": 1177,
+  "model": "gpt-6-luna",
+  "output": 52,
+  "reasoning": 0,
+  "seconds": 1.96
+ }
+}

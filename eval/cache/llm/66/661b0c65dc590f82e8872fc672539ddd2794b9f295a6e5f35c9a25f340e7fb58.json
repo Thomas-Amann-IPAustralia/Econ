@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, this passage outlines the special chapter on deep science entrepreneurship, including its scope, topics and evidence sources. The chapter examines how deep science startups and spinouts scale, barriers to growth, developing economies, and the role of intellectual property."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0215",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00014,
+  "input": 1051,
+  "model": "gpt-6-luna",
+  "output": 70,
+  "reasoning": 0,
+  "seconds": 2.6
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.2e-05,
+ "data": {
+  "context": "WIPO’s *World Intellectual Property Indicators 2025*, in the trademark statistics section, presents resident trademark application class counts per USD 100 billion of GDP for selected origins in 2014 and 2024. The selection covers origins meeting stated GDP and application thresholds and is not an overall ranking; GDP is measured in 2021 PPP dollars."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0244",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000143,
+  "input": 1022,
+  "model": "gpt-6-luna",
+  "output": 82,
+  "reasoning": 0,
+  "seconds": 4.96
+ }
+}

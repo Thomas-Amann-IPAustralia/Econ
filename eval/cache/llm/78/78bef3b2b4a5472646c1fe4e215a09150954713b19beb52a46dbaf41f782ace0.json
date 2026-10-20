@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.1e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, this note accompanies chart C3 on worldwide resident and non-resident industrial design application counts from 2010 to 2024. The totals are WIPO estimates based on data from 159 IP offices and include designs filed directly and through the Hague System."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0337",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000142,
+  "input": 1032,
+  "model": "gpt-6-luna",
+  "output": 78,
+  "reasoning": 0,
+  "seconds": 2.57
+ }
+}

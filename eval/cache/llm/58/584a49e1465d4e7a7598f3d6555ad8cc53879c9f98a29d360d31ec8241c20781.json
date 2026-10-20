@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.4e-05,
+ "data": {
+  "context": "In WIPO’s *World Intangible Investment Highlights 2026*, Box 5, “Why brands matter more than ever,” this passage discusses how digital technologies affect brand investment and how the report estimates brand investment as intangible capital formation. It covers sampled economies, distinguishing externally purchased advertising and market research from in-house branding and marketing work."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-intangibles-2026:0037",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000169,
+  "input": 1290,
+  "model": "gpt-6-luna",
+  "output": 79,
+  "reasoning": 0,
+  "seconds": 2.21
+ }
+}

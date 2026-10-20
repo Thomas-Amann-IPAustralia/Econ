@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, in the section “Deep science firms vs. startups and spinouts since 2000,” this passage compares deep science ventures with all VC-backed startups and spinouts, including the 2000–2025 trend, the deep science share, and country counts."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0223",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000159,
+  "input": 1214,
+  "model": "gpt-6-luna",
+  "output": 75,
+  "reasoning": 0,
+  "seconds": 2.38
+ }
+}

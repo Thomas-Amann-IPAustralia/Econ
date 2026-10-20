@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.3e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026* (2026), section 7.2.3 on entertainment and media market per population, this passage describes the Global Telecom and Entertainment & Media Outlook indicator, reported per thousand people aged 15–69 for 2025. It notes how figures for selected Middle East and North Africa countries and for Australia and New Zealand were estimated from regional totals using GDP shares."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1775",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000166,
+  "input": 1176,
+  "model": "gpt-6-luna",
+  "output": 97,
+  "reasoning": 0,
+  "seconds": 1.83
+ }
+}

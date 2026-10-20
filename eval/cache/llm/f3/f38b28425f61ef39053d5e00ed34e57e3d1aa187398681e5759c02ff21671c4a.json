@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.6e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, this passage discusses worldwide extreme poverty trends, including changes in the share and number of people below the USD 3-a-day threshold from 1981 to 2025, with reference to China and other large emerging economies."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0096",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000132,
+  "input": 984,
+  "model": "gpt-6-luna",
+  "output": 68,
+  "reasoning": 0,
+  "seconds": 1.19
+ }
+}

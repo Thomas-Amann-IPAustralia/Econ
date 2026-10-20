@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.4e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, the “IP office survey coverage” section explains how offices report IP applications, grants and registrations by origin and why origin-specific totals are underreported. It notes that the share of 2024 totals with unknown origin is low for patent applications, trademark application class counts and design application counts."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0462",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000149,
+  "input": 1072,
+  "model": "gpt-6-luna",
+  "output": 84,
+  "reasoning": 0,
+  "seconds": 2.42
+ }
+}

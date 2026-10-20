@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, in the section on obstacles to scaling deep science ventures, this passage describes how institutional and regulatory barriers can delay spinout formation, investment and market entry. It concerns deep science entrepreneurship, including gene editing, autonomous systems and AI in health care, and explains the mismatch between software-era support and ventures’ needs for longer incubation and physical research infrastructure."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0262",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000165,
+  "input": 1198,
+  "model": "gpt-6-luna",
+  "output": 91,
+  "reasoning": 0,
+  "seconds": 2.73
+ }
+}

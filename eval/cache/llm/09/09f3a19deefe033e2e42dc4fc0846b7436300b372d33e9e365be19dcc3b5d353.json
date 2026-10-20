@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.1e-05,
+ "data": {
+  "context": "In WIPO’s PCT Yearly Review 2026, the university-applicant statistics section presents Table A17, ranking the top 50 university applicants by published PCT applications from 2023 to 2025. The table lists applicants’ origins, annual application counts and changes in ranking position."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0047",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000181,
+  "input": 1445,
+  "model": "gpt-6-luna",
+  "output": 73,
+  "reasoning": 0,
+  "seconds": 2.24
+ }
+}

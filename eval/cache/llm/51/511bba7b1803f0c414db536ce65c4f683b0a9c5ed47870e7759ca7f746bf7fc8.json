@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, Albania’s economy profile reports its pillar 7 Creative outputs indicators and rankings. The passage covers Albania’s 2026 scores for creative goods and services and online creativity, including exports, film production, domain names, GitHub commits and mobile app creation."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0312",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000165,
+  "input": 1286,
+  "model": "gpt-6-luna",
+  "output": 73,
+  "reasoning": 0,
+  "seconds": 2.12
+ }
+}

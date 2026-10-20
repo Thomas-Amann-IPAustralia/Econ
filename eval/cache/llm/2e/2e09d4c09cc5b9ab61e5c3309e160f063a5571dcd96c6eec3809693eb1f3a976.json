@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.7e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026* (2026), Viet Nam’s economy profile reports indicator scores and ranks for human capital and research and infrastructure. The passage covers R&D, ICT and general infrastructure measures, including data currency notes and Viet Nam’s relative strengths."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1526",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000175,
+  "input": 1402,
+  "model": "gpt-6-luna",
+  "output": 69,
+  "reasoning": 0,
+  "seconds": 1.89
+ }
+}

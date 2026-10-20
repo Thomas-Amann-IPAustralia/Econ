@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.3e-05,
+ "data": {
+  "context": "In WIPO’s *Madrid Yearly Review 2026*, the Glossary defines renewal and related Madrid System terms. It explains how international trademark registrations are kept active, their 10-year renewal periods, and how renewal can cover all or some designated Madrid members."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0156",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000145,
+  "input": 1122,
+  "model": "gpt-6-luna",
+  "output": 65,
+  "reasoning": 0,
+  "seconds": 2.36
+ }
+}

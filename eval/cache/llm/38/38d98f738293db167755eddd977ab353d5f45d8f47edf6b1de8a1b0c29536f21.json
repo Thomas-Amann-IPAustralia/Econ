@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.8e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, the patent statistics section reports the average age of patents in force at selected offices in 2019 and 2024. The passage explains how the average is calculated and identifies the Netherlands as the Kingdom of the Netherlands."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0104",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000137,
+  "input": 1034,
+  "model": "gpt-6-luna",
+  "output": 68,
+  "reasoning": 0,
+  "seconds": 1.99
+ }
+}

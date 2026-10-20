@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.4e-05,
+ "data": {
+  "context": "This passage is from WIPO’s *Global Innovation Index 2026* (GII 2026), in Cameroon’s economy profile. It reports Cameroon’s overall innovation ranking and scores, income group and region, and its scores and rankings for institutions and the business environment."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0529",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000169,
+  "input": 1351,
+  "model": "gpt-6-luna",
+  "output": 67,
+  "reasoning": 0,
+  "seconds": 1.98
+ }
+}

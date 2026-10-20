@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7e-05,
+ "data": {
+  "context": "In WIPO’s *PCT Yearly Review 2026*, this passage accompanies the chart on trends in PCT national phase entries from 2010 to 2024. It explains the data coverage and a USPTO methodology change that excludes requests for continued examination from national phase entry counts."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0099",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00014,
+  "input": 1040,
+  "model": "gpt-6-luna",
+  "output": 71,
+  "reasoning": 0,
+  "seconds": 2.5
+ }
+}

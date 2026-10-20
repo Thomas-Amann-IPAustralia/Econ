@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.6e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, the section on innovation-cluster intensity compares leading clusters by innovation intensity relative to population and by overall scale. It reports rankings for clusters including San Jose-San Francisco, Cambridge, Ningde, and Boston-Cambridge, and highlights differences between scale and intensity."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0043",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000152,
+  "input": 1149,
+  "model": "gpt-6-luna",
+  "output": 75,
+  "reasoning": 0,
+  "seconds": 2.65
+ }
+}

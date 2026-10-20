@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.3e-05,
+ "data": {
+  "context": "In WIPO’s *PCT Yearly Review 2026: The International Patent System*, this passage is in the section on PCT applications by origin and shows their regional distribution and the 1979–2025 filing trends for the five leading origins. It concerns international patent applications filed under the Patent Cooperation Treaty; 2025 data are WIPO estimates."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0022",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000147,
+  "input": 1046,
+  "model": "gpt-6-luna",
+  "output": 85,
+  "reasoning": 0,
+  "seconds": 2.8
+ }
+}

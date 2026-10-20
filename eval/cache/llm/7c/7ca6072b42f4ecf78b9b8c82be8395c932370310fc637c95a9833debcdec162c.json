@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.3e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, this passage explains the Human capital and research indicator for QS university rankings. It reports each country’s average score for its top three universities, using the QS global top 1,000 ranking published in June 2025; countries with fewer than three listed universities receive zero for each missing university."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1717",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000146,
+  "input": 1054,
+  "model": "gpt-6-luna",
+  "output": 81,
+  "reasoning": 0,
+  "seconds": 1.54
+ }
+}

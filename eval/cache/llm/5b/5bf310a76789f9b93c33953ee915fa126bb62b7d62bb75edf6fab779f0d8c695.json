@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.6e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026* (Uruguay economy profile), this passage reports Uruguay’s scores and ranks for human capital and research and infrastructure, including research and development, ICT, general infrastructure, and indicator-level strengths and weaknesses."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1498",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000171,
+  "input": 1396,
+  "model": "gpt-6-luna",
+  "output": 63,
+  "reasoning": 0,
+  "seconds": 1.97
+ }
+}

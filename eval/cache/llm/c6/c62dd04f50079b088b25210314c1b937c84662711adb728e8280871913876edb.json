@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.1e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, Annex table A62 on patent office procedural data presents 2024 utility model applications and grants by office, including resident and non-resident totals for the listed countries."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0183",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000181,
+  "input": 1508,
+  "model": "gpt-6-luna",
+  "output": 60,
+  "reasoning": 0,
+  "seconds": 5.63
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.1e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, Appendix II, Table 7 compares the top 25 economies’ input-pillar shares and output shares with their data-envelopment-analysis (DEA) efficiency scores and ranks. This passage gives Iceland’s results and its difference between DEA rank and GII rank."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1692",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000162,
+  "input": 1245,
+  "model": "gpt-6-luna",
+  "output": 75,
+  "reasoning": 0,
+  "seconds": 2.46
+ }
+}

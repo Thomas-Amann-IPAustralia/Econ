@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.4e-05,
+ "data": {
+  "context": "This passage is from WIPO’s *World Intangible Investment Highlights 2026*, in the discussion of measurement gaps and the measurement framework. It explains challenges in measuring intangible investment and describes the Global INTAN-Invest Database’s national-accounts framework, including measured and unmeasured intangible assets."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-intangibles-2026:0045",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000149,
+  "input": 1137,
+  "model": "gpt-6-luna",
+  "output": 71,
+  "reasoning": 0,
+  "seconds": 2.16
+ }
+}

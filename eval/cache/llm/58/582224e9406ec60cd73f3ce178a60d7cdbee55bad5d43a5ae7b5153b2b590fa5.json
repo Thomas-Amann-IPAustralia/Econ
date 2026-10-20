@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.7e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, the conclusion of its special theme on science-powered entrepreneurship discusses whether deep science can raise productivity and the policy conditions for moving research from laboratory to market. It identifies finance, shared infrastructure, suitable regulatory pathways, workable IP frameworks and talent as important, while noting that commercial success is not assured."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0295",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000134,
+  "input": 934,
+  "model": "gpt-6-luna",
+  "output": 81,
+  "reasoning": 0,
+  "seconds": 2.59
+ }
+}

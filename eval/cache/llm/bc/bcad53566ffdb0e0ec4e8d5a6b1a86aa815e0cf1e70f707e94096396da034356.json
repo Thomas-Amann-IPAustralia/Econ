@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.3e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, the patent statistics section presents the worldwide trend in utility model applications from 2010 to 2024. The note explains that world totals are WIPO estimates based on data from 84 patent offices and flags a comparability break in China’s pre-2017 data."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0113",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000146,
+  "input": 1061,
+  "model": "gpt-6-luna",
+  "output": 79,
+  "reasoning": 0,
+  "seconds": 2.04
+ }
+}

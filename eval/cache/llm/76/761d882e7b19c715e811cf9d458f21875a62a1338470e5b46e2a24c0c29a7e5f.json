@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.6e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, the Czech Republic economy profile reports indicators for knowledge and technology outputs and creative outputs. This passage gives the country’s knowledge-diffusion score and rank, including intellectual property receipts, export complexity, high-tech and ICT services exports, and ISO 9001 quality certifications."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0626",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000171,
+  "input": 1335,
+  "model": "gpt-6-luna",
+  "output": 76,
+  "reasoning": 0,
+  "seconds": 2.82
+ }
+}

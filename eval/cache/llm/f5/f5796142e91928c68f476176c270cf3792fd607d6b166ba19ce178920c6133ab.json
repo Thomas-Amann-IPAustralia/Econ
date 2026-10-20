@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.3e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, the glossary defines “applicant” and “application” across the IP rights covered in the report. It explains that the first-named applicant determines an application’s origin in the statistics, and that an application can mean either the procedure for seeking IP protection or the documents submitted to an IP office."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0481",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000145,
+  "input": 1029,
+  "model": "gpt-6-luna",
+  "output": 84,
+  "reasoning": 0,
+  "seconds": 2.46
+ }
+}

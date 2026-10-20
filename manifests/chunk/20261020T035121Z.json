@@ -1,0 +1,99 @@
+{
+  "argv": [
+    "chunk"
+  ],
+  "command": "chunk",
+  "config_hash": "c533bebfe56aef06",
+  "counts": {
+    "F384": {
+      "chunks": 2852,
+      "max_tokens": 381,
+      "median_tokens": 380,
+      "total_tokens": 1079245
+    },
+    "S256": {
+      "chunks": 5387,
+      "max_tokens": 256,
+      "median_tokens": 213,
+      "total_tokens": 1042198
+    },
+    "S384": {
+      "chunks": 3741,
+      "max_tokens": 384,
+      "median_tokens": 282,
+      "total_tokens": 973747
+    },
+    "S384-noprefix": {
+      "chunks": 3608,
+      "max_tokens": 384,
+      "median_tokens": 269,
+      "total_tokens": 897568
+    },
+    "S384-noprefix-nocite": {
+      "chunks": 3506,
+      "max_tokens": 384,
+      "median_tokens": 262,
+      "total_tokens": 861715
+    },
+    "S512": {
+      "chunks": 3025,
+      "max_tokens": 512,
+      "median_tokens": 317,
+      "total_tokens": 945733
+    },
+    "boilerplate_paragraphs": 24
+  },
+  "error": null,
+  "git": {
+    "commit": "bc27ac2ce57229be3d5c4a17fc2d92c71fea11da",
+    "dirty": true,
+    "dirty_paths": [
+      "eval/testset/wipo-v1.yaml",
+      "src/econ/kb/chunk.py"
+    ]
+  },
+  "git_at_end": {
+    "commit": "bc27ac2ce57229be3d5c4a17fc2d92c71fea11da",
+    "dirty": true,
+    "dirty_paths": [
+      "eval/testset/wipo-v1.yaml",
+      "src/econ/kb/chunk.py"
+    ]
+  },
+  "inputs": {},
+  "outputs": {
+    "library/chunks/F384.jsonl": "8c94527815afe10b2be260e26f6f690ad56f456b849afca2f02b0efb7ec4d227",
+    "library/chunks/S256.jsonl": "77d73af3ff28d48ae4904ce287b58422cd98cb69d2be0af5dea1cafe8cb8e3e3",
+    "library/chunks/S384-noprefix-nocite.jsonl": "7e690f3e85e63ed7ad33713a42338e034295ae23285c8b75faa97bc792533062",
+    "library/chunks/S384-noprefix.jsonl": "58536490a5bc249cd2b30128a089b901d6f08a6dee20664fc48dc026886339ea",
+    "library/chunks/S384.jsonl": "058724051eceb381a9ae5035fe7f96c479a9ec9daa353abd0044d347de52957f",
+    "library/chunks/S512.jsonl": "416527e0ccb75f7bce9671312330042419b2308c5b2b8341867980cbb5827038"
+  },
+  "params": {
+    "strategies": [
+      "F384",
+      "S256",
+      "S384",
+      "S512",
+      "S384-noprefix",
+      "S384-noprefix-nocite"
+    ]
+  },
+  "run_id": "20261020T035121Z",
+  "seconds": 73.3,
+  "status": "passed",
+  "upstream": {
+    "parse": "20261020T024333Z"
+  },
+  "versions": {
+    "docling": "2.140.0",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.0",
+    "pypdfium2": "5.14.0",
+    "python": "3.12.3",
+    "sentence-transformers": "6.1.0",
+    "tokenizers": "0.23.3",
+    "torch": "2.14.1+cpu"
+  },
+  "warnings": []
+}

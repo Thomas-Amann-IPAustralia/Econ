@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.5e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, Croatia’s economy profile reports its Business sophistication pillar indicators for innovation linkages and knowledge absorption. It gives Croatia’s scores and rankings for measures including university–industry collaboration, patent families, intellectual property payments, high-tech imports and research talent in businesses."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0606",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00017,
+  "input": 1339,
+  "model": "gpt-6-luna",
+  "output": 72,
+  "reasoning": 0,
+  "seconds": 1.92
+ }
+}

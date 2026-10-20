@@ -3,6 +3,8 @@
 # chunk ids and citations; never change a doc_id once answers cite it.
 # `url` is the publisher's page for the document, checked to resolve on 2026-10-18 (17 of 24 found; the
 # rest are left empty rather than guessed). The UI links to it beside the in-app viewer.
+# `publisher` is the default; a document from another publisher names its own (the WIPO documents, D-033).
+# `data` lists bucket objects that are not documents of their own but data a document's parse reads.
 bucket: econ-knowledge
 endpoint: "https://{account_id}.eu.r2.cloudflarestorage.com"
 publisher: IP Australia
@@ -157,3 +159,56 @@ documents:
     year: 2025
     series: Office of the Chief Economist analytic note
     authors: [Kevin Nguyen, Ye Rin Yoo, Michael Falk]
+  # --- WIPO (added 2026-10-19, D-033). Each PDF is byte-identical to the copy at its `url`, checked that day.
+  - doc_id: wipo-gii-2026
+    key: WIPO/2000-2026-en-global-innovation-index-2026-powering-entrepreneurs-at-the-frontier-of-science.pdf
+    title: "Global Innovation Index 2026: Powering entrepreneurs at the frontier of science"
+    year: 2026
+    series: WIPO Global Innovation Index
+    publisher: World Intellectual Property Organization (WIPO)
+    url: https://www.wipo.int/edocs/pubdocs/en/wipo-pub-2000-2026-en-global-innovation-index-2026.pdf
+  - doc_id: wipo-gii-2026-australia
+    key: WIPO/AustraliaGII-2026.pdf
+    title: Australia ranking in the Global Innovation Index 2026
+    year: 2026
+    series: WIPO Global Innovation Index
+    publisher: World Intellectual Property Organization (WIPO)
+    note: "A printout of WIPO's web page on Australia's Global Innovation Index 2026 results."
+    licence: CC BY 4.0   # not stated in the printout; the owner, 2026-10-20: "It's all CC 4.0" (D-034)
+  - doc_id: wipo-intangibles-2026
+    key: WIPO/wipo-pub-1097-en-world-intangible-investment-highlights.pdf
+    title: "World Intangible Investment Highlights 2026: Better data for better business and policy"
+    year: 2026
+    series: WIPO World Intangible Investment Highlights
+    publisher: World Intellectual Property Organization (WIPO)
+    url: https://www.wipo.int/edocs/pubdocs/en/wipo-pub-1097-en-world-intangible-investment-highlights.pdf
+  - doc_id: wipo-pct-2026
+    key: WIPO/wipo-pub-901-2026-en-patent-cooperation-treaty-yearly-review-2026.pdf
+    title: "PCT Yearly Review 2026: The International Patent System"
+    year: 2026
+    series: WIPO PCT Yearly Review
+    publisher: World Intellectual Property Organization (WIPO)
+    url: https://www.wipo.int/edocs/pubdocs/en/wipo-pub-901-2026-en-patent-cooperation-treaty-yearly-review-2026.pdf
+  - doc_id: wipo-madrid-2026
+    key: WIPO/wipo-pub-940-2026-en-madrid-yearly-review-2026.pdf
+    title: "Madrid Yearly Review 2026: International Registration of Marks"
+    year: 2026
+    series: WIPO Madrid Yearly Review
+    publisher: World Intellectual Property Organization (WIPO)
+    url: https://www.wipo.int/edocs/pubdocs/en/wipo-pub-940-2026-en-madrid-yearly-review-2026.pdf
+  - doc_id: wipo-wipi-2025
+    key: WIPO/wipo-pub-941-17-2025-en-world-intellectual-property-indicators-2025.pdf
+    title: World Intellectual Property Indicators 2025
+    year: 2025
+    series: WIPO World Intellectual Property Indicators
+    publisher: World Intellectual Property Organization (WIPO)
+    url: https://www.wipo.int/edocs/pubdocs/en/wipo-pub-941-17-2025-en-world-intellectual-property-indicators-2025.pdf
+
+data:
+  - doc_id: wipo-gii-2026-data
+    key: WIPO/wipo-pub-2000-2026-tech1.xlsx
+    title: Global Innovation Index 2026 data (index structure, economies, scores and ranks)
+    for_doc: wipo-gii-2026
+    use: gii-profiles   # the 139 economy-profile pages are written from it (grid wipo-v1, D-033)
+    url: https://www.wipo.int/edocs/pubdocs/en/wipo-pub-2000-2026-tech1.xlsx
+    note: "The bucket's copy is 929,719 bytes; the copy at `url` was 943,159 bytes on 2026-10-19."

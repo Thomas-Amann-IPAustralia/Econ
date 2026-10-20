@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.5e-05,
+ "data": {
+  "context": "In WIPO’s *Madrid Yearly Review 2026*, the administration statistics section discusses timeliness in transmitting Madrid international trademark applications to the International Bureau (IB). The passage reports that, in 2025, eight of the 20 selected offices of origin transmitted over 90% of their applications within one month of receiving them."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0119",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00013,
+  "input": 904,
+  "model": "gpt-6-luna",
+  "output": 79,
+  "reasoning": 0,
+  "seconds": 2.31
+ }
+}

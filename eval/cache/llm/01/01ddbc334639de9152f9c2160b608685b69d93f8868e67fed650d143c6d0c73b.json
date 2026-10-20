@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.2e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, this appendix table reports correlations and variance explained for innovation indicators, sub-pillars, sub-indices and the overall GII. It includes IP-related measures such as intellectual property receipts, trademarks by origin and global brand value, alongside research, technology, infrastructure and trade indicators."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1619",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000183,
+  "input": 1439,
+  "model": "gpt-6-luna",
+  "output": 78,
+  "reasoning": 0,
+  "seconds": 1.95
+ }
+}

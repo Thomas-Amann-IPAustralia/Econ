@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000103,
+ "data": {
+  "context": "In WIPO’s *PCT Yearly Review 2026*, the passage concerns the timeliness of International Searching Authorities (ISAs) in transmitting international search reports (ISRs) to the International Bureau in 2025. It refers to the figure measuring time from receipt of the PCT application’s search copy, and says all ISAs met the three-month deadline for most reports."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0162",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000207,
+  "input": 1196,
+  "model": "gpt-6-luna",
+  "output": 175,
+  "reasoning": 83,
+  "seconds": 4.09
+ }
+}

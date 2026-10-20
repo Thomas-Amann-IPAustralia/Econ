@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.8e-05,
+ "data": {
+  "context": "In WIPO’s Madrid Yearly Review 2026, this section explains the Nice classes used to group goods and services into industry sectors for statistics on Madrid international trademark applications, including the classes assigned to each sector."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0160",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000156,
+  "input": 1271,
+  "model": "gpt-6-luna",
+  "output": 57,
+  "reasoning": 0,
+  "seconds": 2.04
+ }
+}

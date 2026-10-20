@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.8e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, this section compares innovation-cluster intensity across Europe and other regions. It ranks EU clusters such as Eindhoven and Helsinki using patent filings, scientific publications and VC deals relative to population, and describes regional differences in research, patenting and venture-capital activity."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0210",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000157,
+  "input": 1191,
+  "model": "gpt-6-luna",
+  "output": 75,
+  "reasoning": 0,
+  "seconds": 2.77
+ }
+}

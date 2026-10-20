@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.9e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, in the trademark section’s definitions, this passage explains collective marks and gives related definitions for an EU plant variety rights agency and territorial design or trademark protection requests under the Hague and Madrid Systems."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0487",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000179,
+  "input": 1058,
+  "model": "gpt-6-luna",
+  "output": 147,
+  "reasoning": 83,
+  "seconds": 2.52
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, Botswana’s economy profile reports its Creative outputs indicators and rankings, covering creative goods and services and online creativity, including cultural and creative services exports, creative goods exports, GitHub commits and mobile app creation."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0465",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00016,
+  "input": 1288,
+  "model": "gpt-6-luna",
+  "output": 63,
+  "reasoning": 0,
+  "seconds": 2.11
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.8e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, section 10, this passage describes regional innovation-ranking leaders and progress, including middle-income economies in the upper half, India’s position in Central and Southern Asia, Morocco’s lead in North Africa, and momentum in Sub-Saharan Africa."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0038",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000156,
+  "input": 1203,
+  "model": "gpt-6-luna",
+  "output": 71,
+  "reasoning": 0,
+  "seconds": 2.53
+ }
+}

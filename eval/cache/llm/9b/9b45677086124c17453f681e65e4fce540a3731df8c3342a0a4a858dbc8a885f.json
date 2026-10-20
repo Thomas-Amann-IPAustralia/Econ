@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.1e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, in the section “Established leaders and rising challengers in deep science,” this passage explains a chart based on the Dealroom-WIPO Deep Science Startup Tracker. It identifies Estonia’s 2020–2025 startup growth and defines the chart’s doubling zone as economies that at least doubled their number of deep science startups over that period."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0045",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000142,
+  "input": 971,
+  "model": "gpt-6-luna",
+  "output": 90,
+  "reasoning": 0,
+  "seconds": 1.33
+ }
+}

@@ -1,8 +1,9 @@
 # Econ: IP economics evidence chat
 
-Ask questions of IP Australia's Office of the Chief Economist publications and see exactly where every
-answer comes from. The knowledge base is 24 PDFs (1,099 pages): the annual Australian IP Reports 2015 to
-2026 and 12 economic research papers and analytic notes.
+Ask questions of IP Australia's Office of the Chief Economist publications and WIPO reports and see exactly
+where every answer comes from. The knowledge base is 30 PDFs (1,858 pages): the annual Australian IP Reports
+2015 to 2026, 12 economic research papers and analytic notes, and six reports of the World Intellectual
+Property Organization (WIPO), with the Global Innovation Index 2026's data file for its economy profiles.
 
 **Built for traceability.** Every claim in an answer quotes a passage word for word: the model cites
 numbered sentences, and code (not a model) copies those sentences from the passages as the quotes and checks
@@ -81,6 +82,12 @@ of the Chief Economist's research papers and notes, as published at
 They are © Commonwealth of Australia (IP Australia); most state a Creative Commons Attribution 4.0
 licence, and `library/index/docs.json` records each one's licence as found in its text. Three research
 papers are independent reports commissioned by IP Australia, and their findings are their authors'.
+
+The six WIPO documents are © WIPO, published under a Creative Commons Attribution 4.0 licence, as are the
+Global Innovation Index 2026 data from which the knowledge base writes the GII's 139 economy profiles
+(`econ.ingest.gii`): the Global Innovation Index 2026, WIPO's page on Australia's GII 2026 results, World
+Intellectual Property Indicators 2025, the PCT Yearly Review 2026, the Madrid Yearly Review 2026 and World
+Intangible Investment Highlights 2026, as published at [wipo.int](https://www.wipo.int/publications/).
 
 This repository holds text extracted from those reports (`library/`), and the published site serves
 copies of the PDFs, for reference and traceability. The published reports are the authoritative source:

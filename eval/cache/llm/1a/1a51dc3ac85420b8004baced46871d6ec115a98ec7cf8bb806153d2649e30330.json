@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, this indicator entry under ecological sustainability covers 2024 ISO 14001 environmental management system certificates issued per billion PPP$ of GDP. It explains the standard’s purpose and applicability and identifies ISO, IAF CertSearch and IMF data sources."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1727",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00016,
+  "input": 1235,
+  "model": "gpt-6-luna",
+  "output": 72,
+  "reasoning": 0,
+  "seconds": 2.29
+ }
+}

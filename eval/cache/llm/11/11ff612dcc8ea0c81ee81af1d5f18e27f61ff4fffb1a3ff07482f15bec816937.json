@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7e-05,
+ "data": {
+  "context": "In WIPO’s *PCT Yearly Review 2026: The International Patent System*, the statistics section examines the timeliness of republication of PCT applications with international search reports (ISRs) from 2011 to 2025. It measures the time between the International Bureau’s receipt of an ISR and republication of the application with that report."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0151",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00014,
+  "input": 979,
+  "model": "gpt-6-luna",
+  "output": 85,
+  "reasoning": 0,
+  "seconds": 1.71
+ }
+}

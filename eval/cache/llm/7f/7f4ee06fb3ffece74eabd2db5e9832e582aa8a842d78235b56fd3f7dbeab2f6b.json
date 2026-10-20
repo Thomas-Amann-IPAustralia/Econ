@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.1e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, the patent statistics section presents worldwide resident and non-resident patent application trends for 2010–2024. The accompanying notes explain that totals are estimates based on 164 patent offices and include direct filings and, where applicable, applications entering the national phase of the Patent Cooperation Treaty."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0048",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000142,
+  "input": 1012,
+  "model": "gpt-6-luna",
+  "output": 81,
+  "reasoning": 0,
+  "seconds": 2.13
+ }
+}

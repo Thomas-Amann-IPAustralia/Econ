@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.7e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, Box 2, “Narrowing the gap: middle-income innovation pathways,” this passage presents indicator-level comparisons across economies in innovation inputs and outputs, including intellectual property, using GII 2026 data. “Higher,” “Medium” and “Lower” indicate each economy’s position against the specified income-group medians; a dash means data are unavailable."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0125",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000173,
+  "input": 1255,
+  "model": "gpt-6-luna",
+  "output": 96,
+  "reasoning": 0,
+  "seconds": 1.69
+ }
+}

@@ -18,6 +18,13 @@ with the answer's prose streamed while it is written (D-024), then answer-v4 (no
 and answer-v5 (sentence citations written by code, D-026); the answer view draws cited prose in navy, lists
 claims in a tab, and exports the conversation as JSON (D-030 to D-032). The scanned reports' garbled OCR is repaired (D-022). Progress log: `docs/progress-rag-v2.md`.
 
+**WIPO documents (D-033, D-034): in the serving index.** Six WIPO PDFs (759 pages: GII 2026, its Australia
+page, the PCT and Madrid yearly reviews 2026, World IP Indicators 2025, World Intangible Investment
+Highlights 2026, all CC BY 4.0) and the GII 2026 data file, in the bucket's `WIPO/` folder: 2,847 passages
+with notes (enrich-v2); 30 documents, 4,744 passages in all. The GII's 139 economy profiles are written from
+the data file (`econ.ingest.gii`), since Docling drops their tables. Prompts for two publishers (plan-v4,
+filter-v2, answer-v6) were measured (D-034) and adopted by the owner (D-035).
+
 The method is `docs/sop-agent-construction-v2.md` (the owner's SOP). Read `docs/decisions.md` (the
 decision log) and the latest `docs/handover-*.md` before acting.
 
@@ -67,9 +74,12 @@ decision log) and the latest `docs/handover-*.md` before acting.
 |---|---|---|---|
 | Fetch | `econ fetch` | R2 | `data/raw/*.pdf` (ignored) |
 | Sweep | `econ sweep` | raw PDFs | `library/sweep.json` |
-| Parse | `econ parse --workers 2` | raw PDFs | `library/elements/*.jsonl`, `library/parse.json` |
+| Parse | `econ parse --workers 2` | raw PDFs (+ data files, D-033) | `library/elements/*.jsonl`, `library/parse.json` |
 | Chunk | `econ chunk` | elements | `library/chunks/<strategy>.jsonl` |
 | Measure | `econ eval-retrieval --stage chunking\|embedders\|fusion` | chunks, silver set | `eval/runs/`, `reports/retrieval-*.md` |
+| Measure (WIPO) | `econ eval-wipo [--grid wipo-v1b]` | chunks, Docling cache, wipo-v1 set | `eval/runs/wipo-v1*/`, `reports/retrieval-wipo-v1*.md` |
+| Notes (paid) | `econ enrich --name N --base B [--confirm]` | adopted chunks | `library/enrich/N.jsonl` |
+| Prompts A/B (paid) | `econ eval-prompts-wipo [--confirm]` | index, grid prompts-wipo-v1 | `eval/runs/answers/prompts-wipo-v1.*`, `reports/prompts-wipo-v1.md` |
 | Measure (judged) | `econ eval-retrieval-v2 --stage stage1\|stage2\|final` | cached plans, notes, reranker scores, judgments | `eval/runs/retrieval-v2/`, `reports/retrieval-v2-*.md` |
 | Top up (paid) | `econ judge-topup [--confirm]` | measured contexts, judgments | `eval/judgments/judged-v1.jsonl` |
 | Index | `econ index` | adopted chunks, context notes | `library/index/` |
@@ -86,7 +96,8 @@ decision log) and the latest `docs/handover-*.md` before acting.
 - **OCR repair** (D-022): the parse stage re-reads garbled elements of the two scanned reports from their own
   boxes (RapidOCR under crop variants, then gemini-3.8-flash), accepted only if cleaner and in agreement with
   the old text; `library/reocr.json` records every attempt. 55 of 62 repaired; 7 are names read correctly.
-- **Context notes** (D-013): each chunk's note (`library/enrich/S384-noprefix-nocite.luna-enrich-v1.jsonl`,
+- **Context notes** (D-013, D-034): each chunk's note (`library/enrich/S384-noprefix-nocite.luna-enrich-v2.jsonl`:
+  enrich-v1's notes for IP Australia passages, enrich-v2's for WIPO;
   one or two sentences saying where it sits and what its vague references mean) is put in front of its
   text for both lanes (`retrieval.enrichment`). Search only: never evidence, never sent to the answer
   model, hidden from every API view; highlights name only the passage's own terms. New documents need
@@ -94,8 +105,8 @@ decision log) and the latest `docs/handover-*.md` before acting.
 - Embedder `arctic-m-v1.5` (Snowflake/snowflake-arctic-embed-m-v1.5 @ e58a8f75, 768 dimensions), served
   from its ONNX export pinned by sha256.
 - Search: a dense lane (Cloud Run embedder) and a BM25 lane, min-max score fusion with alpha 0.7,
-  100 candidates per lane. The plan (prompt plan-v2) writes up to 4 queries and the standalone question
-  is searched too (`answer.plan_keeps_question`); rankings are merged by reciprocal rank. Search keeps
+  100 candidates per lane. The plan writes up to 4 queries and the standalone question
+  is searched too (`answer.plan_keeps_question`; plan-v4 since D-035); rankings are merged by reciprocal rank. Search keeps
   60 passages, at most 8 from one document; the relevance filter chooses the 20 the answer model sees.
 - **No reranker** (D-012): measured, they help a plain index but not the enriched one. The serving path is
   built and off (`reranking.adopted: null`; `POST /rerank` on Cloud Run, `econ.reranker`).
@@ -104,7 +115,7 @@ decision log) and the latest `docs/handover-*.md` before acting.
   served search matches the measured one (top-10 overlap 0.996, same judged ndcg@10), reads the same 60
   passages, sends the filter the measured prompt, and picks the same 20 from the measured ratings.
 - **Relevance filter** (adopted by the owner, D-020; measured in D-018, D-019): the provider's `filter_model`
-  (gpt-6-luna, low effort) rates each of the 60 passages 0-3 (prompt `prompts/filter-v1.md`, 20 a call, in
+  (gpt-6-luna, low effort) rates each of the 60 passages 0-3 (prompt `prompts/filter-v2.md` since D-035, 20 a call, in
   parallel) and the answer model gets the 20 rated highest, ties in search order. It only chooses and orders
   passages; quotes are still checked against the passages' own text. If any call fails or a reply doesn't rate
   every passage exactly once, the search's top 20 go forward and the event says why. A provider without a
@@ -116,11 +127,13 @@ decision log) and the latest `docs/handover-*.md` before acting.
   stemmer corrupted stems under concurrency, D-013).
 
 ## The answer (built; tested live in D-011, D-014, D-015)
-- Prompts `prompts/answer-v5.md` (in use since D-026: the model cites numbered sentences like `[3.2]` and
-  code writes the claims and quotes, `econ.answer.cite`), built on answer-v4 (D-025: no brevity) and answer-v3
+- Prompts `prompts/answer-v6.md` (in use since D-035: answer-v5 for two publishers, naming whose finding
+  each is), `prompts/plan-v4.md` and `prompts/filter-v2.md` (D-035: the WIPO documents in the map; the filter
+  and answer models see each passage's publisher). answer-v5 (D-026: the model cites numbered sentences like
+  `[3.2]` and code writes the claims and quotes, `econ.answer.cite`) was built on answer-v4 (D-025: no brevity) and answer-v3
   (D-024: plainer English, explains general terms and methods, conversational, two or three `follow_ups`
   shown as buttons); `answer-v1.md` before them; `answer-v2.md` not adopted, D-021,
-  `prompts/plan-v2.md` (in use since D-013) and `prompts/filter-v1.md` (in use since D-020), locked with
+  `prompts/plan-v2.md` (D-013 to D-034) and `prompts/filter-v1.md` (D-020 to D-034), locked with
   their schemas in `prompts/versions.lock`. A change is a new version (`econ lock-prompts` after adding the
   file). Eval-only prompts live in `prompts/eval/`.
 - The answer: `coverage` (complete | partial | not_in_kb), prose with claim markers, `claims` with
@@ -170,7 +183,7 @@ Commit code, run, then commit outputs. Australian spelling, sentence-case headin
 - New high-severity sweep findings on real items: propose allowlist entries.
 - Spending money on model calls: ask before every paid call, however small (D-021), unless the owner has
   given a budget for the work at hand (D-022: up to $3 OpenAI and $2 Gemini; spent $0.06 and $0.26; D-024: up
-  to $0.50 OpenAI, spent $0.38; D-026: up to $0.75 OpenAI, spent $0.42).
+  to $0.50 OpenAI, spent $0.38; D-026: up to $0.75 OpenAI, spent $0.42; D-034: up to $1.50, spent $0.95).
 - Adopting a measured result outside the choices the owner delegated.
 - Changing the answer format, what the chatbot may refuse, or publishing anything new. The reports' text
   in `library/` and their PDFs on the Pages site are approved, with the acknowledgement in the README

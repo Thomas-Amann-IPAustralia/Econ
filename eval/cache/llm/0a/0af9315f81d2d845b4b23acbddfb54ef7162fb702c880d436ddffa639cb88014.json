@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.3e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, Appendix IV, Table 2 lists the top innovation clusters worldwide. This excerpt ranks clusters 32–37 by PCT applications, scientific publications and venture capital deals, with their shares of global totals and changes from the previous rank."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1797",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000186,
+  "input": 1509,
+  "model": "gpt-6-luna",
+  "output": 70,
+  "reasoning": 0,
+  "seconds": 2.29
+ }
+}

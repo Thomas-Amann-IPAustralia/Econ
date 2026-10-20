@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.4e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, the glossary entry on “Registration” defines the rights granted when a design or trademark is registered or issued, and explains their duration and possible renewal."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0518",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000129,
+  "input": 1018,
+  "model": "gpt-6-luna",
+  "output": 54,
+  "reasoning": 0,
+  "seconds": 1.67
+ }
+}

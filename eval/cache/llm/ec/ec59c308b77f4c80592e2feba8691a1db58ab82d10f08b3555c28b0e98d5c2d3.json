@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index (GII) 2026, this passage is from Mozambique’s economy profile and reports its pillar 6 scores and rankings for knowledge and technology outputs, including knowledge creation and knowledge impact indicators."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1071",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000159,
+  "input": 1300,
+  "model": "gpt-6-luna",
+  "output": 58,
+  "reasoning": 0,
+  "seconds": 1.88
+ }
+}

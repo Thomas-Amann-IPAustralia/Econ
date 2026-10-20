@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.7e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, Austria’s economy profile reports its scores and ranks for knowledge and technology outputs and creative outputs. The passage covers Austria’s knowledge diffusion indicators, including intellectual property receipts, high-tech and ICT services exports, and production and export complexity, followed by intangible assets, trademarks, brands and industrial designs."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0365",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000173,
+  "input": 1329,
+  "model": "gpt-6-luna",
+  "output": 81,
+  "reasoning": 0,
+  "seconds": 2.08
+ }
+}

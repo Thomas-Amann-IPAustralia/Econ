@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.2e-05,
+ "data": {
+  "context": "In WIPO’s *Madrid Yearly Review 2026*, this passage gives explanatory notes for the statistical tables on Madrid international applications and related statistics, including how origin is defined and how territories’ Madrid System membership or coverage is indicated for 2025. It also explains table symbols and identifies the WIPO Statistics Database as the source."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0104",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000143,
+  "input": 1032,
+  "model": "gpt-6-luna",
+  "output": 79,
+  "reasoning": 0,
+  "seconds": 2.39
+ }
+}

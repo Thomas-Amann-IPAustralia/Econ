@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.9e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, the patent office procedural data appendix (A62) reports 2024 application processing outcomes, examiner numbers, and decision times by patent office worldwide. The note explains differences in grant data and limits to comparing procedural data across offices."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0174",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000178,
+  "input": 1429,
+  "model": "gpt-6-luna",
+  "output": 70,
+  "reasoning": 0,
+  "seconds": 1.8
+ }
+}

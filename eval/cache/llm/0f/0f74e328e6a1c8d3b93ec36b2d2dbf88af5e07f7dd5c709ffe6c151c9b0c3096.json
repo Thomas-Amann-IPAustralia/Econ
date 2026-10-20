@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.4e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, the patent statistics section presents foreign-oriented patent families by origin for the top 20 origins in 2020–2021. These are patent families with at least one filing office outside the applicant’s country of origin, including families filed directly at a foreign office."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0074",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000148,
+  "input": 1099,
+  "model": "gpt-6-luna",
+  "output": 77,
+  "reasoning": 0,
+  "seconds": 2.25
+ }
+}

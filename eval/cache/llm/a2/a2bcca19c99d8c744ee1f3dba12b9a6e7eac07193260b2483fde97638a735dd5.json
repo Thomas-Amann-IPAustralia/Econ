@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.1e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, in Namibia’s economy profile, this passage reports Namibia’s scores and rankings for knowledge diffusion and creative outputs, including indicators on intellectual property receipts, exports, trademarks and industrial designs."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1090",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000161,
+  "input": 1316,
+  "model": "gpt-6-luna",
+  "output": 58,
+  "reasoning": 0,
+  "seconds": 2.23
+ }
+}

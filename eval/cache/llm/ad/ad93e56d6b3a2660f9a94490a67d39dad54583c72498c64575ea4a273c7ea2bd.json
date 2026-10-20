@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.9e-05,
+ "data": {
+  "context": "In WIPO’s *Madrid Yearly Review 2026*, this passage concerns changes in ownership of Madrid international registrations and the trend in cancellations when the basic mark ceases to have effect, 2011–2025. It notes that ownership changes may cover all or part of the registration’s goods and services and designated Madrid members."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0122",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000138,
+  "input": 984,
+  "model": "gpt-6-luna",
+  "output": 79,
+  "reasoning": 0,
+  "seconds": 2.42
+ }
+}

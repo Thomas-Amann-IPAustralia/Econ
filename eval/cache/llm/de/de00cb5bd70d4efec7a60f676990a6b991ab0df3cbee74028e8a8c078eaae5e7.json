@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, this passage is in the Institutions section on regulatory quality. It defines the 2024 World Bank index measuring perceptions of governments’ ability to design and implement policies and regulations that promote private-sector development."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1702",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000119,
+  "input": 864,
+  "model": "gpt-6-luna",
+  "output": 65,
+  "reasoning": 0,
+  "seconds": 1.95
+ }
+}

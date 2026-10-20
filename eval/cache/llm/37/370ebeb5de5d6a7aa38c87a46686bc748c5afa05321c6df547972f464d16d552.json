@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9e-05,
+ "data": {
+  "context": "In WIPO’s *PCT Yearly Review 2026*, this table in the top PCT applicants section lists business applicants ranked 10–19 by published PCT applications in 2025, alongside their origins, 2023–2024 counts and rank changes from 2024."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0034",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00018,
+  "input": 1438,
+  "model": "gpt-6-luna",
+  "output": 72,
+  "reasoning": 0,
+  "seconds": 1.75
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, this passage is part of Mauritania’s economy profile and reports the country’s scores and ranks for knowledge and technology outputs, including knowledge creation and knowledge impact indicators."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1017",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00016,
+  "input": 1316,
+  "model": "gpt-6-luna",
+  "output": 57,
+  "reasoning": 0,
+  "seconds": 1.84
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, this passage discusses innovation performance and assets in Latin America and the Caribbean. It identifies the region’s leading economies, recent ranking advances, and differences in their science, R&D, manufacturing, services, institutional and digital strengths."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0175",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00014,
+  "input": 1069,
+  "model": "gpt-6-luna",
+  "output": 67,
+  "reasoning": 0,
+  "seconds": 1.03
+ }
+}

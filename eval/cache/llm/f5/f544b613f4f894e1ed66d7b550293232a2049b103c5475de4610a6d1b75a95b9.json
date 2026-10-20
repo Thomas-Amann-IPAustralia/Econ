@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026* (2026), the Introduction describes the European Commission Joint Research Centre’s statistical audit of the GII. It explains how the audit assesses the index’s statistical soundness and modeling assumptions, including the robustness of economy rankings, confidence intervals, added value, and distance to the innovation performance frontier."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1581",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000164,
+  "input": 1229,
+  "model": "gpt-6-luna",
+  "output": 82,
+  "reasoning": 0,
+  "seconds": 1.85
+ }
+}

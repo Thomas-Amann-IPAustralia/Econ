@@ -40,21 +40,25 @@ def outline(doc_id: str, limit_chars: int = 1600) -> str:
     return out[:limit_chars]
 
 
-def prompt_text() -> str:
-    return (config.ROOT / "prompts" / "eval" / f"{PROMPT}.md").read_text(encoding="utf-8")
+def prompt_text(prompt: str = PROMPT) -> str:
+    return (config.ROOT / "prompts" / "eval" / f"{prompt}.md").read_text(encoding="utf-8")
 
 
-def calls(chunks: list[dict], *, model: str, effort: str | None) -> list[llmcall.Call]:
-    docs = config.sources().by_id()
+def calls(chunks: list[dict], *, model: str, effort: str | None, prompt: str = PROMPT) -> list[llmcall.Call]:
+    """enrich-v2 (D-034) also gives the publisher: the knowledge base holds two since D-033."""
+    src = config.sources()
+    docs = src.by_id()
     outlines = {d: outline(d) for d in {c["doc_id"] for c in chunks}}
-    system = prompt_text()
+    system = prompt_text(prompt)
     out = []
     for i, c in enumerate(chunks):
         d = docs[c["doc_id"]]
         prev = chunks[i - 1]["text"][-700:] if i > 0 and chunks[i - 1]["doc_id"] == c["doc_id"] else ""
         section = " > ".join(c["section"]) if c["section"] else ""
+        publisher = "" if prompt == "enrich-v1" else f' publisher="{pipeline.defang(src.publisher_of(d))}"'
         user = (
-            f'<document title="{pipeline.defang(d.title)}" year="{d.year}" series="{pipeline.defang(d.series)}">\n'
+            f'<document title="{pipeline.defang(d.title)}" year="{d.year}" '
+            f'series="{pipeline.defang(d.series)}"{publisher}>\n'
             f"<outline>\n{pipeline.defang(outlines[c['doc_id']])}\n</outline>\n"
             f'<passage section="{pipeline.defang(section)}" pages="{c["pages"][0]}-{c["pages"][-1]}">\n'
             f"<preceding>\n{pipeline.defang(prev)}\n</preceding>\n"
@@ -69,7 +73,7 @@ def calls(chunks: list[dict], *, model: str, effort: str | None) -> list[llmcall
                 schema_name="context_note",
                 effort=effort,
                 max_output_tokens=600,
-                purpose=f"enrich:{PROMPT}:{model}",
+                purpose=f"enrich:{prompt}:{model}",
                 tag=c["chunk_id"],
             )
         )
@@ -77,9 +81,21 @@ def calls(chunks: list[dict], *, model: str, effort: str | None) -> list[llmcall
 
 
 def run(
-    chunks: list[dict], name: str, *, model: str, effort: str | None, flex: bool, workers: int = 12
+    chunks: list[dict],
+    name: str,
+    *,
+    model: str,
+    effort: str | None,
+    flex: bool,
+    workers: int = 12,
+    prompt: str = PROMPT,
+    base: str | None = None,
 ) -> dict:
-    replies = llmcall.run_many(calls(chunks, model=model, effort=effort), flex=flex, workers=workers)
+    """Notes for `chunks`, written to library/enrich/<name>.jsonl. With `base`, that file's notes are kept
+    for every other chunk, so one file covers the corpus (each row names the prompt that wrote it)."""
+    replies = llmcall.run_many(
+        calls(chunks, model=model, effort=effort, prompt=prompt), flex=flex, workers=workers
+    )
     rows, dropped, failed = [], 0, 0
     for c, r in zip(chunks, replies, strict=True):
         note = ""
@@ -89,7 +105,13 @@ def run(
             note = " ".join(str(r["data"].get("context", "")).split())
             if textcheck.high(textcheck.scan(note)):
                 note, dropped = "", dropped + 1
-        rows.append({"chunk_id": c["chunk_id"], "context": note})
+        rows.append({"chunk_id": c["chunk_id"], "context": note, **({"prompt": prompt} if base else {})})
+    if base:
+        done = {r["chunk_id"] for r in rows}
+        kept = [
+            {"chunk_id": k, "context": v, "prompt": PROMPT} for k, v in load(base).items() if k not in done
+        ]
+        rows = sorted(kept + rows, key=lambda r: r["chunk_id"])
     out = config.path("library/enrich") / f"{name}.jsonl"
     write_text_atomic(out, "".join(json.dumps(r, sort_keys=True, ensure_ascii=False) + "\n" for r in rows))
     return {"chunks": len(rows), "failed": failed, "dropped": dropped, "file": str(out)}

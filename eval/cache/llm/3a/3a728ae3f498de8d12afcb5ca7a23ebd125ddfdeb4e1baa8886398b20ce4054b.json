@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.2e-05,
+ "data": {
+  "context": "In WIPO’s *PCT Yearly Review 2026: The International Patent System*, this passage introduces regional statistics on PCT national phase entries by origin for 2022–2024. It reports that entries declined in every geographical region in 2024."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0106",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000183,
+  "input": 1503,
+  "model": "gpt-6-luna",
+  "output": 66,
+  "reasoning": 0,
+  "seconds": 2.13
+ }
+}

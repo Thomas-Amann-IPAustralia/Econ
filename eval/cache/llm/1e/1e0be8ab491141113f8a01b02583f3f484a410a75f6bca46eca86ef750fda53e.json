@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.1e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, the “Construction & Materials” part of Figure 5 shows growth rates from 2024 to 2025 for leading corporate R&D spenders in the industry. Dashed vertical lines indicate the industry sample’s average R&D growth; the figure is based on Moody’s Orbis and the 2025 EU Industrial R&D Investment Scoreboard."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0067",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000161,
+  "input": 1142,
+  "model": "gpt-6-luna",
+  "output": 93,
+  "reasoning": 0,
+  "seconds": 1.4
+ }
+}

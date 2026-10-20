@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.1e-05,
+ "data": {
+  "context": "In WIPO’s *Madrid Yearly Review 2026* (2026), this passage discusses the origins of subsequent designations in Madrid international registrations for the top 15 designated Madrid members in 2025. It identifies where holders from Germany, the US, Japan, China, France and Italy sought to extend trademark protection."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0065",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000142,
+  "input": 1034,
+  "model": "gpt-6-luna",
+  "output": 78,
+  "reasoning": 0,
+  "seconds": 2.17
+ }
+}

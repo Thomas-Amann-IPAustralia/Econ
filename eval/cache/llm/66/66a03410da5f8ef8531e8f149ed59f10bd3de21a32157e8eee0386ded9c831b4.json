@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.7e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, Pakistan’s economy profile reports its infrastructure and market-sophistication indicators, including scores, ranks and selected weaknesses or data recency notes. The figures cover ICT, general infrastructure, ecological sustainability, credit and investment, including venture capital."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1175",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000174,
+  "input": 1376,
+  "model": "gpt-6-luna",
+  "output": 72,
+  "reasoning": 0,
+  "seconds": 2.1
+ }
+}

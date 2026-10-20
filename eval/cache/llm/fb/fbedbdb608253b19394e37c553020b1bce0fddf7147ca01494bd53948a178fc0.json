@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.5e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, Ethiopia’s economy profile reports scores and ranks for human capital and research and infrastructure indicators. The passage covers research and development, ICT and general infrastructure, with notes on weaknesses and outdated data."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0691",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00017,
+  "input": 1402,
+  "model": "gpt-6-luna",
+  "output": 60,
+  "reasoning": 0,
+  "seconds": 2.13
+ }
+}

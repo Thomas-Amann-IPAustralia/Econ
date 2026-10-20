@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.7e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, this passage discusses innovation in Sub-Saharan Africa and the strengths supporting future gains. It identifies education investment, capital formation, microfinance access and youthful populations across named African economies, following regional innovation rankings."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0179",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000134,
+  "input": 1025,
+  "model": "gpt-6-luna",
+  "output": 63,
+  "reasoning": 0,
+  "seconds": 2.65
+ }
+}

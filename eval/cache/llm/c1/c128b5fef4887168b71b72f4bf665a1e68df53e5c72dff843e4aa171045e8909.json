@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.6e-05,
+ "data": {
+  "context": "In WIPO’s *World Intangible Investment Highlights 2026*, this figure section compares real annual growth across intangible asset categories from 2013 to 2023, using country-level growth rates weighted by lagged nominal investment. It highlights software and databases, including growth across the 29 sample economies and the Philippines."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-intangibles-2026:0023",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000171,
+  "input": 1330,
+  "model": "gpt-6-luna",
+  "output": 76,
+  "reasoning": 0,
+  "seconds": 2.34
+ }
+}

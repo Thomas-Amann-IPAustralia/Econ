@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.4e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, the patent statistics section presents 2024 patent applications by office and origin. The table reports application totals, resident and non-resident filings, year-over-year changes and PCT national phase entries for countries and regional offices."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0117",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000169,
+  "input": 1349,
+  "model": "gpt-6-luna",
+  "output": 69,
+  "reasoning": 0,
+  "seconds": 2.13
+ }
+}

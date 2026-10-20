@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, the patent-family section examines worldwide patent families as a measure of unique inventions, including their growth from 2008 to 2022 and distribution by origin. It also compares origins’ foreign-oriented patent families for 2020–2021."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0028",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000165,
+  "input": 1283,
+  "model": "gpt-6-luna",
+  "output": 73,
+  "reasoning": 0,
+  "seconds": 2.48
+ }
+}

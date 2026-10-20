@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.7e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, Lebanon’s economy profile lists its scores and ranks for the Business sophistication pillar, covering innovation linkages and knowledge absorption. The indicators include university–industry collaboration, patent families, intellectual property payments, high-tech imports and foreign direct investment."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0935",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000173,
+  "input": 1377,
+  "model": "gpt-6-luna",
+  "output": 70,
+  "reasoning": 0,
+  "seconds": 1.8
+ }
+}

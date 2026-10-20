@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.8e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, table B44 presents 2024 trademark application and in-force data by office and origin. This excerpt lists figures for offices and origins from El Salvador through France, including resident and non-resident applications."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0288",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000176,
+  "input": 1435,
+  "model": "gpt-6-luna",
+  "output": 65,
+  "reasoning": 0,
+  "seconds": 1.66
+ }
+}

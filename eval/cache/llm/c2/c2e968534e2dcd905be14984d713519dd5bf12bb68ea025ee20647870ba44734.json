@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.4e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, South Africa’s economy profile reports indicators for knowledge diffusion within the Knowledge and Technology Outputs pillar, followed by creative outputs and intangible assets. It includes measures of intellectual property receipts, exports and production complexity, and South African trademark and industrial design activity."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1350",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000168,
+  "input": 1322,
+  "model": "gpt-6-luna",
+  "output": 72,
+  "reasoning": 0,
+  "seconds": 2.33
+ }
+}

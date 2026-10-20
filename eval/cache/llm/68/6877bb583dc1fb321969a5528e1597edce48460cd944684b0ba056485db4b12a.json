@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.5e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, this Portugal economy-profile passage reports indicators for pillar 5, Business sophistication. It gives Portugal’s scores and ranks for innovation linkages and knowledge absorption, including research collaboration, patent families, intellectual property payments, imports, investment and business research talent."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1231",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00017,
+  "input": 1332,
+  "model": "gpt-6-luna",
+  "output": 73,
+  "reasoning": 0,
+  "seconds": 2.02
+ }
+}

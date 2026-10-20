@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.6e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, section B18 presents trademark application class counts for selected low- and middle-income origins in 2024. It shows resident and abroad classes by applicant origin, with origins selected across world regions and income groups."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0230",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000152,
+  "input": 1192,
+  "model": "gpt-6-luna",
+  "output": 66,
+  "reasoning": 0,
+  "seconds": 2.01
+ }
+}

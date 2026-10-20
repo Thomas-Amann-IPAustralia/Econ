@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.6e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, Box 2 on middle-income innovation pathways compares how economies build innovation capabilities. This passage describes Indonesia’s domestic market, digital economy and startup finance, its comparatively limited R&D base using 2020 data, and the research links needed for its next phase of development."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0129",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000152,
+  "input": 1145,
+  "model": "gpt-6-luna",
+  "output": 76,
+  "reasoning": 0,
+  "seconds": 1.56
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.8e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, this passage presents the uncertainty analysis results for the GII and its two sub-indices. It explains how median ranks and 90 percent confidence intervals were calculated from 5,000 simulations using alternative imputation methods, averaging formulas and perturbed weights."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1636",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000156,
+  "input": 1194,
+  "model": "gpt-6-luna",
+  "output": 74,
+  "reasoning": 0,
+  "seconds": 2.12
+ }
+}

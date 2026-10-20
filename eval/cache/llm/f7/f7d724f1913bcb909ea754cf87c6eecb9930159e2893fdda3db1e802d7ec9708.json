@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.9e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026* (GII 2026), this Lebanon economy profile reports infrastructure and market sophistication scores and ranks, including ecological sustainability, credit, and investment indicators. The figures describe Lebanon’s performance in the 2026 index; some underlying data years are noted in the passage."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0933",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000179,
+  "input": 1402,
+  "model": "gpt-6-luna",
+  "output": 77,
+  "reasoning": 0,
+  "seconds": 2.22
+ }
+}

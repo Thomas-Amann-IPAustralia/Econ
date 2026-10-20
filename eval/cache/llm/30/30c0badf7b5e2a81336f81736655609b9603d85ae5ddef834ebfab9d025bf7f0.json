@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.3e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, table C37 reports 2024 industrial design application counts by office and origin, including resident and non-resident filings and year-over-year change. This excerpt lists figures for Italy, Jamaica, Japan and other offices and origins."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0374",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000187,
+  "input": 1513,
+  "model": "gpt-6-luna",
+  "output": 72,
+  "reasoning": 0,
+  "seconds": 2.26
+ }
+}

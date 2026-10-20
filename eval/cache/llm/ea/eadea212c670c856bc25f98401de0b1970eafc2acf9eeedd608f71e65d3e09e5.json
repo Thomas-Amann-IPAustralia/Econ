@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.1e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026* (2026), the Key messages section summarizes the worldwide Global Innovation Tracker’s four stages of the innovation cycle, drawing on indicators of investment, technological progress, adoption and socioeconomic impact. It describes innovation trends in 2025, including investment and research, scientific output, venture capital, productivity and climate indicators, against comparisons with earlier periods."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0053",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000161,
+  "input": 1154,
+  "model": "gpt-6-luna",
+  "output": 91,
+  "reasoning": 0,
+  "seconds": 1.56
+ }
+}

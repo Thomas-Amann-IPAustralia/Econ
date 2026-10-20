@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.7e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, Malaysia’s economy profile reports its Human capital and research pillar scores and ranks, with indicators for education and tertiary education, including identified strengths and weaknesses."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0985",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000155,
+  "input": 1285,
+  "model": "gpt-6-luna",
+  "output": 53,
+  "reasoning": 0,
+  "seconds": 1.22
+ }
+}

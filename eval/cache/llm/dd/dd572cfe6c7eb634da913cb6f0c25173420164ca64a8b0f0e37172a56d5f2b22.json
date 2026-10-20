@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.4e-05,
+ "data": {
+  "context": "In WIPO’s *Madrid Yearly Review 2026*, section B2, this table reports 2025 subsequent-designation figures in international registrations by origin and designated Madrid member, including France, Japan and Switzerland."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0076",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000169,
+  "input": 1404,
+  "model": "gpt-6-luna",
+  "output": 58,
+  "reasoning": 0,
+  "seconds": 1.82
+ }
+}

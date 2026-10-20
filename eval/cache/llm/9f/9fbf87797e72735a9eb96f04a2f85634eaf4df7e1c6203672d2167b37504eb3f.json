@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.5e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, this passage is part of Bulgaria’s economy profile and reports Bulgaria’s overall GII ranking and scores, income group, region, and performance on the Institutions pillar and its indicators."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0485",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00015,
+  "input": 1215,
+  "model": "gpt-6-luna",
+  "output": 58,
+  "reasoning": 0,
+  "seconds": 2.22
+ }
+}

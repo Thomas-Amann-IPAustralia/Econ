@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.7e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026* (2026), this Togo economy profile section reports indicators for infrastructure and market sophistication, including scores, rankings, and noted strengths, weaknesses, and outdated data. The figures concern Togo’s GII 2026 assessment."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1409",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000173,
+  "input": 1379,
+  "model": "gpt-6-luna",
+  "output": 70,
+  "reasoning": 0,
+  "seconds": 1.36
+ }
+}

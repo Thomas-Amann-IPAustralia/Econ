@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.5e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026* (2026), Appendix II, Table 5 lists countries’ overall GII and input- and output-sub-index rankings with 90 percent confidence intervals. This excerpt covers rankings for countries including Singapore, Lesotho, the Netherlands, Burkina Faso, Finland and Mauritania."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1667",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00019,
+  "input": 1515,
+  "model": "gpt-6-luna",
+  "output": 78,
+  "reasoning": 0,
+  "seconds": 2.25
+ }
+}

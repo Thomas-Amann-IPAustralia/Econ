@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.2e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, the Azerbaijan economy profile reports the country’s pillar 7 Creative outputs score and rank, with indicators of online creativity: top-level domains, GitHub commits and mobile app creation."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0375",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000143,
+  "input": 1135,
+  "model": "gpt-6-luna",
+  "output": 59,
+  "reasoning": 0,
+  "seconds": 2.18
+ }
+}

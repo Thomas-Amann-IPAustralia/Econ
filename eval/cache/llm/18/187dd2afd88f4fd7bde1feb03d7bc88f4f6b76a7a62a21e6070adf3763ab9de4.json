@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.9e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, in the section “Where are innovation systems unbalanced?”, this passage discusses differences between economies’ rankings across innovation inputs and outputs. It uses the Islamic Republic of Iran as an example and explains how input-led and output-led systems can build on their existing strengths."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0155",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000138,
+  "input": 1006,
+  "model": "gpt-6-luna",
+  "output": 75,
+  "reasoning": 0,
+  "seconds": 1.26
+ }
+}

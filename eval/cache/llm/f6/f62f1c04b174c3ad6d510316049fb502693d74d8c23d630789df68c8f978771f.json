@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.1e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, this indicator in the human capital and research section compares countries’ average 2025 R&D expenditure for their top three global companies, using the EU Industrial R&D Investment Scoreboard and Orbis data. Where fewer than three companies are listed, the figure uses the available companies; economies with no qualifying companies receive a score of zero."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1716",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000161,
+  "input": 1161,
+  "model": "gpt-6-luna",
+  "output": 90,
+  "reasoning": 0,
+  "seconds": 2.46
+ }
+}

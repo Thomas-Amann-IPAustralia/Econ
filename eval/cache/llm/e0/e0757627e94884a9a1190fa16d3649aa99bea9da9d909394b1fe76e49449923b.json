@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.6e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, the Northern America regional section describes the concentration of science and technology clusters in the United States and Canada. It reports the region’s representation among the world’s top 100 clusters and the rankings of San Jose–San Francisco, Toronto, Montréal and Vancouver."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0163",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000131,
+  "input": 944,
+  "model": "gpt-6-luna",
+  "output": 73,
+  "reasoning": 0,
+  "seconds": 2.47
+ }
+}

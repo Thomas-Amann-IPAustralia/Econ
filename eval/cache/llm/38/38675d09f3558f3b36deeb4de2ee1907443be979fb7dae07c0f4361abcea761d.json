@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "context": "In WIPO’s *PCT Yearly Review 2026*, this passage is the acronyms list for the report on the Patent Cooperation Treaty (PCT) system. It spells out abbreviations used in the review, including names of patent offices and organizations, PCT procedures and documents, and statistical terms."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0187",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000158,
+  "input": 1207,
+  "model": "gpt-6-luna",
+  "output": 75,
+  "reasoning": 0,
+  "seconds": 1.59
+ }
+}

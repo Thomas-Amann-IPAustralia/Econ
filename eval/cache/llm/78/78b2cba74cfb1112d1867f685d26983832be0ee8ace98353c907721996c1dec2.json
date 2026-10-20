@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.8e-05,
+ "data": {
+  "context": "In WIPO’s World Intellectual Property Indicators 2025, section B23 presents the top Nice classes by share of non-resident trademark applications in 2024. The table lists the classes and their goods or services descriptions, based on absolute rather than equivalent application class counts."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0241",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000157,
+  "input": 1235,
+  "model": "gpt-6-luna",
+  "output": 67,
+  "reasoning": 0,
+  "seconds": 1.85
+ }
+}

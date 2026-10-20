@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.3e-05,
+ "data": {
+  "context": "In WIPO’s *PCT Yearly Review 2026: The International Patent System* (2026), the Glossary defines terms used in the Patent Cooperation Treaty system. This passage explains the international filing date, the International Patent Classification (IPC), the stages of the PCT’s international phase, and the role of the International Preliminary Examining Authority (IPEA)."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0190",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000167,
+  "input": 1234,
+  "model": "gpt-6-luna",
+  "output": 87,
+  "reasoning": 0,
+  "seconds": 1.71
+ }
+}

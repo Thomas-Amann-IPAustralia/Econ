@@ -69,7 +69,11 @@ def heading_level(text: str, docling_level: int | None) -> int:
     return max(1, int(docling_level or 1))
 
 
-def elements_from_docling(doc, doc_id: str, ocr: bool) -> tuple[list[dict], dict]:
+def elements_from_docling(
+    doc, doc_id: str, ocr: bool, index_tables_on: set[int] | None = None
+) -> tuple[list[dict], dict]:
+    """`index_tables_on`: pages on which a table Docling labels a document index (a table of contents,
+    left out by default) is kept as a table: the GII's economy profiles are labelled so (D-033)."""
     from docling_core.types.doc import TableItem
 
     rows: list[dict] = []
@@ -79,6 +83,14 @@ def elements_from_docling(doc, doc_id: str, ocr: bool) -> tuple[list[dict], dict
     }
     for item, _level in doc.iterate_items():
         label = str(getattr(item, "label", "")).split(".")[-1].lower()
+        if (
+            label == "document_index"
+            and index_tables_on
+            and isinstance(item, TableItem)
+            and getattr(item, "prov", None)
+            and item.prov[0].page_no in index_tables_on
+        ):
+            label = "table"
         if label not in KEEP or not getattr(item, "prov", None):
             continue
         if isinstance(item, TableItem):
@@ -118,10 +130,61 @@ def elements_from_docling(doc, doc_id: str, ocr: bool) -> tuple[list[dict], dict
 def _parse_one(args: tuple[str, str, bool, str]) -> tuple[str, dict]:
     doc_id, pdf_path, ocr, cache_path = args
     started = time.time()
-    res = _converter(ocr).convert(pdf_path)
-    payload = res.document.export_to_dict()
+    conv = _converter(ocr)
+    batch = config.pipeline().parse.batch_pages
+    pages = _page_count(pdf_path)
+    if batch and pages > batch:
+        # A long document in page batches: Docling holds every page's images until the end, and the
+        # 348-page GII report ran out of memory whole (D-033). Pages keep their absolute numbers.
+        # Each batch is cached as it finishes, so an interrupted run resumes where it stopped.
+        from docling_core.types.doc import DoclingDocument
+
+        # A batch already cached from a run with another batch size is reused as it is.
+        size = config.pipeline().parse.batch_size or batch
+        parts, statuses, a = [], set(), 1
+        while a <= pages:
+            done = sorted(Path(cache_path).parent.glob(f"{Path(cache_path).name}.pages-{a}-*"))
+            if done:
+                part = done[0]
+                parts.append(DoclingDocument.model_validate(json.loads(part.read_text())))
+                statuses.add("cached")
+                a = int(part.name.rsplit("-", 1)[1]) + 1
+                continue
+            b = min(a + size - 1, pages)
+            t0 = time.time()
+            res = conv.convert(pdf_path, page_range=(a, b))
+            write_text_atomic(Path(f"{cache_path}.pages-{a}-{b}"), json.dumps(res.document.export_to_dict()))
+            parts.append(res.document)
+            statuses.add(str(res.status))
+            print(f"parsed {doc_id} pages {a}-{b} in {time.time() - t0:.1f}s", flush=True)
+            a = b + 1
+        document = DoclingDocument.concatenate(parts)
+        status = ",".join(sorted(statuses))
+    else:
+        res = conv.convert(pdf_path)
+        document, status = res.document, str(res.status)
+    payload = document.export_to_dict()
     write_text_atomic(Path(cache_path), json.dumps(payload))
-    return doc_id, {"seconds": round(time.time() - started, 1), "status": str(res.status)}
+    return doc_id, {"seconds": round(time.time() - started, 1), "status": status}
+
+
+def _apply_data(data, doc, rows: list[dict], pages: dict, raw: Path) -> list[dict]:
+    if data.use != "gii-profiles":
+        raise StageError(f"unknown data file use {data.use!r}", item=data.doc_id)
+    from econ.ingest import gii
+
+    wb = gii.load(raw / data.raw_name)
+    where = gii.profile_pages(raw / doc.raw_name, wb.economies, range(1, len(pages) + 1))
+    try:
+        return gii.overlay(rows, gii.profile_elements(wb, where, pages, doc.doc_id, doc.year))
+    except ValueError as e:
+        raise StageError(str(e), item=doc.doc_id) from e
+
+
+def _page_count(pdf_path: str) -> int:
+    import pypdfium2 as pdfium  # build extra
+
+    return len(pdfium.PdfDocument(pdf_path))
 
 
 def _catalogue(p: Path) -> dict:
@@ -186,6 +249,14 @@ def parse(run: Run, *, workers: int = 1, only: list[str] | None = None) -> None:
         parsed[d.doc_id] = elements_from_docling(ddoc, d.doc_id, ocr)
         if not parsed[d.doc_id][0]:
             raise StageError("no body text extracted", item=d.doc_id)
+        for data in config.sources().data_for(d.doc_id):
+            # The publisher's data file in place of pages a layout parser can't read (D-033).
+            rows, pages = parsed[d.doc_id]
+            parsed[d.doc_id] = (_apply_data(data, d, rows, pages, raw), pages)
+            run.add_input(raw / data.raw_name)
+            run.counts["data_pages"] = run.counts.get("data_pages", 0) + sum(
+                r.get("source") == "data" and r["label"] == "section_header" for r in parsed[d.doc_id][0]
+            )
 
     # Re-read the OCR documents' garbled elements (D-022), against the text-layer documents' vocabulary:
     # this run's, and for a partial run the committed elements of the text-layer documents it left out.

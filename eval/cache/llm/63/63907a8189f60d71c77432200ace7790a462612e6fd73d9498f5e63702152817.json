@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, the section “Patents anchor deep science ventures, and their use widens with maturity” presents middle-income economies’ leading deep science patent holders by economy for 2010–2025. The table lists companies, launch years, sectors, economies, regions and patent-family counts, with a note on Thailand’s two startups tied for the highest count shown."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0048",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000164,
+  "input": 1172,
+  "model": "gpt-6-luna",
+  "output": 94,
+  "reasoning": 0,
+  "seconds": 1.33
+ }
+}

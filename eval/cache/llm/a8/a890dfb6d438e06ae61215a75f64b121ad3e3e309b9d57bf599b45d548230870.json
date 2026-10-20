@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.7e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, this indicator in the Knowledge and technology outputs section measures high- and medium-high-technology manufacturing output as a share of total manufacturing output, using the OECD technology-intensity classification. UNIDO data cover 2016–2024."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1763",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000134,
+  "input": 997,
+  "model": "gpt-6-luna",
+  "output": 69,
+  "reasoning": 0,
+  "seconds": 1.85
+ }
+}

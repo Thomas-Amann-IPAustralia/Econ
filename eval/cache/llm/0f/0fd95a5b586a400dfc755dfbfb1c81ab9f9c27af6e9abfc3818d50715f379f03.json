@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, this passage is from Egypt’s economy profile and reports Egypt’s infrastructure and market sophistication scores, ranks, and indicator results, including ecological sustainability, credit and investment."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0666",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000165,
+  "input": 1371,
+  "model": "gpt-6-luna",
+  "output": 55,
+  "reasoning": 0,
+  "seconds": 2.08
+ }
+}

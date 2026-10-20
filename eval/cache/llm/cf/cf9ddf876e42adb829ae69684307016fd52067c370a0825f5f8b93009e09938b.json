@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5.8e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, this passage introduces the section on regional patterns in innovation. It previews discussion of significant developments across the seven world regions, following comparisons of Sub-Saharan Africa’s innovation strengths and gaps."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0161",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000117,
+  "input": 869,
+  "model": "gpt-6-luna",
+  "output": 60,
+  "reasoning": 0,
+  "seconds": 1.19
+ }
+}

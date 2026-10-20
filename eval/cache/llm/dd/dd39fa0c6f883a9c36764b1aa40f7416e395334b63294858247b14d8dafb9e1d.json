@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "context": "From WIPO’s Global Innovation Index 2026, in Bosnia and Herzegovina’s economy profile, this passage reports the country’s overall GII ranking and scores, input and output rankings, economic group and regional classification, and indicators for the Institutions pillar and its subcategories."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0448",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000158,
+  "input": 1240,
+  "model": "gpt-6-luna",
+  "output": 68,
+  "reasoning": 0,
+  "seconds": 2.18
+ }
+}

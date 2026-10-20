@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.7e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, in the economy profiles’ “Strengths and weaknesses” section, this passage explains the symbols and percentile-based rules used to identify an economy’s and its income group’s relative strengths and weaknesses, including exceptions for top 25 high-income economies and indicators that do not meet data minimum coverage."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0303",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000154,
+  "input": 1142,
+  "model": "gpt-6-luna",
+  "output": 80,
+  "reasoning": 0,
+  "seconds": 2.7
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.000921,
+ "data": {
+  "misattributed_A": 0,
+  "misattributed_B": 0,
+  "reason": "Both answers directly and accurately answer the question using the exact same evidence from IP Australia. Answer A is slightly preferable for keeping the prose focused strictly on the question without extraneous metadata in the text itself, but both are effectively identical in quality. Therefore, they tie.",
+  "winner": "tie"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v2:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "ipr17-5:ab",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000921,
+  "input": 773,
+  "model": "gemini-3.8-flash",
+  "output": 91,
+  "reasoning": 0,
+  "seconds": 2.2
+ }
+}

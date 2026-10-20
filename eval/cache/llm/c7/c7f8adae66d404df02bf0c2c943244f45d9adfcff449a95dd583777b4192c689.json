@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.2e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, section C38, this table reports 2024 industrial design registrations by office and origin, including resident and non-resident counts, equivalent registrations by origin, and designs in force. The listed entries cover countries including Saudi Arabia, Singapore, Slovakia, Slovenia and South Africa."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0397",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000184,
+  "input": 1446,
+  "model": "gpt-6-luna",
+  "output": 79,
+  "reasoning": 0,
+  "seconds": 2.18
+ }
+}

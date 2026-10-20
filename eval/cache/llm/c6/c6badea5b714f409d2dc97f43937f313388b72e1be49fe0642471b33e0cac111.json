@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.1e-05,
+ "data": {
+  "context": "WIPO’s Australia ranking in the Global Innovation Index 2026, in the About the Global Innovation Index section, explains the GII’s purpose and how it measures economies’ innovation capabilities and results through input and output sub-indices and seven pillars."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026-australia:0033",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000142,
+  "input": 1096,
+  "model": "gpt-6-luna",
+  "output": 64,
+  "reasoning": 0,
+  "seconds": 2.41
+ }
+}

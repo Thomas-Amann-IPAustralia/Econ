@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.7e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, in the section “Deep science firms vs. startups and spinouts since 2000,” this passage presents Dealroom-WIPO tracker data on deep science startups by sector and their venture-capital funding and stage shares for 2020–2025. It notes that the tracker can identify and follow promising startups at the economy level to analyze their characteristics and IP use."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0232",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000194,
+  "input": 1453,
+  "model": "gpt-6-luna",
+  "output": 97,
+  "reasoning": 0,
+  "seconds": 2.44
+ }
+}

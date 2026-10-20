@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.5e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, this appendix table shows the distribution of technology fields among patent families for selected universities and public research organizations (PROs) in 2020–2022. It compares the listed institutions across fields including optics, measurement, biological-material analysis and control."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0084",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00019,
+  "input": 1534,
+  "model": "gpt-6-luna",
+  "output": 74,
+  "reasoning": 0,
+  "seconds": 2.35
+ }
+}

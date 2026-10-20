@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026* (2026), Appendix II, Table 5 continues the rankings and 90 percent confidence intervals for the GII and its Input and Output sub-indices. The excerpt lists economy rankings and intervals, including Montenegro, Uzbekistan, Colombia, Albania and Peru."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1655",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000164,
+  "input": 1270,
+  "model": "gpt-6-luna",
+  "output": 75,
+  "reasoning": 0,
+  "seconds": 2.02
+ }
+}

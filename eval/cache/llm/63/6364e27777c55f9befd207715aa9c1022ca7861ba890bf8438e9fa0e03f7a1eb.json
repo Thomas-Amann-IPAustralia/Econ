@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.007418,
+ "data": {
+  "misattributed_A": 0,
+  "misattributed_B": 0,
+  "reason": "Both answers accurately address the question and narrative, properly citing WIPO and IP Australia data. Answer A is slightly better structured and more explicit in naming the publishers (specifically attributing IP Australia by name in the text and headings), whereas Answer B refers vaguely to 'Earlier research' and 'The 2020 report' without always explicitly naming IP Australia in the prose.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v2:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "both-1:ba",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.007418,
+  "input": 9326,
+  "model": "gemini-3.8-flash",
+  "output": 113,
+  "reasoning": 0,
+  "seconds": 3.3
+ }
+}

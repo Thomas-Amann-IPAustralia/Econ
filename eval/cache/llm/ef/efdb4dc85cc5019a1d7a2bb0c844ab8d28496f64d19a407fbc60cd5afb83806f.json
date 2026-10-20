@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.3e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, table A60, “Patent applications by office and origin, 2024,” this passage lists 2024 patent application totals and resident/non-resident breakdowns, year-on-year changes, and PCT national phase entries for the Dominican Republic through the European Patent Office."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0123",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000187,
+  "input": 1473,
+  "model": "gpt-6-luna",
+  "output": 79,
+  "reasoning": 0,
+  "seconds": 2.46
+ }
+}

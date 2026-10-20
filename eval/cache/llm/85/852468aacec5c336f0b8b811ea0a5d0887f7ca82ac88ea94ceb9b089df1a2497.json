@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.3e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, this table in the section on innovation overperformers lists economies by income group and region, with the years each has been classified as an innovation overperformer. It uses World Bank income groups and UN geographical regions."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0137",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000167,
+  "input": 1339,
+  "model": "gpt-6-luna",
+  "output": 66,
+  "reasoning": 0,
+  "seconds": 2.68
+ }
+}

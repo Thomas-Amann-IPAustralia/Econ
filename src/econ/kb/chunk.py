@@ -103,6 +103,9 @@ def _compact_table(md: str) -> str:
     return "\n".join(lines)
 
 
+HEADER_ROOM = 32  # tokens a repeated table header must leave for rows
+
+
 def _header_lines(table: str) -> int:
     """Lines of a markdown table that a split repeats: any caption, the column header and its separator."""
     lines = table.split("\n")
@@ -116,11 +119,11 @@ def _header_lines(table: str) -> int:
 
 def _units(el: Element, budget: int, header: str) -> list[tuple[int, int]]:
     """Character ranges of the element's smallest units: table rows, else sentences; any unit still over
-    the budget is cut into runs of words."""
+    the budget is cut into runs of words. A table whose header is not repeated starts with its header."""
     text = el.text
     if el.label == "table":
         spans, pos = [], 0
-        skip = _header_lines(text)
+        skip = _header_lines(text) if header else 0
         for i, line in enumerate(text.split("\n")):
             if i >= skip and line.strip():
                 spans.append((pos, pos + len(line)))
@@ -161,6 +164,10 @@ def split_piece(el: Element, budget: int) -> list[Piece]:
     is a substring of the element's (a table piece also repeats the header), and its span is exact."""
     text = el.text
     header = "\n".join(text.split("\n")[: _header_lines(text)]) if el.label == "table" else ""
+    if header and tokens.count(header) > budget - HEADER_ROOM:
+        # A header that leaves no room for a row can't be repeated (the GII's cluster tables run to 270
+        # tokens of header, which failed the 256-token strategy, D-033): the pieces split it like a row.
+        header = ""
     pieces, cur = [], None
     for s, e in _units(el, budget, header):
         if cur is not None and tokens.count(_with_header(header, text[cur[0] : e])) > budget:

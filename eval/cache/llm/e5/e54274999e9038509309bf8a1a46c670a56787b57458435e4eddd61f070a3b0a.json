@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.8e-05,
+ "data": {
+  "context": "In WIPO’s PCT Yearly Review 2026, this passage covers PCT-Patent Prosecution Highway (PPH) requests. It states that the United States was the main office of later examination for PPH requests in 2025; figure C28 shows their distribution by offices of earlier and later examination."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0171",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000136,
+  "input": 964,
+  "model": "gpt-6-luna",
+  "output": 79,
+  "reasoning": 0,
+  "seconds": 2.24
+ }
+}

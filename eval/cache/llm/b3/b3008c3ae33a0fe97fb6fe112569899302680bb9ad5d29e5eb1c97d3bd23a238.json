@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, this passage is in the infrastructure indicators section and defines electricity output per million people. It describes electricity generation across energy sources and plant types, scaled by population, using IEA data for 2023–2024."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1721",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00014,
+  "input": 1070,
+  "model": "gpt-6-luna",
+  "output": 67,
+  "reasoning": 0,
+  "seconds": 2.21
+ }
+}

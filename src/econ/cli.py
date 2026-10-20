@@ -131,6 +131,89 @@ def eval_retrieval(
     )
 
 
+@app.command()
+@loud
+def enrich(
+    name: str = typer.Option(..., help="The notes file to write, under library/enrich/."),
+    base: str = typer.Option(
+        None, help="Keep this notes file's notes; write notes only for chunks it lacks."
+    ),
+    prompt: str = typer.Option("enrich-v2", help="The note prompt under prompts/eval/."),
+    model: str = typer.Option("gpt-6-luna"),
+    effort: str = typer.Option("low"),
+    confirm: bool = typer.Option(False, help="Make the paid calls. Without it, a dry run."),
+) -> None:
+    """Context notes for the adopted chunks (search only, D-013); paid, cached and metered."""
+    from econ.evalr.retrieval import load_chunks
+    from econ.kb import enrich as _enrich
+
+    chunks = load_chunks(config.pipeline().chunking.adopted)
+    have = _enrich.load(base) if base else {}
+    todo = [c for c in chunks if c["chunk_id"] not in have]
+    est = len(todo) * 0.0000725  # enrich-v1 cost US$0.1413 for 1,950 calls at flex (D-013)
+    typer.echo(f"enrich: {len(todo)} chunks need notes ({len(have)} kept from {base}); about US${est:.2f}")
+    if not confirm:
+        typer.echo("dry run: add --confirm to make the calls")
+        return
+    with run("enrich", _hash(), name=name, base=base, prompt=prompt, model=model) as r:
+        out = _enrich.run(todo, name, model=model, effort=effort, flex=True, prompt=prompt, base=base)
+        r.add_output(config.path("library/enrich") / f"{name}.jsonl")
+        r.counts.update({k: v for k, v in out.items() if k != "file"})
+        if out["failed"]:
+            raise StageError(f"{out['failed']} note call(s) failed", item=name)
+    typer.echo(f"enrich passed: {out}")
+
+
+@app.command("eval-wipo")
+@loud
+def eval_wipo(grid: str = typer.Option("wipo-v1", help="Grid file under eval/grids/.")) -> None:
+    """How the WIPO documents enter the index: the variants of a committed grid (no API calls, D-033)."""
+    from econ.evalr.wipo import run_grid
+
+    with run("eval-wipo", _hash(), grid=grid) as r:
+        from econ.manifest import require_upstream
+
+        r.upstream["chunk"] = require_upstream("chunk")["run_id"]
+        choice = run_grid(r, grid)
+    typer.echo(f"eval-wipo: chosen {choice['chosen']}; one index: {choice['one_index']}")
+
+
+@app.command("eval-prompts-wipo")
+@loud
+def eval_prompts_wipo(
+    confirm: bool = typer.Option(False, help="Make the paid calls. Without it, list the questions."),
+) -> None:
+    """The prompts before and after rewriting them for two publishers (grid prompts-wipo-v1, D-034)."""
+    from econ import tracing
+    from econ.answer import pipeline
+    from econ.answer.providers import OpenAIModel
+    from econ.evalr import promptsab
+    from econ.retrieval.index import Index
+
+    qs = promptsab.questions()
+    for q in qs:
+        typer.echo(f"{q['id']:10s} {q['group']:5s} {q['question']}")
+    if not confirm:
+        typer.echo("dry run: add --confirm to answer them under both arms (about US$0.80) and judge them")
+        return
+    import os
+
+    llm = config.service().llm
+    p = next(x for x in llm.providers if x.name == "openai")
+    key = os.environ.get(p.key_env, "") or "placeholder"  # the session proxy injects the real key
+    idx = Index()
+    svc = pipeline.Services(
+        index=idx,
+        embedder=_LocalEmbedder(idx.meta["embedder"]),
+        model=OpenAIModel(p, key, llm.timeout_seconds),
+        provider=p,
+        tracer=tracing.NullTracer(),
+    )
+    with run("eval-prompts-wipo", _hash()) as r:
+        s = promptsab.run_grid(r, svc)
+    typer.echo(f"eval-prompts-wipo: {s}")
+
+
 @app.command("eval-retrieval-v2")
 @loud
 def eval_retrieval_v2(
@@ -342,8 +425,8 @@ def index(
                 "authors": d.authors,
                 "url": d.url,
                 "note": d.note,
-                "publisher": config.sources().publisher,
-                "licence": p.get("licence"),
+                "publisher": config.sources().publisher_of(d),
+                "licence": p.get("licence") or d.licence,
                 "page_count": p["page_count"],
                 "pages": p["pages"],
                 "ocr": p["ocr"],

@@ -28,6 +28,13 @@ def schema_kind(name: str) -> str:
     return "answer5" if int(version) >= 5 else "answer3"
 
 
+def shows_publisher(name: str) -> bool:
+    """Prompts written for a corpus of two publishers see each passage's publisher (D-034): the answer
+    prompt from v6, the filter prompt from v2."""
+    kind, version = name.rsplit("-v", 1)
+    return (kind == "answer" and int(version) >= 6) or (kind == "filter" and int(version) >= 2)
+
+
 def schema_for(name: str) -> type[BaseModel]:
     return SCHEMAS[schema_kind(name)]
 

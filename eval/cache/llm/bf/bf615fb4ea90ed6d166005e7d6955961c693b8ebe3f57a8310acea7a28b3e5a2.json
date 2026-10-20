@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.8e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, Appendix IV’s table of top innovation clusters lists cluster rankings and indicators worldwide. The entries report PCT patent applications, scientific publications, venture capital deals, shares of global totals, previous ranks and rank changes for clusters including São Paulo, Moscow, Minneapolis, Austin, Heidelberg-Mannheim, Sydney and Oslo."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1826",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000196,
+  "input": 1534,
+  "model": "gpt-6-luna",
+  "output": 86,
+  "reasoning": 0,
+  "seconds": 1.75
+ }
+}

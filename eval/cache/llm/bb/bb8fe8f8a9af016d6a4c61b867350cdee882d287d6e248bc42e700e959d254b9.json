@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.8e-05,
+ "data": {
+  "context": "In WIPO’s *Madrid Yearly Review 2026*, this passage in the statistics on Nice classes in Madrid international applications compares the share of services classes in 2025 applications with earlier years and across selected origins. It reports that services classes made up 36.3% of all specified classes, and identifies origins with the highest and lowest shares."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0048",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000157,
+  "input": 1147,
+  "model": "gpt-6-luna",
+  "output": 85,
+  "reasoning": 0,
+  "seconds": 2.61
+ }
+}

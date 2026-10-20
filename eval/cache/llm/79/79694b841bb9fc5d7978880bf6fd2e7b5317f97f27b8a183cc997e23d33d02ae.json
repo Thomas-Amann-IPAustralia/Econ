@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.9e-05,
+ "data": {
+  "context": "In WIPO’s *Madrid Yearly Review 2026*, this passage discusses active Madrid international trademark registrations: of registrations recorded since the system began in 1891, those still in force in 2025 and their growth from 2011 to 2025. Figure B21 shows the trend in active registrations."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0068",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000138,
+  "input": 998,
+  "model": "gpt-6-luna",
+  "output": 76,
+  "reasoning": 0,
+  "seconds": 2.25
+ }
+}

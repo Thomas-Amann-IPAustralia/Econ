@@ -1,0 +1,66 @@
+{
+  "argv": [
+    "chunk"
+  ],
+  "command": "chunk",
+  "config_hash": "c533bebfe56aef06",
+  "counts": {
+    "F384": {
+      "chunks": 2852,
+      "max_tokens": 381,
+      "median_tokens": 380,
+      "total_tokens": 1079245
+    },
+    "boilerplate_paragraphs": 24
+  },
+  "error": {
+    "cause": "1831 chunk(s) over the 256-token budget",
+    "item": "wipo-gii-2026:1028",
+    "report": null
+  },
+  "git": {
+    "commit": "bc27ac2ce57229be3d5c4a17fc2d92c71fea11da",
+    "dirty": true,
+    "dirty_paths": [
+      "eval/testset/wipo-v1.yaml"
+    ]
+  },
+  "git_at_end": {
+    "commit": "bc27ac2ce57229be3d5c4a17fc2d92c71fea11da",
+    "dirty": true,
+    "dirty_paths": [
+      "eval/testset/wipo-v1.yaml"
+    ]
+  },
+  "inputs": {},
+  "outputs": {
+    "library/chunks/F384.jsonl": "8c94527815afe10b2be260e26f6f690ad56f456b849afca2f02b0efb7ec4d227"
+  },
+  "params": {
+    "strategies": [
+      "F384",
+      "S256",
+      "S384",
+      "S512",
+      "S384-noprefix",
+      "S384-noprefix-nocite"
+    ]
+  },
+  "run_id": "20261020T035019Z",
+  "seconds": 23.9,
+  "status": "failed",
+  "upstream": {
+    "parse": "20261020T024333Z"
+  },
+  "versions": {
+    "docling": "2.140.0",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.0",
+    "pypdfium2": "5.14.0",
+    "python": "3.12.3",
+    "sentence-transformers": "6.1.0",
+    "tokenizers": "0.23.3",
+    "torch": "2.14.1+cpu"
+  },
+  "warnings": []
+}

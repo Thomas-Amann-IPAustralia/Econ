@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.7e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, Appendix II’s “The impact of modeling assumptions on the GII results” section, this table lists the reference settings and alternatives used to test the robustness of GII results, including missing-data treatment, pillar-level aggregation and weight uncertainty ranges."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1633",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000153,
+  "input": 1168,
+  "model": "gpt-6-luna",
+  "output": 72,
+  "reasoning": 0,
+  "seconds": 2.27
+ }
+}

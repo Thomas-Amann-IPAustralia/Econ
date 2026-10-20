@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.3e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026* (2026), the special theme on science-powered entrepreneurship compares deep science firms with startups and spinouts founded since 2000. This continuation of Table 3 lists leading deep science companies by rank, economy, launch year, valuation, venture-capital funding and sector."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0239",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000186,
+  "input": 1470,
+  "model": "gpt-6-luna",
+  "output": 78,
+  "reasoning": 0,
+  "seconds": 2.05
+ }
+}

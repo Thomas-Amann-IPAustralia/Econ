@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.6e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026* (2026), in the section on intellectual property’s role in deep science entrepreneurship, this passage describes IP-backed lending and financing initiatives in China, the Republic of Korea, Singapore, Japan and the United Kingdom, including examples and their role in financing ventures without equity dilution."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0273",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000151,
+  "input": 1122,
+  "model": "gpt-6-luna",
+  "output": 78,
+  "reasoning": 0,
+  "seconds": 2.14
+ }
+}

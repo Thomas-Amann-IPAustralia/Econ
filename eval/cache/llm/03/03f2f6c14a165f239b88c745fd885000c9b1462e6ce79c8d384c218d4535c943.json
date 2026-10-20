@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.1e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, the Malaysia economy profile reports indicators for market sophistication and business sophistication. The passage gives Malaysia’s scores and rankings for trade, diversification and market scale, and for knowledge workers, including selected data-quality notes."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0988",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000162,
+  "input": 1307,
+  "model": "gpt-6-luna",
+  "output": 63,
+  "reasoning": 0,
+  "seconds": 2.03
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.4e-05,
+ "data": {
+  "context": "In WIPO’s *PCT Yearly Review 2026: The International Patent System*, this passage presents technology-field shares among the top 10 business applicants’ PCT applications. It compares applicants including Huawei, Samsung, Qualcomm and LG across fields such as mechanical elements, transport and consumer goods."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0043",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000188,
+  "input": 1517,
+  "model": "gpt-6-luna",
+  "output": 72,
+  "reasoning": 0,
+  "seconds": 2.35
+ }
+}

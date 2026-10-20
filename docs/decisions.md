@@ -1353,3 +1353,174 @@ green, in the claim's card and in the passage.
 3 violet, 4 grey in its card, and the same numbers and colours on the same sentences in passages 4, 3 and 20;
 a one-sentence claim stays yellow and unnumbered; a sentence's Passage button brings it into view; the earlier
 checks still pass, in both themes and at phone width, with no script errors.
+
+## D-033 — The WIPO documents ingested; the GII's economy profiles written from WIPO's data file; one index for both publishers (the owner's request; Claude, 2026-10-20)
+
+**Request (the owner, 2026-10-19).** "I've added the R2 keys to the environment. Please ingest the WIPO reports
+and test the correct approach."
+
+**What was added to the bucket** (folder `WIPO/`, 2026-10-19): six PDFs, 759 pages: the Global Innovation Index
+(GII) 2026 (348 pages), a 17-page printout of WIPO's web page on Australia's GII results, the PCT Yearly Review
+2026 (84), the Madrid Yearly Review 2026 (88), World Intellectual Property Indicators 2025 (192) and World
+Intangible Investment Highlights 2026 (30); and the GII 2026 data file (`wipo-pub-2000-2026-tech1.xlsx`: index
+structure, 139 economies, 15,290 scores and ranks). Five PDFs are byte-identical to the copies on wipo.int;
+the printout has no public copy. The bucket's spreadsheet is 929,719 bytes and WIPO's is 943,159 (checked
+2026-10-19): perhaps edited or re-saved; its numbers match the printed profiles checked (Japan, Australia).
+
+**Built.**
+- Registry: a `publisher` per document (the WIPO ones name WIPO) and `data:` entries for bucket objects that
+  are not documents but data a document's parse reads; fetch skips folder markers (the empty `WIPO/` key).
+- Sweep: a workbook is checked for macros, external links and embedded objects, and its cell text gets the
+  text checks. No high-severity findings in the WIPO files; no allowlist entries needed. (A first rule of mine
+  flagged Excel's inert `printerSettings1.bin`; narrowed to the VBA project.)
+- Parse: documents over 100 pages convert in cached 25-page batches. The GII ran out of memory whole (9.5 GB),
+  and two container restarts lost batches in progress. Docling's table model took about 40 seconds a page on
+  the 139 profile pages and about 3 seconds on the rest.
+- Chunk: a table header that leaves no room for rows is split, not repeated (the GII's cluster tables have
+  270-token headers, which failed the 256-token strategy). The adopted strategy's 1,897 IP Australia passages
+  are byte-identical; the other strategies also caught up with D-022's OCR repair, which rebuilt only the
+  adopted one.
+- `econ.ingest.gii`: each economy's profile written as sentences from the data file, one paragraph per
+  sub-pillar, each starting with the economy and its pillar ("Japan, GII 2026 pillar 5, Business
+  sophistication: score 58.1, rank 7. 5.1 Knowledge workers: ..."), rounded as printed, with strengths,
+  weaknesses and outdated data marked, placed on the economy's profile page so a citation leads to the
+  printed page. Applied in the parse stage (`data[].use: gii-profiles`).
+
+**The finding that decided it.** Docling labels every economy-profile table a *document index* (a table of
+contents), which the parse leaves out by design. Parsed as before, the 139 profile pages keep a median of 52
+characters each: Australia's page is "6", "144", "Australia", "20". None of the test set's 13 profile figures
+was in the text at all.
+
+**Method.** Grid `wipo-v1` (eval/grids/wipo-v1.yaml, committed before any number; amendment 1, also before any
+number, added `docling-tables` after the finding above). Test set `wipo-v1`: 66 needs written by Claude from a
+seeded sample of passages (53 verbatim quotes; 13 profile figures, drawn at random from the data file and
+scored by a chunk from the profile page that holds the indicator's name and value). No model calls: the
+adopted chunking, embedder and hybrid search, the question as the only query; IP Australia passages carry
+their context notes, WIPO passages none yet.
+
+**Results** (report `reports/retrieval-wipo-v1.md`, run `eval-wipo/…`).
+
+| Variant | WIPO ndcg@10 dev / test | Profile figures | Other WIPO needs | IP Australia ndcg@10 (114) vs today |
+|---|---|---|---|---|
+| `docling` (as parsed) | 0.407 / 0.303 | 0.000 | 0.442 | -0.008 [-0.019, +0.004] |
+| `docling-prefix` | 0.340 / 0.417 | 0.033 | 0.463 | -0.005 |
+| `docling-tables` | 0.414 / 0.298 | 0.000 | 0.443 | -0.003 |
+| **`data` (chosen)** | **0.601 / 0.440** | **0.876** | 0.433 | **-0.004 [-0.016, +0.009]** |
+| `drop` | 0.396 / 0.311 | 0.000 | 0.440 | -0.008 |
+
+- Profile figures are found only when written from the data file (0.876; 0.000 for every parse). Keeping
+  Docling's tables puts 12 of the 13 figures in the text, but in 1,903 header-less chunks that never name
+  their economy, and none reaches a top 10. On test, `data` beats `docling` by +0.137 [+0.015, +0.272].
+- One index is safe for the IP Australia questions (rule 1 met): ndcg@10 0.595 to 0.592; 16 of 114 needs
+  change. The two biggest losses are WIPO passages that answer the question too, which the IP Australia gold
+  doesn't count: "What is the Locarno classification used for?" now finds WIPI's glossary entry, and "Can
+  patents on medicines last longer than 20 years?" finds WIPI's "Patent rights generally last for up to 20
+  years". General IP questions will now draw on both publishers.
+- WIPO passages without notes score well below IP Australia's (0.43-0.44 on non-profile needs against 0.59).
+  The title-and-section prefix helped two documents a lot (Australia's printout 0.38 to 0.80, PCT 0.17 to 0.44)
+  and hurt two (Madrid, WIPI); dev and test disagree. Context notes are the adopted way to give a passage its
+  setting (D-013), and should be measured next.
+
+**Decision** (the chunking strategy and free retrieval improvements are delegated, D-005, D-013): the GII's
+profiles are written from the data file; the WIPO documents join the one index; WIPO passages take no
+prefix. The library holds the result (2,847 WIPO passages: GII 1,875, of which 1,213 are profile text; WIPI
+529; PCT 198; Madrid 162; intangibles 49; the printout 34).
+
+**Not done, for the owner** (the serving index, `library/index/`, is unchanged; the live service doesn't see
+the WIPO documents yet):
+1. *Money.* Context notes for the 2,847 WIPO passages, about US$0.21 of gpt-6-luna (US$0.12 without the
+   profile passages, which already say where they sit). The note prompt says every passage is from IP
+   Australia's Office of the Chief Economist, so it needs a publisher-neutral version (enrich-v2). Then the
+   index rebuild, `verify-search`, and a re-run of this grid with notes (free).
+2. *Prompts.* plan-v2's document map lists the 24 IP Australia publications and tells the planner to drop
+   "Australia" from queries; with WIPO's global reports "Australia" now discriminates. The filter prompt and
+   answer-v5 say every passage is from the Office of the Chief Economist, and answer-v5 tells staff that is the
+   only source. New versions (plan-v4, filter-v2, answer-v6) change what the chatbot answers from: the owner's
+   adoption, measured first (paid).
+3. *Publishing.* The WIPO PDFs on the Pages site and an acknowledgement. Five state CC BY 4.0; the Australia
+   printout states no licence. The front end and README say "24 documents, 1,099 pages" and "published by IP
+   Australia".
+4. *The judged set.* WIPO passages entering the judged contexts are unjudged (counted 0) until a top-up.
+
+**Spend:** none (no model calls). **Records.** Two failed sweep manifests from this work (the over-broad
+macro rule's runs) were deleted by mistake before they were committed; the sweep that passed is kept.
+
+## D-034 — The WIPO passages' context notes, the index rebuilt with both publishers, and the prompts rewritten for two publishers (measured; the owner adopts) (the owner's request; Claude, 2026-10-20)
+
+**Request (the owner, 2026-10-20).** "Budget of $1.50 approved. Yes, please conduct a small measurement before
+and after re-writing the system prompts. It's all CC 4.0."
+
+**Built.**
+- `prompts/eval/enrich-v2.md`: the note prompt, publisher-neutral, with the publisher in the document's
+  details. `econ enrich` (dry run unless `--confirm`) wrote notes for the 2,847 WIPO passages (gpt-6-luna, low
+  effort, flex, as in D-013): none failed, none dropped by the text checks, US$0.231. The notes file
+  `S384-noprefix-nocite.luna-enrich-v2` keeps the 1,897 IP Australia notes byte for byte (enrich-v1).
+- `retrieval.enrichment` now names it; `library/index/` rebuilt: 30 documents, 4,744 passages.
+- `plan-v4`: the document map lists the WIPO reports; "Australia" goes into a query when the question compares
+  countries or asks how Australia ranks (plan-v2 left it out of every query). `filter-v2`: names both
+  publishers and how to rate one country's or the world's figures for a question about Australia.
+  `answer-v6`: answer-v5 with both publishers as sources and a rule to say whose finding each is and not to
+  join the two publishers' figures as one series. filter-v2 and answer-v6 see each passage's `publisher`;
+  the earlier versions' evidence is byte-identical (a test holds it).
+- The Pages site names both publishers and its counts (30 documents, 1,858 pages); the WIPO PDFs publish with
+  the next deploy (the owner: CC BY 4.0). The registry can state a licence a document doesn't (the Australia
+  printout). README acknowledges WIPO.
+
+**Measured.**
+1. *Retrieval with the notes* (grid `wipo-v1b`, committed first, free; report `reports/retrieval-wipo-v1b.md`):
+
+| | without WIPO notes (wipo-v1) | with them (wipo-v1b) |
+|---|---|---|
+| WIPO ndcg@10, dev / test | 0.601 / 0.440 | 0.596 / 0.620 |
+| WIPO non-profile needs, ndcg@10 | 0.433 | 0.543 |
+| WIPO recall@20 | 0.758 | 0.894 |
+| IP Australia ndcg@10 vs today's corpus | -0.004 [-0.016, +0.009] | **+0.000 [-0.011, +0.012]** |
+
+2. *The served search* (`econ verify-search`): served and measured agree (judged ndcg@10 0.6842 / 0.6845; the
+   filter's relevant passages reached 0.725 / 0.726). Both are below D-023's 0.7016 because WIPO passages now
+   enter the judged contexts unjudged and count as 0: a judging top-up would measure them.
+3. *The prompts, before and after* (grid `prompts-wipo-v1`, committed before any answer; report
+   `reports/prompts-wipo-v1.md`). 13 questions through the service's own pipeline on the new index, once per
+   arm: 4 sampled IP Australia needs, 4 sampled WIPO needs, 5 questions written to need both publishers.
+   Judge gemini-3.8-flash (`pairwise-v2`, both orders, blind), which also counted misattributions.
+
+| Over 13 questions | before (plan-v2, filter-v1, answer-v5) | after (plan-v4, filter-v2, answer-v6) |
+|---|---|---|
+| Passed the check first time | 13 | 13 |
+| Gold passage reached the 20 / cited (8 sampled needs) | 8 / 7 | 8 / 7 |
+| Misattributions counted by the judge | 0 | 0 |
+| Agreed preferences | 2 | **6** (2 ties, 3 split; p = 0.29) |
+| WIPO share of the 20, questions needing both publishers (mean) | 0.32 | 0.41 |
+| Cost | US$0.287 | US$0.305 |
+
+- The rule fixed in advance is met: recommend `after`. Thirteen questions can show a problem, not prove a
+  small gain; the preferences lean to `after` without significance.
+- Read by Claude: `after` names the publisher ("WIPO's Global Innovation Index…", "IP Australia's Australian
+  IP Report 2026…"); `before` attributes nothing wrongly but often leaves the publisher unsaid. Both answer
+  economy-profile questions from the data-file passages (D-033).
+- **A gap neither prompt closes.** "How has Australian patenting changed, and how does it compare with …
+  worldwide?": `after` passed the answer model no WIPO passage and said worldwide data were missing; the judge
+  preferred `before`, which got 4. Replayed on the same 60-passage pool (US$0.012, estimated in the ledger),
+  both filters rate 10-13 Australian passages "essential" and keep no WIPO passage: the filter fills its 20
+  places by rating alone, so one half of a two-part question can crowd out the other. Run-to-run variation
+  decided which arm got WIPO evidence. A per-query or per-publisher share of the 20 is the next thing to
+  measure.
+
+**Decision.** The notes and the rebuilt index (the owner's go-ahead and the delegated retrieval choices).
+**For the owner: adopt plan-v4, filter-v2 and answer-v6** (`config/service.yaml`, three lines). Until then
+the service answers from both publishers with the earlier prompts, which made no misattribution here.
+
+**Spend under the US$1.50 grant:** OpenAI US$0.835 (notes 0.231, answers 0.592, the replay ~0.012),
+Gemini US$0.114 (judge), **US$0.95 in all**. `config/eval.yaml` caps the grant in code; the first Gemini cap
+forgot the cap fraction and stopped the judge once, after all 26 answers were saved (resumed, no answer lost).
+
+## D-035 — The owner adopts plan-v4, filter-v2 and answer-v6 (the owner, 2026-10-20)
+
+**Request.** "Adopt the new prompts, open a PR and watch it."
+
+**Decision.** `config/service.yaml`: `answer.prompt: answer-v6`, `answer.plan_prompt: plan-v4`,
+`answer.filter.prompt: filter-v2`, as measured in D-034 (grid prompts-wipo-v1). The service, the trail and
+Render's log now show both publishers' passages, each named with its publisher to the filter and answer
+models. `econ verify-search` replays the filter-v1 ratings measured in D-018, so its filter rows no longer
+describe the served prompt until filter-v2 is measured on the judged set. Live on the merge to `main`
+(Render and Pages deploy from it). **Spend:** none.

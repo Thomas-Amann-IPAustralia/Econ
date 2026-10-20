@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.8e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, Appendix III, “Sources and definitions,” explains the data and indicator methods used in the GII. It covers the 139 economies included in the 2026 index, the years of data used, indicator types and markings, and how some indicators are scaled for comparison."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1699",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000157,
+  "input": 1177,
+  "model": "gpt-6-luna",
+  "output": 78,
+  "reasoning": 0,
+  "seconds": 1.72
+ }
+}

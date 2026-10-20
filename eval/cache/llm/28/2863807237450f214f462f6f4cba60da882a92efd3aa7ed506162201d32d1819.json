@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.2e-05,
+ "data": {
+  "context": "In WIPO’s World Intellectual Property Indicators 2025, this passage is part of the worldwide table on trademark applications by office and origin. It lists application counts by resident and non-resident origin, equivalent registration class counts by origin, and trademarks in force for offices including Mauritania through Namibia in 2024."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0295",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000184,
+  "input": 1456,
+  "model": "gpt-6-luna",
+  "output": 77,
+  "reasoning": 0,
+  "seconds": 1.79
+ }
+}

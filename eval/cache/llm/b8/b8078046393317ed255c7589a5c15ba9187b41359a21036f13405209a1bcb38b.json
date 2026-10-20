@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, the Burkina Faso economy profile reports the country’s scores and ranks for market sophistication and business sophistication, including indicators of trade, investment, knowledge workers and business-financed R&D."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0497",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000158,
+  "input": 1294,
+  "model": "gpt-6-luna",
+  "output": 58,
+  "reasoning": 0,
+  "seconds": 2.41
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.1e-05,
+ "data": {
+  "context": "In WIPO’s World Intellectual Property Indicators 2025, this passage compares non-resident shares of trademark applications at the top 20 offices in 2024, referring to figure B9. It identifies offices with high and low shares and explains that France, Germany and Italy have low shares partly because applicants seek EU-wide trademark protection through the EUIPO."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0194",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000162,
+  "input": 1192,
+  "model": "gpt-6-luna",
+  "output": 86,
+  "reasoning": 0,
+  "seconds": 1.69
+ }
+}

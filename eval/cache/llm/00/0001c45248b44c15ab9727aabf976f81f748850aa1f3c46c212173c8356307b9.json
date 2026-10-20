@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.6e-05,
+ "data": {
+  "context": "In WIPO’s *Australia ranking in the Global Innovation Index 2026*, under Australia’s innovation top performers, this table lists the top three Australian universities for university-industry and international engagement. It gives their within-Australia ranks and scores in the Times Higher Education World University Rankings 2026, based on the academic year ending in 2023."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026-australia:0016",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000152,
+  "input": 1099,
+  "model": "gpt-6-luna",
+  "output": 84,
+  "reasoning": 0,
+  "seconds": 2.45
+ }
+}

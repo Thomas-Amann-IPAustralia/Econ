@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.5e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, Appendix A, table A61 reports 2024 patent grants by office and origin and patents in force. The passage lists these measures and year-on-year changes for Sint Maarten, Slovakia, Slovenia, South Africa, Spain, Sri Lanka, Sweden, Switzerland and the Syrian Arab Republic."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0157",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00017,
+  "input": 1295,
+  "model": "gpt-6-luna",
+  "output": 82,
+  "reasoning": 0,
+  "seconds": 1.92
+ }
+}

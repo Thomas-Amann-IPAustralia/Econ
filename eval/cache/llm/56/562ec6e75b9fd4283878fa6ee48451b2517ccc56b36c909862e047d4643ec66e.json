@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.8e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, in Angola’s economy profile, this passage reports Angola’s scores and ranks for market sophistication and business sophistication, including trade, diversification and market-scale indicators and knowledge-worker indicators."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0326",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000157,
+  "input": 1266,
+  "model": "gpt-6-luna",
+  "output": 60,
+  "reasoning": 0,
+  "seconds": 1.89
+ }
+}

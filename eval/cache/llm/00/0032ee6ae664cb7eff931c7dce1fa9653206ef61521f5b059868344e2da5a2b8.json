@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.6e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, in the Kyrgyzstan economy profile, this passage reports the country’s Knowledge and technology outputs and Creative outputs scores, ranks and indicators. It covers knowledge diffusion, including intellectual property receipts and high-tech and ICT services exports, and creative outputs, including trademarks and industrial designs."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0910",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000171,
+  "input": 1328,
+  "model": "gpt-6-luna",
+  "output": 77,
+  "reasoning": 0,
+  "seconds": 2.08
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.3e-05,
+ "data": {
+  "context": "In WIPO’s *Madrid Yearly Review 2026*, this passage is part of the section on the international application and registration procedure. It explains the goods and services list, territorial designations, formal examination and registration, and the fees for international trademark applications under the Madrid System."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0144",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000147,
+  "input": 1123,
+  "model": "gpt-6-luna",
+  "output": 69,
+  "reasoning": 0,
+  "seconds": 1.92
+ }
+}

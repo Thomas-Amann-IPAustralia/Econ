@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, the patent statistics section explains the worldwide resident and non-resident patent grant totals for 2010–2024. The estimates cover 158 patent offices and include grants from direct national or regional filings and applicable PCT national-phase applications; “resident” and “non-resident” are defined in the glossary."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0050",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00014,
+  "input": 961,
+  "model": "gpt-6-luna",
+  "output": 87,
+  "reasoning": 0,
+  "seconds": 2.53
+ }
+}

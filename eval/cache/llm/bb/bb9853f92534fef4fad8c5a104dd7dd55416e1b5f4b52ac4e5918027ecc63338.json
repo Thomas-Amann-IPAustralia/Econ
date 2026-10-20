@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.7e-05,
+ "data": {
+  "context": "In WIPO’s *Madrid Yearly Review 2026*, the section on designations in Madrid international applications compares designation patterns by applicant origin in 2025. The passage and Figure A16 show how many Madrid members applicants from the six leading origins designated per application, noting that applicants from China typically designated more than those from other leading origins."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0036",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000133,
+  "input": 922,
+  "model": "gpt-6-luna",
+  "output": 81,
+  "reasoning": 0,
+  "seconds": 2.12
+ }
+}

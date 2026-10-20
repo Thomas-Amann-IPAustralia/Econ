@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.3e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, this passage is part of the “Exploring an economy” topic and describes the Economy brief in the GII Data Explorer. It explains the sections users can browse for an individual economy and the option to download underlying chart and indicator data."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0298",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000125,
+  "input": 900,
+  "model": "gpt-6-luna",
+  "output": 71,
+  "reasoning": 0,
+  "seconds": 2.27
+ }
+}

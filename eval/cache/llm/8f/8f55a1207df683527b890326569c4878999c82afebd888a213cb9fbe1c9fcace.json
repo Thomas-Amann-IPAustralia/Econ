@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, this passage discusses trademark filing at the offices with the largest volumes, comparing application class counts in 2024 and over time. It identifies China, the US, the Russian Federation, India and Brazil among the leading offices and explains that China’s high filing volume primarily reflects applications by its residents."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0190",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000163,
+  "input": 1218,
+  "model": "gpt-6-luna",
+  "output": 83,
+  "reasoning": 0,
+  "seconds": 1.88
+ }
+}

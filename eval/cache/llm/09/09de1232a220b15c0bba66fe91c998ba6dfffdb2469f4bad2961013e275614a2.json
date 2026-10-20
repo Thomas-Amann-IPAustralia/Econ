@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.6e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, this passage is part of the section on the best-practice frontier, which uses data envelopment analysis (DEA) to compare innovation performance across 139 economies. It explains how restrictions on pillar weights affect the similarity between DEA-BoD scores and GII scores, including why Venezuela’s scores differ."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1685",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000151,
+  "input": 1099,
+  "model": "gpt-6-luna",
+  "output": 82,
+  "reasoning": 0,
+  "seconds": 2.49
+ }
+}

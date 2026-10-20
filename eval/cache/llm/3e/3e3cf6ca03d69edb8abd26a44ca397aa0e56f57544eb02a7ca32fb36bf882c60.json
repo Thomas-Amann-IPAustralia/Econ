@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.7e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026* (2026), in “Innovation clusters by economy,” this passage discusses leading scientific publishing organizations and the geographic spread of organizations active in the world’s top 100 innovation clusters, based on 2026 patent or publication activity."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0196",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000153,
+  "input": 1181,
+  "model": "gpt-6-luna",
+  "output": 69,
+  "reasoning": 0,
+  "seconds": 2.55
+ }
+}

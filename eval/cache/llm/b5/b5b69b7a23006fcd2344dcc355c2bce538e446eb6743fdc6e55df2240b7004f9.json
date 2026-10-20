@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.8e-05,
+ "data": {
+  "context": "In WIPO’s *PCT Yearly Review 2026*, this passage introduces the Patent Cooperation Treaty and its international patent filing system. It explains how one international application can seek patent protection in multiple countries and notes the system’s membership from its establishment in 1978 through the end of 2025."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0176",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000135,
+  "input": 980,
+  "model": "gpt-6-luna",
+  "output": 74,
+  "reasoning": 0,
+  "seconds": 1.62
+ }
+}

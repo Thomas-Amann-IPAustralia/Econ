@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.6e-05,
+ "data": {
+  "context": "In WIPO’s *PCT Yearly Review 2026*, this passage presents statistics on international preliminary reports on patentability by International Preliminary Examining Authority. It compares report counts and shares for 2023–2025, including India’s increase in 2025; the data may be incomplete."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0168",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000192,
+  "input": 1552,
+  "model": "gpt-6-luna",
+  "output": 73,
+  "reasoning": 0,
+  "seconds": 2.42
+ }
+}

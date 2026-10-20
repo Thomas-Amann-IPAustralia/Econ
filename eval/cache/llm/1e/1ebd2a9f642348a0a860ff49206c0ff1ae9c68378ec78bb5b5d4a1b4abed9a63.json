@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.7e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, this indicator in the creative outputs section defines cultural and creative services exports as a share of total trade in 2024. It covers specified information, advertising, audiovisual, heritage and recreational services, using EBOPS 2010 classifications and WTO and WTO-OECD data for 2023–2024."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1773",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000153,
+  "input": 1114,
+  "model": "gpt-6-luna",
+  "output": 84,
+  "reasoning": 0,
+  "seconds": 2.32
+ }
+}

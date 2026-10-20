@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.7e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, the United Kingdom economy profile reports the UK’s overall GII standing and its scores and ranks for innovation inputs and outputs, income group, region, and population and economic indicators. It then details the UK’s institutions pillar, including institutional, regulatory and business environment measures."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1469",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000173,
+  "input": 1350,
+  "model": "gpt-6-luna",
+  "output": 76,
+  "reasoning": 0,
+  "seconds": 2.17
+ }
+}

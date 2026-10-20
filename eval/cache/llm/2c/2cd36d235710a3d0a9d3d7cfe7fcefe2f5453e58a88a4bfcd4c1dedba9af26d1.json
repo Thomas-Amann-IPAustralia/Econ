@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.5e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, in the section on policies and practices for strengthening deep science entrepreneurship ecosystems, this passage discusses standardizing university technology transfer and investing in shared research, testing, manufacturing and certification infrastructure to help technologies reach industrial scale."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0288",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00015,
+  "input": 1180,
+  "model": "gpt-6-luna",
+  "output": 64,
+  "reasoning": 0,
+  "seconds": 2.1
+ }
+}

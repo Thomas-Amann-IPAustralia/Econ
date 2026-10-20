@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.005161,
+ "data": {
+  "misattributed_A": 0,
+  "misattributed_B": 0,
+  "reason": "Both answers are exceptionally well-researched, accurate, and properly attributed. Answer B is slightly better as it is more concise and directly structures the core reasons into three clear points without including extraneous historical details like the 2016 staffing shortage.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v2:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "ipr26-5:ab",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.005161,
+  "input": 6431,
+  "model": "gemini-3.8-flash",
+  "output": 90,
+  "reasoning": 0,
+  "seconds": 2.95
+ }
+}

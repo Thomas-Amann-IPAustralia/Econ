@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.7e-05,
+ "data": {
+  "context": "In WIPO’s *World Intangible Investment Highlights 2026*, this section compares intangible investment as a share of GDP across economies in 1995 and 2025, with some country comparisons using different years because longer data series are unavailable. It notes rising intangible intensity, including in Northern and Eastern Europe, and explains measurement limits for middle-income economies with large informal sectors."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-intangibles-2026:0013",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000173,
+  "input": 1293,
+  "model": "gpt-6-luna",
+  "output": 87,
+  "reasoning": 0,
+  "seconds": 2.62
+ }
+}

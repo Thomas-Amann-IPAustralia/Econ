@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, this indicator table reports scores and rank percentiles for selected innovation indicators, including science and engineering graduates, education, ICT, logistics and energy, across the sub-pillar, sub-index and overall GII levels."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1606",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00018,
+  "input": 1469,
+  "model": "gpt-6-luna",
+  "output": 66,
+  "reasoning": 0,
+  "seconds": 2.2
+ }
+}

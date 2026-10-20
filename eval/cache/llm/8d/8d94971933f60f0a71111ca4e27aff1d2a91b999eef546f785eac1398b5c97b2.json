@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.5e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, this passage discusses the regional spread and maturity of deep science innovation ecosystems, including startup patenting across Asia, Africa and other regions. It describes India’s role in Central and Southern Asia and notes data coverage limits in the analysis based on Dealroom."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0283",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00015,
+  "input": 1137,
+  "model": "gpt-6-luna",
+  "output": 73,
+  "reasoning": 0,
+  "seconds": 2.82
+ }
+}

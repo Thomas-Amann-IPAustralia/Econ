@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.9e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, in the Step 4: Qualitative Review section, this passage describes the European Commission Joint Research Centre’s JRC-COIN evaluation of GII 2026 economy classifications and Innovation Input and Output Sub-Index performance, checking robustness to the model’s assumptions."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1629",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000138,
+  "input": 985,
+  "model": "gpt-6-luna",
+  "output": 78,
+  "reasoning": 0,
+  "seconds": 2.7
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.4e-05,
+ "data": {
+  "context": "In WIPO’s *World Intangible Investment Highlights 2026*, Box 6 discusses brand investment and firm-level evidence on economic upgrading in middle-income economies. It covers how firms can build value through branding, overcome country-of-origin perceptions, and progress from contract manufacturing to proprietary designs and their own brands, with Japan and the Republic of Korea as examples."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-intangibles-2026:0042",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000169,
+  "input": 1276,
+  "model": "gpt-6-luna",
+  "output": 83,
+  "reasoning": 0,
+  "seconds": 2.4
+ }
+}

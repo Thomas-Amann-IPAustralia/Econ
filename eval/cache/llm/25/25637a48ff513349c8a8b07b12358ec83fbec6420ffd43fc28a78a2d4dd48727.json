@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.1e-05,
+ "data": {
+  "context": "In WIPO’s *Madrid Yearly Review 2026: International Registration of Marks*, this section reports the leading countries of origin for Madrid international trademark applications in 2025 and changes from 2024. It compares application counts and growth or declines among the top origins, including the United States, Germany, China, France and the United Kingdom."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0006",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000161,
+  "input": 1197,
+  "model": "gpt-6-luna",
+  "output": 82,
+  "reasoning": 0,
+  "seconds": 2.39
+ }
+}

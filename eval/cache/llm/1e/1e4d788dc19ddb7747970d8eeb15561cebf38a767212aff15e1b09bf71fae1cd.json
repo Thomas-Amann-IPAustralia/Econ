@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.8e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, in Greece’s economy profile, this passage reports Greece’s Market sophistication and Business sophistication scores, ranks and indicator results, including trade, investment and knowledge workers."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0747",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000156,
+  "input": 1278,
+  "model": "gpt-6-luna",
+  "output": 56,
+  "reasoning": 0,
+  "seconds": 3.66
+ }
+}

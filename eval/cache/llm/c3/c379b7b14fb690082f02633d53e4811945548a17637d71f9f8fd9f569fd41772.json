@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.5e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, Appendix IV, Table 2, this continuation lists top innovation clusters worldwide and their rankings, economies, PCT applications, scientific publications, venture capital deals, global shares, and rank changes. The preceding rows show the Osaka–Kobe–Kyoto, Miami, Paris and Montréal clusters."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1809",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00019,
+  "input": 1488,
+  "model": "gpt-6-luna",
+  "output": 82,
+  "reasoning": 0,
+  "seconds": 2.25
+ }
+}

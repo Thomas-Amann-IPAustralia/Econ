@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.003406,
+ "data": {
+  "misattributed_A": 0,
+  "misattributed_B": 0,
+  "reason": "Both answers address the question well and rely on accurate quotes from the IP Australia reports. Answer A is slightly better aligned with the narrative prompt because it draws on both publishers (IP Australia and WIPO's Madrid Yearly Review) to describe how Madrid functions, whereas Answer B relies exclusively on IP Australia publications.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v2:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "both-3:ba",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.003406,
+  "input": 4041,
+  "model": "gemini-3.8-flash",
+  "output": 100,
+  "reasoning": 0,
+  "seconds": 3.05
+ }
+}

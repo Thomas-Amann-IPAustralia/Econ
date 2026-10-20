@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6e-05,
+ "data": {
+  "context": "Front matter of WIPO’s World Intellectual Property Indicators 2025, listing publication and cataloguing details, including its ISBNs, ISSNs, cover credit, and publication number."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0002",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000119,
+  "input": 951,
+  "model": "gpt-6-luna",
+  "output": 48,
+  "reasoning": 0,
+  "seconds": 1.85
+ }
+}

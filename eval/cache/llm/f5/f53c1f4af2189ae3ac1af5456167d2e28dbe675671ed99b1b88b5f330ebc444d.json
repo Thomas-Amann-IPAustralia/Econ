@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.9e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, Appendix II, Table 1 examines statistical coherence in the GII. It reports correlations and variance explained between indicators—including education and research indicators—and their sub-pillars, sub-indexes, and the overall GII."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1602",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000179,
+  "input": 1454,
+  "model": "gpt-6-luna",
+  "output": 67,
+  "reasoning": 0,
+  "seconds": 1.62
+ }
+}

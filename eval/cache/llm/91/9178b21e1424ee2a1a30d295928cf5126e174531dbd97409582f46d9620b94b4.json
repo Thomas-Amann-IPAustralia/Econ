@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.2e-05,
+ "data": {
+  "context": "In WIPO’s *PCT Yearly Review 2026*, this statistical table compares PCT applications filed in 2025 and 2024 by country, showing counts received at each country’s receiving office and counts by country of origin."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0090",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000185,
+  "input": 1547,
+  "model": "gpt-6-luna",
+  "output": 61,
+  "reasoning": 0,
+  "seconds": 2.11
+ }
+}

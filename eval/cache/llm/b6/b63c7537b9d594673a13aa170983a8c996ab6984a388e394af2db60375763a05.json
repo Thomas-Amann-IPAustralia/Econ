@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.5e-05,
+ "data": {
+  "context": "In WIPO’s *PCT Yearly Review 2026: The International Patent System*, this passage explains the advantages of the Patent Cooperation Treaty (PCT) system, which had 158 Contracting States by the end of 2025. It describes how a single international patent application can support patent protection in multiple countries and outlines the shared procedures, reports and time to defer national or regional steps."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0177",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00015,
+  "input": 1033,
+  "model": "gpt-6-luna",
+  "output": 93,
+  "reasoning": 0,
+  "seconds": 1.72
+ }
+}

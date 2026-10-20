@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000101,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, section B20 presents 2024 trademark application class counts for the top 20 offices and origins. This excerpt is a table of counts by applicant origin and receiving office, including Argentina, Australia, Brazil, China, France, Germany, India, Indonesia, Iran, Italy, Japan, Mexico, the Republic of Korea, the Russian Federation and Spain."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0233",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000202,
+  "input": 1548,
+  "model": "gpt-6-luna",
+  "output": 95,
+  "reasoning": 0,
+  "seconds": 1.71
+ }
+}

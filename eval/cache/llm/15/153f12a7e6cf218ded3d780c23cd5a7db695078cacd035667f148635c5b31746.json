@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.7e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, this passage concerns appellations of origin (AOs) and geographical indications (GIs) registered under the Lisbon System, including 2024 registrations and changes in the number in force."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0449",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000194,
+  "input": 1111,
+  "model": "gpt-6-luna",
+  "output": 166,
+  "reasoning": 100,
+  "seconds": 3.04
+ }
+}

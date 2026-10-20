@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.8e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, this indicator description appears in the Institutions section, under institutional environment and operational stability for businesses. It defines the 2025 political, legal, operational or security risk index, which measures risks to business operations and is based on S&P Global’s Country Risk Dataset."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1700",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000137,
+  "input": 972,
+  "model": "gpt-6-luna",
+  "output": 79,
+  "reasoning": 0,
+  "seconds": 1.59
+ }
+}

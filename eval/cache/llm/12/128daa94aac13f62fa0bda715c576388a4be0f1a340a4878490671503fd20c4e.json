@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.6e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, the Democratic Republic of the Congo economy profile reports infrastructure and market sophistication indicators, including scores, ranks, and strengths or weaknesses. The passage covers ecological sustainability and credit and investment measures, with some data unavailable or outdated."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0631",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000171,
+  "input": 1380,
+  "model": "gpt-6-luna",
+  "output": 66,
+  "reasoning": 0,
+  "seconds": 1.97
+ }
+}

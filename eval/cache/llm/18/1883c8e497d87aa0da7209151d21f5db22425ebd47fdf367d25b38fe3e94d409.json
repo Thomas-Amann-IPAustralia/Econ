@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.2e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, the Latin America and the Caribbean country profiles, this passage describes Ecuador’s 2026 innovation ranking and selected strengths in online government services, microfinance, trademarks, tertiary enrolment and software spending."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0177",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000124,
+  "input": 925,
+  "model": "gpt-6-luna",
+  "output": 63,
+  "reasoning": 0,
+  "seconds": 2.01
+ }
+}

@@ -100,6 +100,34 @@ Branch `ccr-fe4defc0-ysiv1i`. Read D-017 to D-020 first.
   violet, then grey; `sentenceColour`, tokens `--k1-bg` to `--k4-line`), in its card and, while selected, in the
   trail (marks carry `data-span`).
 
+## Update, 2026-10-20: the WIPO documents (D-033)
+- **In the library, not yet served.** Six WIPO PDFs and the GII 2026 data file are registered
+  (`config/sources.yaml`: `publisher` per document, `data:` for the spreadsheet), parsed and chunked: 2,847
+  passages under the adopted strategy; the 1,897 IP Australia passages are unchanged. `library/index/` was not
+  rebuilt: new documents need context notes first (paid).
+- **The GII's economy profiles** come from WIPO's spreadsheet (`econ.ingest.gii`, applied in the parse stage):
+  Docling drops the profile tables as a "document index". Grid `wipo-v1` (`econ eval-wipo`, free) measured
+  five ways in; report `reports/retrieval-wipo-v1.md`. Re-running it needs the GII's Docling cache
+  (`econ parse --only wipo-gii-2026`, about 2 hours without the cache).
+- **Long parses:** `parse.batch_pages`/`batch_size` cache 25-page batches under `data/parsed/`; run long
+  parses detached (`setsid nohup …`), since background commands stop after 2 hours and the container has
+  restarted mid-run.
+- **Next, with the owner's go-ahead:** (1) notes for the WIPO passages with a publisher-neutral note prompt
+  (about US$0.21), rebuild the index, `verify-search`, re-run `wipo-v1`; (2) plan-v4, filter-v2, answer-v6 for
+  a two-publisher corpus (the owner adopts; measure first); (3) the PDFs on Pages, the acknowledgement and the
+  front end's counts; (4) a judging top-up for WIPO passages in the judged contexts.
+- Next free decision number: **D-034**.
+
+## Update, 2026-10-20 (later): the WIPO documents served; prompts for two publishers (D-034)
+- **Served on the next merge to `main`:** `library/index/` holds both publishers with notes
+  (`S384-noprefix-nocite.luna-enrich-v2`: IP Australia notes unchanged, WIPO notes from enrich-v2); the Pages
+  build publishes the WIPO PDFs (CC BY 4.0, the owner).
+- **Adopted by the owner (D-035):** plan-v4, filter-v2, answer-v6 in `config/service.yaml` (report
+  `reports/prompts-wipo-v1.md`). The new filter and answer prompts see each passage's `publisher`.
+- **Next to measure:** the filter's 20 places can all go to one half of a two-part question (D-034); a
+  judging top-up for WIPO passages (served judged ndcg@10 reads 0.684, unjudged WIPO passages counted 0).
+- Spend: US$0.95 of the US$1.50 grant (`config/eval.yaml` caps it). Next free decision number: **D-036**.
+
 ## Open items
 1. **Langfuse keys on Render**: set and working (2026-10-19). The span counter on `/api/health` read 0 because
    the app was built twice; fixed on `claude/gracious-gates-x2zfot`, live once merged to `main`. Still the owner's:
@@ -117,4 +145,4 @@ Branch `ccr-fe4defc0-ysiv1i`. Read D-017 to D-020 first.
 - Grids and test sets committed before any number; deviations recorded as amendments before the data they
   affect (see grid retrieval-v2, amendment 1).
 - Every paid call goes through `econ.evalr.llmcall` or `econ.evalr.judge` (cached, metered, capped).
-- Next free decision number: **D-033**.
+- Next free decision number: see the latest update above.

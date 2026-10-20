@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.6e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, statistical table D17 reports plant variety applications and titles issued by office and origin, and plant variety titles in force by office in 2024. The table presents country-level figures for plant variety rights."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0436",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000191,
+  "input": 1587,
+  "model": "gpt-6-luna",
+  "output": 65,
+  "reasoning": 0,
+  "seconds": 2.16
+ }
+}

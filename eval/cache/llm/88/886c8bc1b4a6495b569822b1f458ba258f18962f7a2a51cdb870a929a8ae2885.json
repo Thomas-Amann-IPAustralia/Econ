@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.3e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, this passage in the special theme on science-powered entrepreneurship highlights leading deep science university spinouts since 2000. It describes the US institutes behind many top spinouts and examples linked to research in China, Germany and the United Kingdom."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0255",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000147,
+  "input": 1112,
+  "model": "gpt-6-luna",
+  "output": 72,
+  "reasoning": 0,
+  "seconds": 2.37
+ }
+}

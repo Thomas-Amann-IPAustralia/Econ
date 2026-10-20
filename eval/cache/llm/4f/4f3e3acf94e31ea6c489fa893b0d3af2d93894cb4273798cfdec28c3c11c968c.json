@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.7e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, this section explains how the Benefit-of-the-Doubt model uses data envelopment analysis to compare countries’ innovation achievements across pillars. It allows economy-specific weights and assesses countries against a best-practice frontier based on indicator results, rather than on how efficiently they turn inputs into outputs."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1680",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000154,
+  "input": 1141,
+  "model": "gpt-6-luna",
+  "output": 79,
+  "reasoning": 0,
+  "seconds": 2.57
+ }
+}

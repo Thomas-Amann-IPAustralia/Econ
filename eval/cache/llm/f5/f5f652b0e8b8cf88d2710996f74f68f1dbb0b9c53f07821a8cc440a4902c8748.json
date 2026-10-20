@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.3e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, this passage defines the business sophistication indicator for innovation linkages: the five-year average share of research publications co-authored by public and private-sector organizations, based on 2025 data. It specifies the science fields and organizations counted in the measure."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1743",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000145,
+  "input": 1093,
+  "model": "gpt-6-luna",
+  "output": 72,
+  "reasoning": 0,
+  "seconds": 1.5
+ }
+}

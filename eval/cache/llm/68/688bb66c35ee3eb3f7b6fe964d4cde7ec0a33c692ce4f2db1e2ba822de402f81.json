@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.1e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026* (2026), Bangladesh’s economy profile reports its scores and ranks for market sophistication and business sophistication, including trade, market scale, knowledge workers and business-funded research and development."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0388",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000161,
+  "input": 1301,
+  "model": "gpt-6-luna",
+  "output": 61,
+  "reasoning": 0,
+  "seconds": 2.3
+ }
+}

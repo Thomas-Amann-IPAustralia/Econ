@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, the “Conclusion and outlook” discusses whether AI and other innovation waves can revive productivity growth. It describes emerging diffusion channels, including technology trade across Asia and open-weight AI adoption in low- and middle-income economies, with examples spanning Morocco to Viet Nam."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0101",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00014,
+  "input": 1035,
+  "model": "gpt-6-luna",
+  "output": 73,
+  "reasoning": 0,
+  "seconds": 1.29
+ }
+}

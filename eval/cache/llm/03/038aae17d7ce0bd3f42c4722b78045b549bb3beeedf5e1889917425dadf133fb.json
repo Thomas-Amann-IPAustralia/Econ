@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, Benin’s economy profile reports infrastructure and market sophistication indicator scores and ranks. The passage covers ecological sustainability, credit and investment, including venture capital and microfinance indicators."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0423",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000165,
+  "input": 1364,
+  "model": "gpt-6-luna",
+  "output": 57,
+  "reasoning": 0,
+  "seconds": 1.81
+ }
+}

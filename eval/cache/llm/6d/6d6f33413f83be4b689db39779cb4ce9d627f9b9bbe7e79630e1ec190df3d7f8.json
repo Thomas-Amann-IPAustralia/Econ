@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.8e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026 economy profiles, this passage reports Malta’s scores and ranks for the Creative outputs pillar, covering intangible assets, creative goods and services, and online creativity."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1010",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000157,
+  "input": 1297,
+  "model": "gpt-6-luna",
+  "output": 55,
+  "reasoning": 0,
+  "seconds": 1.86
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000111,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, this passage discusses industry-level R&D growth among leading firms in 2025, including software and ICT, automobiles, pharmaceuticals and biotechnology. It describes differences in firms’ spending, including growth linked to AI chips and product pipelines and cuts ahead of patent expiries."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0063",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000221,
+  "input": 1169,
+  "model": "gpt-6-luna",
+  "output": 209,
+  "reasoning": 130,
+  "seconds": 6.49
+ }
+}

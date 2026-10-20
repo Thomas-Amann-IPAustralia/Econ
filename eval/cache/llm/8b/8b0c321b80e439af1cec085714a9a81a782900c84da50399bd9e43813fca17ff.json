@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.9e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026* (2026), the Benin economy profile reports indicators for human capital and research and infrastructure. This passage lists Benin’s R&D scores and ranks, including researcher and R&D spending data availability, followed by ICT and general infrastructure scores and indicators."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0422",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000178,
+  "input": 1394,
+  "model": "gpt-6-luna",
+  "output": 77,
+  "reasoning": 0,
+  "seconds": 2.76
+ }
+}

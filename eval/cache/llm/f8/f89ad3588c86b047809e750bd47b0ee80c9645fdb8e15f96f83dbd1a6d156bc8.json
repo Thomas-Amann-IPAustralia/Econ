@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.5e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, this passage is part of Peru’s economy profile and covers its Business sophistication pillar. It reports Peru’s scores and ranks for innovation linkages and knowledge absorption, including research–industry collaboration, intellectual property payments, technology imports and foreign investment."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1204",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00017,
+  "input": 1353,
+  "model": "gpt-6-luna",
+  "output": 70,
+  "reasoning": 0,
+  "seconds": 1.98
+ }
+}

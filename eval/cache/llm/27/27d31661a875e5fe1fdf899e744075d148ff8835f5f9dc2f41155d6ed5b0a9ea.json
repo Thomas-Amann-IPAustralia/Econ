@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.2e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, in the section on regional deep science patent output and innovation ecosystems, this passage compares deep science startups’ and other startups’ use of the Patent Cooperation Treaty (PCT) filing route. It describes patent filing strategies for deep science ventures, whose technologies are typically aimed at global markets."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0284",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000143,
+  "input": 1018,
+  "model": "gpt-6-luna",
+  "output": 83,
+  "reasoning": 0,
+  "seconds": 2.36
+ }
+}

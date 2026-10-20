@@ -3,6 +3,8 @@
 Two checks per document:
 - active content in the file itself (JavaScript, launch actions, embedded files);
 - the text checks in econ.textcheck over the PDF's text layer.
+A spreadsheet data file (D-033) gets the same two: macros, external links and embedded objects in the
+workbook's parts, and the text checks over its cell text.
 
 High-severity findings quarantine the document and fail the run, unless config/allowlist.yaml (owner-only)
 lists that exact finding. The parse stage re-checks the extracted text, which is what enters the KB.
@@ -11,7 +13,9 @@ lists that exact finding. The parse stage re-checks the extracted text, which is
 from __future__ import annotations
 
 import re
+import zipfile
 import zlib
+from xml.etree import ElementTree
 
 import yaml
 
@@ -56,6 +60,36 @@ def active_content(blob: bytes) -> list[dict]:
     ]
 
 
+# Workbook parts that carry code, reach outside the file, or embed another file.
+XLSX_ACTIVE = {
+    # Only the VBA project holds macros; printerSettings*.bin is Excel's inert printer setup.
+    "macro": re.compile(r"(^|/)vbaProject[^/]*\.bin$"),
+    "external_link": re.compile(r"(^|/)externalLinks/"),
+    "embedded_file": re.compile(r"(^|/)(embeddings|activeX)/"),
+}
+_CELL_TEXT = ("{http://schemas.openxmlformats.org/spreadsheetml/2006/main}t",)
+
+
+def xlsx_findings(path) -> tuple[list[dict], int]:
+    """Active-content findings and the text checks over every string a workbook holds."""
+    findings, chars = [], 0
+    with zipfile.ZipFile(path) as z:
+        names = z.namelist()
+        for name in names:
+            for rule, rx in XLSX_ACTIVE.items():
+                if rx.search(name):
+                    findings.append({"rule": rule, "severity": "high", "excerpt": name})
+        for name in names:
+            if name == "xl/sharedStrings.xml" or name.startswith("xl/worksheets/sheet"):
+                root = ElementTree.fromstring(z.read(name))
+                for el in root.iter(*_CELL_TEXT):
+                    text = el.text or ""
+                    chars += len(text)
+                    for f in textcheck.scan(text):
+                        findings.append({**f.as_dict(), "part": name})
+    return findings, chars
+
+
 def allowlist() -> list[dict]:
     p = config.CONFIG_DIR / "allowlist.yaml"
     if not p.exists():
@@ -80,7 +114,7 @@ def sweep(run: Run) -> dict:
     report: dict[str, dict] = {}
     quarantined = []
     for doc in sorted(config.sources().documents, key=lambda d: d.doc_id):
-        p = raw / f"{doc.doc_id}.pdf"
+        p = raw / doc.raw_name
         blob = p.read_bytes()
         findings = active_content(blob)
         pdf = pdfium.PdfDocument(blob)
@@ -113,11 +147,28 @@ def sweep(run: Run) -> dict:
         }
         run.add_input(p)
 
+    for data in sorted(config.sources().data, key=lambda d: d.doc_id):
+        p = raw / data.raw_name
+        findings, chars = xlsx_findings(p)
+        for f in findings:
+            f["allowlisted"] = f["severity"] == "high" and _allowed(data.doc_id, f, entries)
+        blocking = [f for f in findings if f["severity"] == "high" and not f["allowlisted"]]
+        if blocking:
+            quarantined.append(data.doc_id)
+        report[data.doc_id] = {
+            "kind": "data",
+            "text_chars": chars,
+            "findings": findings,
+            "quarantined": bool(blocking),
+        }
+        run.add_input(p)
+
     out = config.path(config.pipeline().paths.library) / "sweep.json"
     write_json_atomic(out, report)
     run.add_output(out)
     run.counts.update(
         documents=len(report),
+        data_files=sum(r.get("kind") == "data" for r in report.values()),
         findings=sum(len(r["findings"]) for r in report.values()),
         high=sum(f["severity"] == "high" for r in report.values() for f in r["findings"]),
         quarantined=len(quarantined),

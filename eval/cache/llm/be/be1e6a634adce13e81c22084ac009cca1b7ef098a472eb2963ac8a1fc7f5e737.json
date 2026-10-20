@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.8e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, appendix table B44 presents trademark applications by office and origin in 2024; this excerpt is part of the country-level figures."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0293",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000196,
+  "input": 1193,
+  "model": "gpt-6-luna",
+  "output": 154,
+  "reasoning": 99,
+  "seconds": 2.37
+ }
+}

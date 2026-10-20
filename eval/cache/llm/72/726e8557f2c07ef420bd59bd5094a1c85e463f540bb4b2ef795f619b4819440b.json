@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.7e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, in the special theme on science-powered entrepreneurship, this passage examines how patent ownership among deep science startups changes across growth stages from 2010 to 2025, compared with non-deep science startups. It explains the rise in patent holding from seed to late stage and why protection may become more important as ventures mature."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0280",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000153,
+  "input": 1093,
+  "model": "gpt-6-luna",
+  "output": 88,
+  "reasoning": 0,
+  "seconds": 2.4
+ }
+}

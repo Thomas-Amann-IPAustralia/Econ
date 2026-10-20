@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.4e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, this indicator in the Business sophistication section covers 2023 business-enterprise financing of gross domestic expenditure on R&D (GERD) as a share of total GERD. It draws on UNESCO, Eurostat, OECD and RICYT data, with data years 2017–2025."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1742",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000148,
+  "input": 1066,
+  "model": "gpt-6-luna",
+  "output": 82,
+  "reasoning": 0,
+  "seconds": 2.46
+ }
+}

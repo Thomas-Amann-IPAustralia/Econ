@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.3e-05,
+ "data": {
+  "context": "In WIPO’s World Intellectual Property Indicators 2025, this passage in the United States Plant Patent Act section describes which newly invented or discovered plant varieties may qualify for a US plant patent and which are excluded."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0514",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000127,
+  "input": 986,
+  "model": "gpt-6-luna",
+  "output": 56,
+  "reasoning": 0,
+  "seconds": 1.88
+ }
+}

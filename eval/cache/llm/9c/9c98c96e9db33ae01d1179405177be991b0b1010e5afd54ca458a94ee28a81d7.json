@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.9e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, table B44 reports trademark application class counts by office and origin for 2024, including resident and non-resident applications and changes from the previous year. This excerpt covers El Salvador through the European Union Intellectual Property Office."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0260",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000178,
+  "input": 1436,
+  "model": "gpt-6-luna",
+  "output": 69,
+  "reasoning": 0,
+  "seconds": 1.57
+ }
+}

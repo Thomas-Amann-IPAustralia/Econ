@@ -1,0 +1,90 @@
+{
+  "argv": [
+    "parse",
+    "--workers",
+    "2",
+    "--only",
+    "wipo-gii-2026",
+    "--only",
+    "wipo-gii-2026-australia",
+    "--only",
+    "wipo-intangibles-2026",
+    "--only",
+    "wipo-pct-2026",
+    "--only",
+    "wipo-madrid-2026",
+    "--only",
+    "wipo-wipi-2025"
+  ],
+  "command": "parse",
+  "config_hash": "fd4816c2b4153bfc",
+  "counts": {},
+  "error": {
+    "cause": "BrokenProcessPool: A process in the process pool was terminated abruptly while the future was running or pending."
+  },
+  "git": {
+    "commit": "3188bca4f9bbeffaabafe288e3d8f7295ee0f634",
+    "dirty": true,
+    "dirty_paths": [
+      "config/sources.yaml",
+      "src/econ/cli.py",
+      "src/econ/config.py",
+      "src/econ/ingest/fetch.py",
+      "src/econ/ingest/sweep.py"
+    ]
+  },
+  "git_at_end": {
+    "commit": "3188bca4f9bbeffaabafe288e3d8f7295ee0f634",
+    "dirty": true,
+    "dirty_paths": [
+      "config/sources.yaml",
+      "src/econ/cli.py",
+      "src/econ/config.py",
+      "src/econ/evalr/metrics.py",
+      "src/econ/ingest/fetch.py",
+      "src/econ/ingest/sweep.py",
+      "eval/grids/wipo-v1.yaml",
+      "eval/testset/wipo-v1.yaml",
+      "src/econ/evalr/wipo.py",
+      "src/econ/ingest/gii.py",
+      "tests/test_wipo.py"
+    ]
+  },
+  "inputs": {
+    "data/raw/wipo-gii-2026-australia.pdf": "48a1b2b41a3131eaef2f4edc5ca7da580b3fdad3a7eeb60147b8cb5b36dfffef",
+    "data/raw/wipo-gii-2026.pdf": "fe20db3be672521560faa07e684a2e3d5f1c8de03e1845a4fa41a97e6ffec578",
+    "data/raw/wipo-intangibles-2026.pdf": "938b87c6e24403883128b234777a8d637d7705e4a0ab232d811f76022b15e66c",
+    "data/raw/wipo-madrid-2026.pdf": "9735572be5ccd26fd6d7c37d658f6bc2ee8ab301c8fa8edb20b2ddd3c6d99550",
+    "data/raw/wipo-pct-2026.pdf": "48b8921556e1a8a551d849ab9ddcdf96c4b0c861f77c2d78116e2b1fd9e69ec1",
+    "data/raw/wipo-wipi-2025.pdf": "7e4d37a419ee9b186b39788dacc50e0611f724982eeb696da6356f32e7ab8da6"
+  },
+  "outputs": {},
+  "params": {
+    "only": [
+      "wipo-gii-2026",
+      "wipo-gii-2026-australia",
+      "wipo-intangibles-2026",
+      "wipo-pct-2026",
+      "wipo-madrid-2026",
+      "wipo-wipi-2025"
+    ],
+    "workers": 2
+  },
+  "run_id": "20261019T213856Z",
+  "seconds": 3367.4,
+  "status": "failed",
+  "upstream": {
+    "sweep": "20261019T213822Z"
+  },
+  "versions": {
+    "docling": "2.140.0",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.0",
+    "pypdfium2": "5.14.0",
+    "python": "3.12.3",
+    "sentence-transformers": "6.1.0",
+    "tokenizers": "0.23.3",
+    "torch": "2.14.1+cpu"
+  },
+  "warnings": []
+}

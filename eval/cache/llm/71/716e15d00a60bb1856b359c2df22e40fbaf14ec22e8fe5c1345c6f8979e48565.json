@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.4e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, the Barbados economy profile reports the country’s Knowledge and Technology Outputs and Creative Outputs indicators. It includes Barbados’s intellectual property receipts, high-tech and ICT exports, trademarks and industrial designs, with scores, ranks and some data-year notes."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0400",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000168,
+  "input": 1334,
+  "model": "gpt-6-luna",
+  "output": 70,
+  "reasoning": 0,
+  "seconds": 2.46
+ }
+}

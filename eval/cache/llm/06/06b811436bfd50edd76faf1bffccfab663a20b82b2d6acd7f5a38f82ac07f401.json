@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.9e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026* (2026), this passage is from the global rankings tables. It lists economies’ GII ranks, scores, income groups and regional ranks."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0019",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000179,
+  "input": 1522,
+  "model": "gpt-6-luna",
+  "output": 53,
+  "reasoning": 0,
+  "seconds": 2.52
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.3e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, this passage is in the Business sophistication section on university–industry and international engagement. It explains the Times Higher Education indicator: a two-year average of combined Industry and International scores for up to five universities per country, using the 2025 and 2026 rankings."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1745",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000146,
+  "input": 1071,
+  "model": "gpt-6-luna",
+  "output": 77,
+  "reasoning": 0,
+  "seconds": 2.54
+ }
+}

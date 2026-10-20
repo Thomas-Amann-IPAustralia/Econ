@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.3e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026* (Appendix IV, Table 2), this passage lists innovation clusters ranked 42nd–55th, including their economy codes, data and shares, previous ranks, and rank changes. The table covers the 2026 top innovation clusters worldwide."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1801",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000186,
+  "input": 1490,
+  "model": "gpt-6-luna",
+  "output": 74,
+  "reasoning": 0,
+  "seconds": 2.63
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.8e-05,
+ "data": {
+  "context": "In WIPO’s Madrid Yearly Review 2026, this passage reports the leading origins of active Madrid international registrations in 2025. Origin is based on the country of the registration holder’s address; the preceding text says Germany ranked first, followed by the US, France, China and Switzerland."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0089",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000137,
+  "input": 995,
+  "model": "gpt-6-luna",
+  "output": 74,
+  "reasoning": 0,
+  "seconds": 1.44
+ }
+}

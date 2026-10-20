@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "context": "In WIPO’s *Madrid Yearly Review 2026*, section B, this passage reports 2025 trends in subsequent designations—extensions of protection for marks to other Madrid member markets—by registration holder’s country of origin, including comparisons across leading and selected low- and middle-income origins and changes from 2024."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0073",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000159,
+  "input": 1196,
+  "model": "gpt-6-luna",
+  "output": 78,
+  "reasoning": 0,
+  "seconds": 2.19
+ }
+}

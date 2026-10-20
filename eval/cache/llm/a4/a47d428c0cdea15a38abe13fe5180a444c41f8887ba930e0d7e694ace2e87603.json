@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.6e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026* (2026), the Saudi Arabia economy profile reports country scores and ranks for human capital and research and infrastructure indicators, including education, tertiary education, R&D, ICT, and general infrastructure."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1291",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000172,
+  "input": 1408,
+  "model": "gpt-6-luna",
+  "output": 62,
+  "reasoning": 0,
+  "seconds": 1.87
+ }
+}

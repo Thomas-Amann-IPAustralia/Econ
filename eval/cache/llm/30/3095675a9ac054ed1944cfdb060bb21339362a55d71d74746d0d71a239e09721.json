@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.6e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, the university spinouts section presents a table of the 20 most valuable deep science spinouts founded since 2000, with their institute economies, headquarters, launch years, valuations, venture capital funding and sectors. The preceding text highlights German research behind Alnylam and BioNTech, and UK research behind US-based PsiQuantum."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0256",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000171,
+  "input": 1264,
+  "model": "gpt-6-luna",
+  "output": 90,
+  "reasoning": 0,
+  "seconds": 2.33
+ }
+}

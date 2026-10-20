@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.9e-05,
+ "data": {
+  "context": "In WIPO’s *PCT Yearly Review 2026: The International Patent System*, in the section on the top five origins of PCT applications, this passage compares filing changes in 2025 among large middle-income economies outside the top 20, including increases and declines."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0008",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000138,
+  "input": 1037,
+  "model": "gpt-6-luna",
+  "output": 69,
+  "reasoning": 0,
+  "seconds": 1.42
+ }
+}

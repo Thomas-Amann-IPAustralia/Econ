@@ -1,0 +1,97 @@
+{
+  "argv": [
+    "index",
+    "--model-dir",
+    "data/models/onnx/arctic-m-v1.5"
+  ],
+  "command": "index",
+  "config_hash": "c19f062c0f626ea9",
+  "counts": {
+    "chunks": 4744,
+    "dim": 768
+  },
+  "error": null,
+  "git": {
+    "commit": "af6d22885bc8f0dc756c61f775c62180c3509ff4",
+    "dirty": true,
+    "dirty_paths": [
+      "README.md",
+      "config/eval.yaml",
+      "config/pipeline.yaml",
+      "config/sources.yaml",
+      "eval/spend/ledger.jsonl",
+      "src/econ/cli.py",
+      "src/econ/config.py",
+      "web/app.js",
+      "web/index.html",
+      "eval/cache/llm/00/0001c45248b44c15ab9727aabf976f81f748850aa1f3c46c212173c8356307b9.json",
+      "eval/cache/llm/00/0028ae86cf5a0b56fbcdacfdd3e0d51ac4673aa1b1059da91c910ebc3d3cf260.json",
+      "eval/cache/llm/00/0032ee6ae664cb7eff931c7dce1fa9653206ef61521f5b059868344e2da5a2b8.json",
+      "eval/cache/llm/00/0038616da0034f0578e209ed8edf368fca000854a495d8a556babd27485d268e.json",
+      "eval/cache/llm/00/007a94c4602fd00484255d502ffa5cf1473a78cbb75fa836066b23b98fb2e2ae.json",
+      "eval/cache/llm/00/00c8b8f3d26093ee373c174e12925f4189eebccf74402bf626991f6ecbba69bb.json",
+      "eval/cache/llm/00/00dfb77d2b50e9fb910f2f86aa0c85c6001052969f7a29cf1c50dfff24dfc6cb.json",
+      "eval/cache/llm/00/00f301db5f76ea6a8886db32f8577a470747550b8f5f89e2b0950d8ec097a31d.json",
+      "eval/cache/llm/00/00f8a6a34adc18f4cd03f8ba2f93e0222517287e90f9ad48426a00d77f697554.json",
+      "eval/cache/llm/00/00fcbe2dac1706920ddfa085ffbb011d7ef5cd688df3e6a9124f4550f48a0ae1.json",
+      "eval/cache/llm/01/010cc04f1f09333f46163a233031d639bf3c5f4041aa23f5f548f02da522dc54.json"
+    ]
+  },
+  "git_at_end": {
+    "commit": "af6d22885bc8f0dc756c61f775c62180c3509ff4",
+    "dirty": true,
+    "dirty_paths": [
+      "CLAUDE.md",
+      "README.md",
+      "config/eval.yaml",
+      "config/pipeline.yaml",
+      "config/sources.yaml",
+      "docs/decisions.md",
+      "docs/handover-rag-v2.md",
+      "docs/progress-rag-v2.md",
+      "eval/spend/ledger.jsonl",
+      "src/econ/cli.py",
+      "src/econ/config.py",
+      "web/app.js",
+      "web/index.html",
+      "eval/cache/llm/00/0001c45248b44c15ab9727aabf976f81f748850aa1f3c46c212173c8356307b9.json",
+      "eval/cache/llm/00/0028ae86cf5a0b56fbcdacfdd3e0d51ac4673aa1b1059da91c910ebc3d3cf260.json",
+      "eval/cache/llm/00/0032ee6ae664cb7eff931c7dce1fa9653206ef61521f5b059868344e2da5a2b8.json",
+      "eval/cache/llm/00/0038616da0034f0578e209ed8edf368fca000854a495d8a556babd27485d268e.json",
+      "eval/cache/llm/00/007a94c4602fd00484255d502ffa5cf1473a78cbb75fa836066b23b98fb2e2ae.json",
+      "eval/cache/llm/00/00c8b8f3d26093ee373c174e12925f4189eebccf74402bf626991f6ecbba69bb.json",
+      "eval/cache/llm/00/00dfb77d2b50e9fb910f2f86aa0c85c6001052969f7a29cf1c50dfff24dfc6cb.json"
+    ]
+  },
+  "inputs": {},
+  "outputs": {
+    "library/index/bm25.npz": "1b3c278de1e64fe2c3f252cd26b8218c9de21830f94581df4b49f473294475d8",
+    "library/index/bm25.vocab.json": "5b15051f6fd90d65e74ec9f4047e21a622981d20b37b3b902fd6b677970f2061",
+    "library/index/chunks.jsonl": "53238d457323900409b90f7b9322526cb8165aac55643a24b2f84c4d8ec9e743",
+    "library/index/docs.json": "ca0816aa5832b00b94504576efa1da36c0c117b02d42786ba67548b5f487e8ca",
+    "library/index/index.json": "66871b8784fd44fd8e32a2db2fb6054ede39f644e0ebd604159dbcc1623ae3d3",
+    "library/index/vectors.f16.npy": "37568db42301a75164bb3f4f0c2b006b1cd424ba1eaebc845b2c6e90311a13b0"
+  },
+  "params": {
+    "embedder": "arctic-m-v1.5",
+    "out": "library/index",
+    "strategy": "S384-noprefix-nocite"
+  },
+  "run_id": "20261020T055531Z",
+  "seconds": 1039.6,
+  "status": "passed",
+  "upstream": {
+    "chunk": "20261020T043552Z"
+  },
+  "versions": {
+    "docling": "2.140.0",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.0",
+    "pypdfium2": "5.14.0",
+    "python": "3.12.3",
+    "sentence-transformers": "6.1.0",
+    "tokenizers": "0.23.3",
+    "torch": "2.14.1+cpu"
+  },
+  "warnings": []
+}

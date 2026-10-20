@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.3e-05,
+ "data": {
+  "context": "In WIPO’s *Madrid Yearly Review 2026*, the section on Nice classes in Madrid international applications reports the classes specified in applications filed worldwide in 2025, including counts, growth and shares by goods and services class."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0046",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000146,
+  "input": 1161,
+  "model": "gpt-6-luna",
+  "output": 59,
+  "reasoning": 0,
+  "seconds": 2.01
+ }
+}

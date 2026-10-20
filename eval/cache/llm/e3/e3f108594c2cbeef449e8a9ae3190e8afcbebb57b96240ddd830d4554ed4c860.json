@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.003387,
+ "data": {
+  "misattributed_A": 0,
+  "misattributed_B": 0,
+  "reason": "Both answers accurately present the data from IP Australia regarding the share of trade mark classes filed abroad via Madrid. Answer B is slightly better as it incorporates evidence from WIPO's Madrid Yearly Review to clearly explain how the system operates and its international scope, directly addressing the prompt narrative.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v2:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "both-3:ab",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.003387,
+  "input": 4041,
+  "model": "gemini-3.8-flash",
+  "output": 95,
+  "reasoning": 0,
+  "seconds": 3.23
+ }
+}

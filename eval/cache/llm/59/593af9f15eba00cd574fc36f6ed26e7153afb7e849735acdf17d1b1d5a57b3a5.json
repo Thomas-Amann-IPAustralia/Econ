@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.9e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, the Azerbaijan economy profile reports the country’s scores and rankings for pillar 4, Market sophistication, covering credit, investment, and trade, diversification and market scale. It highlights indicators marked as strengths or weaknesses, including startup and scaleup finance and venture capital."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0370",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000179,
+  "input": 1420,
+  "model": "gpt-6-luna",
+  "output": 74,
+  "reasoning": 0,
+  "seconds": 3.18
+ }
+}

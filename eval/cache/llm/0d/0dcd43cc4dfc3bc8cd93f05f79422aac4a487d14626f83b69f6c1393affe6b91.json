@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.7e-05,
+ "data": {
+  "context": "In WIPO’s *PCT Yearly Review 2026*, this note accompanies figure B12 in the section on Paris route and PCT national phase entries. It clarifies that the 2010–2024 estimates of non-resident patent applications by filing route may differ from earlier editions because USPTO requests for continued examination are now excluded from its national phase entry count."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0114",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000153,
+  "input": 1091,
+  "model": "gpt-6-luna",
+  "output": 88,
+  "reasoning": 0,
+  "seconds": 2.05
+ }
+}

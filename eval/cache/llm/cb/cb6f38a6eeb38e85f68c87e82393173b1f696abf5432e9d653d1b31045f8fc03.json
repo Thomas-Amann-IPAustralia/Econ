@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.7e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, Japan’s economy profile reports its business sophistication indicators, covering innovation linkages and knowledge absorption. The passage gives Japan’s scores, ranks and selected strengths and weaknesses, including public research–industry co-publications, patent families, intellectual property payments and research talent in businesses."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0864",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000173,
+  "input": 1342,
+  "model": "gpt-6-luna",
+  "output": 78,
+  "reasoning": 0,
+  "seconds": 2.68
+ }
+}

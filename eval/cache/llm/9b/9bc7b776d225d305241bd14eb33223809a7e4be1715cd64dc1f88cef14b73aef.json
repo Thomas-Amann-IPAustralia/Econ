@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000116,
+ "data": {
+  "context": "In WIPO’s *Madrid Yearly Review 2026*, the statistics section discusses Madrid international trademark applications by origin, including trends for leading and selected middle-income country origins from 2011 to 2025 and the offices of origin receiving the most applications in 2025."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0032",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000232,
+  "input": 1294,
+  "model": "gpt-6-luna",
+  "output": 205,
+  "reasoning": 133,
+  "seconds": 5.19
+ }
+}

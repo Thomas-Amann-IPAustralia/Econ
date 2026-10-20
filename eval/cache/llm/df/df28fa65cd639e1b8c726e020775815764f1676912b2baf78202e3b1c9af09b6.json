@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.8e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, Luxembourg’s economy profile reports country scores and rankings for knowledge and technology outputs and creative outputs, including IP receipts, trademarks and industrial designs."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0964",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000157,
+  "input": 1323,
+  "model": "gpt-6-luna",
+  "output": 50,
+  "reasoning": 0,
+  "seconds": 1.79
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000106,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, this passage discusses 2024 trademark filing trends among the top 20 origins, including growth in Argentina and Brazil and differences between domestic and abroad filing. It also describes the predominantly domestic filing patterns of applicants from China and several middle-income countries."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0200",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000211,
+  "input": 1334,
+  "model": "gpt-6-luna",
+  "output": 155,
+  "reasoning": 78,
+  "seconds": 2.56
+ }
+}

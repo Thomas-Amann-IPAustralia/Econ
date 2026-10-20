@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000129,
+ "data": {
+  "context": "In WIPO’s *World Intangible Investment Highlights 2026*, this passage discusses country-level growth in design and R&D investment, including annual growth rates over 2012–2025 where specified. It highlights economies with faster growth, including the Philippines and several European countries."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-intangibles-2026:0029",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000257,
+  "input": 1178,
+  "model": "gpt-6-luna",
+  "output": 278,
+  "reasoning": 208,
+  "seconds": 5.2
+ }
+}

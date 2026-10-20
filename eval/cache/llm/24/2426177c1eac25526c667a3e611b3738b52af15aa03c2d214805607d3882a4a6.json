@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.3e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, this section compares regional deep science patent output among startups founded since 2010. It describes patent-family rankings across East Asia and Oceania, Northern America, Europe, Latin America and the Caribbean, and Northern Africa and Western Asia, highlighting the countries and sectors represented."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0282",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000167,
+  "input": 1292,
+  "model": "gpt-6-luna",
+  "output": 76,
+  "reasoning": 0,
+  "seconds": 2.23
+ }
+}

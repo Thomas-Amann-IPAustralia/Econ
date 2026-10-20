@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.6e-05,
+ "data": {
+  "context": "In WIPO’s *Australia ranking in the Global Innovation Index 2026*, the Technology adoption section reports short- and long-term growth and penetration measures for Australia, covering safe sanitation, fixed broadband, 5G, robots and electric vehicles."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026-australia:0004",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000151,
+  "input": 1195,
+  "model": "gpt-6-luna",
+  "output": 63,
+  "reasoning": 0,
+  "seconds": 2.28
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.002325,
+ "data": {
+  "misattributed_A": 0,
+  "misattributed_B": 0,
+  "reason": "Both answers accurately address the question using IP Australia figures. Answer B is superior because it provides a more comprehensive answer across all major IP rights covered in the report by including design applications alongside patents and trade marks.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v2:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "ipr22-3:ab",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002325,
+  "input": 2700,
+  "model": "gemini-3.8-flash",
+  "output": 80,
+  "reasoning": 0,
+  "seconds": 2.31
+ }
+}

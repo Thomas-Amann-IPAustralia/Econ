@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, this Republic of Moldova economy-profile passage reports the country’s pillar 6 Knowledge and technology outputs scores and ranks, including indicators of knowledge creation and knowledge impact."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1259",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000158,
+  "input": 1304,
+  "model": "gpt-6-luna",
+  "output": 56,
+  "reasoning": 0,
+  "seconds": 2.04
+ }
+}

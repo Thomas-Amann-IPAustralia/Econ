@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.9e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, Box 2, “Narrowing the gap: middle-income innovation pathways,” compares long-term middle-income climbers across innovation indicators. The table covers production and exports and the conversion of ideas into protected intellectual property, including China, India, Türkiye, Viet Nam, the Philippines, Indonesia and Morocco."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0124",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000179,
+  "input": 1363,
+  "model": "gpt-6-luna",
+  "output": 86,
+  "reasoning": 0,
+  "seconds": 2.98
+ }
+}

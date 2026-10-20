@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.5e-05,
+ "data": {
+  "context": "In WIPO’s *PCT Yearly Review 2026*, this passage discusses worldwide Patent Cooperation Treaty (PCT) national phase entries in 2024, including their distribution by region and the offices receiving them. It reports that most of the top 20 offices saw fewer entries than in 2023, with Viet Nam, Indonesia and India recording increases."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0093",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00017,
+  "input": 1271,
+  "model": "gpt-6-luna",
+  "output": 85,
+  "reasoning": 0,
+  "seconds": 2.23
+ }
+}

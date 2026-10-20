@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.4e-05,
+ "data": {
+  "context": "This opening overview of WIPO’s *World Intangible Investment Highlights 2026* introduces global intangible investment data and the report’s eight stylized trends. It summarizes investment across 29 economies, including growth since 2008, leading economies, and the edition’s special focus on brands."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-intangibles-2026:0000",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000148,
+  "input": 1126,
+  "model": "gpt-6-luna",
+  "output": 70,
+  "reasoning": 0,
+  "seconds": 2.18
+ }
+}

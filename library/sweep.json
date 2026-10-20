@@ -419,5 +419,100 @@
     "pages": 43,
     "quarantined": false,
     "text_layer_chars": 105566
+  },
+  "wipo-gii-2026": {
+    "findings": [
+      {
+        "allowlisted": false,
+        "excerpt": "gii@wipo.int",
+        "page": 3,
+        "rule": "email_address",
+        "severity": "low"
+      },
+      {
+        "allowlisted": false,
+        "excerpt": "ies@wipo.int",
+        "page": 3,
+        "rule": "email_address",
+        "severity": "low"
+      }
+    ],
+    "image_only_pages": 2,
+    "pages": 348,
+    "quarantined": false,
+    "text_layer_chars": 1586907
+  },
+  "wipo-gii-2026-australia": {
+    "findings": [],
+    "image_only_pages": 0,
+    "pages": 17,
+    "quarantined": false,
+    "text_layer_chars": 27300
+  },
+  "wipo-gii-2026-data": {
+    "findings": [],
+    "kind": "data",
+    "quarantined": false,
+    "text_chars": 62543
+  },
+  "wipo-intangibles-2026": {
+    "findings": [
+      {
+        "allowlisted": false,
+        "excerpt": "intangibles@wipo.int",
+        "page": 29,
+        "rule": "email_address",
+        "severity": "low"
+      }
+    ],
+    "image_only_pages": 2,
+    "pages": 30,
+    "quarantined": false,
+    "text_layer_chars": 76787
+  },
+  "wipo-madrid-2026": {
+    "findings": [
+      {
+        "allowlisted": false,
+        "excerpt": "ipstats.mail@wipo.int",
+        "page": 5,
+        "rule": "email_address",
+        "severity": "low"
+      }
+    ],
+    "image_only_pages": 3,
+    "pages": 88,
+    "quarantined": false,
+    "text_layer_chars": 191702
+  },
+  "wipo-pct-2026": {
+    "findings": [
+      {
+        "allowlisted": false,
+        "excerpt": "ipstats.mail@wipo.int",
+        "page": 6,
+        "rule": "email_address",
+        "severity": "low"
+      }
+    ],
+    "image_only_pages": 3,
+    "pages": 84,
+    "quarantined": false,
+    "text_layer_chars": 186298
+  },
+  "wipo-wipi-2025": {
+    "findings": [
+      {
+        "allowlisted": false,
+        "excerpt": "ipstats.mail@wipo.int",
+        "page": 8,
+        "rule": "email_address",
+        "severity": "low"
+      }
+    ],
+    "image_only_pages": 10,
+    "pages": 192,
+    "quarantined": false,
+    "text_layer_chars": 466893
   }
 }

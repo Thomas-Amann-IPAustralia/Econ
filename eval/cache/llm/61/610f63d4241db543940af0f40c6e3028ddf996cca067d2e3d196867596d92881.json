@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.002355,
+ "data": {
+  "misattributed_A": 0,
+  "misattributed_B": 0,
+  "reason": "Answer A is more comprehensive because it covers all three major IP rights analyzed in the source report (patents, trade marks, and design rights), whereas Answer B completely omits designs. Answer A also presents the data clearly in a structured table.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v2:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "ipr22-3:ba",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002355,
+  "input": 2700,
+  "model": "gemini-3.8-flash",
+  "output": 88,
+  "reasoning": 0,
+  "seconds": 3.08
+ }
+}

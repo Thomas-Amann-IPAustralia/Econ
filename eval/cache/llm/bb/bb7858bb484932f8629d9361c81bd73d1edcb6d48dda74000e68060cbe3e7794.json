@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.8e-05,
+ "data": {
+  "context": "In WIPO’s PCT Yearly Review 2026, this passage presents the origins of applicants initiating PCT national phase entries at selected patent offices. It reports the percentage shares by origin, including that US applicants accounted for 27.2% of entries at the European Patent Office."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0111",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000196,
+  "input": 1605,
+  "model": "gpt-6-luna",
+  "output": 70,
+  "reasoning": 0,
+  "seconds": 2.08
+ }
+}

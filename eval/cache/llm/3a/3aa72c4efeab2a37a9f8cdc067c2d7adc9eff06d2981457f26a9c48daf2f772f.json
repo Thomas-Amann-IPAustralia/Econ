@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.7e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, this passage explains the data envelopment analysis, benefit-of-the-doubt (DEA-BoD) method used to assess 139 economies across the GII’s seven pillars. It describes how non-negative pillar weights are chosen to maximize each economy’s score against a best-practice frontier, with restrictions on each pillar’s contribution."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1681",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000155,
+  "input": 1118,
+  "model": "gpt-6-luna",
+  "output": 87,
+  "reasoning": 0,
+  "seconds": 2.62
+ }
+}

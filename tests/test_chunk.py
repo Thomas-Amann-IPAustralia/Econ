@@ -191,3 +191,12 @@ def test_everything_dated_in_a_reference_list_is_a_citation():
         ("text", "This page has been intentionally left blank.", None),
     ]
     assert [e.cite for e in mark_citations(els(*rows))][1:] == [True, False]
+
+
+def test_a_table_header_that_leaves_no_room_for_rows_is_split_not_repeated():
+    st = ChunkStrategy(kind="structure", max_tokens=60, prefix="none")
+    header = "| " + " | ".join(f"col{i}" for i in range(50)) + " |\n|" + "---|" * 50
+    rows = "\n".join("| " + " | ".join(f"r{r}c{i}" for i in range(5)) + " |" for r in range(20))
+    out = chunk_document(DOC, st, els(("section_header", "Wide", 1), ("table", header + "\n" + rows, None)))
+    assert all(c["tokens"] <= 60 for c in out)
+    assert sum("col0" in c["text"] for c in out) == 1  # the header appears once, not in every piece

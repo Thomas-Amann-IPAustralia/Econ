@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.4e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, the Guatemala economy profile reports the country’s pillar 6 Knowledge and technology outputs scores and ranks, including indicators for knowledge creation and knowledge impact. It covers Guatemala’s innovation performance, with measures including patents, scientific publications, labor productivity growth and software spending."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0758",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000168,
+  "input": 1313,
+  "model": "gpt-6-luna",
+  "output": 73,
+  "reasoning": 0,
+  "seconds": 1.99
+ }
+}

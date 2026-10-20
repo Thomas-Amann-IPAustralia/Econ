@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.2e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, Appendix IV, Table 3, this passage continues the 2026 innovation intensity ranking of the world’s top 100 innovation clusters. It lists cluster ranks, economies, population estimates, per-capita PCT applications, scientific publications and venture capital deals, total innovation intensity shares, and rank changes."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1856",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000183,
+  "input": 1409,
+  "model": "gpt-6-luna",
+  "output": 84,
+  "reasoning": 0,
+  "seconds": 2.05
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.8e-05,
+ "data": {
+  "context": "In WIPO’s PCT Yearly Review 2026, this passage covers publication languages for PCT applications in the international phase. It compares the shares published in English, Chinese, Japanese and other languages in 2025, and tracks changes in the English and Chinese shares from 2011 to 2025."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0139",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000136,
+  "input": 968,
+  "model": "gpt-6-luna",
+  "output": 79,
+  "reasoning": 0,
+  "seconds": 1.58
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.6e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026* (2026), the special theme section “Deep science firms vs. startups and spinouts since 2000” discusses growth in deep science startups and spinouts from 2020 to 2025 across economies and regions, drawing on the Dealroom-WIPO Deep Science Startup Tracker. It highlights growth in smaller and middle-income economies and regional differences in the number of firms."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0227",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000171,
+  "input": 1218,
+  "model": "gpt-6-luna",
+  "output": 99,
+  "reasoning": 0,
+  "seconds": 3.07
+ }
+}

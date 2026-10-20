@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.7e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index (GII) 2026, the Iran economy profile reports Iran’s overall ranking and scores, then details its innovation-input pillar on institutions, including institutional, regulatory and business environment indicators. The profile concerns Iran’s 2026 GII results."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0814",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000175,
+  "input": 1403,
+  "model": "gpt-6-luna",
+  "output": 69,
+  "reasoning": 0,
+  "seconds": 2.18
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026* (2026), the “Beyond the economy ranking” section describes the evolution of the Top 100 Innovation Clusters ranking and other GII features. It covers the cluster ranking’s patent, scientific-author and venture-capital metrics, its use by local governments, the Global Innovation Tracker, and the 2026 theme of deep science entrepreneurship."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1560",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000159,
+  "input": 1126,
+  "model": "gpt-6-luna",
+  "output": 92,
+  "reasoning": 0,
+  "seconds": 2.48
+ }
+}

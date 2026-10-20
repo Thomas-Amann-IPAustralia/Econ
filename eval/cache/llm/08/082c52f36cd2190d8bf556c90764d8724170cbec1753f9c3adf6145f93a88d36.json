@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, this Republic of Moldova economy profile reports the country’s overall GII ranking and scores, followed by its Institutions pillar and sub-indicator rankings, including the business environment."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1253",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000165,
+  "input": 1358,
+  "model": "gpt-6-luna",
+  "output": 59,
+  "reasoning": 0,
+  "seconds": 1.81
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, Box 1 compares the top 10 global innovation clusters by PCT patent filings, scientific publications and venture-capital deals. The passage describes their 2026 geographic patterns, including Asian leadership in patents and publications and the strong US and UK presence in VC deals."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0188",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000159,
+  "input": 1209,
+  "model": "gpt-6-luna",
+  "output": 77,
+  "reasoning": 0,
+  "seconds": 1.36
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.7e-05,
+ "data": {
+  "context": "In WIPO’s *Australia ranking in the Global Innovation Index 2026*, the special-theme section on deep science entrepreneurship lists Australia’s top venture capital-backed deep science startups, including their industry, city, founding year, funding and valuation."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026-australia:0022",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000133,
+  "input": 1028,
+  "model": "gpt-6-luna",
+  "output": 60,
+  "reasoning": 0,
+  "seconds": 1.38
+ }
+}

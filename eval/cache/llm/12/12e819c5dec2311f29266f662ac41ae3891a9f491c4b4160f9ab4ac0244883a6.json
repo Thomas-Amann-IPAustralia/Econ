@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.5e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026 (Foreword), this passage acknowledges contributors to the report’s special theme, “Powering entrepreneurs at the frontier of science,” including the global deep science startup mapping, IP data work, background studies, thematic contributions and external data. It concerns the GII 2026 and its science-entrepreneurship theme."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0004",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00017,
+  "input": 1274,
+  "model": "gpt-6-luna",
+  "output": 85,
+  "reasoning": 0,
+  "seconds": 3.64
+ }
+}

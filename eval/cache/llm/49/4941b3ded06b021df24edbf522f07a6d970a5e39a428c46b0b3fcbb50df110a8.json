@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.1e-05,
+ "data": {
+  "context": "In WIPO’s *Madrid Yearly Review 2026*, the “Renewals of Madrid international registrations” section examines worldwide renewals of Madrid System trademark registrations from 2011 to 2025, including trends by origin. The passage refers to registration holders’ renewals and to countries of origin based on the holders’ addresses."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0084",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000161,
+  "input": 1214,
+  "model": "gpt-6-luna",
+  "output": 79,
+  "reasoning": 0,
+  "seconds": 2.3
+ }
+}

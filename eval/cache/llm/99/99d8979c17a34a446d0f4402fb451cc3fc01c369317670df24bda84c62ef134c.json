@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.3e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, Appendix IV, Table 3 ranks the world’s innovation clusters by innovation intensity per capita. This excerpt lists ranks 19–27, with cluster economies, population estimates, per-capita PCT applications, scientific publications and venture-capital deals, and rank changes."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1837",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000186,
+  "input": 1474,
+  "model": "gpt-6-luna",
+  "output": 78,
+  "reasoning": 0,
+  "seconds": 1.78
+ }
+}

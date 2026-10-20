@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.5e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, this note accompanies figure C25 on the distribution of industrial design application counts across the top three sectors for the top 10 origins in 2024. It explains that 32 design classes were grouped into 12 industry sectors using an OECD concordance table, and that the figures use data from 126 IP offices, with some office data unavailable or incomplete."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0357",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00015,
+  "input": 1022,
+  "model": "gpt-6-luna",
+  "output": 96,
+  "reasoning": 0,
+  "seconds": 2.41
+ }
+}

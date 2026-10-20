@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.3e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, the Regional profiles and economy comparisons section describes online tools for exploring innovation performance across regions and economy groups, viewing regional briefs, and comparing two economies across GII rankings, pillars, sub-pillars and indicators."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0299",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000125,
+  "input": 911,
+  "model": "gpt-6-luna",
+  "output": 67,
+  "reasoning": 0,
+  "seconds": 2.15
+ }
+}

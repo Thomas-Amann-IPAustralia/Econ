@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.7e-05,
+ "data": {
+  "context": "In WIPO’s *World Intangible Investment Highlights 2026*, this section presents nominal brand investment by country in 2025, measured in billions of USD PPP, with some countries’ figures drawn from earlier years because newer data are unavailable. It also discusses the national-accounting treatment of brands and the 2025 decision to keep marketing assets outside the core asset boundary."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-intangibles-2026:0039",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000174,
+  "input": 1292,
+  "model": "gpt-6-luna",
+  "output": 89,
+  "reasoning": 0,
+  "seconds": 2.66
+ }
+}

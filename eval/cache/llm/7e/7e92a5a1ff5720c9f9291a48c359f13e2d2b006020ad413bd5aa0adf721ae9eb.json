@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.7e-05,
+ "data": {
+  "context": "In WIPO’s *Australia ranking in the Global Innovation Index 2026*, the Socioeconomic impact section reports Australian Global Innovation Tracker indicators, including labor productivity, life expectancy and temperature change. It gives short-term changes and longer-term trends over the stated periods, and notes that eight indicators improved and three worsened in the short term."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026-australia:0005",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000173,
+  "input": 1332,
+  "model": "gpt-6-luna",
+  "output": 80,
+  "reasoning": 0,
+  "seconds": 2.13
+ }
+}

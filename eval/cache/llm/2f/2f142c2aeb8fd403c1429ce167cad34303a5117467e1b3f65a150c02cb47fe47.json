@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.3e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, this passage is in the Institutions section on the regulatory environment and describes the 2024 Rule of Law index. The World Bank index measures perceptions of respect for societal rules, including contract enforcement, property rights, policing, courts, and crime and violence; scores are standardized."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1703",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000127,
+  "input": 881,
+  "model": "gpt-6-luna",
+  "output": 77,
+  "reasoning": 0,
+  "seconds": 2.88
+ }
+}

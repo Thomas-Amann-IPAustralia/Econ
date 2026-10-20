@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.5e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, the patent statistics section (A25) describes trends in foreign-oriented patent families worldwide from 2008 to 2021. These are patent families with at least one filing office outside the applicant’s country of origin; the passage also explains that a family can be foreign-oriented even if it has filings at only one office."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0073",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00015,
+  "input": 1056,
+  "model": "gpt-6-luna",
+  "output": 89,
+  "reasoning": 0,
+  "seconds": 2.23
+ }
+}

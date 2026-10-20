@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.6e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, this passage highlights economies reaching new ranking milestones in the GII’s 2026 rankings. It describes Portugal’s entry into the top 30 and Lithuania’s and Latvia’s positions in the top 40, referring to Figure 2."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0114",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000132,
+  "input": 962,
+  "model": "gpt-6-luna",
+  "output": 71,
+  "reasoning": 0,
+  "seconds": 2.46
+ }
+}

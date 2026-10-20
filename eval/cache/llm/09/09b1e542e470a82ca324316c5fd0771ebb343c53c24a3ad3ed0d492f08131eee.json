@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "context": "In WIPO’s *PCT Yearly Review 2026: The International Patent System*, this passage discusses international search reports (ISRs) under the Patent Cooperation Treaty in 2025, including issuance volumes, growth by International Searching Authority (ISA), and transmission deadlines. The office of Singapore’s nearly 30% increase refers to ISRs it issued compared with 2024."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0147",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000158,
+  "input": 1137,
+  "model": "gpt-6-luna",
+  "output": 89,
+  "reasoning": 0,
+  "seconds": 2.49
+ }
+}

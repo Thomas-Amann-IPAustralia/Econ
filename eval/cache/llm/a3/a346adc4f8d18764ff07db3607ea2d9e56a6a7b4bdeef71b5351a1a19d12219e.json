@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.1e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, in the Mauritius economy profile, this passage reports Mauritius’s scores and ranks for the Knowledge and technology outputs pillar and its indicators on knowledge creation and knowledge impact, including patent and scientific publication measures."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1026",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000161,
+  "input": 1302,
+  "model": "gpt-6-luna",
+  "output": 61,
+  "reasoning": 0,
+  "seconds": 2.18
+ }
+}

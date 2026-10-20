@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.4e-05,
+ "data": {
+  "context": "In WIPO’s *PCT Yearly Review 2026: The International Patent System*, the section on the top PCT clusters presents 2021–2025 international patent application counts and shares for leading clusters worldwide, with changes compared with 2020–2024."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0076",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000188,
+  "input": 1537,
+  "model": "gpt-6-luna",
+  "output": 68,
+  "reasoning": 0,
+  "seconds": 2.07
+ }
+}

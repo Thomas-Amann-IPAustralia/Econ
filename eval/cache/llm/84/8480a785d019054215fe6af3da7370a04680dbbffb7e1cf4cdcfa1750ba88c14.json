@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.2e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, the “Green supercomputers” topic compares the annual energy use of the world’s top 100 supercomputers in 2015, 2021, 2024 and 2025 with per-capita energy use. It explains the assumptions behind the estimate and the 2025 linear extrapolation."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0079",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000143,
+  "input": 999,
+  "model": "gpt-6-luna",
+  "output": 87,
+  "reasoning": 0,
+  "seconds": 2.72
+ }
+}

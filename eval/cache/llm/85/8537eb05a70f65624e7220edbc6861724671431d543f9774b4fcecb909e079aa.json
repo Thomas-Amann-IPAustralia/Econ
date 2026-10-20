@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, appendix table A30 presents relative specialization indexes for selected technology fields and the 15 leading patent-filing origins in 2021–2023. It uses published patent applications and explains that a positive index indicates an origin has a relatively high share of filings in that technology field."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0096",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000159,
+  "input": 1191,
+  "model": "gpt-6-luna",
+  "output": 80,
+  "reasoning": 0,
+  "seconds": 1.62
+ }
+}

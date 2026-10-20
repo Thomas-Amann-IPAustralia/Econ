@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.7e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index (GII) 2026, the Viet Nam economy profile reports the country’s pillar 7 Creative outputs scores and rankings, covering creative goods and services and online creativity. It highlights Viet Nam’s indicators for cultural and creative services, films, creative goods exports, web domains, GitHub commits and mobile app creation."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1532",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000173,
+  "input": 1312,
+  "model": "gpt-6-luna",
+  "output": 83,
+  "reasoning": 0,
+  "seconds": 3.23
+ }
+}

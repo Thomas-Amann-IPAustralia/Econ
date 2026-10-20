@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.4e-05,
+ "data": {
+  "context": "In WIPO’s Madrid Yearly Review 2026, this passage discusses the distribution of active Madrid international registrations among right holders in 2025. It describes how many registrations holders had in their portfolios, referring to figure B25."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0071",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000129,
+  "input": 991,
+  "model": "gpt-6-luna",
+  "output": 59,
+  "reasoning": 0,
+  "seconds": 1.9
+ }
+}

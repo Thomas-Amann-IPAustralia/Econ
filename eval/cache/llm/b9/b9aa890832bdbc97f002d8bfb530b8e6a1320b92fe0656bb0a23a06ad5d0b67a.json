@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, the Canada economy profile reports Canada’s Business sophistication pillar and its innovation linkages and knowledge absorption indicators. It gives scores and global ranks, including intellectual property payments as a share of total trade."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0543",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000165,
+  "input": 1349,
+  "model": "gpt-6-luna",
+  "output": 61,
+  "reasoning": 0,
+  "seconds": 1.85
+ }
+}

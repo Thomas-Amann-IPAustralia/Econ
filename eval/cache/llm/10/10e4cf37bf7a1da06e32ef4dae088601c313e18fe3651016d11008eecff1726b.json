@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.5e-05,
+ "data": {
+  "context": "This passage is the publication and citation information for WIPO’s *PCT Yearly Review 2026: The International Patent System* (2026), which reports on the Patent Cooperation Treaty (PCT) international patent system. It gives the suggested citation, publication details, identifiers, and cover credit."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0001",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00013,
+  "input": 918,
+  "model": "gpt-6-luna",
+  "output": 76,
+  "reasoning": 0,
+  "seconds": 2.44
+ }
+}

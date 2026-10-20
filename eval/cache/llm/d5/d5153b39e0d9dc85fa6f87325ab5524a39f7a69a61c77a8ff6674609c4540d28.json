@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.1e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, the Europe regional section summarizes innovation-economy rankings and strengths. It covers European economies’ 2026 positions and changes, regional research and industrial capabilities, innovation clusters, and the Netherlands’ ranking and patent- and technology-oriented ecosystem."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0164",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000142,
+  "input": 1064,
+  "model": "gpt-6-luna",
+  "output": 71,
+  "reasoning": 0,
+  "seconds": 2.9
+ }
+}

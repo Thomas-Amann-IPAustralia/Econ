@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.1e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, this passage covers the cost of genome sequencing as an indicator of technological progress. It describes global human-genome sequencing costs from 2001 to 2025, including reported prices from providers and China, and the shift toward efficiency in software, data processing and lab automation."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0083",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000141,
+  "input": 1023,
+  "model": "gpt-6-luna",
+  "output": 78,
+  "reasoning": 0,
+  "seconds": 3.2
+ }
+}

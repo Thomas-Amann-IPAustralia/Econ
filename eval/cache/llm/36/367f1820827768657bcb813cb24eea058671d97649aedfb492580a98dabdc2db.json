@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.7e-05,
+ "data": {
+  "context": "In WIPO’s *World Intangible Investment Highlights 2026*, this passage discusses the widening gap between intangible and tangible investment in Canada, Germany and Japan, comparing their trends from 2014 or 2015 to 2024 or 2025. Figure 2 illustrates the shift toward intangible investment in these high-income economies."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-intangibles-2026:0004",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000155,
+  "input": 1155,
+  "model": "gpt-6-luna",
+  "output": 79,
+  "reasoning": 0,
+  "seconds": 2.44
+ }
+}

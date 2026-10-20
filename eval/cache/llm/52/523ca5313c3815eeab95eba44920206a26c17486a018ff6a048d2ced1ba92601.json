@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.5e-05,
+ "data": {
+  "context": "In WIPO’s *PCT Yearly Review 2026*, this passage presents regional data on women’s share among inventors listed in PCT applications for 2015, 2020 and 2025. It accompanies the section on the growth in women inventors’ representation across regions."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0062",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00013,
+  "input": 930,
+  "model": "gpt-6-luna",
+  "output": 74,
+  "reasoning": 0,
+  "seconds": 2.54
+ }
+}

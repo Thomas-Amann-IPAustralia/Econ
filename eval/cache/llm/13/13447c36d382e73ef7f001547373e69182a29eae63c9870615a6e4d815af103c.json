@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, this economy-profile passage reports Cabo Verde’s scores and worldwide ranks for the Human capital and research pillar and its education and tertiary education indicators, including data years where noted."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0512",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000159,
+  "input": 1304,
+  "model": "gpt-6-luna",
+  "output": 57,
+  "reasoning": 0,
+  "seconds": 2.19
+ }
+}

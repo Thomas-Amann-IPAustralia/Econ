@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.8e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, section “Who converts inputs into outputs?”, the passage compares economies’ innovation inputs with their outputs. It highlights China and other economies whose output rankings exceed their input rankings, and contrasts them with Qatar, Saudi Arabia and the United Arab Emirates."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0037",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000137,
+  "input": 1018,
+  "model": "gpt-6-luna",
+  "output": 71,
+  "reasoning": 0,
+  "seconds": 1.35
+ }
+}

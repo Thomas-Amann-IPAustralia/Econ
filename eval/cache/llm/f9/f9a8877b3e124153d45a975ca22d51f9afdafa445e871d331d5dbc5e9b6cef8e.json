@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.002635,
+ "data": {
+  "misattributed_A": 0,
+  "misattributed_B": 0,
+  "reason": "Both answers accurately address the question using the historical study cited by IP Australia. Answer B is slightly more focused and concise, avoiding unnecessary digressions into contemporary firm-level analysis that does not answer the question about historical economic growth.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v2:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "ipr25-3:ab",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002635,
+  "input": 3093,
+  "model": "gemini-3.8-flash",
+  "output": 84,
+  "reasoning": 0,
+  "seconds": 2.12
+ }
+}

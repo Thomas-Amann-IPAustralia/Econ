@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.3e-05,
+ "data": {
+  "context": "In WIPO’s *Australia ranking in the Global Innovation Index 2026*, this opening section reports Australia’s 2026 GII rankings among all featured economies and within the high-income and South East Asia, East Asia, and Oceania groups, and explains that the index assesses innovation capabilities using indicators of inputs and outputs."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026-australia:0000",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000127,
+  "input": 882,
+  "model": "gpt-6-luna",
+  "output": 77,
+  "reasoning": 0,
+  "seconds": 2.41
+ }
+}

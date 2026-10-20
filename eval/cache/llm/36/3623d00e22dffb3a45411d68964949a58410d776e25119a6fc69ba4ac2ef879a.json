@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000102,
+ "data": {
+  "context": "In WIPO’s *PCT Yearly Review 2026*, in the section on use of the PCT System for patent applications filed abroad, this passage compares the average number of national phase entries (NPEs) per PCT application for applicants from Denmark, Switzerland, China and Türkiye in 2024."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0097",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000204,
+  "input": 1018,
+  "model": "gpt-6-luna",
+  "output": 204,
+  "reasoning": 124,
+  "seconds": 4.32
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.1e-05,
+ "data": {
+  "context": "In WIPO’s *Madrid Yearly Review 2026*, this passage discusses destinations for subsequent designations of Madrid international trademark registrations in 2025. It compares the Madrid member countries receiving the most requests to extend mark protection, including year-on-year changes and the income categories of the top 20 destinations."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0064",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000162,
+  "input": 1238,
+  "model": "gpt-6-luna",
+  "output": 76,
+  "reasoning": 0,
+  "seconds": 2.26
+ }
+}

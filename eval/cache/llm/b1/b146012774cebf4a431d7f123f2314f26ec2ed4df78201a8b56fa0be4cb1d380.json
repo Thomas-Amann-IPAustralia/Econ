@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.6e-05,
+ "data": {
+  "context": "In WIPO’s *Madrid Yearly Review 2026*, the administration, revenue and fees section discusses the languages used for Madrid applications. It reports the 2025 shares submitted in English, French and Spanish and notes that the pattern has remained steady since 2014."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0113",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000131,
+  "input": 967,
+  "model": "gpt-6-luna",
+  "output": 69,
+  "reasoning": 0,
+  "seconds": 2.24
+ }
+}

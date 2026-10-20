@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.6e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, the Lisbon System section explains differing national and regional terms for geographical indications (GIs) and why registered GI totals can be difficult to determine, including after the Geneva Act modernized the Lisbon System."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0479",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000191,
+  "input": 1126,
+  "model": "gpt-6-luna",
+  "output": 157,
+  "reasoning": 88,
+  "seconds": 3.27
+ }
+}

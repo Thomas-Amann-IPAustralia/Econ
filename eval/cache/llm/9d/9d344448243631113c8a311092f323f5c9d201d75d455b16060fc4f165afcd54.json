@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.1e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, Appendix IV’s continued table of top innovation clusters lists cluster ranks, economies and measures including PCT applications, scientific publications, venture capital deals, global shares and rank changes. The passage covers São Paulo (Brazil), Moscow (Russia), Minneapolis, Washington, DC–Baltimore and other clusters."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1815",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000181,
+  "input": 1396,
+  "model": "gpt-6-luna",
+  "output": 82,
+  "reasoning": 0,
+  "seconds": 2.23
+ }
+}

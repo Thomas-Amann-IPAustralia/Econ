@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.6e-05,
+ "data": {
+  "context": "In WIPO’s *PCT Yearly Review 2026: The International Patent System*, the regional breakdown of PCT applications by origin reports that filings grew in every geographical region except Northern America for the third consecutive year, comparing 2025 with 2024."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0026",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000191,
+  "input": 1577,
+  "model": "gpt-6-luna",
+  "output": 66,
+  "reasoning": 0,
+  "seconds": 1.94
+ }
+}

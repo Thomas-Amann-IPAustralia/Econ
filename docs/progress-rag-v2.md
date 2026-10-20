@@ -253,3 +253,30 @@ OpenAI), not run.
 - At the owner's request: a claim citing several sentences shows each in its own colour and number (pink, green,
   violet, then grey), the same in its card and in the trail; palette checked with the dataviz validator in both
   themes. Checked headless; no model calls, no spend.
+
+## 2026-10-20 — The WIPO documents (D-033)
+- The bucket's new `WIPO/` folder: six PDFs (759 pages) and the GII 2026 data file. Registered (publisher per
+  document; the spreadsheet as a data file for the GII), fetched, swept (no high findings), parsed, chunked.
+- Parse: the GII ran out of memory whole; long documents now parse in cached 25-page batches. Two container
+  restarts and the 2-hour limit on background commands cost about three hours of parsing; detached runs and
+  batch caching got it through. Docling took about 40 s a page on the GII's 139 economy-profile pages.
+- Found: Docling labels each profile table a document index, which the parse drops, so the profiles were
+  missing from the text entirely. Grid wipo-v1 (66 new needs, no model calls) chose writing them from WIPO's
+  data file: profile figures ndcg@10 0.000 to 0.876; IP Australia needs unchanged within error (-0.004).
+- The library holds 2,847 WIPO passages; the serving index is unchanged. For the owner: notes (~US$0.21),
+  prompt versions for a two-publisher corpus, publishing the PDFs. 138 tests pass. No spend.
+- Two failed sweep manifests were deleted by mistake before being committed (recorded in D-033).
+
+## 2026-10-20 — WIPO notes, the index with both publishers, prompts for two publishers (D-034)
+- The owner granted US$1.50. Notes for the 2,847 WIPO passages (enrich-v2, US$0.23); index rebuilt (30
+  documents, 4,744 passages). With notes, WIPO test ndcg@10 0.440 to 0.620; IP Australia level (+0.000).
+- plan-v4, filter-v2 and answer-v6 written and measured against the current prompts on 13 questions (US$0.59
+  answers, US$0.11 judge): both 13 of 13 pass, same gold reached, no misattributions; preferences 6 to 2 for
+  the new prompts (p = 0.29). Recommended to the owner; config unchanged until adopted.
+- Found: the filter can fill all 20 places from one half of a two-part question (Australian vs worldwide
+  patenting kept no WIPO passage under either prompt on a replay). Next to measure.
+- Site text, README and the printout's licence updated (the owner: all CC BY 4.0). Spend US$0.95 of US$1.50.
+
+## 2026-10-20 — The owner adopts the two-publisher prompts (D-035)
+- `config/service.yaml`: answer-v6, plan-v4, filter-v2. Prompts load against the lock; health OK; tests pass.
+  Live once the PR merges to `main`.

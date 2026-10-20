@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.5e-05,
+ "data": {
+  "context": "In WIPO’s *PCT Yearly Review 2026*, this passage is the figure on PCT applications received by the top 20 offices in 2025. It notes that the 2025 figures are estimates and clarifies that EPO means the European Patent Office and Netherlands means the Kingdom of the Netherlands."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0020",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00013,
+  "input": 911,
+  "model": "gpt-6-luna",
+  "output": 77,
+  "reasoning": 0,
+  "seconds": 2.5
+ }
+}

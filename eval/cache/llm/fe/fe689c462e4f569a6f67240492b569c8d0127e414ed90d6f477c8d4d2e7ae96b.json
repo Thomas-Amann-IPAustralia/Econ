@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.4e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, in the section on structural constraints to science-powered entrepreneurship, this passage discusses weak R&D investment and fragmented, mismatched finance that constrain commercialization in emerging economies. It cites worldwide R&D patterns and examples from Latin America, Brazil and India."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0268",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000148,
+  "input": 1123,
+  "model": "gpt-6-luna",
+  "output": 71,
+  "reasoning": 0,
+  "seconds": 2.87
+ }
+}

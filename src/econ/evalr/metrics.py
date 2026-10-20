@@ -22,6 +22,8 @@ def covers(chunk: dict, gold, cover: float = COVER) -> bool:
     """`gold` is one Gold or a tuple of alternatives, any of which counts."""
     if isinstance(gold, tuple):
         return any(covers(chunk, g, cover) for g in gold)
+    if hasattr(gold, "covered_by"):  # a figure matched by its strings, not by span (econ.evalr.wipo)
+        return gold.covered_by(chunk)
     if chunk["doc_id"] != gold.doc_id:
         return False
     need = (gold.end - gold.start) * cover

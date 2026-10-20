@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.3e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, this passage is in the glossary section on the International Union for the Protection of New Varieties of Plants (UPOV). It defines UPOV and describes the conditions for an invention to qualify for patent protection."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0499",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000167,
+  "input": 990,
+  "model": "gpt-6-luna",
+  "output": 135,
+  "reasoning": 63,
+  "seconds": 3.11
+ }
+}

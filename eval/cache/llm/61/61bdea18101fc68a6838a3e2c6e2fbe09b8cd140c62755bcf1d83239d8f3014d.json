@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.1e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, in the “Who leads global innovation in 2026?” section, this passage describes Japan’s and Estonia’s positions and innovation strengths in the 2026 Index, including Japan’s patenting and Tokyo-Yokohama cluster and Estonia’s digital adoption and intangible activity."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0108",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000141,
+  "input": 1022,
+  "model": "gpt-6-luna",
+  "output": 77,
+  "reasoning": 0,
+  "seconds": 2.47
+ }
+}

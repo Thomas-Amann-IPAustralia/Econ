@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.1e-05,
+ "data": {
+  "context": "In WIPO’s PCT Yearly Review 2026, this table compares the top 50 applicants’ foreign-oriented patent families in 2017–2019 and 2020–2022, including the share using the PCT route. Foreign-oriented families include filings outside the applicant’s home office; the table shows applicants such as Samsung, Huawei and Canon."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0122",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000182,
+  "input": 1376,
+  "model": "gpt-6-luna",
+  "output": 88,
+  "reasoning": 0,
+  "seconds": 1.75
+ }
+}

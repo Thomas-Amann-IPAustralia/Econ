@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.5e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, this passage presents the Knowledge and technology outputs section’s knowledge diffusion indicator for telecommunications, computer and information services exports as a share of total trade in 2024. It describes the EBOPS 2010 measure, its classification basis and the WTO and WTO-OECD data sources, covering data years 2020–2024."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1767",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00015,
+  "input": 1061,
+  "model": "gpt-6-luna",
+  "output": 88,
+  "reasoning": 0,
+  "seconds": 2.9
+ }
+}

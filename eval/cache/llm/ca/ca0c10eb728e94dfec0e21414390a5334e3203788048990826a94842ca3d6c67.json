@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.6e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, this Venezuela (Bolivarian Republic of) economy profile reports pillar 2 indicators for human capital and research, including R&D, and pillar 3 indicators for infrastructure and ICT. Scores and ranks are shown for the country’s research capacity, researchers, corporate R&D investors, university rankings, and ICT access, use and government services."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1516",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000172,
+  "input": 1275,
+  "model": "gpt-6-luna",
+  "output": 90,
+  "reasoning": 0,
+  "seconds": 2.29
+ }
+}

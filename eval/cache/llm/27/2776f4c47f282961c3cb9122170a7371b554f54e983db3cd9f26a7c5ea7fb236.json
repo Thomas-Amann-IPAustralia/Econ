@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026* (2026), this passage recounts WIPO’s role in the GII’s development from 2011 to 2020 and changes to its technical methods. It describes WIPO joining as knowledge partner in 2011 and becoming co-publisher in 2012, alongside INSEAD and, from 2013 to 2020, Cornell University."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1558",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000158,
+  "input": 1090,
+  "model": "gpt-6-luna",
+  "output": 97,
+  "reasoning": 0,
+  "seconds": 2.08
+ }
+}
