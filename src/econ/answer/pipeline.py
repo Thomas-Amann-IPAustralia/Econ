@@ -153,13 +153,18 @@ def rerank_step(svc: Services, ranked: list, query: str) -> dict:
     }
 
 
-def evidence_block(n: int, chunk: dict, doc: dict, body: str | None = None) -> str:
+def _publisher(doc: dict, show: bool) -> str:
+    """The publisher attribute, for prompts written for a corpus of two publishers (D-034)."""
+    return f' publisher="{defang(doc["publisher"])}"' if show and doc.get("publisher") else ""
+
+
+def evidence_block(n: int, chunk: dict, doc: dict, body: str | None = None, publisher: bool = False) -> str:
     """A passage as the answer model sees it; `body` replaces its text (the numbered sentences, D-026)."""
     pages = chunk["pages"]
     pg = f"{pages[0]}" if len(pages) == 1 else f"{pages[0]}-{pages[-1]}"
     section = " > ".join(chunk["section"]) if chunk["section"] else ""
     return (
-        f'<evidence n="{n}" document="{defang(doc["title"])}" year="{doc["year"]}" '
+        f'<evidence n="{n}" document="{defang(doc["title"])}"{_publisher(doc, publisher)} year="{doc["year"]}" '
         f'section="{defang(section)}" pages="{pg}">\n{body if body is not None else defang(chunk["text"])}'
         "\n</evidence>"
     )
@@ -168,10 +173,10 @@ def evidence_block(n: int, chunk: dict, doc: dict, body: str | None = None) -> s
 # --- the relevance filter (D-018 to D-020) ---------------------------------------------------------------
 
 
-def filter_block(pid: str, chunk: dict, doc: dict) -> str:
+def filter_block(pid: str, chunk: dict, doc: dict, publisher: bool = False) -> str:
     section = " > ".join(chunk["section"]) if chunk["section"] else ""
     return (
-        f'<evidence id="{pid}" document="{defang(doc["title"])}" year="{doc["year"]}" '
+        f'<evidence id="{pid}" document="{defang(doc["title"])}"{_publisher(doc, publisher)} year="{doc["year"]}" '
         f'section="{defang(section)}">\n{defang(chunk["text"])}\n</evidence>'
     )
 
@@ -210,7 +215,12 @@ def filter_step(svc: Services, question: str, pool: list, parent=None) -> dict:
         part = pool[g : g + fc.group]
         ids = {f"p{g + i + 1}": s.row for i, s in enumerate(part)}
         blocks = [
-            filter_block(pid, svc.index.chunks[row], svc.index.docs[svc.index.chunks[row]["doc_id"]])
+            filter_block(
+                pid,
+                svc.index.chunks[row],
+                svc.index.docs[svc.index.chunks[row]["doc_id"]],
+                publisher=prompts.shows_publisher(fc.prompt),
+            )
             for pid, row in ids.items()
         ]
         calls.append((filter_user(question, blocks), ids))
@@ -624,15 +634,16 @@ def _run(req: Request, svc: Services, root) -> Iterator[dict]:
     by_sentence = schema is AnswerV5  # D-026: the model cites sentence ids; code writes the quotes
     passages = {e["n"]: {"chunk_id": e["chunk_id"], "text": e["text"]} for e in evidence}
     sentence_table: dict[tuple[int, int], str] = {}
+    pub = prompts.shows_publisher(a.prompt)
     shown = []
     for i, e in enumerate(evidence):
         chunk, doc = svc.index.chunks[chosen[i].row], svc.index.docs[e["doc_id"]]
         if by_sentence:
             body, table = cite.numbered(e["n"], chunk["text"], defang)
             sentence_table.update({(e["n"], k): v for k, v in table.items()})
-            shown.append(evidence_block(e["n"], chunk, doc, body=body))
+            shown.append(evidence_block(e["n"], chunk, doc, body=body, publisher=pub))
         else:
-            shown.append(evidence_block(e["n"], chunk, doc))
+            shown.append(evidence_block(e["n"], chunk, doc, publisher=pub))
     blocks = "\n\n".join(shown)
     base_user = (
         _history_block(req.history)

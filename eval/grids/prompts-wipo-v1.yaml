@@ -1,0 +1,57 @@
+# Grid prompts-wipo-v1: the prompts before and after rewriting them for two publishers (D-034).
+# Committed before any answer is generated (SOP §12). The owner asked (2026-10-20) for "a small measurement
+# before and after re-writing the system prompts", within a US$1.50 grant that also pays for the notes.
+grid: prompts-wipo-v1
+index: library/index rebuilt with the WIPO documents and their context notes (luna-enrich-v2)
+arms:
+  before: {plan: plan-v2, filter: filter-v1, answer: answer-v5}   # the service today
+  after: {plan: plan-v4, filter: filter-v2, answer: answer-v6}    # written for IP Australia and WIPO
+pipeline: >-
+  The service's own pipeline (econ.answer.pipeline): gpt-6-luna plans and filters (low effort), gpt-6.1-sol
+  answers (medium), the check, one retry; the local ONNX query embedder. Standard tier (as served). Each
+  question answered once per arm.
+questions:
+  # Drawn with random.Random(20261020) from the test halves: 4 IP Australia silver needs, and 4 WIPO needs
+  # (one economy-profile figure and three others).
+  ipa: [ipr26-5, ipr17-5, ipr25-3, ipr22-3]
+  wipo: [gii-p09, gii-15, int-4, aus-2]
+  # Written by Claude for this grid: questions that need both publishers, as staff might ask them. Their
+  # narratives say what a helpful answer covers; they have no gold.
+  both:
+    - id: both-1
+      question: How does Australia compare with other countries on innovation?
+      narrative: Australia's GII 2026 ranks (overall, inputs, outputs) and where it is strong or weak, with any
+        IP Australia evidence on the same areas; whose figures are whose.
+    - id: both-2
+      question: How has Australian patenting changed, and how does it compare with what is happening to international patent applications worldwide?
+      narrative: Australian patent application trends from the IP Reports, and the worldwide PCT and patent
+        filing trends from WIPO, kept as separate series with their years and what each counts.
+    - id: both-3
+      question: Do Australian businesses use the Madrid System to protect their trade marks overseas?
+      narrative: What the IP Reports say about Australian applicants' international (Madrid) trade mark
+        filings, and what WIPO's Madrid Yearly Review says about Australia as an origin or designation.
+    - id: both-4
+      question: What do we know about investment in intangible assets like brands and R&D, and how does it relate to IP?
+      narrative: WIPO's intangible investment findings and IP Australia's evidence linking IP rights to firm
+        investment or performance, each attributed to its publisher.
+    - id: both-5
+      question: Where is Australia weakest in the Global Innovation Index, and does IP Australia's own research say anything about those areas?
+      narrative: Australia's lowest-ranked GII areas (infrastructure, business sophistication, knowledge and
+        technology outputs, creative outputs) and any IP Australia findings on them, without presenting
+        one publisher's findings as the other's.
+measures:
+  - check: passed first time, passed after the retry, flagged; coverage
+  - gold: for the 8 sampled needs, whether a gold passage reached the answer model's 20 passages, and was cited
+  - publishers: the share of WIPO passages among the 20, by question group
+  - attribution: per answer, the judge's count of statements that credit a finding or figure to the wrong
+      publisher (or present one publisher's figure as the other's), from the prose and the cited passages'
+      publishers
+  - preference: gemini-3.8-flash (another family), prompt pairwise-v2, both orders, blind to the arm; a
+      preference counts only when both orders agree; two-sided sign test
+  - cost and time per question
+rule: >-
+  Recommend `after` to the owner if, over the 13 questions, it passes the check at least as often as `before`
+  (one question's difference allowed), reaches gold for no fewer of the 8 sampled needs, makes fewer or equal
+  misattributions, and the agreed preferences do not favour `before`. Thirteen questions can show a problem;
+  they can't prove a small gain. Adoption is the owner's.
+spend_estimate_usd: {openai: 0.80, gemini: 0.05}

@@ -182,3 +182,23 @@ def test_a_facts_gold_scores_a_table_and_its_written_form_alike():
     elsewhere = {"doc_id": "doc-a", "pages": [6], "text": prose["text"]}
     assert covers(table, gold) and covers(prose, gold) and not covers(elsewhere, gold)
     assert covers(prose, (FactGold("doc-b", None, ("x",)), gold))
+
+
+def test_only_two_publisher_prompts_see_the_publisher():
+    from econ.answer import pipeline, prompts
+
+    assert prompts.shows_publisher("answer-v6") and prompts.shows_publisher("filter-v2")
+    assert not prompts.shows_publisher("answer-v5") and not prompts.shows_publisher("filter-v1")
+    assert not prompts.shows_publisher("plan-v4")
+    chunk = {"pages": [3], "section": ["Part"], "text": "Placeholder text."}
+    doc = {"title": "Alpha", "year": 2026, "publisher": "Placeholder Org"}
+    old = pipeline.evidence_block(1, chunk, doc)
+    assert (
+        old
+        == '<evidence n="1" document="Alpha" year="2026" section="Part" pages="3">\nPlaceholder text.\n</evidence>'
+    )
+    assert 'document="Alpha" publisher="Placeholder Org" year="2026"' in pipeline.evidence_block(
+        1, chunk, doc, publisher=True
+    )
+    assert "publisher=" not in pipeline.filter_block("p1", chunk, doc)
+    assert 'publisher="Placeholder Org"' in pipeline.filter_block("p1", chunk, doc, publisher=True)

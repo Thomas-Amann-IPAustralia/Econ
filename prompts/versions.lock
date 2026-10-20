@@ -24,10 +24,20 @@
     "schema_sha256": "db474714a4d4954f",
     "sha256": "bbe7fca961070367"
   },
+  "answer-v6": {
+    "schema": "answer5",
+    "schema_sha256": "db474714a4d4954f",
+    "sha256": "be7dac4b38583881"
+  },
   "filter-v1": {
     "schema": "filter",
     "schema_sha256": "27cb0355c1a50e85",
     "sha256": "00d3fa48285ef87f"
+  },
+  "filter-v2": {
+    "schema": "filter",
+    "schema_sha256": "27cb0355c1a50e85",
+    "sha256": "a7a9fdf26f8255ad"
   },
   "plan-v1": {
     "schema": "plan",
@@ -43,5 +53,10 @@
     "schema": "plan",
     "schema_sha256": "ab394bace1984c1e",
     "sha256": "f541f68cf35b4764"
+  },
+  "plan-v4": {
+    "schema": "plan",
+    "schema_sha256": "ab394bace1984c1e",
+    "sha256": "466d4a401399eb8e"
   }
 }

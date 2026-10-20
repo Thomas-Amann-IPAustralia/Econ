@@ -178,6 +178,42 @@ def eval_wipo(grid: str = typer.Option("wipo-v1", help="Grid file under eval/gri
     typer.echo(f"eval-wipo: chosen {choice['chosen']}; one index: {choice['one_index']}")
 
 
+@app.command("eval-prompts-wipo")
+@loud
+def eval_prompts_wipo(
+    confirm: bool = typer.Option(False, help="Make the paid calls. Without it, list the questions."),
+) -> None:
+    """The prompts before and after rewriting them for two publishers (grid prompts-wipo-v1, D-034)."""
+    from econ import tracing
+    from econ.answer import pipeline
+    from econ.answer.providers import OpenAIModel
+    from econ.evalr import promptsab
+    from econ.retrieval.index import Index
+
+    qs = promptsab.questions()
+    for q in qs:
+        typer.echo(f"{q['id']:10s} {q['group']:5s} {q['question']}")
+    if not confirm:
+        typer.echo("dry run: add --confirm to answer them under both arms (about US$0.80) and judge them")
+        return
+    import os
+
+    llm = config.service().llm
+    p = next(x for x in llm.providers if x.name == "openai")
+    key = os.environ.get(p.key_env, "") or "placeholder"  # the session proxy injects the real key
+    idx = Index()
+    svc = pipeline.Services(
+        index=idx,
+        embedder=_LocalEmbedder(idx.meta["embedder"]),
+        model=OpenAIModel(p, key, llm.timeout_seconds),
+        provider=p,
+        tracer=tracing.NullTracer(),
+    )
+    with run("eval-prompts-wipo", _hash()) as r:
+        s = promptsab.run_grid(r, svc)
+    typer.echo(f"eval-prompts-wipo: {s}")
+
+
 @app.command("eval-retrieval-v2")
 @loud
 def eval_retrieval_v2(
