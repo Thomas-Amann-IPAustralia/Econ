@@ -1,0 +1,37 @@
+# Grid wipo-v1: how the WIPO documents enter the index (D-033). Committed before any number (SOP §12).
+#
+# The owner added six WIPO PDFs and the Global Innovation Index (GII) 2026 data file to the bucket and
+# asked for them to be ingested "with the correct approach" tested. Measured free: the adopted chunking
+# (S384-noprefix-nocite), embedder (arctic-m-v1.5) and hybrid search (score fusion, alpha 0.7), with the
+# question as the only query. No plan, filter or answer (paid); no context notes for WIPO chunks (paid), so
+# every WIPO variant is measured at a disadvantage against the noted IP Australia chunks.
+grid: wipo-v1
+variants:
+  ipa-only: today's 24 documents; the baseline for the IP Australia needs
+  docling: the six WIPO PDFs parsed like every other document
+  docling-prefix: as docling, with title and section path in front of each WIPO chunk for search only
+  data: as docling, the GII's 139 economy-profile pages written from WIPO's data file (econ.ingest.gii)
+  drop: as docling, without the economy-profile pages
+needs:
+  ipa: eval/testset/silver-v1.yaml (114 needs, the IP Australia documents)
+  wipo: eval/testset/wipo-v1.yaml (written by Claude from the parsed text before any ranking; `facts`
+    golds for economy-profile figures score parsed tables and written profiles alike)
+  split: the fixed hash split of need ids (dev to choose, test to report)
+metrics: [ndcg@10, recall@4k_tok, recall@20, mrr@10, wipo_share@10]
+rules:
+  # 1. One index for both publishers, or not. The IP Australia needs must not get worse because the WIPO
+  #    passages compete for the same ranks.
+  one_index: >-
+    For the variant chosen in rule 2, IP Australia ndcg@10 over all 114 silver needs falls by no more than
+    0.02 against ipa-only, and the paired 95% bootstrap interval's lower bound is above -0.04. Otherwise the
+    WIPO documents go to the owner as a separate collection (searched only on request), with the numbers.
+  # 2. How the GII's economy profiles enter (data, docling, drop), and whether WIPO chunks take a prefix.
+  profiles: >-
+    Among docling, docling-prefix, data and drop, choose the highest WIPO dev ndcg@10 (all WIPO needs).
+    A variant that differs from docling only in the profile pages is preferred to docling when it is not
+    worse on the dev non-profile needs by more than 0.02 and better on the dev profile needs. Ties (within
+    0.005) go to the simpler variant, in the order docling, drop, docling-prefix, data. Test reported.
+reported:
+  - every variant on both sets, by split and by kind, and the share of WIPO passages in each top 10
+  - the chunk counts and token sizes per variant
+  - the IP Australia needs whose top 10 changed most, read by Claude

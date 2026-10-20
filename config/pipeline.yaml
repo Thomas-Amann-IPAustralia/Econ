@@ -19,6 +19,7 @@ parse:
   reocr_model: gemini-3.8-flash # last resort for what no crop variant repairs; cached and metered (D-022)
   threads: 2                    # per worker; `econ parse --workers 2` uses all 4 vCPUs
   table_structure: true
+  batch_pages: 100              # longer documents parse in page batches (the 348-page GII ran out of memory whole, D-033)
 
 chunking:
   # Token counts use one reference tokenizer, so every embedder sees the same chunks. It is the

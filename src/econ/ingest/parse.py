@@ -118,10 +118,43 @@ def elements_from_docling(doc, doc_id: str, ocr: bool) -> tuple[list[dict], dict
 def _parse_one(args: tuple[str, str, bool, str]) -> tuple[str, dict]:
     doc_id, pdf_path, ocr, cache_path = args
     started = time.time()
-    res = _converter(ocr).convert(pdf_path)
-    payload = res.document.export_to_dict()
+    conv = _converter(ocr)
+    batch = config.pipeline().parse.batch_pages
+    pages = _page_count(pdf_path)
+    if batch and pages > batch:
+        # A long document in page batches: Docling holds every page's images until the end, and the
+        # 348-page GII report ran out of memory whole (D-033). Pages keep their absolute numbers.
+        # Each batch is cached as it finishes, so an interrupted run resumes where it stopped.
+        from docling_core.types.doc import DoclingDocument
+
+        parts, statuses = [], set()
+        for a in range(1, pages + 1, batch):
+            b = min(a + batch - 1, pages)
+            part = Path(f"{cache_path}.pages-{a}-{b}")
+            if part.exists():
+                parts.append(DoclingDocument.model_validate(json.loads(part.read_text())))
+                statuses.add("cached")
+                continue
+            t0 = time.time()
+            res = conv.convert(pdf_path, page_range=(a, b))
+            write_text_atomic(part, json.dumps(res.document.export_to_dict()))
+            parts.append(res.document)
+            statuses.add(str(res.status))
+            print(f"parsed {doc_id} pages {a}-{b} in {time.time() - t0:.1f}s", flush=True)
+        document = DoclingDocument.concatenate(parts)
+        status = ",".join(sorted(statuses))
+    else:
+        res = conv.convert(pdf_path)
+        document, status = res.document, str(res.status)
+    payload = document.export_to_dict()
     write_text_atomic(Path(cache_path), json.dumps(payload))
-    return doc_id, {"seconds": round(time.time() - started, 1), "status": str(res.status)}
+    return doc_id, {"seconds": round(time.time() - started, 1), "status": status}
+
+
+def _page_count(pdf_path: str) -> int:
+    import pypdfium2 as pdfium  # build extra
+
+    return len(pdfium.PdfDocument(pdf_path))
 
 
 def _catalogue(p: Path) -> dict:

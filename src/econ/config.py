@@ -31,6 +31,27 @@ class Document(Strict):
     authors: list[str] = []
     url: str | None = None
     note: str | None = None  # shown with every passage from the document
+    publisher: str | None = None  # when not the registry's default publisher
+
+    @property
+    def raw_name(self) -> str:
+        return f"{self.doc_id}.pdf"
+
+
+class DataFile(Strict):
+    """An object in the bucket that is not a document of its own: a publisher's data file that the parse
+    stage reads for one document (D-033: the GII's economy-profile tables, from WIPO's own spreadsheet)."""
+
+    doc_id: str = Field(pattern=r"^[a-z0-9][a-z0-9-]*$")
+    key: str
+    title: str
+    for_doc: str
+    url: str | None = None
+    note: str | None = None
+
+    @property
+    def raw_name(self) -> str:
+        return f"{self.doc_id}{Path(self.key).suffix.lower()}"
 
 
 class Sources(Strict):
@@ -38,14 +59,20 @@ class Sources(Strict):
     endpoint: str
     publisher: str
     documents: list[Document]
+    data: list[DataFile] = []
 
     @model_validator(mode="after")
     def _unique(self) -> Sources:
+        entries = [*self.documents, *self.data]
         for field in ("doc_id", "key"):
-            values = [getattr(d, field) for d in self.documents]
+            values = [getattr(d, field) for d in entries]
             dupes = {v for v in values if values.count(v) > 1}
             if dupes:
                 raise ValueError(f"duplicate {field}: {sorted(dupes)}")
+        ids = {d.doc_id for d in self.documents}
+        for f in self.data:
+            if f.for_doc not in ids:
+                raise ValueError(f"data file {f.doc_id} is for an unknown document: {f.for_doc}")
         return self
 
     def by_id(self) -> dict[str, Document]:
@@ -53,6 +80,16 @@ class Sources(Strict):
 
     def by_key(self) -> dict[str, Document]:
         return {d.key: d for d in self.documents}
+
+    def objects(self) -> dict[str, Document | DataFile]:
+        """Every registered bucket object by key: the documents and the data files."""
+        return {d.key: d for d in [*self.documents, *self.data]}
+
+    def publisher_of(self, doc: Document) -> str:
+        return doc.publisher or self.publisher
+
+    def data_for(self, doc_id: str) -> list[DataFile]:
+        return [f for f in self.data if f.for_doc == doc_id]
 
 
 # --- pipeline ------------------------------------------------------------------------------------
@@ -77,6 +114,7 @@ class ParseCfg(Strict):
     reocr_model: str | None = None  # the vision model for what no crop variant repairs (D-022); null: none
     threads: int = 4
     table_structure: bool = True
+    batch_pages: int | None = None  # parse longer documents in batches of this many pages (D-033)
 
 
 class ChunkStrategy(Strict):

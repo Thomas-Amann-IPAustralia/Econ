@@ -1,0 +1,270 @@
+# WIPO retrieval test set v1 (grid wipo-v1, D-033).
+# Written by Claude (2026-10-19) before any ranking, as silver-v1 was: from a seeded random sample of body
+# passages per WIPO document (seed "20261019-<doc_id>", passages of 30+ words away from the front and back
+# matter, the GII's profile pages excluded), skipping notes under charts and reference entries. Questions
+# are phrased as an IP Australia researcher might ask them, mostly avoiding the passage's own wording.
+# Each `quote` is verbatim from the parsed text (8+ words).
+# `facts` golds (kind lookup) are figures from the GII's economy profiles, for 13 economies and indicators
+# drawn with random.Random(20261019) from WIPO's data file, plus one for Australia; a chunk covers one when
+# it is from that document and page and holds every listed string (econ.evalr.wipo.FactGold), so a parsed
+# profile table and its written form score alike. Economies whose drawn figure is n/a were skipped (2).
+version: wipo-v1
+needs:
+  # --- wipo-intangibles-2026 ----------------------------------------------------------------------------
+  - id: int-1
+    kind: trend
+    question: Since 2020, has investment in intangible assets grown faster than investment in physical assets in Europe and the US?
+    gold:
+      - doc_id: wipo-intangibles-2026
+        quote: intangible investment grew annually at 5.5 percent in real terms between 2020 and 2025, compared to 3.2 percent for tangible investment
+  - id: int-2
+    kind: explain
+    question: Is the AI data-centre boom lifting investment in buildings and public infrastructure as well?
+    gold:
+      - doc_id: wipo-intangibles-2026
+        quote: Investment in conventional structures - buildings, transport infrastructure, hospitals and schools - remains subdued across most high-income economies
+  - id: int-3
+    kind: lookup
+    question: Which countries have had the fastest growth in research and development spending over the last decade?
+    gold:
+      - doc_id: wipo-intangibles-2026
+        quote: The Philippines recorded annual R&D growth of 20.1 percent between 2012 and 2022, and Croatia 18 percent between 2013 and 2023.
+  - id: int-4
+    kind: lookup
+    question: What kind of intangible asset dominates India's intangible investment?
+    gold:
+      - doc_id: wipo-intangibles-2026
+        quote: India stands out for its focus on software and databases, which account for nearly 45 percent of its total intangible investment in 2023
+  - id: int-5
+    kind: explain
+    question: How could generative AI change what companies get out of spending on their brands?
+    gold:
+      - doc_id: wipo-intangibles-2026
+        quote: Finally, digital technologies are amplifying both the returns and the risks of brand investment.
+  # --- wipo-madrid-2026 ---------------------------------------------------------------------------------
+  - id: mad-1
+    kind: trend
+    question: Which long-standing big filers of international trademark applications cut back sharply in 2025?
+    gold:
+      - doc_id: wipo-madrid-2026
+        quote: Having ranked among the top five Madrid applicants since 2006, Novartis of Switzerland filed 126 fewer Madrid applications in 2025
+  - id: mad-2
+    kind: lookup
+    question: How concentrated are the origins of international trademark applications that designate Australia?
+    gold:
+      - doc_id: wipo-madrid-2026
+        quote: about 62% to 64% of those designating Australia, Canada, Japan, the Republic of Korea and Switzerland
+  - id: mad-3
+    kind: lookup
+    question: How many classes of goods and services does a typical international trademark application cover?
+    gold:
+      - doc_id: wipo-madrid-2026
+        quote: 28,088 or 44.3% of all Madrid applications indicated a single class to which the trademark applied, and 80.1% included up to three classes.
+  - id: mad-4
+    kind: lookup
+    question: Which industry sector accounted for the most international trademark applications from the leading countries in 2025?
+    gold:
+      - doc_id: wipo-madrid-2026
+        quote: research and technology was the top industry sector for Madrid applications from nine of the top 10 origins
+  - id: mad-5
+    kind: paraphrase
+    question: Do trademark owners extending an international registration to more countries usually go straight to WIPO or through their own national office?
+    gold:
+      - doc_id: wipo-madrid-2026
+        quote: Almost 16% of all requests for subsequent designation in 2025 were filed via Madrid member offices of origin rather than directly with the IB.
+  - id: mad-6
+    kind: lookup
+    question: Which national offices receive the most of the fees WIPO collects for international trademark registrations?
+    gold:
+      - doc_id: wipo-madrid-2026
+        quote: the United Arab Emirates, Japan and Australia continued to receive the largest shares of the CHF 347.8 million in fees collected by the IB
+  - id: mad-7
+    kind: explain
+    question: Apart from the Madrid System, how can a business protect its trademark in several countries?
+    gold:
+      - doc_id: wipo-madrid-2026
+        quote: a trademark holder can either file separate applications directly with each IP office - the Paris route - or file a single international application through the Madrid System
+  - id: mad-8
+    kind: explain
+    question: What does WIPO mean by a non-resident trademark application?
+    gold:
+      - doc_id: wipo-madrid-2026
+        quote: application refers to an application filed with an IP office of a given country/territory/region in which the applicant does not reside
+  # --- wipo-gii-2026-australia --------------------------------------------------------------------------
+  - id: aus-1
+    kind: lookup
+    question: How precise is Australia's Global Innovation Index ranking, given statistical uncertainty?
+    gold:
+      - doc_id: wipo-gii-2026-australia
+        quote: The statistical confidence interval for the ranking of Australia in the GII 2026 is between ranks 18 and 21.
+  - id: aus-2
+    kind: lookup
+    question: In which areas of the Global Innovation Index does Australia do best?
+    gold:
+      - doc_id: wipo-gii-2026-australia
+        quote: Australia ranks highest in Human capital and research (9th), Institutions (12th) and Market sophistication (17th).
+  - id: aus-3
+    kind: paraphrase
+    question: Does Australia get as much innovation out as it puts in, according to WIPO?
+    gold:
+      - doc_id: wipo-gii-2026-australia
+        quote: Australia produces less innovation outputs relative to its level of innovation investments.
+        alt:
+          - doc_id: wipo-gii-2026-australia
+            quote: Australia performs worse in innovation outputs than innovation inputs in 2026.
+  - id: aus-4
+    kind: lookup
+    question: How do Australia's leading universities score in the Global Innovation Index?
+    gold:
+      - doc_id: wipo-gii-2026-australia
+        quote: was equal to an average score of 90.3 for the top three universities in 2025
+  - id: aus-5
+    kind: lookup
+    question: Where is Australia weakest in the Global Innovation Index 2026?
+    gold:
+      - doc_id: wipo-gii-2026-australia
+        quote: Australia ranks lowest in Infrastructure (29th), Knowledge and technology outputs, Creative outputs (26th) and Business sophistication (23rd).
+  # --- wipo-gii-2026 economy profiles (facts) -----------------------------------------------------------
+  - id: gii-p01
+    kind: lookup
+    question: How large are foreign direct investment inflows into Mongolia relative to its GDP, according to the Global Innovation Index?
+    gold:
+      - doc_id: wipo-gii-2026
+        page: 220
+        facts: ["FDI net inflows", "12.5"]
+  - id: gii-p02
+    kind: lookup
+    question: How does Colombia rank on market sophistication in the GII 2026?
+    gold:
+      - doc_id: wipo-gii-2026
+        page: 168
+        facts: ["Market sophistication", "34.6"]
+  - id: gii-p03
+    kind: lookup
+    question: What is Switzerland's score for human capital and research in the Global Innovation Index?
+    gold:
+      - doc_id: wipo-gii-2026
+        page: 258
+        facts: ["Human capital and research", "61.0"]
+  - id: gii-p04
+    kind: lookup
+    question: What labour productivity growth does the Global Innovation Index record for Madagascar?
+    gold:
+      - doc_id: wipo-gii-2026
+        page: 212
+        facts: ["Labor productivity growth", "0.8"]
+  - id: gii-p05
+    kind: lookup
+    question: How much electricity does Lao PDR generate per person, according to the GII 2026?
+    gold:
+      - doc_id: wipo-gii-2026
+        page: 206
+        facts: ["Electricity output", "6,673.2"]
+  - id: gii-p06
+    kind: lookup
+    question: How does Azerbaijan score on use of information and communication technology in the GII?
+    gold:
+      - doc_id: wipo-gii-2026
+        page: 145
+        facts: ["ICT use", "77.9"]
+  - id: gii-p07
+    kind: lookup
+    question: What share of people employed in the Netherlands are women with advanced degrees, according to the GII 2026?
+    gold:
+      - doc_id: wipo-gii-2026
+        page: 227
+        facts: ["Females employed", "24.4"]
+  - id: gii-p08
+    kind: lookup
+    question: Is human capital and research a weakness for Côte d'Ivoire in the Global Innovation Index?
+    gold:
+      - doc_id: wipo-gii-2026
+        page: 170
+        facts: ["Human capital and research", "12.4"]
+  - id: gii-p09
+    kind: lookup
+    question: How much does Algeria spend on research and development as a share of GDP, according to the GII 2026?
+    gold:
+      - doc_id: wipo-gii-2026
+        page: 139
+        facts: ["Gross expenditure on R", "0.4"]
+  - id: gii-p10
+    kind: lookup
+    question: What is Malawi's weighted average applied tariff rate in the Global Innovation Index data?
+    gold:
+      - doc_id: wipo-gii-2026
+        page: 213
+        facts: ["Applied tariff rate", "5.4"]
+  - id: gii-p11
+    kind: lookup
+    question: How much domestic credit goes to Serbia's private sector, as a share of GDP, in the GII 2026?
+    gold:
+      - doc_id: wipo-gii-2026
+        page: 250
+        facts: ["Domestic credit", "32.6"]
+  - id: gii-p12
+    kind: lookup
+    question: How does Latvia score on operational stability for businesses in the Global Innovation Index?
+    gold:
+      - doc_id: wipo-gii-2026
+        page: 207
+        facts: ["Operational stability", "80.3"]
+  - id: gii-p13
+    kind: lookup
+    question: What is Australia's score and rank for government effectiveness in the GII 2026?
+    gold:
+      - doc_id: wipo-gii-2026
+        page: 143
+        facts: ["Government effectiveness", "88.2"]
+        alt:
+          - doc_id: wipo-gii-2026-australia
+            facts: ["Government effectiveness", "88.2"]
+  # --- wipo-pct-2026 ------------------------------------------------------------------------------------
+  - id: pct-1
+    kind: trend
+    question: How many international patent applications were filed in 2025, and is the number still growing?
+    gold:
+      - doc_id: wipo-pct-2026
+        quote: About 275,900 international patent applications (PCT applications) were filed via WIPO's Patent Cooperation Treaty (PCT) in 2025
+  - id: pct-2
+    kind: trend
+    question: Which countries saw the biggest falls in international patent filings in 2025?
+    gold:
+      - doc_id: wipo-pct-2026
+        quote: while India (-32.4%), Israel (-7%) and Switzerland (-6.3%) registered the steepest declines
+  - id: pct-3
+    kind: lookup
+    question: Which large companies increased their international patent filings the fastest in 2025?
+    gold:
+      - doc_id: wipo-pct-2026
+        quote: LG Energy Solution (+34.8%), Panasonic (+21.9%) and LG Electronics (+15.2%) exhibited the fastest growth
+  - id: pct-4
+    kind: explain
+    question: What does a receiving office do in the international patent application process?
+    gold:
+      - doc_id: wipo-pct-2026
+        quote: ROs are responsible for receiving PCT applications, examining compliance with PCT formality requirements, receiving payment of fees
+  - id: pct-5
+    kind: lookup
+    question: Which patent offices still receive a sizeable share of international applications on paper?
+    gold:
+      - doc_id: wipo-pct-2026
+        quote: the Russian Federation (42.2%), France (16.3%) and Germany (6.9%) recorded relatively high shares of PCT applications filed on paper.
+  - id: pct-6
+    kind: lookup
+    question: How quickly do national offices pass international patent applications on to WIPO?
+    gold:
+      - doc_id: wipo-pct-2026
+        quote: ROs transmitted PCT applications to the IB within an average of 2.7 weeks after the international filing date
+  - id: pct-7
+    kind: lookup
+    question: Which patent offices produce the most international search reports?
+    gold:
+      - doc_id: wipo-pct-2026
+        quote: The EPO issued 81,819 ISRs and the office of China issued 69,143
+  - id: pct-8
+    kind: explain
+    question: How long does an applicant have to take an international patent application into the national phase?
+    gold:
+      - doc_id: wipo-pct-2026
+        quote: An entry must in general take place within 30 months from the priority date of the application

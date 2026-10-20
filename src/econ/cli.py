@@ -131,6 +131,20 @@ def eval_retrieval(
     )
 
 
+@app.command("eval-wipo")
+@loud
+def eval_wipo(grid: str = typer.Option("wipo-v1", help="Grid file under eval/grids/.")) -> None:
+    """How the WIPO documents enter the index: the variants of a committed grid (no API calls, D-033)."""
+    from econ.evalr.wipo import run_grid
+
+    with run("eval-wipo", _hash(), grid=grid) as r:
+        from econ.manifest import require_upstream
+
+        r.upstream["chunk"] = require_upstream("chunk")["run_id"]
+        choice = run_grid(r, grid)
+    typer.echo(f"eval-wipo: chosen {choice['chosen']}; one index: {choice['one_index']}")
+
+
 @app.command("eval-retrieval-v2")
 @loud
 def eval_retrieval_v2(
@@ -342,7 +356,7 @@ def index(
                 "authors": d.authors,
                 "url": d.url,
                 "note": d.note,
-                "publisher": config.sources().publisher,
+                "publisher": config.sources().publisher_of(d),
                 "licence": p.get("licence"),
                 "page_count": p["page_count"],
                 "pages": p["pages"],
