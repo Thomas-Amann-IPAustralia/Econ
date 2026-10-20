@@ -114,7 +114,8 @@ class ParseCfg(Strict):
     reocr_model: str | None = None  # the vision model for what no crop variant repairs (D-022); null: none
     threads: int = 4
     table_structure: bool = True
-    batch_pages: int | None = None  # parse longer documents in batches of this many pages (D-033)
+    batch_pages: int | None = None  # parse documents longer than this in page batches (D-033)
+    batch_size: int | None = None  # pages per batch; default batch_pages
 
 
 class ChunkStrategy(Strict):

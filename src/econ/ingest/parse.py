@@ -139,20 +139,25 @@ def _parse_one(args: tuple[str, str, bool, str]) -> tuple[str, dict]:
         # Each batch is cached as it finishes, so an interrupted run resumes where it stopped.
         from docling_core.types.doc import DoclingDocument
 
-        parts, statuses = [], set()
-        for a in range(1, pages + 1, batch):
-            b = min(a + batch - 1, pages)
-            part = Path(f"{cache_path}.pages-{a}-{b}")
-            if part.exists():
+        # A batch already cached from a run with another batch size is reused as it is.
+        size = config.pipeline().parse.batch_size or batch
+        parts, statuses, a = [], set(), 1
+        while a <= pages:
+            done = sorted(Path(cache_path).parent.glob(f"{Path(cache_path).name}.pages-{a}-*"))
+            if done:
+                part = done[0]
                 parts.append(DoclingDocument.model_validate(json.loads(part.read_text())))
                 statuses.add("cached")
+                a = int(part.name.rsplit("-", 1)[1]) + 1
                 continue
+            b = min(a + size - 1, pages)
             t0 = time.time()
             res = conv.convert(pdf_path, page_range=(a, b))
-            write_text_atomic(part, json.dumps(res.document.export_to_dict()))
+            write_text_atomic(Path(f"{cache_path}.pages-{a}-{b}"), json.dumps(res.document.export_to_dict()))
             parts.append(res.document)
             statuses.add(str(res.status))
             print(f"parsed {doc_id} pages {a}-{b} in {time.time() - t0:.1f}s", flush=True)
+            a = b + 1
         document = DoclingDocument.concatenate(parts)
         status = ",".join(sorted(statuses))
     else:

@@ -20,6 +20,7 @@ parse:
   threads: 2                    # per worker; `econ parse --workers 2` uses all 4 vCPUs
   table_structure: true
   batch_pages: 100              # longer documents parse in page batches (the 348-page GII ran out of memory whole, D-033)
+  batch_size: 25                # pages per batch, each cached as it finishes (container restarts lost whole batches)
 
 chunking:
   # Token counts use one reference tokenizer, so every embedder sees the same chunks. It is the
