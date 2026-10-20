@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.9e-05,
+ "data": {
+  "context": "In WIPO’s *PCT Yearly Review 2026: The International Patent System*, this passage explains the measure and data coverage for Figure B13 on the share of PCT national phase entries in total patent filings abroad. It covers the 20 leading origins by applications filed abroad in 2024; the share is PCT national phase entries initiated abroad divided by all patent applications filed abroad."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0115",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000138,
+  "input": 917,
+  "model": "gpt-6-luna",
+  "output": 92,
+  "reasoning": 0,
+  "seconds": 2.28
+ }
+}

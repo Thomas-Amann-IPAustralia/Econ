@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.0001,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, this statistical table reports plant variety protection data by country, including applications by office and origin, equivalent applications by origin, titles issued, and plant varieties in force. The excerpt gives figures for Portugal, the Republic of Korea, the Republic of Moldova, Romania, the Russian Federation, Saudi Arabia, Serbia, Singapore, Slovakia and Slovenia."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0438",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.0002,
+  "input": 1548,
+  "model": "gpt-6-luna",
+  "output": 91,
+  "reasoning": 0,
+  "seconds": 1.83
+ }
+}

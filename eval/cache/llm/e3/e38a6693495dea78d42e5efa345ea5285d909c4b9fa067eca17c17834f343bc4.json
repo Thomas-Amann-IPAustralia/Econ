@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.5e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, the regional profile for South East Asia, East Asia, and Oceania compares economies’ innovation rankings and R&D investment. It identifies regional leaders and reports worldwide rankings for R&D expenditure, corporate R&D spending, and private-sector financing of R&D."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0172",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00015,
+  "input": 1138,
+  "model": "gpt-6-luna",
+  "output": 73,
+  "reasoning": 0,
+  "seconds": 2.57
+ }
+}

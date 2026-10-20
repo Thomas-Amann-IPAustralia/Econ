@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.7e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, table B44, “Trademark applications by office and origin, 2024,” lists trademark application statistics for offices and origins, including countries from Nauru to Oman. The table distinguishes resident and non-resident applications and reports application totals and changes in registrations in force where data are available."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0296",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000193,
+  "input": 1514,
+  "model": "gpt-6-luna",
+  "output": 83,
+  "reasoning": 0,
+  "seconds": 2.51
+ }
+}

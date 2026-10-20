@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.4e-05,
+ "data": {
+  "context": "In WIPO’s *World Intangible Investment Highlights 2026*, the “Brands constitute a more-than-trillion-dollar investment category” section introduces brands as productive intangible assets and explains how they can support differentiation, value capture and price premiums. It identifies brands as the report’s 2026 special theme and points to Box 5 on their changing returns and risks in digital and AI contexts."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-intangibles-2026:0035",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000168,
+  "input": 1230,
+  "model": "gpt-6-luna",
+  "output": 90,
+  "reasoning": 0,
+  "seconds": 2.96
+ }
+}

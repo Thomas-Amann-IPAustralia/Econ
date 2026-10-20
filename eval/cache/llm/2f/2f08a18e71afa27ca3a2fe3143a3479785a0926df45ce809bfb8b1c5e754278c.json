@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.7e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, the “Aerospace and defense” box in the science and innovation investment section discusses corporate R&D spending by aerospace and defense firms from 2021 to 2025, then compares concentration in corporate R&D overall and across industries from 2015 to 2025, using the Herfindahl-Hirschman Index (HHI)."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0062",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000173,
+  "input": 1268,
+  "model": "gpt-6-luna",
+  "output": 93,
+  "reasoning": 0,
+  "seconds": 1.64
+ }
+}

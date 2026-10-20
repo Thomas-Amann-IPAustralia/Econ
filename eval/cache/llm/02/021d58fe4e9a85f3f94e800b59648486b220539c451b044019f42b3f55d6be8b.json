@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.2e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026* (2026), this passage in “Deep science firms vs. startups and spinouts since 2000” describes deep science startup and spinout counts across economies and regions, highlighting examples and growth from 2020 to 2025. It covers India, Australia, Singapore, Latin America and the Caribbean, Sub-Saharan Africa, Northern Africa and Western Asia, and compares China’s acceleration with the United Kingdom and United States."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0226",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000184,
+  "input": 1289,
+  "model": "gpt-6-luna",
+  "output": 110,
+  "reasoning": 0,
+  "seconds": 2.42
+ }
+}

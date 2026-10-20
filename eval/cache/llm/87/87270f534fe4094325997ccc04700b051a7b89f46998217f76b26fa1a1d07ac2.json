@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.002684,
+ "data": {
+  "misattributed_A": 0,
+  "misattributed_B": 0,
+  "reason": "Both answers accurately address the question using supported evidence from IP Australia reports. Answer B is slightly better as it clarifies the distinction between the date range in the study's title versus the reported finding period, and helpfully contrasts this historical macroeconomic causal finding with more recent firm-level correlation evidence.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v2:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "ipr25-3:ba",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.002684,
+  "input": 3093,
+  "model": "gemini-3.8-flash",
+  "output": 97,
+  "reasoning": 0,
+  "seconds": 2.27
+ }
+}

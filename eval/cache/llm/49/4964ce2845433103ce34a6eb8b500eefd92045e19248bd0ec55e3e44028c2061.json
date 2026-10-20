@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026* (2026), this passage describes WIPO becoming the GII’s sole publisher in 2021 and taking production in-house. It outlines the index’s worldwide coverage, 2026 ranking scope and indicator structure, and WIPO’s 2021–2025 agreement with the Portulans Institute."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1559",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000163,
+  "input": 1204,
+  "model": "gpt-6-luna",
+  "output": 85,
+  "reasoning": 0,
+  "seconds": 2.34
+ }
+}

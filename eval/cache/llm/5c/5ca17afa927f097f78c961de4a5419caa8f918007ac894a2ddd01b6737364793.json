@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000101,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, this passage is part of appendix table A27, on the distribution of technology fields among selected applicants based on patent families in 2020–2022. It reports the percentage distribution across technology fields for ten named applicants, including Canon, Huawei, Toyota, IBM and Samsung."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0077",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000202,
+  "input": 1624,
+  "model": "gpt-6-luna",
+  "output": 80,
+  "reasoning": 0,
+  "seconds": 1.82
+ }
+}

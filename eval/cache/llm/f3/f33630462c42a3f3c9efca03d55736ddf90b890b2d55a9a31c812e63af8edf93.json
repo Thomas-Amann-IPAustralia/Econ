@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.8e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, this Venezuela (Bolivarian Republic of) economy profile reports indicators for Business sophistication and Knowledge and technology outputs. The passage covers knowledge absorption, including intellectual property payments, imports, FDI and research talent, and knowledge creation, including patents and scientific publications."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1520",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000177,
+  "input": 1398,
+  "model": "gpt-6-luna",
+  "output": 75,
+  "reasoning": 0,
+  "seconds": 2.42
+ }
+}

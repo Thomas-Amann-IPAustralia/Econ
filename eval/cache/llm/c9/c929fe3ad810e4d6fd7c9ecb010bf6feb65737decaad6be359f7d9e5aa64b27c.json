@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.6e-05,
+ "data": {
+  "context": "In WIPO’s *PCT Yearly Review 2026*, section C2 on PCT application filing media compares filing methods in 2015 and 2025. The note identifies PDF, EFS-WEB and XML as fully electronic media and says PCT-EASY filing ended in July 2015."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0148",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000192,
+  "input": 1055,
+  "model": "gpt-6-luna",
+  "output": 174,
+  "reasoning": 94,
+  "seconds": 4.19
+ }
+}

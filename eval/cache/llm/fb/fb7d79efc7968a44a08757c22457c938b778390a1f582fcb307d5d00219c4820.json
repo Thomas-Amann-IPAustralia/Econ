@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5.3e-05,
+ "data": {
+  "context": "This is the title of WIPO’s *World Intellectual Property Indicators 2025*, the annual publication on worldwide intellectual property filing and registration statistics, including patents, trademarks and industrial designs."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0000",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000106,
+  "input": 815,
+  "model": "gpt-6-luna",
+  "output": 49,
+  "reasoning": 0,
+  "seconds": 1.52
+ }
+}

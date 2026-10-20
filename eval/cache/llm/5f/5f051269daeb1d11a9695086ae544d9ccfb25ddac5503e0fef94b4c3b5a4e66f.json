@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.1e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, Step 4 of the GII methodology review describes qualitative checks of indicator grouping, weighting and aggregation, including internal WIPO and partner reviews, an audit, and an external review. The source cited is the European Commission’s Joint Research Centre (2026)."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1584",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000161,
+  "input": 869,
+  "model": "gpt-6-luna",
+  "output": 148,
+  "reasoning": 70,
+  "seconds": 3.4
+ }
+}

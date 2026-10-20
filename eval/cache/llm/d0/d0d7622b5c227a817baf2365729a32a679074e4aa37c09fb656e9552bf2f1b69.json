@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, in Portugal’s economy profile, this passage reports Portugal’s scores and ranks for market sophistication—covering trade, diversification and market scale—and business sophistication, including knowledge workers and business research and development."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1230",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000158,
+  "input": 1273,
+  "model": "gpt-6-luna",
+  "output": 62,
+  "reasoning": 0,
+  "seconds": 1.78
+ }
+}

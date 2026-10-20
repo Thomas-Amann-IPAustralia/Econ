@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.8e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, section B44 presents trademark application statistics by office and origin for 2024. The table lists applications for offices and countries, including resident and non-resident applications and other trademark indicators."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0284",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000176,
+  "input": 1449,
+  "model": "gpt-6-luna",
+  "output": 62,
+  "reasoning": 0,
+  "seconds": 2.19
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.4e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, the Czech Republic economy profile reports the country’s pillar 7 Creative outputs results, including scores and ranks for creative goods and services and online creativity indicators. The indicators cover film, entertainment and media, creative goods exports, top-level domains, GitHub commits and mobile app creation."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0627",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000168,
+  "input": 1293,
+  "model": "gpt-6-luna",
+  "output": 78,
+  "reasoning": 0,
+  "seconds": 8.87
+ }
+}

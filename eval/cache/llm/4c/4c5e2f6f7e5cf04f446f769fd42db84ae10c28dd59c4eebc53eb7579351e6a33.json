@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.8e-05,
+ "data": {
+  "context": "In WIPO’s *Madrid Yearly Review 2026*, the section on administration, revenue and fees discusses the shift to electronic submission of Madrid applications to the International Bureau, from 1998 to 2025. Figure C1 compares the share submitted electronically, including 2011 and 2025."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0112",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000177,
+  "input": 1003,
+  "model": "gpt-6-luna",
+  "output": 153,
+  "reasoning": 77,
+  "seconds": 2.66
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.003098,
+ "data": {
+  "misattributed_A": 0,
+  "misattributed_B": 0,
+  "reason": "Both answers directly and accurately answer the question using verified WIPO data. Answer B is slightly better as it includes an additional key indicator strength (citable documents H-index, 7th) and provides helpful context and caveats regarding the comparative rankings.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v2:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "aus-2:ab",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.003098,
+  "input": 3686,
+  "model": "gemini-3.8-flash",
+  "output": 89,
+  "reasoning": 0,
+  "seconds": 2.12
+ }
+}

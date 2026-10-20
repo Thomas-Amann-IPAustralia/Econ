@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.8e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, the Europe section describes Austria’s and Italy’s innovation performance and Europe’s challenge of translating research, institutions, industry and clusters into fast-growing firms, scaleup finance, commercialized technologies and productivity growth. It also refers to the Letta report’s proposal for a stronger Single Market and a “fifth freedom” for research and innovation."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0165",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000157,
+  "input": 1119,
+  "model": "gpt-6-luna",
+  "output": 90,
+  "reasoning": 0,
+  "seconds": 3.05
+ }
+}

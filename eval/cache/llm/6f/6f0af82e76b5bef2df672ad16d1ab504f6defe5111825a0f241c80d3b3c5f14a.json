@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, the Armenia economy profile reports country-level scores and rankings for business sophistication and its indicators, including knowledge workers and innovation linkages."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0344",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000159,
+  "input": 1335,
+  "model": "gpt-6-luna",
+  "output": 50,
+  "reasoning": 0,
+  "seconds": 2.18
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.8e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, Appendix IV, Table 2 continues the ranking of the world’s top innovation clusters. The passage lists ranks, economy codes, patent applications, scientific publications and venture-capital deals, their global shares, and rank changes for clusters including São Paulo, Moscow, Minneapolis, Qingdao, Pittsburgh, Chicago and Oxford."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1824",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000196,
+  "input": 1531,
+  "model": "gpt-6-luna",
+  "output": 86,
+  "reasoning": 0,
+  "seconds": 2.13
+ }
+}

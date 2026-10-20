@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.6e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, the section “Technological progress: continued advances at a slower pace” reviews technology developments worldwide in 2025. It covers trends in supercomputing, frontier-chip transistor counts, battery and renewable-energy costs, genome sequencing and drug approvals."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0027",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000131,
+  "input": 959,
+  "model": "gpt-6-luna",
+  "output": 71,
+  "reasoning": 0,
+  "seconds": 2.89
+ }
+}

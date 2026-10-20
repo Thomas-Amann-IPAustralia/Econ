@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.5e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026* (2026), Sri Lanka’s economy profile reports indicators for market sophistication and business sophistication. This passage gives Sri Lanka’s scores and ranks for trade, diversification and market scale, followed by knowledge-worker indicators, including business-performed and business-financed research and development."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1365",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00017,
+  "input": 1314,
+  "model": "gpt-6-luna",
+  "output": 77,
+  "reasoning": 0,
+  "seconds": 1.46
+ }
+}

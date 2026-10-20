@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.8e-05,
+ "data": {
+  "context": "In WIPO’s *Madrid Yearly Review 2026*, this passage is from the section on the distribution of active Madrid international registrations per right holder in 2025. It identifies the top five Nice classes specified in active registrations, covering computers, electronics and software, business services, scientific and technological services, pharmaceuticals, and education, training, entertainment, sporting and cultural services."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0090",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000136,
+  "input": 922,
+  "model": "gpt-6-luna",
+  "output": 88,
+  "reasoning": 0,
+  "seconds": 2.32
+ }
+}

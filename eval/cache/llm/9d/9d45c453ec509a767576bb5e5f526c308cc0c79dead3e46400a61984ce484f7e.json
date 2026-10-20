@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.6e-05,
+ "data": {
+  "context": "WIPO’s Global Innovation Index 2026, in Ukraine’s economy profile and its Business sophistication pillar, reports Ukraine’s scores and ranks for innovation linkages and knowledge absorption. The indicators include university–industry collaboration, patent families, intellectual property payments, high-tech imports, and research talent in businesses."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1456",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000171,
+  "input": 1339,
+  "model": "gpt-6-luna",
+  "output": 74,
+  "reasoning": 0,
+  "seconds": 2.13
+ }
+}

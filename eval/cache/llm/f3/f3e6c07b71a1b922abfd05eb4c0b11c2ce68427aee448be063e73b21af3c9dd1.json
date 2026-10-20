@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, the section “What do regional patterns tell us about the geography of innovation?” compares regional averages across the seven GII pillars. It describes 2026 innovation inputs and outputs and the strengths and gaps of regions including Northern America, Europe, Central and Southern Asia, Latin America and the Caribbean, and Sub-Saharan Africa."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0160",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00016,
+  "input": 1168,
+  "model": "gpt-6-luna",
+  "output": 87,
+  "reasoning": 0,
+  "seconds": 2.75
+ }
+}

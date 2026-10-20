@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.8e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, this Saudi Arabia economy profile reports the country’s knowledge and technology outputs pillar and its knowledge creation and knowledge impact indicators, including scores, ranks, and selected measures."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1295",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000157,
+  "input": 1297,
+  "model": "gpt-6-luna",
+  "output": 55,
+  "reasoning": 0,
+  "seconds": 2.11
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.7e-05,
+ "data": {
+  "context": "This passage is from WIPO’s *PCT Yearly Review 2026: The International Patent System*, in the statistics on the international phase of PCT applications, under the topic of women inventors. It reports women’s share of inventors named in PCT applications in 2025, trends since 2011, and regional and origin differences."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0014",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000174,
+  "input": 1322,
+  "model": "gpt-6-luna",
+  "output": 84,
+  "reasoning": 0,
+  "seconds": 2.13
+ }
+}

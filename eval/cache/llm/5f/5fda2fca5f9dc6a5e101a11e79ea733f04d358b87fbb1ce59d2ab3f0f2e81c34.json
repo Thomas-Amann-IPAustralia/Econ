@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "World Intellectual Property Organization (WIPO), Global Innovation Index 2026, Mexico economy profile: indicators for market and business sophistication, including trade, investment, knowledge workers and business R&D. The figures report Mexico’s scores and rankings in the 2026 GII."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1033",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000163,
+  "input": 1286,
+  "model": "gpt-6-luna",
+  "output": 68,
+  "reasoning": 0,
+  "seconds": 1.94
+ }
+}

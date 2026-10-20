@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.7e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, this indicator in the Business sophistication section covers intellectual property payments as a share of total trade. It draws on WTO commercial-services and WTO-OECD BaTiS data for 2020–2024; the preceding text describes receipts for use of proprietary rights and licenses relating to intellectual property."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1749",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000134,
+  "input": 940,
+  "model": "gpt-6-luna",
+  "output": 81,
+  "reasoning": 0,
+  "seconds": 2.35
+ }
+}

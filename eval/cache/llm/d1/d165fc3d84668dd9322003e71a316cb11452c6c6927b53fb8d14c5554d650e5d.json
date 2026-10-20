@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.8e-05,
+ "data": {
+  "context": "This passage is from WIPO’s Global Innovation Index 2026, in Mali’s economy profile, and reports Mali’s scores and ranks for human capital and research and infrastructure indicators. It covers research and development, ICT, general infrastructure, and related measures, including data marked as outdated."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0995",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000176,
+  "input": 1407,
+  "model": "gpt-6-luna",
+  "output": 71,
+  "reasoning": 0,
+  "seconds": 1.83
+ }
+}

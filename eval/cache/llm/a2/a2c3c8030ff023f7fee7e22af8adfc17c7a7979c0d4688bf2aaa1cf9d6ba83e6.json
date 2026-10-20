@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.5e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, Appendix IV, Table 2 lists global innovation clusters ranked 26–31. It compares Amsterdam-Rotterdam, Delhi, Munich, Nagoya, Stockholm and Berlin by PCT applications, scientific publications and venture capital deals, including their shares of global totals and changes from the previous rank."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1796",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000189,
+  "input": 1480,
+  "model": "gpt-6-luna",
+  "output": 81,
+  "reasoning": 0,
+  "seconds": 2.35
+ }
+}

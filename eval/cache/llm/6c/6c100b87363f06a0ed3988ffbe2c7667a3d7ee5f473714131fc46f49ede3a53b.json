@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.4e-05,
+ "data": {
+  "context": "In WIPO’s *Australia ranking in the Global Innovation Index 2026*, this section compares Australia’s rankings across the GII’s seven areas and introduces its indicator strengths and weaknesses. It identifies Human capital and research, Institutions, and Market sophistication as Australia’s highest-ranked areas, and Infrastructure, Knowledge and technology outputs, Creative outputs, and Business sophistication as its lowest."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026-australia:0007",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000149,
+  "input": 1059,
+  "model": "gpt-6-luna",
+  "output": 86,
+  "reasoning": 0,
+  "seconds": 2.27
+ }
+}

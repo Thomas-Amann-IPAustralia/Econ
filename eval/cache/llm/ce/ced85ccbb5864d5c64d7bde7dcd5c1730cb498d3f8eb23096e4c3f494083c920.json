@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.3e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, in the section “Obstacles to scaling deep science ventures,” this passage discusses demand uncertainty and other barriers to scaling deep science startups, including difficulty securing early customers, regulatory delays and short-term funding incentives. It leads into a discussion of deep science entrepreneurship, particularly in developing economies."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0264",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000146,
+  "input": 1069,
+  "model": "gpt-6-luna",
+  "output": 79,
+  "reasoning": 0,
+  "seconds": 1.3
+ }
+}

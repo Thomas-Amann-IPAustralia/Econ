@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000102,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, Appendix II Table 5 reports worldwide GII 2026 rankings and 90 percent confidence intervals for the overall index and its input and output sub-indices. This passage gives the entries for India, Poland, Ireland, North Macedonia, Australia, Kuwait, Norway, Belgium, South Africa, Luxembourg, Bahrain, New Zealand and Mexico."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1650",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000204,
+  "input": 1575,
+  "model": "gpt-6-luna",
+  "output": 92,
+  "reasoning": 0,
+  "seconds": 2.45
+ }
+}

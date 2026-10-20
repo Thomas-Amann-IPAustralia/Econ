@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.9e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, the glossary entry for the Hague System explains how the international industrial design registration system allows applicants to register designs in multiple jurisdictions and manage registrations through WIPO’s International Bureau."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0494",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000178,
+  "input": 1045,
+  "model": "gpt-6-luna",
+  "output": 147,
+  "reasoning": 85,
+  "seconds": 2.45
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.008031,
+ "data": {
+  "misattributed_A": 0,
+  "misattributed_B": 0,
+  "reason": "Both answers are very well executed, strictly grounded in their quotes, and accurately distinguish between WIPO and IP Australia findings. Answer B is slightly better because it includes specific indicator data on Infrastructure from WIPO before noting the lack of IP Australia research on it, and its IP Australia research cited under Creative outputs (design workforce and registration growth lagging international peers) connects more directly to the weakness in the GII indicator.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v2:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "both-5:ab",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.008031,
+  "input": 10103,
+  "model": "gemini-3.8-flash",
+  "output": 121,
+  "reasoning": 0,
+  "seconds": 2.37
+ }
+}

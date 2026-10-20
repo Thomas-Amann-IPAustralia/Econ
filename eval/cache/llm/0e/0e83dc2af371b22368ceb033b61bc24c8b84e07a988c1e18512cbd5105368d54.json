@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000115,
+ "data": {
+  "context": "In WIPO’s *Australia ranking in the Global Innovation Index 2026*, this passage is in the Australia innovation-inputs section, under expenditure on education. It reports indicator values, year-on-year changes and ranks for Australia, including education expenditure and other innovation indicators."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026-australia:0011",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000229,
+  "input": 1250,
+  "model": "gpt-6-luna",
+  "output": 209,
+  "reasoning": 139,
+  "seconds": 3.42
+ }
+}

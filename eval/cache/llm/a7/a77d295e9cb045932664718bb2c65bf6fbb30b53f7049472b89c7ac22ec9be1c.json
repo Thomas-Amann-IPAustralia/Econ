@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.6e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, the special theme section “Deep science firms vs. startups and spinouts since 2000” describes global deep science startup funding and sector trends, especially the shift in new startups from Life Sciences toward Semiconductors and Robotics and Autonomous Systems. It also compares Life Sciences and Medical Devices and Digital Health startups initiated between 2015 and 2025, with examples from several countries."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0229",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000172,
+  "input": 1228,
+  "model": "gpt-6-luna",
+  "output": 99,
+  "reasoning": 0,
+  "seconds": 2.9
+ }
+}

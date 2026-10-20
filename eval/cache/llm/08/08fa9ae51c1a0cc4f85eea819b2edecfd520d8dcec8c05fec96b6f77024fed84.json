@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.7e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, appendix table A63 reports 2024 utility model applications and grants by office and origin, with applications and grants divided into resident and non-resident categories. The listed offices include Afghanistan, Greece, Guatemala, Honduras, Hungary, India, Indonesia, Iran, Iraq, Ireland, Israel and Italy."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0179",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000193,
+  "input": 1509,
+  "model": "gpt-6-luna",
+  "output": 84,
+  "reasoning": 0,
+  "seconds": 2.11
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.4e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, section 7.3.3 on online creativity, this indicator covers worldwide mobile app downloads in 2025, averaged over two years and scaled by purchasing-power-parity GDP. Downloads are attributed by the developer firm’s headquarters; China’s Google Play data are unavailable and treated as missing."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1779",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000148,
+  "input": 1071,
+  "model": "gpt-6-luna",
+  "output": 82,
+  "reasoning": 0,
+  "seconds": 2.86
+ }
+}

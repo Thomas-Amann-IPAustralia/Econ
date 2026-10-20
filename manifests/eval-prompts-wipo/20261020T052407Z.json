@@ -1,0 +1,84 @@
+{
+  "argv": [
+    "eval-prompts-wipo",
+    "--confirm"
+  ],
+  "command": "eval-prompts-wipo",
+  "config_hash": "96ee13fa9882a0b3",
+  "counts": {},
+  "error": {
+    "cause": "gemini spend $2.6157 + reserve $0.0203 would exceed the cap $2.59 of the $2.70 budget",
+    "item": "gemini",
+    "report": "eval/spend/ledger.jsonl"
+  },
+  "git": {
+    "commit": "af6d22885bc8f0dc756c61f775c62180c3509ff4",
+    "dirty": true,
+    "dirty_paths": [
+      "config/pipeline.yaml",
+      "eval/spend/ledger.jsonl",
+      "eval/cache/llm/00/0001c45248b44c15ab9727aabf976f81f748850aa1f3c46c212173c8356307b9.json",
+      "eval/cache/llm/00/0028ae86cf5a0b56fbcdacfdd3e0d51ac4673aa1b1059da91c910ebc3d3cf260.json",
+      "eval/cache/llm/00/0032ee6ae664cb7eff931c7dce1fa9653206ef61521f5b059868344e2da5a2b8.json",
+      "eval/cache/llm/00/0038616da0034f0578e209ed8edf368fca000854a495d8a556babd27485d268e.json",
+      "eval/cache/llm/00/007a94c4602fd00484255d502ffa5cf1473a78cbb75fa836066b23b98fb2e2ae.json",
+      "eval/cache/llm/00/00c8b8f3d26093ee373c174e12925f4189eebccf74402bf626991f6ecbba69bb.json",
+      "eval/cache/llm/00/00dfb77d2b50e9fb910f2f86aa0c85c6001052969f7a29cf1c50dfff24dfc6cb.json",
+      "eval/cache/llm/00/00f301db5f76ea6a8886db32f8577a470747550b8f5f89e2b0950d8ec097a31d.json",
+      "eval/cache/llm/00/00f8a6a34adc18f4cd03f8ba2f93e0222517287e90f9ad48426a00d77f697554.json",
+      "eval/cache/llm/00/00fcbe2dac1706920ddfa085ffbb011d7ef5cd688df3e6a9124f4550f48a0ae1.json",
+      "eval/cache/llm/01/010cc04f1f09333f46163a233031d639bf3c5f4041aa23f5f548f02da522dc54.json",
+      "eval/cache/llm/01/011fdd0060f9354a43ddc19f8f6957862ca543eef5b0bd452ab009a9cfe7c9b1.json",
+      "eval/cache/llm/01/0122bcd679f1264bb6a89e06761758ed8ba65e6f34a032d5ed67106e00a8040e.json",
+      "eval/cache/llm/01/0131df4f864c7b04f5a0422495895686661ae745e1bb8650b5849e0fa249e617.json",
+      "eval/cache/llm/01/0136860e4c23572b21ab844d3b7fd68f61bd622b90253c310fa9dc645a57c9a4.json",
+      "eval/cache/llm/01/013bd4f154bf1239158cd14b1efa204dfe4f3eb81ee627515788290a4ad103a6.json",
+      "eval/cache/llm/01/014953412745eb784177a392684fc2656c31436622330944b95bafe258f53655.json",
+      "eval/cache/llm/01/01d4c66e4381939e5eea34fd504bc8be017a1f594a7f68b3ceda56ce90183840.json"
+    ]
+  },
+  "git_at_end": {
+    "commit": "af6d22885bc8f0dc756c61f775c62180c3509ff4",
+    "dirty": true,
+    "dirty_paths": [
+      "config/pipeline.yaml",
+      "eval/spend/ledger.jsonl",
+      "eval/cache/llm/00/0001c45248b44c15ab9727aabf976f81f748850aa1f3c46c212173c8356307b9.json",
+      "eval/cache/llm/00/0028ae86cf5a0b56fbcdacfdd3e0d51ac4673aa1b1059da91c910ebc3d3cf260.json",
+      "eval/cache/llm/00/0032ee6ae664cb7eff931c7dce1fa9653206ef61521f5b059868344e2da5a2b8.json",
+      "eval/cache/llm/00/0038616da0034f0578e209ed8edf368fca000854a495d8a556babd27485d268e.json",
+      "eval/cache/llm/00/007a94c4602fd00484255d502ffa5cf1473a78cbb75fa836066b23b98fb2e2ae.json",
+      "eval/cache/llm/00/00c8b8f3d26093ee373c174e12925f4189eebccf74402bf626991f6ecbba69bb.json",
+      "eval/cache/llm/00/00dfb77d2b50e9fb910f2f86aa0c85c6001052969f7a29cf1c50dfff24dfc6cb.json",
+      "eval/cache/llm/00/00f301db5f76ea6a8886db32f8577a470747550b8f5f89e2b0950d8ec097a31d.json",
+      "eval/cache/llm/00/00f8a6a34adc18f4cd03f8ba2f93e0222517287e90f9ad48426a00d77f697554.json",
+      "eval/cache/llm/00/00fcbe2dac1706920ddfa085ffbb011d7ef5cd688df3e6a9124f4550f48a0ae1.json",
+      "eval/cache/llm/01/010cc04f1f09333f46163a233031d639bf3c5f4041aa23f5f548f02da522dc54.json",
+      "eval/cache/llm/01/011fdd0060f9354a43ddc19f8f6957862ca543eef5b0bd452ab009a9cfe7c9b1.json",
+      "eval/cache/llm/01/0122bcd679f1264bb6a89e06761758ed8ba65e6f34a032d5ed67106e00a8040e.json",
+      "eval/cache/llm/01/0131df4f864c7b04f5a0422495895686661ae745e1bb8650b5849e0fa249e617.json",
+      "eval/cache/llm/01/0136860e4c23572b21ab844d3b7fd68f61bd622b90253c310fa9dc645a57c9a4.json",
+      "eval/cache/llm/01/013bd4f154bf1239158cd14b1efa204dfe4f3eb81ee627515788290a4ad103a6.json",
+      "eval/cache/llm/01/014953412745eb784177a392684fc2656c31436622330944b95bafe258f53655.json",
+      "eval/cache/llm/01/01d4c66e4381939e5eea34fd504bc8be017a1f594a7f68b3ceda56ce90183840.json"
+    ]
+  },
+  "inputs": {},
+  "outputs": {},
+  "params": {},
+  "run_id": "20261020T052407Z",
+  "seconds": 680.1,
+  "status": "failed",
+  "upstream": {},
+  "versions": {
+    "docling": "2.140.0",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.0",
+    "pypdfium2": "5.14.0",
+    "python": "3.12.3",
+    "sentence-transformers": "6.1.0",
+    "tokenizers": "0.23.3",
+    "torch": "2.14.1+cpu"
+  },
+  "warnings": []
+}

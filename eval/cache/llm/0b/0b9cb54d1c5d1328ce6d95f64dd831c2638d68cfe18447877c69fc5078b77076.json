@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.4e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026* (2026), in the special theme on science-powered entrepreneurship, this passage describes obstacles to scaling deep science ventures, including financing gaps between research and proof of concept and between pilot projects and commercial deployment. It concerns the long development timelines and challenges founders face in securing investment."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0260",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000148,
+  "input": 1090,
+  "model": "gpt-6-luna",
+  "output": 78,
+  "reasoning": 0,
+  "seconds": 2.27
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.3e-05,
+ "data": {
+  "context": "In WIPO’s *Madrid Yearly Review 2026*, in the section “Advantages offered by the Madrid System,” this passage explains how the Madrid System reduces the workload of IP offices: the International Bureau handles formal examination, while offices in designated members assess whether the mark can be protected in their territories."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0142",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000126,
+  "input": 892,
+  "model": "gpt-6-luna",
+  "output": 73,
+  "reasoning": 0,
+  "seconds": 2.24
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.6e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, the El Salvador economy profile reports indicators for knowledge diffusion under pillar 6, Knowledge and technology outputs, and intangible assets under pillar 7, Creative outputs. It gives El Salvador’s scores and ranks for IP receipts, exports, trademarks, and industrial designs, among other measures."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0679",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000171,
+  "input": 1315,
+  "model": "gpt-6-luna",
+  "output": 79,
+  "reasoning": 0,
+  "seconds": 2.37
+ }
+}

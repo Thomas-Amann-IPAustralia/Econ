@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.6e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, the United Republic of Tanzania economy profile reports pillar 6 knowledge and technology outputs, including knowledge diffusion indicators such as intellectual property receipts, exports and quality certifications, followed by pillar 7 creative outputs and intangible assets. The figures give Tanzania’s scores, ranks and selected data-status notes."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1485",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000171,
+  "input": 1320,
+  "model": "gpt-6-luna",
+  "output": 79,
+  "reasoning": 0,
+  "seconds": 2.3
+ }
+}

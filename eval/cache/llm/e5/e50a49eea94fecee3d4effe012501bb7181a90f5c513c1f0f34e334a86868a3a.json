@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.6e-05,
+ "data": {
+  "context": "In WIPO’s *PCT Yearly Review 2026*, this passage covers the International Bureau’s processing costs for published PCT applications. Figure C11 defines unit cost as the average total cost of publishing an application, including direct and allocated support costs, divided by the number of applications published; it reports the 2016–2025 trend."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0155",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000151,
+  "input": 1092,
+  "model": "gpt-6-luna",
+  "output": 83,
+  "reasoning": 0,
+  "seconds": 1.63
+ }
+}

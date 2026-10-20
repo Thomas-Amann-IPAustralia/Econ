@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.4e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, the “Matching deep science startups to global patent data” section explains limitations in matching venture-capital-backed deep science startups and spinouts to patent records. It covers publication lags, inconsistent firm names, non-patent IP protection, and the sampled non-deep-science comparator."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1872",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000149,
+  "input": 1083,
+  "model": "gpt-6-luna",
+  "output": 81,
+  "reasoning": 0,
+  "seconds": 2.28
+ }
+}

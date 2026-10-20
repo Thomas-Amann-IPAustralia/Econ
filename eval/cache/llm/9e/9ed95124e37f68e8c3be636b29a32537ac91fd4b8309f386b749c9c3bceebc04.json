@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.8e-05,
+ "data": {
+  "context": "In WIPO’s *World Intangible Investment Highlights 2026*, Stylized Trend 1 compares intangible and tangible investment growth. It reports real growth from 2008 to 2025 and indexed investment trends for economies covered by the WIPO-LBS Global INTAN-Invest Database, whose country coverage varies by year."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-intangibles-2026:0001",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000176,
+  "input": 1361,
+  "model": "gpt-6-luna",
+  "output": 79,
+  "reasoning": 0,
+  "seconds": 2.59
+ }
+}

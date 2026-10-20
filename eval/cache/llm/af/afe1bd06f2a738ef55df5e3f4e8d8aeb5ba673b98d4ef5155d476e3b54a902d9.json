@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.4e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, section C37, “Design applications by office and origin, 2024,” this table reports industrial design application counts by office and origin for 2024, including totals, resident and non-resident applications, annual change, and equivalent design counts for countries and regional offices."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0372",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000188,
+  "input": 1472,
+  "model": "gpt-6-luna",
+  "output": 82,
+  "reasoning": 0,
+  "seconds": 2.36
+ }
+}

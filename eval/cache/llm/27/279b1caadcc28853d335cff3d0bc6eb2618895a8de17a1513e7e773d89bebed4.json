@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.8e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, the section “Sectoral patterns reveal where IP architecture defines commercialization pathways” examines patenting by deep science startup sector worldwide. It describes differences in patent intensity and international patent family growth, including the lower patent intensity of space, robotics and agritech ventures and the methods they may use to protect or commercialize innovations."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0279",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000157,
+  "input": 1141,
+  "model": "gpt-6-luna",
+  "output": 86,
+  "reasoning": 0,
+  "seconds": 2.64
+ }
+}

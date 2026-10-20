@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000105,
+ "data": {
+  "context": "In WIPO’s *PCT Yearly Review 2026: The International Patent System*, this table lists PCT application clusters ranked by applications filed in 2021–2025, with each cluster’s origin, share of worldwide applications, and change in rank and volume from 2020–2024. This excerpt covers ranks 24–35, including clusters in the UK, China, the US, Israel, Germany, Singapore/Malaysia, Sweden and India."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0077",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000209,
+  "input": 1551,
+  "model": "gpt-6-luna",
+  "output": 108,
+  "reasoning": 0,
+  "seconds": 2.92
+ }
+}

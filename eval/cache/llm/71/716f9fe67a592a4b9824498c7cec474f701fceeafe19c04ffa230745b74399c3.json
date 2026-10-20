@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.4e-05,
+ "data": {
+  "context": "In WIPO’s *PCT Yearly Review 2026: The International Patent System*, this table in the section on PCT-Patent Prosecution Highway pilots reports pilot usage by office of later and earlier examination. It gives totals for the offices shown, based on Japan Patent Office data from March 2026, and notes that data for some later-examination offices, including Germany, are unavailable."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0175",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000168,
+  "input": 1213,
+  "model": "gpt-6-luna",
+  "output": 93,
+  "reasoning": 0,
+  "seconds": 2.25
+ }
+}

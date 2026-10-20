@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.9e-05,
+ "data": {
+  "context": "WIPO’s *Australia ranking in the Global Innovation Index 2026* discusses the GII 2026 special theme, deep science entrepreneurship in Australia. It introduces tables identifying the economy’s most valuable venture-capital-backed deep science firms and, separately, firms originating in university or public research, using the Dealroom-WIPO Deep Science Startup Tracker."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026-australia:0021",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000138,
+  "input": 968,
+  "model": "gpt-6-luna",
+  "output": 82,
+  "reasoning": 0,
+  "seconds": 2.59
+ }
+}

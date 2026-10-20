@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.6e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, this passage from the regional distribution of innovation clusters section summarizes how the world’s top 100 innovation clusters are distributed across UN regions, based on WIPO Statistics Database data from June 2026. It also points to maps showing selected regions in greater detail."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0201",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000131,
+  "input": 940,
+  "model": "gpt-6-luna",
+  "output": 75,
+  "reasoning": 0,
+  "seconds": 2.71
+ }
+}

@@ -18,12 +18,12 @@ with the answer's prose streamed while it is written (D-024), then answer-v4 (no
 and answer-v5 (sentence citations written by code, D-026); the answer view draws cited prose in navy, lists
 claims in a tab, and exports the conversation as JSON (D-030 to D-032). The scanned reports' garbled OCR is repaired (D-022). Progress log: `docs/progress-rag-v2.md`.
 
-**WIPO documents (D-033): in the library, not yet served.** Six WIPO PDFs (759 pages: GII 2026, its
-Australia page, the PCT and Madrid yearly reviews 2026, World IP Indicators 2025, World Intangible Investment
-Highlights 2026) and the GII 2026 data file, in the bucket's `WIPO/` folder. Parsed and chunked (2,847
-passages); the GII's 139 economy profiles are written from the data file (`econ.ingest.gii`), since Docling
-drops their tables. The serving index waits for their context notes (paid), and the plan, filter and answer
-prompts still describe a corpus of IP Australia publications only.
+**WIPO documents (D-033, D-034): in the serving index.** Six WIPO PDFs (759 pages: GII 2026, its Australia
+page, the PCT and Madrid yearly reviews 2026, World IP Indicators 2025, World Intangible Investment
+Highlights 2026, all CC BY 4.0) and the GII 2026 data file, in the bucket's `WIPO/` folder: 2,847 passages
+with notes (enrich-v2); 30 documents, 4,744 passages in all. The GII's 139 economy profiles are written from
+the data file (`econ.ingest.gii`), since Docling drops their tables. Prompts for two publishers (plan-v4,
+filter-v2, answer-v6) are measured (D-034) and wait for the owner's adoption.
 
 The method is `docs/sop-agent-construction-v2.md` (the owner's SOP). Read `docs/decisions.md` (the
 decision log) and the latest `docs/handover-*.md` before acting.
@@ -77,7 +77,9 @@ decision log) and the latest `docs/handover-*.md` before acting.
 | Parse | `econ parse --workers 2` | raw PDFs (+ data files, D-033) | `library/elements/*.jsonl`, `library/parse.json` |
 | Chunk | `econ chunk` | elements | `library/chunks/<strategy>.jsonl` |
 | Measure | `econ eval-retrieval --stage chunking\|embedders\|fusion` | chunks, silver set | `eval/runs/`, `reports/retrieval-*.md` |
-| Measure (WIPO) | `econ eval-wipo` | chunks, Docling cache, wipo-v1 set | `eval/runs/wipo-v1/`, `reports/retrieval-wipo-v1.md` |
+| Measure (WIPO) | `econ eval-wipo [--grid wipo-v1b]` | chunks, Docling cache, wipo-v1 set | `eval/runs/wipo-v1*/`, `reports/retrieval-wipo-v1*.md` |
+| Notes (paid) | `econ enrich --name N --base B [--confirm]` | adopted chunks | `library/enrich/N.jsonl` |
+| Prompts A/B (paid) | `econ eval-prompts-wipo [--confirm]` | index, grid prompts-wipo-v1 | `eval/runs/answers/prompts-wipo-v1.*`, `reports/prompts-wipo-v1.md` |
 | Measure (judged) | `econ eval-retrieval-v2 --stage stage1\|stage2\|final` | cached plans, notes, reranker scores, judgments | `eval/runs/retrieval-v2/`, `reports/retrieval-v2-*.md` |
 | Top up (paid) | `econ judge-topup [--confirm]` | measured contexts, judgments | `eval/judgments/judged-v1.jsonl` |
 | Index | `econ index` | adopted chunks, context notes | `library/index/` |
@@ -94,7 +96,8 @@ decision log) and the latest `docs/handover-*.md` before acting.
 - **OCR repair** (D-022): the parse stage re-reads garbled elements of the two scanned reports from their own
   boxes (RapidOCR under crop variants, then gemini-3.8-flash), accepted only if cleaner and in agreement with
   the old text; `library/reocr.json` records every attempt. 55 of 62 repaired; 7 are names read correctly.
-- **Context notes** (D-013): each chunk's note (`library/enrich/S384-noprefix-nocite.luna-enrich-v1.jsonl`,
+- **Context notes** (D-013, D-034): each chunk's note (`library/enrich/S384-noprefix-nocite.luna-enrich-v2.jsonl`:
+  enrich-v1's notes for IP Australia passages, enrich-v2's for WIPO;
   one or two sentences saying where it sits and what its vague references mean) is put in front of its
   text for both lanes (`retrieval.enrichment`). Search only: never evidence, never sent to the answer
   model, hidden from every API view; highlights name only the passage's own terms. New documents need
@@ -178,7 +181,7 @@ Commit code, run, then commit outputs. Australian spelling, sentence-case headin
 - New high-severity sweep findings on real items: propose allowlist entries.
 - Spending money on model calls: ask before every paid call, however small (D-021), unless the owner has
   given a budget for the work at hand (D-022: up to $3 OpenAI and $2 Gemini; spent $0.06 and $0.26; D-024: up
-  to $0.50 OpenAI, spent $0.38; D-026: up to $0.75 OpenAI, spent $0.42).
+  to $0.50 OpenAI, spent $0.38; D-026: up to $0.75 OpenAI, spent $0.42; D-034: up to $1.50, spent $0.95).
 - Adopting a measured result outside the choices the owner delegated.
 - Changing the answer format, what the chatbot may refuse, or publishing anything new. The reports' text
   in `library/` and their PDFs on the Pages site are approved, with the acknowledgement in the README

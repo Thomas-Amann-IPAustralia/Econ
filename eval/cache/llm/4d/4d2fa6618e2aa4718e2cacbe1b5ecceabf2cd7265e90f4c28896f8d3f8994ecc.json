@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.0001,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, Appendix II, Table 5 presents worldwide rankings and 90 percent confidence intervals for the GII and its Input and Output Sub-Indices. This passage lists the ranks and intervals for Luxembourg, New Zealand, the United Arab Emirates, Iceland, Italy, Spain, Cyprus, Portugal, Malta, Lithuania and the Czech Republic."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1643",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.0002,
+  "input": 1565,
+  "model": "gpt-6-luna",
+  "output": 87,
+  "reasoning": 0,
+  "seconds": 2.3
+ }
+}

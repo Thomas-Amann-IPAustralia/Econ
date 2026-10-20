@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.5e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026* (2026), Hungary’s economy profile reports indicators for business sophistication, including knowledge workers and innovation linkages. It gives Hungary’s scores and ranks for these measures, with values for employment, business R&D, research collaboration, cluster development and patent families."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0783",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00017,
+  "input": 1324,
+  "model": "gpt-6-luna",
+  "output": 75,
+  "reasoning": 0,
+  "seconds": 1.98
+ }
+}

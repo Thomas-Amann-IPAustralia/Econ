@@ -1,0 +1,21 @@
+{
+ "cost_usd": 4.8e-05,
+ "data": {
+  "context": "WIPO’s *Global Innovation Index 2026*, titled “Powering entrepreneurs at the frontier of science,” introduces the report’s special theme on science-powered entrepreneurship."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0000",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 9.7e-05,
+  "input": 742,
+  "model": "gpt-6-luna",
+  "output": 45,
+  "reasoning": 0,
+  "seconds": 2.79
+ }
+}

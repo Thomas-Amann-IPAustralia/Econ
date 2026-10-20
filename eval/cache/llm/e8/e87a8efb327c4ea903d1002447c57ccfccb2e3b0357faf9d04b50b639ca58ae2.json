@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.4e-05,
+ "data": {
+  "context": "In WIPO’s *PCT Yearly Review 2026*, the section “Digital communication remained the main technology field in 2025” presents worldwide PCT application counts by technology field for 2021–2025, including each field’s 2025 share and change from 2024."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0057",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000188,
+  "input": 1519,
+  "model": "gpt-6-luna",
+  "output": 73,
+  "reasoning": 0,
+  "seconds": 2.09
+ }
+}

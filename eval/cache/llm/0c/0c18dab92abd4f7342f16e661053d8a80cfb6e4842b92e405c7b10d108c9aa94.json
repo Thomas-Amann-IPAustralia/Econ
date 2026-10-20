@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000108,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, in the section on patent applications by origin, this passage concerns growth in patent filings during 2024 among applicants residing in the top 20 origins, including Finland, India and Türkiye."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0021",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000217,
+  "input": 1285,
+  "model": "gpt-6-luna",
+  "output": 176,
+  "reasoning": 112,
+  "seconds": 2.95
+ }
+}

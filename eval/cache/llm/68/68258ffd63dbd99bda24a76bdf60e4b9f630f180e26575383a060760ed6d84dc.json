@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.5e-05,
+ "data": {
+  "context": "In WIPO’s *Madrid Yearly Review 2026*, the statistics on Madrid international applications, this passage reports the estimated number of trademark applications filed through the Madrid System in 2025 and its change from 2024."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0004",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00017,
+  "input": 952,
+  "model": "gpt-6-luna",
+  "output": 149,
+  "reasoning": 87,
+  "seconds": 3.89
+ }
+}

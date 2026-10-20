@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.8e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, this passage is in the Global Innovation Tracker’s “Labor productivity” topic. It explains Figure 14’s measures: output per employee in 2025 and the 2015–2025 compound annual growth rate of output per hour, using data from The Conference Board Total Economy Database."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0095",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000136,
+  "input": 956,
+  "model": "gpt-6-luna",
+  "output": 81,
+  "reasoning": 0,
+  "seconds": 2.51
+ }
+}

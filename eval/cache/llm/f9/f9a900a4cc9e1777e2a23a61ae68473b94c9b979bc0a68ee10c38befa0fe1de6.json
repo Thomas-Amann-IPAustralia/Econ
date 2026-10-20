@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000101,
+ "data": {
+  "context": "In WIPO’s PCT Yearly Review 2026, this passage is part of the analysis of top PCT applicants and compares foreign-oriented patent families and PCT-route use for leading applicants in 2017–2019 and 2020–2022. It lists applicants ranked 36–46 and the corresponding family counts and percentages."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0125",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000201,
+  "input": 1589,
+  "model": "gpt-6-luna",
+  "output": 84,
+  "reasoning": 0,
+  "seconds": 2.03
+ }
+}

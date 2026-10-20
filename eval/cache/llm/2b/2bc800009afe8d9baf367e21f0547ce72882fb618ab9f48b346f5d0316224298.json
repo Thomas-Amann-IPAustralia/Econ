@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "context": "In WIPO’s *PCT Yearly Review 2026*, this passage in the statistics on the international phase discusses National Phase Entries (NPEs) received at the USPTO and the origins of the applicants who initiated them in 2024. It describes Japan, the US and China’s shares at the USPTO and their combined shares across the top 20 offices, with Saudi Arabia and South Africa as exceptions."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0095",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000158,
+  "input": 1093,
+  "model": "gpt-6-luna",
+  "output": 97,
+  "reasoning": 0,
+  "seconds": 2.42
+ }
+}

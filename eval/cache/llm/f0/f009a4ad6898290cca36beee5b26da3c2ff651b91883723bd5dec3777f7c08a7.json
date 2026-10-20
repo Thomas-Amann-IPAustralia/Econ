@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026* (2026), this section covers sub-national innovation measurement and policy. It describes the worldwide GII innovation cluster ranking and a WIPO toolkit for developing regional, provincial or city-level metrics, including examples from Brazil, China, Colombia, the European Union, India and Viet Nam."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0112",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00014,
+  "input": 1002,
+  "model": "gpt-6-luna",
+  "output": 80,
+  "reasoning": 0,
+  "seconds": 2.9
+ }
+}

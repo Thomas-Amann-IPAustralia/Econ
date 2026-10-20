@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.00147,
+ "data": {
+  "misattributed_A": 0,
+  "misattributed_B": 0,
+  "reason": "Both answers directly and accurately answer the question using the same core evidence. Answer A is slightly better because it includes the important caveat that employer-provided training was excluded from the figures, providing a more precise context for the reported percentages.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v2:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "int-4:ba",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00147,
+  "input": 1590,
+  "model": "gemini-3.8-flash",
+  "output": 74,
+  "reasoning": 0,
+  "seconds": 2.35
+ }
+}

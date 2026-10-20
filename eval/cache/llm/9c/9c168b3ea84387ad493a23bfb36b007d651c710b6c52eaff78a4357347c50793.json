@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.4e-05,
+ "data": {
+  "context": "In WIPO’s *World Intangible Investment Highlights 2026*, Box 1, “Investment in intangible assets – a primer,” defines intangible assets and explains their importance to firms and the wider economy, with examples including electric cars and large language models. The note also clarifies that the USD 10 trillion aggregate uses 2025 data where available and the latest estimates for Brazil, Canada, India, Japan and the Philippines."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-intangibles-2026:0002",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000168,
+  "input": 1186,
+  "model": "gpt-6-luna",
+  "output": 98,
+  "reasoning": 0,
+  "seconds": 2.57
+ }
+}

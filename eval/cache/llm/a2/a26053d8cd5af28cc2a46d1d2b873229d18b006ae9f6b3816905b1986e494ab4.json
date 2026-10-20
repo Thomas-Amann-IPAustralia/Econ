@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.7e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026* (2026), under “Innovating innovation metrics,” this passage describes the GII iLens Innovation Data Lab’s 2025 and 2026 workshops and how their work uses new data sources and methods to improve innovation measurement."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0113",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000133,
+  "input": 967,
+  "model": "gpt-6-luna",
+  "output": 73,
+  "reasoning": 0,
+  "seconds": 1.18
+ }
+}

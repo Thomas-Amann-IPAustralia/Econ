@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000143,
+ "data": {
+  "context": "In WIPO’s *PCT Yearly Review 2026*, this passage concerns the use of the PCT route across patent offices and applicant origins. It states that applicants from Sweden and the UK used the PCT route for all patent applications filed at Indonesia’s office."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0118",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000287,
+  "input": 1545,
+  "model": "gpt-6-luna",
+  "output": 266,
+  "reasoning": 197,
+  "seconds": 5.8
+ }
+}

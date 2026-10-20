@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.8e-05,
+ "data": {
+  "context": "In WIPO’s *PCT Yearly Review 2026*, this note accompanies the section on how promptly the top 20 receiving offices transmitted PCT applications to the International Bureau in 2025. It defines timeliness as elapsed time from international filing to receipt, excludes applications transmitted under PCT Rule 19.4, and clarifies that the time categories do not correspond to PCT legal provisions."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0158",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000157,
+  "input": 1094,
+  "model": "gpt-6-luna",
+  "output": 96,
+  "reasoning": 0,
+  "seconds": 1.88
+ }
+}

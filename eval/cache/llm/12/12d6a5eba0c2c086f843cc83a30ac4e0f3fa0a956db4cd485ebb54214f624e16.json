@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.7e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, the Uruguay economy profile reports the country’s Knowledge and technology outputs scores and ranks, including indicators of knowledge creation and impact."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1502",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000154,
+  "input": 1301,
+  "model": "gpt-6-luna",
+  "output": 47,
+  "reasoning": 0,
+  "seconds": 1.45
+ }
+}

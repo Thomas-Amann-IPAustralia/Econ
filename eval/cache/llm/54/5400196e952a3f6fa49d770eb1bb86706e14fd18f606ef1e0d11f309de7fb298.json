@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.1e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, the Armenia economy profile reports Armenia’s scores and rankings for the Infrastructure pillar and its ICT, general infrastructure and ecological sustainability sub-pillars."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0342",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000162,
+  "input": 1370,
+  "model": "gpt-6-luna",
+  "output": 51,
+  "reasoning": 0,
+  "seconds": 2.01
+ }
+}

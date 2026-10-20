@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.2e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, this passage reports the leading innovation clusters in the global top 100 ranking. It names the top five clusters and notes that their positions were unchanged from the previous year."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0041",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000124,
+  "input": 960,
+  "model": "gpt-6-luna",
+  "output": 56,
+  "reasoning": 0,
+  "seconds": 1.42
+ }
+}

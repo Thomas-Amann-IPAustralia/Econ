@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.5e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026* (2026), Mexico’s economy profile reports indicators for pillar 6, Knowledge and technology outputs. It gives Mexico’s scores and ranks for knowledge creation and knowledge impact, including patenting, research publications, labor productivity, unicorn valuation, software spending and high-tech manufacturing."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1035",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00017,
+  "input": 1310,
+  "model": "gpt-6-luna",
+  "output": 78,
+  "reasoning": 0,
+  "seconds": 2.22
+ }
+}

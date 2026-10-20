@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.3e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, Appendix Box 1 on the GII’s origins, development and data infrastructure traces the index from its 2007 beginnings to WIPO’s current role as sole publisher. It describes the GII family, including worldwide innovation-trend analysis, economy rankings, the Top 100 Innovation Clusters ranking and biennial themes."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1556",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000147,
+  "input": 1029,
+  "model": "gpt-6-luna",
+  "output": 89,
+  "reasoning": 0,
+  "seconds": 2.47
+ }
+}

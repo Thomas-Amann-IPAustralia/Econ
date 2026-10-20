@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.7e-05,
+ "data": {
+  "context": "In WIPO’s PCT Yearly Review 2026, the glossary defines international search reports and authorities, inventions, national phase entry under the PCT, and non-resident patent applications for statistical purposes."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0191",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000153,
+  "input": 1261,
+  "model": "gpt-6-luna",
+  "output": 54,
+  "reasoning": 0,
+  "seconds": 1.66
+ }
+}

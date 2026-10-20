@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.8e-05,
+ "data": {
+  "context": "In WIPO’s *PCT Yearly Review 2026*, this statistical table reports PCT national-phase entries by country for 2023 and 2024, including the country rows shown here. "
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0132",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000176,
+  "input": 1492,
+  "model": "gpt-6-luna",
+  "output": 53,
+  "reasoning": 0,
+  "seconds": 1.69
+ }
+}

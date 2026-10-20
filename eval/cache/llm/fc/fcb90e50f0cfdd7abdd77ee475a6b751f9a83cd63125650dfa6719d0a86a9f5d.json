@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.6e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, the section “Obstacles to scaling deep science ventures” discusses talent and network constraints on science-based startups, including the expertise, researcher mobility, partnerships and support needed to translate research into ventures. It notes that these challenges affect fields such as AI, biotechnology, materials science and quantum computing."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0263",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000151,
+  "input": 1097,
+  "model": "gpt-6-luna",
+  "output": 83,
+  "reasoning": 0,
+  "seconds": 1.73
+ }
+}

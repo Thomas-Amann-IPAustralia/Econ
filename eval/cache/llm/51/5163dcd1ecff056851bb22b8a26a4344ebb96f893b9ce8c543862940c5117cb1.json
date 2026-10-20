@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.2e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, the special theme section on matching deep science startups to global patent data describes the source datasets. It explains that the Dealroom-WIPO startup tracker was matched with Patsnap patent records extracted in March 2026, covering applications and grants from more than 100 national and regional patent offices, including PCT applications."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1868",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000143,
+  "input": 994,
+  "model": "gpt-6-luna",
+  "output": 88,
+  "reasoning": 0,
+  "seconds": 2.33
+ }
+}

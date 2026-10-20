@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.4e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, this appendix table shows the distribution of technology fields among patent families of selected universities and public research organizations, including institutions in China, France, Germany, Japan, Korea and the United States, for 2020–2022."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0083",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000188,
+  "input": 1533,
+  "model": "gpt-6-luna",
+  "output": 70,
+  "reasoning": 0,
+  "seconds": 2.06
+ }
+}

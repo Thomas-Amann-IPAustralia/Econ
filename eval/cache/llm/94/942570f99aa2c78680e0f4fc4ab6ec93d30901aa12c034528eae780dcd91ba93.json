@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.3e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, the industrial designs section discusses resident design application intensity relative to GDP per capita during 2020–2024. It explains that China, Madagascar, Mongolia, Morocco, Türkiye and the Republic of Korea were above the fitted line, while Chile, Costa Rica, Uganda and the United Arab Emirates were below it."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0328",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000145,
+  "input": 1024,
+  "model": "gpt-6-luna",
+  "output": 86,
+  "reasoning": 0,
+  "seconds": 2.02
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.0001,
+ "data": {
+  "context": "In WIPO’s PCT Yearly Review 2026, this passage is in the international-phase statistics on PCT applications and compares women’s share of listed inventors across origins and technology fields. It reports that women accounted for about 42% of inventors on PCT applications from France-resident applicants in organic fine chemistry."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0070",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.0002,
+  "input": 1594,
+  "model": "gpt-6-luna",
+  "output": 81,
+  "reasoning": 0,
+  "seconds": 2.28
+ }
+}

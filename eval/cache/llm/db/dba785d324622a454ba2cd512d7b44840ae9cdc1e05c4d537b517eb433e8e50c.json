@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.8e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, Box 2 on policy priorities for deep science entrepreneurship ecosystems, this passage discusses maintaining competition and using evidence to track outcomes and improve policy, including learning across jurisdictions."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0294",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000157,
+  "input": 903,
+  "model": "gpt-6-luna",
+  "output": 134,
+  "reasoning": 76,
+  "seconds": 3.44
+ }
+}

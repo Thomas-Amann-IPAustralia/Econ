@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.7e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, the Honduras economy profile reports indicators for knowledge and technology outputs and creative outputs. This passage gives Honduras’s knowledge-diffusion measures, including intellectual property receipts, trade complexity, high-tech and ICT services exports, and ISO 9001 quality, followed by intangible-asset indicators such as trademarks and industrial designs."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0768",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000175,
+  "input": 1328,
+  "model": "gpt-6-luna",
+  "output": 84,
+  "reasoning": 0,
+  "seconds": 2.19
+ }
+}

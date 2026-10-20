@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.6e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, this section compares economies’ Innovation Output ranks with median ranks and 90 percent confidence intervals. The note describes 5,000 simulated scenarios varying weights, missing-value imputation and aggregation methods, and reports rank correlations with the 2026 GII, Innovation Input and Innovation Output rankings."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1638",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000191,
+  "input": 1037,
+  "model": "gpt-6-luna",
+  "output": 174,
+  "reasoning": 89,
+  "seconds": 4.3
+ }
+}

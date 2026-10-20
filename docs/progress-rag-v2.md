@@ -266,3 +266,13 @@ OpenAI), not run.
 - The library holds 2,847 WIPO passages; the serving index is unchanged. For the owner: notes (~US$0.21),
   prompt versions for a two-publisher corpus, publishing the PDFs. 138 tests pass. No spend.
 - Two failed sweep manifests were deleted by mistake before being committed (recorded in D-033).
+
+## 2026-10-20 — WIPO notes, the index with both publishers, prompts for two publishers (D-034)
+- The owner granted US$1.50. Notes for the 2,847 WIPO passages (enrich-v2, US$0.23); index rebuilt (30
+  documents, 4,744 passages). With notes, WIPO test ndcg@10 0.440 to 0.620; IP Australia level (+0.000).
+- plan-v4, filter-v2 and answer-v6 written and measured against the current prompts on 13 questions (US$0.59
+  answers, US$0.11 judge): both 13 of 13 pass, same gold reached, no misattributions; preferences 6 to 2 for
+  the new prompts (p = 0.29). Recommended to the owner; config unchanged until adopted.
+- Found: the filter can fill all 20 places from one half of a two-part question (Australian vs worldwide
+  patenting kept no WIPO passage under either prompt on a replay). Next to measure.
+- Site text, README and the printout's licence updated (the owner: all CC BY 4.0). Spend US$0.95 of US$1.50.

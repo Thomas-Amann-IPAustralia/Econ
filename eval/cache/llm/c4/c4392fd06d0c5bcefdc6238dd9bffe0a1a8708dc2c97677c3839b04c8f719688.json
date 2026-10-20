@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.8e-05,
+ "data": {
+  "context": "In WIPO’s *Madrid Yearly Review 2026*, in the section on Madrid international applications, this table ranks Madrid applicants and shows their origins and application counts for 2024 and 2025, alongside their 2023 origin information and change in ranking from 2024."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0027",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000197,
+  "input": 1057,
+  "model": "gpt-6-luna",
+  "output": 182,
+  "reasoning": 110,
+  "seconds": 3.0
+ }
+}

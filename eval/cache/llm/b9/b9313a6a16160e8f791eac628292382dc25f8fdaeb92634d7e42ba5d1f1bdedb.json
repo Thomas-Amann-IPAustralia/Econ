@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000107,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, this note accompanies the 2024 comparison of potentially pending industrial design applications at selected offices. It cautions that office data may not be fully comparable and notes missing data for China, Italy and Japan."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0363",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000214,
+  "input": 1087,
+  "model": "gpt-6-luna",
+  "output": 210,
+  "reasoning": 141,
+  "seconds": 4.94
+ }
+}

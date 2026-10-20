@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.3e-05,
+ "data": {
+  "context": "In WIPO’s *Madrid Yearly Review 2026* (2026), this section of the statistics on Madrid international registrations discusses trends in subsequent designations from 2011 to 2025. Subsequent designations are trademark holders’ requests to extend protection under existing Madrid registrations to new markets; the passage describes growth worldwide and year-to-year changes."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0063",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000147,
+  "input": 1045,
+  "model": "gpt-6-luna",
+  "output": 84,
+  "reasoning": 0,
+  "seconds": 2.18
+ }
+}

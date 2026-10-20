@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.000966,
+ "data": {
+  "misattributed_A": 0,
+  "misattributed_B": 0,
+  "reason": "Both answers directly, accurately, and concisely provide the requested figure supported by the cited source. Answer B is slightly more precise by explicitly attributing the report to WIPO, but both answers are virtually identical in substance and quality.",
+  "winner": "tie"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v2:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "gii-p09:ab",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000966,
+  "input": 928,
+  "model": "gemini-3.8-flash",
+  "output": 72,
+  "reasoning": 0,
+  "seconds": 2.46
+ }
+}

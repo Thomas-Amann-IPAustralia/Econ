@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.1e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, Box 2, “Narrowing the gap: middle-income innovation pathways,” this passage interprets middle-income economies’ indicator comparisons and long-term ranking gains. It describes selective convergence with high-income innovation performance and the capabilities and research-system development associated with further catch-up."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0126",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000141,
+  "input": 1030,
+  "model": "gpt-6-luna",
+  "output": 77,
+  "reasoning": 0,
+  "seconds": 1.29
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.4e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, in “Matching deep science startups to global patent data,” this passage reports patent-family matching coverage for the tracker’s full universe of VC-backed deep science startups and spinouts, compared with a sample of non-deep science VC-backed startups. It notes which sectors show more or less patent activity and refers readers to the WIPO Technology SPARK report for detailed coverage by sector, economy and stage."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1871",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000148,
+  "input": 969,
+  "model": "gpt-6-luna",
+  "output": 102,
+  "reasoning": 0,
+  "seconds": 2.57
+ }
+}

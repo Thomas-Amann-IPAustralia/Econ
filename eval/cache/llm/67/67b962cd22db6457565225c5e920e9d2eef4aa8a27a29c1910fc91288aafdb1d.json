@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.7e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, this table in the section “Deep science firms vs. startups and spinouts since 2000” shows counts and venture-capital deal maturity stages for deep science startups and spinouts in the top 20 economies, 2010–2025. It defines early-, breakout- and late-stage companies by funding, employee numbers or valuation."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0225",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000193,
+  "input": 1473,
+  "model": "gpt-6-luna",
+  "output": 92,
+  "reasoning": 0,
+  "seconds": 1.41
+ }
+}

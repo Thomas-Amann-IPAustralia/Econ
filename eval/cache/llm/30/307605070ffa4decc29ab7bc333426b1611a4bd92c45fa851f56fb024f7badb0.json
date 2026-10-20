@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.6e-05,
+ "data": {
+  "context": "In WIPO’s *PCT Yearly Review 2026*, this passage presents international-phase statistics on International Searching Authorities, including reports issued in 2025 and their distribution in 2015 and 2025, alongside average transmission timeliness from 2011 to 2025. “Search copy” means the PCT application received by an Authority from the receiving office."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0160",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000151,
+  "input": 1067,
+  "model": "gpt-6-luna",
+  "output": 88,
+  "reasoning": 0,
+  "seconds": 2.24
+ }
+}

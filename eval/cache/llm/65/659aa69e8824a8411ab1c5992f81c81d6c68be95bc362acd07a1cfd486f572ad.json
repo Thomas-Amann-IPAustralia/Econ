@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.6e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026* (2026), Appendix II Table 5 presents worldwide country rankings and 90 percent confidence intervals for the overall GII and its Input and Output Sub-Indices. This excerpt lists the figures for Spain, Algeria, Cyprus, Tajikistan, Portugal, Malta, Madagascar, Lithuania and Bolivia."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1662",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000191,
+  "input": 1489,
+  "model": "gpt-6-luna",
+  "output": 85,
+  "reasoning": 0,
+  "seconds": 2.48
+ }
+}

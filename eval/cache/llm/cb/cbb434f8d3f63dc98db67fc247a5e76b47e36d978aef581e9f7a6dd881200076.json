@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, the section on innovation performance relative to economic development presents the GII 2026 figure comparing economies’ innovation performance with GDP per capita. The note describes the figure’s population-scaled bubbles and trendline, then discusses Bhutan’s innovation profile and challenge."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0135",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00014,
+  "input": 1029,
+  "model": "gpt-6-luna",
+  "output": 74,
+  "reasoning": 0,
+  "seconds": 2.7
+ }
+}

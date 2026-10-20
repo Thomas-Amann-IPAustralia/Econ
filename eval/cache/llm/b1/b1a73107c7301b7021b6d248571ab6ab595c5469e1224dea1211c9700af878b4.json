@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.8e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index (GII) 2026, this passage is part of Tajikistan’s economy profile and reports its overall GII position and scores for the Institutions pillar and its indicators. It covers Tajikistan’s innovation inputs and outputs, institutional, regulatory and business environments, and the economy’s income group and region."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1388",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000177,
+  "input": 1363,
+  "model": "gpt-6-luna",
+  "output": 82,
+  "reasoning": 0,
+  "seconds": 2.29
+ }
+}

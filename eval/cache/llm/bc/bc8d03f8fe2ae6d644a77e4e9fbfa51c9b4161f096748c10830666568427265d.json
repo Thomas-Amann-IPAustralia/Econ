@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.8e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, this passage is from the section comparing deep science firms with startups and spinouts since 2000. It lists firms by country and founding year, alongside financial figures and industry sectors."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0240",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000196,
+  "input": 1020,
+  "model": "gpt-6-luna",
+  "output": 188,
+  "reasoning": 124,
+  "seconds": 5.47
+ }
+}

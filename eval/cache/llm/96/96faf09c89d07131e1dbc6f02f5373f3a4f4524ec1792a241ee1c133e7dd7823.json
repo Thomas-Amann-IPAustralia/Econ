@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.7e-05,
+ "data": {
+  "context": "In WIPO’s *World Intangible Investment Highlights 2026*, this passage presents the third pattern in the comparison of intangible and tangible investment: growth in Brazil, India and the Philippines. It describes investment trends in these middle-income economies from 2015 to 2025, noting that intangible investment grew alongside tangible investment and outpaced it in Brazil."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-intangibles-2026:0006",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000154,
+  "input": 1126,
+  "model": "gpt-6-luna",
+  "output": 83,
+  "reasoning": 0,
+  "seconds": 2.57
+ }
+}

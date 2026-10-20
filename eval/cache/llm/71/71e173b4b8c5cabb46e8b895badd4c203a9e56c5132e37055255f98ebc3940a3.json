@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.6e-05,
+ "data": {
+  "context": "In WIPO’s *Madrid Yearly Review 2026*, the administration statistics section reports how quickly selected Madrid member offices sent the International Bureau first decisions on the legal effects of international trademark registrations in 2025. The passage says that 12 of 20 offices sent 84% to 96% of these decisions within 12 months."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0139",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000131,
+  "input": 900,
+  "model": "gpt-6-luna",
+  "output": 83,
+  "reasoning": 0,
+  "seconds": 2.4
+ }
+}

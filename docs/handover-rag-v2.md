@@ -118,6 +118,16 @@ Branch `ccr-fe4defc0-ysiv1i`. Read D-017 to D-020 first.
   front end's counts; (4) a judging top-up for WIPO passages in the judged contexts.
 - Next free decision number: **D-034**.
 
+## Update, 2026-10-20 (later): the WIPO documents served; prompts for two publishers (D-034)
+- **Served on the next merge to `main`:** `library/index/` holds both publishers with notes
+  (`S384-noprefix-nocite.luna-enrich-v2`: IP Australia notes unchanged, WIPO notes from enrich-v2); the Pages
+  build publishes the WIPO PDFs (CC BY 4.0, the owner).
+- **For the owner:** adopt plan-v4, filter-v2, answer-v6 in `config/service.yaml` (report
+  `reports/prompts-wipo-v1.md`). The new filter and answer prompts see each passage's `publisher`.
+- **Next to measure:** the filter's 20 places can all go to one half of a two-part question (D-034); a
+  judging top-up for WIPO passages (served judged ndcg@10 reads 0.684, unjudged WIPO passages counted 0).
+- Spend: US$0.95 of the US$1.50 grant (`config/eval.yaml` caps it). Next free decision number: **D-035**.
+
 ## Open items
 1. **Langfuse keys on Render**: set and working (2026-10-19). The span counter on `/api/health` read 0 because
    the app was built twice; fixed on `claude/gracious-gates-x2zfot`, live once merged to `main`. Still the owner's:

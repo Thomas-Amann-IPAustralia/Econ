@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.008457,
+ "data": {
+  "misattributed_A": 0,
+  "misattributed_B": 0,
+  "reason": "Both answers provide thorough, accurately attributed overviews of intangible investment and IP rights. Answer A is slightly better because it directly provides empirical research evidence from IP Australia linking specific IP rights to firm investment and performance outcomes (design and productivity, trade marks and exports, patents and resilience during shocks), directly satisfying the narrative's request.",
+  "winner": "A"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v2:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "both-4:ab",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.008457,
+  "input": 10756,
+  "model": "gemini-3.8-flash",
+  "output": 104,
+  "reasoning": 0,
+  "seconds": 2.43
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "context": "In WIPO’s *Madrid Yearly Review 2026*, the “Madrid System process” section explains the international trademark registration timeline, including examination, refusal periods, protection decisions, renewal and the benefits of centralized administration. It also describes how cancellation of a basic mark during the dependency period affects the international registration and how holders may seek protection through national or regional applications."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0147",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000159,
+  "input": 1161,
+  "model": "gpt-6-luna",
+  "output": 85,
+  "reasoning": 0,
+  "seconds": 1.82
+ }
+}

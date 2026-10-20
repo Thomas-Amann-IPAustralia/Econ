@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.9e-05,
+ "data": {
+  "context": "In WIPO’s *Madrid Yearly Review 2026*, this passage in the regional breakdown of Madrid international applications compares applicants’ shares across regions in 2015 and 2025. It notes that Asia’s share grew, and identifies leading countries of origin and changes in application numbers for the top 20 origins in 2025 compared with 2024."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0031",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000159,
+  "input": 1162,
+  "model": "gpt-6-luna",
+  "output": 85,
+  "reasoning": 0,
+  "seconds": 2.62
+ }
+}

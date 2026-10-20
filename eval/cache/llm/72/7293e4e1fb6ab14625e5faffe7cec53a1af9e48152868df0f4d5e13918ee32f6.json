@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.008833,
+ "data": {
+  "misattributed_A": 0,
+  "misattributed_B": 0,
+  "reason": "Answer B directly includes data from WIPO's World Intellectual Property Indicators and PCT Yearly Review to address both worldwide patent applications and international PCT applications, fulfilling the prompt and narrative requirements completely. Answer A failed to use the WIPO passages for worldwide and PCT data, admitting gaps that were actually present in the provided evidence. Both answers maintain strict attribution to their sources.",
+  "winner": "B"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v2:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "both-2:ba",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.008833,
+  "input": 11222,
+  "model": "gemini-3.8-flash",
+  "output": 111,
+  "reasoning": 0,
+  "seconds": 2.63
+ }
+}

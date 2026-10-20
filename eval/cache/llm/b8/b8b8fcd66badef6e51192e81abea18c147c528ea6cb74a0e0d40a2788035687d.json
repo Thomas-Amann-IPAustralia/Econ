@@ -1,0 +1,24 @@
+{
+ "cost_usd": 0.004064,
+ "data": {
+  "misattributed_A": 0,
+  "misattributed_B": 0,
+  "reason": "Both answers provide exceptionally accurate, thorough, and well-structured explanations directly from the WIPO source evidence. They cover the exact percentile threshold rule, the top-three ranking exception, data coverage rules, data recency limits, and peer-group comparisons with equal clarity and precision.",
+  "winner": "tie"
+ },
+ "effort": "low",
+ "model": "gemini-3.8-flash",
+ "purpose": "pairwise:pairwise-v2:gemini-3.8-flash",
+ "schema_name": "preference",
+ "tag": "gii-15:ba",
+ "tier": "standard",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.004064,
+  "input": 4943,
+  "model": "gemini-3.8-flash",
+  "output": 95,
+  "reasoning": 0,
+  "seconds": 2.25
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.8e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026* (Appendix IV, “Global Innovation Index innovation cluster methodology”), this passage describes geocoding coverage for inventor, scientific-author and venture-capital deal addresses, then explains how DBSCAN was used to identify innovation clusters, including the 15 km radius and equal weighting of inventor and author addresses."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1783",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000156,
+  "input": 1149,
+  "model": "gpt-6-luna",
+  "output": 83,
+  "reasoning": 0,
+  "seconds": 2.18
+ }
+}

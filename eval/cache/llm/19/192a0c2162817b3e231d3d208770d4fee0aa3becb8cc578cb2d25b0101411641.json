@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.1e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, this table reports correlations and variance explained (R²) between GII sub-pillars and the seven main innovation pillars, including knowledge and technology outputs and creative outputs. The indicators cover innovation inputs and outputs across economies; the source is the European Commission’s Joint Research Centre (2026)."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1625",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000181,
+  "input": 1407,
+  "model": "gpt-6-luna",
+  "output": 80,
+  "reasoning": 0,
+  "seconds": 2.28
+ }
+}

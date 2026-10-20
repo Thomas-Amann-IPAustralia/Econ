@@ -1,0 +1,21 @@
+{
+ "cost_usd": 5.3e-05,
+ "data": {
+  "context": "WIPO’s *PCT Yearly Review 2026* is introduced by its title page. The review covers the international patent system under the Patent Cooperation Treaty (PCT), including statistics on international-phase PCT applications."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0000",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000106,
+  "input": 775,
+  "model": "gpt-6-luna",
+  "output": 57,
+  "reasoning": 0,
+  "seconds": 1.97
+ }
+}

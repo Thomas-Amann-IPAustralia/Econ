@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.6e-05,
+ "data": {
+  "context": "In WIPO’s Madrid Yearly Review 2026, this acknowledgments passage identifies the people and teams responsible for preparing and supporting the review of the Madrid System for international trademark registration."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0001",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000131,
+  "input": 1065,
+  "model": "gpt-6-luna",
+  "output": 49,
+  "reasoning": 0,
+  "seconds": 1.71
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.1e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, this passage is in the section on conceptual and statistical coherence of the GII framework. It describes JRC-COIN’s June 2026 assessment of the Global Innovation Index model and the iterative process for refining it."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1585",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000121,
+  "input": 871,
+  "model": "gpt-6-luna",
+  "output": 67,
+  "reasoning": 0,
+  "seconds": 2.34
+ }
+}

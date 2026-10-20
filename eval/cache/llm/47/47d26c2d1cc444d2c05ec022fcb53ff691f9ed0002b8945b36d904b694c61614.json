@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.2e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, in the section “Where are innovation systems unbalanced?”, this passage compares innovation ecosystem balance across economies using GII pillar rankings. It highlights balanced systems among leading economies and standout institutional or human-capital strengths in selected emerging economies."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0142",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000144,
+  "input": 1092,
+  "model": "gpt-6-luna",
+  "output": 69,
+  "reasoning": 0,
+  "seconds": 1.16
+ }
+}

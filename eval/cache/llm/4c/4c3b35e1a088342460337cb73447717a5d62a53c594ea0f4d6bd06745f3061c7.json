@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.9e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, this passage is part of the global rankings table. It lists economies ranked 61–139 by GII score, with income-group and regional ranks."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0021",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000179,
+  "input": 1516,
+  "model": "gpt-6-luna",
+  "output": 54,
+  "reasoning": 0,
+  "seconds": 2.4
+ }
+}

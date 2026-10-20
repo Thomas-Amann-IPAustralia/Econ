@@ -116,7 +116,7 @@ async function loadCatalogue() {
       d.url ? h("a", { class: "linkish", href: d.url, target: "_blank", rel: "noopener" }, "Publisher page") : null),
   )));
   const pagesTotal = list.reduce((a, d) => a + d.page_count, 0);
-  $("#lib-summary").textContent = `${list.length} documents, ${pagesTotal} pages, published by IP Australia under Creative Commons Attribution 4.0 unless noted.`;
+  $("#lib-summary").textContent = `${list.length} documents, ${pagesTotal} pages, published by IP Australia and WIPO under Creative Commons Attribution 4.0 unless noted.`;
   const years = [...new Set(list.map((d) => d.year))].sort();
   for (const sel of [$("#y0"), $("#y1")]) sel.replaceChildren(...years.map((y) => h("option", { value: y }, y)));
   $("#y0").value = years[0];
@@ -533,7 +533,7 @@ function copyAnswer(t, btn) {
     a.gaps?.length ? `Not covered: ${a.gaps.join("; ")}\n` : null,
     sources.length ? "Sources" : null,
     ...sources.map((s) => `[${s.n}] ${s.cites.map((c) => `"${c.quote}" (${sourceLine(c.src)})`).join("; ")}`),
-    "", "From IP Australia's Office of the Chief Economist publications; every quote was checked against the source text.",
+    "", "From IP Australia's Office of the Chief Economist publications and WIPO reports; every quote was checked against the source text.",
   ].filter((x) => x !== null).join("\n");
   // The same, formatted, for pasting into a document: the answer as shown, with markers as superscripts.
   const box = document.createElement("div");
@@ -542,7 +542,7 @@ function copyAnswer(t, btn) {
   const html = `<p><strong>${esc(t.question)}</strong></p>${box.innerHTML}`
     + (a.gaps?.length ? `<p><em>Not covered: ${esc(a.gaps.join("; "))}</em></p>` : "")
     + (sources.length ? `<p><strong>Sources</strong></p><ol>${sources.map((s) => `<li value="${s.n}">${s.cites.map((c) => `“${esc(c.quote)}” (${esc(sourceLine(c.src))})`).join("; ")}</li>`).join("")}</ol>` : "")
-    + "<p><em>From IP Australia's Office of the Chief Economist publications; every quote was checked against the source text.</em></p>";
+    + "<p><em>From IP Australia's Office of the Chief Economist publications and WIPO reports; every quote was checked against the source text.</em></p>";
   copyOut(btn, plain, html);
 }
 

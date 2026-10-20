@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.8e-05,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, the section on offices with the largest volumes of trademark filing discusses worldwide resident and non-resident filing trends from 2010 to 2024, including how China’s resident applications affect the non-resident share."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0193",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000197,
+  "input": 1283,
+  "model": "gpt-6-luna",
+  "output": 138,
+  "reasoning": 67,
+  "seconds": 2.73
+ }
+}

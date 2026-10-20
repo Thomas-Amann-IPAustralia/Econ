@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000139,
+ "data": {
+  "context": "In WIPO’s *Madrid Yearly Review 2026*, this statistical table gives country-level figures for Madrid international registration renewals and designations in 2025, including counts by origin and designated member."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0109",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000277,
+  "input": 1398,
+  "model": "gpt-6-luna",
+  "output": 275,
+  "reasoning": 216,
+  "seconds": 5.25
+ }
+}

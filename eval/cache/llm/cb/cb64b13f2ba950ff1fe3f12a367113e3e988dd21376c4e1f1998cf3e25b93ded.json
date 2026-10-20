@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.2e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, the Market sophistication section covers credit and finance for startups and scaleups. The passage describes country-level expert perception scores for 2025, averaged over five years, on financing firms’ starts and growth, using the GEM National Expert Survey; the underlying data span 2016–2025."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1728",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000144,
+  "input": 1034,
+  "model": "gpt-6-luna",
+  "output": 81,
+  "reasoning": 0,
+  "seconds": 2.61
+ }
+}

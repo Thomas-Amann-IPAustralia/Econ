@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.2e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, this passage is from the methodology section on normalization. It explains how the 79 indicators were scaled to 0–100 using the min-max method so higher scores represent better outcomes and indicators can contribute to the overall index score."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1573",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000124,
+  "input": 893,
+  "model": "gpt-6-luna",
+  "output": 69,
+  "reasoning": 0,
+  "seconds": 2.15
+ }
+}

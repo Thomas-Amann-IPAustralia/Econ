@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000132,
+ "data": {
+  "context": "In WIPO’s *World Intellectual Property Indicators 2025*, the industrial designs section, this passage covers resident design application counts per USD 100 billion of GDP for selected origins in 2014 and 2024, highlighting Morocco’s high ratio in 2024. It also presents the top three sectors’ shares of design counts at selected offices in 2024."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-wipi-2025:0332",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000265,
+  "input": 1208,
+  "model": "gpt-6-luna",
+  "output": 289,
+  "reasoning": 201,
+  "seconds": 4.85
+ }
+}

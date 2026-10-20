@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.2e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, in the section on policies and practices for strengthening deep science entrepreneurship ecosystems, this passage discusses how employment outcomes develop over time in research-based ventures and why averages can mislead program evaluation."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0292",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000124,
+  "input": 942,
+  "model": "gpt-6-luna",
+  "output": 60,
+  "reasoning": 0,
+  "seconds": 2.04
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, in the section “The impact of modeling assumptions on the GII results,” this passage explains tests of how missing-data treatment and aggregation formulas affect GII results. The JRC-COIN compares the GII’s no-imputation approach with EM and k-nearest-neighbor imputation, and arithmetic averaging with weighted generalized means."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1634",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.00018,
+  "input": 1350,
+  "model": "gpt-6-luna",
+  "output": 90,
+  "reasoning": 0,
+  "seconds": 2.44
+ }
+}

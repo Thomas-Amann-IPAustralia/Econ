@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.1e-05,
+ "data": {
+  "context": "In WIPO’s *Madrid Yearly Review 2026*, the section “Designations in Madrid international applications” compares the number of Madrid members designated per international trademark application across the top 20 origins in 2025. It reports averages of about five to eight for applicants from 18 origins, and about 14 to 21 for applicants based in Bulgaria and China."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0035",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000142,
+  "input": 986,
+  "model": "gpt-6-luna",
+  "output": 87,
+  "reasoning": 0,
+  "seconds": 2.11
+ }
+}

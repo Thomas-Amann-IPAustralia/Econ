@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.2e-05,
+ "data": {
+  "context": "In WIPO’s *PCT Yearly Review 2026*, the statistics on women inventors in PCT applications cover the share of listed inventors who are women by geographical region and, for 2025, by origin. The passage refers to China, Spain and Türkiye having comparatively larger shares of women inventors; the surrounding figures also report shares across regions and technology fields."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0063",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000143,
+  "input": 984,
+  "model": "gpt-6-luna",
+  "output": 89,
+  "reasoning": 0,
+  "seconds": 2.3
+ }
+}

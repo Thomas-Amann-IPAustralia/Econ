@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000106,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, under “Where are innovation systems unbalanced?”, this table shows economies’ overall and innovation-pillar rankings worldwide for 2026, with colors indicating rank quartiles."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0146",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000211,
+  "input": 1496,
+  "model": "gpt-6-luna",
+  "output": 123,
+  "reasoning": 64,
+  "seconds": 2.94
+ }
+}

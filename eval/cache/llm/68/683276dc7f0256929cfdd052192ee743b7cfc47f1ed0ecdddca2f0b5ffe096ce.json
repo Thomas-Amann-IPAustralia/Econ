@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.7e-05,
+ "data": {
+  "context": "In WIPO’s *Madrid Yearly Review 2026: International Registration of Marks*, this passage is in the statistics on Madrid international applications and shows 2025 flows of trademark designations from selected middle-income countries of origin to the top 10 designated Madrid members. Origins are based on the registration holder’s address; China is excluded from “Other middle-income origins.”"
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0037",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000155,
+  "input": 1123,
+  "model": "gpt-6-luna",
+  "output": 86,
+  "reasoning": 0,
+  "seconds": 2.71
+ }
+}

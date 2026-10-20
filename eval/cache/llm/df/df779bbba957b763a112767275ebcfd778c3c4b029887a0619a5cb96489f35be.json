@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.0001,
+ "data": {
+  "context": "In WIPO’s *Madrid Yearly Review 2026*, section C on administration, revenue and fees, this passage accompanies figure C6, which tracks the share of Madrid System requests for subsequent designation filed directly with the International Bureau (IB) from 2011 to 2025."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0121",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.0002,
+  "input": 1037,
+  "model": "gpt-6-luna",
+  "output": 193,
+  "reasoning": 118,
+  "seconds": 3.95
+ }
+}

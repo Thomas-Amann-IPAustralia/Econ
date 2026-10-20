@@ -1,0 +1,21 @@
+{
+ "cost_usd": 9.7e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026: Powering entrepreneurs at the frontier of science*, the “Where are innovation systems unbalanced?” section presents Table 3, a heatmap of worldwide GII 2026 overall rankings and rankings across seven innovation pillars. This passage lists rankings for economies including Slovakia, Romania, Mauritius, Chile, the Philippines, Brazil and others."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0147",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000193,
+  "input": 1484,
+  "model": "gpt-6-luna",
+  "output": 89,
+  "reasoning": 0,
+  "seconds": 1.53
+ }
+}

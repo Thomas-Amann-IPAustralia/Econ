@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.9e-05,
+ "data": {
+  "context": "In WIPO’s *PCT Yearly Review 2026*, this figure in the section on PCT applications by origin compares the share of applications with foreign co-applicants across the top 20 origins in 2025. It counts corporate applicants only, including all applicants named in an application; “Netherlands” means the Kingdom of the Netherlands."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0032",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000138,
+  "input": 959,
+  "model": "gpt-6-luna",
+  "output": 84,
+  "reasoning": 0,
+  "seconds": 1.95
+ }
+}

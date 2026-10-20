@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, this economy profile presents Trinidad and Tobago’s GII ranking and scores, population and economic indicators, and performance on the Institutions pillar and its sub-indicators."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1415",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000163,
+  "input": 1363,
+  "model": "gpt-6-luna",
+  "output": 54,
+  "reasoning": 0,
+  "seconds": 2.5
+ }
+}

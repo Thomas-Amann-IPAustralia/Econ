@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.4e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, this passage discusses economies that have repeatedly overperformed relative to their development level in the GII rankings, highlighting their years or total appearances as overperformers."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0134",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000128,
+  "input": 1010,
+  "model": "gpt-6-luna",
+  "output": 54,
+  "reasoning": 0,
+  "seconds": 2.41
+ }
+}

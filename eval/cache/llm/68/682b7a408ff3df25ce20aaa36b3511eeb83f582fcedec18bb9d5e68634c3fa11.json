@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.2e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, the “Step 3: Statistical coherence” section describes checks on how indicators are related, grouped, weighted and combined to produce the GII, including whether the overall index contains redundant information."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1583",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000144,
+  "input": 889,
+  "model": "gpt-6-luna",
+  "output": 110,
+  "reasoning": 44,
+  "seconds": 3.07
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.4e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, this indicator entry in Market sophistication (Investment) defines listed domestic companies’ market capitalization as a three-year average percentage of GDP and gives its data sources and years, 2017–2024."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:1731",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000129,
+  "input": 970,
+  "model": "gpt-6-luna",
+  "output": 63,
+  "reasoning": 0,
+  "seconds": 2.0
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 7.6e-05,
+ "data": {
+  "context": "In WIPO’s *Global Innovation Index 2026*, this passage discusses middle-income economies’ GII rankings and innovation-system constraints. It describes recent ranking trends, including Morocco, Viet Nam, India, the Philippines, Indonesia and Türkiye, and the research, university, business R&D, patenting and science-industry capacities that limit many from moving beyond the top 40 or 50."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0121",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000152,
+  "input": 1061,
+  "model": "gpt-6-luna",
+  "output": 91,
+  "reasoning": 0,
+  "seconds": 1.44
+ }
+}

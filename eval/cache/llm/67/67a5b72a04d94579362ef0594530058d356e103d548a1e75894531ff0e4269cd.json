@@ -1,0 +1,21 @@
+{
+ "cost_usd": 8.2e-05,
+ "data": {
+  "context": "In WIPO’s Global Innovation Index 2026, Box 3 examines a new indicator of announced green-field R&D and high-tech foreign investment. It explains how the measure uses FT Locations’ fDi Markets data and a revealed competitive advantage method to compare economies’ shares of worldwide announcements with their shares of gross fixed capital formation, averaged over 2023–2025."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-gii-2026:0156",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000163,
+  "input": 1200,
+  "model": "gpt-6-luna",
+  "output": 87,
+  "reasoning": 0,
+  "seconds": 3.04
+ }
+}

@@ -1,0 +1,21 @@
+{
+ "cost_usd": 0.000102,
+ "data": {
+  "context": "In WIPO’s *PCT Yearly Review 2026*, this passage is part of the statistics on PCT national phase entries by office and applicant origin. The table shows the percentage distribution of entries across origins for selected offices, including Canada, Australia, Brazil, Mexico, Singapore, Indonesia, Viet Nam, Israel, Germany, Thailand, South Africa and Malaysia."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-pct-2026:0112",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000205,
+  "input": 1604,
+  "model": "gpt-6-luna",
+  "output": 89,
+  "reasoning": 0,
+  "seconds": 2.38
+ }
+}

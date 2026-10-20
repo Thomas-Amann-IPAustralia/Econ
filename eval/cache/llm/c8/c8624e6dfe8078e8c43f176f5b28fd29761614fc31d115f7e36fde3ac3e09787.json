@@ -1,0 +1,21 @@
+{
+ "cost_usd": 6.4e-05,
+ "data": {
+  "context": "In WIPO’s *Madrid Yearly Review 2026*, this passage accompanies B1 on trends in Madrid System international registrations from 2011 to 2025. It explains that the 2016 decrease was mainly linked to the International Bureau’s new back-end IT system and provides the source for registration figures across all origins."
+ },
+ "effort": "low",
+ "model": "gpt-6-luna",
+ "purpose": "enrich:enrich-v2:gpt-6-luna",
+ "schema_name": "context_note",
+ "tag": "wipo-madrid-2026:0072",
+ "tier": "flex",
+ "usage": {
+  "cached_input": 0,
+  "cost_usd": 0.000128,
+  "input": 889,
+  "model": "gpt-6-luna",
+  "output": 78,
+  "reasoning": 0,
+  "seconds": 2.35
+ }
+}
