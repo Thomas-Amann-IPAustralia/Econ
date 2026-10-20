@@ -190,11 +190,11 @@ class Need:
     profile: bool  # a figure from an economy profile
 
 
-def _locate(els: dict[str, list[Element]], doc_id: str, quote: str) -> list[SpanGold]:
+def _locate(norms: dict[str, tuple[str, list[int]]], doc_id: str, quote: str) -> list[SpanGold]:
     q = re.sub(r"\s+", " ", normalise(quote)).strip()
     out = []
-    for d in [doc_id, *[x for x in sorted(els) if x != doc_id]]:
-        norm, idx = _norm_map(canonical_text(els[d]))
+    for d in [doc_id, *[x for x in sorted(norms) if x != doc_id]]:
+        norm, idx = norms[d]
         i = norm.find(q)
         while i >= 0:
             out.append(SpanGold(d, idx[i], idx[i + len(q) - 1] + 1, quote))
@@ -208,6 +208,7 @@ def load(els: dict[str, list[Element]], path: Path | None = None) -> list[Need]:
     path = path or config.path("eval/testset/wipo-v1.yaml")
     data = yaml.safe_load(path.read_text(encoding="utf-8"))
     known = set(config.sources().by_id())
+    norms = {d: _norm_map(canonical_text(e)) for d, e in els.items()}
     needs, seen = [], set()
     for n in data["needs"]:
         if n["id"] in seen:
@@ -228,7 +229,7 @@ def load(els: dict[str, list[Element]], path: Path | None = None) -> list[Need]:
                     if len(a["quote"].split()) < 8:
                         raise StageError("gold quote shorter than 8 words", item=n["id"])
                     if a["doc_id"] in els:
-                        alts.extend(x for x in _locate(els, a["doc_id"], a["quote"]) if x not in alts)
+                        alts.extend(x for x in _locate(norms, a["doc_id"], a["quote"]) if x not in alts)
             golds.append(tuple(alts))
         needs.append(
             Need(n["id"], n["kind"], n["question"].strip(), tuple(golds), split_of(n["id"]), profile)
@@ -241,15 +242,15 @@ def check_set(path: Path | None = None) -> dict:
     text of the `docling` corpus or the `data` corpus: the set is valid before any ranking."""
     out = {"needs": 0, "missing": []}
     els = corpus("docling")
+    norms = {d: _norm_map(canonical_text(e))[0] for d, e in els.items() if is_wipo(d)}
     data = yaml.safe_load((path or config.path("eval/testset/wipo-v1.yaml")).read_text(encoding="utf-8"))
     for n in data["needs"]:
         out["needs"] += 1
         for g in n["gold"]:
             for a in [g, *g.get("alt", [])]:
-                if "quote" in a:
-                    norm, _ = _norm_map(canonical_text(els[a["doc_id"]]))
-                    if re.sub(r"\s+", " ", normalise(a["quote"])).strip() not in norm:
-                        out["missing"].append((n["id"], a["quote"][:60]))
+                q = re.sub(r"\s+", " ", normalise(a.get("quote", ""))).strip()
+                if "quote" in a and q not in norms[a["doc_id"]]:
+                    out["missing"].append((n["id"], a["quote"][:60]))
     return out
 
 

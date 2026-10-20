@@ -268,3 +268,167 @@ needs:
     gold:
       - doc_id: wipo-pct-2026
         quote: An entry must in general take place within 30 months from the priority date of the application
+  # --- wipo-gii-2026 (text) -----------------------------------------------------------------------------
+  - id: gii-1
+    kind: lookup
+    question: Which emerging economies get more innovation outputs than their inputs would predict, and by how much?
+    gold:
+      - doc_id: wipo-gii-2026
+        quote: China ranks 5 th in outputs against 22 nd in inputs, India 25 th against 49 th and Viet Nam 35 th against 54 th
+  - id: gii-2
+    kind: explain
+    question: How is India's route to better innovation performance different from Viet Nam's and the Philippines'?
+    gold:
+      - doc_id: wipo-gii-2026
+        quote: India climbs through digital services and venture capital, leading the world in ICT services exports
+  - id: gii-3
+    kind: lookup
+    question: Which middle-income economies achieve the most innovation output from modest inputs?
+    gold:
+      - doc_id: wipo-gii-2026
+        quote: "Several middle-income economies do more with less: Morocco ranks 76 th in inputs, but 46 th in outputs"
+  - id: gii-4
+    kind: explain
+    question: What can governments do to turn deep science breakthroughs into commercial projects?
+    gold:
+      - doc_id: wipo-gii-2026
+        quote: government procurement built on functional requirements, offtake commitments and anchor-customer programs turn breakthroughs into financeable projects
+  - id: gii-5
+    kind: trend
+    question: Has global innovation fully recovered, according to WIPO's innovation tracker?
+    gold:
+      - doc_id: wipo-gii-2026
+        quote: "The recovery is nonetheless incomplete: about three-quarters of indicators remain below their decade averages"
+  - id: gii-6
+    kind: lookup
+    question: How much venture capital did African startups raise in 2025?
+    gold:
+      - doc_id: wipo-gii-2026
+        quote: African startups raised USD 3.2 billion in 2025, up about 40 percent on 2024.
+  - id: gii-7
+    kind: lookup
+    question: Which economies are the most innovative in the world according to the GII 2026?
+    gold:
+      - doc_id: wipo-gii-2026
+        quote: Switzerland, Sweden and the United States remain the world's top three innovation economies.
+  - id: gii-8
+    kind: lookup
+    question: Where do Pakistan's innovation strengths lie?
+    gold:
+      - doc_id: wipo-gii-2026
+        quote: "Its strengths are concentrated in the digital economy: mobile app creation (10 th ), ICT services exports (15 th )"
+  - id: gii-9
+    kind: lookup
+    question: Which region of the world leads on innovation in 2026?
+    gold:
+      - doc_id: wipo-gii-2026
+        quote: Northern America remains the world's leading innovation region in 2026, with the highest average GII score
+  - id: gii-10
+    kind: lookup
+    question: Which metropolitan area is the world's top science and technology cluster?
+    gold:
+      - doc_id: wipo-gii-2026
+        quote: Shenzhen-Hong Kong-Guangzhou (China and Hong Kong, China) tops the global rankings for a second consecutive year
+  - id: gii-11
+    kind: trend
+    question: Which deep science sector has grown most in value since 2020?
+    gold:
+      - doc_id: wipo-gii-2026
+        quote: Semiconductors is the fastest-rising major sector. Its combined enterprise value (VE) has grown over 410 percent since 2020 to USD 1.1 trillion
+  - id: gii-12
+    kind: lookup
+    question: Which country dominates deep science startups in the Middle East and North Africa?
+    gold:
+      - doc_id: wipo-gii-2026
+        quote: Israel holds an unrivalled position of leadership in deep science innovation across Northern Africa and Western Asia.
+  - id: gii-13
+    kind: lookup
+    question: How many deep science startups holding patents does WIPO find in Sub-Saharan Africa?
+    gold:
+      - doc_id: wipo-gii-2026
+        quote: WIPO's research and analysis identified only five patent-holding deep science startups within the region (four from South Africa and one from Kenya)
+  - id: gii-14
+    kind: explain
+    question: What makes research consortia work for complex innovations involving many partners?
+    gold:
+      - doc_id: wipo-gii-2026
+        quote: Consortia reduce duplication and pool infrastructure, but only with the help of workable governance
+  - id: gii-15
+    kind: explain
+    question: How does the Global Innovation Index decide what counts as an economy's strength?
+    gold:
+      - doc_id: wipo-gii-2026
+        quote: Rankings 1-3 are highlighted as strengths, except when at the sub-pillar level the desired data minimum coverage (DMC) is unmet.
+  - id: gii-16
+    kind: lookup
+    question: How recent are the data behind the GII 2026 rankings?
+    gold:
+      - doc_id: wipo-gii-2026
+        quote: from the non-missing data, 4.1 percent are from 2026, 31.4 percent from 2025, 44.7 percent from 2024
+  - id: gii-17
+    kind: explain
+    question: How was the robustness of the innovation index's rankings tested?
+    gold:
+      - doc_id: wipo-gii-2026
+        quote: the robustness assessment is based on Monte Carlo simulation and multi-modeling approaches
+  - id: gii-18
+    kind: explain
+    question: Is the structure of the Global Innovation Index statistically sound?
+    gold:
+      - doc_id: wipo-gii-2026
+        quote: The JRC-COIN analysis confirms that the multilevel structure of the GII 2026, encompassing 79 indicators, 21 sub-pillars, seven pillars and two sub-indices, is statistically robust and well-balanced.
+  - id: gii-19
+    kind: explain
+    question: How is the electricity output indicator in the innovation index defined?
+    gold:
+      - doc_id: wipo-gii-2026
+        quote: Electricity production, measured at the terminals of all alternator sets in a station.
+  - id: gii-20
+    kind: explain
+    question: How did WIPO work out where inventors are located when mapping innovation clusters?
+    gold:
+      - doc_id: wipo-gii-2026
+        quote: PCT inventor addresses were geocoded using the Environmental Systems Research Institute (ESRI) ArcGIS World Geocoder service.
+  # --- wipo-wipi-2025 -----------------------------------------------------------------------------------
+  - id: wipi-1
+    kind: lookup
+    question: Applicants from which country file the most patent applications in other countries?
+    gold:
+      - doc_id: wipo-wipi-2025
+        quote: US-based applicants filed the most patent applications abroad in 2024, with a total of at least 231,536.
+  - id: wipi-2
+    kind: explain
+    question: What is a foreign-oriented patent family?
+    gold:
+      - doc_id: wipo-wipi-2025
+        quote: those patent families that have at least one filing office different from the office of the applicant's country of origin
+  - id: wipi-3
+    kind: explain
+    question: Why can some patent offices not quickly reduce their stock of pending applications?
+    gold:
+      - doc_id: wipo-wipi-2025
+        quote: an office is unable to start the substantive examination process until an applicant has filed a request for examination
+  - id: wipi-4
+    kind: lookup
+    question: Applicants from which countries file the most industrial designs worldwide?
+    gold:
+      - doc_id: wipo-wipi-2025
+        quote: In 2024, applicants based in China filed applications containing 906,849 designs - the highest total worldwide.
+  - id: wipi-5
+    kind: explain
+    question: What roles does the European Patent Office play in international patent applications?
+    gold:
+      - doc_id: wipo-wipi-2025
+        quote: Under Patent Cooperation Treaty (PCT) procedures, the EPO acts as a receiving office, an International Searching Authority and an International Preliminary Examining Authority.
+  - id: wipi-6
+    kind: paraphrase
+    question: Does filing one international patent application get you a patent in many countries at once?
+    gold:
+      - doc_id: wipo-wipi-2025
+        quote: However, the decision on whether to grant patent rights remains the prerogative of national and regional patent offices
+  - id: wipi-7
+    kind: explain
+    question: Under the Hague and Madrid systems, how does an applicant choose where they want protection?
+    gold:
+      - doc_id: wipo-wipi-2025
+        quote: specifies the jurisdiction(s) in which they seek to protect their designs (Hague System) or trademarks (Madrid System)
