@@ -276,3 +276,7 @@ OpenAI), not run.
 - Found: the filter can fill all 20 places from one half of a two-part question (Australian vs worldwide
   patenting kept no WIPO passage under either prompt on a replay). Next to measure.
 - Site text, README and the printout's licence updated (the owner: all CC BY 4.0). Spend US$0.95 of US$1.50.
+
+## 2026-10-20 — The owner adopts the two-publisher prompts (D-035)
+- `config/service.yaml`: answer-v6, plan-v4, filter-v2. Prompts load against the lock; health OK; tests pass.
+  Live once the PR merges to `main`.

@@ -1513,3 +1513,14 @@ the service answers from both publishers with the earlier prompts, which made no
 **Spend under the US$1.50 grant:** OpenAI US$0.835 (notes 0.231, answers 0.592, the replay ~0.012),
 Gemini US$0.114 (judge), **US$0.95 in all**. `config/eval.yaml` caps the grant in code; the first Gemini cap
 forgot the cap fraction and stopped the judge once, after all 26 answers were saved (resumed, no answer lost).
+
+## D-035 — The owner adopts plan-v4, filter-v2 and answer-v6 (the owner, 2026-10-20)
+
+**Request.** "Adopt the new prompts, open a PR and watch it."
+
+**Decision.** `config/service.yaml`: `answer.prompt: answer-v6`, `answer.plan_prompt: plan-v4`,
+`answer.filter.prompt: filter-v2`, as measured in D-034 (grid prompts-wipo-v1). The service, the trail and
+Render's log now show both publishers' passages, each named with its publisher to the filter and answer
+models. `econ verify-search` replays the filter-v1 ratings measured in D-018, so its filter rows no longer
+describe the served prompt until filter-v2 is measured on the judged set. Live on the merge to `main`
+(Render and Pages deploy from it). **Spend:** none.

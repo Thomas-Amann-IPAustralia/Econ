@@ -47,13 +47,13 @@ llm:
   query_planning: true             # rewrite follow-ups and split broad questions into searches
 
 answer:
-  prompt: answer-v5                  # D-026: answer-v4 citing sentence ids; code writes the quotes (the owner deferred the choice)
+  prompt: answer-v6                  # D-035: answer-v5 for two publishers (IP Australia, WIPO); adopted by the owner after D-034
   stream_drafts: true                # show the prose while it is written, marked not yet checked (D-024)
-  plan_prompt: plan-v2               # D-013
+  plan_prompt: plan-v4               # D-035: the WIPO documents in the map; "Australia" in comparative queries
   max_queries: 4
   plan_keeps_question: true          # search the standalone question as well as the plan's queries (D-013)
   filter:                            # adopted by the owner, 2026-10-19 (D-020)
-    prompt: filter-v1
+    prompt: filter-v2                # D-035: both publishers named; sees each passage's publisher
     read: 60                         # passages searched and rated; the answer model gets the best 20
     group: 20                        # passages a call; a question's calls run in parallel
     max_output_tokens: 3000          # includes reasoning
