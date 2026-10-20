@@ -1,0 +1,16 @@
+# Grid wipo-v1b: grid wipo-v1's choice re-measured with context notes for the WIPO passages (D-034).
+# Committed before any number. wipo-v1 measured the WIPO passages without notes (paid); the owner granted a
+# budget on 2026-10-20 and the notes were written (enrich-v2, US$0.23). Free to run.
+grid: wipo-v1b
+notes: S384-noprefix-nocite.luna-enrich-v2   # IP Australia notes unchanged (enrich-v1); WIPO notes enrich-v2
+variants:
+  ipa-only: today's 24 documents with their notes; the baseline for the IP Australia needs
+  data: wipo-v1's choice (the GII profiles from the data file), every passage with its note
+needs:
+  ipa: eval/testset/silver-v1.yaml (114 needs)
+  wipo: eval/testset/wipo-v1.yaml (66 needs)
+rules:
+  one_index: >-
+    As in wipo-v1: with the notes, IP Australia ndcg@10 over all 114 silver needs falls by no more than 0.02
+    against ipa-only, and the paired 95% interval's lower bound is above -0.04.
+  profiles: Reported, not chosen (wipo-v1 chose `data`); the WIPO needs show what the notes add.
