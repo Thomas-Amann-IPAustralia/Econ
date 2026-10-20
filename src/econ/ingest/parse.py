@@ -168,6 +168,19 @@ def _parse_one(args: tuple[str, str, bool, str]) -> tuple[str, dict]:
     return doc_id, {"seconds": round(time.time() - started, 1), "status": status}
 
 
+def _apply_data(data, doc, rows: list[dict], pages: dict, raw: Path) -> list[dict]:
+    if data.use != "gii-profiles":
+        raise StageError(f"unknown data file use {data.use!r}", item=data.doc_id)
+    from econ.ingest import gii
+
+    wb = gii.load(raw / data.raw_name)
+    where = gii.profile_pages(raw / doc.raw_name, wb.economies, range(1, len(pages) + 1))
+    try:
+        return gii.overlay(rows, gii.profile_elements(wb, where, pages, doc.doc_id, doc.year))
+    except ValueError as e:
+        raise StageError(str(e), item=doc.doc_id) from e
+
+
 def _page_count(pdf_path: str) -> int:
     import pypdfium2 as pdfium  # build extra
 
@@ -236,6 +249,14 @@ def parse(run: Run, *, workers: int = 1, only: list[str] | None = None) -> None:
         parsed[d.doc_id] = elements_from_docling(ddoc, d.doc_id, ocr)
         if not parsed[d.doc_id][0]:
             raise StageError("no body text extracted", item=d.doc_id)
+        for data in config.sources().data_for(d.doc_id):
+            # The publisher's data file in place of pages a layout parser can't read (D-033).
+            rows, pages = parsed[d.doc_id]
+            parsed[d.doc_id] = (_apply_data(data, d, rows, pages, raw), pages)
+            run.add_input(raw / data.raw_name)
+            run.counts["data_pages"] = run.counts.get("data_pages", 0) + sum(
+                r.get("source") == "data" and r["label"] == "section_header" for r in parsed[d.doc_id][0]
+            )
 
     # Re-read the OCR documents' garbled elements (D-022), against the text-layer documents' vocabulary:
     # this run's, and for a partial run the committed elements of the text-layer documents it left out.

@@ -46,6 +46,7 @@ class DataFile(Strict):
     key: str
     title: str
     for_doc: str
+    use: Literal["gii-profiles"]  # what the parse stage does with it
     url: str | None = None
     note: str | None = None
 

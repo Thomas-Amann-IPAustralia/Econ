@@ -208,5 +208,6 @@ data:
     key: WIPO/wipo-pub-2000-2026-tech1.xlsx
     title: Global Innovation Index 2026 data (index structure, economies, scores and ranks)
     for_doc: wipo-gii-2026
+    use: gii-profiles   # the 139 economy-profile pages are written from it (grid wipo-v1, D-033)
     url: https://www.wipo.int/edocs/pubdocs/en/wipo-pub-2000-2026-tech1.xlsx
     note: "The bucket's copy is 929,719 bytes; the copy at `url` was 943,159 bytes on 2026-10-19."

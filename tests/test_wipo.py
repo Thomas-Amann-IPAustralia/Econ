@@ -76,16 +76,43 @@ def test_a_data_file_must_name_a_registered_document():
         "documents": [{"doc_id": "doc-a", "key": "a.pdf", "title": "A", "year": 2020, "series": "S"}],
     }
     ok = Sources.model_validate(
-        {**base, "data": [{"doc_id": "doc-a-data", "key": "d/a.xlsx", "title": "D", "for_doc": "doc-a"}]}
+        {
+            **base,
+            "data": [
+                {
+                    "doc_id": "doc-a-data",
+                    "key": "d/a.xlsx",
+                    "title": "D",
+                    "for_doc": "doc-a",
+                    "use": "gii-profiles",
+                }
+            ],
+        }
     )
     assert ok.data[0].raw_name == "doc-a-data.xlsx" and set(ok.objects()) == {"a.pdf", "d/a.xlsx"}
     with pytest.raises(ValueError):
         Sources.model_validate(
-            {**base, "data": [{"doc_id": "x", "key": "x.xlsx", "title": "X", "for_doc": "nope"}]}
+            {
+                **base,
+                "data": [
+                    {"doc_id": "x", "key": "x.xlsx", "title": "X", "for_doc": "nope", "use": "gii-profiles"}
+                ],
+            }
         )
     with pytest.raises(ValueError):
         Sources.model_validate(
-            {**base, "data": [{"doc_id": "doc-a", "key": "x.xlsx", "title": "X", "for_doc": "doc-a"}]}
+            {
+                **base,
+                "data": [
+                    {
+                        "doc_id": "doc-a",
+                        "key": "x.xlsx",
+                        "title": "X",
+                        "for_doc": "doc-a",
+                        "use": "gii-profiles",
+                    }
+                ],
+            }
         )
 
 

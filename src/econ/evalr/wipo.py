@@ -85,9 +85,10 @@ def gii_profiles() -> tuple[dict[int, list[dict]], set[int]]:
     return _gii_cache["rep"], _gii_cache["pages"]
 
 
-def gii_index_tables() -> list[dict]:
-    """The GII's elements re-read from the parse cache with each profile page's table kept (Docling labels
-    them a document index, which the parse leaves out)."""
+def gii_docling_rows(index_tables: bool = False) -> list[dict]:
+    """The GII's elements as Docling parsed them, from the parse cache: the library's copy has the profile
+    pages written from the data file since the grid chose that (D-033). With `index_tables`, each profile
+    page's table is kept (Docling labels them a document index, which the parse leaves out)."""
     from docling_core.types.doc import DoclingDocument
 
     from econ.ingest.parse import elements_from_docling
@@ -97,7 +98,7 @@ def gii_index_tables() -> list[dict]:
     cache = config.path("data/parsed") / f"{GII}.{sha256_file(pdf)[:16]}.text.json"
     if not cache.exists():
         raise StageError("no Docling cache for the GII; run `econ parse --only wipo-gii-2026`", item=GII)
-    _, pages = gii_profiles()
+    pages = gii_profiles()[1] if index_tables else None
     doc = DoclingDocument.model_validate(json.loads(cache.read_text()))
     return elements_from_docling(doc, GII, False, index_tables_on=pages)[0]
 
@@ -111,8 +112,8 @@ def corpus(variant: str) -> dict[str, list[Element]]:
         if is_wipo(d.doc_id) and variant == "ipa-only":
             continue
         rows = _raw_rows(d.doc_id)
-        if d.doc_id == GII and variant == "docling-tables":
-            rows = gii_index_tables()
+        if d.doc_id == GII:
+            rows = gii_docling_rows(index_tables=variant == "docling-tables")
         if d.doc_id == GII and variant in ("data", "drop"):
             from econ.ingest import gii
 
