@@ -12,6 +12,8 @@ Variants (eval/grids/wipo-v1.yaml):
   search (the prefix the IP Australia chunks dropped in D-005).
 - `data`: as `docling`, with the GII's 139 economy-profile pages written from WIPO's data file
   (`econ.ingest.gii`) instead of parsed.
+- `docling-tables`: as `docling`, with each profile page's table kept (Docling labels them a document
+  index, which the parse leaves out; amendment 1 of the grid).
 - `drop`: as `docling`, without the economy-profile pages.
 
 The WIPO test set (eval/testset/wipo-v1.yaml) has two kinds of gold. A `quote` is verbatim text, located in
@@ -42,7 +44,7 @@ from econ.retrieval.search import fuse
 from econ.textcheck import normalise
 
 GII = "wipo-gii-2026"
-VARIANTS = ("ipa-only", "docling", "docling-prefix", "data", "drop")
+VARIANTS = ("ipa-only", "docling", "docling-prefix", "docling-tables", "data", "drop")
 DEPTH = 50
 
 
@@ -83,6 +85,23 @@ def gii_profiles() -> tuple[dict[int, list[dict]], set[int]]:
     return _gii_cache["rep"], _gii_cache["pages"]
 
 
+def gii_index_tables() -> list[dict]:
+    """The GII's elements re-read from the parse cache with each profile page's table kept (Docling labels
+    them a document index, which the parse leaves out)."""
+    from docling_core.types.doc import DoclingDocument
+
+    from econ.ingest.parse import elements_from_docling
+    from econ.manifest import sha256_file
+
+    pdf = config.path(config.pipeline().paths.raw) / config.sources().by_id()[GII].raw_name
+    cache = config.path("data/parsed") / f"{GII}.{sha256_file(pdf)[:16]}.text.json"
+    if not cache.exists():
+        raise StageError("no Docling cache for the GII; run `econ parse --only wipo-gii-2026`", item=GII)
+    _, pages = gii_profiles()
+    doc = DoclingDocument.model_validate(json.loads(cache.read_text()))
+    return elements_from_docling(doc, GII, False, index_tables_on=pages)[0]
+
+
 def corpus(variant: str) -> dict[str, list[Element]]:
     """Every document's elements under a variant."""
     if variant not in VARIANTS:
@@ -92,6 +111,8 @@ def corpus(variant: str) -> dict[str, list[Element]]:
         if is_wipo(d.doc_id) and variant == "ipa-only":
             continue
         rows = _raw_rows(d.doc_id)
+        if d.doc_id == GII and variant == "docling-tables":
+            rows = gii_index_tables()
         if d.doc_id == GII and variant in ("data", "drop"):
             from econ.ingest import gii
 
@@ -352,8 +373,8 @@ def run_grid(run, grid: str = "wipo-v1") -> dict:
 
 def choose(results: dict) -> dict:
     """The grid's two rules, applied as written in eval/grids/wipo-v1.yaml."""
-    cands = ["docling", "docling-prefix", "data", "drop"]
-    order = {n: i for i, n in enumerate(["docling", "drop", "docling-prefix", "data"])}
+    cands = ["docling", "docling-prefix", "docling-tables", "data", "drop"]
+    order = {n: i for i, n in enumerate(["docling", "drop", "docling-prefix", "docling-tables", "data"])}
     dev = {n: _mean(results[n]["wipo"], "ndcg@10", split="dev") for n in cands}
     prof = {n: _mean(results[n]["wipo"], "ndcg@10", split="dev", profile=True) for n in cands}
     nonprof = {n: _mean(results[n]["wipo"], "ndcg@10", split="dev", profile=False) for n in cands}
@@ -365,7 +386,7 @@ def choose(results: dict) -> dict:
     if chosen == "docling":
         better = [
             n
-            for n in ("data", "drop")
+            for n in ("data", "drop", "docling-tables")
             if prof[n] > prof["docling"] and nonprof["docling"] - nonprof[n] <= 0.02
         ]
         if better:

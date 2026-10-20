@@ -10,6 +10,7 @@ variants:
   ipa-only: today's 24 documents; the baseline for the IP Australia needs
   docling: the six WIPO PDFs parsed like every other document
   docling-prefix: as docling, with title and section path in front of each WIPO chunk for search only
+  docling-tables: as docling, with each profile page's table kept (amendment 1)
   data: as docling, the GII's 139 economy-profile pages written from WIPO's data file (econ.ingest.gii)
   drop: as docling, without the economy-profile pages
 needs:
@@ -27,11 +28,25 @@ rules:
     WIPO documents go to the owner as a separate collection (searched only on request), with the numbers.
   # 2. How the GII's economy profiles enter (data, docling, drop), and whether WIPO chunks take a prefix.
   profiles: >-
-    Among docling, docling-prefix, data and drop, choose the highest WIPO dev ndcg@10 (all WIPO needs).
+    Among docling, docling-prefix, docling-tables, data and drop, choose the highest WIPO dev ndcg@10 (all WIPO needs).
     A variant that differs from docling only in the profile pages is preferred to docling when it is not
     worse on the dev non-profile needs by more than 0.02 and better on the dev profile needs. Ties (within
-    0.005) go to the simpler variant, in the order docling, drop, docling-prefix, data. Test reported.
+    0.005) go to the simpler variant, in the order docling, drop, docling-prefix, docling-tables, data.
+    Test reported.
 reported:
   - every variant on both sets, by split and by kind, and the share of WIPO passages in each top 10
   - the chunk counts and token sizes per variant
   - the IP Australia needs whose top 10 changed most, read by Claude
+amendments:
+  - n: 1
+    date: 2026-10-20
+    before_numbers: true
+    change: variant docling-tables added to rule 2's candidates (after drop and docling-prefix in the order of
+      simplicity, before data).
+    reason: >-
+      Reading Docling's parse of the profile pages (pages 101-200, while the rest still parsed) showed that it
+      labels each profile's table a document index, which the parse leaves out as a table of contents: the
+      docling variant keeps a median of 52 characters per profile page (Australia's page: "6", "144",
+      "Australia", "20"). Keeping those tables is the parse-only alternative to the data file, so it is
+      measured too.
+

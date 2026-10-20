@@ -69,7 +69,11 @@ def heading_level(text: str, docling_level: int | None) -> int:
     return max(1, int(docling_level or 1))
 
 
-def elements_from_docling(doc, doc_id: str, ocr: bool) -> tuple[list[dict], dict]:
+def elements_from_docling(
+    doc, doc_id: str, ocr: bool, index_tables_on: set[int] | None = None
+) -> tuple[list[dict], dict]:
+    """`index_tables_on`: pages on which a table Docling labels a document index (a table of contents,
+    left out by default) is kept as a table: the GII's economy profiles are labelled so (D-033)."""
     from docling_core.types.doc import TableItem
 
     rows: list[dict] = []
@@ -79,6 +83,14 @@ def elements_from_docling(doc, doc_id: str, ocr: bool) -> tuple[list[dict], dict
     }
     for item, _level in doc.iterate_items():
         label = str(getattr(item, "label", "")).split(".")[-1].lower()
+        if (
+            label == "document_index"
+            and index_tables_on
+            and isinstance(item, TableItem)
+            and getattr(item, "prov", None)
+            and item.prov[0].page_no in index_tables_on
+        ):
+            label = "table"
         if label not in KEEP or not getattr(item, "prov", None):
             continue
         if isinstance(item, TableItem):
