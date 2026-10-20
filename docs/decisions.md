@@ -1353,3 +1353,94 @@ green, in the claim's card and in the passage.
 3 violet, 4 grey in its card, and the same numbers and colours on the same sentences in passages 4, 3 and 20;
 a one-sentence claim stays yellow and unnumbered; a sentence's Passage button brings it into view; the earlier
 checks still pass, in both themes and at phone width, with no script errors.
+
+## D-033 — The WIPO documents ingested; the GII's economy profiles written from WIPO's data file; one index for both publishers (the owner's request; Claude, 2026-10-20)
+
+**Request (the owner, 2026-10-19).** "I've added the R2 keys to the environment. Please ingest the WIPO reports
+and test the correct approach."
+
+**What was added to the bucket** (folder `WIPO/`, 2026-10-19): six PDFs, 759 pages: the Global Innovation Index
+(GII) 2026 (348 pages), a 17-page printout of WIPO's web page on Australia's GII results, the PCT Yearly Review
+2026 (84), the Madrid Yearly Review 2026 (88), World Intellectual Property Indicators 2025 (192) and World
+Intangible Investment Highlights 2026 (30); and the GII 2026 data file (`wipo-pub-2000-2026-tech1.xlsx`: index
+structure, 139 economies, 15,290 scores and ranks). Five PDFs are byte-identical to the copies on wipo.int;
+the printout has no public copy. The bucket's spreadsheet is 929,719 bytes and WIPO's is 943,159 (checked
+2026-10-19): perhaps edited or re-saved; its numbers match the printed profiles checked (Japan, Australia).
+
+**Built.**
+- Registry: a `publisher` per document (the WIPO ones name WIPO) and `data:` entries for bucket objects that
+  are not documents but data a document's parse reads; fetch skips folder markers (the empty `WIPO/` key).
+- Sweep: a workbook is checked for macros, external links and embedded objects, and its cell text gets the
+  text checks. No high-severity findings in the WIPO files; no allowlist entries needed. (A first rule of mine
+  flagged Excel's inert `printerSettings1.bin`; narrowed to the VBA project.)
+- Parse: documents over 100 pages convert in cached 25-page batches. The GII ran out of memory whole (9.5 GB),
+  and two container restarts lost batches in progress. Docling's table model took about 40 seconds a page on
+  the 139 profile pages and about 3 seconds on the rest.
+- Chunk: a table header that leaves no room for rows is split, not repeated (the GII's cluster tables have
+  270-token headers, which failed the 256-token strategy). The adopted strategy's 1,897 IP Australia passages
+  are byte-identical; the other strategies also caught up with D-022's OCR repair, which rebuilt only the
+  adopted one.
+- `econ.ingest.gii`: each economy's profile written as sentences from the data file, one paragraph per
+  sub-pillar, each starting with the economy and its pillar ("Japan, GII 2026 pillar 5, Business
+  sophistication: score 58.1, rank 7. 5.1 Knowledge workers: ..."), rounded as printed, with strengths,
+  weaknesses and outdated data marked, placed on the economy's profile page so a citation leads to the
+  printed page. Applied in the parse stage (`data[].use: gii-profiles`).
+
+**The finding that decided it.** Docling labels every economy-profile table a *document index* (a table of
+contents), which the parse leaves out by design. Parsed as before, the 139 profile pages keep a median of 52
+characters each: Australia's page is "6", "144", "Australia", "20". None of the test set's 13 profile figures
+was in the text at all.
+
+**Method.** Grid `wipo-v1` (eval/grids/wipo-v1.yaml, committed before any number; amendment 1, also before any
+number, added `docling-tables` after the finding above). Test set `wipo-v1`: 66 needs written by Claude from a
+seeded sample of passages (53 verbatim quotes; 13 profile figures, drawn at random from the data file and
+scored by a chunk from the profile page that holds the indicator's name and value). No model calls: the
+adopted chunking, embedder and hybrid search, the question as the only query; IP Australia passages carry
+their context notes, WIPO passages none yet.
+
+**Results** (report `reports/retrieval-wipo-v1.md`, run `eval-wipo/…`).
+
+| Variant | WIPO ndcg@10 dev / test | Profile figures | Other WIPO needs | IP Australia ndcg@10 (114) vs today |
+|---|---|---|---|---|
+| `docling` (as parsed) | 0.407 / 0.303 | 0.000 | 0.442 | -0.008 [-0.019, +0.004] |
+| `docling-prefix` | 0.340 / 0.417 | 0.033 | 0.463 | -0.005 |
+| `docling-tables` | 0.414 / 0.298 | 0.000 | 0.443 | -0.003 |
+| **`data` (chosen)** | **0.601 / 0.440** | **0.876** | 0.433 | **-0.004 [-0.016, +0.009]** |
+| `drop` | 0.396 / 0.311 | 0.000 | 0.440 | -0.008 |
+
+- Profile figures are found only when written from the data file (0.876; 0.000 for every parse). Keeping
+  Docling's tables puts 12 of the 13 figures in the text, but in 1,903 header-less chunks that never name
+  their economy, and none reaches a top 10. On test, `data` beats `docling` by +0.137 [+0.015, +0.272].
+- One index is safe for the IP Australia questions (rule 1 met): ndcg@10 0.595 to 0.592; 16 of 114 needs
+  change. The two biggest losses are WIPO passages that answer the question too, which the IP Australia gold
+  doesn't count: "What is the Locarno classification used for?" now finds WIPI's glossary entry, and "Can
+  patents on medicines last longer than 20 years?" finds WIPI's "Patent rights generally last for up to 20
+  years". General IP questions will now draw on both publishers.
+- WIPO passages without notes score well below IP Australia's (0.43-0.44 on non-profile needs against 0.59).
+  The title-and-section prefix helped two documents a lot (Australia's printout 0.38 to 0.80, PCT 0.17 to 0.44)
+  and hurt two (Madrid, WIPI); dev and test disagree. Context notes are the adopted way to give a passage its
+  setting (D-013), and should be measured next.
+
+**Decision** (the chunking strategy and free retrieval improvements are delegated, D-005, D-013): the GII's
+profiles are written from the data file; the WIPO documents join the one index; WIPO passages take no
+prefix. The library holds the result (2,847 WIPO passages: GII 1,875, of which 1,213 are profile text; WIPI
+529; PCT 198; Madrid 162; intangibles 49; the printout 34).
+
+**Not done, for the owner** (the serving index, `library/index/`, is unchanged; the live service doesn't see
+the WIPO documents yet):
+1. *Money.* Context notes for the 2,847 WIPO passages, about US$0.21 of gpt-6-luna (US$0.12 without the
+   profile passages, which already say where they sit). The note prompt says every passage is from IP
+   Australia's Office of the Chief Economist, so it needs a publisher-neutral version (enrich-v2). Then the
+   index rebuild, `verify-search`, and a re-run of this grid with notes (free).
+2. *Prompts.* plan-v2's document map lists the 24 IP Australia publications and tells the planner to drop
+   "Australia" from queries; with WIPO's global reports "Australia" now discriminates. The filter prompt and
+   answer-v5 say every passage is from the Office of the Chief Economist, and answer-v5 tells staff that is the
+   only source. New versions (plan-v4, filter-v2, answer-v6) change what the chatbot answers from: the owner's
+   adoption, measured first (paid).
+3. *Publishing.* The WIPO PDFs on the Pages site and an acknowledgement. Five state CC BY 4.0; the Australia
+   printout states no licence. The front end and README say "24 documents, 1,099 pages" and "published by IP
+   Australia".
+4. *The judged set.* WIPO passages entering the judged contexts are unjudged (counted 0) until a top-up.
+
+**Spend:** none (no model calls). **Records.** Two failed sweep manifests from this work (the over-broad
+macro rule's runs) were deleted by mistake before they were committed; the sweep that passed is kept.

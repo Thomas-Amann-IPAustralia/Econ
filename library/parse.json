@@ -4793,14 +4793,14 @@
     "source_sha256": "845fccbab680b18b8396af078a83746d0ad3914b0d1ec58e75337d5d354be0ca"
   },
   "wipo-gii-2026": {
-    "elements": 3587,
+    "elements": 6243,
     "labels": {
       "caption": 63,
       "footnote": 29,
       "list_item": 215,
-      "section_header": 565,
-      "table": 82,
-      "text": 2633
+      "section_header": 522,
+      "table": 49,
+      "text": 5365
     },
     "licence": "CC BY 4.0",
     "ocr": false,

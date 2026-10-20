@@ -1,0 +1,105 @@
+{
+  "argv": [
+    "chunk"
+  ],
+  "command": "chunk",
+  "config_hash": "ae43c56e8946bad9",
+  "counts": {
+    "F384": {
+      "chunks": 4072,
+      "max_tokens": 381,
+      "median_tokens": 380,
+      "total_tokens": 1542967
+    },
+    "S256": {
+      "chunks": 8002,
+      "max_tokens": 256,
+      "median_tokens": 197,
+      "total_tokens": 1518819
+    },
+    "S384": {
+      "chunks": 5039,
+      "max_tokens": 384,
+      "median_tokens": 299,
+      "total_tokens": 1386214
+    },
+    "S384-noprefix": {
+      "chunks": 4846,
+      "max_tokens": 384,
+      "median_tokens": 285,
+      "total_tokens": 1274717
+    },
+    "S384-noprefix-nocite": {
+      "chunks": 4744,
+      "max_tokens": 384,
+      "median_tokens": 283,
+      "total_tokens": 1238864
+    },
+    "S512": {
+      "chunks": 3866,
+      "max_tokens": 512,
+      "median_tokens": 399,
+      "total_tokens": 1328921
+    },
+    "boilerplate_paragraphs": 24
+  },
+  "error": null,
+  "git": {
+    "commit": "b9436586215dee9f79ff5b6e64ae2605031c102b",
+    "dirty": true,
+    "dirty_paths": [
+      "config/sources.yaml",
+      "src/econ/config.py",
+      "src/econ/evalr/wipo.py",
+      "src/econ/ingest/parse.py",
+      "tests/test_wipo.py"
+    ]
+  },
+  "git_at_end": {
+    "commit": "b9436586215dee9f79ff5b6e64ae2605031c102b",
+    "dirty": true,
+    "dirty_paths": [
+      "config/sources.yaml",
+      "src/econ/config.py",
+      "src/econ/evalr/wipo.py",
+      "src/econ/ingest/parse.py",
+      "tests/test_wipo.py"
+    ]
+  },
+  "inputs": {},
+  "outputs": {
+    "library/chunks/F384.jsonl": "725708a955c8c82a70dbc5b8d2d66790f1129571be7f70297880e6319a9af341",
+    "library/chunks/S256.jsonl": "8201f06a590c542bd7cffbcb06dfed5568666c5381916ee376b35183d3df368e",
+    "library/chunks/S384-noprefix-nocite.jsonl": "3eae394372b9ef92d9846bb8c71d88e09fa0d04846ff70200dea3c4795a0693b",
+    "library/chunks/S384-noprefix.jsonl": "7408d93e3dd3f9daa56615aca07accb3053e4d37804d89ecf4ecbd75dd0c8789",
+    "library/chunks/S384.jsonl": "3ca9f1ab1b518683c8baa855f69080101b73100ad397228d1eb5772eb19ff29c",
+    "library/chunks/S512.jsonl": "732fbd8c6314ae3103c9091317d369f2a81b9189de78121104d805046ac1c835"
+  },
+  "params": {
+    "strategies": [
+      "F384",
+      "S256",
+      "S384",
+      "S512",
+      "S384-noprefix",
+      "S384-noprefix-nocite"
+    ]
+  },
+  "run_id": "20261020T043552Z",
+  "seconds": 83.1,
+  "status": "passed",
+  "upstream": {
+    "parse": "20261020T043515Z"
+  },
+  "versions": {
+    "docling": "2.140.0",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.0",
+    "pypdfium2": "5.14.0",
+    "python": "3.12.3",
+    "sentence-transformers": "6.1.0",
+    "tokenizers": "0.23.3",
+    "torch": "2.14.1+cpu"
+  },
+  "warnings": []
+}

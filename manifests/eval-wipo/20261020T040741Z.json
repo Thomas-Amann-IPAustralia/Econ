@@ -1,0 +1,47 @@
+{
+  "argv": [
+    "eval-wipo"
+  ],
+  "command": "eval-wipo",
+  "config_hash": "c533bebfe56aef06",
+  "counts": {
+    "ipa_needs": 114,
+    "variants": 6,
+    "wipo_needs": 66
+  },
+  "error": null,
+  "git": {
+    "commit": "b9436586215dee9f79ff5b6e64ae2605031c102b",
+    "dirty": false,
+    "dirty_paths": []
+  },
+  "git_at_end": {
+    "commit": "b9436586215dee9f79ff5b6e64ae2605031c102b",
+    "dirty": false,
+    "dirty_paths": []
+  },
+  "inputs": {},
+  "outputs": {
+    "reports/retrieval-wipo-v1.md": "f31275cb065a17d0cd571dc6c02aad814ec819f8710846657674d3dbf7de8df2"
+  },
+  "params": {
+    "grid": "wipo-v1"
+  },
+  "run_id": "20261020T040741Z",
+  "seconds": 1584.1,
+  "status": "passed",
+  "upstream": {
+    "chunk": "20261020T035259Z"
+  },
+  "versions": {
+    "docling": "2.140.0",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.0",
+    "pypdfium2": "5.14.0",
+    "python": "3.12.3",
+    "sentence-transformers": "6.1.0",
+    "tokenizers": "0.23.3",
+    "torch": "2.14.1+cpu"
+  },
+  "warnings": []
+}

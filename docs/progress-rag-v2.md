@@ -253,3 +253,16 @@ OpenAI), not run.
 - At the owner's request: a claim citing several sentences shows each in its own colour and number (pink, green,
   violet, then grey), the same in its card and in the trail; palette checked with the dataviz validator in both
   themes. Checked headless; no model calls, no spend.
+
+## 2026-10-20 — The WIPO documents (D-033)
+- The bucket's new `WIPO/` folder: six PDFs (759 pages) and the GII 2026 data file. Registered (publisher per
+  document; the spreadsheet as a data file for the GII), fetched, swept (no high findings), parsed, chunked.
+- Parse: the GII ran out of memory whole; long documents now parse in cached 25-page batches. Two container
+  restarts and the 2-hour limit on background commands cost about three hours of parsing; detached runs and
+  batch caching got it through. Docling took about 40 s a page on the GII's 139 economy-profile pages.
+- Found: Docling labels each profile table a document index, which the parse drops, so the profiles were
+  missing from the text entirely. Grid wipo-v1 (66 new needs, no model calls) chose writing them from WIPO's
+  data file: profile figures ndcg@10 0.000 to 0.876; IP Australia needs unchanged within error (-0.004).
+- The library holds 2,847 WIPO passages; the serving index is unchanged. For the owner: notes (~US$0.21),
+  prompt versions for a two-publisher corpus, publishing the PDFs. 138 tests pass. No spend.
+- Two failed sweep manifests were deleted by mistake before being committed (recorded in D-033).

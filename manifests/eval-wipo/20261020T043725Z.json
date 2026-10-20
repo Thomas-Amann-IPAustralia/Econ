@@ -1,0 +1,59 @@
+{
+  "argv": [
+    "eval-wipo"
+  ],
+  "command": "eval-wipo",
+  "config_hash": "ae43c56e8946bad9",
+  "counts": {
+    "ipa_needs": 114,
+    "variants": 6,
+    "wipo_needs": 66
+  },
+  "error": null,
+  "git": {
+    "commit": "b9436586215dee9f79ff5b6e64ae2605031c102b",
+    "dirty": true,
+    "dirty_paths": [
+      "config/sources.yaml",
+      "src/econ/config.py",
+      "src/econ/evalr/wipo.py",
+      "src/econ/ingest/parse.py",
+      "tests/test_wipo.py"
+    ]
+  },
+  "git_at_end": {
+    "commit": "b9436586215dee9f79ff5b6e64ae2605031c102b",
+    "dirty": true,
+    "dirty_paths": [
+      "config/sources.yaml",
+      "src/econ/config.py",
+      "src/econ/evalr/wipo.py",
+      "src/econ/ingest/parse.py",
+      "tests/test_wipo.py"
+    ]
+  },
+  "inputs": {},
+  "outputs": {
+    "reports/retrieval-wipo-v1.md": "73859ee700f9d5315b54a57cab2d8f434992c34839fedf6e3c04e5d697b3acff"
+  },
+  "params": {
+    "grid": "wipo-v1"
+  },
+  "run_id": "20261020T043725Z",
+  "seconds": 396.3,
+  "status": "passed",
+  "upstream": {
+    "chunk": "20261020T043552Z"
+  },
+  "versions": {
+    "docling": "2.140.0",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.0",
+    "pypdfium2": "5.14.0",
+    "python": "3.12.3",
+    "sentence-transformers": "6.1.0",
+    "tokenizers": "0.23.3",
+    "torch": "2.14.1+cpu"
+  },
+  "warnings": []
+}

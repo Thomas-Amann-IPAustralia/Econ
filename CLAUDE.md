@@ -18,6 +18,13 @@ with the answer's prose streamed while it is written (D-024), then answer-v4 (no
 and answer-v5 (sentence citations written by code, D-026); the answer view draws cited prose in navy, lists
 claims in a tab, and exports the conversation as JSON (D-030 to D-032). The scanned reports' garbled OCR is repaired (D-022). Progress log: `docs/progress-rag-v2.md`.
 
+**WIPO documents (D-033): in the library, not yet served.** Six WIPO PDFs (759 pages: GII 2026, its
+Australia page, the PCT and Madrid yearly reviews 2026, World IP Indicators 2025, World Intangible Investment
+Highlights 2026) and the GII 2026 data file, in the bucket's `WIPO/` folder. Parsed and chunked (2,847
+passages); the GII's 139 economy profiles are written from the data file (`econ.ingest.gii`), since Docling
+drops their tables. The serving index waits for their context notes (paid), and the plan, filter and answer
+prompts still describe a corpus of IP Australia publications only.
+
 The method is `docs/sop-agent-construction-v2.md` (the owner's SOP). Read `docs/decisions.md` (the
 decision log) and the latest `docs/handover-*.md` before acting.
 
@@ -67,9 +74,10 @@ decision log) and the latest `docs/handover-*.md` before acting.
 |---|---|---|---|
 | Fetch | `econ fetch` | R2 | `data/raw/*.pdf` (ignored) |
 | Sweep | `econ sweep` | raw PDFs | `library/sweep.json` |
-| Parse | `econ parse --workers 2` | raw PDFs | `library/elements/*.jsonl`, `library/parse.json` |
+| Parse | `econ parse --workers 2` | raw PDFs (+ data files, D-033) | `library/elements/*.jsonl`, `library/parse.json` |
 | Chunk | `econ chunk` | elements | `library/chunks/<strategy>.jsonl` |
 | Measure | `econ eval-retrieval --stage chunking\|embedders\|fusion` | chunks, silver set | `eval/runs/`, `reports/retrieval-*.md` |
+| Measure (WIPO) | `econ eval-wipo` | chunks, Docling cache, wipo-v1 set | `eval/runs/wipo-v1/`, `reports/retrieval-wipo-v1.md` |
 | Measure (judged) | `econ eval-retrieval-v2 --stage stage1\|stage2\|final` | cached plans, notes, reranker scores, judgments | `eval/runs/retrieval-v2/`, `reports/retrieval-v2-*.md` |
 | Top up (paid) | `econ judge-topup [--confirm]` | measured contexts, judgments | `eval/judgments/judged-v1.jsonl` |
 | Index | `econ index` | adopted chunks, context notes | `library/index/` |
