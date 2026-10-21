@@ -59,6 +59,11 @@
             </div>
           </div>
           <form id="ask" class="ask" autocomplete="off">
+            <div class="sources" role="group" aria-labelledby="sources-label">
+              <span class="sources-label" id="sources-label">Search</span>
+              <span class="sources-switches" id="sources"></span>
+              <span class="sources-note muted" id="sources-note" aria-live="polite"></span>
+            </div>
             <label for="q" class="sr">Your question</label>
             <textarea id="q" rows="2" placeholder="Ask a question about patents, trade marks, designs, innovation…" required maxlength="2000"></textarea>
             <details class="extra" id="extra">
@@ -97,7 +102,7 @@
         <h3>What happens when you ask a question</h3>
         <ol>
           <li><strong>Understand the question.</strong> A small AI model rewrites a follow-up question so it makes sense on its own, and breaks a broad question into up to four separate searches. You can see the searches it chose in the evidence trail.</li>
-          <li><strong>Search the publications.</strong> Each search looks for passages two ways: by meaning, and by the exact words used. The two result lists are combined, and the best 60 passages go forward, with no more than eight from any one document so that one report can't crowd out the rest.</li>
+          <li><strong>Search the publications.</strong> The switches above the question box choose whose publications are searched: IP Australia's, WIPO's, or both combined (the default). Each search looks for passages two ways: by meaning, and by the exact words used. The two result lists are combined, and the best 60 passages go forward, with no more than eight from any one document so that one report can't crowd out the rest.</li>
           <li><strong>Choose the best evidence.</strong> A small AI model reads all 60 passages and rates how useful each would be for answering your question. The 20 rated highest become the evidence. It only chooses passages and never changes their text. The evidence trail lists all 60 with their ratings, so you can see what was left out.</li>
           <li><strong>Write the answer.</strong> A larger AI model writes the answer from those 20 passages and nothing else. It doesn't copy quotes itself. Instead it points to the numbered sentences each statement rests on, and the system copies those sentences, word for word, from the publication.</li>
           <li><strong>Check the answer.</strong> Ordinary code, not an AI model, then checks that every cited sentence comes from a passage the model was actually given, and that every claim in the answer is backed by at least one. If the answer fails, the model gets one more try. An answer that still fails is shown with a warning.</li>

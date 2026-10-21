@@ -32,7 +32,7 @@ const pages = (p) => (p.length === 1 ? `p. ${p[0]}` : `pp. ${p[0]}–${p[p.lengt
 
 // One conversation per page; its id groups the conversation's traces (D-022).
 const newId = () => (crypto.randomUUID ? crypto.randomUUID() : Array.from(crypto.getRandomValues(new Uint8Array(16)), (b) => b.toString(16).padStart(2, "0")).join(""));
-const state = { docs: {}, turns: [], selected: null, health: null, session: newId() };
+const state = { docs: {}, turns: [], selected: null, health: null, session: newId(), publishers: [], sourcesOn: new Set() };
 
 // --- the theme: the reader's choice if they made one (remembered in this browser), otherwise the system's --
 
@@ -121,6 +121,56 @@ async function loadCatalogue() {
   for (const sel of [$("#y0"), $("#y1")]) sel.replaceChildren(...years.map((y) => h("option", { value: y }, y)));
   $("#y0").value = years[0];
   $("#y1").value = years[years.length - 1];
+  initSources(list);
+}
+
+// --- the source switches: search one publisher's documents, or both combined (the default) -----------------
+
+// "World Intellectual Property Organization (WIPO)" is shown as "WIPO".
+const shortPublisher = (p) => (p.match(/\(([^)]+)\)\s*$/) || [, p])[1];
+
+function initSources(list) {
+  state.publishers = [...new Set(list.map((d) => d.publisher).filter(Boolean))].sort();
+  let saved = null;
+  try { saved = JSON.parse(localStorage.getItem("econ-sources") || "null"); } catch (e) { /* not remembered */ }
+  const keep = Array.isArray(saved) ? saved.filter((p) => state.publishers.includes(p)) : [];
+  state.sourcesOn = new Set(keep.length ? keep : state.publishers);
+  const box = $("#sources");
+  box.replaceChildren(...state.publishers.map((p) => h("button", {
+    type: "button", class: "source-switch", role: "switch", "data-publisher": p,
+    title: `Search ${p}'s publications`, onclick: () => toggleSource(p),
+  }, h("span", { class: "track", "aria-hidden": "true" }, h("span", { class: "knob" })),
+    h("span", {}, shortPublisher(p)), h("span", { class: "state", "aria-hidden": "true" }))));
+  showSources();
+}
+
+function toggleSource(p) {
+  if (state.sourcesOn.has(p)) {
+    if (state.sourcesOn.size === 1) return showSources("At least one source must stay on.");
+    state.sourcesOn.delete(p);
+  } else state.sourcesOn.add(p);
+  try { localStorage.setItem("econ-sources", JSON.stringify([...state.sourcesOn])); } catch (e) { /* not remembered; still applied */ }
+  showSources();
+}
+
+// The publishers to send with a question: null when every one is on, so the request is the same as before.
+function chosenPublishers() {
+  return state.sourcesOn.size && state.sourcesOn.size < state.publishers.length ? [...state.sourcesOn].sort() : null;
+}
+
+function sourcesText(pubs) {
+  return pubs ? `${pubs.map(shortPublisher).join(" and ")} only` : "All publishers, combined";
+}
+
+function showSources(warning) {
+  for (const b of document.querySelectorAll(".source-switch")) {
+    const on = state.sourcesOn.has(b.dataset.publisher);
+    b.setAttribute("aria-checked", String(on));
+    $(".state", b).textContent = on ? "On" : "Off";
+  }
+  const note = $("#sources-note");
+  note.classList.toggle("warn", !!warning);
+  note.textContent = warning || (state.publishers.length > 1 ? sourcesText(chosenPublishers()) : "");
 }
 
 // --- asking -----------------------------------------------------------------------------------------------
@@ -148,13 +198,15 @@ async function ask(question, context) {
   const years = [+$("#y0").value, +$("#y1").value].sort((a, b) => a - b);
   const allYears = Object.values(state.docs).map((d) => d.year);
   const filtered = allYears.length && (years[0] > Math.min(...allYears) || years[1] < Math.max(...allYears));
+  const publishers = chosenPublishers();
   const turn = { question, context, events: {}, checks: [], el: null, t0: performance.now(), shown: {},
-    askedAt: new Date().toISOString(), years: filtered ? years : null };
+    askedAt: new Date().toISOString(), years: filtered ? years : null, publishers };
   state.turns.push(turn);
   showChatBar();
   $("#thread").append(h("div", { class: "msg user" }, question,
     context ? h("span", { class: "ctxnote" }, `+ ${context.length.toLocaleString()} characters of your material`) : null,
-    filtered ? h("span", { class: "ctxnote" }, `Limited to ${years[0]}–${years[1]}`) : null));
+    filtered ? h("span", { class: "ctxnote" }, `Limited to ${years[0]}–${years[1]}`) : null,
+    publishers ? h("span", { class: "ctxnote" }, `Searching ${sourcesText(publishers)}`) : null));
   const bot = h("div", { class: "msg bot", tabindex: "0", onclick: () => {
     select(turn);
     if (narrow()) $("#trail").scrollIntoView({ behavior: "smooth" });
@@ -175,7 +227,7 @@ async function ask(question, context) {
     const resp = await fetch(`${API}/api/ask`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ question, context, history, years: filtered ? years : null, session_id: state.session }),
+      body: JSON.stringify({ question, context, history, years: filtered ? years : null, publishers, session_id: state.session }),
     });
     if (!resp.ok) {
       const msg = (await resp.json().catch(() => ({}))).detail || `The server answered ${resp.status}.`;
@@ -600,6 +652,7 @@ function exportTurn(t, i) {
     question: t.question,
     pasted_context: t.context || null,
     years: t.years,
+    publishers: t.publishers ?? null,
     status: e.error ? "error" : e.done ? (e.done.outcome || e.done.mode) : "in progress",
     request_id: e.meta?.request_id ?? null,
     mode: e.meta?.mode ?? null,

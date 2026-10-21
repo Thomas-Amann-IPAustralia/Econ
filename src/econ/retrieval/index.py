@@ -57,6 +57,8 @@ class Index:
             raise RuntimeError("index files are not row-aligned; rebuild with `econ index`")
         self.doc_of = np.array([c["doc_id"] for c in self.chunks])
         self.year_of = np.array([self.docs[c["doc_id"]]["year"] for c in self.chunks])
+        self.publisher_of = np.array([self.docs[c["doc_id"]].get("publisher", "") for c in self.chunks])
+        self.publishers = sorted({d.get("publisher", "") for d in self.docs.values()} - {""})
 
     def indexed_text(self, row: int) -> str:
         """The text both lanes indexed for a chunk: its context note (D-013), if any, then its embed_text."""
@@ -68,13 +70,20 @@ class Index:
         )
 
     def allowed(
-        self, doc_ids: list[str] | None = None, years: tuple[int, int] | None = None
+        self,
+        doc_ids: list[str] | None = None,
+        years: tuple[int, int] | None = None,
+        publishers: list[str] | None = None,
     ) -> np.ndarray | None:
-        if not doc_ids and not years:
+        """The rows a search may rank: the reader's choice of documents, years and publishers (the source
+        switches on the front end), or None for all of them."""
+        if not doc_ids and not years and not publishers:
             return None
         mask = np.ones(len(self.chunks), dtype=bool)
         if doc_ids:
             mask &= np.isin(self.doc_of, doc_ids)
+        if publishers:
+            mask &= np.isin(self.publisher_of, publishers)
         if years:
             mask &= (self.year_of >= years[0]) & (self.year_of <= years[1])
         return mask
