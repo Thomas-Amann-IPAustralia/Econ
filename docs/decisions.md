@@ -1524,3 +1524,21 @@ Render's log now show both publishers' passages, each named with its publisher t
 models. `econ verify-search` replays the filter-v1 ratings measured in D-018, so its filter rows no longer
 describe the served prompt until filter-v2 is measured on the judged set. Live on the merge to `main`
 (Render and Pages deploy from it). **Spend:** none.
+
+## D-036 — Source switches: search IP Australia's documents, WIPO's, or both (the owner, 2026-10-21)
+
+**Request.** "Add a big ol' switch I can flip on the UI to enable and disable either the IP Australia sources
+or the WIPO sources … choose between whether to separate or combine the sources."
+
+**Built.** Above the question box, one large on/off switch per publisher in the catalogue (IP Australia,
+WIPO), both on by default; at least one stays on. The reader's choice is remembered in their browser. When
+one is off, the question carries `publishers` (`POST /api/ask` and `/api/search`; unknown names are a 400)
+and search ranks only that publisher's passages (`Index.allowed`, the same mask as the year and document
+filters), so the plan, the filter and the answer see nothing else. With both on the request is unchanged
+(`publishers` is null) and so is the service. The `meta` event, the trace's search input, Render's log and
+the JSON export record the choice; the question's bubble says "Searching … only".
+
+**Not measured.** Nothing about retrieval or the prompts changes. With WIPO alone the filter reads at most
+48 passages (6 documents, at most 8 from each), not 60. answer-v6 was written for two publishers; with one,
+it names that publisher's findings as before and reports what the other would have covered as a gap.
+**Spend:** none.

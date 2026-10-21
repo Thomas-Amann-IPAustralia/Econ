@@ -61,6 +61,7 @@ class Request:
     context: str = ""
     doc_ids: list[str] | None = None
     years: tuple[int, int] | None = None
+    publishers: list[str] | None = None  # the publishers the reader switched on; None for all
     session_id: str | None = None  # one per conversation, from the front end; groups its traces
 
 
@@ -446,6 +447,7 @@ def _run(req: Request, svc: Services, root) -> Iterator[dict]:
         "plan_model": getattr(p, "plan_model", None),
         "index": {k: svc.index.meta[k] for k in ("strategy", "embedder", "revision", "chunks", "built_from")},
         "prompt": scfg.answer.prompt if svc.model else None,
+        "publishers": req.publishers,
     }
 
     # --- plan --------------------------------------------------------------------------------------
@@ -512,7 +514,7 @@ def _run(req: Request, svc: Services, root) -> Iterator[dict]:
     search_obs = root.child(
         "econ.search",
         as_type="retriever",
-        input={"queries": queries, "doc_ids": req.doc_ids, "years": req.years},
+        input={"queries": queries, "doc_ids": req.doc_ids, "years": req.years, "publishers": req.publishers},
     )
     qvecs, dense_status = None, "ok"
     if svc.embedder.configured:
@@ -524,7 +526,7 @@ def _run(req: Request, svc: Services, root) -> Iterator[dict]:
         dense_status = "not configured; keyword search only"
     timings["embed"] = round(time.time() - t, 2)
     t = time.time()
-    allowed = svc.index.allowed(req.doc_ids, req.years)
+    allowed = svc.index.allowed(req.doc_ids, req.years, req.publishers)
     ranked, traces = svc.index.search(queries, qvecs, allowed=allowed)
     # The reranker compares passages with the question as asked (as measured, D-012); in a conversation, with
     # the planner's standalone rewrite, or without a planner, the previous question and this one.

@@ -149,3 +149,26 @@ def test_the_log_lists_every_passage_read_compactly():
         {"chunk_id": "a:1", "search_rank": 1, "filter_grade": 3, "selected": True, "n": 1},
         {"chunk_id": "a:2", "search_rank": 2, "filter_grade": 0, "selected": False, "n": None},
     ]
+
+
+def test_the_source_switches_limit_search_to_the_publishers_chosen(index_dir, monkeypatch):
+    for k in ("OPENAI_API_KEY", "GEMINI_API_KEY", "EMBEDDER_URL"):
+        monkeypatch.delenv(k, raising=False)
+    docs = json.loads((index_dir / "docs.json").read_text())
+    docs["doc-b"]["publisher"] = "Other"
+    (index_dir / "docs.json").write_text(json.dumps(docs))
+    from econ.service.app import create_app
+
+    client = TestClient(create_app())
+
+    def found(publishers):
+        body = {"question": "design registrations among small firms", "publishers": publishers}
+        events = client.post("/api/ask?stream=false", json=body).json()["events"]
+        assert events[0]["publishers"] == publishers
+        r = next(e for e in events if e["event"] == "retrieval")
+        return {e["chunk_id"].split(":")[0] for e in r["evidence"]}
+
+    assert found(None) == {"doc-a", "doc-b"}
+    assert found(["Test", "Other"]) == {"doc-a", "doc-b"}
+    assert found(["Other"]) == {"doc-b"} and found(["Test"]) == {"doc-a"}
+    assert client.post("/api/ask", json={"question": "hello", "publishers": ["Nobody"]}).status_code == 400

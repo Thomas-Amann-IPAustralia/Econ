@@ -123,6 +123,8 @@ decision log) and the latest `docs/handover-*.md` before acting.
   read, with its search rank, rating and whether it was chosen; the trail and Render's log show all 60.
   Measured: ndcg@10 0.672 to 0.846, broad questions' evidence reached 0.491 to 0.635, answers preferred 28 to
   8 (Gemini) and 17 to 4 (Claude, blind). About $0.002 and 4.4 s a question.
+- **Source switches** (D-036): the front end can limit a question to one publisher (`publishers` on the API,
+  the same mask as the year filter); both on, the default, sends nothing and changes nothing.
 - If the embedder fails, search runs on BM25 alone and says so. Tokenising is per thread (the shared
   stemmer corrupted stems under concurrency, D-013).
 

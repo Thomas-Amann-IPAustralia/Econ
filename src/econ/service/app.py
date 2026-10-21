@@ -42,6 +42,8 @@ class AskIn(BaseModel):
     context: str = ""
     doc_ids: list[str] | None = None
     years: tuple[int, int] | None = None
+    # The publishers whose documents may be searched (the front end's source switches); None for all.
+    publishers: list[str] | None = None
     # One per conversation, made by the front end; it groups the conversation's traces into a session.
     session_id: str | None = Field(None, pattern="^[A-Za-z0-9-]{8,64}$")
 
@@ -50,6 +52,7 @@ class SearchIn(BaseModel):
     query: str = Field(min_length=2, max_length=500)
     doc_ids: list[str] | None = None
     years: tuple[int, int] | None = None
+    publishers: list[str] | None = None
 
 
 class Meter:
@@ -208,12 +211,17 @@ def create_app() -> FastAPI:
             unknown = sorted(set(body.doc_ids) - set(index.docs))
             if unknown:
                 raise HTTPException(400, f"unknown documents: {unknown}")
+        if body.publishers:
+            unknown = sorted(set(body.publishers) - set(index.publishers))
+            if unknown:
+                raise HTTPException(400, f"unknown publishers: {unknown}")
         return pipeline.Request(
             question=body.question,
             history=[t.model_dump() for t in body.history],
             context=body.context,
             doc_ids=body.doc_ids,
             years=body.years,
+            publishers=body.publishers,
             session_id=body.session_id,
         )
 
@@ -227,6 +235,7 @@ def create_app() -> FastAPI:
                 "commit": build["commit"],
                 "question": req.question,
                 "context_chars": len(req.context),
+                "publishers": req.publishers,
                 "events": [log_view(e) for e in events],
             }
             print(json.dumps(log, ensure_ascii=False, default=str), flush=True)
@@ -263,7 +272,10 @@ def create_app() -> FastAPI:
 
     @app.post("/api/search")
     def search(body: SearchIn, request: Request) -> dict:
-        req = validate(AskIn(question=body.query, doc_ids=body.doc_ids, years=body.years), request)
+        req = validate(
+            AskIn(question=body.query, doc_ids=body.doc_ids, years=body.years, publishers=body.publishers),
+            request,
+        )
         svc = pipeline.Services(index=index, embedder=embedder)
         return {"events": list(pipeline.run(req, svc))}
 
