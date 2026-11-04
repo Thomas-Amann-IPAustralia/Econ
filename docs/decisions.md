@@ -1619,3 +1619,29 @@ waits for credit on (or a funded replacement of) the environment's key; nothing 
 refused again with "Your API key has expired. Create a new API key to continue." (`expired_secret_key`; the free
 model list says the same; US$0.00 spent). The key stored in the session environment is itself expired; it needs
 replacing with a new key, not credit.
+
+## D-039 — The atlas chat's smoke test: every answer passes, none states a cause; atlas-answer-v2; recommend adopting (Claude, 2026-11-04)
+
+**Run** (`econ atlas-smoke --confirm`, the owner's budget of up to US$2.00, D-037; the environment's key replaced by
+the owner): 20 of atlas-v1's needs through the full pipeline (gpt-6-luna plans and filters, gpt-6.1-sol answers).
+**Spent US$1.0434** over every call of the test (`eval/spend/ledger.jsonl`, purpose `atlas-smoke-v1:*`). Report:
+`reports/atlas-chat-smoke-v1.md`.
+
+**Found and changed on the way:**
+1. Run 1 (atlas-answer-v1): 18 passed first time, 2 after a retry, none flagged; every lookup and by-id answer cited
+   its gold observation. Reading the answers showed two figures in a list (a29) with no citation: a citation backs only
+   its own line, so the numbers check never saw them (they were right).
+2. **The numbers check widened** (`check.uncited_numbers`): with `numbers_check` on, a number in uncited prose is an
+   error unless the question holds it; an ordinal counts as its digits. The atlas's own check only; Econ's is unchanged.
+3. Run 2 (all 20, v1, the wider check): 16 first time, 3 after a retry, 1 flagged (a29: one citation for a list).
+4. **atlas-answer-v2** (two rules added to v1: each list item that states a number cites its own sentences; gaps mean
+   "partial") and a retry message saying how to fix an uncited number. Configured in `knowledge_bases.atlas`; locked.
+   The four needs run 2 retried were re-run: final state 20 passed (18 first time, 2 after one retry), none flagged.
+5. The runner now counts its budget from the ledger (a re-run had undercounted it in its own summary).
+
+**Read:** no answer stated an association as a cause; every strength named matched the atlas; 4 of 5 out-of-scope
+needs answered "not in the atlas", and the policy question (a37) declined to recommend and answered "partial" with the
+fee evidence labelled as a reading. About US$0.02 and 27 seconds an answer; a retried answer takes about twice as long.
+
+**Recommendation (the owner's decision 5, D-037):** adopt atlas-plan-v1, atlas-filter-v1 and atlas-answer-v2, and
+publish the chat by merging both branches. Adopting and publishing are the owner's.

@@ -3,23 +3,17 @@
 For the next session. Read `CLAUDE.md`, then D-011 to D-021 in `docs/decisions.md`, then this. The running
 log of the session is `docs/progress-rag-v2.md`; the owner's summary is `docs/rag-v2-results-explained.md`.
 
-**Latest (2026-11-04): the evidence atlas is a second knowledge base, built and measured; its smoke test waits
-for a valid OpenAI key (D-037, D-038).** Branch `ccr-eff4672f-j1qrjn`, not merged; nothing published. Read D-038.
-- **Built:** `econ atlas-ingest` (the atlas's passages at commit `3e13aef`, checked, with code-written notes) and
-  `econ index --kb atlas` (`library/atlas/index/`, 4,611 passages, notes not indexed); the service's five routes
-  written once and mounted for each knowledge base (`/api/*` unchanged; `/api/atlas/*` the atlas alone, tests both
-  ways); the atlas's settings in `knowledge_bases.atlas`; prompts atlas-plan-v1, atlas-filter-v1, atlas-answer-v1
-  (locked, not adopted); pins and the numbers check. Memory: 195 MB with both indexes.
-- **Measured, free:** `reports/retrieval-atlas-v1.md`: lookups 20/20 and by-id 5/5 in the 20 passages; adopted
-  notes off, `per_doc_cap` 2, pins that include the Stage 3 page testing a named observation.
-- **Blocked:** the smoke test (WP6). OpenAI refused the key this cloud environment injects for `api.openai.com` (HTTP 401,
-  `expired_secret_key`; the owner says it has no credit; US$0.00 spent). The chatbot's own key on Render is fine. Once the owner replaces it (a new session picks it up): `OPENAI_API_KEY=<placeholder> ECON_ENVIRONMENT=eval
-  uv run econ atlas-smoke --confirm` (stops at US$2.00), then complete `reports/atlas-chat-smoke-v1.md` (the table,
-  every answer read for causes stated from associations, a recommendation on the three prompts: decision 5), write
-  D-039, and record one answered stream as the atlas's browser fixture (`analysis/atlas/fixtures/chat-stream.json`
-  there, now provisional: real retrieval, scripted answer). If a prompt needs changing, make a v2, lock it, and re-run
-  only the failing needs with `--only`.
-- **Then the owner's:** adopt the prompts (decision 5), merge both branches, and publish the atlas page.
+**Latest (2026-11-04): the evidence atlas is a second knowledge base, built, measured and smoke-tested (D-037 to
+D-039).** Branch `ccr-eff4672f-j1qrjn`, not merged; nothing published. Read D-038 and D-039.
+- **Built:** `econ atlas-ingest`, `econ index --kb atlas` (`library/atlas/index/`, 4,611 passages), the five routes
+  mounted for each knowledge base (`/api/atlas/*` apart from Econ's, tests both ways), pins, and the numbers check
+  (claims' numbers in their cited sentences; none in uncited prose). Memory: 195 MB with both indexes.
+- **Measured free:** `reports/retrieval-atlas-v1.md` (lookups 20/20, by-id 5/5; notes off, cap 2).
+- **Smoke test** (`reports/atlas-chat-smoke-v1.md`, US$1.04 of the owner's US$2.00): final state 20/20 passed (18
+  first time), every lookup and by-id answer cites its gold observation, no cause stated from an association, 4 of 5
+  out of scope "not in the atlas" and the policy question declined. atlas-answer-v2 configured.
+- **The owner's:** adopt atlas-plan-v1, atlas-filter-v1 and atlas-answer-v2 (recommended, D-039), merge both
+  branches, and publish the atlas page (its OQ31).
 
 **Status (2026-10-18):** RAG v2 adopted in config and verified. Branch `claude/charming-edison-sg0ehp`
 (not merged). The owner's brief for this session: the best RAG system that stays free to run, up to $2.50

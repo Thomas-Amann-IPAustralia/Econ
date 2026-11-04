@@ -62,7 +62,10 @@ def run(embedder, index, *, only: list[str] | None = None, run_dir: str = RUN) -
     prior = json.loads((out / "summary.json").read_text())["needs"] if (out / "summary.json").exists() else []
     done_ids = {s["id"] for s in prior}
     lines = (out / "events.jsonl").read_text().splitlines() if (out / "events.jsonl").exists() else []
-    summary, run_cost = list(prior), sum(s["cost_usd"] or 0 for s in prior)
+    # The budget counts every call this test has made, from the ledger: a re-run replaces a need's summary
+    # but not what its earlier calls cost.
+    summary = list(prior)
+    run_cost = sum(e["cost_usd"] for e in spend.entries() if e["purpose"].startswith("atlas-smoke-v1:"))
     for nid in only or NEEDS:
         if nid in done_ids and not only:
             continue

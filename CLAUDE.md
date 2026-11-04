@@ -25,17 +25,17 @@ with notes (enrich-v2); 30 documents, 4,744 passages in all. The GII's 139 econo
 the data file (`econ.ingest.gii`), since Docling drops their tables. Prompts for two publishers (plan-v4,
 filter-v2, answer-v6) were measured (D-034) and adopted by the owner (D-035).
 
-**The atlas chat (D-037, D-038): a second knowledge base, built; its smoke test waits for credit on the session environment's OpenAI key (not the chatbot's key).** The
+**The atlas chat (D-037, D-038): a second knowledge base, built and smoke-tested (D-039: every answer passes, none states a cause; US$1.04).** The
 Aus-GII-Breakdown repository's evidence atlas writes its pages as passages (`evidence/data/passages.jsonl` there);
 `econ atlas-ingest` reads them at the commit in `config/atlas.yaml` into `library/atlas/`, and `econ index --kb atlas`
 builds `library/atlas/index/` (4,611 passages; notes written by code but not indexed, measured). The service mounts
 the same five routes for each knowledge base: `/api/*` (Econ, unchanged) and `/api/atlas/*` (the atlas alone); no
 request names a knowledge base, and tests check neither reaches the other's passages. The atlas's settings are
 `knowledge_bases.atlas` in `config/service.yaml` (read by `config.kb("atlas")`; the Econ chat's are `answer` and
-`retrieval`, via `config.kb("econ")`): prompts `atlas-plan-v1`, `atlas-filter-v1`, `atlas-answer-v1` (locked, **not
-adopted**: the owner adopts after the smoke test's report, D-037 decision 5), `per_doc_cap: 2`, pins (ids named put
+`retrieval`, via `config.kb("econ")`): prompts `atlas-plan-v1`, `atlas-filter-v1`, `atlas-answer-v2` (locked, **not
+adopted**: recommended in D-039; the owner adopts, D-037 decision 5), `per_doc_cap: 2`, pins (ids named put
 their observation's own passages first) and the numbers check (every number a claim states is in its cited
-sentences). Keep the atlas out of the Econ chat's routes, prompts and source switches (D-037, decision 4). Measured:
+sentences, and none in uncited prose). Keep the atlas out of the Econ chat's routes, prompts and source switches (D-037, decision 4). Measured:
 `reports/retrieval-atlas-v1.md`; the smoke test (`econ atlas-smoke --confirm`, up to US$2.00) and its report
 `reports/atlas-chat-smoke-v1.md`; the refresh routine: `docs/deploy.md`.
 
@@ -203,7 +203,8 @@ Commit code, run, then commit outputs. Australian spelling, sentence-case headin
 - New high-severity sweep findings on real items: propose allowlist entries.
 - Spending money on model calls: ask before every paid call, however small (D-021), unless the owner has
   given a budget for the work at hand (D-022: up to $3 OpenAI and $2 Gemini; spent $0.06 and $0.26; D-024: up
-  to $0.50 OpenAI, spent $0.38; D-026: up to $0.75 OpenAI, spent $0.42; D-034: up to $1.50, spent $0.95).
+  to $0.50 OpenAI, spent $0.38; D-026: up to $0.75 OpenAI, spent $0.42; D-034: up to $1.50, spent $0.95; D-037: up
+  to $2.00 OpenAI for the atlas smoke test, spent $1.04, D-039).
 - Adopting a measured result outside the choices the owner delegated.
 - Changing the answer format, what the chatbot may refuse, or publishing anything new. The reports' text
   in `library/` and their PDFs on the Pages site are approved, with the acknowledgement in the README
