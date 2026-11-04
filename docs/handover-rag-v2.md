@@ -3,6 +3,13 @@
 For the next session. Read `CLAUDE.md`, then D-011 to D-021 in `docs/decisions.md`, then this. The running
 log of the session is `docs/progress-rag-v2.md`; the owner's summary is `docs/rag-v2-results-explained.md`.
 
+**Planned, not started (2026-11-04): the evidence atlas as a second knowledge base (D-037).** The owner asked for a
+chat in the Aus-GII-Breakdown repository's evidence atlas, adapted from this one. The plan, for one session working
+in both repositories, is that repository's `docs/plan-atlas-chat.md`: this API gains routes under `/api/atlas/` with
+their own index (`library/atlas/`), prompts, pinned observations and a numbers check. This chat's routes, requests
+and behaviour don't change, and neither chat can reach the other's passages. The owner approved it (D-037), with up
+to $2.00 of OpenAI for its smoke test; nothing has been built or spent.
+
 **Status (2026-10-18):** RAG v2 adopted in config and verified. Branch `claude/charming-edison-sg0ehp`
 (not merged). The owner's brief for this session: the best RAG system that stays free to run, up to $2.50
 of OpenAI and $2.50 of Gemini. Spent: OpenAI $2.15, Gemini $1.92 (`eval/spend/ledger.jsonl`).

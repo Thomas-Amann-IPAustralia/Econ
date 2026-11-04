@@ -1542,3 +1542,23 @@ the JSON export record the choice; the question's bubble says "Searching … onl
 48 passages (6 documents, at most 8 from each), not 60. answer-v6 was written for two publishers; with one,
 it names that publisher's findings as before and reports what the other would have covered as a gap.
 **Spend:** none.
+
+## D-037 — A chat for the Aus-GII evidence atlas, served by this API as a second knowledge base (the owner, 2026-11-04)
+
+**Request.** A chat in the Aus-GII-Breakdown repository's evidence atlas, adapting this one's form and ethos. The
+plan is that repository's `docs/plan-atlas-chat.md`, for one session working in both repositories.
+
+**The owner's decisions** (asked as that repository's OQ29, answered A37):
+1. Serve it from this API as a second knowledge base: "Yes, as long as it feels like it's a separate service to the
+   Econ chat that's fine (like, it the atlas kb should only be accessible by the chatbot from the atlas, the UI must
+   also have a slightly different look and feel to better match the atlas)." So the atlas has its own routes
+   (`/api/atlas/`), its own index (`library/atlas/index/`) and its own prompts; the routes fix the knowledge base,
+   no request names one, and neither chat's routes can reach the other's passages. The two chats share one web
+   origin and the API is public, so they are separate in what they search, say, log and look like, not by access
+   control; a second Render service from the same code is the way to separate them fully, if wanted later.
+2. A budget of up to **$2.00 of OpenAI** for the atlas chat's smoke test.
+3. The **$2.00 daily cap stays, shared** by both chats.
+4. The atlas stays **out of this chat** for now: no source switch, parameter or prompt here changes.
+5. The atlas prompts are adopted, and the chat published, only after the owner reads the smoke test's report.
+
+**Spend:** none yet. What is built, measured and spent will be D-038.
