@@ -12,8 +12,8 @@ for a valid OpenAI key (D-037, D-038).** Branch `ccr-eff4672f-j1qrjn`, not merge
   (locked, not adopted); pins and the numbers check. Memory: 195 MB with both indexes.
 - **Measured, free:** `reports/retrieval-atlas-v1.md`: lookups 20/20 and by-id 5/5 in the 20 passages; adopted
   notes off, `per_doc_cap` 2, pins that include the Stage 3 page testing a named observation.
-- **Blocked:** the smoke test (WP6). The environment's OpenAI key has expired (HTTP 401 on the first call; US$0.00
-  spent). Once the owner replaces it (a new session picks it up): `OPENAI_API_KEY=<placeholder> ECON_ENVIRONMENT=eval
+- **Blocked:** the smoke test (WP6). OpenAI refused the key this cloud environment injects for `api.openai.com` (HTTP 401,
+  `expired_secret_key`; the owner says it has no credit; US$0.00 spent). The chatbot's own key on Render is fine. Once the owner replaces it (a new session picks it up): `OPENAI_API_KEY=<placeholder> ECON_ENVIRONMENT=eval
   uv run econ atlas-smoke --confirm` (stops at US$2.00), then complete `reports/atlas-chat-smoke-v1.md` (the table,
   every answer read for causes stated from associations, a recommendation on the three prompts: decision 5), write
   D-039, and record one answered stream as the atlas's browser fixture (`analysis/atlas/fixtures/chat-stream.json`

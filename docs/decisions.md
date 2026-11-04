@@ -1609,3 +1609,8 @@ report, and records the recommendation as D-039.
 **The refresh routine** (also in `docs/deploy.md`): after an atlas change that should reach the chat, run
 `econ atlas-ingest --ref <the atlas commit>`, set that sha in `config/atlas.yaml`, run `econ index --kb atlas`, commit
 and merge; Render redeploys. Until then the atlas page says which version the chat reads.
+
+**Correction to D-038 (2026-11-04, the same day).** D-038 says the environment's OpenAI key "has expired", reading
+OpenAI's error code (`expired_secret_key`) alone. The owner has confirmed that the key this cloud session's environment
+injects for `api.openai.com` has no credit left, and that the chatbot's own key, on Render, is fine. The smoke test
+waits for credit on (or a funded replacement of) the environment's key; nothing else in D-038 changes.

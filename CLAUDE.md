@@ -25,7 +25,7 @@ with notes (enrich-v2); 30 documents, 4,744 passages in all. The GII's 139 econo
 the data file (`econ.ingest.gii`), since Docling drops their tables. Prompts for two publishers (plan-v4,
 filter-v2, answer-v6) were measured (D-034) and adopted by the owner (D-035).
 
-**The atlas chat (D-037, D-038): a second knowledge base, built; its smoke test waits for a valid OpenAI key.** The
+**The atlas chat (D-037, D-038): a second knowledge base, built; its smoke test waits for credit on the session environment's OpenAI key (not the chatbot's key).** The
 Aus-GII-Breakdown repository's evidence atlas writes its pages as passages (`evidence/data/passages.jsonl` there);
 `econ atlas-ingest` reads them at the commit in `config/atlas.yaml` into `library/atlas/`, and `econ index --kb atlas`
 builds `library/atlas/index/` (4,611 passages; notes written by code but not indexed, measured). The service mounts
