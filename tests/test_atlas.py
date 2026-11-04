@@ -346,3 +346,15 @@ def test_a_number_not_in_the_cited_sentence_is_sent_back_then_flagged(atlas_inde
     assert evs[-1]["outcome"] == "flagged"
     retry = [c for c in m.calls if c["schema_name"] == "answer"][1]["user"]
     assert "32.5" in retry and "<errors>" in retry
+
+
+def test_a_number_in_uncited_prose_is_an_error_unless_the_question_holds_it():
+    from econ.answer.check import uncited_numbers
+
+    answer = "Shares by filer:\n- **14.33%** for organisations;\n- **12.75%** overseas [2].\nIn 2019, nothing [1]. Rank 20th."
+    errs = uncited_numbers(answer, "What was the rank in 2019?")
+    assert errs == [
+        "the answer states 14.33% without citing a sentence that holds it",
+        "the answer states 20 without citing a sentence that holds it",
+    ]
+    assert uncited_numbers("Stage 3 and section 1.2 say so [1].", "x") == []

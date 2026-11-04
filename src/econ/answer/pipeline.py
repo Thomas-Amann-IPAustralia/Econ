@@ -44,7 +44,7 @@ from pydantic import ValidationError
 
 from econ import config, textcheck, tracing
 from econ.answer import cite, prompts
-from econ.answer.check import Result, check, numbers_check
+from econ.answer.check import Result, check, numbers_check, uncited_numbers
 from econ.answer.providers import Model, ProviderError, Usage
 from econ.answer.schema import Answer, AnswerV5, Grades, Plan, strict_schema
 from econ.kb.bm25 import tokenize
@@ -834,8 +834,8 @@ def _run(req: Request, svc: Services, root) -> Iterator[dict]:
                 quote_claim_ratio=a.quote_claim_ratio,
                 max_quote_words=a.max_quote_words,
             )
-        if k.numbers_check:  # the atlas's numbers rule (D-038)
-            nerr = numbers_check(res.claims, ans)
+        if k.numbers_check:  # the atlas's numbers rule (D-038): claims' numbers, and none uncited
+            nerr = numbers_check(res.claims, ans) + uncited_numbers(ans.answer, f"{question} {standalone}")
             if nerr:
                 res = Result(passed=False, errors=res.errors + nerr, claims=res.claims)
         final = (ans, res, attempt)

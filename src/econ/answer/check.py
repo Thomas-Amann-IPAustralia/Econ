@@ -176,9 +176,10 @@ def check(
 # --- the atlas's numbers rule (D-038) ------------------------------------------------------------------------
 
 # A number: an optional sign, digits with optional thousands commas, an optional decimal part, and an optional
-# per cent. Not a number: digits inside a word or an id (M40, FY2010, Q2, U44), or a section's or stage's number.
+# per cent; an ordinal (20th) is its digits. Not a number: digits inside a word or an id (M40, FY2010, Q2, U44), or
+# a section's or stage's number.
 _NUMBER = re.compile(
-    r"(?<![\w.,])([+\-−]?)(\d{1,3}(?:,\d{3})+|\d+)(\.\d+)?(?![\w])(\s*(?:%|per\s+cent\b|percent\b))?",
+    r"(?<![\w.,])([+\-−]?)(\d{1,3}(?:,\d{3})+|\d+)(\.\d+)?(?:st|nd|rd|th)?(?![\w])(\s*(?:%|per\s+cent\b|percent\b))?",
     re.IGNORECASE,
 )
 _NOT_A_FINDING = re.compile(
@@ -220,4 +221,22 @@ def numbers_check(claims: list[dict], ans) -> list[str]:
             if any(e.startswith(f"claim [{c['n']}] states") for e in errors):
                 c["verified"] = False
                 c["errors"] = c["errors"] + [e for e in errors if e.startswith(f"claim [{c['n']}] states")]
+    return errors
+
+
+_RUN = re.compile(r"((?:\[\d{1,3}\][ \t]*)+)")
+
+
+def uncited_numbers(answer: str, asked: str) -> list[str]:
+    """Numbers in prose that cites nothing: on a line with no claim marker, or after a line's last marker (the
+    assistant's own words, by the rule of `cite._claim_text`). The atlas's numbers rule holds a number to its page,
+    so an uncited number is an error, unless the question itself holds it (a year the reader asked about)."""
+    allowed = {v for v, _, _ in numbers_in(asked)}
+    errors = []
+    for line in answer.split("\n"):
+        own = _RUN.split(line)[-1]
+        for value, neg, pct in numbers_in(own, skip_labels=True):
+            if value not in allowed:
+                shown = ("-" if neg else "") + value + ("%" if pct else "")
+                errors.append(f"the answer states {shown} without citing a sentence that holds it")
     return errors
