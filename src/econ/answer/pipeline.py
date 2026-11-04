@@ -483,24 +483,31 @@ _OBS_ID = re.compile(r"\b([UBM]\d{1,3})\b")
 
 
 # The parts of an observation's page that are pinned, in order: its own statement, how Stage 3 tested it (or, on a
-# Stage 3 page, what it follows from), then its key figures.
-PIN_PARTS = ("Observation {id} (", "What Stage 3 found", "How this follows from the earlier stages", "Key figures")
+# Stage 3 page, what it follows from), then its key figures. The Stage 3 observations that tested a named one (named
+# in its "What Stage 3 found") have their statements pinned after its own Stage 3 part, so "did B6 survive?" reads M1.
+PIN_PARTS = (
+    "Observation {id} (",
+    "What Stage 3 found",
+    "How this follows from the earlier stages",
+    "Key figures",
+)
 
 
 def pinned_rows(
     svc: Services, texts: list[str], observations: list[str] | None
 ) -> tuple[list[str], list[int]]:
     """The atlas chat's pins (D-038): observations sent with the question, then ids the question names (existing
-    ones only, at most `max_observations`), and for each the parts of its page in PIN_PARTS, at most `max_pinned`
-    passages in all. Each observation's statement comes before any one's other parts, so several ids all get
-    theirs. They go first in the evidence, outside the filter."""
+    ones only, at most `max_observations`), and for each the parts of its page in PIN_PARTS, plus the statements of
+    the Stage 3 observations that tested it; at most `max_pinned` passages in all. Each observation's statement comes
+    before any one's other parts, so several ids all get theirs. They go first in the evidence, outside the filter."""
     k = settings(svc)
     ids: list[str] = []
     for i in [*(observations or []), *(m for t in texts for m in _OBS_ID.findall(t))]:
         if i not in ids and f"atlas-{i}" in svc.index.docs:
             ids.append(i)
     ids = ids[: k.max_observations]
-    found: list[tuple[int, int, int]] = []  # (part, position of the id, row)
+    found: list[tuple[float, int, int]] = []  # (part, position of the id, row)
+    later: list[str] = []
     for pos, i in enumerate(ids):
         for row, c in enumerate(svc.index.chunks):
             if c["doc_id"] != f"atlas-{i}" or not c["section"]:
@@ -508,7 +515,21 @@ def pinned_rows(
             for part, head in enumerate(PIN_PARTS):
                 if c["section"][0].startswith(head.format(id=i)):
                     found.append((part, pos, row))
+                    if head == "What Stage 3 found":
+                        later += [
+                            m
+                            for m in re.findall(r"\bM\d{1,3}\b", c["text"])
+                            if m not in ids and m not in later
+                        ]
                     break
+    for pos, m in enumerate(later):
+        for row, c in enumerate(svc.index.chunks):
+            if (
+                c["doc_id"] == f"atlas-{m}"
+                and c["section"]
+                and c["section"][0].startswith(f"Observation {m} (")
+            ):
+                found.append((1.5, pos, row))
     return ids, [row for _, _, row in sorted(found)][: k.max_pinned]
 
 

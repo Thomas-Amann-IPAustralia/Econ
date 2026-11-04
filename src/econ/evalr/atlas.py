@@ -7,8 +7,8 @@ the right pages:
   reads;
 - exploratory needs: the recall of their gold sets in the context and in the pool.
 
-Variants: the code-written context notes on and off (both lanes); `per_doc_cap` 4 and 8; and pinning (D-038) on
-and off, which matters only where the question names an id. The notes-off vectors are cached in data/ (ignored).
+Variants: the code-written context notes on and off (both lanes); `per_doc_cap` 2, 3, 4 and 8; and pinning (D-038)
+on and off, which matters only where the question names an id. The notes-off vectors are cached in data/ (ignored).
 """
 
 from __future__ import annotations
@@ -41,17 +41,25 @@ def _cache(name: str) -> Path:
     return d / name
 
 
-def plain_lanes(idx: Index, emb) -> tuple[np.ndarray, BM25]:
-    """The index's lanes without the context notes: the passage text alone."""
-    texts = [c["embed_text"] for c in idx.chunks]
-    key = hashlib.sha256("\n\0".join(texts).encode()).hexdigest()[:16]
-    p = _cache(f"vectors-nonotes-{key}.npy")
+def cached_doc_vectors(texts: list[str], emb) -> np.ndarray:
+    """The embedder's document vectors for `texts`, kept in data/cache/atlas (ignored) by a hash of the texts and
+    the model, so a measured variant can be indexed without embedding it again."""
+    key = hashlib.sha256(("\n\0".join(texts) + f"\0{emb.meta.get('onnx_sha256')}").encode()).hexdigest()[:16]
+    p = _cache(f"vectors-{key}.npy")
     if p.exists():
-        vecs = np.load(p)
-    else:
-        vecs = emb.encode(texts, kind="doc").astype(np.float32)
-        np.save(p, vecs)
-    return vecs, BM25.build(texts)
+        return np.load(p)
+    vecs = emb.encode(texts, kind="doc").astype(np.float32)
+    np.save(p, vecs)
+    return vecs
+
+
+def lanes(idx: Index, emb, *, notes: bool) -> tuple[np.ndarray, BM25]:
+    """Both lanes over the passage text, with or without its context note in front."""
+    texts = [
+        ((c.get("context_note") or "") + "\n\n" + c["embed_text"]).strip() if notes else c["embed_text"]
+        for c in idx.chunks
+    ]
+    return cached_doc_vectors(texts, emb), BM25.build(texts)
 
 
 def query_vectors(needs: list[dict], emb) -> np.ndarray:
@@ -111,17 +119,25 @@ def run(emb) -> dict:
     idx = Index(root)
     needs = [n for n in load_needs() if n["kind"] != "out_of_scope"]
     qv = query_vectors(needs, emb)
-    with_notes = (idx.vecs, idx.bm25)
-    without = plain_lanes(idx, emb)
+    from econ.ingest import atlas as ingest
+
+    notes = ingest.load_notes()
+    for c in idx.chunks:  # the notes from the ingest, whether or not the index holds them
+        c["context_note"] = notes[c["chunk_id"]]
+    with_notes = lanes(idx, emb, notes=True)
+    without = lanes(idx, emb, notes=False)
     variants = {}
     for notes in (True, False):
         idx.vecs, idx.bm25 = with_notes if notes else without
-        for cap in (4, 8):
+        for cap in (2, 3, 4, 8):
             for pin in (True, False):
                 name = f"notes-{'on' if notes else 'off'}.cap{cap}.pin-{'on' if pin else 'off'}"
                 got = {n["id"]: retrieve(idx, n, qv[i], cap=cap, pin=pin) for i, n in enumerate(needs)}
-                variants[name] = {"scores": score(needs, got), "context": {k: v[0] for k, v in got.items()}}
-    idx.vecs, idx.bm25 = with_notes
+                variants[name] = {
+                    "scores": score(needs, got),
+                    "context": {k: v[0] for k, v in got.items()},
+                    "pool": {k: sorted(set(v[1])) for k, v in got.items()},
+                }
     result = {
         "testset": TESTSET,
         "index": {k: idx.meta.get(k) for k in ("atlas_ref", "atlas_passages_sha256", "embedder", "chunks")},
@@ -131,6 +147,30 @@ def run(emb) -> dict:
     write_json_atomic(out / "results.json", result)
     write_text_atomic(config.path(REPORT), report(result, needs))
     return result
+
+
+def _decision(v: dict, adopted: str) -> str:
+    s = lambda name: v[name]["scores"]  # noqa: E731
+    on = adopted.replace("notes-off", "notes-on")
+    caps = {
+        c: s(adopted.replace(".cap2.", f".cap{c}."))["exploratory"]["context_recall"] for c in (2, 3, 4, 8)
+    }
+    return (
+        f"Adopted: **{adopted}**. Every variant with pinning finds every lookup's and every by-id need's gold "
+        f"pages in the 20 passages ({_pct(s(adopted)['lookup']['in_context'])} and "
+        f"{_pct(s(adopted)['by_id']['in_context'])}), so the exploratory needs decide. "
+        f"Without the notes, the 60 passages the filter chooses from hold {s(adopted)['exploratory']['pool_recall']:.3f} "
+        f"of their gold pages against {s(on)['exploratory']['pool_recall']:.3f} with them, while the search's own first "
+        f"20 hold {s(adopted)['exploratory']['context_recall']:.3f} against {s(on)['exploratory']['context_recall']:.3f}. "
+        "A note repeats its observation's headline on every passage of the page, so one well-matched page fills more "
+        "of the candidates; the service's filter picks from the pool, so the pool's reach matters more. "
+        "Recall in the 20 by the cap a page may hold (notes off): "
+        + ", ".join(f"{c}: {r:.3f}" for c, r in caps.items())
+        + ". Pinning is what finds a named observation and the Stage 3 page that tested it: without it, by-id needs "
+        f"fall to {_pct(s(adopted.replace('pin-on', 'pin-off'))['by_id']['in_context'])}. "
+        "The test set is small (40 needs, written from the pages, so its words are the pages' words); the smoke "
+        "test reads real answers."
+    )
 
 
 def _pct(x: float) -> str:
@@ -147,10 +187,12 @@ def report(result: dict, needs: list[dict]) -> str:
             f"{_pct(s['by_id']['in_context'])} | {_pct(s['by_id']['in_pool'])} | "
             f"{s['exploratory']['context_recall']:.3f} | {s['exploratory']['pool_recall']:.3f} |"
         )
-    best = v["notes-on.cap4.pin-on"]["scores"]
+    acfg, akb = config.atlas(), config.kb("atlas")
+    adopted = f"notes-{'on' if acfg.index_notes else 'off'}.cap{akb.per_doc_cap}.pin-{'on' if akb.pin_observations else 'off'}"
+    best = v[adopted]["scores"]
     q = {n["id"]: n for n in needs}
     missed = "\n".join(
-        f"- {i} ({q[i]['lens']}, Stage {q[i]['stage']}): \"{q[i]['question']}\" (gold {', '.join(q[i]['gold'])})"
+        f'- {i} ({q[i]["lens"]}, Stage {q[i]["stage"]}): "{q[i]["question"]}" (gold {", ".join(q[i]["gold"])})'
         for i in best["lookup"]["missed"]
     )
     return (
@@ -167,7 +209,27 @@ def report(result: dict, needs: list[dict]) -> str:
         "| Variant | Lookups: gold in the 20 | in the 60 | By id: in the 20 | in the 60 | "
         "Exploratory recall, 20 | in 60 |\n|---|---:|---:|---:|---:|---:|---:|\n"
         + "\n".join(rows)
-        + "\n\n## Lookups missed by the configured variant (notes on, cap 4, pinning on)\n\n"
+        + "\n\n## Decision (free retrieval settings, delegated by D-013's brief; recorded in D-038)\n\n"
+        + _decision(v, adopted)
+        + f"\n\n## Lookups missed by the configured variant ({adopted})\n\n"
         + (missed or "None.")
+        + "\n\n## Exploratory needs, need by need (the configured variant, and with notes)\n\n"
+        + "| Need | Gold pages | In the 20 | In the 60 | With notes: in the 20 | in the 60 |\n|---|---:|---:|---:|---:|---:|\n"
+        + "\n".join(
+            f"| {n['id']}: {n['question']} | {len(n['gold'])} | "
+            + " | ".join(
+                str(
+                    len(
+                        set(n["gold"])
+                        & set(v[name]["context"][n["id"]] if part == "ctx" else v[name]["pool"][n["id"]])
+                    )
+                )
+                for name in (adopted, adopted.replace("notes-off", "notes-on"))
+                for part in ("ctx", "pool")
+            )
+            + " |"
+            for n in needs
+            if n["kind"] == "exploratory"
+        )
         + "\n"
     )

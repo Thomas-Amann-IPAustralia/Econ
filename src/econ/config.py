@@ -369,6 +369,9 @@ class Atlas(Strict):
     word_cap: int = 260
     max_tokens: int = 384
     notes: str = "atlas-notes-v1"
+    # Whether the notes go in front of each passage in both lanes (as Econ's do, D-013). Measured off in WP5:
+    # the pool the filter reads holds more of the pages an answer needs without them (D-038).
+    index_notes: bool = False
 
 
 # --- loading -------------------------------------------------------------------------------------

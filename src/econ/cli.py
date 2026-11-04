@@ -488,11 +488,15 @@ def _atlas_index(model_dir: str) -> None:
         missing = [p.passage_id for p in passages if p.passage_id not in notes]
         if missing:
             raise StageError(f"{len(missing)} passage(s) have no note", item=missing[0])
+        use = acfg.index_notes  # notes in both lanes, or the passage text alone (measured, D-038)
         chunks = [
-            atlas.to_chunk(p, i, tokens.count(p.text), notes[p.passage_id]) for i, p in enumerate(passages)
+            atlas.to_chunk(p, i, tokens.count(p.text), notes[p.passage_id] if use else "")
+            for i, p in enumerate(passages)
         ]
         texts = [(c["context_note"] + "\n\n" + c["embed_text"]).strip() for c in chunks]
-        vecs = emb.encode(texts, kind="doc")
+        from econ.evalr.atlas import cached_doc_vectors
+
+        vecs = cached_doc_vectors(texts, emb)
         out = config.path(acfg.index_dir)
         out.mkdir(parents=True, exist_ok=True)
         np.save(out / "vectors.f16.npy", vecs.astype(np.float16))
@@ -518,8 +522,8 @@ def _atlas_index(model_dir: str) -> None:
             "onnx_sha256": emb.meta["onnx_sha256"],
             "dim": int(vecs.shape[1]),
             "chunks": len(chunks),
-            "enrichment": acfg.notes,
-            "enrichment_sha256": sha256_file(atlas.library() / "notes.jsonl")[:16],
+            "enrichment": acfg.notes if use else None,
+            "enrichment_sha256": sha256_file(atlas.library() / "notes.jsonl")[:16] if use else None,
             "built_from": r.upstream["atlas-ingest"],
             "atlas_ref": source["ref"],
             "atlas_sha256": source["atlas_sha256"],
@@ -549,7 +553,11 @@ def eval_atlas(model_dir: str = typer.Option("", help="Directory with the embedd
         res = ev.run(OnnxEmbedder(key, mdir, threads=4))
         for name, v in res["variants"].items():
             s = v["scores"]
-            r.counts[name] = [s["lookup"]["in_context"], s["by_id"]["in_context"], s["exploratory"]["context_recall"]]
+            r.counts[name] = [
+                s["lookup"]["in_context"],
+                s["by_id"]["in_context"],
+                s["exploratory"]["context_recall"],
+            ]
         r.add_output(config.path(ev.RUNS) / "results.json")
         r.add_output(config.path(ev.REPORT))
     typer.echo(f"eval-atlas passed; see {ev.REPORT}")
@@ -573,7 +581,9 @@ def atlas_smoke(
     akb = config.kb("atlas")
     idx = Index(Path(os.environ.get(akb.index_env or "") or config.path(akb.index_dir)))
     with run("atlas-smoke", _hash()) as r:
-        res = atlas_smoke.run(_LocalEmbedder(idx.meta["embedder"]), idx, only=[x for x in only.split(",") if x] or None)
+        res = atlas_smoke.run(
+            _LocalEmbedder(idx.meta["embedder"]), idx, only=[x for x in only.split(",") if x] or None
+        )
         r.counts.update(spent_usd=res["spent_usd"], needs=len(res["needs"]))
     typer.echo(f"atlas-smoke: US${res['spent_usd']:.4f}; see {atlas_smoke.RUN}/summary.json")
 

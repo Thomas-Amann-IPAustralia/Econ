@@ -1,0 +1,135 @@
+{
+  "argv": [
+    "eval-atlas"
+  ],
+  "command": "eval-atlas",
+  "config_hash": "c19f062c0f626ea9",
+  "counts": {
+    "notes-off.cap2.pin-off": [
+      1.0,
+      0.6,
+      0.792
+    ],
+    "notes-off.cap2.pin-on": [
+      1.0,
+      1.0,
+      0.792
+    ],
+    "notes-off.cap3.pin-off": [
+      1.0,
+      0.6,
+      0.734
+    ],
+    "notes-off.cap3.pin-on": [
+      1.0,
+      1.0,
+      0.734
+    ],
+    "notes-off.cap4.pin-off": [
+      1.0,
+      0.6,
+      0.72
+    ],
+    "notes-off.cap4.pin-on": [
+      1.0,
+      1.0,
+      0.72
+    ],
+    "notes-off.cap8.pin-off": [
+      1.0,
+      0.6,
+      0.705
+    ],
+    "notes-off.cap8.pin-on": [
+      1.0,
+      1.0,
+      0.705
+    ],
+    "notes-on.cap2.pin-off": [
+      1.0,
+      0.8,
+      0.813
+    ],
+    "notes-on.cap2.pin-on": [
+      1.0,
+      1.0,
+      0.813
+    ],
+    "notes-on.cap3.pin-off": [
+      1.0,
+      0.8,
+      0.79
+    ],
+    "notes-on.cap3.pin-on": [
+      1.0,
+      1.0,
+      0.79
+    ],
+    "notes-on.cap4.pin-off": [
+      1.0,
+      0.8,
+      0.736
+    ],
+    "notes-on.cap4.pin-on": [
+      1.0,
+      1.0,
+      0.736
+    ],
+    "notes-on.cap8.pin-off": [
+      1.0,
+      0.8,
+      0.63
+    ],
+    "notes-on.cap8.pin-on": [
+      1.0,
+      1.0,
+      0.63
+    ]
+  },
+  "error": null,
+  "git": {
+    "commit": "3edda6e6fdbeeefbdc2e25aafeaaff5bd6f66622",
+    "dirty": true,
+    "dirty_paths": [
+      "config/atlas.yaml",
+      "config/service.yaml",
+      "src/econ/answer/pipeline.py",
+      "src/econ/cli.py",
+      "src/econ/config.py",
+      "src/econ/evalr/atlas.py"
+    ]
+  },
+  "git_at_end": {
+    "commit": "3edda6e6fdbeeefbdc2e25aafeaaff5bd6f66622",
+    "dirty": true,
+    "dirty_paths": [
+      "config/atlas.yaml",
+      "config/service.yaml",
+      "src/econ/answer/pipeline.py",
+      "src/econ/cli.py",
+      "src/econ/config.py",
+      "src/econ/evalr/atlas.py"
+    ]
+  },
+  "inputs": {},
+  "outputs": {
+    "eval/runs/atlas-v1/results.json": "93e491d736fcf6049986b4ce1ef68937c49b630186a7faf304861fd6635c3fd4",
+    "reports/retrieval-atlas-v1.md": "a538aea9f5343345f5b1dc2ab1055e1fa34acf6056c39b773bb4080587cc8d9d"
+  },
+  "params": {},
+  "run_id": "20261104T052739Z",
+  "seconds": 28.0,
+  "status": "passed",
+  "upstream": {},
+  "versions": {
+    "docling": "2.140.0",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.0",
+    "pypdfium2": "5.14.0",
+    "python": "3.12.3",
+    "sentence-transformers": "6.1.0",
+    "tokenizers": "0.23.3",
+    "torch": "2.14.1+cpu"
+  },
+  "warnings": []
+}

@@ -35,7 +35,12 @@ def cited_docs(evs: list[dict]) -> set[str]:
     check = [e for e in evs if e["event"] == "check"]
     if not check:
         return set()
-    return {by_n[c["evidence"]][len("atlas-") :] for cl in check[-1]["claims"] for c in cl["citations"] if c["evidence"] in by_n}
+    return {
+        by_n[c["evidence"]][len("atlas-") :]
+        for cl in check[-1]["claims"]
+        for c in cl["citations"]
+        if c["evidence"] in by_n
+    }
 
 
 def run(embedder, index, *, only: list[str] | None = None, run_dir: str = RUN) -> dict:
@@ -63,7 +68,9 @@ def run(embedder, index, *, only: list[str] | None = None, run_dir: str = RUN) -
         spend.guard("openai", RESERVE)
         n = needs[nid]
         t = time.time()
-        evs = [e for e in pipeline.run(pipeline.Request(question=n["question"]), svc) if e["event"] != "draft"]
+        evs = [
+            e for e in pipeline.run(pipeline.Request(question=n["question"]), svc) if e["event"] != "draft"
+        ]
         done = evs[-1]
         for u in done.get("usage", []):
             spend.record(
@@ -84,8 +91,12 @@ def run(embedder, index, *, only: list[str] | None = None, run_dir: str = RUN) -
                 "outcome": done.get("outcome"),
                 "attempts": done.get("attempts"),
                 "first_check_passed": bool(checks and checks[0]["passed"]),
-                "numbers_errors": [x for c in checks for x in c["errors"] if "which is not in the sentences" in x],
-                "other_errors": [x for c in checks for x in c["errors"] if "which is not in the sentences" not in x],
+                "numbers_errors": [
+                    x for c in checks for x in c["errors"] if "which is not in the sentences" in x
+                ],
+                "other_errors": [
+                    x for c in checks for x in c["errors"] if "which is not in the sentences" not in x
+                ],
                 "coverage": answer["coverage"] if answer else None,
                 "gold": n["gold"],
                 "gold_cited": sorted(set(n["gold"]) & cited),
@@ -100,5 +111,7 @@ def run(embedder, index, *, only: list[str] | None = None, run_dir: str = RUN) -
             json.dumps({"need": nid, "events": evs}, ensure_ascii=False, default=str)
         ]
         write_text_atomic(out / "events.jsonl", "\n".join(lines) + "\n")
-        write_json_atomic(out / "summary.json", {"budget_usd": BUDGET, "spent_usd": round(run_cost, 6), "needs": summary})
+        write_json_atomic(
+            out / "summary.json", {"budget_usd": BUDGET, "spent_usd": round(run_cost, 6), "needs": summary}
+        )
     return {"spent_usd": round(run_cost, 6), "needs": summary}

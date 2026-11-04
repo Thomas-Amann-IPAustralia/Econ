@@ -21,3 +21,4 @@ index_dir: library/atlas/index
 word_cap: 260
 max_tokens: 384                # Econ's reference tokenizer, as for its own chunks
 notes: atlas-notes-v1          # context notes written by code (econ.ingest.atlas.note); search only, never evidence
+index_notes: false             # measured (reports/retrieval-atlas-v1.md, D-038): the notes are written but not indexed

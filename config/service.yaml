@@ -81,7 +81,7 @@ knowledge_bases:
     plan_keeps_question: true
     stream_drafts: true
     context_chunks: 20
-    per_doc_cap: 4                   # a document is one observation: a lower cap keeps answers broad (WP5 measures 4 and 8)
+    per_doc_cap: 2                   # a document is one page; measured best of 2, 3, 4 and 8 (reports/retrieval-atlas-v1.md, D-038)
     numbers_check: true
     pin_observations: true
     max_pinned: 10

@@ -1,0 +1,24 @@
+{
+  "atlas_built": "2026-11-04",
+  "atlas_passages_sha256": "32880288621f171d0247664c8420ae1be6306befc19b389050c96716f880dd04",
+  "atlas_ref": "3e13aef7aee3b8e79511a8eed905fb342b534d72",
+  "atlas_sha256": "ef3e5ce38e9beaea80227f51c8113563a6cf770c6e9332710feb9b9d177f9921",
+  "built_from": "20261104T044858Z",
+  "chunks": 4611,
+  "dim": 768,
+  "embedder": "arctic-m-v1.5",
+  "enrichment": null,
+  "enrichment_sha256": null,
+  "files": {
+    "bm25.npz": "910ad77dce6bf2f6",
+    "bm25.vocab.json": "7f13fae0b40a1718",
+    "chunks.jsonl": "755997b9a21d8694",
+    "docs.json": "f412a45576bcabab",
+    "vectors.f16.npy": "af37fc540343728a"
+  },
+  "hf_id": "Snowflake/snowflake-arctic-embed-m-v1.5",
+  "kb": "atlas",
+  "onnx_sha256": "bc6f7662487a0796e6f86229c8e5c3ab2f7059e08e0bb2f524125273f72171c4",
+  "revision": "e58a8f756156a1293d763f17e3aae643474e9b8a",
+  "strategy": "atlas-passages-v1"
+}
