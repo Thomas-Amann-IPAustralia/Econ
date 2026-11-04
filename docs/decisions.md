@@ -1614,3 +1614,8 @@ and merge; Render redeploys. Until then the atlas page says which version the ch
 OpenAI's error code (`expired_secret_key`) alone. The owner has confirmed that the key this cloud session's environment
 injects for `api.openai.com` has no credit left, and that the chatbot's own key, on Render, is fine. The smoke test
 waits for credit on (or a funded replacement of) the environment's key; nothing else in D-038 changes.
+
+**Second note on D-038 (2026-11-04).** After the owner topped up the OpenAI account, the smoke test's first call was
+refused again with "Your API key has expired. Create a new API key to continue." (`expired_secret_key`; the free
+model list says the same; US$0.00 spent). The key stored in the session environment is itself expired; it needs
+replacing with a new key, not credit.
