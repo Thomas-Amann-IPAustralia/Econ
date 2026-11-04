@@ -332,7 +332,7 @@ def test_an_atlas_answer_uses_its_own_prompts_and_passes_the_numbers_check(atlas
     assert "evidence atlas" in systems["answer"] and "evidence atlas" in systems["plan"]
     answer_user = [c for c in m.calls if c["schema_name"] == "answer"][0]["user"]
     assert answer_user.startswith('<evidence n="1" page="M1: ') and 'strength="observational"' in answer_user
-    assert ev["meta"]["prompt"] == "atlas-answer-v2" and ev["meta"]["atlas"]["built"] == "2026-11-04"
+    assert ev["meta"]["prompt"] == "atlas-answer-v3" and ev["meta"]["atlas"]["built"] == "2026-11-04"
 
 
 def test_a_number_not_in_the_cited_sentence_is_sent_back_then_flagged(atlas_index_dir):

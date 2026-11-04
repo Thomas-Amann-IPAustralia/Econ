@@ -12,7 +12,9 @@ D-039).** Branch `ccr-eff4672f-j1qrjn`, not merged; nothing published. Read D-03
 - **Smoke test** (`reports/atlas-chat-smoke-v1.md`, US$1.04 of the owner's US$2.00): final state 20/20 passed (18
   first time), every lookup and by-id answer cites its gold observation, no cause stated from an association, 4 of 5
   out of scope "not in the atlas" and the policy question declined. atlas-answer-v2 configured.
-- **The owner's:** adopt atlas-plan-v1, atlas-filter-v1 and atlas-answer-v2 (recommended, D-039), merge both
+- **Plain English (D-040, the owner's direction):** atlas-answer-v3, configured as the candidate: 19/20 pass first
+  time, 41% shorter, a fifth of the jargon; the numbers check unchanged (`reports/atlas-chat-plain-v3.md`).
+- **The owner's:** adopt atlas-plan-v1, atlas-filter-v1 and atlas-answer-v3 (recommended, D-040), merge both
   branches, and publish the atlas page (its OQ31).
 
 **Status (2026-10-18):** RAG v2 adopted in config and verified. Branch `claude/charming-edison-sg0ehp`

@@ -1645,3 +1645,27 @@ fee evidence labelled as a reading. About US$0.02 and 27 seconds an answer; a re
 
 **Recommendation (the owner's decision 5, D-037):** adopt atlas-plan-v1, atlas-filter-v1 and atlas-answer-v2, and
 publish the chat by merging both branches. Adopting and publishing are the owner's.
+
+## D-040 — The atlas chat in plain English: atlas-answer-v3 (the owner's direction; Claude, 2026-11-04)
+
+**Direction** (the owner): loosen the atlas chat's language so it is clear for readers who are not technical, "less
+concerned with the language being as exact as the Econ chat"; keep the hard-coded numbers check; statements must
+still be supported by evidence.
+
+**Done:** the check was not what made answers exact (it checks the copied quotes and the numbers, not the prose's
+wording); atlas-answer-v2's writing rules were. **atlas-answer-v3** keeps every evidence rule and the numbers rule and
+changes how answers read: clarity before matching the atlas's wording; rephrase freely, saying only what the cited
+sentences support; the answer first in one to three plain sentences; usually 150 to 350 words; few numbers, each
+explained in words; an observation's id once; strength in plain words; jargon translated. A readability measure
+(`econ.evalr.readability`: words a sentence, long sentences, reading ease, analysts' terms and numbers per 100 words)
+and the runner's `--run` and `--prompt` options were added. The Econ chat is unchanged.
+
+**Measured** (`reports/atlas-chat-plain-v3.md`; the same 20 needs; US$0.34, US$1.38 of the owner's US$2.00 over
+D-039 and D-040): v3 passes the check first time on 19 of 20 (v2: 18), all 20 in the end; every lookup and by-id
+answer cites its gold; answers are 41% shorter (198 words against 338) with a fifth of the analysts' terms (0.43 per
+100 words against 2.28); 18 seconds against 27. Reading ease barely moves (51.7 against 50.7). Exploratory answers
+cite fewer gold pages (21 of 30 against 27). Every v3 answer was read: none states a cause from an association, and
+five of the freest paraphrases say what their cited sentences say.
+
+**Recommendation:** adopt atlas-answer-v3 (with atlas-plan-v1 and atlas-filter-v1); configured as the candidate. The
+owner adopts (D-037, decision 5).
