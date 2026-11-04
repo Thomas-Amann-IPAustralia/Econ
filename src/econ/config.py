@@ -280,6 +280,28 @@ class AnswerCfg(Strict):
     max_quote_words: int = 80
 
 
+class KnowledgeBase(Strict):
+    """What one chat searches and how it answers (D-038). The Econ chat's settings are today's `answer` and
+    `retrieval` blocks, read through `kb("econ")`; the atlas chat's are its own block under `knowledge_bases`."""
+
+    index_dir: str
+    index_env: str | None = None  # an environment variable that overrides index_dir (tests, a local build)
+    prompt: str
+    plan_prompt: str
+    filter: FilterCfg | None = None
+    max_queries: int = 4
+    plan_keeps_question: bool = False
+    stream_drafts: bool = False
+    context_chunks: int = 20
+    per_doc_cap: int = 8
+    # The atlas's numbers rule (D-038): every number in a claim must be in the sentences it cites.
+    numbers_check: bool = False
+    # Observation ids named in the question, or sent with it, put their own passages first (D-038).
+    pin_observations: bool = False
+    max_pinned: int = 10
+    max_observations: int = 5
+
+
 class LimitsCfg(Strict):
     requests_per_hour_per_client: int = 30
     max_question_chars: int = 2000
@@ -313,6 +335,43 @@ class Service(Strict):
     limits: LimitsCfg = LimitsCfg()
     logging: LoggingCfg = LoggingCfg()
     tracing: TracingCfg = TracingCfg()
+    # Knowledge bases besides the Econ publications (D-038). "econ" is not listed: its settings are `answer`'s.
+    knowledge_bases: dict[str, KnowledgeBase] = {}
+
+    @model_validator(mode="after")
+    def _no_econ_entry(self) -> Service:
+        if "econ" in self.knowledge_bases:
+            raise ValueError("knowledge_bases must not list econ; its settings are the answer block's")
+        return self
+
+
+# --- the evidence atlas (D-038) -------------------------------------------------------------------
+
+
+class AtlasSource(Strict):
+    repo: str
+    path: str
+    meta_path: str
+    ref: str = Field(pattern=r"^[0-9a-f]{40}$")
+    sibling: str = "../Aus-GII-Breakdown"
+
+
+class Atlas(Strict):
+    """The atlas's passages as a second knowledge base: where they come from and where they are kept."""
+
+    source: AtlasSource
+    publisher: str
+    licence: str
+    series: str = "Evidence atlas"
+    passages_version: str
+    library_dir: str = "library/atlas"
+    index_dir: str = "library/atlas/index"
+    word_cap: int = 260
+    max_tokens: int = 384
+    notes: str = "atlas-notes-v1"
+    # Whether the notes go in front of each passage in both lanes (as Econ's do, D-013). Measured off in WP5:
+    # the pool the filter reads holds more of the pages an answer needs without them (D-038).
+    index_notes: bool = False
 
 
 # --- loading -------------------------------------------------------------------------------------
@@ -337,6 +396,30 @@ def pipeline() -> Pipeline:
 @lru_cache
 def service() -> Service:
     return Service.model_validate(_load_yaml("service.yaml"))
+
+
+def kb(name: str = "econ") -> KnowledgeBase:
+    """One chat's settings. The Econ chat's are read from `answer` and `retrieval`, unchanged (a test pins them)."""
+    if name != "econ":
+        return service().knowledge_bases[name]
+    a, r = service().answer, pipeline().retrieval
+    return KnowledgeBase(
+        index_dir="library/index",
+        index_env="ECON_INDEX_DIR",
+        prompt=a.prompt,
+        plan_prompt=a.plan_prompt,
+        filter=a.filter,
+        max_queries=a.max_queries,
+        plan_keeps_question=a.plan_keeps_question,
+        stream_drafts=a.stream_drafts,
+        context_chunks=r.context_chunks,
+        per_doc_cap=r.per_doc_cap,
+    )
+
+
+@lru_cache
+def atlas() -> Atlas:
+    return Atlas.model_validate(_load_yaml("atlas.yaml"))
 
 
 def config_hash(*models: BaseModel) -> str:

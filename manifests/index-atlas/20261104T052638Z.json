@@ -1,0 +1,69 @@
+{
+  "argv": [
+    "index",
+    "--kb",
+    "atlas"
+  ],
+  "command": "index-atlas",
+  "config_hash": "c19f062c0f626ea9",
+  "counts": {
+    "chunks": 4611,
+    "dim": 768,
+    "documents": 454
+  },
+  "error": null,
+  "git": {
+    "commit": "3edda6e6fdbeeefbdc2e25aafeaaff5bd6f66622",
+    "dirty": true,
+    "dirty_paths": [
+      "config/atlas.yaml",
+      "config/service.yaml",
+      "src/econ/answer/pipeline.py",
+      "src/econ/cli.py",
+      "src/econ/config.py",
+      "src/econ/evalr/atlas.py"
+    ]
+  },
+  "git_at_end": {
+    "commit": "3edda6e6fdbeeefbdc2e25aafeaaff5bd6f66622",
+    "dirty": true,
+    "dirty_paths": [
+      "config/atlas.yaml",
+      "config/service.yaml",
+      "src/econ/answer/pipeline.py",
+      "src/econ/cli.py",
+      "src/econ/config.py",
+      "src/econ/evalr/atlas.py"
+    ]
+  },
+  "inputs": {},
+  "outputs": {
+    "library/atlas/index/bm25.npz": "910ad77dce6bf2f68599c3a81d4dc8b53dd92d838e716b4fb4d91d62659e050e",
+    "library/atlas/index/bm25.vocab.json": "7f13fae0b40a17189dc5df7512c0ab6b6d3740ebb71312a7653fd8fae47b606c",
+    "library/atlas/index/chunks.jsonl": "755997b9a21d86948807c934efb09e46686bdc391014d1ff91b547cd50518b9d",
+    "library/atlas/index/docs.json": "f412a45576bcababc1751acadcf21dedfcef867753b4fe7a0c3dfb6feb7c60b3",
+    "library/atlas/index/index.json": "1aea5459ae08d2915079e260dc025184b3847bd5bec07bc0b1b7b89f60371552",
+    "library/atlas/index/vectors.f16.npy": "af37fc540343728a1dbebb233f25e2f68d36f842f060434e69414129b32c2221"
+  },
+  "params": {
+    "embedder": "arctic-m-v1.5",
+    "out": "library/atlas/index"
+  },
+  "run_id": "20261104T052638Z",
+  "seconds": 14.0,
+  "status": "passed",
+  "upstream": {
+    "atlas-ingest": "20261104T044858Z"
+  },
+  "versions": {
+    "docling": "2.140.0",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.0",
+    "pypdfium2": "5.14.0",
+    "python": "3.12.3",
+    "sentence-transformers": "6.1.0",
+    "tokenizers": "0.23.3",
+    "torch": "2.14.1+cpu"
+  },
+  "warnings": []
+}

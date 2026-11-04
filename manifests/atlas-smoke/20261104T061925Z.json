@@ -1,0 +1,44 @@
+{
+  "argv": [
+    "atlas-smoke",
+    "--confirm",
+    "--only",
+    "a02"
+  ],
+  "command": "atlas-smoke",
+  "config_hash": "c19f062c0f626ea9",
+  "counts": {},
+  "error": {
+    "cause": "the model refused the call: openai: HTTP 401: {\n  \"error\": {\n    \"message\": \"Your API key has expired. Create a new API key to continue.\",\n    \"type\": \"invalid_request_error\",\n    \"code\": ",
+    "item": "a02",
+    "report": null
+  },
+  "git": {
+    "commit": "0ce44d8b4251e2ac47e9e6d56622d9c0e746bf97",
+    "dirty": false,
+    "dirty_paths": []
+  },
+  "git_at_end": {
+    "commit": "0ce44d8b4251e2ac47e9e6d56622d9c0e746bf97",
+    "dirty": false,
+    "dirty_paths": []
+  },
+  "inputs": {},
+  "outputs": {},
+  "params": {},
+  "run_id": "20261104T061925Z",
+  "seconds": 45.6,
+  "status": "failed",
+  "upstream": {},
+  "versions": {
+    "docling": "2.140.0",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.0",
+    "pypdfium2": "5.14.0",
+    "python": "3.12.3",
+    "sentence-transformers": "6.1.0",
+    "tokenizers": "0.23.3",
+    "torch": "2.14.1+cpu"
+  },
+  "warnings": []
+}

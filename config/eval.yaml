@@ -7,8 +7,10 @@
 # 2026-10-20, for the WIPO notes and the prompt comparison: "Budget of $1.50 approved" (D-034). The
 # ledger then held US$3.68 OpenAI and US$2.62 Gemini, so the budgets are those plus 1.40 and 0.08, divided by
 # cap_fraction (the first setting left Gemini's cap below its spend); Gemini raised by 0.07 for the judge (D-034).
+# 2026-11-04, for the atlas chat's smoke test: "Up to $2.00 of OpenAI" (D-037, decision 2). The ledger then held
+# US$4.51 OpenAI, so the budget is that plus 2.00, divided by cap_fraction; the runner also stops itself at $2.00.
 budgets_usd:
-  openai: 5.29
+  openai: 6.79
   gemini: 2.88
 cap_fraction: 0.96
 ledger: eval/spend/ledger.jsonl

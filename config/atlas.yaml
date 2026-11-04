@@ -1,0 +1,24 @@
+# The evidence atlas as a second knowledge base (D-037, D-038): the atlas chat ("Ask the atlas", #/ask on the
+# atlas's Pages site). Its passages are written by the atlas itself (Aus-GII-Breakdown, analysis/atlas/passages.mjs)
+# and ingested here at a named commit (`econ atlas-ingest`), then indexed with the adopted embedder into their own
+# index (`econ index --kb atlas`). Nothing here touches the Econ knowledge base. Unknown keys are errors.
+
+source:
+  repo: Thomas-Amann-IPAustralia/Aus-GII-Breakdown
+  path: evidence/data/passages.jsonl
+  meta_path: evidence/data/passages.meta.json
+  ref: 3e13aef7aee3b8e79511a8eed905fb342b534d72   # the atlas commit the index was built from
+  sibling: ../Aus-GII-Breakdown                    # a local checkout, for `econ atlas-ingest --from`
+
+publisher: Evidence atlas (IPAVentures, IP Australia)
+licence: >-
+  MIT for the code. The content is the project's own analysis; it quotes public data under each source's licence,
+  as the atlas's data page lists them.
+series: Evidence atlas
+passages_version: atlas-passages-v1
+library_dir: library/atlas
+index_dir: library/atlas/index
+word_cap: 260
+max_tokens: 384                # Econ's reference tokenizer, as for its own chunks
+notes: atlas-notes-v1          # context notes written by code (econ.ingest.atlas.note); search only, never evidence
+index_notes: false             # measured (reports/retrieval-atlas-v1.md, D-038): the notes are written but not indexed

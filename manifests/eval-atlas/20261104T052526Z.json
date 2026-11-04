@@ -1,0 +1,127 @@
+{
+  "argv": [
+    "eval-atlas"
+  ],
+  "command": "eval-atlas",
+  "config_hash": "c19f062c0f626ea9",
+  "counts": {
+    "notes-off.cap2.pin-off": [
+      1.0,
+      0.6,
+      0.792
+    ],
+    "notes-off.cap2.pin-on": [
+      1.0,
+      1.0,
+      0.792
+    ],
+    "notes-off.cap3.pin-off": [
+      1.0,
+      0.6,
+      0.734
+    ],
+    "notes-off.cap3.pin-on": [
+      1.0,
+      1.0,
+      0.734
+    ],
+    "notes-off.cap4.pin-off": [
+      1.0,
+      0.6,
+      0.72
+    ],
+    "notes-off.cap4.pin-on": [
+      1.0,
+      1.0,
+      0.72
+    ],
+    "notes-off.cap8.pin-off": [
+      1.0,
+      0.6,
+      0.705
+    ],
+    "notes-off.cap8.pin-on": [
+      1.0,
+      1.0,
+      0.705
+    ],
+    "notes-on.cap2.pin-off": [
+      1.0,
+      0.8,
+      0.813
+    ],
+    "notes-on.cap2.pin-on": [
+      1.0,
+      1.0,
+      0.813
+    ],
+    "notes-on.cap3.pin-off": [
+      1.0,
+      0.8,
+      0.79
+    ],
+    "notes-on.cap3.pin-on": [
+      1.0,
+      1.0,
+      0.79
+    ],
+    "notes-on.cap4.pin-off": [
+      1.0,
+      0.8,
+      0.736
+    ],
+    "notes-on.cap4.pin-on": [
+      1.0,
+      1.0,
+      0.736
+    ],
+    "notes-on.cap8.pin-off": [
+      1.0,
+      0.8,
+      0.63
+    ],
+    "notes-on.cap8.pin-on": [
+      1.0,
+      1.0,
+      0.63
+    ]
+  },
+  "error": null,
+  "git": {
+    "commit": "3edda6e6fdbeeefbdc2e25aafeaaff5bd6f66622",
+    "dirty": true,
+    "dirty_paths": [
+      "src/econ/answer/pipeline.py",
+      "src/econ/evalr/atlas.py"
+    ]
+  },
+  "git_at_end": {
+    "commit": "3edda6e6fdbeeefbdc2e25aafeaaff5bd6f66622",
+    "dirty": true,
+    "dirty_paths": [
+      "src/econ/answer/pipeline.py",
+      "src/econ/evalr/atlas.py"
+    ]
+  },
+  "inputs": {},
+  "outputs": {
+    "eval/runs/atlas-v1/results.json": "97f0600161c249206d799d11b99b0908e0ca3897790c6e8dfb764433378ceae3",
+    "reports/retrieval-atlas-v1.md": "bc59133ed8531a1cda19b414456de680091194650113206ac6fda8debd2a1af7"
+  },
+  "params": {},
+  "run_id": "20261104T052526Z",
+  "seconds": 12.8,
+  "status": "passed",
+  "upstream": {},
+  "versions": {
+    "docling": "2.140.0",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.0",
+    "pypdfium2": "5.14.0",
+    "python": "3.12.3",
+    "sentence-transformers": "6.1.0",
+    "tokenizers": "0.23.3",
+    "torch": "2.14.1+cpu"
+  },
+  "warnings": []
+}

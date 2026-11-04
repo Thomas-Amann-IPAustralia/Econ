@@ -112,6 +112,27 @@ then "Evidence only (no model key)". Ask a question: the evidence trail should s
 search, combined"; open a passage to see it highlighted on its PDF page. If the trail says "keyword
 search only", Render cannot reach the embedder: recheck `EMBEDDER_URL` and `EMBEDDER_TOKEN`.
 
+## The atlas chat (D-038)
+
+The same Render service serves the evidence atlas's chat at `/api/atlas/*` from `library/atlas/index/`; there is
+nothing more to deploy here. Its page is in the Aus-GII-Breakdown repository (`evidence/#/ask`, on that repository's
+Pages site); it reads the API's address from its `analysis/atlas/content/site.yaml` (`chat.api`), and its Content
+Security Policy (`evidence/index.html`, `connect-src`) names the same host, which a test there checks. If the API's
+address changes, change both there. Both chats share this service's origin list (`cors_origins`: both Pages sites are
+`https://thomas-amann-ipaustralia.github.io`), its rate limit and its daily budget.
+
+**Refreshing the chat after the atlas changes** (when a change should reach the chat):
+
+```sh
+uv run econ atlas-ingest --ref <the atlas commit sha>   # fetches and checks its passages at that commit
+# set source.ref in config/atlas.yaml to the same sha
+uv run econ index --kb atlas                            # about 20 minutes on 4 CPUs (the embedder, locally)
+uv run pytest -q tests/test_atlas.py                    # the index, the ingest and config/atlas.yaml agree
+```
+
+Commit `library/atlas/`, the manifests and `config/atlas.yaml`, and merge; Render redeploys. Until then the atlas page
+says which version the chat reads, and every quote is still checked against that version.
+
 ## Tracing to Langfuse (D-022)
 
 Each question becomes one trace in Langfuse (one session per conversation): the plan, the search with every

@@ -1,0 +1,43 @@
+{
+  "argv": [
+    "atlas-smoke",
+    "--confirm",
+    "--only",
+    "a02"
+  ],
+  "command": "atlas-smoke",
+  "config_hash": "c19f062c0f626ea9",
+  "counts": {
+    "needs": 1,
+    "spent_usd": 0
+  },
+  "error": null,
+  "git": {
+    "commit": "a8df73bd0dd494caf9e626db529c0f16b5691223",
+    "dirty": false,
+    "dirty_paths": []
+  },
+  "git_at_end": {
+    "commit": "a8df73bd0dd494caf9e626db529c0f16b5691223",
+    "dirty": false,
+    "dirty_paths": []
+  },
+  "inputs": {},
+  "outputs": {},
+  "params": {},
+  "run_id": "20261104T052841Z",
+  "seconds": 3.5,
+  "status": "passed",
+  "upstream": {},
+  "versions": {
+    "docling": "2.140.0",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.0",
+    "pypdfium2": "5.14.0",
+    "python": "3.12.3",
+    "sentence-transformers": "6.1.0",
+    "tokenizers": "0.23.3",
+    "torch": "2.14.1+cpu"
+  },
+  "warnings": []
+}

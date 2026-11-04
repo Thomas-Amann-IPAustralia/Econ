@@ -356,8 +356,13 @@ def index(
     out: str = typer.Option(
         "library/index", help="Where to write; only the adopted build belongs in library/index."
     ),
+    kb: str = typer.Option("econ", help="The knowledge base: econ (the publications) or atlas (D-038)."),
 ) -> None:
     """Build the serving index from the adopted strategy and embedder (or named ones), via ONNX."""
+    if kb == "atlas":
+        return _atlas_index(model_dir)
+    if kb != "econ":
+        raise StageError(f"unknown knowledge base {kb!r}; econ or atlas")
     import json as _json
 
     import numpy as np
@@ -453,6 +458,164 @@ def index(
             r.add_output(out / f)
         r.counts.update(chunks=len(chunks), dim=int(vecs.shape[1]))
     typer.echo(f"index passed: {r.counts}")
+
+
+def _atlas_index(model_dir: str) -> None:
+    """The atlas's index (D-038): its passages with their code-written notes, the adopted embedder and BM25, in the
+    same files and shape as library/index/, written to config/atlas.yaml's index_dir."""
+    import json as _json
+    from pathlib import Path
+
+    import numpy as np
+
+    from econ.embedder import OnnxEmbedder, fetch_model
+    from econ.ingest import atlas
+    from econ.kb import tokens
+    from econ.kb.bm25 import BM25
+    from econ.manifest import require_upstream, sha256_file, write_json_atomic, write_text_atomic
+
+    cfg, acfg = config.pipeline(), config.atlas()
+    key = cfg.embedding.adopted
+    with run("index-atlas", _hash(), embedder=key, out=acfg.index_dir) as r:
+        r.upstream["atlas-ingest"] = require_upstream("atlas-ingest")["run_id"]
+        mdir = Path(model_dir) if model_dir else config.path(cfg.paths.models) / "onnx" / key
+        if not (mdir / "model.json").exists():
+            fetch_model(key, mdir)
+        emb = OnnxEmbedder(key, mdir, threads=4)
+        passages = atlas.load_passages()
+        notes = atlas.load_notes()
+        source = _json.loads((atlas.library() / "source.json").read_text())
+        missing = [p.passage_id for p in passages if p.passage_id not in notes]
+        if missing:
+            raise StageError(f"{len(missing)} passage(s) have no note", item=missing[0])
+        use = acfg.index_notes  # notes in both lanes, or the passage text alone (measured, D-038)
+        chunks = [
+            atlas.to_chunk(p, i, tokens.count(p.text), notes[p.passage_id] if use else "")
+            for i, p in enumerate(passages)
+        ]
+        texts = [(c["context_note"] + "\n\n" + c["embed_text"]).strip() for c in chunks]
+        from econ.evalr.atlas import cached_doc_vectors
+
+        vecs = cached_doc_vectors(texts, emb)
+        out = config.path(acfg.index_dir)
+        out.mkdir(parents=True, exist_ok=True)
+        np.save(out / "vectors.f16.npy", vecs.astype(np.float16))
+        BM25.build(texts).save(out / "bm25.npz")
+        write_text_atomic(
+            out / "chunks.jsonl",
+            "".join(_json.dumps(c, sort_keys=True, ensure_ascii=False) + "\n" for c in chunks),
+        )
+        year = int(source["atlas_built"][:4])
+        by_doc: dict[str, list] = {}
+        for p in passages:
+            by_doc.setdefault(p.doc_id, []).append(p)
+        write_json_atomic(
+            out / "docs.json", {d: atlas.doc_entry(d, ps, year) for d, ps in sorted(by_doc.items())}
+        )
+        files = ["chunks.jsonl", "vectors.f16.npy", "bm25.npz", "bm25.vocab.json", "docs.json"]
+        meta = {
+            "kb": "atlas",
+            "strategy": acfg.passages_version,
+            "embedder": key,
+            "hf_id": emb.spec.hf_id,
+            "revision": emb.spec.revision,
+            "onnx_sha256": emb.meta["onnx_sha256"],
+            "dim": int(vecs.shape[1]),
+            "chunks": len(chunks),
+            "enrichment": acfg.notes if use else None,
+            "enrichment_sha256": sha256_file(atlas.library() / "notes.jsonl")[:16] if use else None,
+            "built_from": r.upstream["atlas-ingest"],
+            "atlas_ref": source["ref"],
+            "atlas_sha256": source["atlas_sha256"],
+            "atlas_passages_sha256": source["passages_sha256"],
+            "atlas_built": source["atlas_built"],
+            "files": {f: sha256_file(out / f)[:16] for f in files},
+        }
+        write_json_atomic(out / "index.json", meta)
+        for f in [*files, "index.json"]:
+            r.add_output(out / f)
+        r.counts.update(chunks=len(chunks), documents=len(by_doc), dim=int(vecs.shape[1]))
+    typer.echo(f"atlas index passed: {r.counts}")
+
+
+@app.command("eval-atlas")
+@loud
+def eval_atlas(model_dir: str = typer.Option("", help="Directory with the embedder's ONNX files.")) -> None:
+    """Measure the atlas chat's retrieval, free (D-038): notes on and off, per-document caps 4 and 8, pinning."""
+    from pathlib import Path
+
+    from econ.embedder import OnnxEmbedder
+    from econ.evalr import atlas as ev
+
+    key = config.pipeline().embedding.adopted
+    mdir = Path(model_dir) if model_dir else config.path(config.pipeline().paths.models) / "onnx" / key
+    with run("eval-atlas", _hash()) as r:
+        res = ev.run(OnnxEmbedder(key, mdir, threads=4))
+        for name, v in res["variants"].items():
+            s = v["scores"]
+            r.counts[name] = [
+                s["lookup"]["in_context"],
+                s["by_id"]["in_context"],
+                s["exploratory"]["context_recall"],
+            ]
+        r.add_output(config.path(ev.RUNS) / "results.json")
+        r.add_output(config.path(ev.REPORT))
+    typer.echo(f"eval-atlas passed; see {ev.REPORT}")
+
+
+@app.command("atlas-smoke")
+@loud
+def atlas_smoke(
+    confirm: bool = typer.Option(False, help="Spend money: up to US$2.00 of OpenAI (D-037)."),
+    only: str = typer.Option("", help="Re-run these needs only, comma-separated (a prompt change)."),
+    run_name: str = typer.Option("atlas-smoke-v1", "--run", help="The run's folder under eval/runs/."),
+    prompt: str = typer.Option(
+        "", help="A candidate answer prompt to measure instead of the configured one."
+    ),
+) -> None:
+    """The atlas chat's capped smoke test (D-038): 20 needs end to end with the service's OpenAI models."""
+    import os
+    from pathlib import Path
+
+    from econ.evalr import atlas_smoke
+    from econ.retrieval.index import Index
+
+    if not confirm:
+        raise StageError("this spends money: pass --confirm")
+    akb = config.kb("atlas")
+    idx = Index(Path(os.environ.get(akb.index_env or "") or config.path(akb.index_dir)))
+    with run("atlas-smoke", _hash()) as r:
+        res = atlas_smoke.run(
+            _LocalEmbedder(idx.meta["embedder"]),
+            idx,
+            only=[x for x in only.split(",") if x] or None,
+            run_dir=f"eval/runs/{run_name}",
+            prompt=prompt or None,
+        )
+        r.counts.update(spent_usd=res["spent_usd"], needs=len(res["needs"]))
+    typer.echo(
+        f"atlas-smoke: US${res['spent_usd']:.4f} over every run; see eval/runs/{run_name}/summary.json"
+    )
+
+
+@app.command("atlas-ingest")
+@loud
+def atlas_ingest(
+    from_path: str = typer.Option(
+        "", "--from", help="A local checkout of the atlas (its root or the passages file)."
+    ),
+    ref: str = typer.Option("", help="An atlas commit to fetch (default: config/atlas.yaml's ref)."),
+) -> None:
+    """Ingest the evidence atlas's passages (D-038): check them and write library/atlas/ with their notes."""
+    from econ.ingest import atlas
+
+    if from_path and ref:
+        raise StageError("give --from or --ref, not both")
+    with run("atlas-ingest", _hash(), from_path=from_path or None, ref=ref or None) as r:
+        src = atlas.ingest(r, from_path=from_path or None, ref=ref or None)
+    typer.echo(
+        f"atlas-ingest passed: {src['passages']} passages from {src['ref']} ({src['from']}); {src['kinds']}"
+    )
 
 
 @app.command("verify-embedder")
@@ -735,16 +898,29 @@ def ask(
     confirm: bool = typer.Option(False, help="Allow paid model calls. Without it, evidence-only."),
     local_embedder: bool = typer.Option(True, help="Embed the query with the local ONNX model."),
     trace: bool = typer.Option(True, help="Trace to Langfuse when its keys are set (environment dev)."),
+    kb: str = typer.Option("econ", help="The knowledge base: econ, or atlas (D-038; local runs only)."),
+    observations: str = typer.Option(
+        "", help="The atlas: observation ids the question is about, comma-separated."
+    ),
 ) -> None:
     """Ask one question from the command line and print every event."""
     import json as _json
+    from pathlib import Path
 
     from econ import tracing
     from econ.answer import pipeline
     from econ.answer.providers import configured
     from econ.retrieval.index import EmbedderClient, Index
 
-    idx = Index()
+    if kb not in ("econ", "atlas"):
+        raise StageError(f"unknown knowledge base {kb!r}; econ or atlas")
+    if kb == "atlas":
+        import os
+
+        akb = config.kb("atlas")
+        idx = Index(Path(os.environ.get(akb.index_env or "") or config.path(akb.index_dir)))
+    else:
+        idx = Index()
     emb = EmbedderClient()
     if local_embedder and not emb.configured:
         emb = _LocalEmbedder(idx.meta["embedder"])
@@ -756,12 +932,20 @@ def ask(
         model=found[0] if found else None,
         provider=found[1] if found else None,
         tracer=tracer,
+        kb=config.kb("atlas") if kb == "atlas" else None,
+        kb_name=kb,
     )
-    for e in pipeline.run(pipeline.Request(question=question, context=context), svc):
+    obs = [o.strip() for o in observations.split(",") if o.strip()] or None
+    for e in pipeline.run(pipeline.Request(question=question, context=context, observations=obs), svc):
         if e["event"] == "retrieval":
             f = e["filter"]
             typer.echo(f"-- retrieval ({e['dense']}): queries {e['queries']}")
             typer.echo(f"-- filter: {f['status']}; read {f['read']}, kept {f['kept']}")
+            for ev in e["evidence"]:
+                if ev.get("pinned"):
+                    typer.echo(
+                        f"  [{ev['n']:2d}] pinned   {ev['chunk_id']:36s} {' > '.join(ev['section'])[:50]}"
+                    )
             for ev in e["pool"]:
                 used = f"[{ev['n']:2d}]" if ev["selected"] else "    "
                 rated = "-" if ev["filter_grade"] is None else ev["filter_grade"]

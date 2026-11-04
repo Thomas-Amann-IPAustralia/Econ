@@ -1,0 +1,67 @@
+{
+  "argv": [
+    "index",
+    "--kb",
+    "atlas"
+  ],
+  "command": "index-atlas",
+  "config_hash": "c19f062c0f626ea9",
+  "counts": {
+    "chunks": 4611,
+    "dim": 768,
+    "documents": 454
+  },
+  "error": null,
+  "git": {
+    "commit": "a591184495613d8b08b1f7016c3b68dafce6026d",
+    "dirty": true,
+    "dirty_paths": [
+      "src/econ/cli.py",
+      "src/econ/config.py",
+      "config/atlas.yaml",
+      "src/econ/ingest/atlas.py"
+    ]
+  },
+  "git_at_end": {
+    "commit": "017ee49685636165c748cb2533c0e5505ee16ac4",
+    "dirty": true,
+    "dirty_paths": [
+      "config/eval.yaml",
+      "src/econ/answer/pipeline.py",
+      "src/econ/cli.py",
+      "tests/test_atlas.py",
+      "src/econ/evalr/atlas.py",
+      "src/econ/evalr/atlas_smoke.py"
+    ]
+  },
+  "inputs": {},
+  "outputs": {
+    "library/atlas/index/bm25.npz": "e66058c2d4f0f1f905a101cf72470c8f9262566d1942ba75cdb2e23c8b3f0413",
+    "library/atlas/index/bm25.vocab.json": "ed5f0c9136786c1483f5e5a34c78104b19056fc8084491b1f3480dc2c57ad900",
+    "library/atlas/index/chunks.jsonl": "e78259e57d952b63f25fa679d7058ab121b5d8fd6d92c9b9cbba859d1d5b2d76",
+    "library/atlas/index/docs.json": "f412a45576bcababc1751acadcf21dedfcef867753b4fe7a0c3dfb6feb7c60b3",
+    "library/atlas/index/index.json": "dfd5aa11f79094e0747b0fc392fab09e5d24dcf275ea735c7d523909555d15c8",
+    "library/atlas/index/vectors.f16.npy": "f75a8d61beff2a52fa1b834ac705f63a079925aaa2bc0ba05f97c30eb904a1b9"
+  },
+  "params": {
+    "embedder": "arctic-m-v1.5",
+    "out": "library/atlas/index"
+  },
+  "run_id": "20261104T044910Z",
+  "seconds": 1306.1,
+  "status": "passed",
+  "upstream": {
+    "atlas-ingest": "20261104T044858Z"
+  },
+  "versions": {
+    "docling": "2.140.0",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.0",
+    "pypdfium2": "5.14.0",
+    "python": "3.12.3",
+    "sentence-transformers": "6.1.0",
+    "tokenizers": "0.23.3",
+    "torch": "2.14.1+cpu"
+  },
+  "warnings": []
+}

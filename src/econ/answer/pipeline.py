@@ -22,6 +22,10 @@
   answer that still fails is returned flagged, never passed silently.
 - tracing (D-022): each question is one trace (`econ.tracing`), its steps observations started from an
   explicit parent; the `done` event names the trace. The null tracer records nothing.
+- knowledge bases (D-038): `Services.kb` holds one chat's settings (`config.kb`); without it, the Econ chat's,
+  read exactly as before. The atlas chat's passages carry an observation's id, stage, lens and strength in the
+  prompts; observation ids in the question (or sent with it) put that observation's own passages first, outside
+  the filter (`pinned`); and the check adds the numbers rule. Its traces are named `atlas.*`.
 """
 
 from __future__ import annotations
@@ -40,11 +44,11 @@ from pydantic import ValidationError
 
 from econ import config, textcheck, tracing
 from econ.answer import cite, prompts
-from econ.answer.check import Result, check
+from econ.answer.check import Result, check, numbers_check, uncited_numbers
 from econ.answer.providers import Model, ProviderError, Usage
 from econ.answer.schema import Answer, AnswerV5, Grades, Plan, strict_schema
 from econ.kb.bm25 import tokenize
-from econ.retrieval.index import EmbedderClient, Index
+from econ.retrieval.index import EmbedderClient, Index, Selected
 
 _TAG = re.compile(r"<\s*(/?)\s*(evidence|context|conversation|question|errors|system|instructions?)\b", re.I)
 
@@ -63,6 +67,7 @@ class Request:
     years: tuple[int, int] | None = None
     publishers: list[str] | None = None  # the publishers the reader switched on; None for all
     session_id: str | None = None  # one per conversation, from the front end; groups its traces
+    observations: list[str] | None = None  # the atlas chat: observations the question is about (D-038)
 
 
 @dataclass
@@ -72,6 +77,16 @@ class Services:
     model: Model | None = None
     provider: object | None = None
     tracer: object = field(default_factory=tracing.NullTracer)
+    kb: config.KnowledgeBase | None = None  # None: the Econ chat's settings (config.kb("econ"))
+    kb_name: str = "econ"
+
+
+def settings(svc: Services) -> config.KnowledgeBase:
+    return svc.kb or config.kb("econ")
+
+
+def is_atlas(svc: Services) -> bool:
+    return svc.kb_name == "atlas"
 
 
 def generate(svc: Services, parent, name: str, *, system: str, user: str, metadata: dict | None = None, **kw):
@@ -159,8 +174,28 @@ def _publisher(doc: dict, show: bool) -> str:
     return f' publisher="{defang(doc["publisher"])}"' if show and doc.get("publisher") else ""
 
 
+def atlas_attrs(chunk: dict) -> str:
+    """What names an atlas passage's source (D-038): its page, and for an observation its id, stage, lens and
+    strength of evidence, so the answer can say whose finding it is and how strong."""
+    out = f'page="{defang(chunk["title"])}"'
+    if chunk.get("observation"):
+        out += (
+            f' observation="{chunk["observation"]}" stage="{chunk["stage"]}"'
+            f' lens="{defang(chunk.get("lens_name") or "")}" strength="{chunk["strength"]}"'
+        )
+    else:
+        out += f' kind="{chunk["kind"]}"'
+    return out
+
+
 def evidence_block(n: int, chunk: dict, doc: dict, body: str | None = None, publisher: bool = False) -> str:
     """A passage as the answer model sees it; `body` replaces its text (the numbered sentences, D-026)."""
+    section = " > ".join(chunk["section"]) if chunk["section"] else ""
+    if "kind" in chunk:  # an atlas passage leads to its page, not to pages of a PDF (D-038)
+        return (
+            f'<evidence n="{n}" {atlas_attrs(chunk)} section="{defang(section)}">\n'
+            f"{body if body is not None else defang(chunk['text'])}\n</evidence>"
+        )
     pages = chunk["pages"]
     pg = f"{pages[0]}" if len(pages) == 1 else f"{pages[0]}-{pages[-1]}"
     section = " > ".join(chunk["section"]) if chunk["section"] else ""
@@ -176,6 +211,11 @@ def evidence_block(n: int, chunk: dict, doc: dict, body: str | None = None, publ
 
 def filter_block(pid: str, chunk: dict, doc: dict, publisher: bool = False) -> str:
     section = " > ".join(chunk["section"]) if chunk["section"] else ""
+    if "kind" in chunk:
+        return (
+            f'<evidence id="{pid}" {atlas_attrs(chunk)} section="{defang(section)}">\n'
+            f"{defang(chunk['text'])}\n</evidence>"
+        )
     return (
         f'<evidence id="{pid}" document="{defang(doc["title"])}"{_publisher(doc, publisher)} year="{doc["year"]}" '
         f'section="{defang(section)}">\n{defang(chunk["text"])}\n</evidence>'
@@ -207,7 +247,7 @@ def by_rating(rows: list[int], ratings: dict[int, int], k: int) -> list[int]:
 def filter_step(svc: Services, question: str, pool: list, parent=None) -> dict:
     """Rate the pool's passages with the provider's filter model, the config's group size a call, the calls in
     parallel. Any failed or malformed reply drops every rating, so the search order stands, visibly."""
-    fc = config.service().answer.filter
+    fc = settings(svc).filter
     p = svc.provider
     parent = parent or tracing.NullObs()
     system = prompts.load(fc.prompt)
@@ -232,7 +272,7 @@ def filter_step(svc: Services, question: str, pool: list, parent=None) -> dict:
             rep = generate(
                 svc,
                 parent,
-                "econ.filter.rate",
+                f"{svc.kb_name}.filter.rate",
                 metadata={"passages": ",".join(sorted(ids, key=lambda s: int(s[1:])))[:200]},
                 system=system,
                 user=user,
@@ -289,14 +329,24 @@ def evidence_view(svc: Services, sel, n: int | None, queries: list[str]) -> dict
         "rerank_score": sel.rerank_score,
         "per_query": {str(k): v for k, v in sel.per_query.items()},
         "matched_terms": terms,
+        **(
+            {
+                k: c.get(k)
+                for k in ("kind", "observation", "stage", "lens", "lens_name", "strength", "url", "related")
+            }
+            if "kind" in c
+            else {}
+        ),
     }
 
 
-def trace_check(root, ans: Answer, res, attempt: int) -> None:
+def trace_check(root, ans: Answer, res, attempt: int, prefix: str = "econ") -> None:
     """The check as an evaluator observation, with its results as scores (SOP §20.0, convention 6): on the
     observation for every attempt, and on the trace for the attempt that stands."""
     d = res.as_dict()
-    ev = root.child("econ.check", as_type="evaluator", input={"attempt": attempt, "claims": len(ans.claims)})
+    ev = root.child(
+        f"{prefix}.check", as_type="evaluator", input={"attempt": attempt, "claims": len(ans.claims)}
+    )
     claims = d.get("claims", [])
     verified = sum(1 for c in claims if c.get("verified"))
     ev.update(output=d, level="DEFAULT" if res.passed else "WARNING")
@@ -367,7 +417,7 @@ def answer_call(svc: Services, root, attempt: int, **kw) -> Generator[dict, None
     def work():
         try:
             out["rep"] = generate(
-                svc, root, "econ.answer", metadata={"attempt": attempt}, on_text=pieces.put, **kw
+                svc, root, f"{svc.kb_name}.answer", metadata={"attempt": attempt}, on_text=pieces.put, **kw
             )
         except BaseException as e:  # noqa: BLE001 - handed back to the caller's thread
             out["err"] = e
@@ -406,10 +456,10 @@ def run(req: Request, svc: Services) -> Iterator[dict]:
     or abandoned by a client that went away), and says which."""
     mode = "answer" if svc.model else "evidence_only"
     root = svc.tracer.trace(
-        "econ.ask",
+        f"{svc.kb_name}.ask",
         as_type="agent",
         session_id=req.session_id,
-        tags=[mode.replace("_", "-")],
+        tags=[mode.replace("_", "-"), *(["atlas"] if is_atlas(svc) else [])],
         input={"question": req.question, "context": req.context, "history": req.history},
         metadata={"history_turns": len(req.history), "context_chars": len(req.context)},
     )
@@ -429,9 +479,65 @@ def run(req: Request, svc: Services) -> Iterator[dict]:
         root.end()
 
 
+_OBS_ID = re.compile(r"\b([UBM]\d{1,3})\b")
+
+
+# The parts of an observation's page that are pinned, in order: its own statement, how Stage 3 tested it (or, on a
+# Stage 3 page, what it follows from), then its key figures. The Stage 3 observations that tested a named one (named
+# in its "What Stage 3 found") have their statements pinned after its own Stage 3 part, so "did B6 survive?" reads M1.
+PIN_PARTS = (
+    "Observation {id} (",
+    "What Stage 3 found",
+    "How this follows from the earlier stages",
+    "Key figures",
+)
+
+
+def pinned_rows(
+    svc: Services, texts: list[str], observations: list[str] | None
+) -> tuple[list[str], list[int]]:
+    """The atlas chat's pins (D-038): observations sent with the question, then ids the question names (existing
+    ones only, at most `max_observations`), and for each the parts of its page in PIN_PARTS, plus the statements of
+    the Stage 3 observations that tested it; at most `max_pinned` passages in all. Each observation's statement comes
+    before any one's other parts, so several ids all get theirs. They go first in the evidence, outside the filter."""
+    k = settings(svc)
+    ids: list[str] = []
+    for i in [*(observations or []), *(m for t in texts for m in _OBS_ID.findall(t))]:
+        if i not in ids and f"atlas-{i}" in svc.index.docs:
+            ids.append(i)
+    ids = ids[: k.max_observations]
+    found: list[tuple[float, int, int]] = []  # (part, position of the id, row)
+    later: list[str] = []
+    for pos, i in enumerate(ids):
+        for row, c in enumerate(svc.index.chunks):
+            if c["doc_id"] != f"atlas-{i}" or not c["section"]:
+                continue
+            for part, head in enumerate(PIN_PARTS):
+                if c["section"][0].startswith(head.format(id=i)):
+                    found.append((part, pos, row))
+                    if head == "What Stage 3 found":
+                        later += [
+                            m
+                            for m in re.findall(r"\bM\d{1,3}\b", c["text"])
+                            if m not in ids and m not in later
+                        ]
+                    break
+    for pos, m in enumerate(later):
+        for row, c in enumerate(svc.index.chunks):
+            if (
+                c["doc_id"] == f"atlas-{m}"
+                and c["section"]
+                and c["section"][0].startswith(f"Observation {m} (")
+            ):
+                found.append((1.5, pos, row))
+    return ids, [row for _, _, row in sorted(found)][: k.max_pinned]
+
+
 def _run(req: Request, svc: Services, root) -> Iterator[dict]:
     started = time.time()
     scfg = config.service()
+    k = settings(svc)
+    atlas = is_atlas(svc)
     usages: list[Usage] = []
     timings: dict[str, float] = {}
     request_id = uuid.uuid4().hex[:12]
@@ -446,8 +552,22 @@ def _run(req: Request, svc: Services, root) -> Iterator[dict]:
         "answer_model": getattr(p, "answer_model", None),
         "plan_model": getattr(p, "plan_model", None),
         "index": {k: svc.index.meta[k] for k in ("strategy", "embedder", "revision", "chunks", "built_from")},
-        "prompt": scfg.answer.prompt if svc.model else None,
+        "prompt": k.prompt if svc.model else None,
         "publishers": req.publishers,
+        **(
+            {
+                "kb": "atlas",
+                "observations": req.observations,
+                "atlas": {
+                    "ref": svc.index.meta.get("atlas_ref"),
+                    "sha256": svc.index.meta.get("atlas_sha256"),
+                    "passages_sha256": svc.index.meta.get("atlas_passages_sha256"),
+                    "built": svc.index.meta.get("atlas_built"),
+                },
+            }
+            if atlas
+            else {}
+        ),
     }
 
     # --- plan --------------------------------------------------------------------------------------
@@ -461,7 +581,7 @@ def _run(req: Request, svc: Services, root) -> Iterator[dict]:
         prev = next((h["text"] for h in reversed(req.history) if h["role"] == "user"), "")
         queries = [f"{prev} {question}".strip()]
     # Without a planner, pasted material still steers the search through its own headings.
-    queries += context_queries(req.context, scfg.answer.max_queries - 1)
+    queries += context_queries(req.context, k.max_queries - 1)
     if svc.model and scfg.llm.query_planning:
         user = (
             _history_block(req.history)
@@ -472,8 +592,8 @@ def _run(req: Request, svc: Services, root) -> Iterator[dict]:
             rep = generate(
                 svc,
                 root,
-                "econ.plan",
-                system=prompts.load(scfg.answer.plan_prompt),
+                f"{svc.kb_name}.plan",
+                system=prompts.load(k.plan_prompt),
                 user=user,
                 schema=strict_schema(Plan),
                 schema_name="plan",
@@ -483,14 +603,10 @@ def _run(req: Request, svc: Services, root) -> Iterator[dict]:
             )
             plan = Plan.model_validate(rep.data)
             usages.append(rep.usage)
-            qs = [q.strip() for q in plan.queries if q.strip()][: scfg.answer.max_queries]
+            qs = [q.strip() for q in plan.queries if q.strip()][: k.max_queries]
             if qs and not any(textcheck.high(textcheck.scan(q)) for q in qs):
                 standalone = plan.standalone_question.strip() or question
-                queries = (
-                    [standalone, *[q for q in qs if q != standalone]]
-                    if scfg.answer.plan_keeps_question
-                    else qs
-                )
+                queries = [standalone, *[q for q in qs if q != standalone]] if k.plan_keeps_question else qs
                 planned = True
             yield {
                 "event": "plan",
@@ -512,7 +628,7 @@ def _run(req: Request, svc: Services, root) -> Iterator[dict]:
     # --- retrieval -----------------------------------------------------------------------------------
     t = time.time()
     search_obs = root.child(
-        "econ.search",
+        f"{svc.kb_name}.search",
         as_type="retriever",
         input={"queries": queries, "doc_ids": req.doc_ids, "years": req.years, "publishers": req.publishers},
     )
@@ -537,18 +653,26 @@ def _run(req: Request, svc: Services, root) -> Iterator[dict]:
     for tr in traces:
         for h in tr["hits"]:
             h["chunk_id"] = svc.index.chunks[h["row"]]["chunk_id"]
-    fc = scfg.answer.filter
+    fc = k.filter
     filtering = bool(svc.model and fc and getattr(p, "filter_model", None))
-    pool = svc.index.context(ranked, fc.read if filtering else None)
+    # The atlas's pins (D-038) go first, outside the filter; the search and the filter fill the rest.
+    pin_ids, pin = (
+        pinned_rows(svc, [question, standalone], req.observations) if k.pin_observations else ([], [])
+    )
+    if pin:
+        ranked = [s for s in ranked if s.row not in set(pin)]
+    keep = k.context_chunks - len(pin)
+    pool = svc.index.context(ranked, fc.read if filtering else k.context_chunks, per_doc_cap=k.per_doc_cap)
     timings["search"] = round(time.time() - t, 3)
 
     # --- the relevance filter ------------------------------------------------------------------------
-    keep = config.pipeline().retrieval.context_chunks
     ratings: dict[int, int] = {}
     if filtering:
         yield {"event": "search", "candidates": len(ranked), "read": len(pool), "dense": dense_status}
         t = time.time()
-        fobs = root.child("econ.filter", as_type="chain", input={"question": standalone, "read": len(pool)})
+        fobs = root.child(
+            f"{svc.kb_name}.filter", as_type="chain", input={"question": standalone, "read": len(pool)}
+        )
         f = filter_step(svc, standalone, pool, fobs)
         usages.extend(f.pop("usages"))
         ratings = f.pop("ratings", {})
@@ -562,22 +686,26 @@ def _run(req: Request, svc: Services, root) -> Iterator[dict]:
         )
         fobs.end()
     else:
-        order = list(range(len(pool)))
+        order = list(range(min(len(pool), keep)))
         reason = (
             "no answer model" if not svc.model else ("off" if not fc else "this provider has no filter model")
         )
-        filt = {"model": None, "status": f"off ({reason})", "read": len(pool), "kept": len(pool)}
-    chosen = [pool[i] for i in order]
+        filt = {"model": None, "status": f"off ({reason})", "read": len(pool), "kept": len(order)}
+    pinned_sel = [Selected(row, 0.0, 0) for row in pin]
+    chosen = pinned_sel + [pool[i] for i in order]
     # Every passage read, with its search rank and rating; the chosen ones are the evidence, numbered in the
     # order the answer model sees them.
     pool_views = [
         {**evidence_view(svc, s, None, queries), "search_rank": i + 1, "filter_grade": ratings.get(s.row)}
         for i, s in enumerate(pool)
     ]
-    evidence = []
-    for k, i in enumerate(order):
-        pool_views[i]["n"] = k + 1
-        evidence.append(dict(pool_views[i]))
+    evidence = [
+        {**evidence_view(svc, s, j + 1, queries), "search_rank": None, "filter_grade": None, "pinned": True}
+        for j, s in enumerate(pinned_sel)
+    ]
+    for j, i in enumerate(order):
+        pool_views[i]["n"] = len(pin) + j + 1
+        evidence.append({**pool_views[i], **({"pinned": False} if atlas else {})})
     # A chosen passage is in full in `evidence`; its pool entry keeps what identifies it and its number.
     brief = ("n", "chunk_id", "doc_id", "title", "year", "section", "pages", "search_rank", "filter_grade")
     pool_views = [{k: v[k] for k in brief} if v["n"] is not None else v for v in pool_views]
@@ -615,6 +743,7 @@ def _run(req: Request, svc: Services, root) -> Iterator[dict]:
         "evidence": evidence,
         "pool": pool_views,
         "candidates": len(ranked),
+        **({"pinned": pin_ids} if atlas else {}),
     }
 
     if not svc.model:
@@ -632,11 +761,11 @@ def _run(req: Request, svc: Services, root) -> Iterator[dict]:
 
     # --- answer and check ----------------------------------------------------------------------------
     a = scfg.answer
-    schema = prompts.schema_for(a.prompt)
+    schema = prompts.schema_for(k.prompt)
     by_sentence = schema is AnswerV5  # D-026: the model cites sentence ids; code writes the quotes
     passages = {e["n"]: {"chunk_id": e["chunk_id"], "text": e["text"]} for e in evidence}
     sentence_table: dict[tuple[int, int], str] = {}
-    pub = prompts.shows_publisher(a.prompt)
+    pub = prompts.shows_publisher(k.prompt)
     shown = []
     for i, e in enumerate(evidence):
         chunk, doc = svc.index.chunks[chosen[i].row], svc.index.docs[e["doc_id"]]
@@ -665,7 +794,7 @@ def _run(req: Request, svc: Services, root) -> Iterator[dict]:
                 + "\n</errors>"
             )
         call = dict(
-            system=prompts.load(a.prompt),
+            system=prompts.load(k.prompt),
             user=user,
             schema=strict_schema(schema),
             schema_name="answer",
@@ -674,10 +803,10 @@ def _run(req: Request, svc: Services, root) -> Iterator[dict]:
             max_output_tokens=scfg.llm.max_output_tokens,
         )
         try:
-            if a.stream_drafts:
+            if k.stream_drafts:
                 rep = yield from answer_call(svc, root, attempt, **call)
             else:
-                rep = generate(svc, root, "econ.answer", metadata={"attempt": attempt}, **call)
+                rep = generate(svc, root, f"{svc.kb_name}.answer", metadata={"attempt": attempt}, **call)
         except ProviderError as e:
             if e.usage:
                 usages.append(e.usage)
@@ -705,8 +834,12 @@ def _run(req: Request, svc: Services, root) -> Iterator[dict]:
                 quote_claim_ratio=a.quote_claim_ratio,
                 max_quote_words=a.max_quote_words,
             )
+        if k.numbers_check:  # the atlas's numbers rule (D-038): claims' numbers, and none uncited
+            nerr = numbers_check(res.claims, ans) + uncited_numbers(ans.answer, f"{question} {standalone}")
+            if nerr:
+                res = Result(passed=False, errors=res.errors + nerr, claims=res.claims)
         final = (ans, res, attempt)
-        trace_check(root, ans, res, attempt)
+        trace_check(root, ans, res, attempt, prefix=svc.kb_name)
         yield {
             "event": "answer",
             "attempt": attempt,

@@ -3,12 +3,19 @@
 For the next session. Read `CLAUDE.md`, then D-011 to D-021 in `docs/decisions.md`, then this. The running
 log of the session is `docs/progress-rag-v2.md`; the owner's summary is `docs/rag-v2-results-explained.md`.
 
-**Planned, not started (2026-11-04): the evidence atlas as a second knowledge base (D-037).** The owner asked for a
-chat in the Aus-GII-Breakdown repository's evidence atlas, adapted from this one. The plan, for one session working
-in both repositories, is that repository's `docs/plan-atlas-chat.md`: this API gains routes under `/api/atlas/` with
-their own index (`library/atlas/`), prompts, pinned observations and a numbers check. This chat's routes, requests
-and behaviour don't change, and neither chat can reach the other's passages. The owner approved it (D-037), with up
-to $2.00 of OpenAI for its smoke test; nothing has been built or spent.
+**Latest (2026-11-04): the evidence atlas is a second knowledge base, built, measured and smoke-tested (D-037 to
+D-039).** Branch `ccr-eff4672f-j1qrjn`, not merged; nothing published. Read D-038 and D-039.
+- **Built:** `econ atlas-ingest`, `econ index --kb atlas` (`library/atlas/index/`, 4,611 passages), the five routes
+  mounted for each knowledge base (`/api/atlas/*` apart from Econ's, tests both ways), pins, and the numbers check
+  (claims' numbers in their cited sentences; none in uncited prose). Memory: 195 MB with both indexes.
+- **Measured free:** `reports/retrieval-atlas-v1.md` (lookups 20/20, by-id 5/5; notes off, cap 2).
+- **Smoke test** (`reports/atlas-chat-smoke-v1.md`, US$1.04 of the owner's US$2.00): final state 20/20 passed (18
+  first time), every lookup and by-id answer cites its gold observation, no cause stated from an association, 4 of 5
+  out of scope "not in the atlas" and the policy question declined. atlas-answer-v2 configured.
+- **Plain English (D-040, the owner's direction):** atlas-answer-v3, configured as the candidate: 19/20 pass first
+  time, 41% shorter, a fifth of the jargon; the numbers check unchanged (`reports/atlas-chat-plain-v3.md`).
+- **Adopted and published (D-041):** the owner accepted atlas-plan-v1, atlas-filter-v1 and atlas-answer-v3, and the
+  publishing of both branches.
 
 **Status (2026-10-18):** RAG v2 adopted in config and verified. Branch `claude/charming-edison-sg0ehp`
 (not merged). The owner's brief for this session: the best RAG system that stays free to run, up to $2.50
