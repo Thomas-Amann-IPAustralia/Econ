@@ -25,6 +25,20 @@ with notes (enrich-v2); 30 documents, 4,744 passages in all. The GII's 139 econo
 the data file (`econ.ingest.gii`), since Docling drops their tables. Prompts for two publishers (plan-v4,
 filter-v2, answer-v6) were measured (D-034) and adopted by the owner (D-035).
 
+**The atlas chat (D-037, D-038): a second knowledge base, built; its smoke test waits for a valid OpenAI key.** The
+Aus-GII-Breakdown repository's evidence atlas writes its pages as passages (`evidence/data/passages.jsonl` there);
+`econ atlas-ingest` reads them at the commit in `config/atlas.yaml` into `library/atlas/`, and `econ index --kb atlas`
+builds `library/atlas/index/` (4,611 passages; notes written by code but not indexed, measured). The service mounts
+the same five routes for each knowledge base: `/api/*` (Econ, unchanged) and `/api/atlas/*` (the atlas alone); no
+request names a knowledge base, and tests check neither reaches the other's passages. The atlas's settings are
+`knowledge_bases.atlas` in `config/service.yaml` (read by `config.kb("atlas")`; the Econ chat's are `answer` and
+`retrieval`, via `config.kb("econ")`): prompts `atlas-plan-v1`, `atlas-filter-v1`, `atlas-answer-v1` (locked, **not
+adopted**: the owner adopts after the smoke test's report, D-037 decision 5), `per_doc_cap: 2`, pins (ids named put
+their observation's own passages first) and the numbers check (every number a claim states is in its cited
+sentences). Keep the atlas out of the Econ chat's routes, prompts and source switches (D-037, decision 4). Measured:
+`reports/retrieval-atlas-v1.md`; the smoke test (`econ atlas-smoke --confirm`, up to US$2.00) and its report
+`reports/atlas-chat-smoke-v1.md`; the refresh routine: `docs/deploy.md`.
+
 The method is `docs/sop-agent-construction-v2.md` (the owner's SOP). Read `docs/decisions.md` (the
 decision log) and the latest `docs/handover-*.md` before acting.
 
@@ -84,8 +98,12 @@ decision log) and the latest `docs/handover-*.md` before acting.
 | Top up (paid) | `econ judge-topup [--confirm]` | measured contexts, judgments | `eval/judgments/judged-v1.jsonl` |
 | Index | `econ index` | adopted chunks, context notes | `library/index/` |
 | Verify | `econ verify-embedder [--url URL]`, `econ verify-search` | index | `reports/embedder-verification.md`, `reports/search-verification.md` |
+| Atlas: ingest | `econ atlas-ingest [--ref SHA \| --from PATH]` | the atlas's passages at a commit | `library/atlas/` (passages, notes, source) |
+| Atlas: index | `econ index --kb atlas` | `library/atlas/` | `library/atlas/index/` |
+| Atlas: measure | `econ eval-atlas` | atlas index, `eval/atlas/atlas-v1.jsonl` | `eval/runs/atlas-v1/`, `reports/retrieval-atlas-v1.md` |
+| Atlas: smoke (paid) | `econ atlas-smoke --confirm [--only IDS]` | atlas index, atlas-v1 | `eval/runs/atlas-smoke-v1/` |
 
-`econ ask "question"` runs one question locally (evidence-only unless `--confirm` and a key);
+`econ ask "question"` (`--kb atlas` for the atlas chat) runs one question locally (evidence-only unless `--confirm` and a key);
 `econ serve` runs the API locally. Nothing in the pipeline spends money except the one-off context notes
 (`econ.kb.enrich`, about $0.14 a corpus) and the eval tools in `econ.evalr` (cached, metered in
 `eval/spend/ledger.jsonl`, capped by `config/eval.yaml`).

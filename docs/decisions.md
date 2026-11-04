@@ -1562,3 +1562,50 @@ plan is that repository's `docs/plan-atlas-chat.md`, for one session working in 
 5. The atlas prompts are adopted, and the chat published, only after the owner reads the smoke test's report.
 
 **Spend:** none yet. What is built, measured and spent will be D-038.
+
+## D-038 — The atlas chat built as a second knowledge base; retrieval measured; the smoke test blocked by an expired key (Claude, 2026-11-04)
+
+**What was built** (the plan: the Aus-GII-Breakdown repository's `docs/plan-atlas-chat.md`; the owner's decisions: D-037):
+- **The contract**: the atlas writes its own passages (`analysis/atlas/passages.mjs` there; 4,611 passages from 454
+  pages, at most 260 words and, by an estimate of the reference tokenizer, 360 tokens; the largest is 338 by the
+  tokenizer itself). `econ atlas-ingest` reads them at a named commit (`config/atlas.yaml`, `3e13aef`), refuses a
+  changed hash, an unknown key, an oversize passage or a high-severity text-check finding, and writes
+  `library/atlas/` with a context note per passage written by code (atlas-notes-v1). `econ index --kb atlas` builds
+  `library/atlas/index/` with the adopted embedder; Econ's `library/index/` is unchanged.
+- **The service**: `config.kb()` gives one chat's settings; the Econ chat's are read from `answer` and `retrieval`
+  exactly as before (a test pins them). The five routes are written once and mounted for each knowledge base:
+  `/api/*` for Econ, unchanged in path, request and response; `/api/atlas/*` over the atlas index alone. No request
+  names a knowledge base, so neither chat can reach the other's passages (tests both ways: an Econ question naming
+  "M1", a `kb` field, each `chunk` route refusing the other's ids, Econ's catalogue and health as before). One rate
+  limit and one daily budget for both (D-037, decision 3). Logs `atlas-answer`; traces `atlas.ask`, tagged `atlas`.
+- **The atlas's pipeline settings** (`knowledge_bases.atlas` in `config/service.yaml`): prompts atlas-plan-v1,
+  atlas-filter-v1, atlas-answer-v1 (written from plan-v4, filter-v2 and answer-v6; locked, not adopted: decision 5);
+  evidence blocks that name the observation, stage, lens and strength; **pins**: ids in the question (or sent from
+  "Ask about this observation") put that observation's statement, what Stage 3 found (and the Stage 3 pages that
+  tested it), how it follows, and its key figures first, outside the filter, at most 10; and **the numbers check**
+  (`check.numbers_check`): every number a claim states must be in the sentences it cites, after normalising commas,
+  "per cent", the Unicode minus and trailing zeros; a failure goes back once, then is flagged.
+- **Render**: `library/atlas/index/**` in the build filter. Memory, locally after a question to each: 195 MB with both
+  indexes, 146 MB with Econ's alone.
+
+**Measured, free** (`reports/retrieval-atlas-v1.md`, test set `eval/atlas/atlas-v1.jsonl` committed before any
+number): with pinning, every lookup (20/20) and by-id need (5/5) reaches its gold pages in the 20 passages; exploratory
+recall decides. **Adopted** (free retrieval settings, delegated under D-013's brief): the notes are written but **not
+indexed** (`index_notes: false`: the 60-passage pool holds 0.916 of the gold pages without them, 0.813 with; the first
+20, 0.792 against 0.813), **per_doc_cap 2** (best of 2, 3, 4 and 8 for the first 20), and pins that include the Stage
+3 pages testing a named observation (by-id 5/5; 3/5 without pins). The index was rebuilt from the measured, cached
+vectors.
+
+**The smoke test did not run.** The OpenAI key this environment injects has expired (HTTP 401, `expired_secret_key`)
+on the first call; **US$0.00 spent**. The eval budget was raised by the owner's US$2.00 (`config/eval.yaml`), and the
+runner (`econ atlas-smoke --confirm`) stops itself at US$2.00 and at the first refused call. Gemini was not used
+instead: it is unapproved spend, and no Gemini filter is measured. `reports/atlas-chat-smoke-v1.md` says what was
+checked without a model, and holds the two chats side by side.
+
+**Recommendation:** none yet on adopting the atlas prompts (decision 5): it waits for the smoke test. The owner
+replaces the OpenAI key in the environment's settings; a new session runs `econ atlas-smoke --confirm`, completes the
+report, and records the recommendation as D-039.
+
+**The refresh routine** (also in `docs/deploy.md`): after an atlas change that should reach the chat, run
+`econ atlas-ingest --ref <the atlas commit>`, set that sha in `config/atlas.yaml`, run `econ index --kb atlas`, commit
+and merge; Render redeploys. Until then the atlas page says which version the chat reads.

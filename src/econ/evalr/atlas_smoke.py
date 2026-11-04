@@ -72,6 +72,10 @@ def run(embedder, index, *, only: list[str] | None = None, run_dir: str = RUN) -
             e for e in pipeline.run(pipeline.Request(question=n["question"]), svc) if e["event"] != "draft"
         ]
         done = evs[-1]
+        refused = [e["message"] for e in evs if e["event"] == "error" and "HTTP 40" in e.get("message", "")]
+        if refused and not done.get("cost_usd"):
+            # an expired or refused key: stop, rather than send every need to the same refusal
+            raise StageError(f"the model refused the call: {refused[0][:160]}", item=nid)
         for u in done.get("usage", []):
             spend.record(
                 model=u["model"],
