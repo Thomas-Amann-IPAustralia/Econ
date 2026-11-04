@@ -360,3 +360,14 @@ def test_a_number_in_uncited_prose_is_an_error_unless_the_question_holds_it():
         "with the ids of the sentence that holds it, or leave the number out",
     ]
     assert uncited_numbers("Stage 3 and section 1.2 say so [1].", "x") == []
+
+
+def test_readability_counts_plain_words_not_markers():
+    from econ.evalr import readability
+
+    dense = "The hazard ratio of 1.276 (interval 1.1 to 1.4) held together with the cohort, adjusted [1]."
+    plain = "These patents were more likely to end in any given year [1]. That is a link, not proof [2]."
+    d, p = readability.measure(dense), readability.measure(plain)
+    assert d["jargon_per_100"] > p["jargon_per_100"] == 0 and d["numbers_per_100"] > p["numbers_per_100"]
+    assert p["sentences"] == 2 and p["reading_ease"] > d["reading_ease"]
+    assert "[1]" not in readability.plain_text(plain)

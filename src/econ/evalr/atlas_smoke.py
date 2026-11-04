@@ -15,11 +15,12 @@ import time
 from econ import config, spend
 from econ.answer import pipeline
 from econ.answer.providers import OpenAIModel
+from econ.evalr import readability
 from econ.evalr.atlas import load_needs
 from econ.manifest import StageError, write_json_atomic, write_text_atomic
 
 RUN = "eval/runs/atlas-smoke-v1"
-BUDGET = 2.00
+BUDGET = 2.00  # for every run of this test together (D-037, the owner's word of 2026-11-04)
 RESERVE = 0.25  # a pessimistic question, retry included
 NEEDS = [
     "a02", "a04", "a06", "a08", "a11", "a13", "a19",  # lookups by topic, over the lenses and stages
@@ -47,16 +48,22 @@ def cited_docs(evs: list[dict]) -> set[str]:
     }
 
 
-def run(embedder, index, *, only: list[str] | None = None, run_dir: str = RUN) -> dict:
+def run(
+    embedder, index, *, only: list[str] | None = None, run_dir: str = RUN, prompt: str | None = None
+) -> dict:
     llm = config.service().llm
     prov = next(p for p in llm.providers if p.name == "openai")
     key = os.environ.get(prov.key_env, "")
     if not key:
         raise StageError(f"{prov.key_env} is not set (a placeholder is enough behind the proxy)")
     model = OpenAIModel(prov, key, llm.timeout_seconds)
+    kb = config.kb("atlas")
+    if prompt:  # a candidate answer prompt, measured before it is configured
+        kb = kb.model_copy(update={"prompt": prompt})
     svc = pipeline.Services(
-        index=index, embedder=embedder, model=model, provider=prov, kb=config.kb("atlas"), kb_name="atlas"
+        index=index, embedder=embedder, model=model, provider=prov, kb=kb, kb_name="atlas"
     )
+    tag = run_dir.rstrip("/").rsplit("/", 1)[-1]
     needs = {n["id"]: n for n in load_needs()}
     out = config.path(run_dir)
     prior = json.loads((out / "summary.json").read_text())["needs"] if (out / "summary.json").exists() else []
@@ -65,7 +72,7 @@ def run(embedder, index, *, only: list[str] | None = None, run_dir: str = RUN) -
     # The budget counts every call this test has made, from the ledger: a re-run replaces a need's summary
     # but not what its earlier calls cost.
     summary = list(prior)
-    run_cost = sum(e["cost_usd"] for e in spend.entries() if e["purpose"].startswith("atlas-smoke-v1:"))
+    run_cost = sum(e["cost_usd"] for e in spend.entries() if e["purpose"].startswith("atlas-smoke-"))
     for nid in only or NEEDS:
         if nid in done_ids and not only:
             continue
@@ -86,7 +93,7 @@ def run(embedder, index, *, only: list[str] | None = None, run_dir: str = RUN) -
         for u in done.get("usage", []):
             spend.record(
                 model=u["model"],
-                purpose=f"atlas-smoke-v1:{nid}",
+                purpose=f"{tag}:{nid}",
                 usage={k: u[k] for k in ("input", "cached_input", "output", "reasoning")},
                 cost_usd=u["cost_usd"],
             )
@@ -115,6 +122,8 @@ def run(embedder, index, *, only: list[str] | None = None, run_dir: str = RUN) -
                 "pinned": next((e.get("pinned") for e in evs if e["event"] == "retrieval"), None),
                 "cost_usd": done.get("cost_usd"),
                 "seconds": round(time.time() - t, 1),
+                "prompt": kb.prompt,
+                "readability": readability.measure(answer["answer"]) if answer else None,
                 "errors": [e.get("message") for e in evs if e["event"] == "error"],
             }
         ]

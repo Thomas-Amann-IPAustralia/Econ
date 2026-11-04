@@ -568,6 +568,10 @@ def eval_atlas(model_dir: str = typer.Option("", help="Directory with the embedd
 def atlas_smoke(
     confirm: bool = typer.Option(False, help="Spend money: up to US$2.00 of OpenAI (D-037)."),
     only: str = typer.Option("", help="Re-run these needs only, comma-separated (a prompt change)."),
+    run_name: str = typer.Option("atlas-smoke-v1", "--run", help="The run's folder under eval/runs/."),
+    prompt: str = typer.Option(
+        "", help="A candidate answer prompt to measure instead of the configured one."
+    ),
 ) -> None:
     """The atlas chat's capped smoke test (D-038): 20 needs end to end with the service's OpenAI models."""
     import os
@@ -582,10 +586,16 @@ def atlas_smoke(
     idx = Index(Path(os.environ.get(akb.index_env or "") or config.path(akb.index_dir)))
     with run("atlas-smoke", _hash()) as r:
         res = atlas_smoke.run(
-            _LocalEmbedder(idx.meta["embedder"]), idx, only=[x for x in only.split(",") if x] or None
+            _LocalEmbedder(idx.meta["embedder"]),
+            idx,
+            only=[x for x in only.split(",") if x] or None,
+            run_dir=f"eval/runs/{run_name}",
+            prompt=prompt or None,
         )
         r.counts.update(spent_usd=res["spent_usd"], needs=len(res["needs"]))
-    typer.echo(f"atlas-smoke: US${res['spent_usd']:.4f}; see {atlas_smoke.RUN}/summary.json")
+    typer.echo(
+        f"atlas-smoke: US${res['spent_usd']:.4f} over every run; see eval/runs/{run_name}/summary.json"
+    )
 
 
 @app.command("atlas-ingest")
