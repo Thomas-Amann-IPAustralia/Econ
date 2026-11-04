@@ -534,6 +534,50 @@ def _atlas_index(model_dir: str) -> None:
     typer.echo(f"atlas index passed: {r.counts}")
 
 
+@app.command("eval-atlas")
+@loud
+def eval_atlas(model_dir: str = typer.Option("", help="Directory with the embedder's ONNX files.")) -> None:
+    """Measure the atlas chat's retrieval, free (D-038): notes on and off, per-document caps 4 and 8, pinning."""
+    from pathlib import Path
+
+    from econ.embedder import OnnxEmbedder
+    from econ.evalr import atlas as ev
+
+    key = config.pipeline().embedding.adopted
+    mdir = Path(model_dir) if model_dir else config.path(config.pipeline().paths.models) / "onnx" / key
+    with run("eval-atlas", _hash()) as r:
+        res = ev.run(OnnxEmbedder(key, mdir, threads=4))
+        for name, v in res["variants"].items():
+            s = v["scores"]
+            r.counts[name] = [s["lookup"]["in_context"], s["by_id"]["in_context"], s["exploratory"]["context_recall"]]
+        r.add_output(config.path(ev.RUNS) / "results.json")
+        r.add_output(config.path(ev.REPORT))
+    typer.echo(f"eval-atlas passed; see {ev.REPORT}")
+
+
+@app.command("atlas-smoke")
+@loud
+def atlas_smoke(
+    confirm: bool = typer.Option(False, help="Spend money: up to US$2.00 of OpenAI (D-037)."),
+    only: str = typer.Option("", help="Re-run these needs only, comma-separated (a prompt change)."),
+) -> None:
+    """The atlas chat's capped smoke test (D-038): 20 needs end to end with the service's OpenAI models."""
+    import os
+    from pathlib import Path
+
+    from econ.evalr import atlas_smoke
+    from econ.retrieval.index import Index
+
+    if not confirm:
+        raise StageError("this spends money: pass --confirm")
+    akb = config.kb("atlas")
+    idx = Index(Path(os.environ.get(akb.index_env or "") or config.path(akb.index_dir)))
+    with run("atlas-smoke", _hash()) as r:
+        res = atlas_smoke.run(_LocalEmbedder(idx.meta["embedder"]), idx, only=[x for x in only.split(",") if x] or None)
+        r.counts.update(spent_usd=res["spent_usd"], needs=len(res["needs"]))
+    typer.echo(f"atlas-smoke: US${res['spent_usd']:.4f}; see {atlas_smoke.RUN}/summary.json")
+
+
 @app.command("atlas-ingest")
 @loud
 def atlas_ingest(

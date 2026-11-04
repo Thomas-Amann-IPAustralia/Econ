@@ -171,9 +171,9 @@ def test_an_id_in_the_question_pins_its_statement_and_key_figures_first(atlas_in
     ev, _ = _events(pipeline.Request(question="Explain M1 simply"), _atlas_svc(atlas_index_dir))
     r = ev["retrieval"]
     assert r["pinned"] == ["M1"] and ev["meta"]["kb"] == "atlas"
-    first = [(e["chunk_id"], e["pinned"]) for e in r["evidence"][:2]]
-    assert first == [("atlas-M1:0001", True), ("atlas-M1:0002", True)]
-    assert all(not e["pinned"] for e in r["evidence"][2:])
+    first = [(e["chunk_id"], e["pinned"]) for e in r["evidence"][:3]]
+    assert first == [("atlas-M1:0001", True), ("atlas-M1:0000", True), ("atlas-M1:0002", True)]
+    assert all(not e["pinned"] for e in r["evidence"][3:])
     assert [e["n"] for e in r["evidence"]] == list(range(1, len(r["evidence"]) + 1))
     assert r["evidence"][0]["url"].endswith("#/M1") and r["evidence"][0]["strength"] == "observational"
 
