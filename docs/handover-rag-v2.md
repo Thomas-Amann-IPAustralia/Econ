@@ -14,8 +14,8 @@ D-039).** Branch `ccr-eff4672f-j1qrjn`, not merged; nothing published. Read D-03
   out of scope "not in the atlas" and the policy question declined. atlas-answer-v2 configured.
 - **Plain English (D-040, the owner's direction):** atlas-answer-v3, configured as the candidate: 19/20 pass first
   time, 41% shorter, a fifth of the jargon; the numbers check unchanged (`reports/atlas-chat-plain-v3.md`).
-- **The owner's:** adopt atlas-plan-v1, atlas-filter-v1 and atlas-answer-v3 (recommended, D-040), merge both
-  branches, and publish the atlas page (its OQ31).
+- **Adopted and published (D-041):** the owner accepted atlas-plan-v1, atlas-filter-v1 and atlas-answer-v3, and the
+  publishing of both branches.
 
 **Status (2026-10-18):** RAG v2 adopted in config and verified. Branch `claude/charming-edison-sg0ehp`
 (not merged). The owner's brief for this session: the best RAG system that stays free to run, up to $2.50

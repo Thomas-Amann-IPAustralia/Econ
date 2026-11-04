@@ -25,7 +25,7 @@ with notes (enrich-v2); 30 documents, 4,744 passages in all. The GII's 139 econo
 the data file (`econ.ingest.gii`), since Docling drops their tables. Prompts for two publishers (plan-v4,
 filter-v2, answer-v6) were measured (D-034) and adopted by the owner (D-035).
 
-**The atlas chat (D-037, D-038): a second knowledge base, built and smoke-tested (D-039: every answer passes, none states a cause; US$1.04).** The
+**The atlas chat (D-037 to D-041): a second knowledge base, adopted and published by the owner (D-041).** The
 Aus-GII-Breakdown repository's evidence atlas writes its pages as passages (`evidence/data/passages.jsonl` there);
 `econ atlas-ingest` reads them at the commit in `config/atlas.yaml` into `library/atlas/`, and `econ index --kb atlas`
 builds `library/atlas/index/` (4,611 passages; notes written by code but not indexed, measured). The service mounts
@@ -33,7 +33,7 @@ the same five routes for each knowledge base: `/api/*` (Econ, unchanged) and `/a
 request names a knowledge base, and tests check neither reaches the other's passages. The atlas's settings are
 `knowledge_bases.atlas` in `config/service.yaml` (read by `config.kb("atlas")`; the Econ chat's are `answer` and
 `retrieval`, via `config.kb("econ")`): prompts `atlas-plan-v1`, `atlas-filter-v1`, `atlas-answer-v3` (plain English first, the owner's direction, D-040;
-locked, **not adopted**: recommended in D-040; the owner adopts, D-037 decision 5), `per_doc_cap: 2`, pins (ids named put
+**adopted by the owner**, D-041), `per_doc_cap: 2`, pins (ids named put
 their observation's own passages first) and the numbers check (every number a claim states is in its cited
 sentences, and none in uncited prose). Keep the atlas out of the Econ chat's routes, prompts and source switches (D-037, decision 4). Measured:
 `reports/retrieval-atlas-v1.md`; the smoke test (`econ atlas-smoke --confirm`, up to US$2.00) and its report

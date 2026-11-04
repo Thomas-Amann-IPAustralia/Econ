@@ -1669,3 +1669,10 @@ five of the freest paraphrases say what their cited sentences say.
 
 **Recommendation:** adopt atlas-answer-v3 (with atlas-plan-v1 and atlas-filter-v1); configured as the candidate. The
 owner adopts (D-037, decision 5).
+
+## D-041 — The atlas chat adopted and published (the owner, 2026-11-04)
+
+The owner, asked to adopt atlas-plan-v1, atlas-filter-v1 and atlas-answer-v3 and to publish the chat by merging both
+branches (the atlas repository's OQ31; D-037, decision 5): "Yes, I accept". The prompts are adopted as configured in
+`knowledge_bases.atlas`; this repository's branch is merged first, so `/api/atlas/*` is live on Render before the
+atlas page that calls it.
