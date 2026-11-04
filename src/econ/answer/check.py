@@ -238,5 +238,8 @@ def uncited_numbers(answer: str, asked: str) -> list[str]:
         for value, neg, pct in numbers_in(own, skip_labels=True):
             if value not in allowed:
                 shown = ("-" if neg else "") + value + ("%" if pct else "")
-                errors.append(f"the answer states {shown} without citing a sentence that holds it")
+                errors.append(
+                    f"the answer states {shown} without citing a sentence that holds it: end that line (or that "
+                    "list item) with the ids of the sentence that holds it, or leave the number out"
+                )
     return errors

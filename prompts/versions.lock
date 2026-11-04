@@ -34,6 +34,11 @@
     "schema_sha256": "db474714a4d4954f",
     "sha256": "867885f852107341"
   },
+  "atlas-answer-v2": {
+    "schema": "answer5",
+    "schema_sha256": "db474714a4d4954f",
+    "sha256": "be3d24167d012060"
+  },
   "atlas-filter-v1": {
     "schema": "filter",
     "schema_sha256": "27cb0355c1a50e85",

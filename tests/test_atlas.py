@@ -332,7 +332,7 @@ def test_an_atlas_answer_uses_its_own_prompts_and_passes_the_numbers_check(atlas
     assert "evidence atlas" in systems["answer"] and "evidence atlas" in systems["plan"]
     answer_user = [c for c in m.calls if c["schema_name"] == "answer"][0]["user"]
     assert answer_user.startswith('<evidence n="1" page="M1: ') and 'strength="observational"' in answer_user
-    assert ev["meta"]["prompt"] == "atlas-answer-v1" and ev["meta"]["atlas"]["built"] == "2026-11-04"
+    assert ev["meta"]["prompt"] == "atlas-answer-v2" and ev["meta"]["atlas"]["built"] == "2026-11-04"
 
 
 def test_a_number_not_in_the_cited_sentence_is_sent_back_then_flagged(atlas_index_dir):
@@ -354,7 +354,9 @@ def test_a_number_in_uncited_prose_is_an_error_unless_the_question_holds_it():
     answer = "Shares by filer:\n- **14.33%** for organisations;\n- **12.75%** overseas [2].\nIn 2019, nothing [1]. Rank 20th."
     errs = uncited_numbers(answer, "What was the rank in 2019?")
     assert errs == [
-        "the answer states 14.33% without citing a sentence that holds it",
-        "the answer states 20 without citing a sentence that holds it",
+        "the answer states 14.33% without citing a sentence that holds it: end that line (or that list item) "
+        "with the ids of the sentence that holds it, or leave the number out",
+        "the answer states 20 without citing a sentence that holds it: end that line (or that list item) "
+        "with the ids of the sentence that holds it, or leave the number out",
     ]
     assert uncited_numbers("Stage 3 and section 1.2 say so [1].", "x") == []

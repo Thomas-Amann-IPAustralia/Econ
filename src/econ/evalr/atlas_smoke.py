@@ -29,6 +29,10 @@ NEEDS = [
 ]  # fmt: skip
 
 
+def _numbers(err: str) -> bool:
+    return "which is not in the sentences" in err or "without citing a sentence" in err
+
+
 def cited_docs(evs: list[dict]) -> set[str]:
     ev = next((e for e in evs if e["event"] == "retrieval"), {})
     by_n = {x["n"]: x["doc_id"] for x in ev.get("evidence", [])}

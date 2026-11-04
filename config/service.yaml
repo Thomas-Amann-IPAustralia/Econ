@@ -70,7 +70,7 @@ knowledge_bases:
   atlas:
     index_dir: library/atlas/index
     index_env: ECON_ATLAS_INDEX_DIR
-    prompt: atlas-answer-v1
+    prompt: atlas-answer-v2           # v2 (D-039): each list item cites its own sentences; gaps mean partial
     plan_prompt: atlas-plan-v1
     filter:
       prompt: atlas-filter-v1
