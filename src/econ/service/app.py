@@ -6,6 +6,10 @@
   POST /api/search            retrieval only, as JSON
   GET  /api/chunk/{chunk_id}  one passage with its neighbours, to read around a citation
 
+The atlas chat (D-038) has the same five routes under /api/atlas/, over its own index (library/atlas/index) with
+its own prompts; no request carries a knowledge base, so neither chat can reach the other's passages. Both share
+the models, the embedder, the rate limit and the daily budget.
+
 Run locally with `econ serve`. On Render: `uvicorn econ.service.app:app --host 0.0.0.0 --port $PORT`.
 """
 
@@ -19,7 +23,7 @@ from collections import defaultdict, deque
 from contextlib import asynccontextmanager
 from datetime import UTC, datetime
 
-from fastapi import FastAPI, HTTPException, Request
+from fastapi import APIRouter, FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse, StreamingResponse
 from pydantic import BaseModel, Field
@@ -108,9 +112,185 @@ def client_id(request: Request) -> str:
     return fwd.split(",")[0].strip() or (request.client.host if request.client else "unknown")
 
 
+class AtlasAskIn(BaseModel):
+    """A question to the atlas chat (D-038). No knowledge-base field: the route fixes it."""
+
+    question: str = Field(min_length=2)
+    history: list[Turn] = []
+    context: str = ""
+    # Observations the question is about ("Ask about this observation"); their own passages go first.
+    observations: list[str] | None = Field(None, max_length=5)
+    session_id: str | None = Field(None, pattern="^[A-Za-z0-9-]{8,64}$")
+
+
+class AtlasSearchIn(BaseModel):
+    query: str = Field(min_length=2, max_length=500)
+    observations: list[str] | None = Field(None, max_length=5)
+
+
+def kb_router(
+    name: str,
+    index: Index,
+    *,
+    kb,
+    shared: dict,
+    ask_model: type[BaseModel],
+    search_model: type[BaseModel],
+    to_request,
+    to_search,
+    extra_health: dict | None = None,
+) -> APIRouter:
+    """One knowledge base's routes: health, catalogue, ask, search and chunk, over its own index only, so a route
+    of one chat can't reach the other's passages (D-038). The models, the embedder, the rate limit, the daily
+    budget and the tracer are shared (`shared`)."""
+    scfg = config.service()
+    embedder, model, provider = shared["embedder"], shared["model"], shared["provider"]
+    meter, limiter, tracer, build = shared["meter"], shared["limiter"], shared["tracer"], shared["build"]
+    router = APIRouter()
+
+    @router.get("/health")
+    def health() -> dict:
+        shared["warm_embedder"]()
+        out = {
+            "status": "ok",
+            "build": {**build, "index": index.meta, "prompt": kb.prompt},
+            "embedder": {"configured": embedder.configured, "warm": embedder.warm, "health": embedder.health},
+            "llm": {
+                "mode": "answer" if model and meter.available() else "evidence_only",
+                "provider": getattr(provider, "name", None),
+                "answer_model": getattr(provider, "answer_model", None),
+                "plan_model": getattr(provider, "plan_model", None),
+                "budget_reached": bool(model) and not meter.available(),
+            },
+            "tracing": tracer.status(),
+        }
+        return {**out, **(extra_health or {})}
+
+    @router.get("/catalogue")
+    def catalogue() -> dict:
+        return {"documents": index.docs, "index": index.meta}
+
+    @router.get("/chunk/{chunk_id}")
+    def chunk(chunk_id: str) -> dict:
+        i = index.by_id.get(chunk_id)
+        if i is None:
+            raise HTTPException(404, "no such chunk")
+        c = index.chunks[i]
+        prev = (
+            index.chunks[i - 1]["chunk_id"]
+            if i > 0 and index.chunks[i - 1]["doc_id"] == c["doc_id"]
+            else None
+        )
+        nxt = (
+            index.chunks[i + 1]["chunk_id"]
+            if i + 1 < len(index.chunks) and index.chunks[i + 1]["doc_id"] == c["doc_id"]
+            else None
+        )
+        # The search-only fields (the embedded text and the context note, D-013) are never shown.
+        hidden = ("embed_text", "context_note")
+        return {**{k: v for k, v in c.items() if k not in hidden}, "prev": prev, "next": nxt}
+
+    def services() -> pipeline.Services:
+        use_model = model if (model and meter.available()) else None
+        return pipeline.Services(
+            index=index,
+            embedder=embedder,
+            model=use_model,
+            provider=provider if use_model else None,
+            tracer=tracer,
+            kb=None if name == "econ" else kb,
+            kb_name=name,
+        )
+
+    def validate(body, request: Request) -> pipeline.Request:
+        lim = scfg.limits
+        if not limiter.allow(client_id(request)):
+            raise HTTPException(429, "too many questions from this address; try again within the hour")
+        if len(body.question) > lim.max_question_chars:
+            raise HTTPException(
+                413,
+                f"questions are limited to {lim.max_question_chars} characters; "
+                "paste longer material into the context box",
+            )
+        if len(body.context) > lim.max_context_chars:
+            raise HTTPException(413, f"pasted context is limited to {lim.max_context_chars} characters")
+        return to_request(body)
+
+    def record(req: pipeline.Request, events: list[dict]):
+        done = next((e for e in events if e["event"] == "done"), {})
+        meter.add(done.get("cost_usd", 0.0))
+        if scfg.logging.record_questions:
+            log = {
+                "type": "answer" if name == "econ" else f"{name}-answer",
+                "at": datetime.now(UTC).isoformat(timespec="seconds"),
+                "commit": build["commit"],
+                "question": req.question,
+                "context_chars": len(req.context),
+                **({"publishers": req.publishers} if name == "econ" else {"observations": req.observations}),
+                "events": [log_view(e) for e in events],
+            }
+            print(json.dumps(log, ensure_ascii=False, default=str), flush=True)
+
+    def ask(body, request: Request, stream: bool = True):
+        req = validate(body, request)
+        svc = services()
+        # Drafts (D-024) are streamed to the reader but not recorded: the answer event holds the final prose.
+        if not stream:
+            events = [e for e in pipeline.run(req, svc) if e["event"] != "draft"]
+            record(req, events)
+            return JSONResponse({"events": events})
+
+        def gen():
+            events = []
+            try:
+                for e in pipeline.run(req, svc):
+                    if e["event"] != "draft":
+                        events.append(e)
+                    yield f"event: {e['event']}\ndata: {json.dumps(e, ensure_ascii=False, default=str)}\n\n"
+            except Exception as e:  # noqa: BLE001 - the client gets a final error event, never a hang
+                err = {"event": "error", "stage": "service", "message": f"{type(e).__name__}"}
+                events.append(err)
+                yield f"event: error\ndata: {json.dumps(err)}\n\n"
+            finally:
+                record(req, events)
+
+        return StreamingResponse(
+            gen(),
+            media_type="text/event-stream",
+            headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"},
+        )
+
+    def search(body, request: Request) -> dict:
+        req = validate(to_search(body), request)
+        svc = pipeline.Services(
+            index=index, embedder=embedder, kb=None if name == "econ" else kb, kb_name=name
+        )
+        return {"events": list(pipeline.run(req, svc))}
+
+    # The request bodies differ by knowledge base; FastAPI reads them from the annotations (as classes, since
+    # this module's annotations are otherwise strings it would look up among the module's globals).
+    ask.__annotations__.update(body=ask_model, request=Request, stream=bool)
+    search.__annotations__.update(body=search_model, request=Request, **{"return": dict})
+    router.post("/ask")(ask)
+    router.post("/search")(search)
+    return router
+
+
+def atlas_index() -> Index | None:
+    """The atlas's index, if it is built here (D-038); without it the atlas routes are absent (404)."""
+    from pathlib import Path
+
+    kb = config.service().knowledge_bases.get("atlas")
+    if kb is None:
+        return None
+    root = Path(os.environ.get(kb.index_env or "") or config.path(kb.index_dir))
+    return Index(root) if (root / "index.json").exists() else None
+
+
 def create_app() -> FastAPI:
     scfg = config.service()
     index = Index()
+    atlas = atlas_index()
     embedder = EmbedderClient()
     found = configured()
     model, provider = found if found else (None, None)
@@ -143,70 +323,19 @@ def create_app() -> FastAPI:
         allow_headers=["Content-Type"],
         max_age=3600,
     )
+    shared = dict(
+        embedder=embedder,
+        model=model,
+        provider=provider,
+        meter=meter,
+        limiter=limiter,
+        tracer=tracer,
+        build=build,
+        warm_embedder=warm_embedder,
+    )
 
-    @app.get("/api/health")
-    def health() -> dict:
-        warm_embedder()
-        return {
-            "status": "ok",
-            "build": build,
-            "embedder": {"configured": embedder.configured, "warm": embedder.warm, "health": embedder.health},
-            "llm": {
-                "mode": "answer" if model and meter.available() else "evidence_only",
-                "provider": getattr(provider, "name", None),
-                "answer_model": getattr(provider, "answer_model", None),
-                "plan_model": getattr(provider, "plan_model", None),
-                "budget_reached": bool(model) and not meter.available(),
-            },
-            "tracing": tracer.status(),
-        }
-
-    @app.get("/api/catalogue")
-    def catalogue() -> dict:
-        return {"documents": index.docs, "index": index.meta}
-
-    @app.get("/api/chunk/{chunk_id}")
-    def chunk(chunk_id: str) -> dict:
-        i = index.by_id.get(chunk_id)
-        if i is None:
-            raise HTTPException(404, "no such chunk")
-        c = index.chunks[i]
-        prev = (
-            index.chunks[i - 1]["chunk_id"]
-            if i > 0 and index.chunks[i - 1]["doc_id"] == c["doc_id"]
-            else None
-        )
-        nxt = (
-            index.chunks[i + 1]["chunk_id"]
-            if i + 1 < len(index.chunks) and index.chunks[i + 1]["doc_id"] == c["doc_id"]
-            else None
-        )
-        # The search-only fields (the embedded text and the context note, D-013) are never shown.
-        hidden = ("embed_text", "context_note")
-        return {**{k: v for k, v in c.items() if k not in hidden}, "prev": prev, "next": nxt}
-
-    def services() -> pipeline.Services:
-        use_model = model if (model and meter.available()) else None
-        return pipeline.Services(
-            index=index,
-            embedder=embedder,
-            model=use_model,
-            provider=provider if use_model else None,
-            tracer=tracer,
-        )
-
-    def validate(body: AskIn, request: Request) -> pipeline.Request:
-        lim = scfg.limits
-        if not limiter.allow(client_id(request)):
-            raise HTTPException(429, "too many questions from this address; try again within the hour")
-        if len(body.question) > lim.max_question_chars:
-            raise HTTPException(
-                413,
-                f"questions are limited to {lim.max_question_chars} characters; "
-                "paste longer material into the context box",
-            )
-        if len(body.context) > lim.max_context_chars:
-            raise HTTPException(413, f"pasted context is limited to {lim.max_context_chars} characters")
+    # The Econ chat: its routes, requests and responses exactly as before D-038.
+    def econ_request(body: AskIn) -> pipeline.Request:
         if body.doc_ids:
             unknown = sorted(set(body.doc_ids) - set(index.docs))
             if unknown:
@@ -225,59 +354,59 @@ def create_app() -> FastAPI:
             session_id=body.session_id,
         )
 
-    def record(req: pipeline.Request, events: list[dict]):
-        done = next((e for e in events if e["event"] == "done"), {})
-        meter.add(done.get("cost_usd", 0.0))
-        if scfg.logging.record_questions:
-            log = {
-                "type": "answer",
-                "at": datetime.now(UTC).isoformat(timespec="seconds"),
-                "commit": build["commit"],
-                "question": req.question,
-                "context_chars": len(req.context),
-                "publishers": req.publishers,
-                "events": [log_view(e) for e in events],
-            }
-            print(json.dumps(log, ensure_ascii=False, default=str), flush=True)
+    app.include_router(
+        kb_router(
+            "econ",
+            index,
+            kb=config.kb("econ"),
+            shared=shared,
+            ask_model=AskIn,
+            search_model=SearchIn,
+            to_request=econ_request,
+            to_search=lambda b: AskIn(
+                question=b.query, doc_ids=b.doc_ids, years=b.years, publishers=b.publishers
+            ),
+        ),
+        prefix="/api",
+    )
 
-    @app.post("/api/ask")
-    def ask(body: AskIn, request: Request, stream: bool = True):
-        req = validate(body, request)
-        svc = services()
-        # Drafts (D-024) are streamed to the reader but not recorded: the answer event holds the final prose.
-        if not stream:
-            events = [e for e in pipeline.run(req, svc) if e["event"] != "draft"]
-            record(req, events)
-            return JSONResponse({"events": events})
+    # The atlas chat (D-038): its own index and settings, under /api/atlas/; nothing it serves is Econ's.
+    if atlas is not None:
+        akb = config.kb("atlas")
 
-        def gen():
-            events = []
-            try:
-                for e in pipeline.run(req, svc):
-                    if e["event"] != "draft":
-                        events.append(e)
-                    yield f"event: {e['event']}\ndata: {json.dumps(e, ensure_ascii=False, default=str)}\n\n"
-            except Exception as e:  # noqa: BLE001 - the client gets a final error event, never a hang
-                err = {"event": "error", "stage": "service", "message": f"{type(e).__name__}"}
-                events.append(err)
-                yield f"event: error\ndata: {json.dumps(err)}\n\n"
-            finally:
-                record(req, events)
+        def atlas_request(body: AtlasAskIn) -> pipeline.Request:
+            if body.observations:
+                unknown = sorted({o for o in body.observations if f"atlas-{o}" not in atlas.docs})
+                if unknown:
+                    raise HTTPException(400, f"unknown observations: {unknown}")
+            return pipeline.Request(
+                question=body.question,
+                history=[t.model_dump() for t in body.history],
+                context=body.context,
+                observations=body.observations,
+                session_id=body.session_id,
+            )
 
-        return StreamingResponse(
-            gen(),
-            media_type="text/event-stream",
-            headers={"Cache-Control": "no-cache", "X-Accel-Buffering": "no"},
+        app.include_router(
+            kb_router(
+                "atlas",
+                atlas,
+                kb=akb,
+                shared=shared,
+                ask_model=AtlasAskIn,
+                search_model=AtlasSearchIn,
+                to_request=atlas_request,
+                to_search=lambda b: AtlasAskIn(question=b.query, observations=b.observations),
+                extra_health={
+                    "kb": "atlas",
+                    "atlas": {
+                        k: atlas.meta.get(f"atlas_{k}") for k in ("ref", "sha256", "passages_sha256", "built")
+                    },
+                    "budget": {"daily_usd": scfg.llm.daily_budget_usd, "shared_with": "econ"},
+                },
+            ),
+            prefix="/api/atlas",
         )
-
-    @app.post("/api/search")
-    def search(body: SearchIn, request: Request) -> dict:
-        req = validate(
-            AskIn(question=body.query, doc_ids=body.doc_ids, years=body.years, publishers=body.publishers),
-            request,
-        )
-        svc = pipeline.Services(index=index, embedder=embedder)
-        return {"events": list(pipeline.run(req, svc))}
 
     return app
 

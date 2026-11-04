@@ -6,7 +6,8 @@ services:
     runtime: python
     plan: free
     region: singapore          # Render's closest region to Australia
-    # Editable install: the service reads config/, prompts/ and library/index/ from the checkout.
+    # Editable install: the service reads config/, prompts/, library/index/ and the atlas chat's
+    # library/atlas/index/ (D-038) from the checkout.
     buildCommand: pip install --upgrade pip && pip install -e .
     startCommand: uvicorn econ.service.app:app --host 0.0.0.0 --port $PORT
     healthCheckPath: /api/health
@@ -17,6 +18,7 @@ services:
         - config/**
         - prompts/**
         - library/index/**
+        - library/atlas/index/**
         - pyproject.toml
         - render.yaml
     envVars:

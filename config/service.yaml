@@ -63,6 +63,30 @@ answer:
   quote_claim_ratio: 0.5
   max_quote_words: 80
 
+# Knowledge bases besides the Econ publications (D-038). The Econ chat's settings are the answer block above,
+# unchanged; the atlas chat ("Ask the atlas") has its own index, prompts and routes (/api/atlas/*), and shares the
+# models, the rate limit and the daily budget (D-037, decision 3).
+knowledge_bases:
+  atlas:
+    index_dir: library/atlas/index
+    index_env: ECON_ATLAS_INDEX_DIR
+    prompt: atlas-answer-v1
+    plan_prompt: atlas-plan-v1
+    filter:
+      prompt: atlas-filter-v1
+      read: 60
+      group: 20
+      max_output_tokens: 3000
+    max_queries: 4
+    plan_keeps_question: true
+    stream_drafts: true
+    context_chunks: 20
+    per_doc_cap: 4                   # a document is one observation: a lower cap keeps answers broad (WP5 measures 4 and 8)
+    numbers_check: true
+    pin_observations: true
+    max_pinned: 10
+    max_observations: 5
+
 limits:
   requests_per_hour_per_client: 30
   max_question_chars: 2000

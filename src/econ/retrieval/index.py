@@ -144,15 +144,19 @@ class Index:
             head[i].rerank_score = round(float(scores[i]), 6)
         return [head[i] for i in order] + ranked[depth:]
 
-    def context(self, ranked: list[Selected], k: int | None = None) -> list[Selected]:
-        """The first `k` (default `context_chunks`) ranked passages, at most `per_doc_cap` from a document. A
-        larger k extends the smaller one's list: the relevance filter reads the first 60 (D-020)."""
+    def context(
+        self, ranked: list[Selected], k: int | None = None, per_doc_cap: int | None = None
+    ) -> list[Selected]:
+        """The first `k` (default `context_chunks`) ranked passages, at most `per_doc_cap` (default the
+        config's) from a document. A larger k extends the smaller one's list: the relevance filter reads the
+        first 60 (D-020). The atlas's knowledge base sets its own cap (D-038)."""
         r = config.pipeline().retrieval
         k = k or r.context_chunks
+        cap = per_doc_cap or r.per_doc_cap
         out, per_doc = [], {}
         for s in ranked:
             d = self.chunks[s.row]["doc_id"]
-            if per_doc.get(d, 0) >= r.per_doc_cap:
+            if per_doc.get(d, 0) >= cap:
                 continue
             per_doc[d] = per_doc.get(d, 0) + 1
             out.append(s)

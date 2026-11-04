@@ -19,9 +19,22 @@ PROMPTS = config.ROOT / "prompts"
 SCHEMAS = {"answer": Answer, "answer3": AnswerV3, "answer5": AnswerV5, "filter": Grades, "plan": Plan}
 
 
+ATLAS = "atlas-"
+
+
+def is_atlas(name: str) -> bool:
+    """The atlas chat's prompts (D-038): their passages carry an observation's id, stage, lens and strength
+    instead of a publisher and year."""
+    return name.startswith(ATLAS)
+
+
 def schema_kind(name: str) -> str:
     """The schema a prompt is written for: its kind, except that answer prompts from v3 add follow-ups and
-    from v5 cite sentences by id instead of writing claims (D-026)."""
+    from v5 cite sentences by id instead of writing claims (D-026). The atlas's answer prompts cite sentences
+    from their first version."""
+    if is_atlas(name):
+        kind = name[len(ATLAS) :].rsplit("-v", 1)[0]
+        return "answer5" if kind == "answer" else kind
     kind, version = name.rsplit("-v", 1)
     if kind != "answer" or int(version) < 3:
         return kind
@@ -31,6 +44,8 @@ def schema_kind(name: str) -> str:
 def shows_publisher(name: str) -> bool:
     """Prompts written for a corpus of two publishers see each passage's publisher (D-034): the answer
     prompt from v6, the filter prompt from v2."""
+    if is_atlas(name):
+        return False
     kind, version = name.rsplit("-v", 1)
     return (kind == "answer" and int(version) >= 6) or (kind == "filter" and int(version) >= 2)
 

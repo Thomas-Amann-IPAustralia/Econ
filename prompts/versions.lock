@@ -29,6 +29,21 @@
     "schema_sha256": "db474714a4d4954f",
     "sha256": "be7dac4b38583881"
   },
+  "atlas-answer-v1": {
+    "schema": "answer5",
+    "schema_sha256": "db474714a4d4954f",
+    "sha256": "867885f852107341"
+  },
+  "atlas-filter-v1": {
+    "schema": "filter",
+    "schema_sha256": "27cb0355c1a50e85",
+    "sha256": "f4b6d16a17f0eabd"
+  },
+  "atlas-plan-v1": {
+    "schema": "plan",
+    "schema_sha256": "ab394bace1984c1e",
+    "sha256": "1c8810212fbe1405"
+  },
   "filter-v1": {
     "schema": "filter",
     "schema_sha256": "27cb0355c1a50e85",

@@ -171,3 +171,53 @@ def check(
     for f in textcheck.high(textcheck.scan(output)):
         errors.append(f"the output failed a text check ({f.rule})")
     return Result(passed=not errors, errors=errors, claims=claims_out)
+
+
+# --- the atlas's numbers rule (D-038) ------------------------------------------------------------------------
+
+# A number: an optional sign, digits with optional thousands commas, an optional decimal part, and an optional
+# per cent. Not a number: digits inside a word or an id (M40, FY2010, Q2, U44), or a section's or stage's number.
+_NUMBER = re.compile(
+    r"(?<![\w.,])([+\-−]?)(\d{1,3}(?:,\d{3})+|\d+)(\.\d+)?(?![\w])(\s*(?:%|per\s+cent\b|percent\b))?",
+    re.IGNORECASE,
+)
+_NOT_A_FINDING = re.compile(
+    r"(?:\b(?:stages?|steps?|sections?|questions?|views?|chapters?|parts?|tables?|figures?|"
+    r"observations?|lens|claims?|evidence|passages?)\s+|\[)$",
+    re.IGNORECASE,
+)
+
+
+def numbers_in(text: str, *, skip_labels: bool = False) -> list[tuple[str, bool, bool]]:
+    """Each number in `text` as (value without commas or sign, negative, per cent). With `skip_labels`, a number
+    that only labels something ("Stage 3", "section 1.2", "[2]") is left out."""
+    out = []
+    for m in _NUMBER.finditer(text):
+        if skip_labels and _NOT_A_FINDING.search(text[: m.start()]):
+            continue
+        sign, whole, frac, pct = m.groups()
+        frac = (frac or "").rstrip("0").rstrip(".")  # 6.0 is 6, as the charts' tables write it
+        value = whole.replace(",", "") + frac
+        out.append((value, sign in ("-", "−"), bool(pct)))
+    return out
+
+
+def numbers_check(claims: list[dict], ans) -> list[str]:
+    """Every number a claim states must appear in the sentences it cites (the atlas's numbers rule: a number not
+    on the page is not a finding). A number written without a sign or per cent matches the same digits with
+    either; one written with a sign or per cent needs the same in a quote. Commas, "per cent" and the Unicode
+    minus are normalised."""
+    errors = []
+    for ci, claim in enumerate(ans.claims, start=1):
+        quoted = [n for cit in claim.citations for n in numbers_in(cit.quote)]
+        for value, neg, pct in numbers_in(claim.text, skip_labels=True):
+            ok = any(v == value and (not neg or qn) and (not pct or qp) for v, qn, qp in quoted)
+            if not ok:
+                shown = ("-" if neg else "") + value + ("%" if pct else "")
+                errors.append(f"claim [{ci}] states {shown}, which is not in the sentences it cites")
+    if errors:
+        for c in claims:
+            if any(e.startswith(f"claim [{c['n']}] states") for e in errors):
+                c["verified"] = False
+                c["errors"] = c["errors"] + [e for e in errors if e.startswith(f"claim [{c['n']}] states")]
+    return errors
