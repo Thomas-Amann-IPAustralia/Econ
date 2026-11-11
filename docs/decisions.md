@@ -1676,3 +1676,23 @@ The owner, asked to adopt atlas-plan-v1, atlas-filter-v1 and atlas-answer-v3 and
 branches (the atlas repository's OQ31; D-037, decision 5): "Yes, I accept". The prompts are adopted as configured in
 `knowledge_bases.atlas`; this repository's branch is merged first, so `/api/atlas/*` is live on Render before the
 atlas page that calls it.
+
+## D-042 — The atlas chat's passages refreshed at the atlas commit `94499bd` (the owner's request; Claude, 2026-11-11)
+
+The owner, from a session in the atlas repository (its A42): "Are you able to refresh the econ knowledge base from
+here? If so, please do it." Done by the routine in `docs/deploy.md`, with no change to code, prompts or settings:
+
+- `econ atlas-ingest --ref 94499bd1d9dc1f6c6483ce02ced8bce0910492c9` passed: 4,589 passages from 455 pages (4,611
+  from 454 at `3e13aef`). A first run failed before reading anything, for want of the build extra's tokenizer; its
+  manifest is kept, as every run's is.
+- `config/atlas.yaml` names the same commit; `econ index --kb atlas` passed (4,589 chunks, 455 documents, 768
+  dimensions); the tests pass.
+- **What the chat now reads that it did not:** the plain-English readings and pages (the atlas's ADR 0055 and 0056),
+  the 22 observations corrected on 10 November (its ADR 0057), and each page's standing (its ADR 0058): whether an
+  observation is open for further exploration or proposed for retirement, how other observations bear on it, and a
+  new page, "Keeping the atlas current".
+- **Order of merging.** `94499bd` is on the atlas repository's branch `claude/tender-fermat-h1el1i`, not yet on its
+  main. Merge that branch first, then this one, so the chat does not quote pages that are not yet published. The
+  commit stays reachable after a merge commit; a squash would not keep it, and the ingest would then need to be run
+  again at the merged commit.
+

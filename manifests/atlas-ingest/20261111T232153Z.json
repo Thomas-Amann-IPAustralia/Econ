@@ -1,0 +1,59 @@
+{
+  "argv": [
+    "atlas-ingest",
+    "--ref",
+    "94499bd1d9dc1f6c6483ce02ced8bce0910492c9"
+  ],
+  "command": "atlas-ingest",
+  "config_hash": "c19f062c0f626ea9",
+  "counts": {
+    "documents": 455,
+    "glossary": 151,
+    "lens": 50,
+    "observation": 4147,
+    "page": 172,
+    "passages": 4589,
+    "question": 15,
+    "source": 54
+  },
+  "error": null,
+  "git": {
+    "commit": "9272b694495b4fd8b7f94006d137631611c5d314",
+    "dirty": true,
+    "dirty_paths": [
+      "config/atlas.yaml"
+    ]
+  },
+  "git_at_end": {
+    "commit": "9272b694495b4fd8b7f94006d137631611c5d314",
+    "dirty": true,
+    "dirty_paths": [
+      "config/atlas.yaml"
+    ]
+  },
+  "inputs": {},
+  "outputs": {
+    "library/atlas/notes.jsonl": "b7bc2cccc157012a93aac6e110680f982c98676f4bb7e4d6a7a0b69682539bff",
+    "library/atlas/passages.jsonl": "3bf51d3f79dc33c11f9303da7660eb036bbcdc7f9ae0a87e6e63f10839dc193e",
+    "library/atlas/source.json": "0e73f8d76be81b95eed59b36e575b8b0e082240ba723d3f5910bf241ae24176b"
+  },
+  "params": {
+    "from_path": null,
+    "ref": "94499bd1d9dc1f6c6483ce02ced8bce0910492c9"
+  },
+  "run_id": "20261111T232153Z",
+  "seconds": 3.8,
+  "status": "passed",
+  "upstream": {},
+  "versions": {
+    "docling": "2.140.0",
+    "numpy": "2.5.4",
+    "onnxruntime": "1.31.0",
+    "pypdfium2": "5.14.0",
+    "python": "3.12.3",
+    "sentence-transformers": "6.1.0",
+    "tokenizers": "0.23.3",
+    "torch": "2.14.1+cpu"
+  },
+  "warnings": []
+}

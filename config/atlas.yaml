@@ -7,7 +7,7 @@ source:
   repo: Thomas-Amann-IPAustralia/Aus-GII-Breakdown
   path: evidence/data/passages.jsonl
   meta_path: evidence/data/passages.meta.json
-  ref: 3e13aef7aee3b8e79511a8eed905fb342b534d72   # the atlas commit the index was built from
+  ref: 94499bd1d9dc1f6c6483ce02ced8bce0910492c9   # the atlas commit the index was built from
   sibling: ../Aus-GII-Breakdown                    # a local checkout, for `econ atlas-ingest --from`
 
 publisher: Evidence atlas (IPAVentures, IP Australia)

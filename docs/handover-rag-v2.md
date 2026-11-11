@@ -3,7 +3,12 @@
 For the next session. Read `CLAUDE.md`, then D-011 to D-021 in `docs/decisions.md`, then this. The running
 log of the session is `docs/progress-rag-v2.md`; the owner's summary is `docs/rag-v2-results-explained.md`.
 
-**Latest (2026-11-04): the evidence atlas is a second knowledge base, built, measured and smoke-tested (D-037 to
+**Latest (2026-11-11): the atlas chat's passages refreshed (D-042)**, at the owner's request from a session in the
+atlas repository. Ingested at the atlas commit `94499bd` (4,589 passages, 455 pages) and indexed; tests pass; no code,
+prompt or setting changed. Branch `claude/tender-fermat-h1el1i`, not merged: merge the atlas repository's branch of
+the same name first, then this one (Render redeploys), so the chat does not run ahead of the published pages.
+
+**Earlier (2026-11-04): the evidence atlas is a second knowledge base, built, measured and smoke-tested (D-037 to
 D-039).** Branch `ccr-eff4672f-j1qrjn`, not merged; nothing published. Read D-038 and D-039.
 - **Built:** `econ atlas-ingest`, `econ index --kb atlas` (`library/atlas/index/`, 4,611 passages), the five routes
   mounted for each knowledge base (`/api/atlas/*` apart from Econ's, tests both ways), pins, and the numbers check

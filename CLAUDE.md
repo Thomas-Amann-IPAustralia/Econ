@@ -28,7 +28,7 @@ filter-v2, answer-v6) were measured (D-034) and adopted by the owner (D-035).
 **The atlas chat (D-037 to D-041): a second knowledge base, adopted and published by the owner (D-041).** The
 Aus-GII-Breakdown repository's evidence atlas writes its pages as passages (`evidence/data/passages.jsonl` there);
 `econ atlas-ingest` reads them at the commit in `config/atlas.yaml` into `library/atlas/`, and `econ index --kb atlas`
-builds `library/atlas/index/` (4,611 passages; notes written by code but not indexed, measured). The service mounts
+builds `library/atlas/index/` (4,589 passages at the refresh of 11 November 2026, D-042; notes written by code but not indexed, measured). The service mounts
 the same five routes for each knowledge base: `/api/*` (Econ, unchanged) and `/api/atlas/*` (the atlas alone); no
 request names a knowledge base, and tests check neither reaches the other's passages. The atlas's settings are
 `knowledge_bases.atlas` in `config/service.yaml` (read by `config.kb("atlas")`; the Econ chat's are `answer` and

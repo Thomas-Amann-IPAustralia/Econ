@@ -1,7 +1,7 @@
 {
   "atlas-B1": {
     "authors": [],
-    "chunks": 17,
+    "chunks": 18,
     "doc_id": "atlas-B1",
     "kind": "observation",
     "lens": "rights",
@@ -17,7 +17,7 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "descriptive",
-    "title": "B1: Every pair of measures for each type of right was checked; 221 pairs passed every test, in two separate decades",
+    "title": "B1: Pairs of measures were tested for each type of right, and 221 passed in two separate decades",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B1",
     "year": 2026
   },
@@ -39,13 +39,13 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B10: Overseas organisations' trade marks and designs most often stay in force past the first renewal, Australian individuals' least",
+    "title": "B10: Overseas organisations' trade marks and designs most often outlast the first renewal, Australian individuals' least",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B10",
     "year": 2026
   },
   "atlas-B11": {
     "authors": [],
-    "chunks": 18,
+    "chunks": 19,
     "doc_id": "atlas-B11",
     "kind": "observation",
     "lens": "rights",
@@ -61,7 +61,7 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B11: Australian organisations' patents reach fewer countries than overseas filers'; the apparent narrowing since the 2000s is mostly a gap in older records",
+    "title": "B11: Australian organisations' patents reach fewer countries, and the apparent change since the 2000s is a records gap",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B11",
     "year": 2026
   },
@@ -83,7 +83,7 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B12: Australians' patents are cited less within their field and year, and most of the gap goes with how far they reach",
+    "title": "B12: Australians' patents are cited less, and most of the gap goes with filing in fewer countries",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B12",
     "year": 2026
   },
@@ -105,13 +105,13 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B13: Expedited patents are slightly more often still in force at 10 years, but the link differs by filer, and \"expedited\" mixes kinds of request",
+    "title": "B13: On raw figures fast-tracked patents last slightly longer, but not among similar patents, and who asks differs by applicant",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B13",
     "year": 2026
   },
   "atlas-B14": {
     "authors": [],
-    "chunks": 16,
+    "chunks": 15,
     "doc_id": "atlas-B14",
     "kind": "observation",
     "lens": "rights",
@@ -127,7 +127,7 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "descriptive",
-    "title": "B14: Expedited trade marks are a few points more often in force after 10 years for Australians, and slightly less for overseas organisations, so this is not a lead",
+    "title": "B14: Fast-tracked trade marks last a little longer for Australians only, so it is not followed up",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B14",
     "year": 2026
   },
@@ -149,7 +149,7 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "descriptive",
-    "title": "B15: Each kind of filer has its own route into Australia, and the share of divisional applications about doubled",
+    "title": "B15: Each kind of applicant has its own route into Australia, and divisional applications doubled",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B15",
     "year": 2026
   },
@@ -171,13 +171,13 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "descriptive",
-    "title": "B16: About one patent in seven made in Australia is filed by an overseas applicant",
+    "title": "B16: About one patent in seven invented in Australia is filed by an overseas applicant",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B16",
     "year": 2026
   },
   "atlas-B17": {
     "authors": [],
-    "chunks": 18,
+    "chunks": 19,
     "doc_id": "atlas-B17",
     "kind": "observation",
     "lens": "rights",
@@ -193,13 +193,13 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B17: Among inventors in Australia, the field matters more than the filer for women's share, and the fields' order holds",
+    "title": "B17: The technology field matters more than the applicant to women's share of inventors",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B17",
     "year": 2026
   },
   "atlas-B18": {
     "authors": [],
-    "chunks": 16,
+    "chunks": 17,
     "doc_id": "atlas-B18",
     "kind": "observation",
     "lens": "rights",
@@ -215,7 +215,7 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B18: On provisional applications, Australian organisations' inventors include more women than Australian individuals', in both decades",
+    "title": "B18: On provisional applications, Australian organisations name more women inventors than individuals do",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B18",
     "year": 2026
   },
@@ -237,7 +237,7 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B19: Australian-filed patents now held only overseas are more common among the wider and the granted ones, and among organisations'",
+    "title": "B19: Patents filed from Australia and now owned only overseas are more often wide, granted and organisations'",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B19",
     "year": 2026
   },
@@ -259,7 +259,7 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "descriptive",
-    "title": "B2: The strongest pairs are how the IP system works, not findings, and are recorded but not carried forward",
+    "title": "B2: The strongest links simply show how the IP system works, so they are not followed up",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B2",
     "year": 2026
   },
@@ -281,7 +281,7 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "descriptive",
-    "title": "B20: The firms screen found 33 distinct leads, and its two random halves agree almost exactly",
+    "title": "B20: The business test found 33 distinct links, and two random halves agreed almost exactly",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B20",
     "year": 2026
   },
@@ -303,13 +303,13 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B21: Most firm leads describe who is in the lens or how the registers work; a few are substantive",
+    "title": "B21: Most business links reflect how the data were built, and a few are worth following up",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B21",
     "year": 2026
   },
   "atlas-B22": {
     "authors": [],
-    "chunks": 20,
+    "chunks": 19,
     "doc_id": "atlas-B22",
     "kind": "observation",
     "lens": "firms",
@@ -325,13 +325,13 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B22: Among firms that came in another way, filing IP goes with being a company and older; for government suppliers, also with a city address and an advantaged postcode",
+    "title": "B22: Among suppliers and R&D claimants, companies and older firms more often file IP",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B22",
     "year": 2026
   },
   "atlas-B23": {
     "authors": [],
-    "chunks": 19,
+    "chunks": 18,
     "doc_id": "atlas-B23",
     "kind": "observation",
     "lens": "firms",
@@ -347,7 +347,7 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B23: More R&D spend goes with patenting, but only weakly; about half of R&D claimants have no IP filing linked to their business number, at any level of spend",
+    "title": "B23: Higher R&D spending goes with patenting only weakly, and half of claimants have no linked filing",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B23",
     "year": 2026
   },
@@ -369,13 +369,13 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B24: Government suppliers that have filed IP have more contracts and more contract value, within each kind of entity shown except trusts",
+    "title": "B24: Government suppliers that file IP win more contracts and more contract value",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B24",
     "year": 2026
   },
   "atlas-B25": {
     "authors": [],
-    "chunks": 18,
+    "chunks": 17,
     "doc_id": "atlas-B25",
     "kind": "observation",
     "lens": "firms",
@@ -391,13 +391,13 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "descriptive",
-    "title": "B25: Within firms, the first trade mark usually comes before the first patent or design; one first filing in five is dated before the firm's first public registration",
+    "title": "B25: Firms usually file their first trade mark before their first patent or design",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B25",
     "year": 2026
   },
   "atlas-B26": {
     "authors": [],
-    "chunks": 19,
+    "chunks": 18,
     "doc_id": "atlas-B26",
     "kind": "observation",
     "lens": "firms",
@@ -413,13 +413,13 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B26: By firm, the youngest filers are not clearly more often those whose patents are now held only overseas; patents filed before a firm's first registration are the most often held overseas",
+    "title": "B26: Young firms' patents are not clearly more often owned overseas later, but pre-registration patents are",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B26",
     "year": 2026
   },
   "atlas-B27": {
     "authors": [],
-    "chunks": 21,
+    "chunks": 22,
     "doc_id": "atlas-B27",
     "kind": "observation",
     "lens": "regions",
@@ -435,7 +435,7 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B27: Across postal areas the kinds of IP move together, and with education and occupation more than income",
+    "title": "B27: Places that file one kind of IP file the others too, more in line with education than income",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B27",
     "year": 2026
   },
@@ -457,7 +457,7 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B28: Most attached indicators go with filing along one broad gradient of advantage, education and business density",
+    "title": "B28: Most local measures go with filing along one broad line of advantage and education",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B28",
     "year": 2026
   },
@@ -479,13 +479,13 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B29: Filing rises steeply with advantage and falls with remoteness; both hold when read together, in both halves of the areas",
+    "title": "B29: Filing rises steeply with local advantage and falls with remoteness",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B29",
     "year": 2026
   },
   "atlas-B3": {
     "authors": [],
-    "chunks": 16,
+    "chunks": 17,
     "doc_id": "atlas-B3",
     "kind": "observation",
     "lens": "rights",
@@ -501,7 +501,7 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "descriptive",
-    "title": "B3: IP RAPID gives no applicant country for designs that were never registered",
+    "title": "B3: The research data give no applicant country for designs that were never registered",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B3",
     "year": 2026
   },
@@ -523,13 +523,13 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B30: The advantage gradient is not one firm's; it is at least as strong with each area's largest filer taken out",
+    "title": "B30: The link with advantage does not depend on each area's biggest filer",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B30",
     "year": 2026
   },
   "atlas-B31": {
     "authors": [],
-    "chunks": 16,
+    "chunks": 17,
     "doc_id": "atlas-B31",
     "kind": "observation",
     "lens": "regions",
@@ -545,13 +545,13 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B31: Areas with more finance, property and professional businesses file more per business; manufacturing's share makes no difference",
+    "title": "B31: Areas with more finance and professional businesses file more per business",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B31",
     "year": 2026
   },
   "atlas-B32": {
     "authors": [],
-    "chunks": 18,
+    "chunks": 20,
     "doc_id": "atlas-B32",
     "kind": "observation",
     "lens": "national",
@@ -567,7 +567,7 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B32: Across countries, IP filing moves with R&D, research and income as one development gradient, and holds over a decade",
+    "title": "B32: Across countries, IP filing rises with R&D, research and income together",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B32",
     "year": 2026
   },
@@ -589,13 +589,13 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "descriptive",
-    "title": "B33: Among OECD members, Australia is near the top for new businesses, trade marks and research, the middle for patents, and near the bottom for manufacturing",
+    "title": "B33: Australia ranks near the top of the OECD for new businesses and trade marks, and low for manufacturing",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B33",
     "year": 2026
   },
   "atlas-B34": {
     "authors": [],
-    "chunks": 19,
+    "chunks": 20,
     "doc_id": "atlas-B34",
     "kind": "observation",
     "lens": "national",
@@ -611,13 +611,13 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B34: Across OECD members patenting rises with business R&D almost one for one, but changes in R&D barely go with changes in patenting",
+    "title": "B34: Countries with more business R&D patent more, but changes in R&D barely track patenting",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B34",
     "year": 2026
   },
   "atlas-B35": {
     "authors": [],
-    "chunks": 19,
+    "chunks": 18,
     "doc_id": "atlas-B35",
     "kind": "observation",
     "lens": "national",
@@ -633,13 +633,13 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B35: About half the cross-country attachments go with residents' patenting, again along development",
+    "title": "B35: About half of the international measures go with patenting, again along lines of development",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B35",
     "year": 2026
   },
   "atlas-B36": {
     "authors": [],
-    "chunks": 18,
+    "chunks": 17,
     "doc_id": "atlas-B36",
     "kind": "observation",
     "lens": "timeline",
@@ -655,13 +655,13 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B36: As changes, the quarterly series were seldom seen to move together; the one pair that holds is the trade mark process itself",
+    "title": "B36: Few quarterly series move together; the exception is trade mark registrations and oppositions",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B36",
     "year": 2026
   },
   "atlas-B37": {
     "authors": [],
-    "chunks": 19,
+    "chunks": 18,
     "doc_id": "atlas-B37",
     "kind": "observation",
     "lens": "timeline",
@@ -677,13 +677,13 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B37: Seven of eight policy changes moved a series further than any comparison month; most of those breaks were certain by law, and few show applicants' behaviour",
+    "title": "B37: Seven of eight policy changes broke a series, but mostly as the law required",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B37",
     "year": 2026
   },
   "atlas-B38": {
     "authors": [],
-    "chunks": 17,
+    "chunks": 16,
     "doc_id": "atlas-B38",
     "kind": "observation",
     "lens": "timeline",
@@ -699,13 +699,13 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B38: Provisionals filed in FY2025 were followed up less often, individuals' by about half, but late recording cannot be ruled out",
+    "title": "B38: Fewer provisional applications from 2024–25 were followed up, though records may lag",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B38",
     "year": 2026
   },
   "atlas-B39": {
     "authors": [],
-    "chunks": 18,
+    "chunks": 17,
     "doc_id": "atlas-B39",
     "kind": "observation",
     "lens": "timeline",
@@ -721,7 +721,7 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B39: Quarter to quarter, Australians' and overseas applicants' filings were not seen to move together; year to year, their trade marks rise and fall together",
+    "title": "B39: Australian and overseas filings do not move together quarter to quarter, but their trade marks do year to year",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B39",
     "year": 2026
   },
@@ -743,7 +743,7 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B4: The substantive leads, each held in both decades and followed up below",
+    "title": "B4: The links worth following up, each seen in both decades",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B4",
     "year": 2026
   },
@@ -765,13 +765,13 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B40: Across industries, trade marks allocated per business go with business R&D per business; patents' pairs do not pass, held back by the crosswalk",
+    "title": "B40: Industries spending more on R&D receive more trade marks per business",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B40",
     "year": 2026
   },
   "atlas-B41": {
     "authors": [],
-    "chunks": 17,
+    "chunks": 16,
     "doc_id": "atlas-B41",
     "kind": "observation",
     "lens": "industries",
@@ -787,7 +787,7 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "descriptive",
-    "title": "B41: The main crosswalk allocates patents to 8 of 19 industries; manufacturing and utilities receive the most per business",
+    "title": "B41: The main method assigns patents to 8 of 19 industries, most to manufacturing and utilities",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B41",
     "year": 2026
   },
@@ -809,13 +809,13 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B42: An industry's share of innovating businesses does not consistently go with its filing",
+    "title": "B42: Industries with more innovating businesses do not consistently file more",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B42",
     "year": 2026
   },
   "atlas-B43": {
     "authors": [],
-    "chunks": 17,
+    "chunks": 16,
     "doc_id": "atlas-B43",
     "kind": "observation",
     "lens": "industries",
@@ -831,7 +831,7 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B43: Of 2,157 industry-level indicators, only a few survey items pass the correction for many tests, each a single sample among items that repeat one another",
+    "title": "B43: Of 2,157 industry measures, only a few survey items stand out from chance",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B43",
     "year": 2026
   },
@@ -853,7 +853,7 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B44: Across research institutions the kind of institution sorts most measures, and research that patents cite goes with the institution's own patenting",
+    "title": "B44: Institutions differ mostly by type, and research cited by patents goes with their own patenting",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B44",
     "year": 2026
   },
@@ -875,7 +875,7 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B45: Larger, more cited universities file more patents per work; industry-partner grants were not seen to go with joint filing",
+    "title": "B45: Larger, more cited universities file more patents per publication",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B45",
     "year": 2026
   },
@@ -897,13 +897,13 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B46: Few of the US patents that cite Australian research have an Australian applicant or inventor, and the share does not consistently follow the institution's own patenting",
+    "title": "B46: Few US patents citing Australian research have an Australian applicant or inventor",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B46",
     "year": 2026
   },
   "atlas-B47": {
     "authors": [],
-    "chunks": 18,
+    "chunks": 19,
     "doc_id": "atlas-B47",
     "kind": "observation",
     "lens": "timeline",
@@ -919,7 +919,7 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B47: Changes in the fees to obtain a right seldom moved filing beyond what comparison months show; only one break pointed the way a price would",
+    "title": "B47: Fee changes for new rights rarely moved filing beyond normal variation",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B47",
     "year": 2026
   },
@@ -941,7 +941,7 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B48: Bigger fee rises went with smaller steps in filing, but the interval includes no association",
+    "title": "B48: Bigger fee rises went with smaller rises in filing, but the result is uncertain",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B48",
     "year": 2026
   },
@@ -963,7 +963,7 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B49: After three changes in renewal fees, cessations rose more than in any comparison month; only one, trade marks after July 1993, survives every check",
+    "title": "B49: Rights ended more often after three renewal fee changes, but only one survives every check",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B49",
     "year": 2026
   },
@@ -985,13 +985,13 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B5: Australian individuals file alone far more than anyone else; organisations and overseas filers almost never do, for patents",
+    "title": "B5: Australian individuals file alone far more than anyone else",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B5",
     "year": 2026
   },
   "atlas-B50": {
     "authors": [],
-    "chunks": 17,
+    "chunks": 16,
     "doc_id": "atlas-B50",
     "kind": "observation",
     "lens": "firms",
@@ -1007,13 +1007,13 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B50: Among employers of 100 or more, filing rises with size; the largest are 24.3 points more likely than the smallest to have any filing linked",
+    "title": "B50: Among employers of 100 or more, larger ones more often file IP",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B50",
     "year": 2026
   },
   "atlas-B51": {
     "authors": [],
-    "chunks": 15,
+    "chunks": 16,
     "doc_id": "atlas-B51",
     "kind": "observation",
     "lens": "firms",
@@ -1029,7 +1029,7 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B51: Among large employers, industry sorts patenting far more than size does, and size does not explain R&D's weak link with patenting",
+    "title": "B51: Among large employers, industry matters far more than size for patenting",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B51",
     "year": 2026
   },
@@ -1051,7 +1051,7 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B52: The dollar's value does not go consistently with filing from overseas; Australian interest rates and overseas applicants' filing move together",
+    "title": "B52: The dollar does not consistently track overseas filing, but interest rates move with it",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B52",
     "year": 2026
   },
@@ -1073,13 +1073,13 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B53: With the crosswalk that includes services, patents allocated per business follow business R&D per business across industries",
+    "title": "B53: Once services can receive patents, patents per business follow R&D per business",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B53",
     "year": 2026
   },
   "atlas-B54": {
     "authors": [],
-    "chunks": 17,
+    "chunks": 16,
     "doc_id": "atlas-B54",
     "kind": "observation",
     "lens": "industries",
@@ -1095,7 +1095,7 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "descriptive",
-    "title": "B54: Through the crosswalk with services every industry has patents, and the R&D link's interval no longer reaches near zero",
+    "title": "B54: Including services gives every industry patents and makes the R&D link clearer",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B54",
     "year": 2026
   },
@@ -1117,7 +1117,7 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B55: Most of the fall in Australian organisations' \"Australia only\" patents is a gap in older records, not a change in practice",
+    "title": "B55: Most of the apparent fall in Australia-only patents is a gap in older records",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B55",
     "year": 2026
   },
@@ -1139,13 +1139,13 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B56: Real GDP goes with overseas applicants' patenting, more strongly since 2008; the states' demand was not seen to track Australians' filing",
+    "title": "B56: Economic growth goes with overseas applicants' patents, more strongly since 2008",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B56",
     "year": 2026
   },
   "atlas-B57": {
     "authors": [],
-    "chunks": 17,
+    "chunks": 16,
     "doc_id": "atlas-B57",
     "kind": "observation",
     "lens": "industries",
@@ -1161,7 +1161,7 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B57: Industries that add more value per business are allocated more trade marks per business and spend more on R&D",
+    "title": "B57: Industries adding more value per business receive more trade marks and spend more on R&D",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B57",
     "year": 2026
   },
@@ -1183,7 +1183,7 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B58: Higher-income areas file more, and individuals there file more for each person who runs a business",
+    "title": "B58: Richer areas file more, even per person running a business",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B58",
     "year": 2026
   },
@@ -1205,7 +1205,7 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B59: Areas that gained graduates or income over the decade to 2021 were not seen to gain filing",
+    "title": "B59: Areas that gained graduates or income over a decade were not seen to gain filing",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B59",
     "year": 2026
   },
@@ -1227,13 +1227,13 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B6: Patents that Australian individuals file without an attorney are rarely granted, about 36 points less often, in both decades",
+    "title": "B6: Australian individuals' patents filed without an attorney are rarely granted, in both decades",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B6",
     "year": 2026
   },
   "atlas-B60": {
     "authors": [],
-    "chunks": 16,
+    "chunks": 17,
     "doc_id": "atlas-B60",
     "kind": "observation",
     "lens": "industries",
@@ -1249,13 +1249,13 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B60: The 2024-25 survey repeats the earlier pattern; nothing is certain over 17 divisions",
+    "title": "B60: The 2024-25 survey repeats the earlier pattern, with nothing certain across 17 industries",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B60",
     "year": 2026
   },
   "atlas-B61": {
     "authors": [],
-    "chunks": 13,
+    "chunks": 12,
     "doc_id": "atlas-B61",
     "kind": "observation",
     "lens": "national",
@@ -1271,13 +1271,13 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B61: Across OECD members, business-financed R&D and business researchers go with patenting; Australia finances R&D like a middling member but patents like a low one",
+    "title": "B61: Australia funds business R&D like a middling OECD member but patents like a low one",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B61",
     "year": 2026
   },
   "atlas-B62": {
     "authors": [],
-    "chunks": 16,
+    "chunks": 17,
     "doc_id": "atlas-B62",
     "kind": "observation",
     "lens": "institutions",
@@ -1293,13 +1293,13 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B62: Institutions with more invention disclosures per research dollar file more patents, and those that file more earn more licence income, partly because all are divided by the same research spend",
+    "title": "B62: Institutions disclosing more inventions file more patents and earn more licence income, per research dollar",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B62",
     "year": 2026
   },
   "atlas-B63": {
     "authors": [],
-    "chunks": 18,
+    "chunks": 17,
     "doc_id": "atlas-B63",
     "kind": "observation",
     "lens": "timeline",
@@ -1315,7 +1315,7 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B63: The labour market moves with overseas applicants' trade marks; IP judgments were not seen to move with oppositions",
+    "title": "B63: Jobs figures move with overseas trade marks, but court judgments do not track oppositions",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B63",
     "year": 2026
   },
@@ -1337,13 +1337,13 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B7: Australian organisations' patents took longer to grant than overseas ones in one decade but not the other, so this is not a lead",
+    "title": "B7: Australian organisations' patents took longer to grant in one decade only, so it is not followed up",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B7",
     "year": 2026
   },
   "atlas-B8": {
     "authors": [],
-    "chunks": 22,
+    "chunks": 21,
     "doc_id": "atlas-B8",
     "kind": "observation",
     "lens": "rights",
@@ -1359,7 +1359,7 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "observational",
-    "title": "B8: For patents filed in the same number of countries, Australian organisations' more often stay in force for 10 years than overseas organisations', except those filed only in Australia",
+    "title": "B8: Australian organisations' patents more often last ten years than overseas ones filed as widely",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B8",
     "year": 2026
   },
@@ -1381,13 +1381,13 @@
     "source_sha256": null,
     "stage": "2",
     "strength": "descriptive",
-    "title": "B9: Technology fields differ in how many of their patents stay in force for 10 years, but the order of fields is unstable",
+    "title": "B9: Technology fields differ in how many patents last ten years, but their order is unstable",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/B9",
     "year": 2026
   },
   "atlas-M1": {
     "authors": [],
-    "chunks": 22,
+    "chunks": 21,
     "doc_id": "atlas-M1",
     "kind": "observation",
     "lens": "rights",
@@ -1403,13 +1403,13 @@
     "source_sha256": null,
     "stage": "3",
     "strength": "observational",
-    "title": "M1: Patents filed without an attorney are still granted far less often once the factors settled at filing are held together",
+    "title": "M1: Patents filed without an attorney are still granted far less often among similar applications",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/M1",
     "year": 2026
   },
   "atlas-M10": {
     "authors": [],
-    "chunks": 15,
+    "chunks": 14,
     "doc_id": "atlas-M10",
     "kind": "observation",
     "lens": "firms",
@@ -1425,13 +1425,13 @@
     "source_sha256": null,
     "stage": "3",
     "strength": "descriptive",
-    "title": "M10: Followed by cohort, about two thirds of firms that file both kinds filed a trade mark before their first standard patent",
+    "title": "M10: About two thirds of firms with both filed a trade mark before their first patent",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/M10",
     "year": 2026
   },
   "atlas-M11": {
     "authors": [],
-    "chunks": 17,
+    "chunks": 18,
     "doc_id": "atlas-M11",
     "kind": "observation",
     "lens": "firms",
@@ -1447,13 +1447,13 @@
     "source_sha256": null,
     "stage": "3",
     "strength": "observational",
-    "title": "M11: Among employers of 100 or more, the largest file more, and the gap widens within the same industry",
+    "title": "M11: Among large employers, the biggest file more, especially within the same industry",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/M11",
     "year": 2026
   },
   "atlas-M12": {
     "authors": [],
-    "chunks": 21,
+    "chunks": 20,
     "doc_id": "atlas-M12",
     "kind": "observation",
     "lens": "firms",
@@ -1469,7 +1469,7 @@
     "source_sha256": null,
     "stage": "3",
     "strength": "descriptive",
-    "title": "M12: A name match to the business register recovers most missing business numbers accurately, and changes no firm finding",
+    "title": "M12: Matching names recovers most missing business numbers accurately and changes no firm finding",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/M12",
     "year": 2026
   },
@@ -1491,13 +1491,13 @@
     "source_sha256": null,
     "stage": "3",
     "strength": "descriptive",
-    "title": "M13: Places' characteristics repeat each other; one dimension, advantage, carries half of how areas differ",
+    "title": "M13: Most local measures repeat each other, and one dimension, advantage, captures half the differences",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/M13",
     "year": 2026
   },
   "atlas-M14": {
     "authors": [],
-    "chunks": 25,
+    "chunks": 23,
     "doc_id": "atlas-M14",
     "kind": "observation",
     "lens": "regions",
@@ -1513,7 +1513,7 @@
     "source_sha256": null,
     "stage": "3",
     "strength": "observational",
-    "title": "M14: Beyond advantage and remoteness, business density and places with more degrees than their resources suggest go with filing",
+    "title": "M14: Beyond advantage, areas with more businesses or more graduates file more patents",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/M14",
     "year": 2026
   },
@@ -1535,13 +1535,13 @@
     "source_sha256": null,
     "stage": "3",
     "strength": "observational",
-    "title": "M15: The advantage gradient is not one filer's; without each area's largest filer it is steeper",
+    "title": "M15: Without each area's biggest filer, the link with advantage is stronger",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/M15",
     "year": 2026
   },
   "atlas-M16": {
     "authors": [],
-    "chunks": 20,
+    "chunks": 19,
     "doc_id": "atlas-M16",
     "kind": "observation",
     "lens": "regions",
@@ -1557,7 +1557,7 @@
     "source_sha256": null,
     "stage": "3",
     "strength": "descriptive",
-    "title": "M16: Postal areas do not fall into distinct kinds; one group of 288 advantaged city areas holds more than half the patents",
+    "title": "M16: Postal areas do not form distinct types, but 288 advantaged city areas hold more than half the patents",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/M16",
     "year": 2026
   },
@@ -1579,13 +1579,13 @@
     "source_sha256": null,
     "stage": "3",
     "strength": "descriptive",
-    "title": "M17: Across OECD members the indicators spread over several dimensions; Australia is low on manufacturing and exports, high on education and new businesses",
+    "title": "M17: Norway, New Zealand and Sweden are the OECD countries most like Australia on these measures",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/M17",
     "year": 2026
   },
   "atlas-M18": {
     "authors": [],
-    "chunks": 24,
+    "chunks": 23,
     "doc_id": "atlas-M18",
     "kind": "observation",
     "lens": "national",
@@ -1601,7 +1601,7 @@
     "source_sha256": null,
     "stage": "3",
     "strength": "observational",
-    "title": "M18: Across OECD members, patenting at home follows business R&D at the same income and size; income adds nothing once R&D is held",
+    "title": "M18: Among similar OECD countries, more business R&D goes with more patenting at home",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/M18",
     "year": 2026
   },
@@ -1623,13 +1623,13 @@
     "source_sha256": null,
     "stage": "3",
     "strength": "observational",
-    "title": "M19: With block resampling, Stage 2's one quarterly lead still holds, but the quarters are worth far fewer independent observations than they number",
+    "title": "M19: Trade mark registrations and oppositions still move together, but the quarterly data are thin",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/M19",
     "year": 2026
   },
   "atlas-M2": {
     "authors": [],
-    "chunks": 21,
+    "chunks": 20,
     "doc_id": "atlas-M2",
     "kind": "observation",
     "lens": "rights",
@@ -1645,7 +1645,7 @@
     "source_sha256": null,
     "stage": "3",
     "strength": "observational",
-    "title": "M2: Trade marks and designs with no agent before the first renewal are less often in force after it, once other factors are held",
+    "title": "M2: Trade marks and designs with no agent before renewal stay in force less often, among similar ones",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/M2",
     "year": 2026
   },
@@ -1667,7 +1667,7 @@
     "source_sha256": null,
     "stage": "3",
     "strength": "descriptive",
-    "title": "M20: Most filing series are dominated by their trends; seasons are strong only for provisionals and Australians' trade marks",
+    "title": "M20: Long-term trends drive most filing series, and seasons matter for provisionals and Australians' trade marks",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/M20",
     "year": 2026
   },
@@ -1689,13 +1689,13 @@
     "source_sha256": null,
     "stage": "3",
     "strength": "observational",
-    "title": "M21: Through the crosswalk with services, innovating industries are not seen to go with patents per business once industry size is held",
+    "title": "M21: Industries that innovate more do not have more patents per business once size is allowed for",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/M21",
     "year": 2026
   },
   "atlas-M22": {
     "authors": [],
-    "chunks": 19,
+    "chunks": 20,
     "doc_id": "atlas-M22",
     "kind": "observation",
     "lens": "industries",
@@ -1711,13 +1711,13 @@
     "source_sha256": null,
     "stage": "3",
     "strength": "observational",
-    "title": "M22: Across industries, patents per business follow business R&D per business at the same value added; trade marks do not",
+    "title": "M22: Industries spending more on R&D have more patents per business, even at the same output",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/M22",
     "year": 2026
   },
   "atlas-M23": {
     "authors": [],
-    "chunks": 20,
+    "chunks": 21,
     "doc_id": "atlas-M23",
     "kind": "observation",
     "lens": "institutions",
@@ -1733,7 +1733,7 @@
     "source_sha256": null,
     "stage": "3",
     "strength": "observational",
-    "title": "M23: Among universities, size, citations, patent-cited research and grant success are largely one measure of research intensity",
+    "title": "M23: Size, citations and grants overlap so much among universities that none stands out for patenting",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/M23",
     "year": 2026
   },
@@ -1755,13 +1755,13 @@
     "source_sha256": null,
     "stage": "3",
     "strength": "observational",
-    "title": "M24: At the same research spend, more patents are not seen to go with more licences or licence income",
+    "title": "M24: At the same research budget, more patents do not go with more licence income",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/M24",
     "year": 2026
   },
   "atlas-M25": {
     "authors": [],
-    "chunks": 19,
+    "chunks": 18,
     "doc_id": "atlas-M25",
     "kind": "observation",
     "lens": "timeline",
@@ -1777,13 +1777,13 @@
     "source_sha256": null,
     "stage": "3",
     "strength": "observational",
-    "title": "M25: Raising the Bar's rush, and Australians' lower level of patents after it, hold with trend and season held; the Designs Act's step does not stand apart",
+    "title": "M25: The 2013 patent rush holds after allowing for trend and season, but the 2004 designs step does not",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/M25",
     "year": 2026
   },
   "atlas-M26": {
     "authors": [],
-    "chunks": 18,
+    "chunks": 17,
     "doc_id": "atlas-M26",
     "kind": "observation",
     "lens": "rights",
@@ -1799,13 +1799,13 @@
     "source_sha256": null,
     "stage": "3",
     "strength": "observational",
-    "title": "M26: Divisionals doubled within the same filers, not through a change in fields or filers",
+    "title": "M26: The same organisations file twice the share of divisional applications they did a decade earlier",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/M26",
     "year": 2026
   },
   "atlas-M27": {
     "authors": [],
-    "chunks": 21,
+    "chunks": 19,
     "doc_id": "atlas-M27",
     "kind": "observation",
     "lens": "rights",
@@ -1821,7 +1821,7 @@
     "source_sha256": null,
     "stage": "3",
     "strength": "observational",
-    "title": "M27: Inventions made in Australia and filed from overseas are, in about equal numbers, international teams' and all-Australian teams'",
+    "title": "M27: Inventions made here but filed from overseas come equally from international and all-Australian teams",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/M27",
     "year": 2026
   },
@@ -1843,7 +1843,7 @@
     "source_sha256": null,
     "stage": "3",
     "strength": "observational",
-    "title": "M28: Owners did not let rights go more often at the anniversary after a renewal fee changed",
+    "title": "M28: Owners did not drop rights more often after renewal fees changed",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/M28",
     "year": 2026
   },
@@ -1865,13 +1865,13 @@
     "source_sha256": null,
     "stage": "3",
     "strength": "observational",
-    "title": "M29: Among government suppliers, company form, age and a city address go with filing; the advantaged postcode does not once they are held",
+    "title": "M29: Company type, age and a city address each go with suppliers' filing, but postcode advantage does not",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/M29",
     "year": 2026
   },
   "atlas-M3": {
     "authors": [],
-    "chunks": 22,
+    "chunks": 21,
     "doc_id": "atlas-M3",
     "kind": "observation",
     "lens": "rights",
@@ -1887,13 +1887,13 @@
     "source_sha256": null,
     "stage": "3",
     "strength": "observational",
-    "title": "M3: Within the same reach, Australian organisations' patents are less likely to end than overseas organisations', with field, route and cohort held",
+    "title": "M3: Australian organisations' patents are less likely to end each year than similar overseas ones",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/M3",
     "year": 2026
   },
   "atlas-M30": {
     "authors": [],
-    "chunks": 18,
+    "chunks": 17,
     "doc_id": "atlas-M30",
     "kind": "observation",
     "lens": "firms",
@@ -1909,7 +1909,7 @@
     "source_sha256": null,
     "stage": "3",
     "strength": "observational",
-    "title": "M30: Patents filed before the firm's first registration are more often now held only overseas, with the patent's own characteristics held",
+    "title": "M30: Patents filed before a firm was registered more often end up owned only overseas",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/M30",
     "year": 2026
   },
@@ -1931,7 +1931,7 @@
     "source_sha256": null,
     "stage": "3",
     "strength": "observational",
-    "title": "M31: Beyond advantage and remoteness, manufacturing's share of businesses goes with more filing per business; incomes add nothing detectable",
+    "title": "M31: Among similar areas, more manufacturing businesses go with more filing per business",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/M31",
     "year": 2026
   },
@@ -1953,13 +1953,13 @@
     "source_sha256": null,
     "stage": "3",
     "strength": "observational",
-    "title": "M32: Most of the attached indicators' links with filing are the advantage gradient; what remains is where businesses are",
+    "title": "M32: Most local measures relate to filing only through advantage, but where businesses are adds more",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/M32",
     "year": 2026
   },
   "atlas-M33": {
     "authors": [],
-    "chunks": 22,
+    "chunks": 20,
     "doc_id": "atlas-M33",
     "kind": "observation",
     "lens": "national",
@@ -1975,13 +1975,13 @@
     "source_sha256": null,
     "stage": "3",
     "strength": "observational",
-    "title": "M33: With income and size held, a quarter of the cross-country attachments remain leads with patenting, and they measure research effort",
+    "title": "M33: Among similar countries, a quarter of the international measures still go with patenting",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/M33",
     "year": 2026
   },
   "atlas-M34": {
     "authors": [],
-    "chunks": 22,
+    "chunks": 21,
     "doc_id": "atlas-M34",
     "kind": "observation",
     "lens": "timeline",
@@ -1997,7 +1997,7 @@
     "source_sha256": null,
     "stage": "3",
     "strength": "observational",
-    "title": "M34: With trend and season held, the fee breaks mostly do not read as prices; the cessation steps hold in the national series but not at each right's anniversary",
+    "title": "M34: Most fee changes do not show up as responses to price once trend and season are allowed for",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/M34",
     "year": 2026
   },
@@ -2019,7 +2019,7 @@
     "source_sha256": null,
     "stage": "3",
     "strength": "observational",
-    "title": "M35: FY2025's fall in provisionals followed up is in new and heavy individual filers; filers seen before followed up about as often",
+    "title": "M35: The 2024–25 fall in follow-up of individuals' provisionals shows at every filing volume, most among heavy filers",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/M35",
     "year": 2026
   },
@@ -2041,13 +2041,13 @@
     "source_sha256": null,
     "stage": "3",
     "strength": "observational",
-    "title": "M36: With block resampling, the business cycle shows only in overseas applicants' trade marks, and only before 2008",
+    "title": "M36: The business cycle shows only in overseas trade marks, and only before 2008",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/M36",
     "year": 2026
   },
   "atlas-M37": {
     "authors": [],
-    "chunks": 20,
+    "chunks": 19,
     "doc_id": "atlas-M37",
     "kind": "observation",
     "lens": "industries",
@@ -2063,13 +2063,13 @@
     "source_sha256": null,
     "stage": "3",
     "strength": "observational",
-    "title": "M37: Three survey items still go with IP per business at the same industry size and value added; fewer business exits go with more patents",
+    "title": "M37: Three survey items still go with IP per business among similar industries",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/M37",
     "year": 2026
   },
   "atlas-M38": {
     "authors": [],
-    "chunks": 22,
+    "chunks": 21,
     "doc_id": "atlas-M38",
     "kind": "observation",
     "lens": "institutions",
@@ -2085,13 +2085,13 @@
     "source_sha256": null,
     "stage": "3",
     "strength": "observational",
-    "title": "M38: Across every kind of institution, research that patents cite goes with the institution's own patenting, kind and size held",
+    "title": "M38: Institutions whose research patents cite file more patents themselves, even among similar ones",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/M38",
     "year": 2026
   },
   "atlas-M39": {
     "authors": [],
-    "chunks": 21,
+    "chunks": 19,
     "doc_id": "atlas-M39",
     "kind": "observation",
     "lens": "timeline",
@@ -2107,7 +2107,7 @@
     "source_sha256": null,
     "stage": "3",
     "strength": "observational",
-    "title": "M39: Trade marks and real GDP share a long-run path and trade marks run a quarter ahead, but the lead is small and not detected since 2008",
+    "title": "M39: Trade marks run slightly ahead of the economy, but the lead is small and not seen since 2008",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/M39",
     "year": 2026
   },
@@ -2129,13 +2129,13 @@
     "source_sha256": null,
     "stage": "3",
     "strength": "observational",
-    "title": "M4: Australian organisations' patents reach fewer offices and are cited less, and neither gap goes once field, route and year are held",
+    "title": "M4: Australian organisations' patents reach fewer countries and are cited less, even among similar patents",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/M4",
     "year": 2026
   },
   "atlas-M40": {
     "authors": [],
-    "chunks": 22,
+    "chunks": 20,
     "doc_id": "atlas-M40",
     "kind": "observation",
     "lens": "rights",
@@ -2151,7 +2151,7 @@
     "source_sha256": null,
     "stage": "3",
     "strength": "observational",
-    "title": "M40: Asking for examination before being directed goes with patents more likely to end, not less, against IP Australia's commissioned study",
+    "title": "M40: Asking early for examination goes with patents ending sooner, unlike in IP Australia's commissioned study",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/M40",
     "year": 2026
   },
@@ -2173,13 +2173,13 @@
     "source_sha256": null,
     "stage": "3",
     "strength": "observational",
-    "title": "M5: Expedited examination's link with a longer life does not survive the filer, field and route held together; for individuals it goes with a shorter one",
+    "title": "M5: Fast-tracked patents are not kept longer than similar ones, and individuals' end sooner",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/M5",
     "year": 2026
   },
   "atlas-M6": {
     "authors": [],
-    "chunks": 20,
+    "chunks": 21,
     "doc_id": "atlas-M6",
     "kind": "observation",
     "lens": "rights",
@@ -2195,13 +2195,13 @@
     "source_sha256": null,
     "stage": "3",
     "strength": "observational",
-    "title": "M6: Granted Australian-founded patents are more often now held only overseas, at the same reach and filer type",
+    "title": "M6: Granted patents from Australia more often end up owned only overseas, among similar patents",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/M6",
     "year": 2026
   },
   "atlas-M7": {
     "authors": [],
-    "chunks": 22,
+    "chunks": 21,
     "doc_id": "atlas-M7",
     "kind": "observation",
     "lens": "rights",
@@ -2217,7 +2217,7 @@
     "source_sha256": null,
     "stage": "3",
     "strength": "observational",
-    "title": "M7: On provisionals, organisations' inventors include more women than individuals'; on standard patents the field accounts for the gap",
+    "title": "M7: Organisations name more women inventors on provisional applications; on patents the field explains it",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/M7",
     "year": 2026
   },
@@ -2239,13 +2239,13 @@
     "source_sha256": null,
     "stage": "3",
     "strength": "observational",
-    "title": "M8: Among R&D claimants, older firms, higher spenders and public companies more often have a standard patent linked, held together; the city gap does not replicate",
+    "title": "M8: Older firms, bigger R&D spenders and public companies more often have a linked patent",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/M8",
     "year": 2026
   },
   "atlas-M9": {
     "authors": [],
-    "chunks": 17,
+    "chunks": 16,
     "doc_id": "atlas-M9",
     "kind": "observation",
     "lens": "firms",
@@ -2261,7 +2261,7 @@
     "source_sha256": null,
     "stage": "3",
     "strength": "observational",
-    "title": "M9: Government suppliers with a filing linked win about two and a half times the contracts and nearly three times the value, at the same form, age and place",
+    "title": "M9: Suppliers with IP win about two and a half times the contracts of similar suppliers without",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/M9",
     "year": 2026
   },
@@ -2283,13 +2283,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U0: The corpus holds 194 tables from 54 sources, and three sources hold two thirds of its rows",
+    "title": "U0: The collection holds 194 tables from 54 sources, and three supply two thirds of the records",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U0",
     "year": 2026
   },
   "atlas-U1": {
     "authors": [],
-    "chunks": 16,
+    "chunks": 17,
     "doc_id": "atlas-U1",
     "kind": "observation",
     "lens": "rights",
@@ -2305,13 +2305,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U1: The rights table has one row per right, and its columns are complete where they should be",
+    "title": "U1: The register data list each application once, with few gaps where values are expected",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U1",
     "year": 2026
   },
   "atlas-U10": {
     "authors": [],
-    "chunks": 21,
+    "chunks": 22,
     "doc_id": "atlas-U10",
     "kind": "observation",
     "lens": "rights",
@@ -2327,13 +2327,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U10: The share of standard patent applications granted fell to 54.4% for FY2008's, then recovered",
+    "title": "U10: The share of standard patent applications granted fell to 54.4% for 2007–08, then recovered",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U10",
     "year": 2026
   },
   "atlas-U100": {
     "authors": [],
-    "chunks": 16,
+    "chunks": 18,
     "doc_id": "atlas-U100",
     "kind": "observation",
     "lens": "rights",
@@ -2349,13 +2349,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U100: With the register's business numbers, the share of filings linked to an ABN falls only slightly after July 2024",
+    "title": "U100: With the register's business numbers, most of the recent fall in linked filings disappears",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U100",
     "year": 2026
   },
   "atlas-U101": {
     "authors": [],
-    "chunks": 17,
+    "chunks": 18,
     "doc_id": "atlas-U101",
     "kind": "observation",
     "lens": "rights",
@@ -2371,7 +2371,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U101: More firms had their first observed trade mark in FY2026; most had no earlier link to IP",
+    "title": "U101: More firms filed their first known trade mark in 2025–26, most with no earlier link to IP",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U101",
     "year": 2026
   },
@@ -2393,7 +2393,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U102: Designs' origin is now known for nearly all, and Australia's share is higher than IP RAPID showed",
+    "title": "U102: Nearly every design's country of origin is now known, and Australia's share is higher",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U102",
     "year": 2026
   },
@@ -2415,7 +2415,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U103: Trade marks claiming an overseas filing were fast-tracked in every year; the 2018 fall is in where it is recorded",
+    "title": "U103: Trade marks claiming an earlier overseas filing were fast-tracked every year; the 2018 drop is a records change",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U103",
     "year": 2026
   },
@@ -2459,7 +2459,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U105: IP Australia's register holds every provisional application IP RAPID does, and nothing more but the newest",
+    "title": "U105: IP Australia's register confirms the research data hold every provisional application",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U105",
     "year": 2026
   },
@@ -2481,13 +2481,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U106: Provisional applications' inventors are named from FY2003, though since FY2024 a fifth have none",
+    "title": "U106: Provisional applications name their inventors from 2002–03, but a fifth since 2023–24 name none",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U106",
     "year": 2026
   },
   "atlas-U107": {
     "authors": [],
-    "chunks": 17,
+    "chunks": 18,
     "doc_id": "atlas-U107",
     "kind": "observation",
     "lens": "rights",
@@ -2525,13 +2525,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U108: The official fees are read from every version of the fee regulations, and today's agree with IP Australia's website",
+    "title": "U108: Official fees were rebuilt from every version of the regulations, and today's match IP Australia's",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U108",
     "year": 2026
   },
   "atlas-U109": {
     "authors": [],
-    "chunks": 12,
+    "chunks": 13,
     "doc_id": "atlas-U109",
     "kind": "observation",
     "lens": "timeline",
@@ -2547,7 +2547,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U109: In real terms a trade mark costs about a quarter of what it did in 1990, and keeping a patent for its full term costs what it did in 1995",
+    "title": "U109: After inflation, a trade mark costs about a quarter of what it did in 1990",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U109",
     "year": 2026
   },
@@ -2569,7 +2569,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U11: A standard patent takes a median 980 days to grant; a trade mark 223 days to register",
+    "title": "U11: Successful patents typically take 980 days to grant, and trade marks 223 days to register",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U11",
     "year": 2026
   },
@@ -2591,7 +2591,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U110: The fees changed on 39 dates, nearly always upwards; trade marks were cut repeatedly",
+    "title": "U110: Fees changed on 39 dates, nearly always upwards, though trade mark fees were cut repeatedly",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U110",
     "year": 2026
   },
@@ -2613,13 +2613,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U111: A standard patent's renewal fees have moved towards its last years",
+    "title": "U111: Patent renewal fees have shifted towards the final years of a patent's life",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U111",
     "year": 2026
   },
   "atlas-U112": {
     "authors": [],
-    "chunks": 15,
+    "chunks": 13,
     "doc_id": "atlas-U112",
     "kind": "observation",
     "lens": "firms",
@@ -2635,13 +2635,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U112: Size and industry are now known for employers of 100 or more, few of the filers but a large share of their IP",
+    "title": "U112: Size and industry are known only for employers of 100 or more: few filers, but a large share of the IP",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U112",
     "year": 2026
   },
   "atlas-U113": {
     "authors": [],
-    "chunks": 12,
+    "chunks": 11,
     "doc_id": "atlas-U113",
     "kind": "observation",
     "lens": "timeline",
@@ -2657,13 +2657,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U113: The Reserve Bank's cash rate and exchange rates are complete and monthly",
+    "title": "U113: The Reserve Bank's interest and exchange rates are complete month by month",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U113",
     "year": 2026
   },
   "atlas-U114": {
     "authors": [],
-    "chunks": 16,
+    "chunks": 15,
     "doc_id": "atlas-U114",
     "kind": "observation",
     "lens": "industries",
@@ -2679,7 +2679,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U114: Through ALP's crosswalk with services, patents reach all 19 industries and manufacturing's share falls from 90.63% to 79.67%",
+    "title": "U114: Letting patents go to services spreads them over all 19 industries and cuts manufacturing's share to 79.67%",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U114",
     "year": 2026
   },
@@ -2701,7 +2701,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U115: WIPO counts more Australian patent families than reach IP Australia; Google Patents holds older families' filings abroad incompletely",
+    "title": "U115: WIPO counts more Australian patent families than reach IP Australia, and older overseas records are incomplete",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U115",
     "year": 2026
   },
@@ -2723,7 +2723,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U116: The national accounts are complete and quarterly; real growth has slowed decade by decade",
+    "title": "U116: The national accounts are complete each quarter, and real growth has slowed decade by decade",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U116",
     "year": 2026
   },
@@ -2745,7 +2745,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U117: The ATO's statistics by postcode reach nearly every postal area in twelve income years, and more people have business income",
+    "title": "U117: Tax statistics by postcode cover nearly every area for twelve years, and more people have business income",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U117",
     "year": 2026
   },
@@ -2767,13 +2767,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U118: The Census time series reaches every postal area in 2011, 2016 and 2021, and its 2021 count matches the published one",
+    "title": "U118: Three Censuses line up for every postal area, and the 2021 total matches the published one",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U118",
     "year": 2026
   },
   "atlas-U119": {
     "authors": [],
-    "chunks": 13,
+    "chunks": 12,
     "doc_id": "atlas-U119",
     "kind": "observation",
     "lens": "industries",
@@ -2789,13 +2789,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U119: The 2024-25 business survey adds a third year of innovation by industry; the share of innovating businesses has not recovered",
+    "title": "U119: The share of businesses that innovate fell after 2020-21 and has not recovered",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U119",
     "year": 2026
   },
   "atlas-U12": {
     "authors": [],
-    "chunks": 18,
+    "chunks": 19,
     "doc_id": "atlas-U12",
     "kind": "observation",
     "lens": "rights",
@@ -2811,13 +2811,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U12: Patents' typical wait rose to nearly four years for FY2005's applications; trade marks' fell to months",
+    "title": "U12: The typical wait for a patent peaked at nearly four years; trade marks now take months",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U12",
     "year": 2026
   },
   "atlas-U120": {
     "authors": [],
-    "chunks": 13,
+    "chunks": 12,
     "doc_id": "atlas-U120",
     "kind": "observation",
     "lens": "national",
@@ -2833,7 +2833,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U120: Four of the GII's six blanks for Australia can be filled approximately; Australia's researchers sit outside business more than almost any member's",
+    "title": "U120: Australian figures fill four of the index's six gaps; fewer of Australia's researchers work in business than in most OECD countries",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U120",
     "year": 2026
   },
@@ -2855,7 +2855,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U121: The harvest's \"cited at least once\" filter drops few patent-cited Australian works",
+    "title": "U121: Few Australian works cited by US patents are missing from the publication data",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U121",
     "year": 2026
   },
@@ -2877,13 +2877,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U122: The NSRC adds sixteen years of research commercialisation; licence income is lumpy and concentrated, and start-ups fell after 2007",
+    "title": "U122: A survey of research commercialisation shows uneven licence income and fewer start-ups after 2007",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U122",
     "year": 2026
   },
   "atlas-U123": {
     "authors": [],
-    "chunks": 14,
+    "chunks": 13,
     "doc_id": "atlas-U123",
     "kind": "observation",
     "lens": "timeline",
@@ -2899,7 +2899,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U123: Section 100 is about 30% of the PBS's government cost and rising; the corpus's yearly files leave it out",
+    "title": "U123: One medicines program, Section 100, is about 30% of the PBS's cost but missing from the yearly files",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U123",
     "year": 2026
   },
@@ -2921,13 +2921,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U124: The labour market and the IP judgments join the timeline complete over their coverage; IP judgments doubled from 2008",
+    "title": "U124: Labour figures and IP court judgments are complete, and IP judgments doubled from 2008",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U124",
     "year": 2026
   },
   "atlas-U125": {
     "authors": [],
-    "chunks": 13,
+    "chunks": 12,
     "doc_id": "atlas-U125",
     "kind": "observation",
     "lens": "timeline",
@@ -2943,13 +2943,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U125: Every one of IP Australia's fee columns is complete from its first month, and each fee has taken 3 to 12 amounts",
+    "title": "U125: Every fee series is complete from its start, and each fee has had 3 to 12 amounts",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U125",
     "year": 2026
   },
   "atlas-U126": {
     "authors": [],
-    "chunks": 16,
+    "chunks": 15,
     "doc_id": "atlas-U126",
     "kind": "observation",
     "lens": "firms",
@@ -2965,13 +2965,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U126: The name match's columns are set only where they should be, and add 2% to 8% to the counts by ABN, concentrated in a few firms",
+    "title": "U126: Matching firms by name would add 2% to 8% to business filing counts, mostly for a few large firms",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U126",
     "year": 2026
   },
   "atlas-U127": {
     "authors": [],
-    "chunks": 14,
+    "chunks": 13,
     "doc_id": "atlas-U127",
     "kind": "observation",
     "lens": "institutions",
@@ -2987,7 +2987,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U127: Another research institution is a founding applicant on about one in nine of the institutions' patent links",
+    "title": "U127: About one in nine of the institutions' patent links also name another research institution",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U127",
     "year": 2026
   },
@@ -3009,13 +3009,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U13: About nine in ten standard patents filed in FY2017 to FY2026 came from overseas, 43.6% from the United States",
+    "title": "U13: Nine in ten standard patent applications come from overseas, 43.6% from the United States",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U13",
     "year": 2026
   },
   "atlas-U14": {
     "authors": [],
-    "chunks": 19,
+    "chunks": 20,
     "doc_id": "atlas-U14",
     "kind": "observation",
     "lens": "rights",
@@ -3031,7 +3031,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U14: Health technologies lead standard patents; advertising and business services lead trade marks",
+    "title": "U14: Health technologies lead patent applications; advertising and business services lead trade marks",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U14",
     "year": 2026
   },
@@ -3053,7 +3053,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U15: Applicants in New South Wales and Victoria file most Australian rights",
+    "title": "U15: Most Australian applicants are in New South Wales and Victoria",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U15",
     "year": 2026
   },
@@ -3075,13 +3075,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U16: The register stopped recording many applicants' states in FY2024; the postcode fills the gap",
+    "title": "U16: The register stopped recording many applicants' states in 2023–24, and postcodes fill the gap",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U16",
     "year": 2026
   },
   "atlas-U17": {
     "authors": [],
-    "chunks": 22,
+    "chunks": 23,
     "doc_id": "atlas-U17",
     "kind": "observation",
     "lens": "rights",
@@ -3097,7 +3097,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U17: The holder is often not the filer, and for patents filed before FY2003 the register cannot tell",
+    "title": "U17: A right's current owner is often not its filer, and for older patents this cannot be told",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U17",
     "year": 2026
   },
@@ -3119,7 +3119,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U18: More Australian-filed rights are now held only overseas than overseas-filed rights are now held in Australia",
+    "title": "U18: More rights filed from Australia are now owned only overseas than the other way round",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U18",
     "year": 2026
   },
@@ -3141,13 +3141,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U19: The filer's postcode differs from the holder's for about a tenth of rights",
+    "title": "U19: For about a tenth of rights, the filer's postcode differs from the current owner's",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U19",
     "year": 2026
   },
   "atlas-U2": {
     "authors": [],
-    "chunks": 18,
+    "chunks": 17,
     "doc_id": "atlas-U2",
     "kind": "observation",
     "lens": "rights",
@@ -3163,13 +3163,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U2: Five problems in the register were repaired before anything was measured",
+    "title": "U2: Five problems in the register data were fixed before any counting",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U2",
     "year": 2026
   },
   "atlas-U20": {
     "authors": [],
-    "chunks": 16,
+    "chunks": 17,
     "doc_id": "atlas-U20",
     "kind": "observation",
     "lens": "rights",
@@ -3185,13 +3185,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U20: Overseas filers almost always file through an agent, usually an attorney; Australian individuals often file alone",
+    "title": "U20: Overseas applicants almost always use an attorney; Australian individuals often file alone",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U20",
     "year": 2026
   },
   "atlas-U21": {
     "authors": [],
-    "chunks": 15,
+    "chunks": 16,
     "doc_id": "atlas-U21",
     "kind": "observation",
     "lens": "rights",
@@ -3207,7 +3207,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U21: Five attorney firms handle 63.96% of standard patents; trade mark representation is spread widely",
+    "title": "U21: Five attorney firms handle 63.96% of attorney-filed patent applications; trade mark work is widely spread",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U21",
     "year": 2026
   },
@@ -3229,7 +3229,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U22: The timeline has one row per month since 1904, with each series starting only where it can be trusted",
+    "title": "U22: The monthly timeline runs from 1904, with each series starting where its records can be trusted",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U22",
     "year": 2026
   },
@@ -3251,7 +3251,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U23: Eighteen series started too early, on records that hold only survivors or batches, and one policy change was missing",
+    "title": "U23: Eighteen series now start later, past incomplete early records, and a missing policy change was added",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U23",
     "year": 2026
   },
@@ -3273,13 +3273,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U24: Large monthly series are steady; small ones are noisy and need longer periods",
+    "title": "U24: Large monthly counts are steady, while small ones swing and need longer periods",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U24",
     "year": 2026
   },
   "atlas-U25": {
     "authors": [],
-    "chunks": 30,
+    "chunks": 31,
     "doc_id": "atlas-U25",
     "kind": "observation",
     "lens": "timeline",
@@ -3295,7 +3295,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U25: Growth in standard patents has slowed to 0.4% a year; trade marks and designs are growing faster",
+    "title": "U25: Growth in standard patent applications slowed to 0.4% a year, while trade marks and designs grew faster",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U25",
     "year": 2026
   },
@@ -3317,7 +3317,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U26: Australians file a quarter less in January; overseas applicants barely pause",
+    "title": "U26: Australians file about a quarter less in January, while overseas applicants barely pause",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U26",
     "year": 2026
   },
@@ -3339,13 +3339,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U27: Patent grants peaked in 2016; trade mark cessations reached their highest in 2025",
+    "title": "U27: Patent grants peaked in 2016, and trade marks ending reached a high in 2025",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U27",
     "year": 2026
   },
   "atlas-U28": {
     "authors": [],
-    "chunks": 61,
+    "chunks": 60,
     "doc_id": "atlas-U28",
     "kind": "observation",
     "lens": "timeline",
@@ -3361,13 +3361,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U28: Around some policy changes filing shows clear rushes, steps and pauses; around others nothing stands out",
+    "title": "U28: Some policy changes brought clear rushes, steps or pauses in filing, and others none",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U28",
     "year": 2026
   },
   "atlas-U29": {
     "authors": [],
-    "chunks": 20,
+    "chunks": 19,
     "doc_id": "atlas-U29",
     "kind": "observation",
     "lens": "timeline",
@@ -3383,7 +3383,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U29: Forty-two months still stand out after the repairs; each is explained and kept",
+    "title": "U29: Forty-two unusual months remain after the repairs, and each is explained and kept",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U29",
     "year": 2026
   },
@@ -3405,7 +3405,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U3: The busiest filing days came just before rules changed, and 50,763 old rights cannot be placed in time",
+    "title": "U3: Filing peaked just before rules changed, and 50,763 old records have no filing date",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U3",
     "year": 2026
   },
@@ -3427,7 +3427,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U30: The consumer price index is complete each quarter from 1948, so money can be compared across years",
+    "title": "U30: The price index runs every quarter from 1948, so money can be compared across years",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U30",
     "year": 2026
   },
@@ -3449,7 +3449,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U31: Each right's milestones were added only after five checks of how the register records them",
+    "title": "U31: Events such as grants and transfers were added only after five checks of how they are recorded",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U31",
     "year": 2026
   },
@@ -3471,7 +3471,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U32: Each milestone is recorded only from a certain year, so shares can be compared only within those years",
+    "title": "U32: Older register entries leave out many steps, so shares are compared only where recording is complete",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U32",
     "year": 2026
   },
@@ -3493,7 +3493,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U33: Patent examination stretched to 755 days for FY2006's applications and has been 422 to 516 days since FY2014",
+    "title": "U33: Examination took up to 755 days for 2005–06 filings and has since shortened",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U33",
     "year": 2026
   },
@@ -3515,13 +3515,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U34: More patent applicants ask for faster examination; for trade marks, a fall in 2018 is in the records, not the requests",
+    "title": "U34: More patent applicants ask for faster examination; a 2018 fall for trade marks is a records change",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U34",
     "year": 2026
   },
   "atlas-U35": {
     "authors": [],
-    "chunks": 18,
+    "chunks": 19,
     "doc_id": "atlas-U35",
     "kind": "observation",
     "lens": "rights",
@@ -3537,7 +3537,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U35: About one standard patent in seven and one trade mark in five has a recorded assignment",
+    "title": "U35: About one patent in seven and one trade mark in five has a recorded change of owner",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U35",
     "year": 2026
   },
@@ -3559,7 +3559,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U36: Later standard patents are more often still in force at 10 and 15 years; about half of trade marks are still in force after ten years",
+    "title": "U36: Newer patents more often stay in force for ten years; about half of trade marks do",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U36",
     "year": 2026
   },
@@ -3581,7 +3581,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U37: Extensions of patent term for medicines are rare, with a wave in 1999 and 2000",
+    "title": "U37: Extra patent term for medicines is rare, with a wave in 1999 and 2000",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U37",
     "year": 2026
   },
@@ -3603,7 +3603,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U38: The 2002 dip in trade mark cessations came from two Acts' different first terms, not from processing",
+    "title": "U38: Fewer trade marks ended in 2002 because the old and new laws set different first terms",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U38",
     "year": 2026
   },
@@ -3625,7 +3625,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U39: Design lapses look missing in April from 1996 to 2002 because of how they were dated",
+    "title": "U39: Design lapses seem to vanish in April from 1996 to 2002 because of how they were dated",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U39",
     "year": 2026
   },
@@ -3647,13 +3647,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U4: Most rights are trade marks, and most patents are standard patents",
+    "title": "U4: Most IP records are trade marks, and most patents are standard patents",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U4",
     "year": 2026
   },
   "atlas-U40": {
     "authors": [],
-    "chunks": 15,
+    "chunks": 14,
     "doc_id": "atlas-U40",
     "kind": "observation",
     "lens": "rights",
@@ -3669,7 +3669,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U40: Placeholder dates in the register are few and are handled; one agent date is a batch date",
+    "title": "U40: Placeholder dates are few and are handled, but one date for patent agents is a bulk update",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U40",
     "year": 2026
   },
@@ -3691,7 +3691,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U41: The firms table holds the businesses found in one of six sources, not every business, and its IP counts are lower bounds",
+    "title": "U41: The business data cover firms found in six sources, so their IP counts are minimums",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U41",
     "year": 2026
   },
@@ -3713,7 +3713,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U42: Private companies are most of every source's firms, from 55.3% of government suppliers to 94.5% of R&D claimants",
+    "title": "U42: Private companies are most firms in every source, from 55.3% of suppliers to 94.5% of R&D claimants",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U42",
     "year": 2026
   },
@@ -3735,13 +3735,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U43: Firms are a median 12.6 years old on the public record, with a spike where ABNs began",
+    "title": "U43: Half the firms have been registered for at least 12.6 years, with a spike when business numbers began",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U43",
     "year": 2026
   },
   "atlas-U44": {
     "authors": [],
-    "chunks": 18,
+    "chunks": 17,
     "doc_id": "atlas-U44",
     "kind": "observation",
     "lens": "firms",
@@ -3779,7 +3779,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U45: Recent filers are less often linked to a business number in IP RAPID; IP Australia's register restores most of the link",
+    "title": "U45: Recent filings look less often linked to a business, but IP Australia's register restores most links",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U45",
     "year": 2026
   },
@@ -3801,13 +3801,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U46: R&D claims are spread across many firms; government contract value is concentrated in a few suppliers",
+    "title": "U46: Research tax claims are spread across many firms; contract value is concentrated in a few",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U46",
     "year": 2026
   },
   "atlas-U47": {
     "authors": [],
-    "chunks": 18,
+    "chunks": 17,
     "doc_id": "atlas-U47",
     "kind": "observation",
     "lens": "firms",
@@ -3823,7 +3823,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U47: R&D claimants are more often in major cities and advantaged areas than firms in general; IP filers are much like firms in general",
+    "title": "U47: R&D claimants are more often in cities and advantaged areas; IP filers are much like firms overall",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U47",
     "year": 2026
   },
@@ -3845,7 +3845,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U48: The places table covers 2,641 postal areas and 25,365,506 people; individuals file a fifth of patents and two-fifths of provisionals",
+    "title": "U48: The place data cover 2,641 postal areas, and individuals file a fifth of patent applications",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U48",
     "year": 2026
   },
@@ -3867,7 +3867,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U49: One standard patent in eighteen comes from a postcode where no one lives, most of them universities'",
+    "title": "U49: One patent application in eighteen comes from a postcode with no residents, mostly universities",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U49",
     "year": 2026
   },
@@ -3889,13 +3889,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U5: Standard patent applications held steady over the last ten years, while trade marks and designs rose",
+    "title": "U5: Standard patent applications in Australia held steady over ten years while trade marks and designs grew",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U5",
     "year": 2026
   },
   "atlas-U50": {
     "authors": [],
-    "chunks": 13,
+    "chunks": 14,
     "doc_id": "atlas-U50",
     "kind": "observation",
     "lens": "regions",
@@ -3911,7 +3911,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U50: Postal areas range from no residents to 129,883 people; 818 have fewer than 1,000",
+    "title": "U50: Postal areas range from no residents to 129,883 people, and 818 have fewer than 1,000",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U50",
     "year": 2026
   },
@@ -3955,7 +3955,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U52: The tenth of areas with the most patents filed 72.5% of them, with 29.2% of the people",
+    "title": "U52: The tenth of areas with the most patents filed 72.5% of them but hold 29.2% of the people",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U52",
     "year": 2026
   },
@@ -3977,13 +3977,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U53: Places differ in filing far more than chance would make them",
+    "title": "U53: Places differ in filing far more than chance alone would explain",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U53",
     "year": 2026
   },
   "atlas-U54": {
     "authors": [],
-    "chunks": 16,
+    "chunks": 15,
     "doc_id": "atlas-U54",
     "kind": "observation",
     "lens": "regions",
@@ -3999,7 +3999,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U54: About half of R&D claimants have no filing linked to their business number, and claimants are rarer outside the cities",
+    "title": "U54: Half of R&D claimants have no IP filing linked to their business, and claimants are rarer outside cities",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U54",
     "year": 2026
   },
@@ -4021,13 +4021,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U55: Seven area sources add 28,960,234 values, nearly every one for nearly every postal area",
+    "title": "U55: Seven local sources add nearly 29 million values, covering almost every postal area",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U55",
     "year": 2026
   },
   "atlas-U56": {
     "authors": [],
-    "chunks": 24,
+    "chunks": 23,
     "doc_id": "atlas-U56",
     "kind": "observation",
     "lens": "regions",
@@ -4043,13 +4043,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U56: Values split from larger areas track direct counts; CABEE counts a quarter fewer businesses than the business register",
+    "title": "U56: Estimates split from larger areas match direct counts, but two business counts differ by a quarter",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U56",
     "year": 2026
   },
   "atlas-U57": {
     "authors": [],
-    "chunks": 15,
+    "chunks": 14,
     "doc_id": "atlas-U57",
     "kind": "observation",
     "lens": "regions",
@@ -4065,13 +4065,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U57: Many Census cells are small, and parts do not add exactly to totals",
+    "title": "U57: Many Census figures for small groups are tiny, and parts do not add exactly to totals",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U57",
     "year": 2026
   },
   "atlas-U58": {
     "authors": [],
-    "chunks": 12,
+    "chunks": 11,
     "doc_id": "atlas-U58",
     "kind": "observation",
     "lens": "regions",
@@ -4087,7 +4087,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U58: Data by Region holds a different set of items each year, and partly repeats the Census",
+    "title": "U58: Data by Region covers different items each year and partly repeats the Census",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U58",
     "year": 2026
   },
@@ -4131,7 +4131,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U6: The latest years look complete for standard patents, trade marks and designs",
+    "title": "U6: The latest two years' counts look complete for standard patents, trade marks and designs",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U6",
     "year": 2026
   },
@@ -4153,7 +4153,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U60: PHIDU's health and social indicators are mostly rates, for many different periods",
+    "title": "U60: The social health atlas's figures are mostly rates, for many different periods",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U60",
     "year": 2026
   },
@@ -4197,7 +4197,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U62: Government contracts go mostly to suppliers registered in a few places, above all the ACT",
+    "title": "U62: Government contract value goes mostly to suppliers registered in a few places, above all the ACT",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U62",
     "year": 2026
   },
@@ -4219,13 +4219,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U63: Thirty indicators cover 229 places from 1960, but Australia's records of R&D staff end early",
+    "title": "U63: Thirty measures cover 229 countries and places from 1960, but Australia's research staff figures end early",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U63",
     "year": 2026
   },
   "atlas-U64": {
     "authors": [],
-    "chunks": 14,
+    "chunks": 15,
     "doc_id": "atlas-U64",
     "kind": "observation",
     "lens": "national",
@@ -4241,7 +4241,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U64: Before 1995, WIPO cannot say where most patent applicants come from",
+    "title": "U64: Before 1994, WIPO has no origin for about a third of patent applications",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U64",
     "year": 2026
   },
@@ -4263,13 +4263,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U65: Australia's R&D spending rose to 2008 as a share of GDP and has fallen since, below the OECD median; manufacturing's share fell twice as fast as the median member's",
+    "title": "U65: Australia's R&D spending peaked as a share of the economy in 2008, and manufacturing shrank fast",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U65",
     "year": 2026
   },
   "atlas-U66": {
     "authors": [],
-    "chunks": 20,
+    "chunks": 21,
     "doc_id": "atlas-U66",
     "kind": "observation",
     "lens": "national",
@@ -4285,7 +4285,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U66: Among OECD members Australia is near the top for filings from abroad and new businesses, near the bottom for exports and manufacturing, and below the median for R&D",
+    "title": "U66: Australia ranks high in the OECD for new businesses and overseas filings, low for exports and manufacturing",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U66",
     "year": 2026
   },
@@ -4307,13 +4307,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U67: IP RAPID's counts of Australia's patent applications agree with WIPO's and the World Bank's; the World Bank's trade mark series counts classes",
+    "title": "U67: Australian counts of patent applications match WIPO's; World Bank trade mark figures count classes",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U67",
     "year": 2026
   },
   "atlas-U68": {
     "authors": [],
-    "chunks": 19,
+    "chunks": 18,
     "doc_id": "atlas-U68",
     "kind": "observation",
     "lens": "national",
@@ -4329,7 +4329,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U68: The international attachments hold 41,230,072 rows, and five OECD datasets have nothing for Australia",
+    "title": "U68: International data hold over 41 million records, but five OECD datasets have nothing for Australia",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U68",
     "year": 2026
   },
@@ -4351,7 +4351,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U69: Australia ranks 20th of 139 economies in the Global Innovation Index 2026, 13th on inputs and 24th on outputs",
+    "title": "U69: Australia ranks 20th of 139 economies in the 2026 Global Innovation Index, stronger on inputs than outputs",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U69",
     "year": 2026
   },
@@ -4373,13 +4373,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U7: About nine in ten standard patents come from overseas; most trade marks come from Australians",
+    "title": "U7: Most standard patent applications come from overseas, but most trade marks come from Australians",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U7",
     "year": 2026
   },
   "atlas-U70": {
     "authors": [],
-    "chunks": 16,
+    "chunks": 17,
     "doc_id": "atlas-U70",
     "kind": "observation",
     "lens": "national",
@@ -4395,13 +4395,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U70: The United States files about four in ten patent applications at IP Australia; China now files as many as Australians",
+    "title": "U70: The United States files about four in ten patent applications in Australia, and China now matches Australians",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U70",
     "year": 2026
   },
   "atlas-U71": {
     "authors": [],
-    "chunks": 17,
+    "chunks": 16,
     "doc_id": "atlas-U71",
     "kind": "observation",
     "lens": "national",
@@ -4439,13 +4439,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U72: Measuring What Matters mostly repeats labour statistics held elsewhere; Closing the Gap mixes observations with projections",
+    "title": "U72: Measuring What Matters mostly repeats labour statistics; Closing the Gap mixes results with targets",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U72",
     "year": 2026
   },
   "atlas-U73": {
     "authors": [],
-    "chunks": 16,
+    "chunks": 15,
     "doc_id": "atlas-U73",
     "kind": "observation",
     "lens": "industries",
@@ -4461,13 +4461,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U73: The industries table covers 19 divisions over 37 years; IP and value added run through all of them, business and R&D counts only through recent years",
+    "title": "U73: The industry data cover 19 industries over 37 years, but business and R&D counts cover only recent years",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U73",
     "year": 2026
   },
   "atlas-U74": {
     "authors": [],
-    "chunks": 16,
+    "chunks": 15,
     "doc_id": "atlas-U74",
     "kind": "observation",
     "lens": "industries",
@@ -4483,7 +4483,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U74: The crosswalks carry nearly every right to an industry; a patent's division is usually clear, its subdivision often is not",
+    "title": "U74: Nearly every right can be assigned to an industry, and for patents the broad industry is usually clear",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U74",
     "year": 2026
   },
@@ -4505,13 +4505,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U75: Nine in ten patents fall in manufacturing, partly because the patent crosswalk leaves out services",
+    "title": "U75: Nine in ten patents are assigned to manufacturing, partly because the method leaves out services",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U75",
     "year": 2026
   },
   "atlas-U76": {
     "authors": [],
-    "chunks": 17,
+    "chunks": 18,
     "doc_id": "atlas-U76",
     "kind": "observation",
     "lens": "industries",
@@ -4527,7 +4527,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U76: Australians file a small share of patents in every industry, but most of the trade marks in services",
+    "title": "U76: Australians file a small share of patents in every industry, but most trade marks in services",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U76",
     "year": 2026
   },
@@ -4549,7 +4549,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U77: Construction, professional services and property hold two in five businesses; manufacturing, with nine in ten patents, holds 3.2%",
+    "title": "U77: Construction, professional services and property hold two in five businesses; manufacturing holds 3.2%",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U77",
     "year": 2026
   },
@@ -4571,13 +4571,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U78: Professional services spend the most on R&D, mining the most per business",
+    "title": "U78: Professional services spend the most on R&D, and mining the most per business",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U78",
     "year": 2026
   },
   "atlas-U79": {
     "authors": [],
-    "chunks": 16,
+    "chunks": 15,
     "doc_id": "atlas-U79",
     "kind": "observation",
     "lens": "industries",
@@ -4593,13 +4593,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U79: About a fifth of businesses introduced a new good or service in 2023, from one in ten in agriculture to three in ten in information media",
+    "title": "U79: About a fifth of businesses introduced a new good or service in 2023",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U79",
     "year": 2026
   },
   "atlas-U8": {
     "authors": [],
-    "chunks": 21,
+    "chunks": 20,
     "doc_id": "atlas-U8",
     "kind": "observation",
     "lens": "rights",
@@ -4615,13 +4615,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U8: Provisional applications doubled in FY2026, mostly from individuals but from organisations too",
+    "title": "U8: Provisional patent applications doubled in 2025–26, mostly from individuals",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U8",
     "year": 2026
   },
   "atlas-U80": {
     "authors": [],
-    "chunks": 15,
+    "chunks": 14,
     "doc_id": "atlas-U80",
     "kind": "observation",
     "lens": "institutions",
@@ -4637,13 +4637,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U80: The institutions table covers 130 research institutions; IP and grants go back further than research output, which starts in 2010",
+    "title": "U80: The institutions data cover 130 research bodies, but publication records start only in 2010",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U80",
     "year": 2026
   },
   "atlas-U81": {
     "authors": [],
-    "chunks": 15,
+    "chunks": 14,
     "doc_id": "atlas-U81",
     "kind": "observation",
     "lens": "institutions",
@@ -4681,7 +4681,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U82: Universities produce 86.8% of the institutions' research works, and five universities a third",
+    "title": "U82: Universities produce 86.8% of the institutions' research, and five universities a third",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U82",
     "year": 2026
   },
@@ -4703,13 +4703,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U83: The Group of Eight hold two-thirds of research grant funding; up to three-tenths of ARC funding is for research with industry",
+    "title": "U83: The Group of Eight universities hold two thirds of research grant funding",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U83",
     "year": 2026
   },
   "atlas-U84": {
     "authors": [],
-    "chunks": 15,
+    "chunks": 16,
     "doc_id": "atlas-U84",
     "kind": "observation",
     "lens": "institutions",
@@ -4725,13 +4725,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U84: Research institutions file a small, slowly rising share of Australian patents; CSIRO files the most",
+    "title": "U84: Research institutions file a small but rising share of patents from Australia, and CSIRO files most",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U84",
     "year": 2026
   },
   "atlas-U85": {
     "authors": [],
-    "chunks": 15,
+    "chunks": 16,
     "doc_id": "atlas-U85",
     "kind": "observation",
     "lens": "institutions",
@@ -4747,7 +4747,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U85: US patents often cite the institutions' research; few of the citing patents have an Australian applicant or inventor",
+    "title": "U85: US patents often cite the institutions' research, but few citing patents are Australian",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U85",
     "year": 2026
   },
@@ -4769,13 +4769,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U86: Universities hold 77.9% of the institutions' government contract value, public research agencies 19.0%",
+    "title": "U86: Universities hold 77.9% of the institutions' government contract value",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U86",
     "year": 2026
   },
   "atlas-U87": {
     "authors": [],
-    "chunks": 16,
+    "chunks": 15,
     "doc_id": "atlas-U87",
     "kind": "observation",
     "lens": "institutions",
@@ -4791,13 +4791,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U87: Half the universities' standard patents carry a postcode where no one lives, so place-based counts miss them",
+    "title": "U87: Half the universities' patents carry a postcode with no residents, so maps of places miss them",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U87",
     "year": 2026
   },
   "atlas-U88": {
     "authors": [],
-    "chunks": 14,
+    "chunks": 15,
     "doc_id": "atlas-U88",
     "kind": "observation",
     "lens": "rights",
@@ -4813,7 +4813,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U88: The register labels most international patent numbers as Australian, so an application's office is read from its number",
+    "title": "U88: The register labels most international patent numbers as Australian, so the office is read from the number",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U88",
     "year": 2026
   },
@@ -4835,7 +4835,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U89: The register's count of international patent applications matches WIPO's, year by year",
+    "title": "U89: Counts of international patent applications agree with WIPO's, year by year",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U89",
     "year": 2026
   },
@@ -4857,13 +4857,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U9: \"Lapsed\" and \"ceased\" mean different things, and 408,957 old patents have no known outcome",
+    "title": "U9: “Lapsed” and “ceased” are different outcomes, and 408,957 old patents have no known outcome",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U9",
     "year": 2026
   },
   "atlas-U90": {
     "authors": [],
-    "chunks": 35,
+    "chunks": 34,
     "doc_id": "atlas-U90",
     "kind": "observation",
     "lens": "rights",
@@ -4879,7 +4879,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U90: Overseas applicants come through the international route; Australians have moved from provisionals to the PCT, divisionals and direct filing",
+    "title": "U90: Overseas applicants mostly use the international route; Australians now rely less on provisionals",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U90",
     "year": 2026
   },
@@ -4901,13 +4901,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U91: Most inventions patented here from overseas were first filed in the United States; Australians file their international applications at home",
+    "title": "U91: Most overseas inventions patented here were first filed in the United States",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U91",
     "year": 2026
   },
   "atlas-U92": {
     "authors": [],
-    "chunks": 16,
+    "chunks": 17,
     "doc_id": "atlas-U92",
     "kind": "observation",
     "lens": "rights",
@@ -4923,13 +4923,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U92: Google Patents finds the worldwide family of nearly every standard patent filed since the 1980s",
+    "title": "U92: Google Patents finds the family of nearly every patent filed since the 1980s, though older families miss filings abroad",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U92",
     "year": 2026
   },
   "atlas-U93": {
     "authors": [],
-    "chunks": 16,
+    "chunks": 17,
     "doc_id": "atlas-U93",
     "kind": "observation",
     "lens": "rights",
@@ -4945,7 +4945,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U93: Overseas applicants' patents are filed in a median six countries' offices; Australians' in two",
+    "title": "U93: Overseas applicants typically file an invention in six countries' offices, Australians in two",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U93",
     "year": 2026
   },
@@ -5011,7 +5011,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U96: Inventions filed from Australia are made here; very few filed from overseas are",
+    "title": "U96: Inventions filed from Australia are almost all made here; few filed from overseas are",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U96",
     "year": 2026
   },
@@ -5033,13 +5033,13 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U97: Gender estimated from names matches WIPO's figure for Australia, but not for most other countries",
+    "title": "U97: Guessing gender from names matches WIPO's figure for Australia, but not for most other countries",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U97",
     "year": 2026
   },
   "atlas-U98": {
     "authors": [],
-    "chunks": 16,
+    "chunks": 17,
     "doc_id": "atlas-U98",
     "kind": "observation",
     "lens": "rights",
@@ -5077,7 +5077,7 @@
     "source_sha256": null,
     "stage": "1",
     "strength": "descriptive",
-    "title": "U99: IP Australia's own register fills the gaps IP RAPID leaves for trade marks and designs",
+    "title": "U99: IP Australia's own register fills gaps in the research data for trade marks and designs",
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/U99",
     "year": 2026
   },
@@ -8601,9 +8601,31 @@
     "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/audit",
     "year": 2026
   },
+  "atlas-page-currency": {
+    "authors": [],
+    "chunks": 7,
+    "doc_id": "atlas-page-currency",
+    "kind": "page",
+    "lens": null,
+    "lens_name": null,
+    "licence": "MIT for the code. The content is the project's own analysis; it quotes public data under each source's licence, as the atlas's data page lists them.",
+    "note": null,
+    "observation": null,
+    "ocr": false,
+    "page_count": 0,
+    "pages": {},
+    "publisher": "Evidence atlas (IPAVentures, IP Australia)",
+    "series": "Evidence atlas",
+    "source_sha256": null,
+    "stage": null,
+    "strength": null,
+    "title": "Keeping the atlas current",
+    "url": "https://thomas-amann-ipaustralia.github.io/Aus-GII-Breakdown/evidence/#/currency",
+    "year": 2026
+  },
   "atlas-page-limits": {
     "authors": [],
-    "chunks": 13,
+    "chunks": 14,
     "doc_id": "atlas-page-limits",
     "kind": "page",
     "lens": null,
